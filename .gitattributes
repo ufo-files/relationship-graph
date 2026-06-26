@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+app-data.js linguist-generated=true
+index.html linguist-generated=true
+data/entities.json linguist-generated=true
+data/graph.json linguist-generated=true
+data/manifest.json linguist-generated=true
+data/mentions.json linguist-generated=true
+data/relationships.json linguist-generated=true
+data/segments.json linguist-generated=true
+data/reclass-template.json linguist-generated=true

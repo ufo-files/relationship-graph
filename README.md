@@ -91,6 +91,12 @@ Contributors can submit reclassification updates without rebuilding the app loca
 
 The same rebuild workflow also runs when transcript source files in `data/transcripts/` or `build_graph.py` change. It can be started manually from the **Actions** tab with the **Rebuild Report** workflow.
 
+## Contribution Guardrails
+
+Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks transcript files, blocks hand edits to generated app files, and performs a smoke rebuild.
+
+Repository ownership rules are declared in `.github/CODEOWNERS`. For stronger protection, enable branch protection or a repository ruleset on `main` that requires pull requests, code owner review, and passing **Validate** before merge.
+
 ## Extraction Limits
 
 This is an exploratory transcript intelligence tool, not an authority file. The graph is useful for navigation, discovery, and evidence review, but automated extraction can misclassify entities, miss relationships, duplicate names, or preserve claims exactly as they appear in source transcripts.
