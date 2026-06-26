@@ -30,13 +30,16 @@ jobs:
           python-version: "3.12"
 
       - name: Compile builder
-        run: python -m py_compile build_graph.py scripts/validate_repo.py
+        run: python -m py_compile build_graph.py scripts/validate_repo.py scripts/audit_accessibility.py
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
 
       - name: Validate repository data
         run: python scripts/validate_repo.py
+
+      - name: Audit accessibility
+        run: python scripts/audit_accessibility.py
 
       - name: Validate PR boundaries
         if: github.event_name == 'pull_request'
@@ -46,3 +49,6 @@ jobs:
 
       - name: Smoke rebuild
         run: python build_graph.py
+
+      - name: Audit rebuilt accessibility
+        run: python scripts/audit_accessibility.py

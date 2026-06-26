@@ -2374,6 +2374,17 @@ def render_html() -> str:
       touch-action: none;
     }
     #graph.dragging { cursor: grabbing; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
     .graph-label-layer {
       position: fixed;
       inset: 0;
@@ -2403,6 +2414,11 @@ def render_html() -> str:
       color: #0f172a;
       z-index: 2;
       text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 5px 16px rgba(15,23,42,.22);
+    }
+    .html-graph-label:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 4px;
+      background: rgba(246, 245, 239, .92);
     }
     .label-primary {
       display: block;
@@ -2482,6 +2498,13 @@ def render_html() -> str:
       color: var(--ink);
       padding: 0 10px;
       font: inherit;
+    }
+    input:focus-visible,
+    select:focus-visible,
+    button:focus-visible,
+    .node-card:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
     }
     input { width: 280px; }
     button {
@@ -2712,23 +2735,27 @@ def render_html() -> str:
   </style>
 </head>
 <body>
-  <svg id="graph" role="img" aria-label="Transcript relationship graph"></svg>
-  <div id="graph-labels" class="graph-label-layer"></div>
+  <p id="graph-help" class="sr-only">Interactive relationship graph. Use Tab to move through visible graph labels, Enter or Space to open a category or entity, Escape to move back up the graph, and the search field to jump to a specific label.</p>
+  <main aria-labelledby="app-title">
+  <svg id="graph" role="img" aria-label="Transcript relationship graph" aria-describedby="graph-help status"></svg>
+  <div id="graph-labels" class="graph-label-layer" aria-label="Keyboard accessible graph labels"></div>
   <div class="topbar">
     <div class="brand">
-      <h1>Transcript Relationship Graph</h1>
-      <div class="meta" id="status">Loading graph...</div>
+      <h1 id="app-title">Transcript Relationship Graph</h1>
+      <div class="meta" id="status" role="status" aria-live="polite">Loading graph...</div>
     </div>
-    <div class="controls">
-      <input id="search" type="search" placeholder="Search entity or category">
-      <span id="review-status" class="review-status"></span>
-      <button id="download-review" hidden>Download reclassified data</button>
-      <button id="download-data">Download data</button>
-    </div>
+    <form class="controls" id="search-form" role="search" aria-label="Graph search and downloads">
+      <label class="sr-only" for="search">Search entity or category</label>
+      <input id="search" type="search" placeholder="Search entity or category" autocomplete="off">
+      <span id="review-status" class="review-status" role="status" aria-live="polite"></span>
+      <button id="download-review" type="button" hidden>Download reclassified data</button>
+      <button id="download-data" type="button">Download data</button>
+    </form>
   </div>
-  <div id="node-card" class="node-card"></div>
-  <div id="hover-card" class="hover-card"></div>
-  <div id="corner-label" class="corner-label" aria-live="polite"></div>
+  <section id="node-card" class="node-card" tabindex="-1" aria-live="polite" aria-label="Selected graph item details"></section>
+  <div id="hover-card" class="hover-card" aria-hidden="true"></div>
+  <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
+  </main>
     <script src="app-data.js"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
@@ -2959,7 +2986,12 @@ def render_html() -> str:
         const attr = item.kind === "category"
           ? ' data-label-category="' + esc(item.id) + '"'
           : ' data-label-entity="' + esc(item.id) + '"';
-        return '<div class="html-graph-label" style="left:' + point.x.toFixed(1) + 'px;top:' + (point.y + 6).toFixed(1) + 'px"' + attr + '>' +
+        const state = (item.kind === "category" && activeCategory === item.id) || (item.kind === "entity" && selectedEntityId === item.id)
+          ? ' aria-current="true"'
+          : "";
+        const secondary = item.secondary ? ". " + item.secondary : "";
+        const action = item.kind === "category" ? "Open category" : "Open entity";
+        return '<div class="html-graph-label" role="button" tabindex="0" aria-label="' + esc(action + ": " + item.primary + secondary) + '"' + state + ' style="left:' + point.x.toFixed(1) + 'px;top:' + (point.y + 6).toFixed(1) + 'px"' + attr + '>' +
           '<span class="label-primary">' + esc(item.primary) + '</span>' +
           (item.secondary ? '<span class="label-secondary">' + esc(item.secondary) + '</span>' : '') +
         '</div>';
@@ -2995,7 +3027,7 @@ def render_html() -> str:
         truncate(node.label, 24),
         node.count + " entities · " + node.mentions + " mentions"
       )));
-      statusEl.textContent = nodes.length + " groups · " + DATA.manifest.counts.entities.toLocaleString() + " entities · click a group";
+      statusEl.textContent = nodes.length + " groups · " + DATA.manifest.counts.entities.toLocaleString() + " entities · select a group";
       cardEl.classList.remove("open");
       setCornerLabel(null);
       wireCategoryNodes();
@@ -3109,7 +3141,7 @@ def render_html() -> str:
         node.contextWeight ? node.contextWeight.toLocaleString() + " links" : "",
         Math.max(12, node.r * .68)
       ))));
-      statusEl.textContent = label + " · click an entity for its direct relationship graph";
+      statusEl.textContent = label + " · select an entity for its direct relationship graph";
       setCornerLabel(null);
       wireEntityNodes();
       wireCategoryNodes();
@@ -3233,8 +3265,9 @@ def render_html() -> str:
     function renderCard(entity, relationships) {
       const evidence = (entity.evidenceIds || []).map((id) => mentionsById.get(id)).filter(Boolean).slice(0, 6);
       cardEl.classList.add("open");
+      cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
-        '<h2>' + esc(entity.name) + '</h2>' +
+        '<h2 id="card-title">' + esc(entity.name) + '</h2>' +
         '<p><span class="tag">' + esc(entity.topCategoryLabel) + '</span> <span class="tag">' + esc(entity.categoryLabel) + '</span> ' + (entity.count || 0).toLocaleString() + ' mentions · ' + Math.round((entity.confidence || 0) * 100) + '% confidence</p>' +
         '<p>' + esc(entity.significance || "") + '</p>' +
         '<h3>Transcript snippets</h3>' +
@@ -3258,6 +3291,7 @@ def render_html() -> str:
           selectedEntityId = button.dataset.cardEntity;
           mode = "neighborhood";
           render();
+          focusDetailsCard();
         });
       });
       wireCardClose();
@@ -3314,6 +3348,7 @@ def render_html() -> str:
         mode = "neighborhood";
         rebuildIndexes();
         render();
+        focusDetailsCard();
       });
     }
 
@@ -3322,8 +3357,9 @@ def render_html() -> str:
       const target = entitiesById.get(relationship.target);
       const evidence = relationship.evidence || [];
       cardEl.classList.add("open");
+      cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
-        '<h2>' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
+        '<h2 id="card-title">' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
         '<p><span class="tag">' + esc(relationship.type) + '</span> weight ' + relationship.weight.toLocaleString() + ' · ' + Math.round((relationship.confidence || 0) * 100) + '% confidence</p>' +
         '<h3>Relationship evidence</h3>' +
         (evidence.length ? evidence.map((item) => {
@@ -3335,9 +3371,24 @@ def render_html() -> str:
           selectedEntityId = button.dataset.cardEntity;
           mode = "neighborhood";
           render();
+          focusDetailsCard();
         });
       });
       wireCardClose();
+    }
+
+    function focusDetailsCard() {
+      if (cardEl.classList.contains("open")) cardEl.focus({ preventScroll: true });
+    }
+
+    function focusSelectedGraphLabel() {
+      const selector = selectedEntityId
+        ? '[data-label-entity="' + cssEscape(selectedEntityId) + '"]'
+        : activeCategory
+          ? '[data-label-category="' + cssEscape(activeCategory) + '"]'
+          : ".html-graph-label";
+      const label = graphLabelsEl.querySelector(selector);
+      if (label) label.focus({ preventScroll: true });
     }
 
     function wireCardClose() {
@@ -3345,6 +3396,8 @@ def render_html() -> str:
       if (!closeButton) return;
       closeButton.addEventListener("click", () => {
         cardEl.classList.remove("open");
+        cardEl.removeAttribute("aria-labelledby");
+        focusSelectedGraphLabel();
       });
     }
 
@@ -3367,7 +3420,7 @@ def render_html() -> str:
       });
     }
 
-    function activateGraphNode(node) {
+    function activateGraphNode(node, options = {}) {
       if (!node) return false;
       if (node.dataset.category) {
         activeCategory = node.dataset.category;
@@ -3381,6 +3434,11 @@ def render_html() -> str:
       }
       hideHoverPreview();
       render();
+      if (options.focusCard && node.dataset.entity) {
+        focusDetailsCard();
+      } else if (options.focusGraph) {
+        focusSelectedGraphLabel();
+      }
       return true;
     }
 
@@ -3528,8 +3586,37 @@ def render_html() -> str:
         activeCategory = category[0];
         selectedEntityId = null;
         mode = "categories";
+      } else {
+        statusEl.textContent = "No graph result for " + query;
+        return;
       }
       render();
+      focusSelectedGraphLabel();
+    }
+
+    function stepBackGraph() {
+      if (cardEl.classList.contains("open")) {
+        cardEl.classList.remove("open");
+        cardEl.removeAttribute("aria-labelledby");
+        focusSelectedGraphLabel();
+        return true;
+      }
+      if (mode === "neighborhood") {
+        selectedEntityId = null;
+        mode = "categories";
+        render();
+        focusSelectedGraphLabel();
+        return true;
+      }
+      if (activeCategory) {
+        activeCategory = null;
+        selectedEntityId = null;
+        mode = "categories";
+        renderCategories();
+        focusSelectedGraphLabel();
+        return true;
+      }
+      return false;
     }
 
     function defaultReview() {
@@ -3647,6 +3734,11 @@ def render_html() -> str:
 
     function esc(value) {
       return String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
+    }
+
+    function cssEscape(value) {
+      if (window.CSS && typeof window.CSS.escape === "function") return window.CSS.escape(String(value ?? ""));
+      return String(value ?? "").replace(/["\\\\]/g, "\\\\$&");
     }
 
     function truncate(value, length) {
@@ -3768,6 +3860,26 @@ def render_html() -> str:
       if (!label) return;
       activateGraphNode(svgNodeFromLabel(label));
     });
+    graphLabelsEl.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const label = graphLabelFromTarget(event.target);
+      if (!label) return;
+      event.preventDefault();
+      activateGraphNode(svgNodeFromLabel(label), { focusCard: true, focusGraph: true });
+    });
+    graphLabelsEl.addEventListener("focusin", (event) => {
+      const label = graphLabelFromTarget(event.target);
+      const node = svgNodeFromLabel(label);
+      if (!node || !label) return;
+      setHoveredNode(node);
+      const rect = label.getBoundingClientRect();
+      showHoverPreview(node, { clientX: rect.left + rect.width / 2, clientY: rect.top + rect.height / 2 });
+    });
+    graphLabelsEl.addEventListener("focusout", (event) => {
+      if (graphLabelsEl.contains(event.relatedTarget)) return;
+      setHoveredNode(null);
+      hideHoverPreview();
+    });
     window.addEventListener("resize", renderLabelLayer);
 
     function handleGraphWheel(event) {
@@ -3855,8 +3967,13 @@ def render_html() -> str:
       dragStart = null;
       svg.classList.remove("dragging");
     });
-    searchEl.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") searchGraph();
+    document.getElementById("search-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      searchGraph();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      if (stepBackGraph()) event.preventDefault();
     });
     document.getElementById("download-review").addEventListener("click", () => {
       const review = mergeReviews(BUILT_REVIEW, readReview());

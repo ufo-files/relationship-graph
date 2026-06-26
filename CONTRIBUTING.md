@@ -53,5 +53,6 @@ Run the same checks used by CI:
 python -m py_compile build_graph.py scripts/validate_repo.py
 python -m unittest discover -s tests -v
 python scripts/validate_repo.py
+python scripts/audit_accessibility.py
 python build_graph.py
 ```

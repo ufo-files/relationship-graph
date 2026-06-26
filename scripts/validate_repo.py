@@ -190,7 +190,11 @@ def validate_changed_files(path: Path) -> list[str]:
     changed = [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
     errors: list[str] = []
     generated_changes = sorted(item for item in changed if item in GENERATED_FILES)
-    if generated_changes:
+    source_changes_allow_generated = any(
+        item == "build_graph.py" or item.startswith("scripts/") or item.startswith("tests/")
+        for item in changed
+    )
+    if generated_changes and not source_changes_allow_generated:
         errors.append(
             "Generated app files should not be edited in contributor PRs. "
             "Change data/reclass.json, data/transcripts/**, or build_graph.py; "

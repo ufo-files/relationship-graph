@@ -93,7 +93,7 @@ The same rebuild workflow also runs when transcript source files in `data/transc
 
 ## Contribution Guardrails
 
-Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks transcript files, blocks hand edits to generated app files, and performs a smoke rebuild.
+Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks transcript files, audits accessibility basics, blocks hand edits to generated app files, and performs a smoke rebuild.
 
 Repository ownership rules are declared in `.github/CODEOWNERS`. For stronger protection, enable branch protection or a repository ruleset on `main` that requires pull requests, code owner review, and passing **Validate** before merge.
 
