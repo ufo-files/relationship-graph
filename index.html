@@ -396,7 +396,8 @@
     <script src="app-data.js"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
-    const REVIEW_KEY = "transcript-intelligence-v2-review";
+    const REVIEW_KEY = "uap-relationship-graph-reclass";
+    const LEGACY_REVIEW_KEY = "transcript-intelligence-v2-review";
     const BUILT_REVIEW = normalizeReview(RAW.reclassDecisions || RAW.reclass_decisions || RAW.reviewDecisions || RAW.review_decisions || {});
     const THEME = {
       primary: "#111111",
@@ -1240,6 +1241,11 @@
     }
 
     function initializeReviewStorage() {
+      const legacyRaw = localStorage.getItem(LEGACY_REVIEW_KEY);
+      if (!localStorage.getItem(REVIEW_KEY) && legacyRaw) {
+        localStorage.setItem(REVIEW_KEY, legacyRaw);
+      }
+      if (legacyRaw) localStorage.removeItem(LEGACY_REVIEW_KEY);
       const storedRaw = localStorage.getItem(REVIEW_KEY);
       if (!storedRaw) return;
       try {
@@ -1519,10 +1525,10 @@
     document.getElementById("download-review").addEventListener("click", () => {
       const review = mergeReviews(BUILT_REVIEW, readReview());
       review.generatedAt = new Date().toISOString();
-      review.note = "Place this file at reclass.json in the project root before rebuilding.";
+      review.note = "Replace data/reclass.json with this file before rebuilding.";
       download("reclass.json", review);
     });
-    document.getElementById("download-data").addEventListener("click", () => download("transcript-intelligence-v2.json", DATA));
+    document.getElementById("download-data").addEventListener("click", () => download("uap-relationship-graph-data.json", DATA));
     updateReviewButton();
     render();
   </script>

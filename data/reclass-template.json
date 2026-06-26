@@ -5,5 +5,5 @@
   "aliases": {},
   "merges": {},
   "nameMerges": {},
-  "notes": "Download reclassified data from the app, place it as reclass.json at the project root, then rerun python3 build_report_v2.py."
+  "notes": "Download reclassified data from the app, replace data/reclass.json with it, then rerun python3 build_graph.py."
 }
