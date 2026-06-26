@@ -10,10 +10,10 @@ The app turns transcript-derived entities into an interactive graph. Categories 
 
 The current export includes:
 
-- 34 transcripts
-- 160,447 transcript segments
-- 10,706 entity mentions
-- 3,906 entities
+- 36 transcripts
+- 162,082 transcript segments
+- 10,841 entity mentions
+- 3,966 entities
 - 3,500 relationships
 - 42 categories
 
@@ -26,7 +26,7 @@ The current export includes:
 - Reclassify an entity when the detected category is wrong.
 - Mark false positives when an extracted entity should not be tracked.
 - Merge duplicates when multiple names refer to the same entity.
-- Export review decisions so they can be applied during a future rebuild.
+- Export reclassification data so it can be applied during a future rebuild.
 
 ## Data Files
 
@@ -42,7 +42,8 @@ The app is fully static. All data needed by the browser is committed in this rep
 | `data/segments.json` | Transcript segment evidence used by the inspector |
 | `data/graph.json` | Precomputed graph layout and grouping data |
 | `data/manifest.json` | Build metadata, input hashes, pipeline hash, counts, and reproducibility notes |
-| `data/review-template.json` | Empty review-decision template for reclassification workflows |
+| `data/reclass.json` | Applied reclassification data included with this export |
+| `data/reclass-template.json` | Empty reclassification template |
 
 ## Reproducibility
 
@@ -55,20 +56,22 @@ The manifest records:
 - source file hashes
 - pipeline hash
 - registry hash
-- review-decision counts
+- reclassification counts
 - whether review input was applied
 
 No OpenAI API key is required to view this site.
 
-## Review Workflow
+## Reclassification Workflow
 
-The graph includes review controls for correcting extraction mistakes:
+The graph includes controls for correcting extraction mistakes:
 
 - **Reclassify** moves an entity to a different category.
 - **False positive** removes an entity from future tracking.
 - **Merge** combines duplicate entities.
 
-After reviewing, download the review decisions from the app. In the private build workspace, place that file where the generator expects it before rebuilding. The next generated export will apply those decisions and replace the previous report output.
+The long-term correction file is `reclass.json`. It stores category changes, false positives, duplicate merges, name-based merges, aliases, omissions, and notes. The private build workspace keeps that file at the project root, outside the generated `report/` folder, so report rebuilds do not delete it.
+
+After reclassifying in the app, download the reclassified data and use it as the next `reclass.json` before rebuilding. The next generated export applies those decisions and replaces the previous report output.
 
 ## Extraction Limits
 

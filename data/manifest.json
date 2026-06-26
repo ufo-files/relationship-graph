@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T21:29:44.125645+00:00",
+  "generated_at": "2026-06-26T22:31:52.906484+00:00",
   "pipeline": "transcript-intelligence-v2",
   "reproducibility": {
     "no_openai_api": true,
@@ -17,15 +17,15 @@
       ".json",
       ".txt"
     ],
-    "review_input_applied": false,
-    "review_source": null,
-    "note": "report is deleted and rebuilt on each run. Put downloaded review-decisions.json at the project root before rebuilding, or place a Data export at transcript-intelligence-v2.json to recover reclassifications."
+    "review_input_applied": true,
+    "review_source": "reclass.json",
+    "note": "report is deleted and rebuilt on each run. Long-term reclassification decisions live in root-level reclass.json and are also written to report/data/reclass.json."
   },
   "counts": {
-    "transcripts": 34,
-    "segments": 160447,
-    "mentions": 10706,
-    "entities": 3906,
+    "transcripts": 36,
+    "segments": 162082,
+    "mentions": 10841,
+    "entities": 3966,
     "relationships": 3500,
     "categories": 42
   },
@@ -37,6 +37,8 @@
     "breaking-massive-energy-grid-found-benea.tsv": "477a5fcf63b40ce115e48b2e72707d595c33eea41c3272f691b71ceba68d9301",
     "cia-chief-im-a-time-traveler.tsv": "a17e1a1322d42a207380a6b079bad2a70b959317331b37c1c2fb30096fc0fed7",
     "cia-historian-aliens-are-controlling-hum.tsv": "ca835ea010bb7a69dce2c43e085629d0b9e19f605615882b12acfb90e977bf31",
+    "department-of-war-release-2-uap052226-video-2605-dod-111721737-dod-111721737.tsv": "205a3fa1374a2473c051cce6615ff0f2df7e9f4eb84d19fc2944f43996655271",
+    "dmt-opens-the-alien-realm-neuroscientist.tsv": "aadb3f69608430aaeeca3771bd275a508e1ec6d7b2ac466f0a18eb69073f71a4",
     "eric-weinstein-demands-ufo-secrets-from.tsv": "d8b6093230fb0ec9be7531a586d652f62dcd9f94e86ccfd71ed2bee070db52de",
     "exposing-the-cias-darkest-mind-control.tsv": "55215d3a8f13aef49f4ac81e3a759f7dec97dd3ddf0b865f71c4c7008226e867",
     "former-nsa-director-breaks-silence-on-uf.tsv": "32f6af554a6640f700bbeea1bf35c198936a8246a1559049f9e96cd6c49650ca",
@@ -66,7 +68,7 @@
     "why-the-pentagon-tried-to-censor-this-uf.tsv": "e66f4d3cc4202e0fd4d4986c5a4dc2a618df86798adc396d5fc333b004509b23"
   },
   "registry_hash": "5a85b27d9d5da2b1e7b9477b0086794bffcadab4ca5b0ce3cc4b54577805fbd0",
-  "pipeline_hash": "63a8d562bd84e43db8b00b81d6efb40504fc37febba24eb320ad6d376ac2f9c1",
+  "pipeline_hash": "26cd6f05376b11a45097faa44cc488db860328618ff6e7e5c81aa1b739525492",
   "review_counts": {
     "reclassifications": 0,
     "name_reclassifications": 0,

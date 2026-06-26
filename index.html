@@ -133,6 +133,11 @@
       flex-wrap: wrap;
       padding: 8px;
     }
+    .review-status {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.2;
+    }
     input, select, button {
       height: 34px;
       border: 1px solid var(--line);
@@ -380,6 +385,7 @@
     </div>
     <div class="controls">
       <input id="search" type="search" placeholder="Search entity or category">
+      <span id="review-status" class="review-status"></span>
       <button id="download-review" hidden>Download reclassified data</button>
       <button id="download-data">Download data</button>
     </div>
@@ -387,10 +393,11 @@
   <div id="node-card" class="node-card"></div>
   <div id="hover-card" class="hover-card"></div>
   <div id="corner-label" class="corner-label" aria-live="polite"></div>
-  <script src="app-data.js"></script>
+    <script src="app-data.js"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "transcript-intelligence-v2-review";
+    const BUILT_REVIEW = normalizeReview(RAW.reclassDecisions || RAW.reclass_decisions || RAW.reviewDecisions || RAW.review_decisions || {});
     const THEME = {
       primary: "#111111",
       primarySoft: "#f6f5ef",
@@ -409,6 +416,7 @@
     const hoverCardEl = document.getElementById("hover-card");
     const cornerLabelEl = document.getElementById("corner-label");
     const searchEl = document.getElementById("search");
+    const reviewStatusEl = document.getElementById("review-status");
     let mode = "categories";
     let activeCategory = null;
     let selectedEntityId = null;
@@ -422,6 +430,7 @@
     const ENTITY_ZOOM_OUT_STEP_UP_WIDTH = 5600;
     const CATEGORY_ZOOM_OUT_STEP_UP_WIDTH = 7400;
 
+    initializeReviewStorage();
     const DATA = applyReviewDecisions(normalizeData(RAW));
     const entitiesById = new Map();
     const mentionsById = new Map(DATA.mentions.map((mention) => [mention.id, mention]));
@@ -1186,14 +1195,52 @@
       render();
     }
 
+    function defaultReview() {
+      return { reclassifications: {}, nameReclassifications: {}, falsePositives: {}, omissions: {}, aliases: {}, merges: {}, nameMerges: {}, notes: {} };
+    }
+
+    function normalizeReview(review) {
+      const normalized = defaultReview();
+      if (!review || typeof review !== "object") return normalized;
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "notes"]) {
+        normalized[key] = review[key] && typeof review[key] === "object" && !Array.isArray(review[key]) ? review[key] : {};
+      }
+      if (review.generatedAt) normalized.generatedAt = review.generatedAt;
+      if (review.note) normalized.note = review.note;
+      return normalized;
+    }
+
+    function mergeReviews(base, overlay) {
+      const merged = normalizeReview(base);
+      const next = normalizeReview(overlay);
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "notes"]) {
+        merged[key] = { ...(merged[key] || {}), ...(next[key] || {}) };
+      }
+      if (next.generatedAt) merged.generatedAt = next.generatedAt;
+      if (next.note) merged.note = next.note;
+      return merged;
+    }
+
+    function initializeReviewStorage() {
+      const storedRaw = localStorage.getItem(REVIEW_KEY);
+      if (!storedRaw) {
+        if (hasReviewDecisions(BUILT_REVIEW)) saveReview(BUILT_REVIEW);
+        return;
+      }
+      try {
+        const stored = JSON.parse(storedRaw);
+        const merged = mergeReviews(BUILT_REVIEW, stored);
+        if (JSON.stringify(merged) !== JSON.stringify(stored)) saveReview(merged);
+      } catch {
+        saveReview(BUILT_REVIEW);
+      }
+    }
+
     function readReview() {
       try {
-        const review = JSON.parse(localStorage.getItem(REVIEW_KEY) || '{"reclassifications":{},"falsePositives":{},"omissions":{},"aliases":{},"merges":{},"nameMerges":{},"notes":{}}');
-        review.merges = review.merges || {};
-        review.nameMerges = review.nameMerges || {};
-        return review;
+        return normalizeReview(JSON.parse(localStorage.getItem(REVIEW_KEY) || "{}"));
       } catch {
-        return { reclassifications: {}, falsePositives: {}, omissions: {}, aliases: {}, merges: {}, nameMerges: {}, notes: {} };
+        return defaultReview();
       }
     }
 
@@ -1203,18 +1250,27 @@
     }
 
     function hasReviewDecisions(review) {
-      return Boolean(
-        Object.keys(review.reclassifications || {}).length ||
-        Object.keys(review.nameReclassifications || {}).length ||
-        Object.keys(review.falsePositives || {}).length ||
-        Object.keys(review.merges || {}).length ||
+      return reviewDecisionCount(review) > 0;
+    }
+
+    function reviewDecisionCount(review) {
+      return (
+        Object.keys(review.reclassifications || {}).length +
+        Object.keys(review.nameReclassifications || {}).length +
+        Object.keys(review.falsePositives || {}).length +
+        Object.keys(review.omissions || {}).length +
+        Object.keys(review.aliases || {}).length +
+        Object.keys(review.merges || {}).length +
         Object.keys(review.nameMerges || {}).length
       );
     }
 
     function updateReviewButton() {
       const button = document.getElementById("download-review");
-      if (button) button.hidden = !hasReviewDecisions(readReview());
+      const review = readReview();
+      const count = reviewDecisionCount(review);
+      if (button) button.hidden = count === 0;
+      if (reviewStatusEl) reviewStatusEl.textContent = count ? count.toLocaleString() + " review decisions in browser" : "";
     }
 
     function download(filename, payload) {
@@ -1443,8 +1499,8 @@
     document.getElementById("download-review").addEventListener("click", () => {
       const review = readReview();
       review.generatedAt = new Date().toISOString();
-      review.note = "Place this file at review-decisions.json in the project root before rebuilding.";
-      download("review-decisions.json", review);
+      review.note = "Place this file at reclass.json in the project root before rebuilding.";
+      download("reclass.json", review);
     });
     document.getElementById("download-data").addEventListener("click", () => download("transcript-intelligence-v2.json", DATA));
     updateReviewButton();
