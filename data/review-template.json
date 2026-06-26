@@ -1,0 +1,9 @@
+{
+  "reclassifications": {},
+  "falsePositives": {},
+  "omissions": {},
+  "aliases": {},
+  "merges": {},
+  "nameMerges": {},
+  "notes": "Download review decisions from the app, place as review-decisions.json at the project root, then rerun python3 build_report_v2.py."
+}

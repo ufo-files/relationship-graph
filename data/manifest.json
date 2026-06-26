@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-06-26T21:29:44.125645+00:00",
+  "pipeline": "transcript-intelligence-v2",
+  "reproducibility": {
+    "no_openai_api": true,
+    "source_extensions": [
+      ".tsv",
+      ".srt",
+      ".vtt",
+      ".json",
+      ".txt"
+    ],
+    "preferred_extensions": [
+      ".tsv",
+      ".srt",
+      ".vtt",
+      ".json",
+      ".txt"
+    ],
+    "review_input_applied": false,
+    "review_source": null,
+    "note": "report is deleted and rebuilt on each run. Put downloaded review-decisions.json at the project root before rebuilding, or place a Data export at transcript-intelligence-v2.json to recover reclassifications."
+  },
+  "counts": {
+    "transcripts": 34,
+    "segments": 160447,
+    "mentions": 10706,
+    "entities": 3906,
+    "relationships": 3500,
+    "categories": 42
+  },
+  "input_hashes": {
+    "100-000-ufos-are-surrounding-earth-ft-to.tsv": "a26a242213c018b4103b6f29d03f4aab3c1ce7e47d2dc1e0f18c72e16724077a",
+    "a-weekend-with-bob-lazar-inside-area51s.tsv": "714f1e0d4a2ee261405904024d41ca702488b4b50510cd616d77043a4f534b6b",
+    "army-captures-live-alien-hospital-report.tsv": "ed8573646f54e86074f5cdcbdfdec943e7ed1df5c96b2c10e1d231876d4a2bd9",
+    "breaking-brazils-defense-minister-says.tsv": "44ec32f4e6aea7e85ef06620e12005d77ccf759b3a3707e2bf760736dd402147",
+    "breaking-massive-energy-grid-found-benea.tsv": "477a5fcf63b40ce115e48b2e72707d595c33eea41c3272f691b71ceba68d9301",
+    "cia-chief-im-a-time-traveler.tsv": "a17e1a1322d42a207380a6b079bad2a70b959317331b37c1c2fb30096fc0fed7",
+    "cia-historian-aliens-are-controlling-hum.tsv": "ca835ea010bb7a69dce2c43e085629d0b9e19f605615882b12acfb90e977bf31",
+    "eric-weinstein-demands-ufo-secrets-from.tsv": "d8b6093230fb0ec9be7531a586d652f62dcd9f94e86ccfd71ed2bee070db52de",
+    "exposing-the-cias-darkest-mind-control.tsv": "55215d3a8f13aef49f4ac81e3a759f7dec97dd3ddf0b865f71c4c7008226e867",
+    "former-nsa-director-breaks-silence-on-uf.tsv": "32f6af554a6640f700bbeea1bf35c198936a8246a1559049f9e96cd6c49650ca",
+    "hollywood-the-cia-and-ufos-the-history-bey.tsv": "983e42fd611901ac722dbf79e6172043a30fe9562e29d6e80a88f944e3d335a3",
+    "i-found-hitlers-secret-ufo-program-jaso.tsv": "debb8cc6cd4a9ae5ebf266a015665c2c2f756aa88715d32bb74a7f1073bbf9d5",
+    "i-operated-a-ufo-its-not-what-you-think.tsv": "699795cfea114c09385d8dd29b011d99f8b3dc02f27c6c588343c900a14e703d",
+    "i-was-taken-by-aliens-in-1997-president.tsv": "f23bed59ff510fbb50ba20f4bb1c8a4595a0bfc5c64d3ca30cbcfb3eb3c04677",
+    "i-was-taken-by-the-ufo-program-as-a-kid.tsv": "a822503b35450d170a31a5f53bea9f53b5b1a82df41a2d7661167b976a5cc417",
+    "if-you-knew-what-i-knew-jeremy-corbell-u.tsv": "2186f002c40697ed68e29f4a745ae4ddda174442e6545e39ac36500a6fcbe7c0",
+    "joe-rogan-the-truth-about-aliens-he-fina.tsv": "1b46b34cd122adc665c1a9176045e430e2ff056c8e4578bbb146885b708e110e",
+    "meet-the-nuclear-missile-guard-abducted.tsv": "164bae7051038631a9852539667c9cadc8772a45c530e28cb0a574a3f7163052",
+    "meet-the-scientist-who-scanned-beneath-t.tsv": "6086a1085fc03b2b4a822ecd79a1f2b81261978c2029fee8f1a8aa3feab273af",
+    "meet-the-scientist-who-studies-alien-imp.tsv": "fd37b43eef9dfe77f116d130608ae4794c444cb623ba8b011183ebadd391e233",
+    "mit-scientist-your-brain-evolved-to-igno.tsv": "0635c683bdf8079d3ac4afe3f5c78307174660450f1ca39af2ffd135b24afa53",
+    "my-hospital-operated-on-an-alien-top-sur.tsv": "df84a691d9ee71ffd09182d90dcbf45c3e626550d8c04dca0e94ae33c890ad2e",
+    "nasa-chief-we-just-built-antigravity-pro.tsv": "97a8711cd6865c28cafe5a5fe3418da0201df31bc944bcbe83694daff6712bb9",
+    "nasa-whistleblower-we-systematically-sup.tsv": "f5f6aa43d10c33628110ed9dee83c1dc3203b440e3847dd5343859fc03b8b64e",
+    "the-bizarre-alien-abduction-details-the.tsv": "db6e5e48d34485938a7a71dabf2039a78bd2c3041424360b3addb021a2ddbfd5",
+    "the-cia-scientist-that-contacted-an-alie.tsv": "ea3722571c6f43edda1dbb658383aea69ba34be4fa0f534bd317588540a37326",
+    "the-lone-hacker-that-found-nasas-secret.tsv": "267ff040e9922b5e5d8739b08edc5d9f3515789fd838af03fa9f5d5a9aac0b86",
+    "the-man-sitting-on-more-ufo-evidence-tha.tsv": "42c969cb6fe3abc206c44a7c5f5ce770047231fbffa9bc0fb027b31fd2261e86",
+    "the-pentagons-ufo-program-is-real-here.tsv": "43d105100531ede2b62a27669e4b48ca328ff6878fd5135520f093568bdd3b1a",
+    "theres-a-ufo-on-the-seafloor-treasure-h.tsv": "c1ef9021186d753654c2e456143f2aeb6cea07856e57283dbeb4b626f782769d",
+    "we-captured-a-12-foot-giant-in-afghanist.tsv": "657f781693500fb2e24f65a0a7e8f631ced3bc9e10a29733896ab83d00d65d38",
+    "why-americas-top-scientists-are-going-m.tsv": "c09b3527c96f6bff6632e24416dfaa276ea763f564305ca5da269740794acb9b",
+    "why-nasa-studies-this-man-he-attracts-uf.tsv": "e55f75058a62342279bac8ca4aac7bcdde51b793f834f9c942e3d822448a4709",
+    "why-the-pentagon-tried-to-censor-this-uf.tsv": "e66f4d3cc4202e0fd4d4986c5a4dc2a618df86798adc396d5fc333b004509b23"
+  },
+  "registry_hash": "5a85b27d9d5da2b1e7b9477b0086794bffcadab4ca5b0ce3cc4b54577805fbd0",
+  "pipeline_hash": "63a8d562bd84e43db8b00b81d6efb40504fc37febba24eb320ad6d376ac2f9c1",
+  "review_counts": {
+    "reclassifications": 0,
+    "name_reclassifications": 0,
+    "false_positives": 0,
+    "omissions": 0,
+    "aliases": 0,
+    "merges": 0,
+    "name_merges": 0
+  }
+}
