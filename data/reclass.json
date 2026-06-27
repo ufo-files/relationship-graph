@@ -168,7 +168,114 @@
     "people:ninth-gate": "movies",
     "politicians:house-oversight-committee": "government_agencies",
     "people:langley-farms": "locations",
-    "people:sourcebook-project": "government_project_codenames"
+    "people:sourcebook-project": "government_project_codenames",
+    "likely_spies:richard-bissell": "people",
+    "people:indian-springs-valley": "locations",
+    "friendly_people:steve-quayle": "people",
+    "people:gen-six-productions": "companies",
+    "people:true-legends": "tv_shows",
+    "people:in-switzerland": "locations",
+    "friendly_people:new-york-city": "locations",
+    "dangerous_people:nuno-lurero": "people",
+    "people:presidential-early-career-award": "document_names",
+    "people:plasma-science": "university_departments",
+    "dangerous_people:brooklyn-hall": "locations",
+    "people:gibb-street": "locations",
+    "people:babcock-street": "locations",
+    "people:commonwealth-avenue": "locations",
+    "people:on-monday": "dates_times",
+    "people:technology-group": "companies",
+    "people:truth-social": "companies",
+    "professors:atomic-energy-authority": "government_agencies",
+    "people:instituto-superior": "universities",
+    "people:president-eisenhower": "politicians",
+    "people:camp-street": "locations",
+    "friendly_people:fred-crisman": "people",
+    "professors:travis-walton": "experiencers",
+    "friendly_people:project-orion": "government_project_codenames",
+    "people:santa-monica": "locations",
+    "people:great-pyramid": "locations",
+    "people:kafr-pyramid": "locations",
+    "people:like-kash-patel": "politicians",
+    "people:pam-bondi": "politicians",
+    "people:second-world-war": "events",
+    "people:communist-party": "government_agencies",
+    "people:national-guard": "government_agencies",
+    "friendly_people:project-preserve-destiny": "government_project_codenames",
+    "people:donald-j-trump": "politicians",
+    "people:let-espresso": "newsrooms",
+    "people:on-may": "dates_times",
+    "people:space-relations": "books",
+    "people:forbidden-science": "books",
+    "friendly_people:sidney-gottlieb": "people",
+    "people:your-game-girl": "books",
+    "people:wild-pendulum": "books",
+    "people:skoda-works": "government_agencies",
+    "people:hobie-sound": "locations",
+    "people:new-nautix": "research_groups",
+    "people:bell-project": "government_project_codenames",
+    "people:fort-meade": "military_bases",
+    "people:indian-ocean": "locations",
+    "whistleblowers:nicobar-islands": "locations",
+    "people:sandia-complex": "military_bases",
+    "friendly_people:bahamas-basin": "locations",
+    "friendly_people:bermuda-triangle": "locations",
+    "people:mount-hayes": "locations",
+    "people:mount-zeal": "locations",
+    "people:bradshaw-ranch": "locations",
+    "people:secret-machines": "books",
+    "politicians:russian-orthodox": "companies",
+    "politicians:slavonic-orthodox": "companies",
+    "people:mount-palomar-observatory": "research_groups",
+    "people:mount-waterman": "locations",
+    "people:antelope-valley": "locations",
+    "people:san-bernardino-county": "locations",
+    "likely_spies:palmdale-station-jail": "locations",
+    "people:sloan-digital-survey": "research_groups",
+    "people:lethe-stream": "star_systems",
+    "people:central-america": "locations",
+    "people:darien-gap": "locations",
+    "experiencers:lockheed-martin": "contractors",
+    "people:star-guests": "books",
+    "people:american-silver-shirts": "politicians",
+    "people:world-chess": "companies",
+    "people:new-year": "dates_times",
+    "people:beyond-skinwalker": "tv_shows",
+    "people:president-obama": "politicians",
+    "people:hal-poppenmeyer": "authors",
+    "friendly_people:civil-air": "government_agencies",
+    "professors:elon-musk": "people",
+    "people:holy-alliance": "books",
+    "people:arab-spring": "events",
+    "people:pacific-ocean": "locations",
+    "likely_spies:saddam-hussein": "dangerous_people",
+    "people:russian-federation": "locations",
+    "people:german-democratic-republic": "locations",
+    "people:berlin-wall": "locations",
+    "people:federal-republic": "locations",
+    "professors:disney-imagineering": "companies",
+    "friendly_people:alien-files-reopened": "tv_shows",
+    "people:korean-war": "events",
+    "friendly_people:manchurian-candidate": "emerging_terminology",
+    "people:operation-often": "government_project_codenames",
+    "people:president-kirsan": "politicians",
+    "people:south-china-sea": "locations",
+    "people:malaysia-airlines": "companies",
+    "people:kuala-lumpur": "locations",
+    "people:world-bank": "companies",
+    "people:revolutionary-fund": "companies",
+    "people:guinness-book": "books",
+    "people:bulgarian-academy": "government_agencies",
+    "people:french-academy": "government_agencies",
+    "people:vajrayana-buddhism": "religious_texts",
+    "people:bluebird-artichoke": "government_project_codenames",
+    "people:project-dauphin": "government_project_codenames",
+    "people:operation-midnight-climax": "government_project_codenames",
+    "people:george-h": "politicians",
+    "people:project-aquarius": "government_project_codenames",
+    "professors:bill-moore": "people",
+    "people:for-skinwalker": "tv_shows",
+    "people:uinta-basin": "locations"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -373,7 +480,120 @@
     "house oversight committee": "government_agencies",
     "langley farms": "locations",
     "star kids": "nonprofits",
-    "sourcebook project": "government_project_codenames"
+    "sourcebook project": "government_project_codenames",
+    "richard bissell": "people",
+    "indian springs valley": "locations",
+    "steve quayle": "people",
+    "gen six productions": "companies",
+    "true legends": "tv_shows",
+    "switzerland": "locations",
+    "york city": "locations",
+    "new york city": "locations",
+    "grand central station": "locations",
+    "nuno lurero": "people",
+    "presidential early career award": "document_names",
+    "plasma science and fusion center": "university_departments",
+    "brooklyn hall": "locations",
+    "gibb street": "locations",
+    "babcock street": "locations",
+    "commonwealth avenue": "locations",
+    "on monday": "dates_times",
+    "trump media and technology group": "companies",
+    "truth social": "companies",
+    "atomic energy authority": "government_agencies",
+    "instituto superior": "universities",
+    "president eisenhower": "politicians",
+    "544 camp street": "locations",
+    "fred crisman": "people",
+    "travis walton": "experiencers",
+    "santa monica": "locations",
+    "project orion": "government_project_codenames",
+    "great pyramid": "locations",
+    "kafr pyramid": "locations",
+    "kash patel": "politicians",
+    "pam bondi": "politicians",
+    "second world war": "events",
+    "communist party": "government_agencies",
+    "national guard": "government_agencies",
+    "project preserve destiny": "government_project_codenames",
+    "donald j. trump": "politicians",
+    "l'espresso": "newsrooms",
+    "may 8, 2026": "dates_times",
+    "space relations": "books",
+    "forbidden science": "books",
+    "sidney gottlieb": "people",
+    "your game girl": "books",
+    "stalking the wild pendulum": "books",
+    "skoda works": "government_agencies",
+    "hobie sound": "locations",
+    "new nautix": "research_groups",
+    "bell project": "government_project_codenames",
+    "fort meade": "military_bases",
+    "indian ocean": "locations",
+    "nicobar islands": "locations",
+    "sandia complex": "military_bases",
+    "bahamas basin": "locations",
+    "bermuda triangle": "locations",
+    "mount hayes": "locations",
+    "mount zeal": "locations",
+    "bradshaw ranch": "locations",
+    "sekret machines": "books",
+    "russian orthodox": "companies",
+    "slavonic orthodox": "companies",
+    "mount palomar observatory": "research_groups",
+    "waterman mountain": "locations",
+    "antelope valley": "locations",
+    "san bernardino county": "locations",
+    "palmdale station jail": "locations",
+    "sloan digital survey": "research_groups",
+    "lethe stream": "star_systems",
+    "central america": "locations",
+    "darien gap": "locations",
+    "lockheed martin": "contractors",
+    "president barack obama": "politicians",
+    "star guests": "books",
+    "american silver shirts": "politicians",
+    "russian federation": "locations",
+    "world chess": "companies",
+    "new year": "dates_times",
+    "beyond skinwalker": "tv_shows",
+    "hal povenmire": "authors",
+    "civil air": "government_agencies",
+    "elon musk": "people",
+    "holy alliance": "books",
+    "arab spring": "events",
+    "pacific ocean": "locations",
+    "saddam hussein": "dangerous_people",
+    "german democratic republic": "locations",
+    "berlin wall": "locations",
+    "federal republic of germany": "locations",
+    "disney imagineering": "companies",
+    "alien files reopened": "tv_shows",
+    "korean war": "events",
+    "manchurian candidate": "emerging_terminology",
+    "operation often": "government_project_codenames",
+    "president kirsan ilyamzinov": "politicians",
+    "xi jinping": "politicians",
+    "south china sea": "locations",
+    "malaysia airlines": "companies",
+    "kuala lumpur": "locations",
+    "world bank": "companies",
+    "revolutionary fund": "companies",
+    "guinness book of world records": "books",
+    "bulgarian academy of sciences": "government_agencies",
+    "french academy of science": "government_agencies",
+    "vajrayana buddhism": "religious_texts",
+    "operation bluebird": "government_project_codenames",
+    "bluebird artichoke": "government_project_codenames",
+    "project dauphin": "government_project_codenames",
+    "operation midnight climax": "government_project_codenames",
+    "george h.w. bush": "politicians",
+    "project aquarius": "government_project_codenames",
+    "john lear": "people",
+    "bill moore": "people",
+    "for skinwalker": "tv_shows",
+    "uinta basin": "locations",
+    "history channel": "tv_shows"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -895,6 +1115,66 @@
       "name": "Spielberg Amblin",
       "category": "people",
       "categoryLabel": "People"
+    },
+    "friendly_people:american-alchemist": {
+      "name": "American Alchemist",
+      "category": "friendly_people",
+      "categoryLabel": "Friendly people"
+    },
+    "people:i-see": {
+      "name": "I. See",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:go-google": {
+      "name": "Go Google",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "gps_coordinates:3-100": {
+      "name": "3,100",
+      "category": "gps_coordinates",
+      "categoryLabel": "GPS coordinates"
+    },
+    "people:as-barry": {
+      "name": "As Barry",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:popular-demand": {
+      "name": "Popular Demand",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:holy-communion": {
+      "name": "Holy Communion",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:norwegian-american": {
+      "name": "Norwegian American",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:top-dog": {
+      "name": "Top Dog",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:wayback-machine": {
+      "name": "Wayback Machine",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:by-lou": {
+      "name": "By Lou",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:lady-dracula": {
+      "name": "Lady Dracula",
+      "category": "people",
+      "categoryLabel": "People"
     }
   },
   "omissions": {},
@@ -974,7 +1254,93 @@
     "people:on-october": "October 30, 1993",
     "on october": "October 30, 1993",
     "people:in-january": "January, 2007",
-    "in january": "January, 2007"
+    "in january": "January, 2007",
+    "government_agencies:national-reconnaissance": "National Reconnaissance Office",
+    "people:charles-hall-tall-whites": "Charles Hall",
+    "charles hall tall whites": "Charles Hall",
+    "people:in-switzerland": "Switzerland",
+    "in switzerland": "Switzerland",
+    "people:york-city": "New York City",
+    "york city": "New York City",
+    "people:plasma-science": "Plasma Science and Fusion Center",
+    "plasma science": "Plasma Science and Fusion Center",
+    "people:on-monday": "December 15",
+    "on monday": "December 15",
+    "people:technology-group": "Trump Media and Technology Group",
+    "technology group": "Trump Media and Technology Group",
+    "people:camp-street": "544 Camp Street",
+    "camp street": "544 Camp Street",
+    "people:zahi-owas": "Zahi Hawass",
+    "zahi owas": "Zahi Hawass",
+    "people:like-kash-patel": "Kash Patel",
+    "like kash patel": "Kash Patel",
+    "people:let-espresso": "L'Espresso",
+    "let espresso": "L'Espresso",
+    "people:on-may": "May 8, 2026",
+    "on may": "May 8, 2026",
+    "people:bill-burr": "Bill Barr",
+    "bill burr": "Bill Barr",
+    "people:wild-pendulum": "Stalking the Wild Pendulum",
+    "wild pendulum": "Stalking the Wild Pendulum",
+    "universities:harvard": "Harvard University",
+    "harvard": "Harvard University",
+    "people:if-stephen-hawking": "Stephen Hawking",
+    "if stephen hawking": "Stephen Hawking",
+    "people:secret-machines": "Sekret Machines",
+    "secret machines": "Sekret Machines",
+    "people:mount-waterman": "Waterman Mountain",
+    "mount waterman": "Waterman Mountain",
+    "people:was-snyder": "Freddy Snyder",
+    "was snyder": "Freddy Snyder",
+    "people:enter-major-donald-kehoe": "Major Donald Kehoe",
+    "enter major donald kehoe": "Major Donald Kehoe",
+    "government_agencies:marine-corps": "United States Marine Corps",
+    "marine corps": "United States Marine Corps",
+    "people:owner-brandon-fugel": "Brandon Fugel",
+    "owner brandon fugel": "Brandon Fugel",
+    "people:president-obama": "President Barack Obama",
+    "president obama": "President Barack Obama",
+    "people:hal-poppenmeyer": "Hal Povenmire",
+    "hal poppenmeyer": "Hal Povenmire",
+    "people:bob-lazar-muscovium": "Bob Lazar",
+    "bob lazar muscovium": "Bob Lazar",
+    "people:jim-sammy": "Jim Semivan",
+    "jim sammy": "Jim Semivan",
+    "people:federal-republic": "Federal Republic of Germany",
+    "federal republic": "Federal Republic of Germany",
+    "people:bob-mueller": "Robert Mueller",
+    "bob mueller": "Robert Mueller",
+    "people:has-hal-puthoff": "Hal Puthoff",
+    "has hal puthoff": "Hal Puthoff",
+    "document_names:arrow-historical-report": "AARO Historical Report",
+    "arrow historical report": "AARO Historical Report",
+    "people:president-kirsan": "President Kirsan Ilyamzinov",
+    "president kirsan": "President Kirsan Ilyamzinov",
+    "people:in-peru": "Peru",
+    "in peru": "Peru",
+    "people:as-baba-vanga": "Baba Vanga",
+    "as baba vanga": "Baba Vanga",
+    "people:guinness-book": "Guinness Book of World Records",
+    "guinness book": "Guinness Book of World Records",
+    "dates_times:november-24-95": "April 1995",
+    "november 24 95": "April 1995",
+    "people:bulgarian-academy": "Bulgarian Academy of Sciences",
+    "bulgarian academy": "Bulgarian Academy of Sciences",
+    "people:french-academy": "French Academy of Science",
+    "french academy": "French Academy of Science",
+    "people:george-h": "President George H.W. Bush",
+    "george h": "George H.W. Bush",
+    "george h w bush": "President George H.W. Bush",
+    "people:except-john-olson-lear": "John Olson Lear",
+    "except john olson lear": "John Olson Lear",
+    "people:by-gary-nolan": "Gary Nolan",
+    "by gary nolan": "Gary Nolan",
+    "people:harold-malgrim": "Harald Malmgren",
+    "harold malgrim": "Harald Malmgren",
+    "people:applied-sciences": "Monroe Institute of Applied Sciences",
+    "applied sciences": "Monroe Institute of Applied Sciences",
+    "people:for-skinwalker": "Skinwalker Ranch",
+    "for skinwalker": "Skinwalker Ranch"
   },
   "merges": {
     "whistleblowers:robert-lazar": {
@@ -1285,9 +1651,9 @@
       "sourceId": "people:john-alexander",
       "sourceName": "John Alexander",
       "sourceCategory": "people",
-      "targetId": "friendly_people:john-alexander",
-      "targetName": "John Alexander",
-      "targetCategory": "friendly_people"
+      "targetId": "people:colonel-john-alexander",
+      "targetName": "Colonel John Alexander",
+      "targetCategory": "people"
     },
     "friendly_people:john-alexander": {
       "sourceId": "friendly_people:john-alexander",
@@ -1557,9 +1923,9 @@
       "sourceId": "government_agencies:national-reconnaissance-office",
       "sourceName": "National Reconnaissance Office",
       "sourceCategory": "government_agencies",
-      "targetId": "people:national-reconnaissance",
+      "targetId": "government_agencies:national-reconnaissance",
       "targetName": "National Reconnaissance",
-      "targetCategory": "people"
+      "targetCategory": "government_agencies"
     },
     "people:g-he": {
       "sourceId": "people:g-he",
@@ -1789,9 +2155,9 @@
       "sourceId": "people:diana-pasolka",
       "sourceName": "Diana Pasolka",
       "sourceCategory": "people",
-      "targetId": "people:diana-basoka",
-      "targetName": "Diana Basoka",
-      "targetCategory": "people"
+      "targetId": "experiencers:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "experiencers"
     },
     "professors:diana-pasolka": {
       "sourceId": "professors:diana-pasolka",
@@ -1885,9 +2251,9 @@
       "sourceId": "people:eric-davis",
       "sourceName": "Eric Davis",
       "sourceCategory": "people",
-      "targetId": "whistleblowers:eric-davis",
+      "targetId": "politicians:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "whistleblowers"
+      "targetCategory": "politicians"
     },
     "whistleblowers:eric-davis": {
       "sourceId": "whistleblowers:eric-davis",
@@ -1901,9 +2267,9 @@
       "sourceId": "experiencers:eric-davis",
       "sourceName": "Eric Davis",
       "sourceCategory": "experiencers",
-      "targetId": "friendly_people:eric-davis",
+      "targetId": "people:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "friendly_people"
+      "targetCategory": "people"
     },
     "friendly_people:eric-davis": {
       "sourceId": "friendly_people:eric-davis",
@@ -2005,9 +2371,9 @@
       "sourceId": "dangerous_people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
       "sourceCategory": "dangerous_people",
-      "targetId": "friendly_people:lee-harvey-oswald",
+      "targetId": "people:lee-harvey-oswald",
       "targetName": "Lee Harvey Oswald",
-      "targetCategory": "friendly_people"
+      "targetCategory": "people"
     },
     "institutes:manuro-institute": {
       "sourceId": "institutes:manuro-institute",
@@ -2117,9 +2483,9 @@
       "sourceId": "people:philip-j-corso",
       "sourceName": "Philip J. Corso",
       "sourceCategory": "people",
-      "targetId": "friendly_people:philip-j-corso",
-      "targetName": "Philip J. Corso",
-      "targetCategory": "friendly_people"
+      "targetId": "people:colonel-philip-j-corso",
+      "targetName": "Colonel Philip J. Corso",
+      "targetCategory": "people"
     },
     "people:william-j-burns": {
       "sourceId": "people:william-j-burns",
@@ -2320,6 +2686,1726 @@
       "targetId": "locations:space-kids-camp",
       "targetName": "Space Kids Camp",
       "targetCategory": "locations"
+    },
+    "people:richard-bissell": {
+      "sourceId": "people:richard-bissell",
+      "sourceName": "Richard Bissell",
+      "sourceCategory": "people",
+      "targetId": "likely_spies:richard-bissell",
+      "targetName": "Richard Bissell",
+      "targetCategory": "likely_spies"
+    },
+    "people:jim-semivan": {
+      "sourceId": "people:jim-semivan",
+      "sourceName": "Jim Semivan",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jim-semivan",
+      "targetName": "Jim Semivan",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:so-charles-hall": {
+      "sourceId": "friendly_people:so-charles-hall",
+      "sourceName": "So Charles Hall",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:charles-hall",
+      "targetName": "Charles Hall",
+      "targetCategory": "people"
+    },
+    "people:charles-hall": {
+      "sourceId": "people:charles-hall",
+      "sourceName": "Charles Hall",
+      "sourceCategory": "people",
+      "targetId": "people:charles-hall-tall-whites",
+      "targetName": "Charles Hall Tall Whites",
+      "targetCategory": "people"
+    },
+    "people:peter-lavenda": {
+      "sourceId": "people:peter-lavenda",
+      "sourceName": "Peter Lavenda",
+      "sourceCategory": "people",
+      "targetId": "dangerous_people:peter-lavenda",
+      "targetName": "Peter Lavenda",
+      "targetCategory": "dangerous_people"
+    },
+    "dangerous_people:peter-lavenda": {
+      "sourceId": "dangerous_people:peter-lavenda",
+      "sourceName": "Peter Lavenda",
+      "sourceCategory": "dangerous_people",
+      "targetId": "friendly_people:peter-lavenda",
+      "targetName": "Peter Lavenda",
+      "targetCategory": "friendly_people"
+    },
+    "people:howard-hughes": {
+      "sourceId": "people:howard-hughes",
+      "sourceName": "Howard Hughes",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:howard-hughes",
+      "targetName": "Howard Hughes",
+      "targetCategory": "friendly_people"
+    },
+    "people:van-tassel": {
+      "sourceId": "people:van-tassel",
+      "sourceName": "Van Tassel",
+      "sourceCategory": "people",
+      "targetId": "people:george-van-tassel",
+      "targetName": "George Van Tassel",
+      "targetCategory": "people"
+    },
+    "people:steve-quayle": {
+      "sourceId": "people:steve-quayle",
+      "sourceName": "Steve Quayle",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:steve-quayle",
+      "targetName": "Steve Quayle",
+      "targetCategory": "friendly_people"
+    },
+    "people:york-city": {
+      "sourceId": "people:york-city",
+      "sourceName": "New York City",
+      "sourceCategory": "locations",
+      "targetId": "people:new-york-city",
+      "targetName": "New York City",
+      "targetCategory": "people"
+    },
+    "people:new-york-city": {
+      "sourceId": "people:new-york-city",
+      "sourceName": "New York City",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:new-york-city",
+      "targetName": "New York City",
+      "targetCategory": "friendly_people"
+    },
+    "likely_spies:grand-central-station": {
+      "sourceId": "likely_spies:grand-central-station",
+      "sourceName": "Grand Central Station",
+      "sourceCategory": "locations",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "likely_spies:central-station": {
+      "sourceId": "likely_spies:central-station",
+      "sourceName": "Central Station",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "people:grand-central": {
+      "sourceId": "people:grand-central",
+      "sourceName": "Grand Central",
+      "sourceCategory": "people",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "professors:diana-pasulka": {
+      "sourceId": "professors:diana-pasulka",
+      "sourceName": "Diana Pasulka",
+      "sourceCategory": "professors",
+      "targetId": "people:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "people"
+    },
+    "people:if-lurero": {
+      "sourceId": "people:if-lurero",
+      "sourceName": "If Lurero",
+      "sourceCategory": "people",
+      "targetId": "people:nuno-lurero",
+      "targetName": "Nuno Lurero",
+      "targetCategory": "people"
+    },
+    "people:nuno-lurero": {
+      "sourceId": "people:nuno-lurero",
+      "sourceName": "Nuno Lurero",
+      "sourceCategory": "people",
+      "targetId": "professors:nuno-lurero",
+      "targetName": "Nuno Lurero",
+      "targetCategory": "professors"
+    },
+    "professors:nuno-lurero": {
+      "sourceId": "professors:nuno-lurero",
+      "sourceName": "Nuno Lurero",
+      "sourceCategory": "professors",
+      "targetId": "dangerous_people:nuno-lurero",
+      "targetName": "Nuno Lurero",
+      "targetCategory": "dangerous_people"
+    },
+    "companies:plasma-science-infusion-center": {
+      "sourceId": "companies:plasma-science-infusion-center",
+      "sourceName": "Plasma Science Infusion Center",
+      "sourceCategory": "companies",
+      "targetId": "people:plasma-science",
+      "targetName": "Plasma Science and Fusion Center",
+      "targetCategory": "university_departments"
+    },
+    "people:maybe-valente": {
+      "sourceId": "people:maybe-valente",
+      "sourceName": "Maybe Valente",
+      "sourceCategory": "people",
+      "targetId": "people:claudio-valente",
+      "targetName": "Claudio Valente",
+      "targetCategory": "people"
+    },
+    "people:trump-media": {
+      "sourceId": "people:trump-media",
+      "sourceName": "Trump Media",
+      "sourceCategory": "people",
+      "targetId": "people:technology-group",
+      "targetName": "Trump Media and Technology Group",
+      "targetCategory": "companies"
+    },
+    "companies:science-infusion-center": {
+      "sourceId": "companies:science-infusion-center",
+      "sourceName": "Science Infusion Center",
+      "sourceCategory": "companies",
+      "targetId": "people:plasma-science",
+      "targetName": "Plasma Science and Fusion Center",
+      "targetCategory": "university_departments"
+    },
+    "people:so-fred-crisman": {
+      "sourceId": "people:so-fred-crisman",
+      "sourceName": "So Fred Crisman",
+      "sourceCategory": "people",
+      "targetId": "people:fred-chrisman",
+      "targetName": "Fred Chrisman",
+      "targetCategory": "people"
+    },
+    "people:fred-chrisman": {
+      "sourceId": "people:fred-chrisman",
+      "sourceName": "Fred Chrisman",
+      "sourceCategory": "people",
+      "targetId": "people:fred-crisman",
+      "targetName": "Fred Crisman",
+      "targetCategory": "people"
+    },
+    "people:fred-crisman": {
+      "sourceId": "people:fred-crisman",
+      "sourceName": "Fred Crisman",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:fred-crisman",
+      "targetName": "Fred Crisman",
+      "targetCategory": "friendly_people"
+    },
+    "newsrooms:washington-post": {
+      "sourceId": "newsrooms:washington-post",
+      "sourceName": "Washington Post",
+      "sourceCategory": "newsrooms",
+      "targetId": "newsrooms:the-washington-post",
+      "targetName": "the Washington Post",
+      "targetCategory": "newsrooms"
+    },
+    "politicians:task-force": {
+      "sourceId": "politicians:task-force",
+      "sourceName": "Task Force",
+      "sourceCategory": "politicians",
+      "targetId": "government_agencies:uap-task-force",
+      "targetName": "UAP task force",
+      "targetCategory": "government_agencies"
+    },
+    "people:lou-elizondo": {
+      "sourceId": "people:lou-elizondo",
+      "sourceName": "Lou Elizondo",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:lou-elizondo",
+      "targetName": "Lou Elizondo",
+      "targetCategory": "whistleblowers"
+    },
+    "whistleblowers:lou-elizondo": {
+      "sourceId": "whistleblowers:lou-elizondo",
+      "sourceName": "Lou Elizondo",
+      "sourceCategory": "whistleblowers",
+      "targetId": "friendly_people:lou-elizondo",
+      "targetName": "Lou Elizondo",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:lou-elizondo": {
+      "sourceId": "friendly_people:lou-elizondo",
+      "sourceName": "Lou Elizondo",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:louis-elizondo",
+      "targetName": "Louis Elizondo",
+      "targetCategory": "people"
+    },
+    "people:louis-elizondo": {
+      "sourceId": "people:louis-elizondo",
+      "sourceName": "Louis Elizondo",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:luis-elizondo",
+      "targetName": "Luis Elizondo",
+      "targetCategory": "whistleblowers"
+    },
+    "people:so-jay": {
+      "sourceId": "people:so-jay",
+      "sourceName": "So Jay",
+      "sourceCategory": "people",
+      "targetId": "people:jay-stratton",
+      "targetName": "Jay Stratton",
+      "targetCategory": "people"
+    },
+    "experiencers:travis-walton": {
+      "sourceId": "experiencers:travis-walton",
+      "sourceName": "Travis Walton",
+      "sourceCategory": "experiencers",
+      "targetId": "people:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "people"
+    },
+    "people:travis-walton": {
+      "sourceId": "people:travis-walton",
+      "sourceName": "Travis Walton",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:travis-walton": {
+      "sourceId": "friendly_people:travis-walton",
+      "sourceName": "Travis Walton",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "professors"
+    },
+    "people:because-travis": {
+      "sourceId": "people:because-travis",
+      "sourceName": "Because Travis",
+      "sourceCategory": "people",
+      "targetId": "professors:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "experiencers"
+    },
+    "friendly_people:santa-monica": {
+      "sourceId": "friendly_people:santa-monica",
+      "sourceName": "Santa Monica",
+      "sourceCategory": "locations",
+      "targetId": "people:santa-monica",
+      "targetName": "Santa Monica",
+      "targetCategory": "people"
+    },
+    "people:zahi-was": {
+      "sourceId": "people:zahi-was",
+      "sourceName": "Zahi Was",
+      "sourceCategory": "people",
+      "targetId": "people:zahi-hawass",
+      "targetName": "Zahi Hawass",
+      "targetCategory": "people"
+    },
+    "people:zahi-hawass": {
+      "sourceId": "people:zahi-hawass",
+      "sourceName": "Zahi Hawass",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:zahi-awas",
+      "targetName": "Zahi Awas",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:zahi-awas": {
+      "sourceId": "friendly_people:zahi-awas",
+      "sourceName": "Zahi Awas",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:zahi-awaz",
+      "targetName": "Zahi Awaz",
+      "targetCategory": "people"
+    },
+    "people:zahi-awaz": {
+      "sourceId": "people:zahi-awaz",
+      "sourceName": "Zahi Awaz",
+      "sourceCategory": "people",
+      "targetId": "people:even-zahi-hawass",
+      "targetName": "Even Zahi Hawass",
+      "targetCategory": "people"
+    },
+    "people:even-zahi-hawass": {
+      "sourceId": "people:even-zahi-hawass",
+      "sourceName": "Even Zahi Hawass",
+      "sourceCategory": "people",
+      "targetId": "people:zahi-owas",
+      "targetName": "Zahi Owas",
+      "targetCategory": "people"
+    },
+    "people:gisa-plateau": {
+      "sourceId": "people:gisa-plateau",
+      "sourceName": "Gisa Plateau",
+      "sourceCategory": "people",
+      "targetId": "locations:giza-plateau",
+      "targetName": "Giza Plateau",
+      "targetCategory": "locations"
+    },
+    "people:corrado-malanga": {
+      "sourceId": "people:corrado-malanga",
+      "sourceName": "Corrado Malanga",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:corrado-malanga",
+      "targetName": "Corrado Malanga",
+      "targetCategory": "whistleblowers"
+    },
+    "professors:filippo-biondi": {
+      "sourceId": "professors:filippo-biondi",
+      "sourceName": "Filippo Biondi",
+      "sourceCategory": "professors",
+      "targetId": "people:filippo-biondi",
+      "targetName": "Filippo Biondi",
+      "targetCategory": "people"
+    },
+    "materials:zinc": {
+      "sourceId": "materials:zinc",
+      "sourceName": "zinc",
+      "sourceCategory": "materials",
+      "targetId": "chemical_elements:zinc",
+      "targetName": "zinc",
+      "targetCategory": "chemical_elements"
+    },
+    "people:pan-bondi": {
+      "sourceId": "people:pan-bondi",
+      "sourceName": "Pan Bondi",
+      "sourceCategory": "people",
+      "targetId": "people:pam-bondi",
+      "targetName": "Pam Bondi",
+      "targetCategory": "people"
+    },
+    "people:kash-patel": {
+      "sourceId": "people:kash-patel",
+      "sourceName": "Kash Patel",
+      "sourceCategory": "people",
+      "targetId": "people:like-kash-patel",
+      "targetName": "Like Kash Patel",
+      "targetCategory": "people"
+    },
+    "people:billy-meyer": {
+      "sourceId": "people:billy-meyer",
+      "sourceName": "Billy Meyer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:billy-meyer": {
+      "sourceId": "friendly_people:billy-meyer",
+      "sourceName": "Billy Meyer",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "whistleblowers:george-adamski": {
+      "sourceId": "whistleblowers:george-adamski",
+      "sourceName": "George Adamski",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:george-adamski",
+      "targetName": "George Adamski",
+      "targetCategory": "people"
+    },
+    "people:george-adamski": {
+      "sourceId": "people:george-adamski",
+      "sourceName": "George Adamski",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:george-adamski",
+      "targetName": "George Adamski",
+      "targetCategory": "friendly_people"
+    },
+    "people:so-lenin": {
+      "sourceId": "people:so-lenin",
+      "sourceName": "So Lenin",
+      "sourceCategory": "people",
+      "targetId": "people:vladimir-lenin",
+      "targetName": "Vladimir Lenin",
+      "targetCategory": "people"
+    },
+    "government_agencies:us-army": {
+      "sourceId": "government_agencies:us-army",
+      "sourceName": "US Army",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:united-states-army",
+      "targetName": "United States Army",
+      "targetCategory": "government_agencies"
+    },
+    "locations:brook-park-strip-mall": {
+      "sourceId": "locations:brook-park-strip-mall",
+      "sourceName": "Brook Park Strip Mall",
+      "sourceCategory": "locations",
+      "targetId": "locations:brookgate-strip-mall",
+      "targetName": "Brookgate Strip Mall",
+      "targetCategory": "locations"
+    },
+    "people:project-preserve-destiny": {
+      "sourceId": "people:project-preserve-destiny",
+      "sourceName": "Project Preserve Destiny",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:project-preserve-destiny",
+      "targetName": "Project Preserve Destiny",
+      "targetCategory": "friendly_people"
+    },
+    "people:president-trump": {
+      "sourceId": "people:president-trump",
+      "sourceName": "President Trump",
+      "sourceCategory": "people",
+      "targetId": "people:with-president-trump",
+      "targetName": "With President Trump",
+      "targetCategory": "people"
+    },
+    "people:with-president-trump": {
+      "sourceId": "people:with-president-trump",
+      "sourceName": "With President Trump",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:donald-trump",
+      "targetName": "Donald Trump",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:donald-trump": {
+      "sourceId": "friendly_people:donald-trump",
+      "sourceName": "Donald Trump",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:donald-trump",
+      "targetName": "Donald Trump",
+      "targetCategory": "people"
+    },
+    "people:donald-trump": {
+      "sourceId": "people:donald-trump",
+      "sourceName": "Donald Trump",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:president-trump",
+      "targetName": "President Trump",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:president-trump": {
+      "sourceId": "friendly_people:president-trump",
+      "sourceName": "President Trump",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:under-trump",
+      "targetName": "Under Trump",
+      "targetCategory": "people"
+    },
+    "people:under-trump": {
+      "sourceId": "people:under-trump",
+      "sourceName": "Under Trump",
+      "sourceCategory": "people",
+      "targetId": "people:with-trump",
+      "targetName": "With Trump",
+      "targetCategory": "people"
+    },
+    "people:with-trump": {
+      "sourceId": "people:with-trump",
+      "sourceName": "With Trump",
+      "sourceCategory": "people",
+      "targetId": "people:donald-j-trump",
+      "targetName": "Donald J. Trump",
+      "targetCategory": "people"
+    },
+    "people:william-barr": {
+      "sourceId": "people:william-barr",
+      "sourceName": "William Barr",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:william-barr",
+      "targetName": "William Barr",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:william-barr": {
+      "sourceId": "friendly_people:william-barr",
+      "sourceName": "William Barr",
+      "sourceCategory": "friendly_people",
+      "targetId": "politicians:bill-barr",
+      "targetName": "Bill Barr",
+      "targetCategory": "politicians"
+    },
+    "politicians:bill-barr": {
+      "sourceId": "politicians:bill-barr",
+      "sourceName": "Bill Barr",
+      "sourceCategory": "politicians",
+      "targetId": "people:bill-barr",
+      "targetName": "Bill Barr",
+      "targetCategory": "people"
+    },
+    "people:bill-barr": {
+      "sourceId": "people:bill-barr",
+      "sourceName": "Bill Barr",
+      "sourceCategory": "people",
+      "targetId": "people:bill-burr",
+      "targetName": "Bill Burr",
+      "targetCategory": "people"
+    },
+    "people:so-donald-barr": {
+      "sourceId": "people:so-donald-barr",
+      "sourceName": "So Donald Barr",
+      "sourceCategory": "people",
+      "targetId": "people:donald-barr",
+      "targetName": "Donald Barr",
+      "targetCategory": "people"
+    },
+    "people:donald-barr": {
+      "sourceId": "people:donald-barr",
+      "sourceName": "Donald Barr",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:donald-barr",
+      "targetName": "Donald Barr",
+      "targetCategory": "friendly_people"
+    },
+    "people:alan-hynek": {
+      "sourceId": "people:alan-hynek",
+      "sourceName": "Alan Hynek",
+      "sourceCategory": "people",
+      "targetId": "people:j-allen-hynek",
+      "targetName": "J. Allen Hynek",
+      "targetCategory": "people"
+    },
+    "experiencers:francois-truffaut": {
+      "sourceId": "experiencers:francois-truffaut",
+      "sourceName": "Francois Truffaut",
+      "sourceCategory": "experiencers",
+      "targetId": "people:francois-truffaut",
+      "targetName": "Francois Truffaut",
+      "targetCategory": "people"
+    },
+    "people:sidney-gottlieb": {
+      "sourceId": "people:sidney-gottlieb",
+      "sourceName": "Sidney Gottlieb",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:sidney-gottlieb",
+      "targetName": "Sidney Gottlieb",
+      "targetCategory": "friendly_people"
+    },
+    "dangerous_people:so-jack-ruby": {
+      "sourceId": "dangerous_people:so-jack-ruby",
+      "sourceName": "So Jack Ruby",
+      "sourceCategory": "dangerous_people",
+      "targetId": "dangerous_people:jack-ruby",
+      "targetName": "Jack Ruby",
+      "targetCategory": "dangerous_people"
+    },
+    "friendly_people:jose-delgado": {
+      "sourceId": "friendly_people:jose-delgado",
+      "sourceName": "Jose Delgado",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:jose-delgado",
+      "targetName": "Jose Delgado",
+      "targetCategory": "people"
+    },
+    "friendly_people:lee-harvey-oswald": {
+      "sourceId": "friendly_people:lee-harvey-oswald",
+      "sourceName": "Lee Harvey Oswald",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:lee-harvey-oswald",
+      "targetName": "Lee Harvey Oswald",
+      "targetCategory": "dangerous_people"
+    },
+    "people:charles-manson": {
+      "sourceId": "people:charles-manson",
+      "sourceName": "Charles Manson",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:charles-manson",
+      "targetName": "Charles Manson",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:charles-manson": {
+      "sourceId": "friendly_people:charles-manson",
+      "sourceName": "Charles Manson",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:charles-manson",
+      "targetName": "Charles Manson",
+      "targetCategory": "dangerous_people"
+    },
+    "people:joseph-farrell": {
+      "sourceId": "people:joseph-farrell",
+      "sourceName": "Joseph Farrell",
+      "sourceCategory": "people",
+      "targetId": "people:joseph-p-farrell",
+      "targetName": "Joseph P. Farrell",
+      "targetCategory": "people"
+    },
+    "people:zero-point": {
+      "sourceId": "people:zero-point",
+      "sourceName": "Zero Point",
+      "sourceCategory": "people",
+      "targetId": "technology:zero-point-energy",
+      "targetName": "zero point energy",
+      "targetCategory": "technology"
+    },
+    "people:monica-reza": {
+      "sourceId": "people:monica-reza",
+      "sourceName": "Monica Reza",
+      "sourceCategory": "people",
+      "targetId": "people:monica-jacinto-reza",
+      "targetName": "Monica Jacinto Reza",
+      "targetCategory": "people"
+    },
+    "people:jason-reza": {
+      "sourceId": "people:jason-reza",
+      "sourceName": "Jason Reza",
+      "sourceCategory": "people",
+      "targetId": "experiencers:jason-reza",
+      "targetName": "Jason Reza",
+      "targetCategory": "experiencers"
+    },
+    "people:rogan-show": {
+      "sourceId": "people:rogan-show",
+      "sourceName": "Rogan Show",
+      "sourceCategory": "people",
+      "targetId": "experiencers:joe-rogan-experience",
+      "targetName": "Joe Rogan Experience",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:gary-nolan": {
+      "sourceId": "experiencers:gary-nolan",
+      "sourceName": "Gary Nolan",
+      "sourceCategory": "experiencers",
+      "targetId": "people:gary-nolan",
+      "targetName": "Gary Nolan",
+      "targetCategory": "people"
+    },
+    "people:gary-nolan": {
+      "sourceId": "people:gary-nolan",
+      "sourceName": "Gary Nolan",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:gary-nolan",
+      "targetName": "Gary Nolan",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:gary-nolan": {
+      "sourceId": "friendly_people:gary-nolan",
+      "sourceName": "Gary Nolan",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:gary-nolan",
+      "targetName": "Gary Nolan",
+      "targetCategory": "professors"
+    },
+    "movies:close-encounters": {
+      "sourceId": "movies:close-encounters",
+      "sourceName": "Close Encounters",
+      "sourceCategory": "movies",
+      "targetId": "experiencers:closer-encounter",
+      "targetName": "Closer Encounter",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:closer-encounter": {
+      "sourceId": "experiencers:closer-encounter",
+      "sourceName": "Closer Encounter",
+      "sourceCategory": "experiencers",
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
+    },
+    "people:nick-cook": {
+      "sourceId": "people:nick-cook",
+      "sourceName": "Nick Cook",
+      "sourceCategory": "people",
+      "targetId": "journalists:nick-cook",
+      "targetName": "Nick Cook",
+      "targetCategory": "journalists"
+    },
+    "people:ingo-swan": {
+      "sourceId": "people:ingo-swan",
+      "sourceName": "Ingo Swan",
+      "sourceCategory": "people",
+      "targetId": "people:ingo-swann",
+      "targetName": "Ingo Swann",
+      "targetCategory": "people"
+    },
+    "people:don-menzel": {
+      "sourceId": "people:don-menzel",
+      "sourceName": "Don Menzel",
+      "sourceCategory": "people",
+      "targetId": "people:donald-menzel",
+      "targetName": "Donald Menzel",
+      "targetCategory": "people"
+    },
+    "people:dorit-hofleit": {
+      "sourceId": "people:dorit-hofleit",
+      "sourceName": "Dorit Hofleit",
+      "sourceCategory": "people",
+      "targetId": "people:dorit-hofflite",
+      "targetName": "Dorit Hofflite",
+      "targetCategory": "people"
+    },
+    "professors:david-spurgle": {
+      "sourceId": "professors:david-spurgle",
+      "sourceName": "David Spurgle",
+      "sourceCategory": "professors",
+      "targetId": "people:david-spurgle",
+      "targetName": "David Spurgle",
+      "targetCategory": "people"
+    },
+    "people:maybe-spurgle": {
+      "sourceId": "people:maybe-spurgle",
+      "sourceName": "Maybe Spurgle",
+      "sourceCategory": "people",
+      "targetId": "people:david-spurgle",
+      "targetName": "David Spurgle",
+      "targetCategory": "people"
+    },
+    "people:jim-simons": {
+      "sourceId": "people:jim-simons",
+      "sourceName": "Jim Simons",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jim-simons",
+      "targetName": "Jim Simons",
+      "targetCategory": "friendly_people"
+    },
+    "people:remember-eric-weinstein": {
+      "sourceId": "people:remember-eric-weinstein",
+      "sourceName": "Remember Eric Weinstein",
+      "sourceCategory": "people",
+      "targetId": "professors:eric-weinstein",
+      "targetName": "Eric Weinstein",
+      "targetCategory": "professors"
+    },
+    "politicians:eric-davis": {
+      "sourceId": "politicians:eric-davis",
+      "sourceName": "Eric Davis",
+      "sourceCategory": "politicians",
+      "targetId": "friendly_people:eric-davis",
+      "targetName": "Eric Davis",
+      "targetCategory": "friendly_people"
+    },
+    "whistleblowers:researcher-ashton-forbes": {
+      "sourceId": "whistleblowers:researcher-ashton-forbes",
+      "sourceName": "Researcher Ashton Forbes",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:ashton-forbes",
+      "targetName": "Ashton Forbes",
+      "targetCategory": "people"
+    },
+    "people:wilson-davis": {
+      "sourceId": "people:wilson-davis",
+      "sourceName": "Wilson Davis",
+      "sourceCategory": "people",
+      "targetId": "professors:wilson-davis",
+      "targetName": "Wilson Davis",
+      "targetCategory": "professors"
+    },
+    "people:glenn-gaffney": {
+      "sourceId": "people:glenn-gaffney",
+      "sourceName": "Glenn Gaffney",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:glenn-gaffney",
+      "targetName": "Glenn Gaffney",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:glenn-gaffney": {
+      "sourceId": "friendly_people:glenn-gaffney",
+      "sourceName": "Glenn Gaffney",
+      "sourceCategory": "friendly_people",
+      "targetId": "politicians:glenn-gaffney",
+      "targetName": "Glenn Gaffney",
+      "targetCategory": "politicians"
+    },
+    "contractors:lockheed-martin": {
+      "sourceId": "contractors:lockheed-martin",
+      "sourceName": "Lockheed Martin",
+      "sourceCategory": "contractors",
+      "targetId": "experiencers:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "experiencers"
+    },
+    "people:lawrence-preston-geis": {
+      "sourceId": "people:lawrence-preston-geis",
+      "sourceName": "Lawrence Preston Geis",
+      "sourceCategory": "people",
+      "targetId": "people:lawrence-preston-geist",
+      "targetName": "Lawrence Preston Geist",
+      "targetCategory": "people"
+    },
+    "people:officer-lonnie-zamora": {
+      "sourceId": "people:officer-lonnie-zamora",
+      "sourceName": "Officer Lonnie Zamora",
+      "sourceCategory": "people",
+      "targetId": "people:lonnie-zamora",
+      "targetName": "Lonnie Zamora",
+      "targetCategory": "people"
+    },
+    "people:james-island": {
+      "sourceId": "people:james-island",
+      "sourceName": "James Island",
+      "sourceCategory": "people",
+      "targetId": "locations:little-st-james",
+      "targetName": "Little St. James",
+      "targetCategory": "locations"
+    },
+    "people:stephen-hawking": {
+      "sourceId": "people:stephen-hawking",
+      "sourceName": "Stephen Hawking",
+      "sourceCategory": "people",
+      "targetId": "people:if-stephen-hawking",
+      "targetName": "If Stephen Hawking",
+      "targetCategory": "people"
+    },
+    "people:so-epstein": {
+      "sourceId": "people:so-epstein",
+      "sourceName": "So Epstein",
+      "sourceCategory": "people",
+      "targetId": "people:jeffrey-epstein",
+      "targetName": "Jeffrey Epstein",
+      "targetCategory": "people"
+    },
+    "dangerous_people:pat-price": {
+      "sourceId": "dangerous_people:pat-price",
+      "sourceName": "Pat Price",
+      "sourceCategory": "dangerous_people",
+      "targetId": "likely_spies:pat-price",
+      "targetName": "Pat Price",
+      "targetCategory": "likely_spies"
+    },
+    "likely_spies:pat-price": {
+      "sourceId": "likely_spies:pat-price",
+      "sourceName": "Pat Price",
+      "sourceCategory": "likely_spies",
+      "targetId": "friendly_people:pat-price",
+      "targetName": "Pat Price",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:pat-price": {
+      "sourceId": "friendly_people:pat-price",
+      "sourceName": "Pat Price",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:pat-price",
+      "targetName": "Pat Price",
+      "targetCategory": "people"
+    },
+    "people:secret-canyon": {
+      "sourceId": "people:secret-canyon",
+      "sourceName": "Secret Canyon",
+      "sourceCategory": "people",
+      "targetId": "locations:secret-mountain",
+      "targetName": "Secret Mountain",
+      "targetCategory": "locations"
+    },
+    "people:secret-machines-war": {
+      "sourceId": "people:secret-machines-war",
+      "sourceName": "Secret Machines War",
+      "sourceCategory": "people",
+      "targetId": "people:secret-machines",
+      "targetName": "Sekret Machines",
+      "targetCategory": "books"
+    },
+    "institutes:palomar-observatory": {
+      "sourceId": "institutes:palomar-observatory",
+      "sourceName": "Palomar Observatory",
+      "sourceCategory": "institutes",
+      "targetId": "people:palomar-observatories",
+      "targetName": "Palomar Observatories",
+      "targetCategory": "people"
+    },
+    "people:palomar-observatories": {
+      "sourceId": "people:palomar-observatories",
+      "sourceName": "Palomar Observatories",
+      "sourceCategory": "people",
+      "targetId": "people:mount-palomar-observatory",
+      "targetName": "Mount Palomar Observatory",
+      "targetCategory": "people"
+    },
+    "people:so-grillmayer": {
+      "sourceId": "people:so-grillmayer",
+      "sourceName": "So Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "people:carl-grillmayer",
+      "targetName": "Carl Grillmayer",
+      "targetCategory": "people"
+    },
+    "people:carl-grillmayer": {
+      "sourceId": "people:carl-grillmayer",
+      "sourceName": "Carl Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "professors:carl-grillmayer",
+      "targetName": "Carl Grillmayer",
+      "targetCategory": "professors"
+    },
+    "people:waterman-mountain": {
+      "sourceId": "people:waterman-mountain",
+      "sourceName": "Waterman Mountain",
+      "sourceCategory": "locations",
+      "targetId": "people:mount-waterman",
+      "targetName": "Mount Waterman",
+      "targetCategory": "people"
+    },
+    "people:on-february": {
+      "sourceId": "people:on-february",
+      "sourceName": "On February",
+      "sourceCategory": "people",
+      "targetId": "dates_times:february-16-2026",
+      "targetName": "February 16, 2026",
+      "targetCategory": "dates_times"
+    },
+    "people:carl-johan-grillmayer": {
+      "sourceId": "people:carl-johan-grillmayer",
+      "sourceName": "Carl Johan Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "professors:carl-grillmayer",
+      "targetName": "Carl Grillmayer",
+      "targetCategory": "professors"
+    },
+    "professors:carl-grillmayer": {
+      "sourceId": "professors:carl-grillmayer",
+      "sourceName": "Carl Grillmayer",
+      "sourceCategory": "professors",
+      "targetId": "people:could-grillmayer",
+      "targetName": "Could Grillmayer",
+      "targetCategory": "people"
+    },
+    "people:could-grillmayer": {
+      "sourceId": "people:could-grillmayer",
+      "sourceName": "Could Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:did-grillmair",
+      "targetName": "Did Grillmair",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:did-grillmair": {
+      "sourceId": "friendly_people:did-grillmair",
+      "sourceName": "Did Grillmair",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:carl-grillmare",
+      "targetName": "Carl Grillmare",
+      "targetCategory": "people"
+    },
+    "people:carl-grillmare": {
+      "sourceId": "people:carl-grillmare",
+      "sourceName": "Carl Grillmare",
+      "sourceCategory": "people",
+      "targetId": "dangerous_people:carl-grillmair",
+      "targetName": "Carl Grillmair",
+      "targetCategory": "dangerous_people"
+    },
+    "people:when-snyder": {
+      "sourceId": "people:when-snyder",
+      "sourceName": "When Snyder",
+      "sourceCategory": "people",
+      "targetId": "people:freddy-snyder",
+      "targetName": "Freddy Snyder",
+      "targetCategory": "people"
+    },
+    "people:freddy-snyder": {
+      "sourceId": "people:freddy-snyder",
+      "sourceName": "Freddy Snyder",
+      "sourceCategory": "people",
+      "targetId": "people:was-snyder",
+      "targetName": "Was Snyder",
+      "targetCategory": "people"
+    },
+    "people:does-tim-taylor": {
+      "sourceId": "people:does-tim-taylor",
+      "sourceName": "Does Tim Taylor",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:tim-taylor": {
+      "sourceId": "friendly_people:tim-taylor",
+      "sourceName": "Tim Taylor",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "people:barack-obama": {
+      "sourceId": "people:barack-obama",
+      "sourceName": "Barack Obama",
+      "sourceCategory": "people",
+      "targetId": "people:president-barack-obama",
+      "targetName": "President Barack Obama",
+      "targetCategory": "people"
+    },
+    "friendly_people:mikhail-dobrnovic": {
+      "sourceId": "friendly_people:mikhail-dobrnovic",
+      "sourceName": "Mikhail Dobrnovic",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:mikhail-dobrynovik",
+      "targetName": "Mikhail Dobrynovik",
+      "targetCategory": "people"
+    },
+    "people:mikhail-gorbachev": {
+      "sourceId": "people:mikhail-gorbachev",
+      "sourceName": "Mikhail Gorbachev",
+      "sourceCategory": "people",
+      "targetId": "people:mikhail-sergeyevich-gorbachev",
+      "targetName": "Mikhail Sergeyevich Gorbachev",
+      "targetCategory": "people"
+    },
+    "politicians:jimmy-carter": {
+      "sourceId": "politicians:jimmy-carter",
+      "sourceName": "Jimmy Carter",
+      "sourceCategory": "politicians",
+      "targetId": "people:jimmy-carter",
+      "targetName": "Jimmy Carter",
+      "targetCategory": "people"
+    },
+    "people:jimmy-carter": {
+      "sourceId": "people:jimmy-carter",
+      "sourceName": "Jimmy Carter",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:president-carter",
+      "targetName": "President Carter",
+      "targetCategory": "friendly_people"
+    },
+    "people:helen-carter": {
+      "sourceId": "people:helen-carter",
+      "sourceName": "Helen Carter",
+      "sourceCategory": "people",
+      "targetId": "people:roscoe-helen-carter",
+      "targetName": "Roscoe Helen Carter",
+      "targetCategory": "people"
+    },
+    "people:donald-kehoe": {
+      "sourceId": "people:donald-kehoe",
+      "sourceName": "Donald Kehoe",
+      "sourceCategory": "people",
+      "targetId": "people:enter-major-donald-kehoe",
+      "targetName": "Enter Major Donald Kehoe",
+      "targetCategory": "people"
+    },
+    "key_terms:non-human-intelligence": {
+      "sourceId": "key_terms:non-human-intelligence",
+      "sourceName": "non-human intelligence",
+      "sourceCategory": "key_terms",
+      "targetId": "key_terms:nhi",
+      "targetName": "NHI",
+      "targetCategory": "key_terms"
+    },
+    "people:e-howard-hunt": {
+      "sourceId": "people:e-howard-hunt",
+      "sourceName": "E. Howard Hunt",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:e-howard-hunt",
+      "targetName": "E. Howard Hunt",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:e-howard-hunt": {
+      "sourceId": "friendly_people:e-howard-hunt",
+      "sourceName": "E. Howard Hunt",
+      "sourceCategory": "friendly_people",
+      "targetId": "journalists:e-howard-hunt",
+      "targetName": "E. Howard Hunt",
+      "targetCategory": "journalists"
+    },
+    "people:so-arthur-young": {
+      "sourceId": "people:so-arthur-young",
+      "sourceName": "So Arthur Young",
+      "sourceCategory": "people",
+      "targetId": "people:arthur-young",
+      "targetName": "Arthur Young",
+      "targetCategory": "people"
+    },
+    "people:so-alan-dulles": {
+      "sourceId": "people:so-alan-dulles",
+      "sourceName": "So Alan Dulles",
+      "sourceCategory": "people",
+      "targetId": "politicians:alan-dulles",
+      "targetName": "Alan Dulles",
+      "targetCategory": "politicians"
+    },
+    "politicians:alan-dulles": {
+      "sourceId": "politicians:alan-dulles",
+      "sourceName": "Alan Dulles",
+      "sourceCategory": "politicians",
+      "targetId": "people:alan-dulles",
+      "targetName": "Alan Dulles",
+      "targetCategory": "people"
+    },
+    "people:so-world-war": {
+      "sourceId": "people:so-world-war",
+      "sourceName": "So World War",
+      "sourceCategory": "people",
+      "targetId": "people:second-world-war",
+      "targetName": "Second World War",
+      "targetCategory": "events"
+    },
+    "people:another-kennedy": {
+      "sourceId": "people:another-kennedy",
+      "sourceName": "Another Kennedy",
+      "sourceCategory": "people",
+      "targetId": "people:bobby-kennedy",
+      "targetName": "Bobby Kennedy",
+      "targetCategory": "people"
+    },
+    "people:bobby-ray-inman": {
+      "sourceId": "people:bobby-ray-inman",
+      "sourceName": "Bobby Ray Inman",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bobby-ray-inman",
+      "targetName": "Bobby Ray Inman",
+      "targetCategory": "friendly_people"
+    },
+    "people:brandon-fugel": {
+      "sourceId": "people:brandon-fugel",
+      "sourceName": "Brandon Fugel",
+      "sourceCategory": "people",
+      "targetId": "people:owner-brandon-fugel",
+      "targetName": "Owner Brandon Fugel",
+      "targetCategory": "people"
+    },
+    "people:so-tim": {
+      "sourceId": "people:so-tim",
+      "sourceName": "So Tim",
+      "sourceCategory": "people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "people:president-barack-obama": {
+      "sourceId": "people:president-barack-obama",
+      "sourceName": "President Barack Obama",
+      "sourceCategory": "politicians",
+      "targetId": "people:president-obama",
+      "targetName": "President Obama",
+      "targetCategory": "people"
+    },
+    "people:hal-poblenmeyer": {
+      "sourceId": "people:hal-poblenmeyer",
+      "sourceName": "Hal Poblenmeyer",
+      "sourceCategory": "people",
+      "targetId": "people:hal-palemeyer",
+      "targetName": "Hal Palemeyer",
+      "targetCategory": "people"
+    },
+    "people:hal-palemeyer": {
+      "sourceId": "people:hal-palemeyer",
+      "sourceName": "Hal Palemeyer",
+      "sourceCategory": "people",
+      "targetId": "people:hal-pobbmire",
+      "targetName": "Hal Pobbmire",
+      "targetCategory": "people"
+    },
+    "people:hal-pobbmire": {
+      "sourceId": "people:hal-pobbmire",
+      "sourceName": "Hal Pobbmire",
+      "sourceCategory": "people",
+      "targetId": "people:hal-poppenmeyer",
+      "targetName": "Hal Poppenmeyer",
+      "targetCategory": "people"
+    },
+    "people:kenneth-arnell": {
+      "sourceId": "people:kenneth-arnell",
+      "sourceName": "Kenneth Arnell",
+      "sourceCategory": "people",
+      "targetId": "journalists:kenneth-arnell",
+      "targetName": "Kenneth Arnell",
+      "targetCategory": "journalists"
+    },
+    "journalists:kenneth-arnell": {
+      "sourceId": "journalists:kenneth-arnell",
+      "sourceName": "Kenneth Arnell",
+      "sourceCategory": "journalists",
+      "targetId": "friendly_people:kenneth-arnold",
+      "targetName": "Kenneth Arnold",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:kenneth-arnold": {
+      "sourceId": "friendly_people:kenneth-arnold",
+      "sourceName": "Kenneth Arnold",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:kenneth-arnold",
+      "targetName": "Kenneth Arnold",
+      "targetCategory": "people"
+    },
+    "journalists:steve-bannon": {
+      "sourceId": "journalists:steve-bannon",
+      "sourceName": "Steve Bannon",
+      "sourceCategory": "journalists",
+      "targetId": "people:steve-bannon",
+      "targetName": "Steve Bannon",
+      "targetCategory": "people"
+    },
+    "whistleblowers:bob-lazar": {
+      "sourceId": "whistleblowers:bob-lazar",
+      "sourceName": "Bob Lazar",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:when-bob-lazar",
+      "targetName": "When Bob Lazar",
+      "targetCategory": "people"
+    },
+    "people:when-bob-lazar": {
+      "sourceId": "people:when-bob-lazar",
+      "sourceName": "When Bob Lazar",
+      "sourceCategory": "people",
+      "targetId": "people:bob-lazar-muscovium",
+      "targetName": "Bob Lazar Muscovium",
+      "targetCategory": "people"
+    },
+    "friendly_people:howard-hunt": {
+      "sourceId": "friendly_people:howard-hunt",
+      "sourceName": "Howard Hunt",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:howard-hunt",
+      "targetName": "Howard Hunt",
+      "targetCategory": "people"
+    },
+    "people:howard-hunt": {
+      "sourceId": "people:howard-hunt",
+      "sourceName": "Howard Hunt",
+      "sourceCategory": "people",
+      "targetId": "likely_spies:because-e-howard-hunt",
+      "targetName": "Because E. Howard Hunt",
+      "targetCategory": "likely_spies"
+    },
+    "likely_spies:because-e-howard-hunt": {
+      "sourceId": "likely_spies:because-e-howard-hunt",
+      "sourceName": "Because E. Howard Hunt",
+      "sourceCategory": "likely_spies",
+      "targetId": "journalists:e-howard-hunt",
+      "targetName": "E. Howard Hunt",
+      "targetCategory": "journalists"
+    },
+    "journalists:david-ferry": {
+      "sourceId": "journalists:david-ferry",
+      "sourceName": "David Ferry",
+      "sourceCategory": "journalists",
+      "targetId": "people:david-ferry",
+      "targetName": "David Ferry",
+      "targetCategory": "people"
+    },
+    "dangerous_people:jack-martin": {
+      "sourceId": "dangerous_people:jack-martin",
+      "sourceName": "Jack Martin",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:jack-martin",
+      "targetName": "Jack Martin",
+      "targetCategory": "people"
+    },
+    "people:jack-martin": {
+      "sourceId": "people:jack-martin",
+      "sourceName": "Jack Martin",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jack-martin",
+      "targetName": "Jack Martin",
+      "targetCategory": "friendly_people"
+    },
+    "people:so-carl-stanley": {
+      "sourceId": "people:so-carl-stanley",
+      "sourceName": "So Carl Stanley",
+      "sourceCategory": "people",
+      "targetId": "people:carl-stanley",
+      "targetName": "Carl Stanley",
+      "targetCategory": "people"
+    },
+    "locations:russia": {
+      "sourceId": "locations:russia",
+      "sourceName": "Russia",
+      "sourceCategory": "locations",
+      "targetId": "friendly_people:russian-federation",
+      "targetName": "Russian Federation",
+      "targetCategory": "locations"
+    },
+    "friendly_people:russian-federation": {
+      "sourceId": "friendly_people:russian-federation",
+      "sourceName": "Russian Federation",
+      "sourceCategory": "locations",
+      "targetId": "people:russian-federation",
+      "targetName": "Russian Federation",
+      "targetCategory": "people"
+    },
+    "people:lee-oswald": {
+      "sourceId": "people:lee-oswald",
+      "sourceName": "Lee Oswald",
+      "sourceCategory": "people",
+      "targetId": "people:lee-harvey-oswald",
+      "targetName": "Lee Harvey Oswald",
+      "targetCategory": "people"
+    },
+    "friendly_people:jim-semivan": {
+      "sourceId": "friendly_people:jim-semivan",
+      "sourceName": "Jim Semivan",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:jim-sammy-van",
+      "targetName": "Jim Sammy Van",
+      "targetCategory": "people"
+    },
+    "people:jim-sammy-van": {
+      "sourceId": "people:jim-sammy-van",
+      "sourceName": "Jim Sammy Van",
+      "sourceCategory": "people",
+      "targetId": "people:jim-sammy",
+      "targetName": "Jim Sammy",
+      "targetCategory": "people"
+    },
+    "people:elon-musk": {
+      "sourceId": "people:elon-musk",
+      "sourceName": "Elon Musk",
+      "sourceCategory": "people",
+      "targetId": "professors:elon-musk",
+      "targetName": "Elon Musk",
+      "targetCategory": "professors"
+    },
+    "people:what-eric-hecker": {
+      "sourceId": "people:what-eric-hecker",
+      "sourceName": "What Eric Hecker",
+      "sourceCategory": "people",
+      "targetId": "people:eric-hecker",
+      "targetName": "Eric Hecker",
+      "targetCategory": "people"
+    },
+    "people:world-war-i-uh": {
+      "sourceId": "people:world-war-i-uh",
+      "sourceName": "World War I. Uh",
+      "sourceCategory": "people",
+      "targetId": "people:first-world-war",
+      "targetName": "First World War",
+      "targetCategory": "people"
+    },
+    "people:first-world-war": {
+      "sourceId": "people:first-world-war",
+      "sourceName": "First World War",
+      "sourceCategory": "people",
+      "targetId": "events:world-war",
+      "targetName": "World War",
+      "targetCategory": "events"
+    },
+    "people:whether-yeltsin": {
+      "sourceId": "people:whether-yeltsin",
+      "sourceName": "Whether Yeltsin",
+      "sourceCategory": "people",
+      "targetId": "people:boris-yeltsin",
+      "targetName": "Boris Yeltsin",
+      "targetCategory": "people"
+    },
+    "dangerous_people:saddam-hussein": {
+      "sourceId": "dangerous_people:saddam-hussein",
+      "sourceName": "Saddam Hussein",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:saddam-hussein",
+      "targetName": "Saddam Hussein",
+      "targetCategory": "people"
+    },
+    "people:saddam-hussein": {
+      "sourceId": "people:saddam-hussein",
+      "sourceName": "Saddam Hussein",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:saddam-hussein",
+      "targetName": "Saddam Hussein",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:saddam-hussein": {
+      "sourceId": "friendly_people:saddam-hussein",
+      "sourceName": "Saddam Hussein",
+      "sourceCategory": "friendly_people",
+      "targetId": "likely_spies:saddam-hussein",
+      "targetName": "Saddam Hussein",
+      "targetCategory": "likely_spies"
+    },
+    "people:when-yeltsin": {
+      "sourceId": "people:when-yeltsin",
+      "sourceName": "When Yeltsin",
+      "sourceCategory": "people",
+      "targetId": "people:boris-yeltsin",
+      "targetName": "Boris Yeltsin",
+      "targetCategory": "people"
+    },
+    "people:robert-mueller": {
+      "sourceId": "people:robert-mueller",
+      "sourceName": "Robert Mueller",
+      "sourceCategory": "people",
+      "targetId": "people:bob-mueller",
+      "targetName": "Bob Mueller",
+      "targetCategory": "people"
+    },
+    "professors:hal-puthoff": {
+      "sourceId": "professors:hal-puthoff",
+      "sourceName": "Hal Puthoff",
+      "sourceCategory": "professors",
+      "targetId": "people:hal-putoff",
+      "targetName": "Hal Putoff",
+      "targetCategory": "people"
+    },
+    "people:hal-putoff": {
+      "sourceId": "people:hal-putoff",
+      "sourceName": "Hal Putoff",
+      "sourceCategory": "people",
+      "targetId": "people:has-hal-puthoff",
+      "targetName": "Has Hal Puthoff",
+      "targetCategory": "people"
+    },
+    "people:rupert-sheldrick": {
+      "sourceId": "people:rupert-sheldrick",
+      "sourceName": "Rupert Sheldrick",
+      "sourceCategory": "people",
+      "targetId": "people:rupert-sheldrake",
+      "targetName": "Rupert Sheldrake",
+      "targetCategory": "people"
+    },
+    "government_agencies:nsa": {
+      "sourceId": "government_agencies:nsa",
+      "sourceName": "NSA",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:national-security-agency",
+      "targetName": "National Security Agency",
+      "targetCategory": "government_agencies"
+    },
+    "professors:eric-hazeltine": {
+      "sourceId": "professors:eric-hazeltine",
+      "sourceName": "Eric Hazeltine",
+      "sourceCategory": "professors",
+      "targetId": "friendly_people:eric-hazeltine",
+      "targetName": "Eric Hazeltine",
+      "targetCategory": "friendly_people"
+    },
+    "people:eric-henry": {
+      "sourceId": "people:eric-henry",
+      "sourceName": "Eric Henry",
+      "sourceCategory": "people",
+      "targetId": "people:eric-henry-wing",
+      "targetName": "Eric Henry Wing",
+      "targetCategory": "people"
+    },
+    "people:so-oppenheimer": {
+      "sourceId": "people:so-oppenheimer",
+      "sourceName": "So Oppenheimer",
+      "sourceCategory": "people",
+      "targetId": "people:robert-oppenheimer",
+      "targetName": "Robert Oppenheimer",
+      "targetCategory": "people"
+    },
+    "people:robert-oppenheimer": {
+      "sourceId": "people:robert-oppenheimer",
+      "sourceName": "Robert Oppenheimer",
+      "sourceCategory": "people",
+      "targetId": "people:dyson-oppenheimer",
+      "targetName": "Dyson Oppenheimer",
+      "targetCategory": "people"
+    },
+    "dangerous_people:antelope-valley": {
+      "sourceId": "dangerous_people:antelope-valley",
+      "sourceName": "Antelope Valley",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:antelope-valley",
+      "targetName": "Antelope Valley",
+      "targetCategory": "locations"
+    },
+    "people:general-clapper": {
+      "sourceId": "people:general-clapper",
+      "sourceName": "General Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:jim-clapper",
+      "targetName": "Jim Clapper",
+      "targetCategory": "people"
+    },
+    "people:mike-rogers": {
+      "sourceId": "people:mike-rogers",
+      "sourceName": "Mike Rogers",
+      "sourceCategory": "people",
+      "targetId": "politicians:mike-rogers",
+      "targetName": "Mike Rogers",
+      "targetCategory": "politicians"
+    },
+    "experiencers:so-bigelow": {
+      "sourceId": "experiencers:so-bigelow",
+      "sourceName": "So Bigelow",
+      "sourceCategory": "experiencers",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "universities:like-stanford-university": {
+      "sourceId": "universities:like-stanford-university",
+      "sourceName": "Like Stanford University",
+      "sourceCategory": "universities",
+      "targetId": "universities:stanford-university",
+      "targetName": "Stanford University",
+      "targetCategory": "universities"
+    },
+    "people:manchurian-candidate": {
+      "sourceId": "people:manchurian-candidate",
+      "sourceName": "Manchurian Candidate",
+      "sourceCategory": "emerging_terminology",
+      "targetId": "friendly_people:manchurian-candidate",
+      "targetName": "Manchurian Candidate",
+      "targetCategory": "friendly_people"
+    },
+    "people:manchurian-candidates": {
+      "sourceId": "people:manchurian-candidates",
+      "sourceName": "Manchurian Candidates",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:manchurian-candidate",
+      "targetName": "Manchurian Candidate",
+      "targetCategory": "emerging_terminology"
+    },
+    "experiencers:because-kirsan": {
+      "sourceId": "experiencers:because-kirsan",
+      "sourceName": "Because Kirsan",
+      "sourceCategory": "experiencers",
+      "targetId": "people:kirsan-ilyumzinov",
+      "targetName": "Kirsan Ilyumzinov",
+      "targetCategory": "people"
+    },
+    "people:kirsan-ilyumzinov": {
+      "sourceId": "people:kirsan-ilyumzinov",
+      "sourceName": "Kirsan Ilyumzinov",
+      "sourceCategory": "people",
+      "targetId": "people:kirsan-ilyamzinov",
+      "targetName": "Kirsan Ilyamzinov",
+      "targetCategory": "people"
+    },
+    "people:kirsan-ilyamzinov": {
+      "sourceId": "people:kirsan-ilyamzinov",
+      "sourceName": "Kirsan Ilyamzinov",
+      "sourceCategory": "people",
+      "targetId": "people:president-kirsan",
+      "targetName": "President Kirsan",
+      "targetCategory": "people"
+    },
+    "people:xi-jinping": {
+      "sourceId": "people:xi-jinping",
+      "sourceName": "Xi Jinping",
+      "sourceCategory": "politicians",
+      "targetId": "friendly_people:xi-jinping",
+      "targetName": "Xi Jinping",
+      "targetCategory": "friendly_people"
+    },
+    "locations:peru": {
+      "sourceId": "locations:peru",
+      "sourceName": "Peru",
+      "sourceCategory": "locations",
+      "targetId": "people:in-peru",
+      "targetName": "In Peru",
+      "targetCategory": "people"
+    },
+    "people:even-baba-vanga": {
+      "sourceId": "people:even-baba-vanga",
+      "sourceName": "Even Baba Vanga",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:baba-vanga",
+      "targetName": "Baba Vanga",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:baba-vanga": {
+      "sourceId": "friendly_people:baba-vanga",
+      "sourceName": "Baba Vanga",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:as-baba-vanga",
+      "targetName": "As Baba Vanga",
+      "targetCategory": "people"
+    },
+    "people:dalai-lama": {
+      "sourceId": "people:dalai-lama",
+      "sourceName": "Dalai Lama",
+      "sourceCategory": "people",
+      "targetId": "politicians:dalai-lama",
+      "targetName": "Dalai Lama",
+      "targetCategory": "politicians"
+    },
+    "people:operation-bluebird": {
+      "sourceId": "people:operation-bluebird",
+      "sourceName": "Operation Bluebird",
+      "sourceCategory": "government_project_codenames",
+      "targetId": "people:bluebird-artichoke",
+      "targetName": "Bluebird Artichoke",
+      "targetCategory": "people"
+    },
+    "friendly_people:dick-russell": {
+      "sourceId": "friendly_people:dick-russell",
+      "sourceName": "Dick Russell",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:dick-russell",
+      "targetName": "Dick Russell",
+      "targetCategory": "people"
+    },
+    "people:dick-russell": {
+      "sourceId": "people:dick-russell",
+      "sourceName": "Dick Russell",
+      "sourceCategory": "people",
+      "targetId": "experiencers:dick-russell",
+      "targetName": "Dick Russell",
+      "targetCategory": "experiencers"
+    },
+    "friendly_people:john-mack": {
+      "sourceId": "friendly_people:john-mack",
+      "sourceName": "John Mack",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:john-mack",
+      "targetName": "John Mack",
+      "targetCategory": "experiencers"
+    },
+    "people:northup-grumman": {
+      "sourceId": "people:northup-grumman",
+      "sourceName": "Northup Grumman",
+      "sourceCategory": "people",
+      "targetId": "contractors:northrop-grumman",
+      "targetName": "Northrop Grumman",
+      "targetCategory": "contractors"
+    },
+    "people:w-bush": {
+      "sourceId": "people:w-bush",
+      "sourceName": "W. Bush",
+      "sourceCategory": "people",
+      "targetId": "people:george-h",
+      "targetName": "George H.",
+      "targetCategory": "people"
+    },
+    "people:george-bush": {
+      "sourceId": "people:george-bush",
+      "sourceName": "George Bush",
+      "sourceCategory": "people",
+      "targetId": "people:george-h",
+      "targetName": "George H.W. Bush",
+      "targetCategory": "politicians"
+    },
+    "people:john-lear": {
+      "sourceId": "people:john-lear",
+      "sourceName": "John Lear",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:john-lear",
+      "targetName": "John Lear",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:john-lear": {
+      "sourceId": "friendly_people:john-lear",
+      "sourceName": "John Lear",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:john-lear",
+      "targetName": "John Lear",
+      "targetCategory": "professors"
+    },
+    "professors:john-lear": {
+      "sourceId": "professors:john-lear",
+      "sourceName": "John Lear",
+      "sourceCategory": "people",
+      "targetId": "people:except-john-olson-lear",
+      "targetName": "Except John Olson Lear",
+      "targetCategory": "people"
+    },
+    "people:bill-moore": {
+      "sourceId": "people:bill-moore",
+      "sourceName": "Bill Moore",
+      "sourceCategory": "people",
+      "targetId": "professors:bill-moore",
+      "targetName": "Bill Moore",
+      "targetCategory": "professors"
+    },
+    "professors:gary-nolan": {
+      "sourceId": "professors:gary-nolan",
+      "sourceName": "Gary Nolan",
+      "sourceCategory": "professors",
+      "targetId": "people:by-gary-nolan",
+      "targetName": "By Gary Nolan",
+      "targetCategory": "people"
+    },
+    "friendly_people:harold-malmgren": {
+      "sourceId": "friendly_people:harold-malmgren",
+      "sourceName": "Harold Malmgren",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:harold-malgrim",
+      "targetName": "Harold Malgrim",
+      "targetCategory": "people"
+    },
+    "people:queen-elizabeth": {
+      "sourceId": "people:queen-elizabeth",
+      "sourceName": "Queen Elizabeth",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:queen-elizabeth",
+      "targetName": "Queen Elizabeth",
+      "targetCategory": "friendly_people"
+    },
+    "people:applied-sciences": {
+      "sourceId": "people:applied-sciences",
+      "sourceName": "Monroe Institute of Applied Sciences",
+      "sourceCategory": "people",
+      "targetId": "institutes:monroe-institute",
+      "targetName": "Monroe Institute",
+      "targetCategory": "institutes"
+    },
+    "locations:skinwalker-ranch": {
+      "sourceId": "locations:skinwalker-ranch",
+      "sourceName": "Skinwalker Ranch",
+      "sourceCategory": "locations",
+      "targetId": "people:for-skinwalker",
+      "targetName": "For Skinwalker",
+      "targetCategory": "people"
     }
   },
   "nameMerges": {
@@ -2372,12 +4458,12 @@
       "targetCategory": "materials"
     },
     "harold malmgren": {
-      "sourceId": "people:harold-malmgren",
+      "sourceId": "friendly_people:harold-malmgren",
       "sourceName": "Harold Malmgren",
-      "sourceCategory": "people",
-      "targetId": "friendly_people:harold-malmgren",
-      "targetName": "Harold Malmgren",
-      "targetCategory": "friendly_people"
+      "sourceCategory": "friendly_people",
+      "targetId": "people:harold-malgrim",
+      "targetName": "Harold Malgrim",
+      "targetCategory": "people"
     },
     "david grush": {
       "sourceId": "whistleblowers:david-grush",
@@ -2604,12 +4690,12 @@
       "targetCategory": "friendly_people"
     },
     "john alexander": {
-      "sourceId": "friendly_people:john-alexander",
+      "sourceId": "people:john-alexander",
       "sourceName": "John Alexander",
-      "sourceCategory": "friendly_people",
-      "targetId": "experiencers:john-alexander",
-      "targetName": "John Alexander",
-      "targetCategory": "experiencers"
+      "sourceCategory": "people",
+      "targetId": "people:colonel-john-alexander",
+      "targetName": "Colonel John Alexander",
+      "targetCategory": "people"
     },
     "national institute": {
       "sourceId": "people:national-institute",
@@ -2652,12 +4738,12 @@
       "targetCategory": "people"
     },
     "washington post": {
-      "sourceId": "politicians:washington-post",
+      "sourceId": "newsrooms:washington-post",
       "sourceName": "Washington Post",
-      "sourceCategory": "journalists",
-      "targetId": "people:washington-post",
-      "targetName": "Washington Post",
-      "targetCategory": "people"
+      "sourceCategory": "newsrooms",
+      "targetId": "newsrooms:the-washington-post",
+      "targetName": "the Washington Post",
+      "targetCategory": "newsrooms"
     },
     "doe": {
       "sourceId": "government_agencies:doe",
@@ -2847,9 +4933,9 @@
       "sourceId": "government_agencies:national-reconnaissance-office",
       "sourceName": "National Reconnaissance Office",
       "sourceCategory": "government_agencies",
-      "targetId": "people:national-reconnaissance",
+      "targetId": "government_agencies:national-reconnaissance",
       "targetName": "National Reconnaissance",
-      "targetCategory": "people"
+      "targetCategory": "government_agencies"
     },
     "g he": {
       "sourceId": "people:g-he",
@@ -2884,20 +4970,20 @@
       "targetCategory": "locations"
     },
     "brook park strip mall": {
-      "sourceId": "people:brook-park-strip-mall",
+      "sourceId": "locations:brook-park-strip-mall",
       "sourceName": "Brook Park Strip Mall",
       "sourceCategory": "locations",
-      "targetId": "people:brookgate-strip-mall",
+      "targetId": "locations:brookgate-strip-mall",
       "targetName": "Brookgate Strip Mall",
-      "targetCategory": "people"
+      "targetCategory": "locations"
     },
     "baba vanga": {
-      "sourceId": "people:baba-vanga",
+      "sourceId": "friendly_people:baba-vanga",
       "sourceName": "Baba Vanga",
-      "sourceCategory": "people",
-      "targetId": "friendly_people:baba-vanga",
-      "targetName": "Baba Vanga",
-      "targetCategory": "friendly_people"
+      "sourceCategory": "friendly_people",
+      "targetId": "people:as-baba-vanga",
+      "targetName": "As Baba Vanga",
+      "targetCategory": "people"
     },
     "when john paul": {
       "sourceId": "people:when-john-paul",
@@ -3055,9 +5141,9 @@
       "sourceId": "people:diana-pasolka",
       "sourceName": "Diana Pasolka",
       "sourceCategory": "people",
-      "targetId": "people:diana-basoka",
-      "targetName": "Diana Basoka",
-      "targetCategory": "people"
+      "targetId": "experiencers:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "experiencers"
     },
     "from dave grush": {
       "sourceId": "people:from-dave-grush",
@@ -3116,12 +5202,12 @@
       "targetCategory": "locations"
     },
     "eric davis": {
-      "sourceId": "friendly_people:eric-davis",
+      "sourceId": "politicians:eric-davis",
       "sourceName": "Eric Davis",
-      "sourceCategory": "friendly_people",
-      "targetId": "politicians:eric-davis",
+      "sourceCategory": "politicians",
+      "targetId": "friendly_people:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "politicians"
+      "targetCategory": "friendly_people"
     },
     "president bush": {
       "sourceId": "people:president-bush",
@@ -3140,12 +5226,12 @@
       "targetCategory": "people"
     },
     "john mack": {
-      "sourceId": "experiencers:john-mack",
+      "sourceId": "friendly_people:john-mack",
       "sourceName": "John Mack",
-      "sourceCategory": "experiencers",
-      "targetId": "friendly_people:john-mack",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:john-mack",
       "targetName": "John Mack",
-      "targetCategory": "friendly_people"
+      "targetCategory": "experiencers"
     },
     "so john mack": {
       "sourceId": "people:so-john-mack",
@@ -3183,9 +5269,9 @@
       "sourceId": "dangerous_people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
       "sourceCategory": "dangerous_people",
-      "targetId": "friendly_people:lee-harvey-oswald",
+      "targetId": "people:lee-harvey-oswald",
       "targetName": "Lee Harvey Oswald",
-      "targetCategory": "friendly_people"
+      "targetCategory": "people"
     },
     "manuro institute": {
       "sourceId": "institutes:manuro-institute",
@@ -3236,12 +5322,12 @@
       "targetCategory": "people"
     },
     "david spurgle": {
-      "sourceId": "people:david-spurgle",
+      "sourceId": "professors:david-spurgle",
       "sourceName": "David Spurgle",
-      "sourceCategory": "people",
-      "targetId": "professors:david-spurgle",
+      "sourceCategory": "professors",
+      "targetId": "people:david-spurgle",
       "targetName": "David Spurgle",
-      "targetCategory": "professors"
+      "targetCategory": "people"
     },
     "hawley building": {
       "sourceId": "people:hawley-building",
@@ -3287,9 +5373,9 @@
       "sourceId": "people:philip-j-corso",
       "sourceName": "Philip J. Corso",
       "sourceCategory": "people",
-      "targetId": "friendly_people:philip-j-corso",
-      "targetName": "Philip J. Corso",
-      "targetCategory": "friendly_people"
+      "targetId": "people:colonel-philip-j-corso",
+      "targetName": "Colonel Philip J. Corso",
+      "targetCategory": "people"
     },
     "william j burns": {
       "sourceId": "people:william-j-burns",
@@ -3324,12 +5410,12 @@
       "targetCategory": "people"
     },
     "jack ruby": {
-      "sourceId": "friendly_people:jack-ruby",
+      "sourceId": "dangerous_people:jack-ruby",
       "sourceName": "Jack Ruby",
-      "sourceCategory": "friendly_people",
-      "targetId": "dangerous_people:so-jack-ruby",
-      "targetName": "So Jack Ruby",
-      "targetCategory": "dangerous_people"
+      "sourceCategory": "dangerous_people",
+      "targetId": "friendly_people:jack-ruby",
+      "targetName": "Jack Ruby",
+      "targetCategory": "friendly_people"
     },
     "timothy taylor": {
       "sourceId": "people:timothy-taylor",
@@ -3340,11 +5426,11 @@
       "targetCategory": "people"
     },
     "barack obama": {
-      "sourceId": "experiencers:barack-obama",
+      "sourceId": "people:barack-obama",
       "sourceName": "Barack Obama",
-      "sourceCategory": "experiencers",
-      "targetId": "people:barack-obama",
-      "targetName": "Barack Obama",
+      "sourceCategory": "people",
+      "targetId": "people:president-barack-obama",
+      "targetName": "President Barack Obama",
       "targetCategory": "people"
     },
     "linda moulton": {
@@ -3474,9 +5560,1401 @@
       "targetId": "locations:space-kids-camp",
       "targetName": "Space Kids Camp",
       "targetCategory": "locations"
+    },
+    "richard bissell": {
+      "sourceId": "people:richard-bissell",
+      "sourceName": "Richard Bissell",
+      "sourceCategory": "people",
+      "targetId": "likely_spies:richard-bissell",
+      "targetName": "Richard Bissell",
+      "targetCategory": "likely_spies"
+    },
+    "jim semivan": {
+      "sourceId": "friendly_people:jim-semivan",
+      "sourceName": "Jim Semivan",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:jim-sammy-van",
+      "targetName": "Jim Sammy Van",
+      "targetCategory": "people"
+    },
+    "so charles hall": {
+      "sourceId": "friendly_people:so-charles-hall",
+      "sourceName": "So Charles Hall",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:charles-hall",
+      "targetName": "Charles Hall",
+      "targetCategory": "people"
+    },
+    "charles hall": {
+      "sourceId": "people:charles-hall",
+      "sourceName": "Charles Hall",
+      "sourceCategory": "people",
+      "targetId": "people:charles-hall-tall-whites",
+      "targetName": "Charles Hall Tall Whites",
+      "targetCategory": "people"
+    },
+    "peter lavenda": {
+      "sourceId": "dangerous_people:peter-lavenda",
+      "sourceName": "Peter Lavenda",
+      "sourceCategory": "dangerous_people",
+      "targetId": "friendly_people:peter-lavenda",
+      "targetName": "Peter Lavenda",
+      "targetCategory": "friendly_people"
+    },
+    "howard hughes": {
+      "sourceId": "people:howard-hughes",
+      "sourceName": "Howard Hughes",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:howard-hughes",
+      "targetName": "Howard Hughes",
+      "targetCategory": "friendly_people"
+    },
+    "van tassel": {
+      "sourceId": "people:van-tassel",
+      "sourceName": "Van Tassel",
+      "sourceCategory": "people",
+      "targetId": "people:george-van-tassel",
+      "targetName": "George Van Tassel",
+      "targetCategory": "people"
+    },
+    "steve quayle": {
+      "sourceId": "people:steve-quayle",
+      "sourceName": "Steve Quayle",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:steve-quayle",
+      "targetName": "Steve Quayle",
+      "targetCategory": "friendly_people"
+    },
+    "new york city": {
+      "sourceId": "people:new-york-city",
+      "sourceName": "New York City",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:new-york-city",
+      "targetName": "New York City",
+      "targetCategory": "friendly_people"
+    },
+    "grand central station": {
+      "sourceId": "likely_spies:grand-central-station",
+      "sourceName": "Grand Central Station",
+      "sourceCategory": "locations",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "central station": {
+      "sourceId": "likely_spies:central-station",
+      "sourceName": "Central Station",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "grand central": {
+      "sourceId": "people:grand-central",
+      "sourceName": "Grand Central",
+      "sourceCategory": "people",
+      "targetId": "people:grand-central-terminal",
+      "targetName": "Grand Central Terminal",
+      "targetCategory": "people"
+    },
+    "diana pasulka": {
+      "sourceId": "professors:diana-pasulka",
+      "sourceName": "Diana Pasulka",
+      "sourceCategory": "professors",
+      "targetId": "people:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "people"
+    },
+    "if lurero": {
+      "sourceId": "people:if-lurero",
+      "sourceName": "If Lurero",
+      "sourceCategory": "people",
+      "targetId": "people:nuno-lurero",
+      "targetName": "Nuno Lurero",
+      "targetCategory": "people"
+    },
+    "nuno lurero": {
+      "sourceId": "professors:nuno-lurero",
+      "sourceName": "Nuno Lurero",
+      "sourceCategory": "professors",
+      "targetId": "dangerous_people:nuno-lurero",
+      "targetName": "Nuno Lurero",
+      "targetCategory": "dangerous_people"
+    },
+    "plasma science infusion center": {
+      "sourceId": "companies:plasma-science-infusion-center",
+      "sourceName": "Plasma Science Infusion Center",
+      "sourceCategory": "companies",
+      "targetId": "people:plasma-science",
+      "targetName": "Plasma Science and Fusion Center",
+      "targetCategory": "university_departments"
+    },
+    "maybe valente": {
+      "sourceId": "people:maybe-valente",
+      "sourceName": "Maybe Valente",
+      "sourceCategory": "people",
+      "targetId": "people:claudio-valente",
+      "targetName": "Claudio Valente",
+      "targetCategory": "people"
+    },
+    "trump media": {
+      "sourceId": "people:trump-media",
+      "sourceName": "Trump Media",
+      "sourceCategory": "people",
+      "targetId": "people:technology-group",
+      "targetName": "Trump Media and Technology Group",
+      "targetCategory": "companies"
+    },
+    "science infusion center": {
+      "sourceId": "companies:science-infusion-center",
+      "sourceName": "Science Infusion Center",
+      "sourceCategory": "companies",
+      "targetId": "people:plasma-science",
+      "targetName": "Plasma Science and Fusion Center",
+      "targetCategory": "university_departments"
+    },
+    "so fred crisman": {
+      "sourceId": "people:so-fred-crisman",
+      "sourceName": "So Fred Crisman",
+      "sourceCategory": "people",
+      "targetId": "people:fred-chrisman",
+      "targetName": "Fred Chrisman",
+      "targetCategory": "people"
+    },
+    "fred chrisman": {
+      "sourceId": "people:fred-chrisman",
+      "sourceName": "Fred Chrisman",
+      "sourceCategory": "people",
+      "targetId": "people:fred-crisman",
+      "targetName": "Fred Crisman",
+      "targetCategory": "people"
+    },
+    "fred crisman": {
+      "sourceId": "people:fred-crisman",
+      "sourceName": "Fred Crisman",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:fred-crisman",
+      "targetName": "Fred Crisman",
+      "targetCategory": "friendly_people"
+    },
+    "task force": {
+      "sourceId": "politicians:task-force",
+      "sourceName": "Task Force",
+      "sourceCategory": "politicians",
+      "targetId": "government_agencies:uap-task-force",
+      "targetName": "UAP task force",
+      "targetCategory": "government_agencies"
+    },
+    "lou elizondo": {
+      "sourceId": "friendly_people:lou-elizondo",
+      "sourceName": "Lou Elizondo",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:louis-elizondo",
+      "targetName": "Louis Elizondo",
+      "targetCategory": "people"
+    },
+    "louis elizondo": {
+      "sourceId": "people:louis-elizondo",
+      "sourceName": "Louis Elizondo",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:luis-elizondo",
+      "targetName": "Luis Elizondo",
+      "targetCategory": "whistleblowers"
+    },
+    "so jay": {
+      "sourceId": "people:so-jay",
+      "sourceName": "So Jay",
+      "sourceCategory": "people",
+      "targetId": "people:jay-stratton",
+      "targetName": "Jay Stratton",
+      "targetCategory": "people"
+    },
+    "travis walton": {
+      "sourceId": "friendly_people:travis-walton",
+      "sourceName": "Travis Walton",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "professors"
+    },
+    "because travis": {
+      "sourceId": "people:because-travis",
+      "sourceName": "Because Travis",
+      "sourceCategory": "people",
+      "targetId": "professors:travis-walton",
+      "targetName": "Travis Walton",
+      "targetCategory": "experiencers"
+    },
+    "santa monica": {
+      "sourceId": "friendly_people:santa-monica",
+      "sourceName": "Santa Monica",
+      "sourceCategory": "locations",
+      "targetId": "people:santa-monica",
+      "targetName": "Santa Monica",
+      "targetCategory": "people"
+    },
+    "zahi was": {
+      "sourceId": "people:zahi-was",
+      "sourceName": "Zahi Was",
+      "sourceCategory": "people",
+      "targetId": "people:zahi-hawass",
+      "targetName": "Zahi Hawass",
+      "targetCategory": "people"
+    },
+    "zahi hawass": {
+      "sourceId": "people:zahi-hawass",
+      "sourceName": "Zahi Hawass",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:zahi-awas",
+      "targetName": "Zahi Awas",
+      "targetCategory": "friendly_people"
+    },
+    "zahi awas": {
+      "sourceId": "friendly_people:zahi-awas",
+      "sourceName": "Zahi Awas",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:zahi-awaz",
+      "targetName": "Zahi Awaz",
+      "targetCategory": "people"
+    },
+    "zahi awaz": {
+      "sourceId": "people:zahi-awaz",
+      "sourceName": "Zahi Awaz",
+      "sourceCategory": "people",
+      "targetId": "people:even-zahi-hawass",
+      "targetName": "Even Zahi Hawass",
+      "targetCategory": "people"
+    },
+    "even zahi hawass": {
+      "sourceId": "people:even-zahi-hawass",
+      "sourceName": "Even Zahi Hawass",
+      "sourceCategory": "people",
+      "targetId": "people:zahi-owas",
+      "targetName": "Zahi Owas",
+      "targetCategory": "people"
+    },
+    "gisa plateau": {
+      "sourceId": "people:gisa-plateau",
+      "sourceName": "Gisa Plateau",
+      "sourceCategory": "people",
+      "targetId": "locations:giza-plateau",
+      "targetName": "Giza Plateau",
+      "targetCategory": "locations"
+    },
+    "corrado malanga": {
+      "sourceId": "people:corrado-malanga",
+      "sourceName": "Corrado Malanga",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:corrado-malanga",
+      "targetName": "Corrado Malanga",
+      "targetCategory": "whistleblowers"
+    },
+    "filippo biondi": {
+      "sourceId": "professors:filippo-biondi",
+      "sourceName": "Filippo Biondi",
+      "sourceCategory": "professors",
+      "targetId": "people:filippo-biondi",
+      "targetName": "Filippo Biondi",
+      "targetCategory": "people"
+    },
+    "zinc": {
+      "sourceId": "materials:zinc",
+      "sourceName": "zinc",
+      "sourceCategory": "materials",
+      "targetId": "chemical_elements:zinc",
+      "targetName": "zinc",
+      "targetCategory": "chemical_elements"
+    },
+    "pan bondi": {
+      "sourceId": "people:pan-bondi",
+      "sourceName": "Pan Bondi",
+      "sourceCategory": "people",
+      "targetId": "people:pam-bondi",
+      "targetName": "Pam Bondi",
+      "targetCategory": "people"
+    },
+    "kash patel": {
+      "sourceId": "people:kash-patel",
+      "sourceName": "Kash Patel",
+      "sourceCategory": "people",
+      "targetId": "people:like-kash-patel",
+      "targetName": "Like Kash Patel",
+      "targetCategory": "people"
+    },
+    "billy meyer": {
+      "sourceId": "friendly_people:billy-meyer",
+      "sourceName": "Billy Meyer",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "george adamski": {
+      "sourceId": "people:george-adamski",
+      "sourceName": "George Adamski",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:george-adamski",
+      "targetName": "George Adamski",
+      "targetCategory": "friendly_people"
+    },
+    "so lenin": {
+      "sourceId": "people:so-lenin",
+      "sourceName": "So Lenin",
+      "sourceCategory": "people",
+      "targetId": "people:vladimir-lenin",
+      "targetName": "Vladimir Lenin",
+      "targetCategory": "people"
+    },
+    "us army": {
+      "sourceId": "government_agencies:us-army",
+      "sourceName": "US Army",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:united-states-army",
+      "targetName": "United States Army",
+      "targetCategory": "government_agencies"
+    },
+    "project preserve destiny": {
+      "sourceId": "people:project-preserve-destiny",
+      "sourceName": "Project Preserve Destiny",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:project-preserve-destiny",
+      "targetName": "Project Preserve Destiny",
+      "targetCategory": "friendly_people"
+    },
+    "president trump": {
+      "sourceId": "friendly_people:president-trump",
+      "sourceName": "President Trump",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:under-trump",
+      "targetName": "Under Trump",
+      "targetCategory": "people"
+    },
+    "with president trump": {
+      "sourceId": "people:with-president-trump",
+      "sourceName": "With President Trump",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:donald-trump",
+      "targetName": "Donald Trump",
+      "targetCategory": "friendly_people"
+    },
+    "donald trump": {
+      "sourceId": "people:donald-trump",
+      "sourceName": "Donald Trump",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:president-trump",
+      "targetName": "President Trump",
+      "targetCategory": "friendly_people"
+    },
+    "under trump": {
+      "sourceId": "people:under-trump",
+      "sourceName": "Under Trump",
+      "sourceCategory": "people",
+      "targetId": "people:with-trump",
+      "targetName": "With Trump",
+      "targetCategory": "people"
+    },
+    "with trump": {
+      "sourceId": "people:with-trump",
+      "sourceName": "With Trump",
+      "sourceCategory": "people",
+      "targetId": "people:donald-j-trump",
+      "targetName": "Donald J. Trump",
+      "targetCategory": "people"
+    },
+    "william barr": {
+      "sourceId": "friendly_people:william-barr",
+      "sourceName": "William Barr",
+      "sourceCategory": "friendly_people",
+      "targetId": "politicians:bill-barr",
+      "targetName": "Bill Barr",
+      "targetCategory": "politicians"
+    },
+    "bill barr": {
+      "sourceId": "people:bill-barr",
+      "sourceName": "Bill Barr",
+      "sourceCategory": "people",
+      "targetId": "people:bill-burr",
+      "targetName": "Bill Burr",
+      "targetCategory": "people"
+    },
+    "so donald barr": {
+      "sourceId": "people:so-donald-barr",
+      "sourceName": "So Donald Barr",
+      "sourceCategory": "people",
+      "targetId": "people:donald-barr",
+      "targetName": "Donald Barr",
+      "targetCategory": "people"
+    },
+    "donald barr": {
+      "sourceId": "people:donald-barr",
+      "sourceName": "Donald Barr",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:donald-barr",
+      "targetName": "Donald Barr",
+      "targetCategory": "friendly_people"
+    },
+    "alan hynek": {
+      "sourceId": "people:alan-hynek",
+      "sourceName": "Alan Hynek",
+      "sourceCategory": "people",
+      "targetId": "people:j-allen-hynek",
+      "targetName": "J. Allen Hynek",
+      "targetCategory": "people"
+    },
+    "francois truffaut": {
+      "sourceId": "experiencers:francois-truffaut",
+      "sourceName": "Francois Truffaut",
+      "sourceCategory": "experiencers",
+      "targetId": "people:francois-truffaut",
+      "targetName": "Francois Truffaut",
+      "targetCategory": "people"
+    },
+    "sidney gottlieb": {
+      "sourceId": "people:sidney-gottlieb",
+      "sourceName": "Sidney Gottlieb",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:sidney-gottlieb",
+      "targetName": "Sidney Gottlieb",
+      "targetCategory": "friendly_people"
+    },
+    "so jack ruby": {
+      "sourceId": "dangerous_people:so-jack-ruby",
+      "sourceName": "So Jack Ruby",
+      "sourceCategory": "dangerous_people",
+      "targetId": "dangerous_people:jack-ruby",
+      "targetName": "Jack Ruby",
+      "targetCategory": "dangerous_people"
+    },
+    "jose delgado": {
+      "sourceId": "friendly_people:jose-delgado",
+      "sourceName": "Jose Delgado",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:jose-delgado",
+      "targetName": "Jose Delgado",
+      "targetCategory": "people"
+    },
+    "charles manson": {
+      "sourceId": "friendly_people:charles-manson",
+      "sourceName": "Charles Manson",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:charles-manson",
+      "targetName": "Charles Manson",
+      "targetCategory": "dangerous_people"
+    },
+    "joseph farrell": {
+      "sourceId": "people:joseph-farrell",
+      "sourceName": "Joseph Farrell",
+      "sourceCategory": "people",
+      "targetId": "people:joseph-p-farrell",
+      "targetName": "Joseph P. Farrell",
+      "targetCategory": "people"
+    },
+    "zero point": {
+      "sourceId": "people:zero-point",
+      "sourceName": "Zero Point",
+      "sourceCategory": "people",
+      "targetId": "technology:zero-point-energy",
+      "targetName": "zero point energy",
+      "targetCategory": "technology"
+    },
+    "monica reza": {
+      "sourceId": "people:monica-reza",
+      "sourceName": "Monica Reza",
+      "sourceCategory": "people",
+      "targetId": "people:monica-jacinto-reza",
+      "targetName": "Monica Jacinto Reza",
+      "targetCategory": "people"
+    },
+    "jason reza": {
+      "sourceId": "people:jason-reza",
+      "sourceName": "Jason Reza",
+      "sourceCategory": "people",
+      "targetId": "experiencers:jason-reza",
+      "targetName": "Jason Reza",
+      "targetCategory": "experiencers"
+    },
+    "rogan show": {
+      "sourceId": "people:rogan-show",
+      "sourceName": "Rogan Show",
+      "sourceCategory": "people",
+      "targetId": "experiencers:joe-rogan-experience",
+      "targetName": "Joe Rogan Experience",
+      "targetCategory": "experiencers"
+    },
+    "gary nolan": {
+      "sourceId": "professors:gary-nolan",
+      "sourceName": "Gary Nolan",
+      "sourceCategory": "professors",
+      "targetId": "people:by-gary-nolan",
+      "targetName": "By Gary Nolan",
+      "targetCategory": "people"
+    },
+    "close encounters": {
+      "sourceId": "movies:close-encounters",
+      "sourceName": "Close Encounters",
+      "sourceCategory": "movies",
+      "targetId": "experiencers:closer-encounter",
+      "targetName": "Closer Encounter",
+      "targetCategory": "experiencers"
+    },
+    "closer encounter": {
+      "sourceId": "experiencers:closer-encounter",
+      "sourceName": "Closer Encounter",
+      "sourceCategory": "experiencers",
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
+    },
+    "nick cook": {
+      "sourceId": "people:nick-cook",
+      "sourceName": "Nick Cook",
+      "sourceCategory": "people",
+      "targetId": "journalists:nick-cook",
+      "targetName": "Nick Cook",
+      "targetCategory": "journalists"
+    },
+    "ingo swan": {
+      "sourceId": "people:ingo-swan",
+      "sourceName": "Ingo Swan",
+      "sourceCategory": "people",
+      "targetId": "people:ingo-swann",
+      "targetName": "Ingo Swann",
+      "targetCategory": "people"
+    },
+    "don menzel": {
+      "sourceId": "people:don-menzel",
+      "sourceName": "Don Menzel",
+      "sourceCategory": "people",
+      "targetId": "people:donald-menzel",
+      "targetName": "Donald Menzel",
+      "targetCategory": "people"
+    },
+    "dorit hofleit": {
+      "sourceId": "people:dorit-hofleit",
+      "sourceName": "Dorit Hofleit",
+      "sourceCategory": "people",
+      "targetId": "people:dorit-hofflite",
+      "targetName": "Dorit Hofflite",
+      "targetCategory": "people"
+    },
+    "maybe spurgle": {
+      "sourceId": "people:maybe-spurgle",
+      "sourceName": "Maybe Spurgle",
+      "sourceCategory": "people",
+      "targetId": "people:david-spurgle",
+      "targetName": "David Spurgle",
+      "targetCategory": "people"
+    },
+    "jim simons": {
+      "sourceId": "people:jim-simons",
+      "sourceName": "Jim Simons",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jim-simons",
+      "targetName": "Jim Simons",
+      "targetCategory": "friendly_people"
+    },
+    "remember eric weinstein": {
+      "sourceId": "people:remember-eric-weinstein",
+      "sourceName": "Remember Eric Weinstein",
+      "sourceCategory": "people",
+      "targetId": "professors:eric-weinstein",
+      "targetName": "Eric Weinstein",
+      "targetCategory": "professors"
+    },
+    "researcher ashton forbes": {
+      "sourceId": "whistleblowers:researcher-ashton-forbes",
+      "sourceName": "Researcher Ashton Forbes",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:ashton-forbes",
+      "targetName": "Ashton Forbes",
+      "targetCategory": "people"
+    },
+    "wilson davis": {
+      "sourceId": "people:wilson-davis",
+      "sourceName": "Wilson Davis",
+      "sourceCategory": "people",
+      "targetId": "professors:wilson-davis",
+      "targetName": "Wilson Davis",
+      "targetCategory": "professors"
+    },
+    "glenn gaffney": {
+      "sourceId": "friendly_people:glenn-gaffney",
+      "sourceName": "Glenn Gaffney",
+      "sourceCategory": "friendly_people",
+      "targetId": "politicians:glenn-gaffney",
+      "targetName": "Glenn Gaffney",
+      "targetCategory": "politicians"
+    },
+    "lockheed martin": {
+      "sourceId": "contractors:lockheed-martin",
+      "sourceName": "Lockheed Martin",
+      "sourceCategory": "contractors",
+      "targetId": "experiencers:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "experiencers"
+    },
+    "lawrence preston geis": {
+      "sourceId": "people:lawrence-preston-geis",
+      "sourceName": "Lawrence Preston Geis",
+      "sourceCategory": "people",
+      "targetId": "people:lawrence-preston-geist",
+      "targetName": "Lawrence Preston Geist",
+      "targetCategory": "people"
+    },
+    "officer lonnie zamora": {
+      "sourceId": "people:officer-lonnie-zamora",
+      "sourceName": "Officer Lonnie Zamora",
+      "sourceCategory": "people",
+      "targetId": "people:lonnie-zamora",
+      "targetName": "Lonnie Zamora",
+      "targetCategory": "people"
+    },
+    "james island": {
+      "sourceId": "people:james-island",
+      "sourceName": "James Island",
+      "sourceCategory": "people",
+      "targetId": "locations:little-st-james",
+      "targetName": "Little St. James",
+      "targetCategory": "locations"
+    },
+    "stephen hawking": {
+      "sourceId": "people:stephen-hawking",
+      "sourceName": "Stephen Hawking",
+      "sourceCategory": "people",
+      "targetId": "people:if-stephen-hawking",
+      "targetName": "If Stephen Hawking",
+      "targetCategory": "people"
+    },
+    "so epstein": {
+      "sourceId": "people:so-epstein",
+      "sourceName": "So Epstein",
+      "sourceCategory": "people",
+      "targetId": "people:jeffrey-epstein",
+      "targetName": "Jeffrey Epstein",
+      "targetCategory": "people"
+    },
+    "pat price": {
+      "sourceId": "friendly_people:pat-price",
+      "sourceName": "Pat Price",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:pat-price",
+      "targetName": "Pat Price",
+      "targetCategory": "people"
+    },
+    "secret canyon": {
+      "sourceId": "people:secret-canyon",
+      "sourceName": "Secret Canyon",
+      "sourceCategory": "people",
+      "targetId": "locations:secret-mountain",
+      "targetName": "Secret Mountain",
+      "targetCategory": "locations"
+    },
+    "secret machines war": {
+      "sourceId": "people:secret-machines-war",
+      "sourceName": "Secret Machines War",
+      "sourceCategory": "people",
+      "targetId": "people:secret-machines",
+      "targetName": "Sekret Machines",
+      "targetCategory": "books"
+    },
+    "palomar observatory": {
+      "sourceId": "institutes:palomar-observatory",
+      "sourceName": "Palomar Observatory",
+      "sourceCategory": "institutes",
+      "targetId": "people:palomar-observatories",
+      "targetName": "Palomar Observatories",
+      "targetCategory": "people"
+    },
+    "palomar observatories": {
+      "sourceId": "people:palomar-observatories",
+      "sourceName": "Palomar Observatories",
+      "sourceCategory": "people",
+      "targetId": "people:mount-palomar-observatory",
+      "targetName": "Mount Palomar Observatory",
+      "targetCategory": "people"
+    },
+    "so grillmayer": {
+      "sourceId": "people:so-grillmayer",
+      "sourceName": "So Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "people:carl-grillmayer",
+      "targetName": "Carl Grillmayer",
+      "targetCategory": "people"
+    },
+    "carl grillmayer": {
+      "sourceId": "professors:carl-grillmayer",
+      "sourceName": "Carl Grillmayer",
+      "sourceCategory": "professors",
+      "targetId": "people:could-grillmayer",
+      "targetName": "Could Grillmayer",
+      "targetCategory": "people"
+    },
+    "waterman mountain": {
+      "sourceId": "people:waterman-mountain",
+      "sourceName": "Waterman Mountain",
+      "sourceCategory": "locations",
+      "targetId": "people:mount-waterman",
+      "targetName": "Mount Waterman",
+      "targetCategory": "people"
+    },
+    "on february": {
+      "sourceId": "people:on-february",
+      "sourceName": "On February",
+      "sourceCategory": "people",
+      "targetId": "dates_times:february-16-2026",
+      "targetName": "February 16, 2026",
+      "targetCategory": "dates_times"
+    },
+    "carl johan grillmayer": {
+      "sourceId": "people:carl-johan-grillmayer",
+      "sourceName": "Carl Johan Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "professors:carl-grillmayer",
+      "targetName": "Carl Grillmayer",
+      "targetCategory": "professors"
+    },
+    "could grillmayer": {
+      "sourceId": "people:could-grillmayer",
+      "sourceName": "Could Grillmayer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:did-grillmair",
+      "targetName": "Did Grillmair",
+      "targetCategory": "friendly_people"
+    },
+    "did grillmair": {
+      "sourceId": "friendly_people:did-grillmair",
+      "sourceName": "Did Grillmair",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:carl-grillmare",
+      "targetName": "Carl Grillmare",
+      "targetCategory": "people"
+    },
+    "carl grillmare": {
+      "sourceId": "people:carl-grillmare",
+      "sourceName": "Carl Grillmare",
+      "sourceCategory": "people",
+      "targetId": "dangerous_people:carl-grillmair",
+      "targetName": "Carl Grillmair",
+      "targetCategory": "dangerous_people"
+    },
+    "when snyder": {
+      "sourceId": "people:when-snyder",
+      "sourceName": "When Snyder",
+      "sourceCategory": "people",
+      "targetId": "people:freddy-snyder",
+      "targetName": "Freddy Snyder",
+      "targetCategory": "people"
+    },
+    "freddy snyder": {
+      "sourceId": "people:freddy-snyder",
+      "sourceName": "Freddy Snyder",
+      "sourceCategory": "people",
+      "targetId": "people:was-snyder",
+      "targetName": "Was Snyder",
+      "targetCategory": "people"
+    },
+    "does tim taylor": {
+      "sourceId": "people:does-tim-taylor",
+      "sourceName": "Does Tim Taylor",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "friendly_people"
+    },
+    "tim taylor": {
+      "sourceId": "friendly_people:tim-taylor",
+      "sourceName": "Tim Taylor",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "mikhail dobrnovic": {
+      "sourceId": "friendly_people:mikhail-dobrnovic",
+      "sourceName": "Mikhail Dobrnovic",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:mikhail-dobrynovik",
+      "targetName": "Mikhail Dobrynovik",
+      "targetCategory": "people"
+    },
+    "mikhail gorbachev": {
+      "sourceId": "people:mikhail-gorbachev",
+      "sourceName": "Mikhail Gorbachev",
+      "sourceCategory": "people",
+      "targetId": "people:mikhail-sergeyevich-gorbachev",
+      "targetName": "Mikhail Sergeyevich Gorbachev",
+      "targetCategory": "people"
+    },
+    "jimmy carter": {
+      "sourceId": "people:jimmy-carter",
+      "sourceName": "Jimmy Carter",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:president-carter",
+      "targetName": "President Carter",
+      "targetCategory": "friendly_people"
+    },
+    "helen carter": {
+      "sourceId": "people:helen-carter",
+      "sourceName": "Helen Carter",
+      "sourceCategory": "people",
+      "targetId": "people:roscoe-helen-carter",
+      "targetName": "Roscoe Helen Carter",
+      "targetCategory": "people"
+    },
+    "donald kehoe": {
+      "sourceId": "people:donald-kehoe",
+      "sourceName": "Donald Kehoe",
+      "sourceCategory": "people",
+      "targetId": "people:enter-major-donald-kehoe",
+      "targetName": "Enter Major Donald Kehoe",
+      "targetCategory": "people"
+    },
+    "non human intelligence": {
+      "sourceId": "key_terms:non-human-intelligence",
+      "sourceName": "non-human intelligence",
+      "sourceCategory": "key_terms",
+      "targetId": "key_terms:nhi",
+      "targetName": "NHI",
+      "targetCategory": "key_terms"
+    },
+    "e howard hunt": {
+      "sourceId": "friendly_people:e-howard-hunt",
+      "sourceName": "E. Howard Hunt",
+      "sourceCategory": "friendly_people",
+      "targetId": "journalists:e-howard-hunt",
+      "targetName": "E. Howard Hunt",
+      "targetCategory": "journalists"
+    },
+    "so arthur young": {
+      "sourceId": "people:so-arthur-young",
+      "sourceName": "So Arthur Young",
+      "sourceCategory": "people",
+      "targetId": "people:arthur-young",
+      "targetName": "Arthur Young",
+      "targetCategory": "people"
+    },
+    "so alan dulles": {
+      "sourceId": "people:so-alan-dulles",
+      "sourceName": "So Alan Dulles",
+      "sourceCategory": "people",
+      "targetId": "politicians:alan-dulles",
+      "targetName": "Alan Dulles",
+      "targetCategory": "politicians"
+    },
+    "alan dulles": {
+      "sourceId": "politicians:alan-dulles",
+      "sourceName": "Alan Dulles",
+      "sourceCategory": "politicians",
+      "targetId": "people:alan-dulles",
+      "targetName": "Alan Dulles",
+      "targetCategory": "people"
+    },
+    "so world war": {
+      "sourceId": "people:so-world-war",
+      "sourceName": "So World War",
+      "sourceCategory": "people",
+      "targetId": "people:second-world-war",
+      "targetName": "Second World War",
+      "targetCategory": "events"
+    },
+    "another kennedy": {
+      "sourceId": "people:another-kennedy",
+      "sourceName": "Another Kennedy",
+      "sourceCategory": "people",
+      "targetId": "people:bobby-kennedy",
+      "targetName": "Bobby Kennedy",
+      "targetCategory": "people"
+    },
+    "bobby ray inman": {
+      "sourceId": "people:bobby-ray-inman",
+      "sourceName": "Bobby Ray Inman",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bobby-ray-inman",
+      "targetName": "Bobby Ray Inman",
+      "targetCategory": "friendly_people"
+    },
+    "brandon fugel": {
+      "sourceId": "people:brandon-fugel",
+      "sourceName": "Brandon Fugel",
+      "sourceCategory": "people",
+      "targetId": "people:owner-brandon-fugel",
+      "targetName": "Owner Brandon Fugel",
+      "targetCategory": "people"
+    },
+    "so tim": {
+      "sourceId": "people:so-tim",
+      "sourceName": "So Tim",
+      "sourceCategory": "people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "president barack obama": {
+      "sourceId": "people:president-barack-obama",
+      "sourceName": "President Barack Obama",
+      "sourceCategory": "politicians",
+      "targetId": "people:president-obama",
+      "targetName": "President Obama",
+      "targetCategory": "people"
+    },
+    "hal poblenmeyer": {
+      "sourceId": "people:hal-poblenmeyer",
+      "sourceName": "Hal Poblenmeyer",
+      "sourceCategory": "people",
+      "targetId": "people:hal-palemeyer",
+      "targetName": "Hal Palemeyer",
+      "targetCategory": "people"
+    },
+    "hal palemeyer": {
+      "sourceId": "people:hal-palemeyer",
+      "sourceName": "Hal Palemeyer",
+      "sourceCategory": "people",
+      "targetId": "people:hal-pobbmire",
+      "targetName": "Hal Pobbmire",
+      "targetCategory": "people"
+    },
+    "hal pobbmire": {
+      "sourceId": "people:hal-pobbmire",
+      "sourceName": "Hal Pobbmire",
+      "sourceCategory": "people",
+      "targetId": "people:hal-poppenmeyer",
+      "targetName": "Hal Poppenmeyer",
+      "targetCategory": "people"
+    },
+    "kenneth arnell": {
+      "sourceId": "journalists:kenneth-arnell",
+      "sourceName": "Kenneth Arnell",
+      "sourceCategory": "journalists",
+      "targetId": "friendly_people:kenneth-arnold",
+      "targetName": "Kenneth Arnold",
+      "targetCategory": "friendly_people"
+    },
+    "kenneth arnold": {
+      "sourceId": "friendly_people:kenneth-arnold",
+      "sourceName": "Kenneth Arnold",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:kenneth-arnold",
+      "targetName": "Kenneth Arnold",
+      "targetCategory": "people"
+    },
+    "steve bannon": {
+      "sourceId": "journalists:steve-bannon",
+      "sourceName": "Steve Bannon",
+      "sourceCategory": "journalists",
+      "targetId": "people:steve-bannon",
+      "targetName": "Steve Bannon",
+      "targetCategory": "people"
+    },
+    "bob lazar": {
+      "sourceId": "whistleblowers:bob-lazar",
+      "sourceName": "Bob Lazar",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:when-bob-lazar",
+      "targetName": "When Bob Lazar",
+      "targetCategory": "people"
+    },
+    "when bob lazar": {
+      "sourceId": "people:when-bob-lazar",
+      "sourceName": "When Bob Lazar",
+      "sourceCategory": "people",
+      "targetId": "people:bob-lazar-muscovium",
+      "targetName": "Bob Lazar Muscovium",
+      "targetCategory": "people"
+    },
+    "howard hunt": {
+      "sourceId": "people:howard-hunt",
+      "sourceName": "Howard Hunt",
+      "sourceCategory": "people",
+      "targetId": "likely_spies:because-e-howard-hunt",
+      "targetName": "Because E. Howard Hunt",
+      "targetCategory": "likely_spies"
+    },
+    "because e howard hunt": {
+      "sourceId": "likely_spies:because-e-howard-hunt",
+      "sourceName": "Because E. Howard Hunt",
+      "sourceCategory": "likely_spies",
+      "targetId": "journalists:e-howard-hunt",
+      "targetName": "E. Howard Hunt",
+      "targetCategory": "journalists"
+    },
+    "david ferry": {
+      "sourceId": "journalists:david-ferry",
+      "sourceName": "David Ferry",
+      "sourceCategory": "journalists",
+      "targetId": "people:david-ferry",
+      "targetName": "David Ferry",
+      "targetCategory": "people"
+    },
+    "jack martin": {
+      "sourceId": "people:jack-martin",
+      "sourceName": "Jack Martin",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jack-martin",
+      "targetName": "Jack Martin",
+      "targetCategory": "friendly_people"
+    },
+    "so carl stanley": {
+      "sourceId": "people:so-carl-stanley",
+      "sourceName": "So Carl Stanley",
+      "sourceCategory": "people",
+      "targetId": "people:carl-stanley",
+      "targetName": "Carl Stanley",
+      "targetCategory": "people"
+    },
+    "russia": {
+      "sourceId": "locations:russia",
+      "sourceName": "Russia",
+      "sourceCategory": "locations",
+      "targetId": "friendly_people:russian-federation",
+      "targetName": "Russian Federation",
+      "targetCategory": "locations"
+    },
+    "russian federation": {
+      "sourceId": "friendly_people:russian-federation",
+      "sourceName": "Russian Federation",
+      "sourceCategory": "locations",
+      "targetId": "people:russian-federation",
+      "targetName": "Russian Federation",
+      "targetCategory": "people"
+    },
+    "lee oswald": {
+      "sourceId": "people:lee-oswald",
+      "sourceName": "Lee Oswald",
+      "sourceCategory": "people",
+      "targetId": "people:lee-harvey-oswald",
+      "targetName": "Lee Harvey Oswald",
+      "targetCategory": "people"
+    },
+    "jim sammy van": {
+      "sourceId": "people:jim-sammy-van",
+      "sourceName": "Jim Sammy Van",
+      "sourceCategory": "people",
+      "targetId": "people:jim-sammy",
+      "targetName": "Jim Sammy",
+      "targetCategory": "people"
+    },
+    "elon musk": {
+      "sourceId": "people:elon-musk",
+      "sourceName": "Elon Musk",
+      "sourceCategory": "people",
+      "targetId": "professors:elon-musk",
+      "targetName": "Elon Musk",
+      "targetCategory": "professors"
+    },
+    "what eric hecker": {
+      "sourceId": "people:what-eric-hecker",
+      "sourceName": "What Eric Hecker",
+      "sourceCategory": "people",
+      "targetId": "people:eric-hecker",
+      "targetName": "Eric Hecker",
+      "targetCategory": "people"
+    },
+    "world war i uh": {
+      "sourceId": "people:world-war-i-uh",
+      "sourceName": "World War I. Uh",
+      "sourceCategory": "people",
+      "targetId": "people:first-world-war",
+      "targetName": "First World War",
+      "targetCategory": "people"
+    },
+    "first world war": {
+      "sourceId": "people:first-world-war",
+      "sourceName": "First World War",
+      "sourceCategory": "people",
+      "targetId": "events:world-war",
+      "targetName": "World War",
+      "targetCategory": "events"
+    },
+    "whether yeltsin": {
+      "sourceId": "people:whether-yeltsin",
+      "sourceName": "Whether Yeltsin",
+      "sourceCategory": "people",
+      "targetId": "people:boris-yeltsin",
+      "targetName": "Boris Yeltsin",
+      "targetCategory": "people"
+    },
+    "saddam hussein": {
+      "sourceId": "friendly_people:saddam-hussein",
+      "sourceName": "Saddam Hussein",
+      "sourceCategory": "friendly_people",
+      "targetId": "likely_spies:saddam-hussein",
+      "targetName": "Saddam Hussein",
+      "targetCategory": "likely_spies"
+    },
+    "when yeltsin": {
+      "sourceId": "people:when-yeltsin",
+      "sourceName": "When Yeltsin",
+      "sourceCategory": "people",
+      "targetId": "people:boris-yeltsin",
+      "targetName": "Boris Yeltsin",
+      "targetCategory": "people"
+    },
+    "robert mueller": {
+      "sourceId": "people:robert-mueller",
+      "sourceName": "Robert Mueller",
+      "sourceCategory": "people",
+      "targetId": "people:bob-mueller",
+      "targetName": "Bob Mueller",
+      "targetCategory": "people"
+    },
+    "hal puthoff": {
+      "sourceId": "professors:hal-puthoff",
+      "sourceName": "Hal Puthoff",
+      "sourceCategory": "professors",
+      "targetId": "people:hal-putoff",
+      "targetName": "Hal Putoff",
+      "targetCategory": "people"
+    },
+    "hal putoff": {
+      "sourceId": "people:hal-putoff",
+      "sourceName": "Hal Putoff",
+      "sourceCategory": "people",
+      "targetId": "people:has-hal-puthoff",
+      "targetName": "Has Hal Puthoff",
+      "targetCategory": "people"
+    },
+    "rupert sheldrick": {
+      "sourceId": "people:rupert-sheldrick",
+      "sourceName": "Rupert Sheldrick",
+      "sourceCategory": "people",
+      "targetId": "people:rupert-sheldrake",
+      "targetName": "Rupert Sheldrake",
+      "targetCategory": "people"
+    },
+    "nsa": {
+      "sourceId": "government_agencies:nsa",
+      "sourceName": "NSA",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:national-security-agency",
+      "targetName": "National Security Agency",
+      "targetCategory": "government_agencies"
+    },
+    "eric hazeltine": {
+      "sourceId": "professors:eric-hazeltine",
+      "sourceName": "Eric Hazeltine",
+      "sourceCategory": "professors",
+      "targetId": "friendly_people:eric-hazeltine",
+      "targetName": "Eric Hazeltine",
+      "targetCategory": "friendly_people"
+    },
+    "eric henry": {
+      "sourceId": "people:eric-henry",
+      "sourceName": "Eric Henry",
+      "sourceCategory": "people",
+      "targetId": "people:eric-henry-wing",
+      "targetName": "Eric Henry Wing",
+      "targetCategory": "people"
+    },
+    "so oppenheimer": {
+      "sourceId": "people:so-oppenheimer",
+      "sourceName": "So Oppenheimer",
+      "sourceCategory": "people",
+      "targetId": "people:robert-oppenheimer",
+      "targetName": "Robert Oppenheimer",
+      "targetCategory": "people"
+    },
+    "robert oppenheimer": {
+      "sourceId": "people:robert-oppenheimer",
+      "sourceName": "Robert Oppenheimer",
+      "sourceCategory": "people",
+      "targetId": "people:dyson-oppenheimer",
+      "targetName": "Dyson Oppenheimer",
+      "targetCategory": "people"
+    },
+    "antelope valley": {
+      "sourceId": "dangerous_people:antelope-valley",
+      "sourceName": "Antelope Valley",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:antelope-valley",
+      "targetName": "Antelope Valley",
+      "targetCategory": "locations"
+    },
+    "general clapper": {
+      "sourceId": "people:general-clapper",
+      "sourceName": "General Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:jim-clapper",
+      "targetName": "Jim Clapper",
+      "targetCategory": "people"
+    },
+    "mike rogers": {
+      "sourceId": "people:mike-rogers",
+      "sourceName": "Mike Rogers",
+      "sourceCategory": "people",
+      "targetId": "politicians:mike-rogers",
+      "targetName": "Mike Rogers",
+      "targetCategory": "politicians"
+    },
+    "so bigelow": {
+      "sourceId": "experiencers:so-bigelow",
+      "sourceName": "So Bigelow",
+      "sourceCategory": "experiencers",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "like stanford university": {
+      "sourceId": "universities:like-stanford-university",
+      "sourceName": "Like Stanford University",
+      "sourceCategory": "universities",
+      "targetId": "universities:stanford-university",
+      "targetName": "Stanford University",
+      "targetCategory": "universities"
+    },
+    "manchurian candidate": {
+      "sourceId": "people:manchurian-candidate",
+      "sourceName": "Manchurian Candidate",
+      "sourceCategory": "emerging_terminology",
+      "targetId": "friendly_people:manchurian-candidate",
+      "targetName": "Manchurian Candidate",
+      "targetCategory": "friendly_people"
+    },
+    "manchurian candidates": {
+      "sourceId": "people:manchurian-candidates",
+      "sourceName": "Manchurian Candidates",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:manchurian-candidate",
+      "targetName": "Manchurian Candidate",
+      "targetCategory": "emerging_terminology"
+    },
+    "because kirsan": {
+      "sourceId": "experiencers:because-kirsan",
+      "sourceName": "Because Kirsan",
+      "sourceCategory": "experiencers",
+      "targetId": "people:kirsan-ilyumzinov",
+      "targetName": "Kirsan Ilyumzinov",
+      "targetCategory": "people"
+    },
+    "kirsan ilyumzinov": {
+      "sourceId": "people:kirsan-ilyumzinov",
+      "sourceName": "Kirsan Ilyumzinov",
+      "sourceCategory": "people",
+      "targetId": "people:kirsan-ilyamzinov",
+      "targetName": "Kirsan Ilyamzinov",
+      "targetCategory": "people"
+    },
+    "kirsan ilyamzinov": {
+      "sourceId": "people:kirsan-ilyamzinov",
+      "sourceName": "Kirsan Ilyamzinov",
+      "sourceCategory": "people",
+      "targetId": "people:president-kirsan",
+      "targetName": "President Kirsan",
+      "targetCategory": "people"
+    },
+    "xi jinping": {
+      "sourceId": "people:xi-jinping",
+      "sourceName": "Xi Jinping",
+      "sourceCategory": "politicians",
+      "targetId": "friendly_people:xi-jinping",
+      "targetName": "Xi Jinping",
+      "targetCategory": "friendly_people"
+    },
+    "peru": {
+      "sourceId": "locations:peru",
+      "sourceName": "Peru",
+      "sourceCategory": "locations",
+      "targetId": "people:in-peru",
+      "targetName": "In Peru",
+      "targetCategory": "people"
+    },
+    "even baba vanga": {
+      "sourceId": "people:even-baba-vanga",
+      "sourceName": "Even Baba Vanga",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:baba-vanga",
+      "targetName": "Baba Vanga",
+      "targetCategory": "friendly_people"
+    },
+    "dalai lama": {
+      "sourceId": "people:dalai-lama",
+      "sourceName": "Dalai Lama",
+      "sourceCategory": "people",
+      "targetId": "politicians:dalai-lama",
+      "targetName": "Dalai Lama",
+      "targetCategory": "politicians"
+    },
+    "operation bluebird": {
+      "sourceId": "people:operation-bluebird",
+      "sourceName": "Operation Bluebird",
+      "sourceCategory": "government_project_codenames",
+      "targetId": "people:bluebird-artichoke",
+      "targetName": "Bluebird Artichoke",
+      "targetCategory": "people"
+    },
+    "dick russell": {
+      "sourceId": "people:dick-russell",
+      "sourceName": "Dick Russell",
+      "sourceCategory": "people",
+      "targetId": "experiencers:dick-russell",
+      "targetName": "Dick Russell",
+      "targetCategory": "experiencers"
+    },
+    "northup grumman": {
+      "sourceId": "people:northup-grumman",
+      "sourceName": "Northup Grumman",
+      "sourceCategory": "people",
+      "targetId": "contractors:northrop-grumman",
+      "targetName": "Northrop Grumman",
+      "targetCategory": "contractors"
+    },
+    "w bush": {
+      "sourceId": "people:w-bush",
+      "sourceName": "W. Bush",
+      "sourceCategory": "people",
+      "targetId": "people:george-h",
+      "targetName": "George H.",
+      "targetCategory": "people"
+    },
+    "george bush": {
+      "sourceId": "people:george-bush",
+      "sourceName": "George Bush",
+      "sourceCategory": "people",
+      "targetId": "people:george-h",
+      "targetName": "George H.W. Bush",
+      "targetCategory": "politicians"
+    },
+    "john lear": {
+      "sourceId": "professors:john-lear",
+      "sourceName": "John Lear",
+      "sourceCategory": "people",
+      "targetId": "people:except-john-olson-lear",
+      "targetName": "Except John Olson Lear",
+      "targetCategory": "people"
+    },
+    "bill moore": {
+      "sourceId": "people:bill-moore",
+      "sourceName": "Bill Moore",
+      "sourceCategory": "people",
+      "targetId": "professors:bill-moore",
+      "targetName": "Bill Moore",
+      "targetCategory": "professors"
+    },
+    "queen elizabeth": {
+      "sourceId": "people:queen-elizabeth",
+      "sourceName": "Queen Elizabeth",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:queen-elizabeth",
+      "targetName": "Queen Elizabeth",
+      "targetCategory": "friendly_people"
+    },
+    "monroe institute of applied sciences": {
+      "sourceId": "people:applied-sciences",
+      "sourceName": "Monroe Institute of Applied Sciences",
+      "sourceCategory": "people",
+      "targetId": "institutes:monroe-institute",
+      "targetName": "Monroe Institute",
+      "targetCategory": "institutes"
+    },
+    "skinwalker ranch": {
+      "sourceId": "locations:skinwalker-ranch",
+      "sourceName": "Skinwalker Ranch",
+      "sourceCategory": "locations",
+      "targetId": "people:for-skinwalker",
+      "targetName": "For Skinwalker",
+      "targetCategory": "people"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-27T21:16:53.998860Z",
-  "note": "Merged from /Users/glennsorrentino/Downloads/reclass.json without deleting existing repository reclassification history."
+  "generatedAt": "2026-06-27T23:21:12.450Z",
+  "note": "Replace data/reclass.json with this file before rebuilding."
 }
