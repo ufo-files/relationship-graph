@@ -158,7 +158,8 @@
     "people:new-hampshire": "locations",
     "people:in-portsmouth": "locations",
     "people:hawley-engineering-building": "university_departments",
-    "friendly_people:philip-j-corso": "people"
+    "friendly_people:philip-j-corso": "people",
+    "people:in-enoch": "books"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -349,7 +350,9 @@
     "when september": "dates_times",
     "on december": "dates_times",
     "in portsmouth": "locations",
-    "philip j corso": "people"
+    "philip j corso": "people",
+    "book of enoch": "books",
+    "in enoch": "books"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -1751,9 +1754,9 @@
       "sourceId": "people:diana-pasolka",
       "sourceName": "Diana Pasolka",
       "sourceCategory": "people",
-      "targetId": "professors:diana-pasulka",
-      "targetName": "Diana Pasulka",
-      "targetCategory": "professors"
+      "targetId": "people:diana-basoka",
+      "targetName": "Diana Basoka",
+      "targetCategory": "people"
     },
     "professors:diana-pasolka": {
       "sourceId": "professors:diana-pasolka",
@@ -1767,9 +1770,9 @@
       "sourceId": "experiencers:diana-pasolka",
       "sourceName": "Diana Pasolka",
       "sourceCategory": "experiencers",
-      "targetId": "professors:diana-pasulka",
-      "targetName": "Diana Pasulka",
-      "targetCategory": "professors"
+      "targetId": "people:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "people"
     },
     "people:from-dave-grush": {
       "sourceId": "people:from-dave-grush",
@@ -2090,6 +2093,22 @@
       "targetId": "people:william-burns",
       "targetName": "William Burns",
       "targetCategory": "people"
+    },
+    "people:diana-posolka": {
+      "sourceId": "people:diana-posolka",
+      "sourceName": "Diana Posolka",
+      "sourceCategory": "people",
+      "targetId": "experiencers:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "experiencers"
+    },
+    "people:diana-basoka": {
+      "sourceId": "people:diana-basoka",
+      "sourceName": "Diana Basoka",
+      "sourceCategory": "people",
+      "targetId": "professors:diana-pasulka",
+      "targetName": "Diana Pasulka",
+      "targetCategory": "professors"
     }
   },
   "nameMerges": {
@@ -2822,12 +2841,12 @@
       "targetCategory": "people"
     },
     "diana pasolka": {
-      "sourceId": "experiencers:diana-pasolka",
+      "sourceId": "people:diana-pasolka",
       "sourceName": "Diana Pasolka",
-      "sourceCategory": "experiencers",
-      "targetId": "professors:diana-pasulka",
-      "targetName": "Diana Pasulka",
-      "targetCategory": "professors"
+      "sourceCategory": "people",
+      "targetId": "people:diana-basoka",
+      "targetName": "Diana Basoka",
+      "targetCategory": "people"
     },
     "from dave grush": {
       "sourceId": "people:from-dave-grush",
@@ -3068,9 +3087,25 @@
       "targetId": "people:william-burns",
       "targetName": "William Burns",
       "targetCategory": "people"
+    },
+    "diana posolka": {
+      "sourceId": "people:diana-posolka",
+      "sourceName": "Diana Posolka",
+      "sourceCategory": "people",
+      "targetId": "experiencers:diana-pasolka",
+      "targetName": "Diana Pasolka",
+      "targetCategory": "experiencers"
+    },
+    "diana basoka": {
+      "sourceId": "people:diana-basoka",
+      "sourceName": "Diana Basoka",
+      "sourceCategory": "people",
+      "targetId": "professors:diana-pasulka",
+      "targetName": "Diana Pasulka",
+      "targetCategory": "professors"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-27T08:48:56.082Z",
-  "note": "Replace data/reclass.json with this file before rebuilding."
+  "generatedAt": "2026-06-27T08:57:44.070888Z",
+  "note": "Merged from PR #16 without deleting existing reclassification history. Replace data/reclass.json with downloaded app exports only after preserving existing keys."
 }
