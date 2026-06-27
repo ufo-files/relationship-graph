@@ -839,6 +839,50 @@
     ]
   },
   {
+    "id": "whistleblowers:dave-grush",
+    "name": "Dave Grush",
+    "canonical_name": "Dave Grush",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
+    "count": 69,
+    "confidence": 0.892,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Cia Chief Im A Time Traveler",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Hollywood The Cia And Ufos The History Bey",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "I Located A Ufo Base In Arizona Ross Cou",
+      "I Was Taken By The Ufo Program As A Kid",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Joe Rogan The Truth About Aliens He Fina",
+      "Meet The Startup Summoning Ufos Skywatch",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "The Wall Street Journal Is Lying About U",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Dave Grush appears as whistleblowers with 69 mention(s) across 18 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001363",
+      "m-0001495",
+      "m-0001496",
+      "m-0001918",
+      "m-0002999",
+      "m-0003516",
+      "m-0003528",
+      "m-0003546"
+    ]
+  },
+  {
     "id": "locations:new-york",
     "name": "New York",
     "canonical_name": "New York",
@@ -913,50 +957,6 @@
       "m-0000224",
       "m-0000232",
       "m-0000251"
-    ]
-  },
-  {
-    "id": "whistleblowers:dave-grush",
-    "name": "Dave Grush",
-    "canonical_name": "Dave Grush",
-    "category": "whistleblowers",
-    "category_label": "Whistleblowers",
-    "count": 68,
-    "confidence": 0.895,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Cia Chief Im A Time Traveler",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Hollywood The Cia And Ufos The History Bey",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "I Located A Ufo Base In Arizona Ross Cou",
-      "I Was Taken By The Ufo Program As A Kid",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Joe Rogan The Truth About Aliens He Fina",
-      "Meet The Startup Summoning Ufos Skywatch",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "The Wall Street Journal Is Lying About U",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Dave Grush appears as whistleblowers with 68 mention(s) across 18 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001363",
-      "m-0001495",
-      "m-0001496",
-      "m-0001918",
-      "m-0002999",
-      "m-0003516",
-      "m-0003528",
-      "m-0003546"
     ]
   },
   {
@@ -1098,9 +1098,9 @@
     ]
   },
   {
-    "id": "research_groups:los-alamos-national-labs",
-    "name": "Los Alamos National Labs",
-    "canonical_name": "Los Alamos National Labs",
+    "id": "research_groups:los-alamos-national-laboratory",
+    "name": "Los Alamos National Laboratory",
+    "canonical_name": "Los Alamos National Laboratory",
     "category": "research_groups",
     "category_label": "Active research groups",
     "count": 54,
@@ -1120,7 +1120,7 @@
       "We Captured A 12 Foot Giant In Afghanist",
       "Why Americas Top Scientists Are Going M"
     ],
-    "significance": "Los Alamos National Labs appears as active research groups with 54 mention(s) across 13 transcripts; detected by gazetteer.",
+    "significance": "Los Alamos National Laboratory appears as active research groups with 54 mention(s) across 13 transcripts; detected by gazetteer.",
     "detectors": [
       "gazetteer"
     ],
@@ -2475,6 +2475,36 @@
     ]
   },
   {
+    "id": "people:tim-taylor",
+    "name": "Tim Taylor",
+    "canonical_name": "Tim Taylor",
+    "category": "people",
+    "category_label": "People",
+    "count": 30,
+    "confidence": 0.54,
+    "transcripts": [
+      "Nasa Whistleblower We Systematically Sup",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Tim Taylor appears as people with 30 mention(s) across 5 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008552",
+      "m-0010318",
+      "m-0010415",
+      "m-0011140",
+      "m-0011152",
+      "m-0011154",
+      "m-0011155",
+      "m-0011752"
+    ]
+  },
+  {
     "id": "people:virgin-mary",
     "name": "Virgin Mary",
     "canonical_name": "Virgin Mary",
@@ -2567,36 +2597,6 @@
       "m-0000373",
       "m-0001111",
       "m-0003437"
-    ]
-  },
-  {
-    "id": "people:tim-taylor",
-    "name": "Tim Taylor",
-    "canonical_name": "Tim Taylor",
-    "category": "people",
-    "category_label": "People",
-    "count": 29,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Tim Taylor appears as people with 29 mention(s) across 5 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008552",
-      "m-0010318",
-      "m-0010415",
-      "m-0011140",
-      "m-0011152",
-      "m-0011154",
-      "m-0011155",
-      "m-0011752"
     ]
   },
   {
@@ -7541,6 +7541,34 @@
     ]
   },
   {
+    "id": "research_groups:lawrence-livermore",
+    "name": "Lawrence Livermore",
+    "canonical_name": "Lawrence Livermore",
+    "category": "research_groups",
+    "category_label": "Active research groups",
+    "count": 7,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Former Nsa Director Breaks Silence On Uf",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist"
+    ],
+    "significance": "Lawrence Livermore appears as active research groups with 7 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000767",
+      "m-0004695",
+      "m-0010462",
+      "m-0010685",
+      "m-0010868",
+      "m-0010975",
+      "m-0011592"
+    ]
+  },
+  {
     "id": "alien_species:tall-whites",
     "name": "tall whites",
     "canonical_name": "tall whites",
@@ -7618,37 +7646,6 @@
       "m-0008479",
       "m-0008743",
       "m-0012184"
-    ]
-  },
-  {
-    "id": "friendly_people:commander-fravor",
-    "name": "Commander Fravor",
-    "canonical_name": "Commander Fravor",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 7,
-    "confidence": 0.92,
-    "transcripts": [
-      "Former Nsa Director Breaks Silence On Uf",
-      "Hollywood The Cia And Ufos The History Bey",
-      "Meet The Startup Summoning Ufos Skywatch",
-      "My Hospital Operated On An Alien Top Sur",
-      "Nasa Chief We Just Built Antigravity Pro",
-      "The Bizarre Alien Abduction Details The",
-      "The Lone Hacker That Found Nasas Secret"
-    ],
-    "significance": "Commander Fravor appears as friendly people with 7 mention(s) across 7 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0004641",
-      "m-0005104",
-      "m-0007855",
-      "m-0008082",
-      "m-0008436",
-      "m-0008782",
-      "m-0009952"
     ]
   },
   {
@@ -7866,34 +7863,6 @@
       "m-0010215",
       "m-0012177",
       "m-0012195"
-    ]
-  },
-  {
-    "id": "military_bases:lawrence-livermore",
-    "name": "Lawrence Livermore",
-    "canonical_name": "Lawrence Livermore",
-    "category": "military_bases",
-    "category_label": "Military bases",
-    "count": 7,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Former Nsa Director Breaks Silence On Uf",
-      "The Pentagons Ufo Program Is Real Here",
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "Lawrence Livermore appears as military bases with 7 mention(s) across 4 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000767",
-      "m-0004695",
-      "m-0010462",
-      "m-0010685",
-      "m-0010868",
-      "m-0010975",
-      "m-0011592"
     ]
   },
   {
@@ -8408,6 +8377,37 @@
       "m-0005014",
       "m-0011689",
       "m-0012416"
+    ]
+  },
+  {
+    "id": "whistleblowers:commander-fravor",
+    "name": "Commander Fravor",
+    "canonical_name": "Commander Fravor",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
+    "count": 7,
+    "confidence": 0.92,
+    "transcripts": [
+      "Former Nsa Director Breaks Silence On Uf",
+      "Hollywood The Cia And Ufos The History Bey",
+      "Meet The Startup Summoning Ufos Skywatch",
+      "My Hospital Operated On An Alien Top Sur",
+      "Nasa Chief We Just Built Antigravity Pro",
+      "The Bizarre Alien Abduction Details The",
+      "The Lone Hacker That Found Nasas Secret"
+    ],
+    "significance": "Commander Fravor appears as whistleblowers with 7 mention(s) across 7 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0004641",
+      "m-0005104",
+      "m-0007855",
+      "m-0008082",
+      "m-0008436",
+      "m-0008782",
+      "m-0009952"
     ]
   },
   {
@@ -11439,6 +11439,33 @@
     ]
   },
   {
+    "id": "professors:diana-pasulka",
+    "name": "Diana Pasulka",
+    "canonical_name": "Diana Pasulka",
+    "category": "professors",
+    "category_label": "Professors",
+    "count": 5,
+    "confidence": 0.7,
+    "transcripts": [
+      "Cia Chief Im A Time Traveler",
+      "Hollywood The Cia And Ufos The History Bey",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Pasulka appears as professors with 5 mention(s) across 4 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002123",
+      "m-0002124",
+      "m-0005017",
+      "m-0012336",
+      "m-0006923"
+    ]
+  },
+  {
     "id": "secret_societies:illuminati",
     "name": "Illuminati",
     "canonical_name": "Illuminati",
@@ -11829,6 +11856,28 @@
       "m-0005975",
       "m-0005977",
       "m-0005981"
+    ]
+  },
+  {
+    "id": "locations:space-kids-camp",
+    "name": "Space Kids Camp",
+    "canonical_name": "Space Kids Camp",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 4,
+    "confidence": 0.54,
+    "transcripts": [
+      "Jeffrey Epstein Aliens The Global Sata"
+    ],
+    "significance": "Space Kids Camp appears as locations with 4 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0007072",
+      "m-0007075",
+      "m-0007076",
+      "m-0007077"
     ]
   },
   {
@@ -12317,7 +12366,7 @@
     "category": "people",
     "category_label": "People",
     "count": 4,
-    "confidence": 0.54,
+    "confidence": 0.575,
     "transcripts": [
       "A Weekend With Bob Lazar Inside Area51s",
       "Nasa Chief We Just Built Antigravity Pro"
@@ -12327,7 +12376,7 @@
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0000207",
+      "m-0000205",
       "m-0000209",
       "m-0000214",
       "m-0008240"
@@ -14183,23 +14232,23 @@
     ]
   },
   {
-    "id": "research_groups:los-alamos-national-laboratory",
-    "name": "Los Alamos National Laboratory",
-    "canonical_name": "Los Alamos National Laboratory",
+    "id": "research_groups:los-alamos-national-lab",
+    "name": "Los Alamos National Lab",
+    "canonical_name": "Los Alamos National Lab",
     "category": "research_groups",
     "category_label": "Active research groups",
     "count": 3,
     "confidence": 0.66,
     "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
+      "Jeffrey Epstein Aliens The Global Sata",
       "Why Americas Top Scientists Are Going M"
     ],
-    "significance": "Los Alamos National Laboratory appears as active research groups with 3 mention(s) across 2 transcripts; detected by heuristic:organization_name.",
+    "significance": "Los Alamos National Lab appears as active research groups with 3 mention(s) across 2 transcripts; detected by heuristic:organization_name.",
     "detectors": [
       "heuristic:organization_name"
     ],
     "evidence_ids": [
-      "m-0000203",
+      "m-0006684",
       "m-0012076",
       "m-0012079"
     ]
@@ -14491,28 +14540,6 @@
     ]
   },
   {
-    "id": "experiencers:diana-pasolka",
-    "name": "Diana Pasolka",
-    "canonical_name": "Diana Pasolka",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 3,
-    "confidence": 0.633,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Diana Pasolka appears as experiencers with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005017",
-      "m-0012336",
-      "m-0012589"
-    ]
-  },
-  {
     "id": "experiencers:eric-davis",
     "name": "Eric Davis",
     "canonical_name": "Eric Davis",
@@ -14780,6 +14807,30 @@
     ]
   },
   {
+    "id": "government_agencies:united-states-navy",
+    "name": "united states navy",
+    "canonical_name": "united states navy",
+    "category": "government_agencies",
+    "category_label": "Government agencies",
+    "count": 3,
+    "confidence": 0.86,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "united states navy appears as government agencies with 3 mention(s) across 3 transcripts; detected by gazetteer, heuristic:military_organization.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:military_organization"
+    ],
+    "evidence_ids": [
+      "m-0005327",
+      "m-0010477",
+      "m-0004771"
+    ]
+  },
+  {
     "id": "government_project_codenames:naval-research-lab",
     "name": "Naval Research Lab",
     "canonical_name": "Naval Research Lab",
@@ -14975,27 +15026,6 @@
       "m-0010593",
       "m-0010595",
       "m-0010614"
-    ]
-  },
-  {
-    "id": "locations:space-kids-camp",
-    "name": "Space Kids Camp",
-    "canonical_name": "Space Kids Camp",
-    "category": "locations",
-    "category_label": "Locations",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Space Kids Camp appears as locations with 3 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007072",
-      "m-0007075",
-      "m-0007076"
     ]
   },
   {
@@ -18771,29 +18801,6 @@
     ]
   },
   {
-    "id": "professors:diana-pasulka",
-    "name": "Diana Pasulka",
-    "canonical_name": "Diana Pasulka",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 3,
-    "confidence": 0.713,
-    "transcripts": [
-      "Cia Chief Im A Time Traveler",
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Diana Pasulka appears as professors with 3 mention(s) across 2 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002123",
-      "m-0002124",
-      "m-0006923"
-    ]
-  },
-  {
     "id": "professors:eric-hazeltine",
     "name": "Eric Hazeltine",
     "canonical_name": "Eric Hazeltine",
@@ -20564,27 +20571,6 @@
     "evidence_ids": [
       "m-0011476",
       "m-0011895"
-    ]
-  },
-  {
-    "id": "government_agencies:united-states-navy",
-    "name": "united states navy",
-    "canonical_name": "united states navy",
-    "category": "government_agencies",
-    "category_label": "Government agencies",
-    "count": 2,
-    "confidence": 0.92,
-    "transcripts": [
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "united states navy appears as government agencies with 2 mention(s) across 2 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0005327",
-      "m-0010477"
     ]
   },
   {
@@ -22743,6 +22729,27 @@
     "evidence_ids": [
       "m-0007508",
       "m-0007509"
+    ]
+  },
+  {
+    "id": "people:curtis-lemay",
+    "name": "Curtis LeMay",
+    "canonical_name": "Curtis LeMay",
+    "category": "people",
+    "category_label": "People",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Nasa Chief We Just Built Antigravity Pro",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Curtis LeMay appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008237",
+      "m-0009466"
     ]
   },
   {
@@ -24940,6 +24947,26 @@
     "evidence_ids": [
       "m-0009605",
       "m-0010548"
+    ]
+  },
+  {
+    "id": "people:kimber-meyer",
+    "name": "Kimber Meyer",
+    "canonical_name": "Kimber Meyer",
+    "category": "people",
+    "category_label": "People",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "Kimber Meyer appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003767",
+      "m-0003790"
     ]
   },
   {
@@ -29554,6 +29581,25 @@
     ]
   },
   {
+    "id": "research_groups:independent-research-and-development",
+    "name": "Independent Research and Development",
+    "canonical_name": "Independent Research and Development",
+    "category": "research_groups",
+    "category_label": "Active research groups",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "Independent Research and Development appears as active research groups with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0010491"
+    ]
+  },
+  {
     "id": "research_groups:john-glenn-nasa-research-center",
     "name": "John Glenn NASA Research Center",
     "canonical_name": "John Glenn NASA Research Center",
@@ -29573,22 +29619,22 @@
     ]
   },
   {
-    "id": "research_groups:los-alamos-national-lab",
-    "name": "Los Alamos National Lab",
-    "canonical_name": "Los Alamos National Lab",
+    "id": "research_groups:los-alamos-national-labs",
+    "name": "Los Alamos National Labs",
+    "canonical_name": "Los Alamos National Labs",
     "category": "research_groups",
     "category_label": "Active research groups",
     "count": 1,
     "confidence": 0.66,
     "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata"
+      "A Weekend With Bob Lazar Inside Area51s"
     ],
-    "significance": "Los Alamos National Lab appears as active research groups with 1 mention(s) across 1 transcript; detected by heuristic:organization_name.",
+    "significance": "Los Alamos National Labs appears as active research groups with 1 mention(s) across 1 transcript; detected by heuristic:organization_name.",
     "detectors": [
       "heuristic:organization_name"
     ],
     "evidence_ids": [
-      "m-0006684"
+      "m-0000203"
     ]
   },
   {
@@ -30827,25 +30873,6 @@
     ]
   },
   {
-    "id": "contractors:independent-research-and-development",
-    "name": "Independent Research and Development",
-    "canonical_name": "Independent Research and Development",
-    "category": "contractors",
-    "category_label": "Contractors",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Independent Research and Development appears as contractors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0010491"
-    ]
-  },
-  {
     "id": "dangerous_people:agatha-christie",
     "name": "Agatha Christie",
     "canonical_name": "Agatha Christie",
@@ -32059,6 +32086,25 @@
     ],
     "evidence_ids": [
       "m-0011321"
+    ]
+  },
+  {
+    "id": "experiencers:diana-pasolka",
+    "name": "Diana Pasolka",
+    "canonical_name": "Diana Pasolka",
+    "category": "experiencers",
+    "category_label": "Experiencers",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Pasolka appears as experiencers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012589"
     ]
   },
   {
@@ -37629,6 +37675,25 @@
     ]
   },
   {
+    "id": "government_agencies:house-oversight-committee",
+    "name": "House Oversight Committee",
+    "canonical_name": "House Oversight Committee",
+    "category": "government_agencies",
+    "category_label": "Government agencies",
+    "count": 1,
+    "confidence": 0.68,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "House Oversight Committee appears as government agencies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0005129"
+    ]
+  },
+  {
     "id": "government_agencies:human-services-secretary",
     "name": "Human Services Secretary",
     "canonical_name": "Human Services Secretary",
@@ -38047,25 +38112,6 @@
     ]
   },
   {
-    "id": "government_agencies:so-navy",
-    "name": "So Navy",
-    "canonical_name": "So Navy",
-    "category": "government_agencies",
-    "category_label": "Government agencies",
-    "count": 1,
-    "confidence": 0.74,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "So Navy appears as government agencies with 1 mention(s) across 1 transcript; detected by heuristic:military_organization.",
-    "detectors": [
-      "heuristic:military_organization"
-    ],
-    "evidence_ids": [
-      "m-0004771"
-    ]
-  },
-  {
     "id": "government_agencies:strategic-services",
     "name": "Strategic Services",
     "canonical_name": "Strategic Services",
@@ -38215,6 +38261,44 @@
     ],
     "evidence_ids": [
       "m-0000074"
+    ]
+  },
+  {
+    "id": "government_project_codenames:sourcebook-project",
+    "name": "Sourcebook Project",
+    "canonical_name": "Sourcebook Project",
+    "category": "government_project_codenames",
+    "category_label": "Government project codenames",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "The Man Sitting On More Ufo Evidence Tha"
+    ],
+    "significance": "Sourcebook Project appears as government project codenames with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0010184"
+    ]
+  },
+  {
+    "id": "movies:ninth-gate",
+    "name": "Ninth Gate",
+    "canonical_name": "Ninth Gate",
+    "category": "movies",
+    "category_label": "Hollywood-produced movies",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum"
+    ],
+    "significance": "Ninth Gate appears as hollywood-produced movies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002868"
     ]
   },
   {
@@ -39510,6 +39594,25 @@
     ]
   },
   {
+    "id": "locations:langley-farms",
+    "name": "Langley Farms",
+    "canonical_name": "Langley Farms",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Langley Farms appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004768"
+    ]
+  },
+  {
     "id": "locations:little-st-james",
     "name": "Little St. James",
     "canonical_name": "Little St. James",
@@ -40533,25 +40636,6 @@
     ],
     "evidence_ids": [
       "m-0009319"
-    ]
-  },
-  {
-    "id": "people:air-force-chief",
-    "name": "Air Force Chief",
-    "canonical_name": "Air Force Chief",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Chief We Just Built Antigravity Pro"
-    ],
-    "significance": "Air Force Chief appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008237"
     ]
   },
   {
@@ -46746,25 +46830,6 @@
     ],
     "evidence_ids": [
       "m-0013055"
-    ]
-  },
-  {
-    "id": "people:curtis-lemay",
-    "name": "Curtis LeMay",
-    "canonical_name": "Curtis LeMay",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Curtis LeMay appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0009466"
     ]
   },
   {
@@ -56591,25 +56656,6 @@
     ]
   },
   {
-    "id": "people:kimber-meyer",
-    "name": "Kimber Meyer",
-    "canonical_name": "Kimber Meyer",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Kimber Meyer appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003767"
-    ]
-  },
-  {
     "id": "people:king-arthur",
     "name": "King Arthur",
     "canonical_name": "King Arthur",
@@ -57063,25 +57109,6 @@
     ],
     "evidence_ids": [
       "m-0005734"
-    ]
-  },
-  {
-    "id": "people:langley-farms",
-    "name": "Langley Farms",
-    "canonical_name": "Langley Farms",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Langley Farms appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004768"
     ]
   },
   {
@@ -61471,25 +61498,6 @@
     ],
     "evidence_ids": [
       "m-0005654"
-    ]
-  },
-  {
-    "id": "people:ninth-gate",
-    "name": "Ninth Gate",
-    "canonical_name": "Ninth Gate",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Ninth Gate appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002868"
     ]
   },
   {
@@ -68314,25 +68322,6 @@
     ]
   },
   {
-    "id": "people:so-kimber-meyer",
-    "name": "So Kimber Meyer",
-    "canonical_name": "So Kimber Meyer",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "So Kimber Meyer appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003790"
-    ]
-  },
-  {
     "id": "people:so-kirkpatrick",
     "name": "So Kirkpatrick",
     "canonical_name": "So Kirkpatrick",
@@ -68846,25 +68835,6 @@
     ]
   },
   {
-    "id": "people:sourcebook-project",
-    "name": "Sourcebook Project",
-    "canonical_name": "Sourcebook Project",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Man Sitting On More Ufo Evidence Tha"
-    ],
-    "significance": "Sourcebook Project appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0010184"
-    ]
-  },
-  {
     "id": "people:south-america-incorporated",
     "name": "South America Incorporated",
     "canonical_name": "South America Incorporated",
@@ -69299,25 +69269,6 @@
     ],
     "evidence_ids": [
       "m-0001010"
-    ]
-  },
-  {
-    "id": "people:star-kids",
-    "name": "Star Kids",
-    "canonical_name": "Star Kids",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Star Kids appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007077"
     ]
   },
   {
@@ -71696,25 +71647,6 @@
     ]
   },
   {
-    "id": "people:via-tim-taylor",
-    "name": "Via Tim Taylor",
-    "canonical_name": "Via Tim Taylor",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Via Tim Taylor appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012576"
-    ]
-  },
-  {
     "id": "people:vice-president",
     "name": "Vice President",
     "canonical_name": "Vice President",
@@ -74052,25 +73984,6 @@
     ]
   },
   {
-    "id": "politicians:house-oversight-committee",
-    "name": "House Oversight Committee",
-    "canonical_name": "House Oversight Committee",
-    "category": "politicians",
-    "category_label": "Politicians",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "House Oversight Committee appears as politicians with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005129"
-    ]
-  },
-  {
     "id": "politicians:jacques-corneon",
     "name": "Jacques Corneon",
     "canonical_name": "Jacques Corneon",
@@ -75464,7 +75377,7 @@
     "category": "professors",
     "category_label": "Professors",
     "count": 1,
-    "confidence": 0.68,
+    "confidence": 0.54,
     "transcripts": [
       "A Weekend With Bob Lazar Inside Area51s"
     ],
@@ -75473,7 +75386,7 @@
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0000205"
+      "m-0000207"
     ]
   },
   {
@@ -78438,25 +78351,6 @@
     ],
     "evidence_ids": [
       "m-0006587"
-    ]
-  },
-  {
-    "id": "whistleblowers:unlike-david-goresh",
-    "name": "Unlike David Goresh",
-    "canonical_name": "Unlike David Goresh",
-    "category": "whistleblowers",
-    "category_label": "Whistleblowers",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Meet The Startup Summoning Ufos Skywatch"
-    ],
-    "significance": "Unlike David Goresh appears as whistleblowers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007843"
     ]
   }
 ]
