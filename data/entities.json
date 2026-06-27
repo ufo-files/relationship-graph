@@ -1237,6 +1237,36 @@
     ]
   },
   {
+    "id": "military_bases:vandenberg-air-force-base",
+    "name": "Vandenberg Air Force Base",
+    "canonical_name": "Vandenberg Air Force Base",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 42,
+    "confidence": 0.824,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Meet The Nuclear Missile Guard Abducted",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret"
+    ],
+    "significance": "Vandenberg Air Force Base appears as military bases with 42 mention(s) across 4 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000956",
+      "m-0000970",
+      "m-0006079",
+      "m-0006081",
+      "m-0006082",
+      "m-0006083",
+      "m-0006085",
+      "m-0006087"
+    ]
+  },
+  {
     "id": "locations:antarctica",
     "name": "antarctica",
     "canonical_name": "antarctica",
@@ -1761,35 +1791,6 @@
       "m-0002338",
       "m-0002340",
       "m-0002505"
-    ]
-  },
-  {
-    "id": "military_bases:vandenberg",
-    "name": "Vandenberg",
-    "canonical_name": "Vandenberg",
-    "category": "military_bases",
-    "category_label": "Military bases",
-    "count": 31,
-    "confidence": 0.92,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Meet The Nuclear Missile Guard Abducted",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret"
-    ],
-    "significance": "Vandenberg appears as military bases with 31 mention(s) across 4 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000956",
-      "m-0000970",
-      "m-0006079",
-      "m-0006081",
-      "m-0006082",
-      "m-0006083",
-      "m-0006085",
-      "m-0006087"
     ]
   },
   {
@@ -4081,33 +4082,6 @@
       "m-0007054",
       "m-0007952",
       "m-0009246"
-    ]
-  },
-  {
-    "id": "military_bases:vandenberg-air-force-base",
-    "name": "Vandenberg Air Force Base",
-    "canonical_name": "Vandenberg Air Force Base",
-    "category": "military_bases",
-    "category_label": "Military bases",
-    "count": 11,
-    "confidence": 0.553,
-    "transcripts": [
-      "Meet The Nuclear Missile Guard Abducted",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Vandenberg Air Force Base appears as military bases with 11 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006080",
-      "m-0006090",
-      "m-0006092",
-      "m-0006101",
-      "m-0006106",
-      "m-0006116",
-      "m-0006121",
-      "m-0006123"
     ]
   },
   {
@@ -7288,6 +7262,33 @@
       "m-0005781",
       "m-0005931",
       "m-0009724"
+    ]
+  },
+  {
+    "id": "locations:los-angeles",
+    "name": "Los Angeles",
+    "canonical_name": "Los Angeles",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 6,
+    "confidence": 0.587,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey",
+      "Meet The Nuclear Missile Guard Abducted",
+      "Nasa Chief We Just Built Antigravity Pro",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Los Angeles appears as locations with 6 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004113",
+      "m-0006828",
+      "m-0006104",
+      "m-0009792",
+      "m-0009850",
+      "m-0009860"
     ]
   },
   {
@@ -10727,29 +10728,6 @@
       "m-0010669",
       "m-0010706",
       "m-0010710"
-    ]
-  },
-  {
-    "id": "people:los-angeles",
-    "name": "Los Angeles",
-    "canonical_name": "Los Angeles",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 4,
-    "confidence": 0.54,
-    "transcripts": [
-      "Meet The Nuclear Missile Guard Abducted",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Los Angeles appears as people and their significance with 4 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006104",
-      "m-0009792",
-      "m-0009850",
-      "m-0009860"
     ]
   },
   {
@@ -16672,6 +16650,27 @@
     "evidence_ids": [
       "m-0000965",
       "m-0010443"
+    ]
+  },
+  {
+    "id": "locations:santa-barbara",
+    "name": "Santa Barbara",
+    "canonical_name": "Santa Barbara",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Meet The Nuclear Missile Guard Abducted"
+    ],
+    "significance": "Santa Barbara appears as locations with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003141",
+      "m-0006107"
     ]
   },
   {
@@ -22610,27 +22609,6 @@
     ]
   },
   {
-    "id": "people:santa-barbara",
-    "name": "Santa Barbara",
-    "canonical_name": "Santa Barbara",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Meet The Nuclear Missile Guard Abducted"
-    ],
-    "significance": "Santa Barbara appears as people and their significance with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003141",
-      "m-0006107"
-    ]
-  },
-  {
     "id": "people:santa-monica",
     "name": "Santa Monica",
     "canonical_name": "Santa Monica",
@@ -26231,25 +26209,6 @@
     ],
     "evidence_ids": [
       "m-0010092"
-    ]
-  },
-  {
-    "id": "experiencers:los-angeles",
-    "name": "Los Angeles",
-    "canonical_name": "Los Angeles",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Nasa Chief We Just Built Antigravity Pro"
-    ],
-    "significance": "Los Angeles appears as experiencers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006828"
     ]
   },
   {
@@ -31171,25 +31130,6 @@
     ],
     "evidence_ids": [
       "m-0010421"
-    ]
-  },
-  {
-    "id": "journalists:los-angeles",
-    "name": "Los Angeles",
-    "canonical_name": "Los Angeles",
-    "category": "journalists",
-    "category_label": "Journalists",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Los Angeles appears as journalists with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004113"
     ]
   },
   {
