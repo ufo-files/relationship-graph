@@ -721,50 +721,6 @@
     ]
   },
   {
-    "id": "people:dave-grush",
-    "name": "Dave Grush",
-    "canonical_name": "Dave Grush",
-    "category": "people",
-    "category_label": "People",
-    "count": 81,
-    "confidence": 0.838,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Cia Chief Im A Time Traveler",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Hollywood The Cia And Ufos The History Bey",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "I Located A Ufo Base In Arizona Ross Cou",
-      "I Was Taken By The Ufo Program As A Kid",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Joe Rogan The Truth About Aliens He Fina",
-      "Meet The Startup Summoning Ufos Skywatch",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "The Wall Street Journal Is Lying About U",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Dave Grush appears as people with 81 mention(s) across 18 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001363",
-      "m-0001495",
-      "m-0001496",
-      "m-0001918",
-      "m-0002999",
-      "m-0003516",
-      "m-0003528",
-      "m-0003546"
-    ]
-  },
-  {
     "id": "technology:anti-gravity",
     "name": "anti-gravity",
     "canonical_name": "anti-gravity",
@@ -957,6 +913,50 @@
       "m-0000224",
       "m-0000232",
       "m-0000251"
+    ]
+  },
+  {
+    "id": "whistleblowers:dave-grush",
+    "name": "Dave Grush",
+    "canonical_name": "Dave Grush",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
+    "count": 68,
+    "confidence": 0.895,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Cia Chief Im A Time Traveler",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Hollywood The Cia And Ufos The History Bey",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "I Located A Ufo Base In Arizona Ross Cou",
+      "I Was Taken By The Ufo Program As A Kid",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Joe Rogan The Truth About Aliens He Fina",
+      "Meet The Startup Summoning Ufos Skywatch",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "The Wall Street Journal Is Lying About U",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Dave Grush appears as whistleblowers with 68 mention(s) across 18 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001363",
+      "m-0001495",
+      "m-0001496",
+      "m-0001918",
+      "m-0002999",
+      "m-0003516",
+      "m-0003528",
+      "m-0003546"
     ]
   },
   {
@@ -3556,6 +3556,35 @@
       "m-0003774",
       "m-0003948",
       "m-0003949"
+    ]
+  },
+  {
+    "id": "whistleblowers:dave-grusch",
+    "name": "Dave Grusch",
+    "canonical_name": "Dave Grusch",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
+    "count": 17,
+    "confidence": 0.565,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Hollywood The Cia And Ufos The History Bey",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "Dave Grusch appears as whistleblowers with 17 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003663",
+      "m-0004795",
+      "m-0005128",
+      "m-0001360",
+      "m-0003512",
+      "m-0003664",
+      "m-0004757",
+      "m-0004791"
     ]
   },
   {
@@ -28450,26 +28479,6 @@
     ]
   },
   {
-    "id": "politicians:dave-grush",
-    "name": "Dave Grush",
-    "canonical_name": "Dave Grush",
-    "category": "politicians",
-    "category_label": "Politicians",
-    "count": 2,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Dave Grush appears as politicians with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004795",
-      "m-0005128"
-    ]
-  },
-  {
     "id": "politicians:jimmy-carter",
     "name": "Jimmy Carter",
     "canonical_name": "Jimmy Carter",
@@ -31795,25 +31804,6 @@
     ],
     "evidence_ids": [
       "m-0004591"
-    ]
-  },
-  {
-    "id": "experiencers:dave-grush",
-    "name": "Dave Grush",
-    "canonical_name": "Dave Grush",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Dave Grush appears as experiencers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003663"
     ]
   },
   {
@@ -50700,25 +50690,6 @@
     ],
     "evidence_ids": [
       "m-0005809"
-    ]
-  },
-  {
-    "id": "people:from-dave-grush",
-    "name": "From Dave Grush",
-    "canonical_name": "From Dave Grush",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "From Dave Grush appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004808"
     ]
   },
   {
