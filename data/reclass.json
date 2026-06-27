@@ -292,7 +292,10 @@
     "national research council": "research_groups",
     "vatican observatory": "research_groups",
     "bay area": "locations",
-    "outer limits": "tv_shows"
+    "outer limits": "tv_shows",
+    "in cambridge": "locations",
+    "independent research": "contractors",
+    "little st": "locations"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
