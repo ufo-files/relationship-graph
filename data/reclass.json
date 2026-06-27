@@ -20,7 +20,9 @@
     "people:white-house": "government_agencies",
     "people:cape-canaveral": "locations",
     "people:old-testament": "religious_texts",
-    "people:new-testament": "religious_texts"
+    "people:new-testament": "religious_texts",
+    "people:santa-barbara": "locations",
+    "people:los-angeles": "locations"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -43,7 +45,9 @@
     "naval intelligence": "government_agencies",
     "vandenberg air force base": "military_bases",
     "dark skies": "tv_shows",
-    "star wars": "movies"
+    "star wars": "movies",
+    "santa barbara": "locations",
+    "los angeles": "locations"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -475,6 +479,14 @@
       "targetId": "military_bases:s-4",
       "targetName": "S-4",
       "targetCategory": "military_bases"
+    },
+    "military_bases:vandenberg": {
+      "sourceId": "military_bases:vandenberg",
+      "sourceName": "Vandenberg",
+      "sourceCategory": "military_bases",
+      "targetId": "military_bases:vandenberg-air-force-base",
+      "targetName": "Vandenberg Air Force Base",
+      "targetCategory": "military_bases"
     }
   },
   "nameMerges": {
@@ -493,9 +505,17 @@
       "targetId": "military_bases:s-4",
       "targetName": "S-4",
       "targetCategory": "military_bases"
+    },
+    "vandenberg": {
+      "sourceId": "military_bases:vandenberg",
+      "sourceName": "Vandenberg",
+      "sourceCategory": "military_bases",
+      "targetId": "military_bases:vandenberg-air-force-base",
+      "targetName": "Vandenberg Air Force Base",
+      "targetCategory": "military_bases"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-26T22:50:55.191Z",
-  "note": "Place this file at reclass.json in the project root before rebuilding."
+  "generatedAt": "2026-06-27T00:08:35.670Z",
+  "note": "Replace data/reclass.json with this file before rebuilding."
 }
