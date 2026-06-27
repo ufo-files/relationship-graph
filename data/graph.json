@@ -1129,6 +1129,14 @@
       "confidence": 0.54
     },
     {
+      "id": "professors:diana-pasulka",
+      "label": "Diana Pasulka",
+      "category": "professors",
+      "categoryLabel": "Professors",
+      "count": 12,
+      "confidence": 0.583
+    },
+    {
       "id": "religious_texts:new-testament",
       "label": "New Testament",
       "category": "religious_texts",
@@ -1349,14 +1357,6 @@
       "label": "Secret Machines",
       "category": "people",
       "categoryLabel": "People",
-      "count": 10,
-      "confidence": 0.54
-    },
-    {
-      "id": "professors:diana-pasolka",
-      "label": "Diana Pasolka",
-      "category": "professors",
-      "categoryLabel": "Professors",
       "count": 10,
       "confidence": 0.54
     },
@@ -4049,14 +4049,6 @@
       "confidence": 0.68
     },
     {
-      "id": "experiencers:diana-pasolka",
-      "label": "Diana Pasolka",
-      "category": "experiencers",
-      "categoryLabel": "Experiencers",
-      "count": 3,
-      "confidence": 0.68
-    },
-    {
       "id": "experiencers:gary-nolan",
       "label": "Gary Nolan",
       "category": "experiencers",
@@ -5913,6 +5905,14 @@
       "confidence": 0.68
     },
     {
+      "id": "experiencers:diana-pasolka",
+      "label": "Diana Pasolka",
+      "category": "experiencers",
+      "categoryLabel": "Experiencers",
+      "count": 2,
+      "confidence": 0.68
+    },
+    {
       "id": "experiencers:john-mack",
       "label": "John Mack",
       "category": "experiencers",
@@ -7231,6 +7231,14 @@
       "categoryLabel": "People",
       "count": 2,
       "confidence": 0.54
+    },
+    {
+      "id": "people:diana-pasolka",
+      "label": "Diana Pasolka",
+      "category": "people",
+      "categoryLabel": "People",
+      "count": 2,
+      "confidence": 0.61
     },
     {
       "id": "people:dick-russell",
@@ -9575,14 +9583,6 @@
       "categoryLabel": "Professors",
       "count": 2,
       "confidence": 0.68
-    },
-    {
-      "id": "professors:diana-pasulka",
-      "label": "Diana Pasulka",
-      "category": "professors",
-      "categoryLabel": "Professors",
-      "count": 2,
-      "confidence": 0.8
     },
     {
       "id": "professors:donald-menzel",
@@ -15657,14 +15657,6 @@
       "confidence": 0.54
     },
     {
-      "id": "people:before-diana",
-      "label": "Before Diana",
-      "category": "people",
-      "categoryLabel": "People",
-      "count": 1,
-      "confidence": 0.54
-    },
-    {
       "id": "people:beka-valley",
       "label": "Beka Valley",
       "category": "people",
@@ -17515,14 +17507,6 @@
     {
       "id": "people:diana-basoka",
       "label": "Diana Basoka",
-      "category": "people",
-      "categoryLabel": "People",
-      "count": 1,
-      "confidence": 0.54
-    },
-    {
-      "id": "people:diana-pasolka",
-      "label": "Diana Pasolka",
       "category": "people",
       "categoryLabel": "People",
       "count": 1,
@@ -33413,7 +33397,7 @@
     {
       "id": "rel-000353",
       "source": "books:american-cosmic",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 20
     },
@@ -38201,7 +38185,7 @@
     {
       "id": "rel-001037",
       "source": "authors:jacques-vall-e",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 16
     },
@@ -38222,7 +38206,7 @@
     {
       "id": "rel-001040",
       "source": "books:american-cosmic",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "authored_or_published",
       "weight": 16
     },
@@ -40308,7 +40292,7 @@
     {
       "id": "rel-001338",
       "source": "government_agencies:nasa",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "authored_or_published",
       "weight": 16
     },
@@ -45607,2058 +45591,2058 @@
     {
       "id": "rel-002095",
       "source": "experiencers:diana-pasolka",
-      "target": "key_terms:consciousness",
-      "type": "authored_or_published",
-      "weight": 14
-    },
-    {
-      "id": "rel-002096",
-      "source": "experiencers:diana-pasolka",
       "target": "people:tim-taylor",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002097",
+      "id": "rel-002096",
       "source": "experiencers:diana-pasolka",
       "target": "professors:elon-musk",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002098",
+      "id": "rel-002097",
       "source": "experiencers:gary-nolan",
       "target": "universities:stanford-university",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002099",
+      "id": "rel-002098",
       "source": "experiencers:john-mack",
       "target": "people:top-dog",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002100",
+      "id": "rel-002099",
       "source": "experiencers:mario-woods",
       "target": "people:michael-johnson",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002101",
+      "id": "rel-002100",
       "source": "experiencers:so-bigelow",
       "target": "technology:reverse-engineering",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002102",
+      "id": "rel-002101",
       "source": "experiencers:strange-harvest",
       "target": "people:whitley-streber",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002103",
+      "id": "rel-002102",
       "source": "frequencies:elf-wave",
       "target": "people:rupert-sheldrick",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002104",
+      "id": "rel-002103",
       "source": "frequencies:elf-waves",
       "target": "frequencies:extremely-low-frequency",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002105",
+      "id": "rel-002104",
       "source": "frequencies:elf-waves",
       "target": "government_agencies:central-intelligence-agency",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002106",
+      "id": "rel-002105",
       "source": "frequencies:elf-waves",
       "target": "people:andrei-puharic",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002107",
+      "id": "rel-002106",
       "source": "friendly_people:adam-curry",
       "target": "key_terms:remote-viewing",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002108",
+      "id": "rel-002107",
       "source": "friendly_people:admiral-wilson",
       "target": "government_agencies:pentagon",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002109",
+      "id": "rel-002108",
       "source": "friendly_people:admiral-wilson",
       "target": "locations:foster-ranch",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002110",
+      "id": "rel-002109",
       "source": "friendly_people:admiral-wilson",
       "target": "locations:new-mexico",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002111",
+      "id": "rel-002110",
       "source": "friendly_people:admiral-wilson",
       "target": "locations:roswell",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002112",
+      "id": "rel-002111",
       "source": "friendly_people:admiral-wilson",
       "target": "people:ed-mitchell",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002113",
+      "id": "rel-002112",
       "source": "friendly_people:admiral-wilson",
       "target": "people:wright-patterson",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002114",
+      "id": "rel-002113",
       "source": "friendly_people:alien-files-reopened",
       "target": "professors:eric-hazeltine",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002115",
+      "id": "rel-002114",
       "source": "friendly_people:american-alchemist",
       "target": "whistleblowers:bob-lazar",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002116",
+      "id": "rel-002115",
       "source": "friendly_people:annie-jacobson",
       "target": "government_agencies:atomic-energy-commission",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002117",
+      "id": "rel-002116",
       "source": "friendly_people:baba-vanga",
       "target": "people:bulgarian-academy",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002118",
+      "id": "rel-002117",
       "source": "friendly_people:baba-vanga",
       "target": "people:french-academy",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002119",
+      "id": "rel-002118",
       "source": "friendly_people:bud-hopkins",
       "target": "people:carla-turner",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002120",
+      "id": "rel-002119",
       "source": "friendly_people:bud-hopkins",
       "target": "people:david-jacobs",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002121",
+      "id": "rel-002120",
       "source": "friendly_people:carl-schmitt",
       "target": "movies:close-encounters",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002122",
+      "id": "rel-002121",
       "source": "friendly_people:charles-fort",
       "target": "people:british-india",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002123",
+      "id": "rel-002122",
       "source": "friendly_people:charles-manson",
       "target": "government_project_codenames:mk-ultra",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002124",
+      "id": "rel-002123",
       "source": "friendly_people:charles-manson",
       "target": "people:beach-boys",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002125",
+      "id": "rel-002124",
       "source": "friendly_people:charles-manson",
       "target": "people:sidney-gottlieb",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002126",
+      "id": "rel-002125",
       "source": "friendly_people:chris-ramsey",
       "target": "government_agencies:nasa",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002127",
+      "id": "rel-002126",
       "source": "friendly_people:doc-edgerton",
       "target": "universities:mit",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002128",
+      "id": "rel-002127",
       "source": "friendly_people:doug-engelbart",
       "target": "government_project_codenames:project-blue-book",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002129",
+      "id": "rel-002128",
       "source": "friendly_people:doug-engelbart",
       "target": "people:forbidden-science",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002130",
+      "id": "rel-002129",
       "source": "friendly_people:doug-engelbart",
       "target": "people:j-allen-hynek",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002131",
+      "id": "rel-002130",
       "source": "friendly_people:doug-wolf",
       "target": "government_agencies:national-reconnaissance",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002132",
+      "id": "rel-002131",
       "source": "friendly_people:douglas-caddy",
       "target": "key_terms:nhi",
+      "type": "claimed",
+      "weight": 14
+    },
+    {
+      "id": "rel-002132",
+      "source": "friendly_people:douglas-caddy",
+      "target": "likely_spies:because-e-howard-hunt",
       "type": "claimed",
       "weight": 14
     },
     {
       "id": "rel-002133",
       "source": "friendly_people:douglas-caddy",
-      "target": "likely_spies:because-e-howard-hunt",
-      "type": "claimed",
-      "weight": 14
-    },
-    {
-      "id": "rel-002134",
-      "source": "friendly_people:douglas-caddy",
       "target": "people:e-howard-hunt",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002135",
+      "id": "rel-002134",
       "source": "friendly_people:e-howard-hunt",
       "target": "key_terms:nhi",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002136",
+      "id": "rel-002135",
       "source": "friendly_people:e-howard-hunt",
       "target": "likely_spies:because-e-howard-hunt",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002137",
+      "id": "rel-002136",
       "source": "friendly_people:el-paso",
       "target": "people:sierra-blanca",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002138",
+      "id": "rel-002137",
       "source": "friendly_people:glenn-maxwell",
       "target": "people:jacques-cousteau",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002139",
+      "id": "rel-002138",
       "source": "friendly_people:glenn-maxwell",
       "target": "people:robert-maxwell",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002140",
+      "id": "rel-002139",
       "source": "friendly_people:glenn-maxwell",
       "target": "people:robert-trivers",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002141",
+      "id": "rel-002140",
       "source": "friendly_people:gulf-war",
       "target": "friendly_people:lynn-buchanan",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002142",
+      "id": "rel-002141",
       "source": "friendly_people:gulf-war",
       "target": "likely_spies:saddam-hussein",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002143",
+      "id": "rel-002142",
       "source": "friendly_people:harold-abramson",
       "target": "people:statler-hotel",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002144",
+      "id": "rel-002143",
       "source": "friendly_people:harold-malmgren",
       "target": "people:john-harrington",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002145",
+      "id": "rel-002144",
       "source": "friendly_people:harry-hiller",
       "target": "people:catholic-church",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002146",
+      "id": "rel-002145",
       "source": "friendly_people:harry-hiller",
       "target": "people:virgin-mary",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002147",
+      "id": "rel-002146",
       "source": "friendly_people:harry-smith",
       "target": "people:francis-st",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002148",
+      "id": "rel-002147",
       "source": "friendly_people:herman-hesse",
       "target": "people:catholic-church",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002149",
+      "id": "rel-002148",
       "source": "friendly_people:herman-hesse",
       "target": "people:harry-hiller",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002150",
+      "id": "rel-002149",
       "source": "friendly_people:herman-hesse",
       "target": "people:virgin-mary",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002151",
+      "id": "rel-002150",
       "source": "friendly_people:hermann-hess",
       "target": "locations:nazi-germany",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002152",
+      "id": "rel-002151",
       "source": "friendly_people:hermann-hess",
       "target": "people:ewan-cameron",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002153",
+      "id": "rel-002152",
       "source": "friendly_people:howard-hunt",
       "target": "government_agencies:central-intelligence-agency",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002154",
+      "id": "rel-002153",
       "source": "friendly_people:ian-fleming",
       "target": "locations:soviet-union",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002155",
+      "id": "rel-002154",
       "source": "friendly_people:ian-fleming",
       "target": "people:norman-cousins",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002156",
+      "id": "rel-002155",
       "source": "friendly_people:intelligence-community-inspector-general",
       "target": "people:dave-grush",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002157",
+      "id": "rel-002156",
       "source": "friendly_people:jack-ruby",
       "target": "people:charles-manson",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002158",
+      "id": "rel-002157",
       "source": "friendly_people:james-fowler",
       "target": "technology:directed-energy",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002159",
+      "id": "rel-002158",
       "source": "friendly_people:lee-harvey-oswald",
       "target": "people:charles-manson",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002160",
+      "id": "rel-002159",
       "source": "friendly_people:lynn-buchanan",
       "target": "likely_spies:saddam-hussein",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002161",
+      "id": "rel-002160",
       "source": "friendly_people:marianne-schennefield",
       "target": "people:joseph-mingle",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002162",
+      "id": "rel-002161",
       "source": "friendly_people:pierre-lafitte",
       "target": "people:alex-heidel",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002163",
+      "id": "rel-002162",
       "source": "friendly_people:pierre-lafitte",
       "target": "people:lee-harvey-oswald",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002164",
+      "id": "rel-002163",
       "source": "friendly_people:pierre-lafitte",
       "target": "people:statler-hotel",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002165",
+      "id": "rel-002164",
       "source": "friendly_people:robert-milliken",
       "target": "people:thomas-townsend-brown",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002166",
+      "id": "rel-002165",
       "source": "friendly_people:robert-milliken",
       "target": "universities:caltech",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002167",
+      "id": "rel-002166",
       "source": "friendly_people:royal-society",
       "target": "people:francis-biss",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002168",
+      "id": "rel-002167",
       "source": "friendly_people:san-francisco-chronicle",
       "target": "government_agencies:symbionese-liberation-army",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002169",
+      "id": "rel-002168",
       "source": "friendly_people:san-francisco-chronicle",
       "target": "people:jim-jones",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002170",
+      "id": "rel-002169",
       "source": "friendly_people:teledyne-ryan",
       "target": "government_agencies:united-states-army",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002171",
+      "id": "rel-002170",
       "source": "friendly_people:teledyne-ryan",
       "target": "locations:north-america",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002172",
+      "id": "rel-002171",
       "source": "friendly_people:travis-walton",
       "target": "people:roger-lear",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002173",
+      "id": "rel-002172",
       "source": "friendly_people:virgin-mary",
       "target": "people:jesus-christ",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002174",
+      "id": "rel-002173",
       "source": "friendly_people:white-sands",
       "target": "people:sandia-national",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002175",
+      "id": "rel-002174",
       "source": "government_agencies:adjustment-bureau",
       "target": "people:if-jesse",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002176",
+      "id": "rel-002175",
       "source": "government_agencies:air-force-electronics-intelligence",
       "target": "people:dan-sherman",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002177",
+      "id": "rel-002176",
       "source": "government_agencies:air-force-plant",
       "target": "military_bases:norton-air-force-base",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002178",
+      "id": "rel-002177",
       "source": "government_agencies:air-force-research-lab",
       "target": "government_agencies:national-reconnaissance-office",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002179",
+      "id": "rel-002178",
       "source": "government_agencies:air-force-research-lab",
       "target": "government_agencies:uap-task-force",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002180",
+      "id": "rel-002179",
       "source": "government_agencies:air-force-research-lab",
       "target": "people:carnegie-mellon",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002181",
+      "id": "rel-002180",
       "source": "government_agencies:air-force-research-lab",
       "target": "people:colin-kelleher",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002182",
+      "id": "rel-002181",
       "source": "government_agencies:air-force-research-lab",
       "target": "people:george-onett",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002183",
+      "id": "rel-002182",
       "source": "government_agencies:air-force-research-lab",
       "target": "people:jay-stratton",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002184",
+      "id": "rel-002183",
       "source": "government_agencies:air-force-research-lab",
       "target": "people:vehicles-directorate",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002185",
+      "id": "rel-002184",
       "source": "government_agencies:air-force-research-lab",
       "target": "universities:harvard",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002186",
+      "id": "rel-002185",
       "source": "government_agencies:air-force-research-lab",
       "target": "universities:kennedy-school",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002187",
+      "id": "rel-002186",
       "source": "government_agencies:air-force-research-laboratory",
       "target": "people:so-peter",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002188",
+      "id": "rel-002187",
       "source": "government_agencies:american-secretary",
       "target": "people:henry-kissinger",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002189",
+      "id": "rel-002188",
       "source": "government_agencies:army-corps",
       "target": "government_project_codenames:manhattan-project",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002190",
+      "id": "rel-002189",
       "source": "government_agencies:army-corps-of-engineers",
       "target": "government_project_codenames:manhattan-project",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002191",
+      "id": "rel-002190",
       "source": "government_agencies:army-reserve",
       "target": "people:john-glenn",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002192",
+      "id": "rel-002191",
       "source": "government_agencies:atomic-energy-commission",
       "target": "government_agencies:central-intelligence-agency",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002193",
+      "id": "rel-002192",
       "source": "government_agencies:atomic-energy-commission",
       "target": "government_agencies:united-states-air-force",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002194",
+      "id": "rel-002193",
       "source": "government_agencies:based-laser-project-office",
       "target": "government_agencies:national-reconnaissance-office",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002195",
+      "id": "rel-002194",
       "source": "government_agencies:based-laser-project-office",
       "target": "people:astronautical-engineering",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002196",
+      "id": "rel-002195",
       "source": "government_agencies:based-laser-project-office",
       "target": "people:hertz-foundation-fellowship",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002197",
+      "id": "rel-002196",
       "source": "government_agencies:based-laser-project-office",
       "target": "people:vehicles-directorate",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002198",
+      "id": "rel-002197",
       "source": "government_agencies:based-laser-project-office",
       "target": "universities:mit",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002199",
+      "id": "rel-002198",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_agencies:department-of-defense",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002200",
+      "id": "rel-002199",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_agencies:fbi",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002201",
+      "id": "rel-002200",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_agencies:nasa",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002202",
+      "id": "rel-002201",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_agencies:national-reconnaissance-office",
       "type": "funded_or_contracts_with",
+      "weight": 14
+    },
+    {
+      "id": "rel-002202",
+      "source": "government_agencies:central-intelligence-agency",
+      "target": "government_agencies:naval-intelligence",
+      "type": "claimed",
       "weight": 14
     },
     {
       "id": "rel-002203",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_agencies:naval-intelligence",
-      "type": "claimed",
-      "weight": 14
-    },
-    {
-      "id": "rel-002204",
-      "source": "government_agencies:central-intelligence-agency",
-      "target": "government_agencies:naval-intelligence",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002205",
+      "id": "rel-002204",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_project_codenames:kona-blue",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002206",
+      "id": "rel-002205",
       "source": "government_agencies:central-intelligence-agency",
       "target": "government_project_codenames:legacy-program",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002207",
+      "id": "rel-002206",
       "source": "government_agencies:central-intelligence-agency",
       "target": "locations:middle-east",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002208",
+      "id": "rel-002207",
       "source": "government_agencies:central-intelligence-agency",
       "target": "locations:peru",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002209",
+      "id": "rel-002208",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:alan-dulles",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002210",
+      "id": "rel-002209",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:american-psychiatrist",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002211",
+      "id": "rel-002210",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:armor-foundation",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002212",
+      "id": "rel-002211",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:carlos-delgado",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002213",
+      "id": "rel-002212",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:chase-brandon",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002214",
+      "id": "rel-002213",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:chase-brandon",
       "type": "testified_about",
+      "weight": 14
+    },
+    {
+      "id": "rel-002214",
+      "source": "government_agencies:central-intelligence-agency",
+      "target": "people:chris-mellon",
+      "type": "claimed",
       "weight": 14
     },
     {
       "id": "rel-002215",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:chris-mellon",
-      "type": "claimed",
-      "weight": 14
-    },
-    {
-      "id": "rel-002216",
-      "source": "government_agencies:central-intelligence-agency",
-      "target": "people:chris-mellon",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002217",
+      "id": "rel-002216",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:church-commission",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002218",
+      "id": "rel-002217",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:director-michael-hayden",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002219",
+      "id": "rel-002218",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:don-myricks",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002220",
+      "id": "rel-002219",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:doug-wolf",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002221",
+      "id": "rel-002220",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:eastern-europe",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002222",
+      "id": "rel-002221",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:eric-davis",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002223",
+      "id": "rel-002222",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:esther-brooks",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002224",
+      "id": "rel-002223",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:everett-evans-heinemann",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002225",
+      "id": "rel-002224",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:federal-reserve",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002226",
+      "id": "rel-002225",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:fred-crisman",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002227",
+      "id": "rel-002226",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:gary-nolan",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002228",
+      "id": "rel-002227",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:general-nathan-twining",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002229",
+      "id": "rel-002228",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:george-h",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002230",
+      "id": "rel-002229",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:glomar-explorer",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002231",
+      "id": "rel-002230",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:howard-hughes",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002232",
+      "id": "rel-002231",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:ingo-swann",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002233",
+      "id": "rel-002232",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:intelligence-communities",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002234",
+      "id": "rel-002233",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:james-ryder",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002235",
+      "id": "rel-002234",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:james-woolsey",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002236",
+      "id": "rel-002235",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:jim-ryder",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002237",
+      "id": "rel-002236",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:john-greenwald",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002238",
+      "id": "rel-002237",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:john-paul",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002239",
+      "id": "rel-002238",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:john-peterson",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002240",
+      "id": "rel-002239",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:jolly-west",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002241",
+      "id": "rel-002240",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:joseph-mengele",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002242",
+      "id": "rel-002241",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:kit-green",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002243",
+      "id": "rel-002242",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:langley-farms",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002244",
+      "id": "rel-002243",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:leonard-kyle",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002245",
+      "id": "rel-002244",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:martin-cannon",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002246",
+      "id": "rel-002245",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:martin-ornn",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002247",
+      "id": "rel-002246",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:operation-often",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002248",
+      "id": "rel-002247",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:operation-snow-white",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002249",
+      "id": "rel-002248",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:paul-mellon",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002250",
+      "id": "rel-002249",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:president-bush",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002251",
+      "id": "rel-002250",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:richard-helms",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002252",
+      "id": "rel-002251",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:rob-jones",
+      "type": "affiliated_with",
+      "weight": 14
+    },
+    {
+      "id": "rel-002252",
+      "source": "government_agencies:central-intelligence-agency",
+      "target": "people:rolf-moa-larsson",
       "type": "affiliated_with",
       "weight": 14
     },
     {
       "id": "rel-002253",
       "source": "government_agencies:central-intelligence-agency",
-      "target": "people:rolf-moa-larsson",
-      "type": "affiliated_with",
-      "weight": 14
-    },
-    {
-      "id": "rel-002254",
-      "source": "government_agencies:central-intelligence-agency",
       "target": "people:rolf-moat",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002255",
+      "id": "rel-002254",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:saudi-arabia",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002256",
+      "id": "rel-002255",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:sherlock-holmes",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002257",
+      "id": "rel-002256",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:sidney-gottlieb",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002258",
+      "id": "rel-002257",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:sidney-marland",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002259",
+      "id": "rel-002258",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:stephen-greer",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002260",
+      "id": "rel-002259",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:tim-taylor",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002261",
+      "id": "rel-002260",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:w-bush",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002262",
+      "id": "rel-002261",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:west-point",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002263",
+      "id": "rel-002262",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:william-stevenson",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002264",
+      "id": "rel-002263",
       "source": "government_agencies:central-intelligence-agency",
       "target": "people:yuri-andropov",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002265",
+      "id": "rel-002264",
       "source": "government_agencies:central-intelligence-agency",
       "target": "professors:charles-steinmetz",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002266",
+      "id": "rel-002265",
       "source": "government_agencies:central-intelligence-agency",
       "target": "professors:colin-ross",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002267",
+      "id": "rel-002266",
       "source": "government_agencies:central-intelligence-agency",
       "target": "professors:hal-puthoff",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002268",
+      "id": "rel-002267",
       "source": "government_agencies:central-intelligence-agency",
       "target": "radio_frequencies:radio-frequency",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002269",
+      "id": "rel-002268",
       "source": "government_agencies:central-intelligence-agency",
       "target": "technology:anti-gravity",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002270",
+      "id": "rel-002269",
       "source": "government_agencies:central-intelligence-agency",
       "target": "technology:reverse-engineering",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002271",
+      "id": "rel-002270",
       "source": "government_agencies:darpa",
       "target": "people:michael-moran",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002272",
+      "id": "rel-002271",
       "source": "government_agencies:defense-intelligence-agency",
       "target": "people:federal-reserve",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002273",
+      "id": "rel-002272",
       "source": "government_agencies:defense-intelligence-agency",
       "target": "people:james-jesus-angleton",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002274",
+      "id": "rel-002273",
       "source": "government_agencies:defense-intelligence-agency",
       "target": "people:jim-lekatsky",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002275",
+      "id": "rel-002274",
       "source": "government_agencies:defense-intelligence-agency",
       "target": "people:marco-charisi",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002276",
+      "id": "rel-002275",
       "source": "government_agencies:defense-intelligence-agency",
       "target": "people:marco-eli-xerese",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002277",
+      "id": "rel-002276",
       "source": "government_agencies:defense-ministry",
       "target": "planets:mars",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002278",
+      "id": "rel-002277",
       "source": "government_agencies:department-of-defense",
       "target": "government_agencies:nga",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002279",
+      "id": "rel-002278",
       "source": "government_agencies:department-of-defense",
       "target": "government_agencies:office-of-global-access",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002280",
+      "id": "rel-002279",
       "source": "government_agencies:department-of-defense",
       "target": "locations:north-america",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002281",
+      "id": "rel-002280",
       "source": "government_agencies:department-of-defense",
       "target": "military_bases:s-4",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002282",
+      "id": "rel-002281",
       "source": "government_agencies:department-of-defense",
       "target": "people:dave-grush",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002283",
+      "id": "rel-002282",
       "source": "government_agencies:department-of-defense",
       "target": "people:dave-grush",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002284",
+      "id": "rel-002283",
       "source": "government_agencies:department-of-defense",
       "target": "people:google-trends",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002285",
+      "id": "rel-002284",
       "source": "government_agencies:department-of-defense",
       "target": "people:independent-research",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002286",
+      "id": "rel-002285",
       "source": "government_agencies:department-of-defense",
       "target": "people:rob-jones",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002287",
+      "id": "rel-002286",
       "source": "government_agencies:department-of-defense",
       "target": "whistleblowers:bob-lazar",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002288",
+      "id": "rel-002287",
       "source": "government_agencies:department-of-energy",
       "target": "government_agencies:national-labs",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002289",
+      "id": "rel-002288",
       "source": "government_agencies:department-of-energy",
       "target": "government_agencies:nsa",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002290",
+      "id": "rel-002289",
       "source": "government_agencies:department-of-energy",
       "target": "hoaxers:richard-doti",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002291",
+      "id": "rel-002290",
       "source": "government_agencies:department-of-energy",
       "target": "key_terms:consciousness",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002292",
+      "id": "rel-002291",
       "source": "government_agencies:department-of-energy",
       "target": "locations:new-mexico",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002293",
+      "id": "rel-002292",
       "source": "government_agencies:department-of-energy",
       "target": "people:nuclear-emergency-support-teams",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002294",
+      "id": "rel-002293",
       "source": "government_agencies:department-of-energy",
       "target": "people:rolf-moa-larsson",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002295",
+      "id": "rel-002294",
       "source": "government_agencies:department-of-energy",
       "target": "people:security-and-intelligence-directorate",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002296",
+      "id": "rel-002295",
       "source": "government_agencies:department-of-energy",
       "target": "research_groups:development-centers",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002297",
+      "id": "rel-002296",
       "source": "government_agencies:eagle-works",
       "target": "government_agencies:nasa",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002298",
+      "id": "rel-002297",
       "source": "government_agencies:earth-control-coordination-office",
       "target": "people:solid-state-intelligence",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002299",
+      "id": "rel-002298",
       "source": "government_agencies:executive-secretary",
       "target": "government_agencies:pentagon",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002300",
+      "id": "rel-002299",
       "source": "government_agencies:fbi",
       "target": "government_agencies:nsa",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002301",
+      "id": "rel-002300",
       "source": "government_agencies:fbi",
       "target": "government_project_codenames:mk-ultra",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002302",
+      "id": "rel-002301",
       "source": "government_agencies:fbi",
       "target": "locations:pacific-northwest",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002303",
+      "id": "rel-002302",
       "source": "government_agencies:fbi",
       "target": "people:bob-woodward",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002304",
+      "id": "rel-002303",
       "source": "government_agencies:fbi",
       "target": "people:general-nathan-twining",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002305",
+      "id": "rel-002304",
       "source": "government_agencies:fbi",
       "target": "people:guy-bannister",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002306",
+      "id": "rel-002305",
       "source": "government_agencies:fbi",
       "target": "people:lee-harvey-oswald",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002307",
+      "id": "rel-002306",
       "source": "government_agencies:fbi",
       "target": "people:uri-geller",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002308",
+      "id": "rel-002307",
       "source": "government_agencies:fbi",
       "target": "professors:eric-walker",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002309",
+      "id": "rel-002308",
       "source": "government_agencies:fbi",
       "target": "tv_shows:x-files",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002310",
+      "id": "rel-002309",
       "source": "government_agencies:fbi",
       "target": "universities:colgate-college",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002311",
+      "id": "rel-002310",
       "source": "government_agencies:french-air-force",
       "target": "government_agencies:united-states-air-force",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002312",
+      "id": "rel-002311",
       "source": "government_agencies:geospatial-agency",
       "target": "people:combat-control",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002313",
+      "id": "rel-002312",
       "source": "government_agencies:italian-space-agency",
       "target": "people:american-capella-space",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002314",
+      "id": "rel-002313",
       "source": "government_agencies:italian-space-agency",
       "target": "people:second-generation",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002315",
+      "id": "rel-002314",
       "source": "government_agencies:janet-airlines",
       "target": "locations:los-alamos",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002316",
+      "id": "rel-002315",
       "source": "government_agencies:janet-airlines",
       "target": "locations:unclassified-logistic-support-facility",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002317",
+      "id": "rel-002316",
       "source": "government_agencies:janet-airlines",
       "target": "military_bases:area-51",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002318",
+      "id": "rel-002317",
       "source": "government_agencies:janet-airlines",
       "target": "people:sunset-drive",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002319",
+      "id": "rel-002318",
       "source": "government_agencies:nasa",
       "target": "government_agencies:national-reconnaissance-office",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002320",
+      "id": "rel-002319",
       "source": "government_agencies:nasa",
       "target": "government_agencies:nsa",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002321",
+      "id": "rel-002320",
       "source": "government_agencies:nasa",
       "target": "government_agencies:pentagon",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002322",
+      "id": "rel-002321",
       "source": "government_agencies:nasa",
       "target": "government_agencies:pentagon",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002323",
+      "id": "rel-002322",
       "source": "government_agencies:nasa",
       "target": "government_project_codenames:mk-ultra",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002324",
+      "id": "rel-002323",
       "source": "government_agencies:nasa",
       "target": "locations:cape-canaveral",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002325",
+      "id": "rel-002324",
       "source": "government_agencies:nasa",
       "target": "people:alan-bean",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002326",
+      "id": "rel-002325",
       "source": "government_agencies:nasa",
       "target": "people:american-electrostatic-society",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002327",
+      "id": "rel-002326",
       "source": "government_agencies:nasa",
       "target": "people:bobby-ray-inman",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002328",
+      "id": "rel-002327",
       "source": "government_agencies:nasa",
       "target": "people:charles-buehler",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002329",
+      "id": "rel-002328",
       "source": "government_agencies:nasa",
       "target": "people:national-guard",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002330",
+      "id": "rel-002329",
       "source": "government_agencies:nasa",
       "target": "people:philip-j-corso",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002331",
+      "id": "rel-002330",
       "source": "government_agencies:nasa",
       "target": "people:thomas-kuhn",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002332",
+      "id": "rel-002331",
       "source": "government_agencies:nasa",
       "target": "people:when-bob",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002333",
+      "id": "rel-002332",
       "source": "government_agencies:nasa",
       "target": "planets:mars",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002334",
+      "id": "rel-002333",
       "source": "government_agencies:nasa",
       "target": "professors:charles-buehler",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002335",
+      "id": "rel-002334",
       "source": "government_agencies:nasa",
       "target": "professors:david-spurgle",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002336",
+      "id": "rel-002335",
       "source": "government_agencies:nasa",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002337",
+      "id": "rel-002336",
       "source": "government_agencies:nasa",
       "target": "professors:simons-foundation",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002338",
+      "id": "rel-002337",
       "source": "government_agencies:nasa",
       "target": "research_groups:bell-labs",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002339",
+      "id": "rel-002338",
       "source": "government_agencies:nasa",
       "target": "technology:anti-gravity",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002340",
+      "id": "rel-002339",
       "source": "government_agencies:nasa",
       "target": "theories:time-travel",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002341",
+      "id": "rel-002340",
       "source": "government_agencies:national-labs",
       "target": "research_groups:development-centers",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002342",
+      "id": "rel-002341",
       "source": "government_agencies:national-nuclear-security-administration",
       "target": "research_groups:development-centers",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002343",
+      "id": "rel-002342",
       "source": "government_agencies:national-reconnaissance",
       "target": "people:independent-research",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002344",
+      "id": "rel-002343",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "government_agencies:senate-select-committee",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002345",
+      "id": "rel-002344",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "government_agencies:united-states-air-force",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002346",
+      "id": "rel-002345",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "government_project_codenames:legacy-program",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002347",
+      "id": "rel-002346",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "key_terms:crash-retrieval",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002348",
+      "id": "rel-002347",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "key_terms:crash-retrieval",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002349",
+      "id": "rel-002348",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "locations:pine-gap",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002350",
+      "id": "rel-002349",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "people:bobby-ray-inman",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002351",
+      "id": "rel-002350",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "people:bobby-reinhardt",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002352",
+      "id": "rel-002351",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "people:independent-research",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002353",
+      "id": "rel-002352",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "people:materiel-wing-director",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002354",
+      "id": "rel-002353",
       "source": "government_agencies:national-reconnaissance-office",
       "target": "people:vehicles-directorate",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002355",
+      "id": "rel-002354",
       "source": "government_agencies:naval-intelligence",
       "target": "people:bobby-ray-inman",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002356",
+      "id": "rel-002355",
       "source": "government_agencies:naval-intelligence",
       "target": "people:general-nathan-twining",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002357",
+      "id": "rel-002356",
       "source": "government_agencies:naval-intelligence",
       "target": "people:thomas-townsend-brown",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002358",
+      "id": "rel-002357",
       "source": "government_agencies:nga",
       "target": "people:independent-research",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002359",
+      "id": "rel-002358",
       "source": "government_agencies:nga",
       "target": "people:rob-jones",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002360",
+      "id": "rel-002359",
       "source": "government_agencies:nsa",
       "target": "locations:los-alamos",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002361",
+      "id": "rel-002360",
       "source": "government_agencies:nsa",
       "target": "people:bobby-ray-inman",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002362",
+      "id": "rel-002361",
       "source": "government_agencies:nsa",
       "target": "people:director-george-tenet",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002363",
+      "id": "rel-002362",
       "source": "government_agencies:nsa",
       "target": "people:director-michael-hayden",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002364",
+      "id": "rel-002363",
       "source": "government_agencies:nsa",
       "target": "people:joe-rogan",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002365",
+      "id": "rel-002364",
       "source": "government_agencies:nsa",
       "target": "people:langley-farms",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002366",
+      "id": "rel-002365",
       "source": "government_agencies:nsa",
       "target": "people:lawrence-livermore",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002367",
+      "id": "rel-002366",
       "source": "government_agencies:nsa",
       "target": "people:president-george-w-bush",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002368",
+      "id": "rel-002367",
       "source": "government_agencies:odni",
       "target": "whistleblowers:dylan-borland",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002369",
+      "id": "rel-002368",
       "source": "government_agencies:odni",
       "target": "whistleblowers:matthew-brown",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002370",
+      "id": "rel-002369",
       "source": "government_agencies:office-of-global-access",
       "target": "people:doug-wolf",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002371",
+      "id": "rel-002370",
       "source": "government_agencies:office-of-intelligence-and-counterintelligence",
       "target": "people:rolf-moa-larsson",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002372",
+      "id": "rel-002371",
       "source": "government_agencies:office-of-intelligence-and-counterintelligence",
       "target": "people:security-and-intelligence-directorate",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002373",
+      "id": "rel-002372",
       "source": "government_agencies:pacific-command",
       "target": "government_project_codenames:immaculate-constellation",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002374",
+      "id": "rel-002373",
       "source": "government_agencies:pentagon",
       "target": "locations:oak-ridge",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002375",
+      "id": "rel-002374",
       "source": "government_agencies:pentagon",
       "target": "people:his-wikipedia",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002376",
+      "id": "rel-002375",
       "source": "government_agencies:pentagon",
       "target": "people:james-tegnellia",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002377",
+      "id": "rel-002376",
       "source": "government_agencies:pentagon",
       "target": "people:oak-shannon",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002378",
+      "id": "rel-002377",
       "source": "government_agencies:pentagon",
       "target": "people:philip-j-corso",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002379",
+      "id": "rel-002378",
       "source": "government_agencies:pentagon",
       "target": "people:project-preserve-destiny",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002380",
+      "id": "rel-002379",
       "source": "government_agencies:pentagon",
       "target": "people:san-diego",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002381",
+      "id": "rel-002380",
       "source": "government_agencies:secret-service",
       "target": "people:humanitas-hospital",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002382",
+      "id": "rel-002381",
       "source": "government_agencies:symbionese-liberation-army",
       "target": "locations:south-america",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002383",
+      "id": "rel-002382",
       "source": "government_agencies:symbionese-liberation-army",
       "target": "people:so-patty-hearst",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002384",
+      "id": "rel-002383",
       "source": "government_agencies:symbionese-liberation-army",
       "target": "people:then-donald",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002385",
+      "id": "rel-002384",
       "source": "government_agencies:uap-task-force",
       "target": "professors:hal-puthoff",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002386",
+      "id": "rel-002385",
       "source": "government_agencies:united-states-air-force",
       "target": "government_agencies:us-air-force",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002387",
+      "id": "rel-002386",
       "source": "government_agencies:united-states-air-force",
       "target": "journalists:william-arkin",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002388",
+      "id": "rel-002387",
       "source": "government_agencies:united-states-air-force",
       "target": "key_terms:consciousness",
+      "type": "claimed",
+      "weight": 14
+    },
+    {
+      "id": "rel-002388",
+      "source": "government_agencies:united-states-air-force",
+      "target": "locations:roswell",
       "type": "claimed",
       "weight": 14
     },
@@ -47666,567 +47650,567 @@
       "id": "rel-002389",
       "source": "government_agencies:united-states-air-force",
       "target": "locations:roswell",
-      "type": "claimed",
-      "weight": 14
-    },
-    {
-      "id": "rel-002390",
-      "source": "government_agencies:united-states-air-force",
-      "target": "locations:roswell",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002391",
+      "id": "rel-002390",
       "source": "government_agencies:united-states-air-force",
       "target": "people:cold-war",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002392",
+      "id": "rel-002391",
       "source": "government_agencies:united-states-air-force",
       "target": "people:dan-sherman",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002393",
+      "id": "rel-002392",
       "source": "government_agencies:united-states-air-force",
       "target": "people:general-nathan-twining",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002394",
+      "id": "rel-002393",
       "source": "government_agencies:united-states-air-force",
       "target": "people:hans-kammler",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002395",
+      "id": "rel-002394",
       "source": "government_agencies:united-states-air-force",
       "target": "people:j-allen-hynek",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002396",
+      "id": "rel-002395",
       "source": "government_agencies:united-states-air-force",
       "target": "people:john-glenn",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002397",
+      "id": "rel-002396",
       "source": "government_agencies:united-states-air-force",
       "target": "people:kammler-staub",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002398",
+      "id": "rel-002397",
       "source": "government_agencies:united-states-air-force",
       "target": "people:like-willie-schreiber",
       "type": "affiliated_with",
       "weight": 14
     },
     {
-      "id": "rel-002399",
+      "id": "rel-002398",
       "source": "government_agencies:united-states-air-force",
       "target": "people:noah-roddick",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002400",
+      "id": "rel-002399",
       "source": "government_agencies:united-states-air-force",
       "target": "people:phillips-research-site",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002401",
+      "id": "rel-002400",
       "source": "government_agencies:united-states-air-force",
       "target": "people:richard-dean-anderson",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002402",
+      "id": "rel-002401",
       "source": "government_agencies:united-states-air-force",
       "target": "people:skoda-works",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002403",
+      "id": "rel-002402",
       "source": "government_agencies:united-states-air-force",
       "target": "people:so-gerald-ford",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002404",
+      "id": "rel-002403",
       "source": "government_agencies:united-states-air-force",
       "target": "people:white-sands-missile-range",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002405",
+      "id": "rel-002404",
       "source": "government_agencies:united-states-air-force",
       "target": "politicians:congressman-schiff",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002406",
+      "id": "rel-002405",
       "source": "government_agencies:united-states-air-force",
       "target": "politicians:jacques-corneon",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002407",
+      "id": "rel-002406",
       "source": "government_agencies:united-states-air-force",
       "target": "politicians:sued-west",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002408",
+      "id": "rel-002407",
       "source": "government_agencies:united-states-air-force",
       "target": "professors:eric-wang",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002409",
+      "id": "rel-002408",
       "source": "government_agencies:united-states-army",
       "target": "locations:north-america",
       "type": "funded_or_contracts_with",
       "weight": 14
     },
     {
-      "id": "rel-002410",
+      "id": "rel-002409",
       "source": "government_agencies:united-states-army",
       "target": "people:john-glenn",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002411",
+      "id": "rel-002410",
       "source": "government_agencies:white-house",
       "target": "people:project-preserve-destiny",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002412",
+      "id": "rel-002411",
       "source": "government_agencies:white-house",
       "target": "politicians:jimmy-carter",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002413",
+      "id": "rel-002412",
       "source": "government_agencies:white-house",
       "target": "politicians:united-nations",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002414",
+      "id": "rel-002413",
       "source": "government_project_codenames:kona-blue",
       "target": "people:christopher-sharpe",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002415",
+      "id": "rel-002414",
       "source": "government_project_codenames:manhattan-project",
       "target": "people:melissa-casillas",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002416",
+      "id": "rel-002415",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:alex-heidel",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002417",
+      "id": "rel-002416",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:charles-douglas-jackson",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002418",
+      "id": "rel-002417",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:charlie-duke",
       "type": "debunked_or_hoaxed",
       "weight": 14
     },
     {
-      "id": "rel-002419",
+      "id": "rel-002418",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:d-jackson",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002420",
+      "id": "rel-002419",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:fort-detrick",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002421",
+      "id": "rel-002420",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:frank-olson",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002422",
+      "id": "rel-002421",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:j-edgar-hoover",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002423",
+      "id": "rel-002422",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:jolly-west",
       "type": "debunked_or_hoaxed",
       "weight": 14
     },
     {
-      "id": "rel-002424",
+      "id": "rel-002423",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:lee-harvey-oswald",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002425",
+      "id": "rel-002424",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:manchurian-kennedy",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002426",
+      "id": "rel-002425",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:martin-cannon",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002427",
+      "id": "rel-002426",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:operation-midnight-climax",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002428",
+      "id": "rel-002427",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:operation-midnight-climax",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002429",
+      "id": "rel-002428",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:richard-helms",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002430",
+      "id": "rel-002429",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:sidney-gottlieb",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002431",
+      "id": "rel-002430",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:sidney-marland",
       "type": "testified_about",
       "weight": 14
     },
     {
-      "id": "rel-002432",
+      "id": "rel-002431",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:sirhan-sirhan",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002433",
+      "id": "rel-002432",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:statler-hotel",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002434",
+      "id": "rel-002433",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:time-magazine",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002435",
+      "id": "rel-002434",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:von-braun",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002436",
+      "id": "rel-002435",
       "source": "government_project_codenames:mk-ultra",
       "target": "people:wild-pendulum",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002437",
+      "id": "rel-002436",
       "source": "government_project_codenames:mk-ultra",
       "target": "professors:hal-puthoff",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002438",
+      "id": "rel-002437",
       "source": "government_project_codenames:mk-ultra",
       "target": "universities:colgate-college",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002439",
+      "id": "rel-002438",
       "source": "government_project_codenames:mk-ultra",
       "target": "universities:ucla",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002440",
+      "id": "rel-002439",
       "source": "government_project_codenames:project-blue-book",
       "target": "government_project_codenames:project-sign",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002441",
+      "id": "rel-002440",
       "source": "government_project_codenames:project-blue-book",
       "target": "locations:washington",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002442",
+      "id": "rel-002441",
       "source": "government_project_codenames:project-blue-book",
       "target": "people:edward-j-ruppelt",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002443",
+      "id": "rel-002442",
       "source": "government_project_codenames:project-blue-book",
       "target": "people:francois-truffaut",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002444",
+      "id": "rel-002443",
       "source": "government_project_codenames:project-blue-book",
       "target": "people:project-sign-analysis",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002445",
+      "id": "rel-002444",
       "source": "government_project_codenames:project-blue-book",
       "target": "people:valerie-ransone",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002446",
+      "id": "rel-002445",
       "source": "government_project_codenames:project-sign",
       "target": "people:captain-edward-j-ruppelt",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002447",
+      "id": "rel-002446",
       "source": "hoaxers:richard-doti",
       "target": "military_bases:ellsworth-air-force-base",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002448",
+      "id": "rel-002447",
       "source": "hoaxers:richard-doti",
       "target": "people:michael-johnson",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002449",
+      "id": "rel-002448",
       "source": "hoaxers:richard-doti",
       "target": "people:wayback-machine",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002450",
+      "id": "rel-002449",
       "source": "hoaxers:richard-doti",
       "target": "research_groups:mufon",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002451",
+      "id": "rel-002450",
       "source": "institutes:american-institute",
       "target": "people:lockheed-merger",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002452",
+      "id": "rel-002451",
       "source": "institutes:american-institute",
       "target": "technology:reverse-engineering",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002453",
+      "id": "rel-002452",
       "source": "institutes:benjamin-franklin-institute",
       "target": "universities:mass-college",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002454",
+      "id": "rel-002453",
       "source": "institutes:max-planck-institute",
       "target": "professors:bernie-heisch",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002455",
+      "id": "rel-002454",
       "source": "institutes:monroe-institute",
       "target": "key_terms:consciousness",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002456",
+      "id": "rel-002455",
       "source": "institutes:monroe-institute",
       "target": "people:robert-monroe",
       "type": "investigated",
       "weight": 14
     },
     {
-      "id": "rel-002457",
+      "id": "rel-002456",
       "source": "institutes:national-institute-for-discovery-science",
       "target": "people:john-alexander",
       "type": "worked_for",
       "weight": 14
     },
     {
-      "id": "rel-002458",
+      "id": "rel-002457",
       "source": "institutes:niels-bohr-institute",
       "target": "professors:daniel-kumbay",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002459",
+      "id": "rel-002458",
       "source": "institutes:nobel-prize",
       "target": "people:john-paul",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002460",
+      "id": "rel-002459",
       "source": "institutes:palomar-observatory",
       "target": "professors:beatrice-villareal",
       "type": "operates_or_oversees",
       "weight": 14
     },
     {
-      "id": "rel-002461",
+      "id": "rel-002460",
       "source": "institutes:palomar-observatory",
       "target": "professors:joe-maciero",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002462",
+      "id": "rel-002461",
       "source": "institutes:palomar-observatory",
       "target": "universities:caltech",
       "type": "claimed",
       "weight": 14
     },
     {
-      "id": "rel-002463",
+      "id": "rel-002462",
       "source": "journalists:bryce-zabel",
       "target": "people:after-disclosure",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002464",
+      "id": "rel-002463",
       "source": "journalists:george-knapp",
       "target": "people:gene-huff",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002465",
+      "id": "rel-002464",
       "source": "journalists:james-fox",
       "target": "newsrooms:the-new-york-times",
       "type": "reports_for_or_published_by",
       "weight": 14
     },
     {
-      "id": "rel-002466",
+      "id": "rel-002465",
       "source": "journalists:journalist-ross-colthart",
       "target": "locations:secret-mountain",
       "type": "located_at",
       "weight": 14
     },
     {
-      "id": "rel-002467",
+      "id": "rel-002466",
       "source": "journalists:nick-cook",
       "target": "people:ning-li",
       "type": "authored_or_published",
       "weight": 14
     },
     {
-      "id": "rel-002468",
+      "id": "rel-002467",
       "source": "key_terms:consciousness",
       "target": "locations:china",
       "type": "co_mentioned",
       "weight": 14
     },
     {
-      "id": "rel-002469",
+      "id": "rel-002468",
       "source": "key_terms:consciousness",
       "target": "locations:skinwalker-ranch",
       "type": "operates_or_oversees",
+      "weight": 14
+    },
+    {
+      "id": "rel-002469",
+      "source": "key_terms:consciousness",
+      "target": "people:diana-pasolka",
+      "type": "authored_or_published",
       "weight": 14
     },
     {
@@ -51053,7 +51037,7 @@
     {
       "id": "rel-002873",
       "source": "people:in-enoch",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 14
     },
@@ -51907,7 +51891,7 @@
     {
       "id": "rel-002995",
       "source": "people:philip-k-dick",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 14
     },
@@ -62120,14 +62104,14 @@
     {
       "id": "rel-004454",
       "source": "people:tim-taylor",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "authored_or_published",
       "weight": 12
     },
     {
       "id": "rel-004455",
       "source": "people:tim-taylor",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "operates_or_oversees",
       "weight": 12
     },
@@ -62946,7 +62930,7 @@
     {
       "id": "rel-004572",
       "source": "books:american-cosmic",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "located_at",
       "weight": 10
     },
@@ -67013,7 +66997,7 @@
     {
       "id": "rel-005153",
       "source": "government_agencies:nasa",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "located_at",
       "weight": 10
     },
@@ -70065,7 +70049,7 @@
     {
       "id": "rel-005589",
       "source": "locations:roswell",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "operates_or_oversees",
       "weight": 10
     },
@@ -71430,7 +71414,7 @@
     {
       "id": "rel-005784",
       "source": "people:bay-area",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 10
     },
@@ -74328,7 +74312,7 @@
     {
       "id": "rel-006198",
       "source": "people:matt-damon",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 10
     },
@@ -74615,7 +74599,7 @@
     {
       "id": "rel-006239",
       "source": "people:outer-limits",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 10
     },
@@ -75175,7 +75159,7 @@
     {
       "id": "rel-006319",
       "source": "people:vatican-observatory",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "located_at",
       "weight": 10
     },
@@ -79333,7 +79317,7 @@
     {
       "id": "rel-006913",
       "source": "experiencers:barney-hill",
-      "target": "professors:diana-pasolka",
+      "target": "professors:diana-pasulka",
       "type": "claimed",
       "weight": 8
     },

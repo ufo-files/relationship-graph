@@ -4985,6 +4985,40 @@
     ]
   },
   {
+    "id": "professors:diana-pasulka",
+    "name": "Diana Pasulka",
+    "canonical_name": "Diana Pasulka",
+    "category": "professors",
+    "category_label": "Professors",
+    "count": 12,
+    "confidence": 0.583,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Cia Chief Im A Time Traveler",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "Diana Pasulka appears as professors with 12 mention(s) across 8 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002123",
+      "m-0002124",
+      "m-0000713",
+      "m-0006802",
+      "m-0008549",
+      "m-0010219",
+      "m-0011751",
+      "m-0012408"
+    ]
+  },
+  {
     "id": "religious_texts:new-testament",
     "name": "New Testament",
     "canonical_name": "New Testament",
@@ -5792,38 +5826,6 @@
       "m-0003049",
       "m-0006973",
       "m-0010780"
-    ]
-  },
-  {
-    "id": "professors:diana-pasolka",
-    "name": "Diana Pasolka",
-    "canonical_name": "Diana Pasolka",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 10,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "Diana Pasolka appears as professors with 10 mention(s) across 7 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000713",
-      "m-0006802",
-      "m-0008549",
-      "m-0010219",
-      "m-0011751",
-      "m-0012408",
-      "m-0012411",
-      "m-0012562"
     ]
   },
   {
@@ -14254,28 +14256,6 @@
     ]
   },
   {
-    "id": "experiencers:diana-pasolka",
-    "name": "Diana Pasolka",
-    "canonical_name": "Diana Pasolka",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 3,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Diana Pasolka appears as experiencers with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005017",
-      "m-0012336",
-      "m-0012459"
-    ]
-  },
-  {
     "id": "experiencers:gary-nolan",
     "name": "Gary Nolan",
     "canonical_name": "Gary Nolan",
@@ -19292,6 +19272,27 @@
     ]
   },
   {
+    "id": "experiencers:diana-pasolka",
+    "name": "Diana Pasolka",
+    "canonical_name": "Diana Pasolka",
+    "category": "experiencers",
+    "category_label": "Experiencers",
+    "count": 2,
+    "confidence": 0.68,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Pasolka appears as experiencers with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0005017",
+      "m-0012336"
+    ]
+  },
+  {
     "id": "experiencers:john-mack",
     "name": "John Mack",
     "canonical_name": "John Mack",
@@ -22650,6 +22651,26 @@
     "evidence_ids": [
       "m-0011440",
       "m-0011446"
+    ]
+  },
+  {
+    "id": "people:diana-pasolka",
+    "name": "Diana Pasolka",
+    "canonical_name": "Diana Pasolka",
+    "category": "people",
+    "category_label": "People",
+    "count": 2,
+    "confidence": 0.61,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Pasolka appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012459",
+      "m-0012402"
     ]
   },
   {
@@ -28609,27 +28630,6 @@
     "evidence_ids": [
       "m-0011694",
       "m-0011724"
-    ]
-  },
-  {
-    "id": "professors:diana-pasulka",
-    "name": "Diana Pasulka",
-    "canonical_name": "Diana Pasulka",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 2,
-    "confidence": 0.8,
-    "transcripts": [
-      "Cia Chief Im A Time Traveler"
-    ],
-    "significance": "Diana Pasulka appears as professors with 2 mention(s) across 1 transcript; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002123",
-      "m-0002124"
     ]
   },
   {
@@ -43103,25 +43103,6 @@
     ]
   },
   {
-    "id": "people:before-diana",
-    "name": "Before Diana",
-    "canonical_name": "Before Diana",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Before Diana appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012419"
-    ]
-  },
-  {
     "id": "people:beka-valley",
     "name": "Beka Valley",
     "canonical_name": "Beka Valley",
@@ -47527,25 +47508,6 @@
     ],
     "evidence_ids": [
       "m-0006923"
-    ]
-  },
-  {
-    "id": "people:diana-pasolka",
-    "name": "Diana Pasolka",
-    "canonical_name": "Diana Pasolka",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Diana Pasolka appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012402"
     ]
   },
   {
