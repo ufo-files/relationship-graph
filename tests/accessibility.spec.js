@@ -74,6 +74,28 @@ test("direct relationship graph renders one label per entity", async ({ page }) 
   expect(duplicates).toEqual([]);
 });
 
+test("baked reclass decisions are removed from browser review state", async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem("uap-relationship-graph-reclass", JSON.stringify({
+      reclassifications: { "people:star-trek": "tv_shows" },
+      nameReclassifications: {},
+      falsePositives: {},
+      omissions: {},
+      aliases: {},
+      merges: {},
+      nameMerges: {},
+      notes: {},
+    }));
+  });
+
+  await page.goto("/");
+
+  await expect(page.locator("#review-status")).toHaveText("");
+  await expect(page.getByRole("button", { name: "Download reclassified data" })).toBeHidden();
+  const storedReview = await page.evaluate(() => localStorage.getItem("uap-relationship-graph-reclass"));
+  expect(storedReview).toBeNull();
+});
+
 test("merge duplicate target is selected through search results", async ({ page }) => {
   await page.goto("/");
 

@@ -4375,12 +4375,76 @@ def render_html() -> str:
       return JSON.stringify(left) === JSON.stringify(right);
     }
 
+    function reviewEntryName(id, value) {
+      const names = [];
+      if (id) {
+        const textId = String(id);
+        names.push(textId.includes(":") ? textId.split(":").slice(1).join(" ").replace(/-/g, " ") : textId);
+      }
+      if (value && typeof value === "object" && value.name) names.push(value.name);
+      if (value && typeof value === "object" && value.sourceName) names.push(value.sourceName);
+      return names.map(normalizeText).filter(Boolean);
+    }
+
+    function rawEntityById(id) {
+      return (RAW.entities || []).find((entity) => entity.id === id);
+    }
+
+    function rawEntityByName(name) {
+      const normalized = normalizeText(name);
+      if (!normalized) return null;
+      return (RAW.entities || []).find((entity) => normalizeText(entity.name) === normalized) || null;
+    }
+
+    function reviewCategoryIsBaked(id, category) {
+      if (Object.prototype.hasOwnProperty.call(BUILT_REVIEW.reclassifications || {}, id) && BUILT_REVIEW.reclassifications[id] === category) {
+        return true;
+      }
+      for (const name of reviewEntryName(id, category)) {
+        if ((BUILT_REVIEW.nameReclassifications || {})[name] === category) return true;
+        const entity = rawEntityById(id) || rawEntityByName(name);
+        if (entity && entity.category === category) return true;
+      }
+      return false;
+    }
+
+    function reviewAliasIsBaked(id, alias) {
+      if (Object.prototype.hasOwnProperty.call(BUILT_REVIEW.aliases || {}, id) && sameReviewValue(alias, BUILT_REVIEW.aliases[id])) {
+        return true;
+      }
+      const aliasName = normalizeText(alias);
+      if (!aliasName) return false;
+      return Boolean(rawEntityById(id) && normalizeText(rawEntityById(id).name) === aliasName) || Boolean(rawEntityByName(aliasName));
+    }
+
+    function reviewFalsePositiveIsBaked(id, value) {
+      if (Object.prototype.hasOwnProperty.call(BUILT_REVIEW.falsePositives || {}, id) && sameReviewValue(value, BUILT_REVIEW.falsePositives[id])) {
+        return true;
+      }
+      const entity = rawEntityById(id);
+      return !entity && reviewEntryName(id, value).every((name) => !rawEntityByName(name));
+    }
+
+    function reviewMergeIsBaked(id, value) {
+      const built = (BUILT_REVIEW.merges || {})[id] || (BUILT_REVIEW.nameMerges || {})[id];
+      if (built && sameReviewValue(value, built)) return true;
+      if (!value || typeof value !== "object") return false;
+      const source = rawEntityById(value.sourceId) || rawEntityByName(value.sourceName);
+      const target = rawEntityById(value.targetId) || rawEntityByName(value.targetName);
+      return !source && Boolean(target);
+    }
+
     function removeBuiltReviewEntries(review) {
       const cleaned = normalizeReview(review);
       let changed = false;
       for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges"]) {
         for (const [id, value] of Object.entries(cleaned[key] || {})) {
-          if (Object.prototype.hasOwnProperty.call(BUILT_REVIEW[key] || {}, id) && sameReviewValue(value, BUILT_REVIEW[key][id])) {
+          const exactBuilt = Object.prototype.hasOwnProperty.call(BUILT_REVIEW[key] || {}, id) && sameReviewValue(value, BUILT_REVIEW[key][id]);
+          const bakedCategory = key === "reclassifications" || key === "nameReclassifications" ? reviewCategoryIsBaked(id, value) : false;
+          const bakedFalsePositive = key === "falsePositives" ? reviewFalsePositiveIsBaked(id, value) : false;
+          const bakedAlias = key === "aliases" ? reviewAliasIsBaked(id, value) : false;
+          const bakedMerge = key === "merges" || key === "nameMerges" ? reviewMergeIsBaked(id, value) : false;
+          if (exactBuilt || bakedCategory || bakedFalsePositive || bakedAlias || bakedMerge) {
             delete cleaned[key][id];
             changed = true;
           }
