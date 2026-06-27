@@ -92,6 +92,7 @@ CATEGORY_LABELS = {
     "confirmed_hoaxes": "Confirmed hoaxes",
     "key_terms": "Key terms",
     "websites": "Websites",
+    "technology": "Technology",
     "chemical_elements": "Chemical elements",
     "materials": "Materials",
     "stars": "Stars",
@@ -123,14 +124,18 @@ CATEGORY_LABELS = {
 TOP_CATEGORY_LABELS = {
     "people": "People",
     "organizations": "Organizations",
+    "research_academia": "Research & Academia",
     "programs_projects": "Programs & Projects",
+    "technology": "Technology",
     "places": "Places",
     "documents_media": "Documents & Media",
     "events_claims": "Events & Claims",
     "science_materials": "Science & Materials",
+    "health_biology": "Health & Biology",
     "space_astronomy": "Space & Astronomy",
     "species_entities": "Species & Entities",
     "finance_power": "Finance & Power",
+    "signals_coordinates": "Signals & Coordinates",
     "language_signals": "Language Signals",
     "needs_review": "Needs Review",
 }
@@ -154,16 +159,15 @@ CATEGORY_TO_TOP = {
     "companies": "organizations",
     "nonprofits": "organizations",
     "watchdog_groups": "organizations",
-    "institutes": "organizations",
     "secret_societies": "organizations",
-    "research_groups": "organizations",
+    "institutes": "research_academia",
+    "research_groups": "research_academia",
+    "universities": "research_academia",
+    "university_departments": "research_academia",
     "government_project_codenames": "programs_projects",
     "locations": "places",
     "military_bases": "places",
     "dumbs": "places",
-    "gps_coordinates": "places",
-    "universities": "places",
-    "university_departments": "places",
     "document_names": "documents_media",
     "patents": "documents_media",
     "white_papers": "documents_media",
@@ -179,12 +183,15 @@ CATEGORY_TO_TOP = {
     "theories": "events_claims",
     "emerging_terminology": "events_claims",
     "taxonomies": "events_claims",
+    "technology": "technology",
     "chemical_elements": "science_materials",
     "materials": "science_materials",
-    "medical_conditions": "science_materials",
-    "blood_types": "science_materials",
-    "frequencies": "science_materials",
-    "radio_frequencies": "science_materials",
+    "medical_conditions": "health_biology",
+    "blood_types": "health_biology",
+    "frequencies": "signals_coordinates",
+    "radio_frequencies": "signals_coordinates",
+    "gps_coordinates": "signals_coordinates",
+    "ip_addresses": "signals_coordinates",
     "stars": "space_astronomy",
     "planets": "space_astronomy",
     "constellations": "space_astronomy",
@@ -195,6 +202,7 @@ CATEGORY_TO_TOP = {
     "key_terms": "language_signals",
     "quotes": "language_signals",
     "symbols": "language_signals",
+    "websites": "language_signals",
 }
 
 DEFAULT_TERMS = {
@@ -402,6 +410,27 @@ DEFAULT_TERMS = {
         "metamaterial",
         "isotope",
         "aerogel",
+    ],
+    "technology": [
+        "anti-gravity",
+        "antigravity",
+        "gravity control",
+        "zero point energy",
+        "field propulsion",
+        "inertial mass reduction",
+        "warp drive",
+        "reactionless drive",
+        "electrogravitics",
+        "magnetohydrodynamics",
+        "MHD",
+        "directed energy",
+        "laser weapon",
+        "sensor fusion",
+        "radar spoofing",
+        "stealth technology",
+        "microchip technology",
+        "semiconductor technology",
+        "reverse engineering",
     ],
     "chemical_elements": [
         "hydrogen",
@@ -899,6 +928,7 @@ def resolve_competing_mentions(mentions: list[Mention]) -> list[Mention]:
         "government_project_codenames": 86,
         "military_bases": 84,
         "contractors": 82,
+        "technology": 81,
         "document_names": 80,
         "people": 10,
     }
@@ -3072,8 +3102,9 @@ def render_html() -> str:
         const key = [source.topCategory, target.topCategory].sort().join("::");
         edgeWeights.set(key, (edgeWeights.get(key) || 0) + relationship.weight);
       }
-      const nodes = radialNodes(categories.sort((a, b) => b.mentions - a.mentions), 1100, 750, 1750, 3000, (category) => category.mentions)
-        .map((node) => ({ ...node, r: Math.max(80, Math.min(170, node.r * 5.5)) }));
+      const maxCategoryCount = Math.max(1, ...categories.map((category) => category.count));
+      const nodes = radialNodes(categories.sort((a, b) => b.count - a.count), 1100, 750, 1750, 3000, (category) => category.count)
+        .map((node) => ({ ...node, r: Math.max(18, Math.min(260, Math.sqrt((node.count || 1) / maxCategoryCount) * 260)) }));
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const maxEdge = Math.max(1, ...edgeWeights.values());
       const edges = Array.from(edgeWeights.entries()).sort((a, b) => b[1] - a[1]).slice(0, 95).map(([key, weight]) => {
@@ -3088,18 +3119,11 @@ def render_html() -> str:
       const label = DATA.topCategoryLabels[categoryId] || categoryId;
       const categoryLayout = buildCategoryLayout();
       const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
-      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => b.count - a.count);
+      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => entityGraphScore(b) - entityGraphScore(a));
       const primary = allPrimary.slice(0, 42);
       const primarySet = new Set(primary.map((entity) => entity.id));
-      const relatedIds = [];
-      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) || primarySet.has(relationship.target)).slice(0, 150);
-      for (const relationship of rels) {
-        const otherId = primarySet.has(relationship.source) ? relationship.target : relationship.source;
-        if (!primarySet.has(otherId) && !relatedIds.includes(otherId)) relatedIds.push(otherId);
-        if (relatedIds.length >= 12) break;
-      }
-      const related = relatedIds.map((id) => entitiesById.get(id)).filter(Boolean);
-      const nodes = radialNodes(primary.concat(related), activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
+      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) && primarySet.has(relationship.target)).slice(0, 150);
+      const nodes = radialNodes(primary, activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const maxEdge = Math.max(1, ...rels.map((relationship) => relationship.weight));
       const localDetailRadius = 640;
@@ -3163,6 +3187,14 @@ def render_html() -> str:
       wireEntityNodes();
       wireCategoryNodes();
       setViewBox(activeCategoryNode.x - 1260, activeCategoryNode.y - 940, 2520, 1880);
+    }
+
+    function entityGraphScore(entity) {
+      const relationships = relationshipsByEntity.get(entity.id) || [];
+      const evidence = (entity.evidenceIds || []).map((id) => mentionsById.get(id)).filter(Boolean);
+      const transcriptCount = new Set(evidence.map((mention) => mention.transcript_title || mention.transcript_id || "")).size;
+      const relationshipWeight = relationships.reduce((total, relationship) => total + (relationship.weight || 1), 0);
+      return (entity.count || 0) * 4 + transcriptCount * 18 + relationships.length * 10 + relationshipWeight * 1.5;
     }
 
     function renderNeighborhood(entity) {

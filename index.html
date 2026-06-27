@@ -736,8 +736,9 @@
         const key = [source.topCategory, target.topCategory].sort().join("::");
         edgeWeights.set(key, (edgeWeights.get(key) || 0) + relationship.weight);
       }
-      const nodes = radialNodes(categories.sort((a, b) => b.mentions - a.mentions), 1100, 750, 1750, 3000, (category) => category.mentions)
-        .map((node) => ({ ...node, r: Math.max(80, Math.min(170, node.r * 5.5)) }));
+      const maxCategoryCount = Math.max(1, ...categories.map((category) => category.count));
+      const nodes = radialNodes(categories.sort((a, b) => b.count - a.count), 1100, 750, 1750, 3000, (category) => category.count)
+        .map((node) => ({ ...node, r: Math.max(18, Math.min(260, Math.sqrt((node.count || 1) / maxCategoryCount) * 260)) }));
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const maxEdge = Math.max(1, ...edgeWeights.values());
       const edges = Array.from(edgeWeights.entries()).sort((a, b) => b[1] - a[1]).slice(0, 95).map(([key, weight]) => {
@@ -752,18 +753,11 @@
       const label = DATA.topCategoryLabels[categoryId] || categoryId;
       const categoryLayout = buildCategoryLayout();
       const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
-      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => b.count - a.count);
+      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => entityGraphScore(b) - entityGraphScore(a));
       const primary = allPrimary.slice(0, 42);
       const primarySet = new Set(primary.map((entity) => entity.id));
-      const relatedIds = [];
-      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) || primarySet.has(relationship.target)).slice(0, 150);
-      for (const relationship of rels) {
-        const otherId = primarySet.has(relationship.source) ? relationship.target : relationship.source;
-        if (!primarySet.has(otherId) && !relatedIds.includes(otherId)) relatedIds.push(otherId);
-        if (relatedIds.length >= 12) break;
-      }
-      const related = relatedIds.map((id) => entitiesById.get(id)).filter(Boolean);
-      const nodes = radialNodes(primary.concat(related), activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
+      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) && primarySet.has(relationship.target)).slice(0, 150);
+      const nodes = radialNodes(primary, activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const maxEdge = Math.max(1, ...rels.map((relationship) => relationship.weight));
       const localDetailRadius = 640;
@@ -827,6 +821,14 @@
       wireEntityNodes();
       wireCategoryNodes();
       setViewBox(activeCategoryNode.x - 1260, activeCategoryNode.y - 940, 2520, 1880);
+    }
+
+    function entityGraphScore(entity) {
+      const relationships = relationshipsByEntity.get(entity.id) || [];
+      const evidence = (entity.evidenceIds || []).map((id) => mentionsById.get(id)).filter(Boolean);
+      const transcriptCount = new Set(evidence.map((mention) => mention.transcript_title || mention.transcript_id || "")).size;
+      const relationshipWeight = relationships.reduce((total, relationship) => total + (relationship.weight || 1), 0);
+      return (entity.count || 0) * 4 + transcriptCount * 18 + relationships.length * 10 + relationshipWeight * 1.5;
     }
 
     function renderNeighborhood(entity) {
