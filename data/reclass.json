@@ -253,7 +253,8 @@
     "eagle works": "government_agencies",
     "dave grush": "whistleblowers",
     "outer limits": "tv_shows",
-    "book of enoch": "books"
+    "book of enoch": "books",
+    "in enoch": "books"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
