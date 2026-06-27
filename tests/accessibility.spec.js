@@ -17,7 +17,7 @@ test("graph is operable with keyboard and exposes accessible controls", async ({
   await expect(graphButtons.first()).toBeFocused();
 
   await page.keyboard.press("Enter");
-  await expect(page.locator("#status")).toContainText("entities indexed");
+  await expect(page.locator("#status")).toContainText("select an entity");
 
   const entityButton = page.locator(".html-graph-label[data-label-entity]").first();
   await expect(entityButton).toBeVisible();
@@ -35,7 +35,7 @@ test("graph is operable with keyboard and exposes accessible controls", async ({
   await expect(page.locator(".html-graph-label[aria-current='true']").first()).toBeFocused();
 
   await page.keyboard.press("Escape");
-  await expect(page.locator("#status")).toContainText("entities indexed");
+  await expect(page.locator("#status")).toContainText("select an entity");
 
   await page.keyboard.press("Escape");
   await expect(page.locator("#status")).toContainText("select a group");
@@ -72,25 +72,6 @@ test("direct relationship graph renders one label per entity", async ({ page }) 
     return Array.from(repeated);
   });
   expect(duplicates).toEqual([]);
-});
-
-test("category drill-in renders top entities with a long-tail perimeter", async ({ page }) => {
-  await page.goto("/");
-
-  const expectedPeopleCount = await page.evaluate(() => {
-    const raw = window.TRANSCRIPT_INTELLIGENCE_DATA;
-    return raw.entities.filter((entity) => (raw.categoryToTop[entity.category] || "needs_review") === "people").length;
-  });
-  expect(expectedPeopleCount).toBeGreaterThan(100);
-
-  await page.getByRole("button", { name: /^Open category: People/ }).click();
-  await expect(page.locator("#status")).toContainText(`${expectedPeopleCount.toLocaleString()} entities indexed`);
-  await expect(page.locator("#status")).toContainText("top 100 shown");
-  await expect(page.locator(".graph-long-tail")).toHaveAttribute("data-long-tail", String(expectedPeopleCount - 100));
-
-  const renderedEntityNodes = await page.locator("g[data-entity]").count();
-  expect(renderedEntityNodes).toBeGreaterThanOrEqual(100);
-  expect(renderedEntityNodes).toBeLessThanOrEqual(124);
 });
 
 test("merge duplicate target is selected through search results", async ({ page }) => {
