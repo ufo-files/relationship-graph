@@ -3089,7 +3089,9 @@ def render_html() -> str:
       const categoryLayout = buildCategoryLayout();
       const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
       const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => b.count - a.count);
-      const primary = allPrimary;
+      const visiblePrimaryLimit = 100;
+      const primary = allPrimary.slice(0, visiblePrimaryLimit);
+      const longTail = allPrimary.slice(visiblePrimaryLimit);
       const primarySet = new Set(primary.map((entity) => entity.id));
       const relatedIds = [];
       const rels = DATA.relationships
@@ -3103,6 +3105,7 @@ def render_html() -> str:
       const related = relatedIds.map((id) => entitiesById.get(id)).filter(Boolean);
       const nodes = radialNodes(primary.concat(related), activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
+      const longTailDots = longTailNodes(longTail, activeCategoryNode.x, activeCategoryNode.y, 980);
       const maxEdge = Math.max(1, ...rels.map((relationship) => relationship.weight));
       const localDetailRadius = 640;
       const contextNodes = categoryLayout.nodes
@@ -3130,6 +3133,10 @@ def render_html() -> str:
         contextNodesSvg +
         '<circle cx="' + activeCategoryNode.x + '" cy="' + activeCategoryNode.y + '" r="' + activeCategoryNode.r + '" fill="' + theme.activeHalo + '" stroke="' + theme.primary + '" stroke-width="1"></circle>' +
         drawRelationshipEdges(rels, nodeById, maxEdge, "drill") +
+        (longTail.length ? '<g class="graph-long-tail" data-long-tail="' + longTail.length + '" aria-label="' + esc(longTail.length.toLocaleString() + " additional " + label + " entities in the long tail") + '">' +
+          '<circle cx="' + activeCategoryNode.x + '" cy="' + activeCategoryNode.y + '" r="980" fill="none" stroke="' + theme.context + '" stroke-width="1" opacity=".24"></circle>' +
+          longTailDots.map((dot) => '<circle cx="' + dot.x + '" cy="' + dot.y + '" r="' + dot.r + '" fill="' + theme.entityFill + '" opacity="' + dot.opacity + '"><title>' + esc(dot.count.toLocaleString() + " long-tail entities") + '</title></circle>').join("") +
+        '</g>' : '') +
         nodes.map((node) => {
           const entity = node.raw;
           const inCategory = entity.topCategory === categoryId;
@@ -3154,7 +3161,7 @@ def render_html() -> str:
         "category",
         activeCategoryNode,
         truncate(label, 24),
-        allPrimary.length + " entities · " + labeledEntityNodes.length + " labels"
+        allPrimary.length + " entities · top " + labeledEntityNodes.length + " shown"
       )].concat(labeledEntityNodes.concat(labeledRelatedNodes).map((node) => nodeLabel(
         node.raw.id,
         "entity",
@@ -3168,11 +3175,11 @@ def render_html() -> str:
         node.contextWeight ? node.contextWeight.toLocaleString() + " links" : "",
         Math.max(12, node.r * .68)
       ))));
-      statusEl.textContent = label + " · " + allPrimary.length.toLocaleString() + " entities shown · " + labeledEntityNodes.length.toLocaleString() + " labels · search to jump to any entity";
+      statusEl.textContent = label + " · " + allPrimary.length.toLocaleString() + " entities indexed · top " + primary.length.toLocaleString() + " shown" + (longTail.length ? " · " + longTail.length.toLocaleString() + " in long tail" : "") + " · search to jump to any entity";
       setCornerLabel(null);
       wireEntityNodes();
       wireCategoryNodes();
-      const bounds = nodeBounds(nodes.concat([activeCategoryNode]), 280);
+      const bounds = nodeBounds(nodes.concat(longTailDots).concat([activeCategoryNode]), 220);
       setViewBox(bounds.x, bounds.y, bounds.w, bounds.h);
     }
 
@@ -3269,6 +3276,27 @@ def render_html() -> str:
           raw: item,
         };
       });
+    }
+
+    function longTailNodes(items, cx, cy, radius) {
+      if (!items.length) return [];
+      const dotCount = Math.min(120, Math.max(24, Math.ceil(items.length / 12)));
+      const bucketSize = Math.ceil(items.length / dotCount);
+      const dots = [];
+      for (let index = 0; index < dotCount; index += 1) {
+        const bucket = items.slice(index * bucketSize, (index + 1) * bucketSize);
+        if (!bucket.length) continue;
+        const angle = (Math.PI * 2 * index) / dotCount - Math.PI / 2;
+        const count = bucket.length;
+        dots.push({
+          x: cx + Math.cos(angle) * radius,
+          y: cy + Math.sin(angle) * radius,
+          r: Math.max(3, Math.min(8, 2 + Math.sqrt(count))),
+          count,
+          opacity: Math.max(.24, Math.min(.58, .2 + count / bucketSize * .38)).toFixed(2),
+        });
+      }
+      return dots;
     }
 
     function nodeBounds(nodes, padding = 180) {
