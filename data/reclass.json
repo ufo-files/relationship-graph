@@ -26,7 +26,51 @@
     "professors:ross-coldhart": "journalists",
     "people:secret-mountain": "locations",
     "people:giza-plateau": "locations",
-    "people:oak-ridge": "locations"
+    "people:oak-ridge": "locations",
+    "professors:stanford-research-institute": "research_groups",
+    "professors:jacques-vall-e": "authors",
+    "people:new-orleans": "locations",
+    "people:north-carolina": "locations",
+    "people:national-labs": "government_agencies",
+    "people:field-physics": "university_departments",
+    "people:rand-corporation": "companies",
+    "people:bonson-labs": "companies",
+    "experiencers:close-encounters": "movies",
+    "people:arrow-historical-report": "document_names",
+    "people:perspective-special-access-program": "government_project_codenames",
+    "people:indian-serpent-mound": "locations",
+    "people:tonopatest-range": "locations",
+    "people:janet-airlines": "government_agencies",
+    "people:unclassified-logistic-support-facility": "locations",
+    "people:national-nuclear-security-administration": "government_agencies",
+    "people:south-america": "locations",
+    "friendly_people:development-centers": "research_groups",
+    "people:battelle-memorial-institute": "research_groups",
+    "experiencers:thomas-townsend-brown": "people",
+    "people:air-force-base": "military_bases",
+    "people:clockwork-orange": "books",
+    "friendly_people:bell-labs": "research_groups",
+    "people:air-force-research-lab": "government_agencies",
+    "experiencers:john-alexander": "people",
+    "politicians:wall-street-journal": "journalists",
+    "people:washington-post": "journalists",
+    "people:west-virginia": "locations",
+    "people:greenbrier-inn": "locations",
+    "people:russia-today": "journalists",
+    "people:al-jazeera": "journalists",
+    "people:city-hall": "locations",
+    "people:saint-petersburg": "locations",
+    "people:defense-nuclear-security": "government_agencies",
+    "people:atomic-energy-act": "document_names",
+    "people:security-administration": "government_agencies",
+    "people:national-nuclear": "government_agencies",
+    "people:next-generation-non": "emerging_terminology",
+    "people:north-america": "locations",
+    "people:s-army": "government_agencies",
+    "people:commander-david-fravor": "whistleblowers",
+    "whistleblowers:george-knapp": "journalists",
+    "people:baghdad-phantom": "events",
+    "people:tic-tac": "events"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -55,7 +99,58 @@
     "ross coldhart": "journalists",
     "secret mountain": "locations",
     "giza plateau": "locations",
-    "oak ridge": "locations"
+    "oak ridge": "locations",
+    "stanford research institute": "research_groups",
+    "jacques vallée": "authors",
+    "new orleans": "locations",
+    "north carolina": "locations",
+    "national labs": "government_agencies",
+    "field physics": "university_departments",
+    "rand corporation": "companies",
+    "bonson labs": "companies",
+    "close encounters": "movies",
+    "closer encounters": "movies",
+    "blue book": "government_project_codenames",
+    "arrow historical report": "document_names",
+    "perspective special access program": "government_project_codenames",
+    "indian serpent mound": "locations",
+    "tonopatest range": "locations",
+    "janet airlines": "government_agencies",
+    "sunset boulevard": "locations",
+    "unclassified logistic support facility": "locations",
+    "national nuclear security administration": "government_agencies",
+    "south america": "locations",
+    "development centers": "research_groups",
+    "battelle memorial institute": "research_groups",
+    "thomas townsend brown": "people",
+    "air force base": "military_bases",
+    "clockwork orange": "books",
+    "bell labs": "research_groups",
+    "air force research lab": "government_agencies",
+    "john alexander": "people",
+    "wall street journal": "journalists",
+    "washington post": "journalists",
+    "west virginia": "locations",
+    "greenbrier inn": "locations",
+    "russia today": "journalists",
+    "al jazeera": "journalists",
+    "city hall": "locations",
+    "saint petersburg": "locations",
+    "defense nuclear security": "government_agencies",
+    "atomic energy act": "document_names",
+    "security administration": "government_agencies",
+    "national nuclear": "government_agencies",
+    "next generation non": "emerging_terminology",
+    "jacques vall e": "authors",
+    "global access": "government_agencies",
+    "lockheed martins": "contractors",
+    "north america": "locations",
+    "s. army": "government_agencies",
+    "commander david fravor": "whistleblowers",
+    "george knapp": "journalists",
+    "baghdad phantom": "events",
+    "tic tac": "events",
+    "s army": "government_agencies"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -472,6 +567,16 @@
       "name": "Darth Vader",
       "category": "friendly_people",
       "categoryLabel": "Friendly people"
+    },
+    "friendly_people:federally-funded-research": {
+      "name": "Federally Funded Research",
+      "category": "friendly_people",
+      "categoryLabel": "Friendly people"
+    },
+    "people:aerospace-corporation": {
+      "name": "Aerospace Corporation",
+      "category": "people",
+      "categoryLabel": "People"
     }
   },
   "omissions": {},
@@ -580,6 +685,350 @@
       "targetId": "document_names:majestic-12",
       "targetName": "majestic 12",
       "targetCategory": "document_names"
+    },
+    "people:stanford-research-institute": {
+      "sourceId": "people:stanford-research-institute",
+      "sourceName": "Stanford Research Institute",
+      "sourceCategory": "people",
+      "targetId": "professors:stanford-research-institute",
+      "targetName": "Stanford Research Institute",
+      "targetCategory": "professors"
+    },
+    "likely_spies:joe-rogan": {
+      "sourceId": "likely_spies:joe-rogan",
+      "sourceName": "Joe Rogan",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:joe-rogan",
+      "targetName": "Joe Rogan",
+      "targetCategory": "people"
+    },
+    "experiencers:third-kind": {
+      "sourceId": "experiencers:third-kind",
+      "sourceName": "Third Kind",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:closer-encounters": {
+      "sourceId": "experiencers:closer-encounters",
+      "sourceName": "Closer Encounters",
+      "sourceCategory": "movies",
+      "targetId": "experiencers:close-encounters",
+      "targetName": "Close Encounters",
+      "targetCategory": "movies"
+    },
+    "people:blue-book": {
+      "sourceId": "people:blue-book",
+      "sourceName": "Blue Book",
+      "sourceCategory": "government_project_codenames",
+      "targetId": "government_project_codenames:project-blue-book",
+      "targetName": "project blue book",
+      "targetCategory": "government_project_codenames"
+    },
+    "people:james-clapper": {
+      "sourceId": "people:james-clapper",
+      "sourceName": "James Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:general-clapper",
+      "targetName": "General Clapper",
+      "targetCategory": "people"
+    },
+    "people:so-james-clapper": {
+      "sourceId": "people:so-james-clapper",
+      "sourceName": "So James Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:general-clapper",
+      "targetName": "General Clapper",
+      "targetCategory": "people"
+    },
+    "materials:aluminum": {
+      "sourceId": "materials:aluminum",
+      "sourceName": "aluminum",
+      "sourceCategory": "materials",
+      "targetId": "chemical_elements:aluminum",
+      "targetName": "aluminum",
+      "targetCategory": "chemical_elements"
+    },
+    "journalists:ross-coldhart": {
+      "sourceId": "journalists:ross-coldhart",
+      "sourceName": "Ross Coldhart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:ross-coulthart",
+      "targetName": "Ross Coulthart",
+      "targetCategory": "journalists"
+    },
+    "whistleblowers:philip-corso": {
+      "sourceId": "whistleblowers:philip-corso",
+      "sourceName": "Philip Corso",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:philip-j-corso",
+      "targetName": "Philip J. Corso",
+      "targetCategory": "people"
+    },
+    "people:jalen-hynek": {
+      "sourceId": "people:jalen-hynek",
+      "sourceName": "Jalen Hynek",
+      "sourceCategory": "people",
+      "targetId": "people:j-allen-hynek",
+      "targetName": "J. Allen Hynek",
+      "targetCategory": "people"
+    },
+    "star_systems:sirius": {
+      "sourceId": "star_systems:sirius",
+      "sourceName": "Sirius",
+      "sourceCategory": "star_systems",
+      "targetId": "stars:sirius",
+      "targetName": "Sirius",
+      "targetCategory": "stars"
+    },
+    "constellations:orion": {
+      "sourceId": "constellations:orion",
+      "sourceName": "Orion",
+      "sourceCategory": "constellations",
+      "targetId": "star_systems:orion",
+      "targetName": "Orion",
+      "targetCategory": "star_systems"
+    },
+    "people:chris-bledsoe": {
+      "sourceId": "people:chris-bledsoe",
+      "sourceName": "Chris Bledsoe",
+      "sourceCategory": "people",
+      "targetId": "experiencers:chris-bledsoe",
+      "targetName": "Chris Bledsoe",
+      "targetCategory": "experiencers"
+    },
+    "people:townsend-brown": {
+      "sourceId": "people:townsend-brown",
+      "sourceName": "Townsend Brown",
+      "sourceCategory": "people",
+      "targetId": "people:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "people"
+    },
+    "people:sunset-boulevard": {
+      "sourceId": "people:sunset-boulevard",
+      "sourceName": "Sunset Boulevard",
+      "sourceCategory": "locations",
+      "targetId": "people:sunset-drive",
+      "targetName": "Sunset Drive",
+      "targetCategory": "people"
+    },
+    "people:sunset-road": {
+      "sourceId": "people:sunset-road",
+      "sourceName": "Sunset Road",
+      "sourceCategory": "people",
+      "targetId": "people:sunset-drive",
+      "targetName": "Sunset Drive",
+      "targetCategory": "people"
+    },
+    "nonprofits:mufon": {
+      "sourceId": "nonprofits:mufon",
+      "sourceName": "MUFON",
+      "sourceCategory": "nonprofits",
+      "targetId": "research_groups:mufon",
+      "targetName": "MUFON",
+      "targetCategory": "research_groups"
+    },
+    "contractors:battelle": {
+      "sourceId": "contractors:battelle",
+      "sourceName": "Battelle",
+      "sourceCategory": "contractors",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "people:battelle-memorial-institutes": {
+      "sourceId": "people:battelle-memorial-institutes",
+      "sourceName": "Battelle Memorial Institutes",
+      "sourceCategory": "people",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "people:battelle-memorial": {
+      "sourceId": "people:battelle-memorial",
+      "sourceName": "Battelle Memorial",
+      "sourceCategory": "people",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "people:thomas-townsend-brown": {
+      "sourceId": "people:thomas-townsend-brown",
+      "sourceName": "Thomas Townsend Brown",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:thomas-townsend-brown": {
+      "sourceId": "friendly_people:thomas-townsend-brown",
+      "sourceName": "Thomas Townsend Brown",
+      "sourceCategory": "friendly_people",
+      "targetId": "professors:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "professors"
+    },
+    "professors:thomas-townsend-brown": {
+      "sourceId": "professors:thomas-townsend-brown",
+      "sourceName": "Thomas Townsend Brown",
+      "sourceCategory": "professors",
+      "targetId": "experiencers:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "experiencers"
+    },
+    "people:bell-labs": {
+      "sourceId": "people:bell-labs",
+      "sourceName": "Bell Labs",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bell-labs",
+      "targetName": "Bell Labs",
+      "targetCategory": "friendly_people"
+    },
+    "people:john-alexander": {
+      "sourceId": "people:john-alexander",
+      "sourceName": "John Alexander",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:john-alexander",
+      "targetName": "John Alexander",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:john-alexander": {
+      "sourceId": "friendly_people:john-alexander",
+      "sourceName": "John Alexander",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:john-alexander",
+      "targetName": "John Alexander",
+      "targetCategory": "experiencers"
+    },
+    "people:national-institute": {
+      "sourceId": "people:national-institute",
+      "sourceName": "National Institute",
+      "sourceCategory": "people",
+      "targetId": "research_groups:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "research_groups"
+    },
+    "research_groups:national-institute-for-discovery-science": {
+      "sourceId": "research_groups:national-institute-for-discovery-science",
+      "sourceName": "National Institute for Discovery Science",
+      "sourceCategory": "research_groups",
+      "targetId": "institutes:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "institutes"
+    },
+    "people:discovery-science": {
+      "sourceId": "people:discovery-science",
+      "sourceName": "Discovery Science",
+      "sourceCategory": "people",
+      "targetId": "institutes:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "institutes"
+    },
+    "people:bob-bigelow": {
+      "sourceId": "people:bob-bigelow",
+      "sourceName": "Bob Bigelow",
+      "sourceCategory": "people",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "people:previous-skinwalker-ranch": {
+      "sourceId": "people:previous-skinwalker-ranch",
+      "sourceName": "Previous Skinwalker Ranch",
+      "sourceCategory": "people",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "politicians:washington-post": {
+      "sourceId": "politicians:washington-post",
+      "sourceName": "Washington Post",
+      "sourceCategory": "journalists",
+      "targetId": "people:washington-post",
+      "targetName": "Washington Post",
+      "targetCategory": "people"
+    },
+    "government_agencies:doe": {
+      "sourceId": "government_agencies:doe",
+      "sourceName": "DOE",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-energy",
+      "targetName": "Department of Energy",
+      "targetCategory": "government_agencies"
+    },
+    "people:global-access": {
+      "sourceId": "people:global-access",
+      "sourceName": "Global Access",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:office-of-global-access",
+      "targetName": "Office of Global Access",
+      "targetCategory": "government_agencies"
+    },
+    "government_agencies:dod": {
+      "sourceId": "government_agencies:dod",
+      "sourceName": "DOD",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-defense",
+      "targetName": "Department of Defense",
+      "targetCategory": "government_agencies"
+    },
+    "friendly_people:lockheed-martins": {
+      "sourceId": "friendly_people:lockheed-martins",
+      "sourceName": "Lockheed Martins",
+      "sourceCategory": "contractors",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "friendly_people:northrop-crummen": {
+      "sourceId": "friendly_people:northrop-crummen",
+      "sourceName": "Northrop Crummen",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:north-america",
+      "targetName": "North America",
+      "targetCategory": "people"
+    },
+    "friendly_people:s-army": {
+      "sourceId": "friendly_people:s-army",
+      "sourceName": "S. Army",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:s-army",
+      "targetName": "S. Army",
+      "targetCategory": "people"
+    },
+    "whistleblowers:david-fravor": {
+      "sourceId": "whistleblowers:david-fravor",
+      "sourceName": "David Fravor",
+      "sourceCategory": "whistleblowers",
+      "targetId": "friendly_people:commander-fravor",
+      "targetName": "Commander Fravor",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:commander-fravor": {
+      "sourceId": "friendly_people:commander-fravor",
+      "sourceName": "Commander Fravor",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:commander-david-fravor",
+      "targetName": "Commander David Fravor",
+      "targetCategory": "people"
+    },
+    "friendly_people:tic-tac": {
+      "sourceId": "friendly_people:tic-tac",
+      "sourceName": "Tic Tac",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:tic-tac",
+      "targetName": "Tic Tac",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:tic-tac": {
+      "sourceId": "experiencers:tic-tac",
+      "sourceName": "Tic Tac",
+      "sourceCategory": "experiencers",
+      "targetId": "people:tic-tac",
+      "targetName": "Tic Tac",
+      "targetCategory": "people"
     }
   },
   "nameMerges": {
@@ -678,9 +1127,321 @@
       "targetId": "document_names:majestic-12",
       "targetName": "majestic 12",
       "targetCategory": "document_names"
+    },
+    "stanford research institute": {
+      "sourceId": "people:stanford-research-institute",
+      "sourceName": "Stanford Research Institute",
+      "sourceCategory": "people",
+      "targetId": "professors:stanford-research-institute",
+      "targetName": "Stanford Research Institute",
+      "targetCategory": "professors"
+    },
+    "joe rogan": {
+      "sourceId": "likely_spies:joe-rogan",
+      "sourceName": "Joe Rogan",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:joe-rogan",
+      "targetName": "Joe Rogan",
+      "targetCategory": "people"
+    },
+    "third kind": {
+      "sourceId": "experiencers:third-kind",
+      "sourceName": "Third Kind",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "experiencers"
+    },
+    "closer encounters": {
+      "sourceId": "experiencers:closer-encounters",
+      "sourceName": "Closer Encounters",
+      "sourceCategory": "movies",
+      "targetId": "experiencers:close-encounters",
+      "targetName": "Close Encounters",
+      "targetCategory": "movies"
+    },
+    "blue book": {
+      "sourceId": "people:blue-book",
+      "sourceName": "Blue Book",
+      "sourceCategory": "government_project_codenames",
+      "targetId": "government_project_codenames:project-blue-book",
+      "targetName": "project blue book",
+      "targetCategory": "government_project_codenames"
+    },
+    "james clapper": {
+      "sourceId": "people:james-clapper",
+      "sourceName": "James Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:general-clapper",
+      "targetName": "General Clapper",
+      "targetCategory": "people"
+    },
+    "so james clapper": {
+      "sourceId": "people:so-james-clapper",
+      "sourceName": "So James Clapper",
+      "sourceCategory": "people",
+      "targetId": "people:general-clapper",
+      "targetName": "General Clapper",
+      "targetCategory": "people"
+    },
+    "aluminum": {
+      "sourceId": "materials:aluminum",
+      "sourceName": "aluminum",
+      "sourceCategory": "materials",
+      "targetId": "chemical_elements:aluminum",
+      "targetName": "aluminum",
+      "targetCategory": "chemical_elements"
+    },
+    "ross coldhart": {
+      "sourceId": "journalists:ross-coldhart",
+      "sourceName": "Ross Coldhart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:ross-coulthart",
+      "targetName": "Ross Coulthart",
+      "targetCategory": "journalists"
+    },
+    "philip corso": {
+      "sourceId": "whistleblowers:philip-corso",
+      "sourceName": "Philip Corso",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:philip-j-corso",
+      "targetName": "Philip J. Corso",
+      "targetCategory": "people"
+    },
+    "jalen hynek": {
+      "sourceId": "people:jalen-hynek",
+      "sourceName": "Jalen Hynek",
+      "sourceCategory": "people",
+      "targetId": "people:j-allen-hynek",
+      "targetName": "J. Allen Hynek",
+      "targetCategory": "people"
+    },
+    "sirius": {
+      "sourceId": "star_systems:sirius",
+      "sourceName": "Sirius",
+      "sourceCategory": "star_systems",
+      "targetId": "stars:sirius",
+      "targetName": "Sirius",
+      "targetCategory": "stars"
+    },
+    "orion": {
+      "sourceId": "constellations:orion",
+      "sourceName": "Orion",
+      "sourceCategory": "constellations",
+      "targetId": "star_systems:orion",
+      "targetName": "Orion",
+      "targetCategory": "star_systems"
+    },
+    "chris bledsoe": {
+      "sourceId": "people:chris-bledsoe",
+      "sourceName": "Chris Bledsoe",
+      "sourceCategory": "people",
+      "targetId": "experiencers:chris-bledsoe",
+      "targetName": "Chris Bledsoe",
+      "targetCategory": "experiencers"
+    },
+    "townsend brown": {
+      "sourceId": "people:townsend-brown",
+      "sourceName": "Townsend Brown",
+      "sourceCategory": "people",
+      "targetId": "people:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "people"
+    },
+    "sunset boulevard": {
+      "sourceId": "people:sunset-boulevard",
+      "sourceName": "Sunset Boulevard",
+      "sourceCategory": "locations",
+      "targetId": "people:sunset-drive",
+      "targetName": "Sunset Drive",
+      "targetCategory": "people"
+    },
+    "sunset road": {
+      "sourceId": "people:sunset-road",
+      "sourceName": "Sunset Road",
+      "sourceCategory": "people",
+      "targetId": "people:sunset-drive",
+      "targetName": "Sunset Drive",
+      "targetCategory": "people"
+    },
+    "mufon": {
+      "sourceId": "nonprofits:mufon",
+      "sourceName": "MUFON",
+      "sourceCategory": "nonprofits",
+      "targetId": "research_groups:mufon",
+      "targetName": "MUFON",
+      "targetCategory": "research_groups"
+    },
+    "battelle": {
+      "sourceId": "contractors:battelle",
+      "sourceName": "Battelle",
+      "sourceCategory": "contractors",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "battelle memorial institutes": {
+      "sourceId": "people:battelle-memorial-institutes",
+      "sourceName": "Battelle Memorial Institutes",
+      "sourceCategory": "people",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "battelle memorial": {
+      "sourceId": "people:battelle-memorial",
+      "sourceName": "Battelle Memorial",
+      "sourceCategory": "people",
+      "targetId": "people:battelle-memorial-institute",
+      "targetName": "Battelle Memorial Institute",
+      "targetCategory": "people"
+    },
+    "thomas townsend brown": {
+      "sourceId": "professors:thomas-townsend-brown",
+      "sourceName": "Thomas Townsend Brown",
+      "sourceCategory": "professors",
+      "targetId": "experiencers:thomas-townsend-brown",
+      "targetName": "Thomas Townsend Brown",
+      "targetCategory": "experiencers"
+    },
+    "bell labs": {
+      "sourceId": "people:bell-labs",
+      "sourceName": "Bell Labs",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bell-labs",
+      "targetName": "Bell Labs",
+      "targetCategory": "friendly_people"
+    },
+    "john alexander": {
+      "sourceId": "friendly_people:john-alexander",
+      "sourceName": "John Alexander",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:john-alexander",
+      "targetName": "John Alexander",
+      "targetCategory": "experiencers"
+    },
+    "national institute": {
+      "sourceId": "people:national-institute",
+      "sourceName": "National Institute",
+      "sourceCategory": "people",
+      "targetId": "research_groups:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "research_groups"
+    },
+    "national institute for discovery science": {
+      "sourceId": "research_groups:national-institute-for-discovery-science",
+      "sourceName": "National Institute for Discovery Science",
+      "sourceCategory": "research_groups",
+      "targetId": "institutes:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "institutes"
+    },
+    "discovery science": {
+      "sourceId": "people:discovery-science",
+      "sourceName": "Discovery Science",
+      "sourceCategory": "people",
+      "targetId": "institutes:national-institute-for-discovery-science",
+      "targetName": "National Institute for Discovery Science",
+      "targetCategory": "institutes"
+    },
+    "bob bigelow": {
+      "sourceId": "people:bob-bigelow",
+      "sourceName": "Bob Bigelow",
+      "sourceCategory": "people",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "previous skinwalker ranch": {
+      "sourceId": "people:previous-skinwalker-ranch",
+      "sourceName": "Previous Skinwalker Ranch",
+      "sourceCategory": "people",
+      "targetId": "people:robert-bigelow",
+      "targetName": "Robert Bigelow",
+      "targetCategory": "people"
+    },
+    "washington post": {
+      "sourceId": "politicians:washington-post",
+      "sourceName": "Washington Post",
+      "sourceCategory": "journalists",
+      "targetId": "people:washington-post",
+      "targetName": "Washington Post",
+      "targetCategory": "people"
+    },
+    "doe": {
+      "sourceId": "government_agencies:doe",
+      "sourceName": "DOE",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-energy",
+      "targetName": "Department of Energy",
+      "targetCategory": "government_agencies"
+    },
+    "global access": {
+      "sourceId": "people:global-access",
+      "sourceName": "Global Access",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:office-of-global-access",
+      "targetName": "Office of Global Access",
+      "targetCategory": "government_agencies"
+    },
+    "dod": {
+      "sourceId": "government_agencies:dod",
+      "sourceName": "DOD",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-defense",
+      "targetName": "Department of Defense",
+      "targetCategory": "government_agencies"
+    },
+    "lockheed martins": {
+      "sourceId": "friendly_people:lockheed-martins",
+      "sourceName": "Lockheed Martins",
+      "sourceCategory": "contractors",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "northrop crummen": {
+      "sourceId": "friendly_people:northrop-crummen",
+      "sourceName": "Northrop Crummen",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:north-america",
+      "targetName": "North America",
+      "targetCategory": "people"
+    },
+    "s army": {
+      "sourceId": "friendly_people:s-army",
+      "sourceName": "S. Army",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:s-army",
+      "targetName": "S. Army",
+      "targetCategory": "people"
+    },
+    "david fravor": {
+      "sourceId": "whistleblowers:david-fravor",
+      "sourceName": "David Fravor",
+      "sourceCategory": "whistleblowers",
+      "targetId": "friendly_people:commander-fravor",
+      "targetName": "Commander Fravor",
+      "targetCategory": "friendly_people"
+    },
+    "commander fravor": {
+      "sourceId": "friendly_people:commander-fravor",
+      "sourceName": "Commander Fravor",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:commander-david-fravor",
+      "targetName": "Commander David Fravor",
+      "targetCategory": "people"
+    },
+    "tic tac": {
+      "sourceId": "experiencers:tic-tac",
+      "sourceName": "Tic Tac",
+      "sourceCategory": "experiencers",
+      "targetId": "people:tic-tac",
+      "targetName": "Tic Tac",
+      "targetCategory": "people"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-27T00:48:39.526Z",
+  "generatedAt": "2026-06-27T02:57:30.451Z",
   "note": "Replace data/reclass.json with this file before rebuilding."
 }

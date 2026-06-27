@@ -24,6 +24,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 PROJECT_ID = "uap-relationship-graph"
+RELATIONSHIP_WINDOW_RADIUS = 4
+RELATIONSHIP_WINDOW_MENTION_LIMIT = 30
+RELATIONSHIP_OUTPUT_LIMIT = 8000
 DATA_DIR = ROOT / "data"
 TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
 REGISTRY_PATH = TRANSCRIPTS_DIR / "entity-registry.json"
@@ -66,7 +69,7 @@ CATEGORY_LABELS = {
     "journalists": "Journalists",
     "frequencies": "Frequencies",
     "locations": "Locations",
-    "people": "People and their significance",
+    "people": "People",
     "experiencers": "Experiencers",
     "government_project_codenames": "Government project codenames",
     "military_bases": "Military bases",
@@ -92,6 +95,8 @@ CATEGORY_LABELS = {
     "confirmed_hoaxes": "Confirmed hoaxes",
     "key_terms": "Key terms",
     "websites": "Websites",
+    "technology": "Technology",
+    "chemicals": "Chemicals",
     "chemical_elements": "Chemical elements",
     "materials": "Materials",
     "stars": "Stars",
@@ -123,14 +128,18 @@ CATEGORY_LABELS = {
 TOP_CATEGORY_LABELS = {
     "people": "People",
     "organizations": "Organizations",
+    "research_academia": "Research & Academia",
     "programs_projects": "Programs & Projects",
+    "technology": "Technology",
     "places": "Places",
     "documents_media": "Documents & Media",
     "events_claims": "Events & Claims",
     "science_materials": "Science & Materials",
+    "health_biology": "Health & Biology",
     "space_astronomy": "Space & Astronomy",
     "species_entities": "Species & Entities",
     "finance_power": "Finance & Power",
+    "signals_coordinates": "Signals & Coordinates",
     "language_signals": "Language Signals",
     "needs_review": "Needs Review",
 }
@@ -154,16 +163,15 @@ CATEGORY_TO_TOP = {
     "companies": "organizations",
     "nonprofits": "organizations",
     "watchdog_groups": "organizations",
-    "institutes": "organizations",
     "secret_societies": "organizations",
-    "research_groups": "organizations",
+    "institutes": "research_academia",
+    "research_groups": "research_academia",
+    "universities": "research_academia",
+    "university_departments": "research_academia",
     "government_project_codenames": "programs_projects",
     "locations": "places",
     "military_bases": "places",
     "dumbs": "places",
-    "gps_coordinates": "places",
-    "universities": "places",
-    "university_departments": "places",
     "document_names": "documents_media",
     "patents": "documents_media",
     "white_papers": "documents_media",
@@ -179,12 +187,16 @@ CATEGORY_TO_TOP = {
     "theories": "events_claims",
     "emerging_terminology": "events_claims",
     "taxonomies": "events_claims",
+    "technology": "technology",
+    "chemicals": "science_materials",
     "chemical_elements": "science_materials",
     "materials": "science_materials",
-    "medical_conditions": "science_materials",
-    "blood_types": "science_materials",
-    "frequencies": "science_materials",
-    "radio_frequencies": "science_materials",
+    "medical_conditions": "health_biology",
+    "blood_types": "health_biology",
+    "frequencies": "signals_coordinates",
+    "radio_frequencies": "signals_coordinates",
+    "gps_coordinates": "signals_coordinates",
+    "ip_addresses": "signals_coordinates",
     "stars": "space_astronomy",
     "planets": "space_astronomy",
     "constellations": "space_astronomy",
@@ -195,6 +207,7 @@ CATEGORY_TO_TOP = {
     "key_terms": "language_signals",
     "quotes": "language_signals",
     "symbols": "language_signals",
+    "websites": "language_signals",
 }
 
 DEFAULT_TERMS = {
@@ -402,6 +415,32 @@ DEFAULT_TERMS = {
         "metamaterial",
         "isotope",
         "aerogel",
+    ],
+    "chemicals": [
+        "DMT",
+        "N,N-Dimethyltryptamine",
+        "Dimethyltryptamine",
+    ],
+    "technology": [
+        "anti-gravity",
+        "antigravity",
+        "gravity control",
+        "zero point energy",
+        "field propulsion",
+        "inertial mass reduction",
+        "warp drive",
+        "reactionless drive",
+        "electrogravitics",
+        "magnetohydrodynamics",
+        "MHD",
+        "directed energy",
+        "laser weapon",
+        "sensor fusion",
+        "radar spoofing",
+        "stealth technology",
+        "microchip technology",
+        "semiconductor technology",
+        "reverse engineering",
     ],
     "chemical_elements": [
         "hydrogen",
@@ -899,6 +938,8 @@ def resolve_competing_mentions(mentions: list[Mention]) -> list[Mention]:
         "government_project_codenames": 86,
         "military_bases": 84,
         "contractors": 82,
+        "technology": 81,
+        "chemicals": 81,
         "document_names": 80,
         "people": 10,
     }
@@ -1049,7 +1090,9 @@ def apply_review_to_mentions(mentions: list[Mention], review: dict[str, Any]) ->
     omission_names = {normalize_name(name) for name in review.get("omissions", {}).keys()}
     reclassifications = review.get("reclassifications", {})
     name_reclassifications = review.get("nameReclassifications", {})
-    aliases = {normalize_name(key): value for key, value in review.get("aliases", {}).items()}
+    raw_aliases = review.get("aliases", {})
+    aliases_by_id = {key: value for key, value in raw_aliases.items() if ":" in key}
+    aliases_by_name = {normalize_name(key): value for key, value in raw_aliases.items()}
     merges = review.get("merges", {})
     name_merges = {normalize_name(key): value for key, value in review.get("nameMerges", {}).items()}
 
@@ -1072,7 +1115,7 @@ def apply_review_to_mentions(mentions: list[Mention], review: dict[str, Any]) ->
             mention.category = target_category
             mention.category_label = label(mention.category)
             mention.entity_id = entity_key(canonicalize(mention.name, mention.category), mention.category)
-        alias = aliases.get(mention_name)
+        alias = aliases_by_id.get(mention.entity_id) or aliases_by_name.get(mention_name)
         if alias:
             mention.name = alias
             mention.entity_id = entity_key(canonicalize(alias, mention.category), mention.category)
@@ -1130,7 +1173,9 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
 
     for transcript_segments in segments_by_transcript.values():
         for index, center_segment in enumerate(transcript_segments):
-            window_segments = transcript_segments[max(0, index - 2) : min(len(transcript_segments), index + 3)]
+            window_segments = transcript_segments[
+                max(0, index - RELATIONSHIP_WINDOW_RADIUS) : min(len(transcript_segments), index + RELATIONSHIP_WINDOW_RADIUS + 1)
+            ]
             window_mentions = dedupe_mentions_for_segment(
                 [
                     mention
@@ -1140,7 +1185,7 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
             )
             if len(window_mentions) < 2:
                 continue
-            window_mentions = sorted(window_mentions, key=lambda m: (-m.confidence, m.name))[:22]
+            window_mentions = sorted(window_mentions, key=lambda m: (-m.confidence, m.name))[:RELATIONSHIP_WINDOW_MENTION_LIMIT]
             window_text = " ".join(segment.text for segment in window_segments)
             window_start = window_segments[0].start_ms
             window_timestamp = format_timestamp(window_start)
@@ -1196,7 +1241,7 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
                 confidence=round(sum(pair_confidence[(source, target, rel_type)]) / max(1, len(pair_confidence[(source, target, rel_type)])), 3),
             )
         )
-    return relationships[:3500]
+    return relationships[:RELATIONSHIP_OUTPUT_LIMIT]
 
 
 def infer_relationship_from_context(source: Entity, target: Entity, text: str) -> tuple[str, float, str]:
@@ -1331,6 +1376,9 @@ def build_manifest(
                 or review.get("nameMerges")
             ),
             "transcript_source_dir": str(TRANSCRIPTS_DIR.relative_to(ROOT)),
+            "relationship_window_radius": RELATIONSHIP_WINDOW_RADIUS,
+            "relationship_window_mentions": RELATIONSHIP_WINDOW_MENTION_LIMIT,
+            "relationship_output_limit": RELATIONSHIP_OUTPUT_LIMIT,
             "review_source": review.get("source_path") or (str(DATA_EXPORT_INPUT.relative_to(ROOT)) if DATA_EXPORT_INPUT.exists() and review.get("reclassifications") else None),
             "note": "Generated graph files are overwritten on each rebuild. Long-term reclassification decisions live in data/reclass.json.",
         },
@@ -2810,6 +2858,12 @@ def render_html() -> str:
     const HOVER_ZOOM_ACTIVATE_DELTA = 900;
     const ENTITY_ZOOM_OUT_STEP_UP_WIDTH = 5600;
     const CATEGORY_ZOOM_OUT_STEP_UP_WIDTH = 7400;
+    const MIN_ZOOM_WIDTH = 240;
+    const MIN_ZOOM_HEIGHT = 165;
+    const MAX_ZOOM_WIDTH = 10800;
+    const MAX_ZOOM_HEIGHT = 10800;
+    const NEIGHBORHOOD_RELATIONSHIP_LIMIT = 48;
+    const CARD_RELATIONSHIP_LIMIT = 28;
 
     initializeReviewStorage();
     const DATA = applyReviewDecisions(normalizeData(RAW));
@@ -2853,6 +2907,11 @@ def render_html() -> str:
         const targetCategory = review.reclassifications && review.reclassifications[entity.id];
         if (targetCategory && data.categoryLabels[targetCategory]) {
           applyEntityCategory(entity, targetCategory, data);
+        }
+        const aliases = review.aliases || {};
+        const alias = aliases[entity.id] || aliases[normalizeText(entity.name)];
+        if (alias && alias.trim()) {
+          applyEntityRename(entity, alias.trim(), data);
         }
       }
       const mergeRules = Object.values(review.merges || {}).concat(Object.values(review.nameMerges || {}));
@@ -2905,6 +2964,19 @@ def render_html() -> str:
       entity.topCategoryLabel = data.topCategoryLabels[entity.topCategory] || "Needs Review";
     }
 
+    function applyEntityRename(entity, name, data = DATA) {
+      const nextName = String(name || "").trim();
+      if (!nextName) return;
+      const previousName = entity.name;
+      entity.name = nextName;
+      entity.canonicalName = nextName;
+      entity.significance = entity.significance ? entity.significance.replace(previousName, nextName) : entity.significance;
+      for (const relationship of data.relationships) {
+        if (relationship.source === entity.id) relationship.sourceName = nextName;
+        if (relationship.target === entity.id) relationship.targetName = nextName;
+      }
+    }
+
     function rebuildIndexes() {
       entitiesById.clear();
       relationshipsById.clear();
@@ -2929,11 +3001,11 @@ def render_html() -> str:
     }
 
     function fit() {
-      setViewBox(40, 0, 2120, 1500);
+      setViewBox(0, -250, 2200, 2000);
     }
 
     function fitParentGraph() {
-      setViewBox(-2300, -2600, 6800, 6500);
+      setViewBox(-3500, -4100, 9200, 9600);
     }
 
     function setCornerLabel(title, detail) {
@@ -3072,8 +3144,7 @@ def render_html() -> str:
         const key = [source.topCategory, target.topCategory].sort().join("::");
         edgeWeights.set(key, (edgeWeights.get(key) || 0) + relationship.weight);
       }
-      const nodes = radialNodes(categories.sort((a, b) => b.mentions - a.mentions), 1100, 750, 1750, 3000, (category) => category.mentions)
-        .map((node) => ({ ...node, r: Math.max(80, Math.min(170, node.r * 5.5)) }));
+      const nodes = parentCategoryNodes(categories.sort((a, b) => b.count - a.count), 1100, 750);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const maxEdge = Math.max(1, ...edgeWeights.values());
       const edges = Array.from(edgeWeights.entries()).sort((a, b) => b[1] - a[1]).slice(0, 95).map(([key, weight]) => {
@@ -3088,24 +3159,12 @@ def render_html() -> str:
       const label = DATA.topCategoryLabels[categoryId] || categoryId;
       const categoryLayout = buildCategoryLayout();
       const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
-      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => b.count - a.count);
-      const visiblePrimaryLimit = 100;
-      const primary = allPrimary.slice(0, visiblePrimaryLimit);
-      const longTail = allPrimary.slice(visiblePrimaryLimit);
+      const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => entityGraphScore(b) - entityGraphScore(a));
+      const primary = allPrimary.slice(0, 42);
       const primarySet = new Set(primary.map((entity) => entity.id));
-      const relatedIds = [];
-      const rels = DATA.relationships
-        .filter((relationship) => primarySet.has(relationship.source) || primarySet.has(relationship.target))
-        .sort((a, b) => b.weight - a.weight);
-      for (const relationship of rels) {
-        const otherId = primarySet.has(relationship.source) ? relationship.target : relationship.source;
-        if (!primarySet.has(otherId) && !relatedIds.includes(otherId)) relatedIds.push(otherId);
-        if (relatedIds.length >= 24) break;
-      }
-      const related = relatedIds.map((id) => entitiesById.get(id)).filter(Boolean);
-      const nodes = radialNodes(primary.concat(related), activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
+      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) && primarySet.has(relationship.target)).slice(0, 150);
+      const nodes = radialNodes(primary, activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
-      const longTailDots = longTailNodes(longTail, activeCategoryNode.x, activeCategoryNode.y, 980);
       const maxEdge = Math.max(1, ...rels.map((relationship) => relationship.weight));
       const localDetailRadius = 640;
       const contextNodes = categoryLayout.nodes
@@ -3133,10 +3192,6 @@ def render_html() -> str:
         contextNodesSvg +
         '<circle cx="' + activeCategoryNode.x + '" cy="' + activeCategoryNode.y + '" r="' + activeCategoryNode.r + '" fill="' + theme.activeHalo + '" stroke="' + theme.primary + '" stroke-width="1"></circle>' +
         drawRelationshipEdges(rels, nodeById, maxEdge, "drill") +
-        (longTail.length ? '<g class="graph-long-tail" data-long-tail="' + longTail.length + '" aria-label="' + esc(longTail.length.toLocaleString() + " additional " + label + " entities in the long tail") + '">' +
-          '<circle cx="' + activeCategoryNode.x + '" cy="' + activeCategoryNode.y + '" r="980" fill="none" stroke="' + theme.context + '" stroke-width="1" opacity=".24"></circle>' +
-          longTailDots.map((dot) => '<circle cx="' + dot.x + '" cy="' + dot.y + '" r="' + dot.r + '" fill="' + theme.entityFill + '" opacity="' + dot.opacity + '"><title>' + esc(dot.count.toLocaleString() + " long-tail entities") + '</title></circle>').join("") +
-        '</g>' : '') +
         nodes.map((node) => {
           const entity = node.raw;
           const inCategory = entity.topCategory === categoryId;
@@ -3148,21 +3203,13 @@ def render_html() -> str:
         .filter((node) => node.contextWeight > 0)
         .sort((a, b) => b.contextWeight - a.contextWeight)
         .slice(0, 4);
-      const labeledEntityNodes = nodes
-        .filter((node) => node.raw && node.raw.topCategory === categoryId)
-        .slice()
-        .sort((a, b) => (b.raw.count || 0) - (a.raw.count || 0))
-        .slice(0, allPrimary.length > 120 ? 120 : allPrimary.length);
-      const labeledRelatedNodes = nodes
-        .filter((node) => node.raw && node.raw.topCategory !== categoryId)
-        .slice(0, 12);
       setGraphLabels([nodeLabel(
         categoryId,
         "category",
         activeCategoryNode,
         truncate(label, 24),
-        allPrimary.length + " entities · top " + labeledEntityNodes.length + " shown"
-      )].concat(labeledEntityNodes.concat(labeledRelatedNodes).map((node) => nodeLabel(
+        allPrimary.length + " entities"
+      )].concat(nodes.map((node) => nodeLabel(
         node.raw.id,
         "entity",
         node,
@@ -3175,17 +3222,24 @@ def render_html() -> str:
         node.contextWeight ? node.contextWeight.toLocaleString() + " links" : "",
         Math.max(12, node.r * .68)
       ))));
-      statusEl.textContent = label + " · " + allPrimary.length.toLocaleString() + " entities indexed · top " + primary.length.toLocaleString() + " shown" + (longTail.length ? " · " + longTail.length.toLocaleString() + " in long tail" : "") + " · search to jump to any entity";
+      statusEl.textContent = label + " · select an entity for its direct relationship graph";
       setCornerLabel(null);
       wireEntityNodes();
       wireCategoryNodes();
-      const bounds = nodeBounds(nodes.concat(longTailDots).concat([activeCategoryNode]), 220);
-      setViewBox(bounds.x, bounds.y, bounds.w, bounds.h);
+      setViewBox(activeCategoryNode.x - 1260, activeCategoryNode.y - 940, 2520, 1880);
+    }
+
+    function entityGraphScore(entity) {
+      const relationships = relationshipsByEntity.get(entity.id) || [];
+      const evidence = (entity.evidenceIds || []).map((id) => mentionsById.get(id)).filter(Boolean);
+      const transcriptCount = new Set(evidence.map((mention) => mention.transcript_title || mention.transcript_id || "")).size;
+      const relationshipWeight = relationships.reduce((total, relationship) => total + (relationship.weight || 1), 0);
+      return (entity.count || 0) * 4 + transcriptCount * 18 + relationships.length * 10 + relationshipWeight * 1.5;
     }
 
     function renderNeighborhood(entity) {
       const theme = currentTheme();
-      const rels = (relationshipsByEntity.get(entity.id) || []).slice().sort((a, b) => b.weight - a.weight).slice(0, 26);
+      const rels = (relationshipsByEntity.get(entity.id) || []).slice().sort((a, b) => b.weight - a.weight).slice(0, NEIGHBORHOOD_RELATIONSHIP_LIMIT);
       const relatedById = new Map();
       for (const relationship of rels) {
         const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
@@ -3193,7 +3247,7 @@ def render_html() -> str:
         if (relatedEntity && !relatedById.has(relatedEntity.id)) relatedById.set(relatedEntity.id, relatedEntity);
       }
       const related = Array.from(relatedById.values());
-      const nodes = radialNodes(related, 1100, 750, 380, 660, (item) => item.count || 1);
+      const nodes = radialNodes(related, 1100, 750, 450, 860, (item) => item.count || 1);
       const nodeById = new Map(nodes.map((node) => [node.id, node]));
       const center = { id: entity.id, x: 1100, y: 750, r: 46, raw: entity };
       nodeById.set(entity.id, center);
@@ -3231,36 +3285,6 @@ def render_html() -> str:
     function radialNodes(items, cx, cy, innerRadius, outerRadius, sizeValue) {
       const values = items.map(sizeValue);
       const maxValue = Math.max(1, ...values);
-      if (items.length > 80) {
-        const spacing = 78;
-        const rings = [];
-        let assigned = 0;
-        let radius = innerRadius;
-        while (assigned < items.length) {
-          const capacity = Math.max(10, Math.floor((Math.PI * 2 * radius) / spacing));
-          const count = Math.min(capacity, items.length - assigned);
-          rings.push({ radius, count, start: assigned });
-          assigned += count;
-          radius += spacing;
-        }
-        const maxNodeRadius = items.length > 450 ? 10 : 14;
-        return items.map((item, index) => {
-          const ring = rings.find((candidate) => index >= candidate.start && index < candidate.start + candidate.count) || rings[rings.length - 1];
-          const ringIndex = index - ring.start;
-          const angle = (Math.PI * 2 * ringIndex) / Math.max(1, ring.count) - Math.PI / 2 + (ring.start % 2 ? Math.PI / Math.max(1, ring.count) : 0);
-          const value = sizeValue(item);
-          return {
-            id: item.id,
-            label: item.label || item.name,
-            count: item.count || item.entities || 0,
-            mentions: item.mentions || value,
-            x: cx + Math.cos(angle) * ring.radius,
-            y: cy + Math.sin(angle) * ring.radius,
-            r: Math.max(5, Math.min(maxNodeRadius, 4 + Math.sqrt(value / maxValue) * maxNodeRadius)),
-            raw: item,
-          };
-        });
-      }
       return items.map((item, index) => {
         const angle = (Math.PI * 2 * index) / Math.max(1, items.length) - Math.PI / 2;
         const radius = index < 10 ? innerRadius : index < 24 ? (innerRadius + outerRadius) / 2 : outerRadius;
@@ -3278,42 +3302,23 @@ def render_html() -> str:
       });
     }
 
-    function longTailNodes(items, cx, cy, radius) {
-      if (!items.length) return [];
-      const dotCount = Math.min(120, Math.max(24, Math.ceil(items.length / 12)));
-      const bucketSize = Math.ceil(items.length / dotCount);
-      const dots = [];
-      for (let index = 0; index < dotCount; index += 1) {
-        const bucket = items.slice(index * bucketSize, (index + 1) * bucketSize);
-        if (!bucket.length) continue;
-        const angle = (Math.PI * 2 * index) / dotCount - Math.PI / 2;
-        const count = bucket.length;
-        dots.push({
-          x: cx + Math.cos(angle) * radius,
-          y: cy + Math.sin(angle) * radius,
-          r: Math.max(3, Math.min(8, 2 + Math.sqrt(count))),
-          count,
-          opacity: Math.max(.24, Math.min(.58, .2 + count / bucketSize * .38)).toFixed(2),
-        });
-      }
-      return dots;
-    }
-
-    function nodeBounds(nodes, padding = 180) {
-      const xs = [];
-      const ys = [];
-      for (const node of nodes) {
-        if (!node) continue;
-        const radius = node.r || 0;
-        xs.push(node.x - radius, node.x + radius);
-        ys.push(node.y - radius, node.y + radius);
-      }
-      if (!xs.length || !ys.length) return { x: 40, y: 0, w: 2120, h: 1500 };
-      const minX = Math.min(...xs) - padding;
-      const maxX = Math.max(...xs) + padding;
-      const minY = Math.min(...ys) - padding;
-      const maxY = Math.max(...ys) + padding;
-      return { x: minX, y: minY, w: maxX - minX, h: maxY - minY };
+    function parentCategoryNodes(categories, cx, cy) {
+      const maxCount = Math.max(1, ...categories.map((category) => category.count || 1));
+      const radiusFor = (category) => Math.max(18, Math.min(260, Math.sqrt((category.count || 1) / maxCount) * 260));
+      const outerRadius = 3400;
+      return categories.map((category, index) => {
+        const angle = (Math.PI * 2 * index) / Math.max(1, categories.length) - Math.PI / 2;
+        return {
+          id: category.id,
+          label: category.label,
+          count: category.count || 0,
+          mentions: category.mentions || 0,
+          x: cx + Math.cos(angle) * outerRadius,
+          y: cy + Math.sin(angle) * outerRadius,
+          r: radiusFor(category),
+          raw: category,
+        };
+      });
     }
 
     function drawEdges(edges, nodeById, maxEdge) {
@@ -3384,13 +3389,15 @@ def render_html() -> str:
           return '<div class="evidence"><div class="meta">' + esc(mention.transcript_title) + ' · ' + esc(mention.timestamp) + ' · ' + esc(mention.detector) + '</div><div>' + esc(mention.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No snippets available for this entity.</div>') +
         '<h3>Direct relationships</h3>' +
-        '<div class="relationship-list">' + relationships.slice(0, 14).map((relationship) => {
+        '<div class="relationship-list">' + relationships.slice(0, CARD_RELATIONSHIP_LIMIT).map((relationship) => {
           const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
           const other = entitiesById.get(otherId);
           return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(relationship.type) + ' · weight ' + relationship.weight + '</div></button>';
         }).join("") + '</div>' +
         '<h3 class="action-heading">Reclassify</h3>' +
         '<div class="card-actions"><label class="card-field"><span>Category</span><select id="review-category">' + Object.entries(DATA.categoryLabels).map(([id, label]) => '<option value="' + esc(id) + '"' + (id === entity.category ? ' selected' : '') + '>' + esc(label) + '</option>').join("") + '</select></label></div>' +
+        '<h3 class="action-heading">Rename node</h3>' +
+        '<div class="card-actions"><label class="card-field"><span>Display name</span><input id="rename-node-input" type="text" autocomplete="off" value="' + esc(entity.name) + '"></label><button id="rename-node">Rename</button></div>' +
         '<h3 class="action-heading false-positive-heading">False positive</h3>' +
         '<div class="card-actions false-positive-actions"><button id="false-positive">Mark false positive</button></div>' +
         '<h3 class="merge-heading">Merge duplicate</h3>' +
@@ -3416,6 +3423,22 @@ def render_html() -> str:
         activeCategory = entity.topCategory;
         rebuildIndexes();
         render();
+      });
+      document.getElementById("rename-node").addEventListener("click", () => {
+        const input = document.getElementById("rename-node-input");
+        const nextName = input.value.trim();
+        if (!nextName || nextName === entity.name) return;
+        const previousName = entity.name;
+        const review = readReview();
+        review.aliases = review.aliases || {};
+        review.aliases[entity.id] = nextName;
+        review.aliases[normalizeText(previousName)] = nextName;
+        if (review.falsePositives) delete review.falsePositives[entity.id];
+        saveReview(review);
+        applyEntityRename(entity, nextName);
+        rebuildIndexes();
+        render();
+        focusDetailsCard();
       });
       document.getElementById("false-positive").addEventListener("click", () => {
         const review = readReview();
@@ -3960,8 +3983,8 @@ def render_html() -> str:
           };
         }
         const scale = Math.max(0.1, distance(first, second) / touchState.startDistance);
-        const nextW = clamp(touchState.startViewBox.w / scale, 240, 7600);
-        const nextH = clamp(touchState.startViewBox.h / scale, 165, 7200);
+        const nextW = clamp(touchState.startViewBox.w / scale, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
+        const nextH = clamp(touchState.startViewBox.h / scale, MIN_ZOOM_HEIGHT, MAX_ZOOM_HEIGHT);
         setZoomFromScreenPoint(midpoint(first, second), touchState.startViewBox, nextW, nextH);
         return;
       }
@@ -4041,8 +4064,8 @@ def render_html() -> str:
       const pointerY = pointer.y;
       const intensity = event.deltaMode === 1 ? 0.08 : 0.0015;
       const factor = clamp(Math.exp(event.deltaY * intensity), 0.82, 1.22);
-      const nextW = clamp(viewBox.w * factor, 240, 7600);
-      const nextH = clamp(viewBox.h * factor, 165, 7200);
+      const nextW = clamp(viewBox.w * factor, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
+      const nextH = clamp(viewBox.h * factor, MIN_ZOOM_HEIGHT, MAX_ZOOM_HEIGHT);
       const pointerRatioX = (pointerX - viewBox.x) / viewBox.w;
       const pointerRatioY = (pointerY - viewBox.y) / viewBox.h;
       setViewBox(pointerX - pointerRatioX * nextW, pointerY - pointerRatioY * nextH, nextW, nextH);
