@@ -237,6 +237,38 @@
     ]
   },
   {
+    "id": "materials:bismuth",
+    "name": "bismuth",
+    "canonical_name": "bismuth",
+    "category": "materials",
+    "category_label": "Materials",
+    "count": 106,
+    "confidence": 0.92,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Former Nsa Director Breaks Silence On Uf",
+      "Nasa Chief We Just Built Antigravity Pro",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "bismuth appears as materials with 106 mention(s) across 7 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0000526",
+      "m-0000527",
+      "m-0000528",
+      "m-0000529",
+      "m-0000534",
+      "m-0000535",
+      "m-0000538",
+      "m-0000539"
+    ]
+  },
+  {
     "id": "key_terms:remote-viewing",
     "name": "remote viewing",
     "canonical_name": "remote viewing",
@@ -311,6 +343,46 @@
       "m-0003952",
       "m-0003954",
       "m-0003955"
+    ]
+  },
+  {
+    "id": "government_project_codenames:mk-ultra",
+    "name": "MK ultra",
+    "canonical_name": "MK ultra",
+    "category": "government_project_codenames",
+    "category_label": "Government project codenames",
+    "count": 92,
+    "confidence": 0.92,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Exposing The Cias Darkest Mind Control",
+      "Former Nsa Director Breaks Silence On Uf",
+      "I Was Taken By The Ufo Program As A Kid",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Joe Rogan The Truth About Aliens He Fina",
+      "Meet The Scientist Who Studies Alien Imp",
+      "The Bizarre Alien Abduction Details The",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Americas Top Scientists Are Going M",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "MK ultra appears as government project codenames with 92 mention(s) across 15 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0001049",
+      "m-0002159",
+      "m-0002161",
+      "m-0002326",
+      "m-0002470",
+      "m-0003322",
+      "m-0003327",
+      "m-0003330"
     ]
   },
   {
@@ -405,8 +477,8 @@
     "canonical_name": "Bob Lazar",
     "category": "whistleblowers",
     "category_label": "Whistleblowers",
-    "count": 72,
-    "confidence": 0.917,
+    "count": 73,
+    "confidence": 0.913,
     "transcripts": [
       "A Weekend With Bob Lazar Inside Area51s",
       "Army Captures Live Alien Hospital Report",
@@ -421,7 +493,7 @@
       "We Captured A 12 Foot Giant In Afghanist",
       "Why The Pentagon Tried To Censor This Uf"
     ],
-    "significance": "Bob Lazar appears as whistleblowers with 72 mention(s) across 12 transcripts; detected by gazetteer, heuristic:person_name.",
+    "significance": "Bob Lazar appears as whistleblowers with 73 mention(s) across 12 transcripts; detected by gazetteer, heuristic:person_name.",
     "detectors": [
       "gazetteer",
       "heuristic:person_name"
@@ -435,6 +507,47 @@
       "m-0000157",
       "m-0000158",
       "m-0000168"
+    ]
+  },
+  {
+    "id": "people:dave-grush",
+    "name": "Dave Grush",
+    "canonical_name": "Dave Grush",
+    "category": "people",
+    "category_label": "People and their significance",
+    "count": 71,
+    "confidence": 0.83,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "Cia Chief Im A Time Traveler",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Hollywood The Cia And Ufos The History Bey",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "I Was Taken By The Ufo Program As A Kid",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Joe Rogan The Truth About Aliens He Fina",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Dave Grush appears as people and their significance with 71 mention(s) across 15 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000868",
+      "m-0001000",
+      "m-0001001",
+      "m-0001418",
+      "m-0002521",
+      "m-0002791",
+      "m-0002802",
+      "m-0002820"
     ]
   },
   {
@@ -653,113 +766,6 @@
     ]
   },
   {
-    "id": "government_project_codenames:mkultra",
-    "name": "MKUltra",
-    "canonical_name": "MKUltra",
-    "category": "government_project_codenames",
-    "category_label": "Government project codenames",
-    "count": 59,
-    "confidence": 0.92,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Exposing The Cias Darkest Mind Control",
-      "Former Nsa Director Breaks Silence On Uf",
-      "Meet The Scientist Who Studies Alien Imp",
-      "The Cia Scientist That Contacted An Alie",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "Why Americas Top Scientists Are Going M",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "MKUltra appears as government project codenames with 59 mention(s) across 9 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0001049",
-      "m-0002326",
-      "m-0003322",
-      "m-0003327",
-      "m-0003330",
-      "m-0003331",
-      "m-0003332",
-      "m-0003337"
-    ]
-  },
-  {
-    "id": "whistleblowers:david-grush",
-    "name": "David Grush",
-    "canonical_name": "David Grush",
-    "category": "whistleblowers",
-    "category_label": "Whistleblowers",
-    "count": 56,
-    "confidence": 0.907,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Cia Chief Im A Time Traveler",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Hollywood The Cia And Ufos The History Bey",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "I Was Taken By The Ufo Program As A Kid",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Joe Rogan The Truth About Aliens He Fina",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "David Grush appears as whistleblowers with 56 mention(s) across 15 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000868",
-      "m-0001000",
-      "m-0001001",
-      "m-0001418",
-      "m-0002521",
-      "m-0002791",
-      "m-0002802",
-      "m-0002820"
-    ]
-  },
-  {
-    "id": "chemical_elements:bismuth",
-    "name": "bismuth",
-    "canonical_name": "bismuth",
-    "category": "chemical_elements",
-    "category_label": "Chemical elements",
-    "count": 53,
-    "confidence": 0.92,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Former Nsa Director Breaks Silence On Uf",
-      "Nasa Chief We Just Built Antigravity Pro",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "bismuth appears as chemical elements with 53 mention(s) across 7 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000527",
-      "m-0000529",
-      "m-0000535",
-      "m-0000539",
-      "m-0000542",
-      "m-0000548",
-      "m-0000552",
-      "m-0000554"
-    ]
-  },
-  {
     "id": "locations:new-york",
     "name": "New York",
     "canonical_name": "New York",
@@ -798,38 +804,6 @@
       "m-0007607",
       "m-0007609",
       "m-0010208"
-    ]
-  },
-  {
-    "id": "materials:bismuth",
-    "name": "bismuth",
-    "canonical_name": "bismuth",
-    "category": "materials",
-    "category_label": "Materials",
-    "count": 53,
-    "confidence": 0.92,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Former Nsa Director Breaks Silence On Uf",
-      "Nasa Chief We Just Built Antigravity Pro",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "bismuth appears as materials with 53 mention(s) across 7 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000526",
-      "m-0000528",
-      "m-0000534",
-      "m-0000538",
-      "m-0000541",
-      "m-0000546",
-      "m-0000550",
-      "m-0000553"
     ]
   },
   {
@@ -1237,6 +1211,39 @@
     ]
   },
   {
+    "id": "materials:magnesium",
+    "name": "magnesium",
+    "canonical_name": "magnesium",
+    "category": "materials",
+    "category_label": "Materials",
+    "count": 42,
+    "confidence": 0.92,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Breaking Brazils Defense Minister Says",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Mit Scientist Your Brain Evolved To Igno",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "magnesium appears as materials with 42 mention(s) across 8 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0000607",
+      "m-0000609",
+      "m-0001215",
+      "m-0001216",
+      "m-0001217",
+      "m-0001218",
+      "m-0001219",
+      "m-0001220"
+    ]
+  },
+  {
     "id": "military_bases:vandenberg-air-force-base",
     "name": "Vandenberg Air Force Base",
     "canonical_name": "Vandenberg Air Force Base",
@@ -1590,38 +1597,6 @@
     ]
   },
   {
-    "id": "journalists:george-knapp",
-    "name": "George Knapp",
-    "canonical_name": "George Knapp",
-    "category": "journalists",
-    "category_label": "Journalists",
-    "count": 34,
-    "confidence": 0.913,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Hollywood The Cia And Ufos The History Bey",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "The Pentagons Ufo Program Is Real Here",
-      "Theres A Ufo On The Seafloor Treasure H"
-    ],
-    "significance": "George Knapp appears as journalists with 34 mention(s) across 6 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000223",
-      "m-0000227",
-      "m-0000282",
-      "m-0000330",
-      "m-0000332",
-      "m-0000335",
-      "m-0000377",
-      "m-0000379"
-    ]
-  },
-  {
     "id": "theories:time-travel",
     "name": "time travel",
     "canonical_name": "time travel",
@@ -1657,38 +1632,69 @@
     ]
   },
   {
-    "id": "government_project_codenames:mk-ultra",
-    "name": "MK ultra",
-    "canonical_name": "MK ultra",
-    "category": "government_project_codenames",
-    "category_label": "Government project codenames",
+    "id": "whistleblowers:george-knapp",
+    "name": "George Knapp",
+    "canonical_name": "George Knapp",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
+    "count": 34,
+    "confidence": 0.913,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Hollywood The Cia And Ufos The History Bey",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "The Pentagons Ufo Program Is Real Here",
+      "Theres A Ufo On The Seafloor Treasure H"
+    ],
+    "significance": "George Knapp appears as whistleblowers with 34 mention(s) across 6 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000223",
+      "m-0000227",
+      "m-0000282",
+      "m-0000330",
+      "m-0000332",
+      "m-0000335",
+      "m-0000377",
+      "m-0000379"
+    ]
+  },
+  {
+    "id": "document_names:majestic-12",
+    "name": "majestic 12",
+    "canonical_name": "majestic 12",
+    "category": "document_names",
+    "category_label": "Document names",
     "count": 33,
     "confidence": 0.92,
     "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
       "Cia Historian Aliens Are Controlling Hum",
-      "Exposing The Cias Darkest Mind Control",
-      "I Was Taken By The Ufo Program As A Kid",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Joe Rogan The Truth About Aliens He Fina",
-      "Meet The Scientist Who Studies Alien Imp",
-      "The Bizarre Alien Abduction Details The",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret",
-      "We Captured A 12 Foot Giant In Afghanist"
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Hollywood The Cia And Ufos The History Bey",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Americas Top Scientists Are Going M"
     ],
-    "significance": "MK ultra appears as government project codenames with 33 mention(s) across 10 transcripts; detected by gazetteer.",
+    "significance": "majestic 12 appears as document names with 33 mention(s) across 9 transcripts; detected by gazetteer.",
     "detectors": [
       "gazetteer"
     ],
     "evidence_ids": [
-      "m-0002159",
-      "m-0002161",
-      "m-0002470",
-      "m-0003487",
-      "m-0005535",
-      "m-0005711",
-      "m-0005977",
-      "m-0006003"
+      "m-0000441",
+      "m-0002466",
+      "m-0002467",
+      "m-0002468",
+      "m-0002471",
+      "m-0002473",
+      "m-0002475",
+      "m-0002478"
     ]
   },
   {
@@ -2246,6 +2252,38 @@
     ]
   },
   {
+    "id": "alien_species:greys",
+    "name": "greys",
+    "canonical_name": "greys",
+    "category": "alien_species",
+    "category_label": "Alien species",
+    "count": 23,
+    "confidence": 0.92,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "I Operated A Ufo Its Not What You Think",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Meet The Scientist Who Studies Alien Imp",
+      "Theres A Ufo On The Seafloor Treasure H",
+      "We Captured A 12 Foot Giant In Afghanist"
+    ],
+    "significance": "greys appears as alien species with 23 mention(s) across 7 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0002216",
+      "m-0004796",
+      "m-0004798",
+      "m-0004799",
+      "m-0004818",
+      "m-0004819",
+      "m-0005038",
+      "m-0005039"
+    ]
+  },
+  {
     "id": "chemical_elements:copper",
     "name": "copper",
     "canonical_name": "copper",
@@ -2281,37 +2319,6 @@
       "m-0003727",
       "m-0003780",
       "m-0006067"
-    ]
-  },
-  {
-    "id": "document_names:majestic-12",
-    "name": "majestic 12",
-    "canonical_name": "majestic 12",
-    "category": "document_names",
-    "category_label": "Document names",
-    "count": 23,
-    "confidence": 0.92,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum",
-      "Hollywood The Cia And Ufos The History Bey",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "majestic 12 appears as document names with 23 mention(s) across 6 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0002544",
-      "m-0004066",
-      "m-0004067",
-      "m-0004078",
-      "m-0004128",
-      "m-0004137",
-      "m-0004158",
-      "m-0004159"
     ]
   },
   {
@@ -2378,37 +2385,6 @@
     ]
   },
   {
-    "id": "alien_species:greys",
-    "name": "greys",
-    "canonical_name": "greys",
-    "category": "alien_species",
-    "category_label": "Alien species",
-    "count": 22,
-    "confidence": 0.92,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "I Operated A Ufo Its Not What You Think",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Meet The Scientist Who Studies Alien Imp",
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "greys appears as alien species with 22 mention(s) across 6 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0002216",
-      "m-0004796",
-      "m-0004798",
-      "m-0004799",
-      "m-0004818",
-      "m-0004819",
-      "m-0005038",
-      "m-0005039"
-    ]
-  },
-  {
     "id": "whistleblowers:robert-hastings",
     "name": "Robert Hastings",
     "canonical_name": "Robert Hastings",
@@ -2441,39 +2417,6 @@
       "m-0001420",
       "m-0001762",
       "m-0004411"
-    ]
-  },
-  {
-    "id": "chemical_elements:magnesium",
-    "name": "magnesium",
-    "canonical_name": "magnesium",
-    "category": "chemical_elements",
-    "category_label": "Chemical elements",
-    "count": 21,
-    "confidence": 0.92,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Breaking Brazils Defense Minister Says",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Mit Scientist Your Brain Evolved To Igno",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "magnesium appears as chemical elements with 21 mention(s) across 8 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000609",
-      "m-0001216",
-      "m-0001218",
-      "m-0001220",
-      "m-0002949",
-      "m-0006524",
-      "m-0006526",
-      "m-0007112"
     ]
   },
   {
@@ -2566,39 +2509,6 @@
       "m-0001621",
       "m-0001407",
       "m-0001408"
-    ]
-  },
-  {
-    "id": "materials:magnesium",
-    "name": "magnesium",
-    "canonical_name": "magnesium",
-    "category": "materials",
-    "category_label": "Materials",
-    "count": 21,
-    "confidence": 0.92,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Breaking Brazils Defense Minister Says",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Mit Scientist Your Brain Evolved To Igno",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "magnesium appears as materials with 21 mention(s) across 8 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000607",
-      "m-0001215",
-      "m-0001217",
-      "m-0001219",
-      "m-0002948",
-      "m-0006523",
-      "m-0006525",
-      "m-0007110"
     ]
   },
   {
@@ -3574,35 +3484,6 @@
     ]
   },
   {
-    "id": "people:dave-grush",
-    "name": "Dave Grush",
-    "canonical_name": "Dave Grush",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 13,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Hollywood The Cia And Ufos The History Bey",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Dave Grush appears as people and their significance with 13 mention(s) across 4 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000865",
-      "m-0002787",
-      "m-0002942",
-      "m-0004080",
-      "m-0004115",
-      "m-0004133",
-      "m-0004292",
-      "m-0004293"
-    ]
-  },
-  {
     "id": "people:dick-cheney",
     "name": "Dick Cheney",
     "canonical_name": "Dick Cheney",
@@ -3814,6 +3695,39 @@
       "m-0006934",
       "m-0007944",
       "m-0007995"
+    ]
+  },
+  {
+    "id": "friendly_people:harold-malmgren",
+    "name": "Harold Malmgren",
+    "canonical_name": "Harold Malmgren",
+    "category": "friendly_people",
+    "category_label": "Friendly people",
+    "count": 12,
+    "confidence": 0.552,
+    "transcripts": [
+      "100 000 Ufos Are Surrounding Earth Ft To",
+      "Hollywood The Cia And Ufos The History Bey",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "The Cia Scientist That Contacted An Alie",
+      "The Lone Hacker That Found Nasas Secret",
+      "The Pentagons Ufo Program Is Real Here",
+      "Theres A Ufo On The Seafloor Treasure H",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Harold Malmgren appears as friendly people with 12 mention(s) across 8 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004401",
+      "m-0000141",
+      "m-0004124",
+      "m-0004136",
+      "m-0004539",
+      "m-0007634",
+      "m-0007814",
+      "m-0007917"
     ]
   },
   {
@@ -4085,6 +3999,88 @@
     ]
   },
   {
+    "id": "locations:giza-plateau",
+    "name": "Giza Plateau",
+    "canonical_name": "Giza Plateau",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 11,
+    "confidence": 0.54,
+    "transcripts": [
+      "Breaking Massive Energy Grid Found Benea",
+      "Meet The Scientist Who Scanned Beneath T"
+    ],
+    "significance": "Giza Plateau appears as locations with 11 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001315",
+      "m-0001333",
+      "m-0001357",
+      "m-0001358",
+      "m-0001359",
+      "m-0001360",
+      "m-0001361",
+      "m-0001363"
+    ]
+  },
+  {
+    "id": "locations:oak-ridge",
+    "name": "Oak Ridge",
+    "canonical_name": "Oak Ridge",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 11,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Meet The Nuclear Missile Guard Abducted",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "Oak Ridge appears as locations with 11 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002947",
+      "m-0006223",
+      "m-0008381",
+      "m-0008480",
+      "m-0008595",
+      "m-0008778",
+      "m-0008925",
+      "m-0008926"
+    ]
+  },
+  {
+    "id": "locations:secret-mountain",
+    "name": "Secret Mountain",
+    "canonical_name": "Secret Mountain",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 11,
+    "confidence": 0.54,
+    "transcripts": [
+      "I Operated A Ufo Its Not What You Think",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "Secret Mountain appears as locations with 11 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004855",
+      "m-0004997",
+      "m-0010790",
+      "m-0010792",
+      "m-0010793",
+      "m-0010794",
+      "m-0010795",
+      "m-0010796"
+    ]
+  },
+  {
     "id": "people:arthur-young",
     "name": "Arthur Young",
     "canonical_name": "Arthur Young",
@@ -4139,66 +4135,6 @@
       "m-0007949",
       "m-0007953",
       "m-0008697"
-    ]
-  },
-  {
-    "id": "people:giza-plateau",
-    "name": "Giza Plateau",
-    "canonical_name": "Giza Plateau",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 11,
-    "confidence": 0.54,
-    "transcripts": [
-      "Breaking Massive Energy Grid Found Benea",
-      "Meet The Scientist Who Scanned Beneath T"
-    ],
-    "significance": "Giza Plateau appears as people and their significance with 11 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001315",
-      "m-0001333",
-      "m-0001357",
-      "m-0001358",
-      "m-0001359",
-      "m-0001360",
-      "m-0001361",
-      "m-0001363"
-    ]
-  },
-  {
-    "id": "people:harold-malmgren",
-    "name": "Harold Malmgren",
-    "canonical_name": "Harold Malmgren",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 11,
-    "confidence": 0.54,
-    "transcripts": [
-      "100 000 Ufos Are Surrounding Earth Ft To",
-      "Hollywood The Cia And Ufos The History Bey",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "The Cia Scientist That Contacted An Alie",
-      "The Lone Hacker That Found Nasas Secret",
-      "The Pentagons Ufo Program Is Real Here",
-      "Theres A Ufo On The Seafloor Treasure H",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Harold Malmgren appears as people and their significance with 11 mention(s) across 8 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000141",
-      "m-0004124",
-      "m-0004136",
-      "m-0004539",
-      "m-0007634",
-      "m-0007814",
-      "m-0007917",
-      "m-0008493"
     ]
   },
   {
@@ -4262,34 +4198,6 @@
     ]
   },
   {
-    "id": "people:oak-ridge",
-    "name": "Oak Ridge",
-    "canonical_name": "Oak Ridge",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 11,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Meet The Nuclear Missile Guard Abducted",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Oak Ridge appears as people and their significance with 11 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002947",
-      "m-0006223",
-      "m-0008381",
-      "m-0008480",
-      "m-0008595",
-      "m-0008778",
-      "m-0008925",
-      "m-0008926"
-    ]
-  },
-  {
     "id": "people:richard-bissell",
     "name": "Richard Bissell",
     "canonical_name": "Richard Bissell",
@@ -4344,33 +4252,6 @@
       "m-0008484",
       "m-0008983",
       "m-0008989"
-    ]
-  },
-  {
-    "id": "people:secret-mountain",
-    "name": "Secret Mountain",
-    "canonical_name": "Secret Mountain",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 11,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Operated A Ufo Its Not What You Think",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "Secret Mountain appears as people and their significance with 11 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004855",
-      "m-0004997",
-      "m-0010790",
-      "m-0010792",
-      "m-0010793",
-      "m-0010794",
-      "m-0010795",
-      "m-0010796"
     ]
   },
   {
@@ -4515,35 +4396,6 @@
       "m-0008882",
       "m-0009739",
       "m-0010641"
-    ]
-  },
-  {
-    "id": "document_names:mj-12",
-    "name": "MJ-12",
-    "canonical_name": "MJ-12",
-    "category": "document_names",
-    "category_label": "Document names",
-    "count": 10,
-    "confidence": 0.92,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "MJ-12 appears as document names with 10 mention(s) across 4 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000441",
-      "m-0002466",
-      "m-0002467",
-      "m-0002468",
-      "m-0002471",
-      "m-0002473",
-      "m-0002475",
-      "m-0002478"
     ]
   },
   {
@@ -9779,6 +9631,28 @@
     ]
   },
   {
+    "id": "journalists:ross-coldhart",
+    "name": "Ross Coldhart",
+    "canonical_name": "Ross Coldhart",
+    "category": "journalists",
+    "category_label": "Journalists",
+    "count": 4,
+    "confidence": 0.575,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Ross Coldhart appears as journalists with 4 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004123",
+      "m-0004290",
+      "m-0004438",
+      "m-0004445"
+    ]
+  },
+  {
     "id": "journalists:ross-coulthart",
     "name": "Ross Coulthart",
     "canonical_name": "Ross Coulthart",
@@ -14757,27 +14631,6 @@
       "m-0002629",
       "m-0005506",
       "m-0005756"
-    ]
-  },
-  {
-    "id": "people:ross-coldhart",
-    "name": "Ross Coldhart",
-    "canonical_name": "Ross Coldhart",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Ross Coldhart appears as people and their significance with 3 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004290",
-      "m-0004438",
-      "m-0004445"
     ]
   },
   {
@@ -22813,27 +22666,6 @@
     ]
   },
   {
-    "id": "people:so-david-grush",
-    "name": "So David Grush",
-    "canonical_name": "So David Grush",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "If You Knew What I Knew Jeremy Corbell U"
-    ],
-    "significance": "So David Grush appears as people and their significance with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003075",
-      "m-0005623"
-    ]
-  },
-  {
     "id": "people:so-dylan-borland",
     "name": "So Dylan Borland",
     "canonical_name": "So Dylan Borland",
@@ -24746,25 +24578,6 @@
     ],
     "evidence_ids": [
       "m-0002755"
-    ]
-  },
-  {
-    "id": "alien_species:grey",
-    "name": "grey",
-    "canonical_name": "grey",
-    "category": "alien_species",
-    "category_label": "Alien species",
-    "count": 1,
-    "confidence": 0.92,
-    "transcripts": [
-      "Theres A Ufo On The Seafloor Treasure H"
-    ],
-    "significance": "grey appears as alien species with 1 mention(s) across 1 transcript; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0009275"
     ]
   },
   {
@@ -27732,25 +27545,6 @@
     ]
   },
   {
-    "id": "friendly_people:darth-vader",
-    "name": "Darth Vader",
-    "canonical_name": "Darth Vader",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Darth Vader appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002823"
-    ]
-  },
-  {
     "id": "friendly_people:david-jacobs",
     "name": "David Jacobs",
     "canonical_name": "David Jacobs",
@@ -28394,25 +28188,6 @@
     ],
     "evidence_ids": [
       "m-0003397"
-    ]
-  },
-  {
-    "id": "friendly_people:harold-malmgren",
-    "name": "Harold Malmgren",
-    "canonical_name": "Harold Malmgren",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Harold Malmgren appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004401"
     ]
   },
   {
@@ -38635,25 +38410,6 @@
     ],
     "evidence_ids": [
       "m-0004260"
-    ]
-  },
-  {
-    "id": "people:darth-vader",
-    "name": "Darth Vader",
-    "canonical_name": "Darth Vader",
-    "category": "people",
-    "category_label": "People and their significance",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Darth Vader appears as people and their significance with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008354"
     ]
   },
   {
@@ -76809,25 +76565,6 @@
     ]
   },
   {
-    "id": "professors:ross-coldhart",
-    "name": "Ross Coldhart",
-    "canonical_name": "Ross Coldhart",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Ross Coldhart appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004123"
-    ]
-  },
-  {
     "id": "professors:roy-frieden",
     "name": "Roy Frieden",
     "canonical_name": "Roy Frieden",
@@ -77851,25 +77588,6 @@
     ],
     "evidence_ids": [
       "m-0002315"
-    ]
-  },
-  {
-    "id": "whistleblowers:george-knapp",
-    "name": "George Knapp",
-    "canonical_name": "George Knapp",
-    "category": "whistleblowers",
-    "category_label": "Whistleblowers",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "George Knapp appears as whistleblowers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002522"
     ]
   },
   {
