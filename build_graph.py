@@ -2713,21 +2713,25 @@ def render_html() -> str:
       bottom: 12px;
       z-index: 6;
       width: min(440px, calc(100vw - 24px));
+      padding: 0;
+      display: none;
+    }
+    .node-card.open { display: block; }
+    .node-card-body {
       max-height: 42vh;
       overflow-y: auto;
       overflow-x: hidden;
       padding: 12px;
-      display: none;
     }
-    .node-card.open { display: block; }
     .card-close {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: -36px;
+      right: -1px;
       width: 28px;
       height: 28px;
       padding: 0;
       line-height: 1;
+      background: var(--panel);
     }
     .hover-card {
       position: fixed;
@@ -3158,6 +3162,68 @@ def render_html() -> str:
       renderLabelLayer();
     }
 
+    function graphHeaderInsetPx() {
+      const topbar = document.querySelector(".topbar");
+      if (!topbar) return 0;
+      const rect = topbar.getBoundingClientRect();
+      return Math.max(0, Math.ceil(rect.bottom + 18));
+    }
+
+    function fitBoundsToViewport(minX, minY, maxX, maxY, options = {}) {
+      const rect = svg.getBoundingClientRect();
+      const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
+      const rectHeight = Math.max(1, rect.height || svg.clientHeight || 1);
+      const topInset = options.reserveHeader === false ? 0 : graphHeaderInsetPx();
+      const bottomInset = options.bottomInsetPx ?? 24;
+      const leftInset = options.leftInsetPx ?? 0;
+      const rightInset = options.rightInsetPx ?? 0;
+      const padding = options.padding ?? 0;
+      const availableW = Math.max(240, rectWidth - leftInset - rightInset);
+      const availableH = Math.max(180, rectHeight - topInset - bottomInset);
+      const paddedMinX = minX - padding;
+      const paddedMinY = minY - padding;
+      const paddedMaxX = maxX + padding;
+      const paddedMaxY = maxY + padding;
+      const contentW = Math.max(1, paddedMaxX - paddedMinX);
+      const contentH = Math.max(1, paddedMaxY - paddedMinY);
+      const ratio = rectWidth / rectHeight;
+      let scale = Math.min(availableW / contentW, availableH / contentH);
+      if (!Number.isFinite(scale) || scale <= 0) scale = 1;
+      let width = clamp(rectWidth / scale, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
+      let height = width / ratio;
+      if (height < MIN_ZOOM_HEIGHT) {
+        height = MIN_ZOOM_HEIGHT;
+        width = height * ratio;
+      }
+      if (height > MAX_ZOOM_HEIGHT) {
+        height = MAX_ZOOM_HEIGHT;
+        width = height * ratio;
+      }
+      const actualScale = rectWidth / width;
+      const contentCx = (paddedMinX + paddedMaxX) / 2;
+      const contentCy = (paddedMinY + paddedMaxY) / 2;
+      const availableCenterX = leftInset + availableW / 2;
+      const availableCenterY = topInset + availableH / 2;
+      setViewBox(
+        contentCx - availableCenterX / actualScale,
+        contentCy - availableCenterY / actualScale,
+        width,
+        height
+      );
+    }
+
+    function fitNodesToViewport(nodes, options = {}) {
+      const items = nodes.filter(Boolean);
+      if (!items.length) return;
+      fitBoundsToViewport(
+        Math.min(...items.map((node) => node.x - (node.r || 0))),
+        Math.min(...items.map((node) => node.y - (node.r || 0))),
+        Math.max(...items.map((node) => node.x + (node.r || 0))),
+        Math.max(...items.map((node) => node.y + (node.r || 0))),
+        options
+      );
+    }
+
     function fit() {
       setViewBox(0, -250, 2200, 2000);
     }
@@ -3179,17 +3245,7 @@ def render_html() -> str:
       const maxX = Math.max(...items.map((node) => node.x + node.r)) + xPad;
       const minY = Math.min(...items.map((node) => node.y - node.r)) - topPad;
       const maxY = Math.max(...items.map((node) => node.y + node.r)) + bottomPad;
-      const svgRatio = svg.clientWidth && svg.clientHeight ? svg.clientWidth / svg.clientHeight : viewBox.w / viewBox.h;
-      const cx = (minX + maxX) / 2;
-      const cy = (minY + maxY) / 2;
-      let width = maxX - minX;
-      let height = maxY - minY;
-      if (width / height < svgRatio) {
-        width = height * svgRatio;
-      } else {
-        height = width / svgRatio;
-      }
-      setViewBox(cx - width / 2, cy - height / 2, width, height);
+      fitBoundsToViewport(minX, minY, maxX, maxY, { reserveHeader: true, bottomInsetPx: 32 });
     }
 
     function setCornerLabel(title, detail) {
@@ -3472,7 +3528,7 @@ def render_html() -> str:
       wireEntityNodes();
       wireCategoryNodes();
       wireCategoryListNodes();
-      setViewBox(activeCategoryNode.x - 1260, activeCategoryNode.y - 940, 2520, 1880);
+      fitNodesToViewport([activeCategoryNode].concat(nodes), { padding: 260, reserveHeader: true, bottomInsetPx: 32 });
     }
 
     function renderCategoryGrid(categoryId) {
@@ -3590,17 +3646,7 @@ def render_html() -> str:
       const minY = offsetY - padding;
       const maxX = offsetX + atlasWidth + padding;
       const maxY = offsetY + atlasHeight + padding;
-      const svgRatio = svg.clientWidth && svg.clientHeight ? svg.clientWidth / svg.clientHeight : viewBox.w / viewBox.h;
-      let width = maxX - minX;
-      let height = maxY - minY;
-      const cx = (minX + maxX) / 2;
-      const cy = (minY + maxY) / 2;
-      if (width / height < svgRatio) {
-        width = height * svgRatio;
-      } else {
-        height = width / svgRatio;
-      }
-      setViewBox(cx - width / 2, cy - height / 2, width, height);
+      fitBoundsToViewport(minX, minY, maxX, maxY, { reserveHeader: true, bottomInsetPx: 32 });
     }
 
     function entityGraphScore(entity) {
@@ -3879,7 +3925,7 @@ def render_html() -> str:
       cardEl.classList.add("open");
       cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
-        '<h2 id="card-title">' + esc(entity.name) + '</h2>' +
+        '<div class="node-card-body"><h2 id="card-title">' + esc(entity.name) + '</h2>' +
         '<p><span class="tag">' + esc(entity.topCategoryLabel) + '</span> <span class="tag">' + esc(entity.categoryLabel) + '</span> ' + (entity.count || 0).toLocaleString() + ' mentions · ' + Math.round((entity.confidence || 0) * 100) + '% confidence</p>' +
         '<p>' + esc(entity.significance || "") + '</p>' +
         '<h3>Transcript snippets</h3>' +
@@ -3899,7 +3945,7 @@ def render_html() -> str:
         '<h3 class="action-heading false-positive-heading">False positive</h3>' +
         '<div class="card-actions false-positive-actions"><button id="false-positive">Mark false positive</button></div>' +
         '<h3 class="merge-heading">Merge duplicate</h3>' +
-        '<div class="card-actions"><label class="card-field"><span>Find entity to merge into</span><input id="merge-target-search" type="search" autocomplete="off" aria-controls="merge-results" placeholder="Search by name or category"></label><div id="merge-results" class="merge-results" aria-label="Merge target results">' + mergeResultButtons(entity) + '</div><button id="merge-entity" disabled>Merge</button></div>';
+        '<div class="card-actions"><label class="card-field"><span>Find entity to merge into</span><input id="merge-target-search" type="search" autocomplete="off" aria-controls="merge-results" placeholder="Search by name or category"></label><div id="merge-results" class="merge-results" aria-label="Merge target results">' + mergeResultButtons(entity) + '</div><button id="merge-entity" disabled>Merge</button></div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;
@@ -4026,7 +4072,7 @@ def render_html() -> str:
       cardEl.classList.add("open");
       cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
-        '<h2 id="card-title">' + esc(label) + '</h2>' +
+        '<div class="node-card-body"><h2 id="card-title">' + esc(label) + '</h2>' +
         '<p><span class="tag">' + esc(label) + '</span> ' + entities.length.toLocaleString() + ' entities · ' + mentions.toLocaleString() + ' mentions</p>' +
         '<h3>All entities</h3>' +
         '<div class="entity-directory">' + entities.map((entity) => {
@@ -4034,7 +4080,7 @@ def render_html() -> str:
             esc(entity.name) +
             '<div class="meta">' + esc(entity.categoryLabel) + ' · ' + (entity.count || 0).toLocaleString() + ' mentions</div>' +
           '</button>';
-        }).join("") + '</div>';
+        }).join("") + '</div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;
@@ -4053,13 +4099,13 @@ def render_html() -> str:
       cardEl.classList.add("open");
       cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
-        '<h2 id="card-title">' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
+        '<div class="node-card-body"><h2 id="card-title">' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
         '<p><span class="tag">' + esc(relationship.type) + '</span> weight ' + relationship.weight.toLocaleString() + ' · ' + Math.round((relationship.confidence || 0) * 100) + '% confidence</p>' +
         '<h3>Relationship evidence</h3>' +
         (evidence.length ? evidence.map((item) => {
           return '<div class="evidence"><div class="meta">' + esc(item.transcript) + ' · ' + esc(item.timestamp) + ' · ' + esc(item.reason) + '</div><div>' + esc(item.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No relationship snippets available.</div>') +
-        '<div class="card-actions"><button data-card-entity="' + esc(relationship.source) + '">' + esc(source ? source.name : "Source") + '</button><button data-card-entity="' + esc(relationship.target) + '">' + esc(target ? target.name : "Target") + '</button></div>';
+        '<div class="card-actions"><button data-card-entity="' + esc(relationship.source) + '">' + esc(source ? source.name : "Source") + '</button><button data-card-entity="' + esc(relationship.target) + '">' + esc(target ? target.name : "Target") + '</button></div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;

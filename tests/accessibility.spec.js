@@ -74,6 +74,55 @@ test("direct relationship graph renders one label per entity", async ({ page }) 
   expect(duplicates).toEqual([]);
 });
 
+test("category drill-in fits below the fixed header", async ({ page }) => {
+  await page.goto("/");
+
+  const category = page.locator(".html-graph-label[data-label-category]").first();
+  await expect(category).toBeVisible({ timeout: 15000 });
+  await category.click();
+  await expect(page.locator("#status")).toContainText("select an entity");
+
+  const overlap = await page.evaluate(() => {
+    const topbar = document.querySelector(".topbar");
+    const labels = Array.from(document.querySelectorAll(".html-graph-label"));
+    const headerBottom = topbar ? topbar.getBoundingClientRect().bottom : 0;
+    return labels
+      .map((label) => label.getBoundingClientRect())
+      .filter((rect) => rect.width > 0 && rect.height > 0)
+      .some((rect) => rect.top < headerBottom + 4);
+  });
+  expect(overlap).toBe(false);
+});
+
+test("info card close button stays outside the scrollable body", async ({ page }) => {
+  await page.goto("/");
+
+  const search = page.getByRole("searchbox", { name: "Search entity or category" });
+  await search.fill("CIA");
+  await search.press("Enter");
+
+  const details = page.locator("#node-card");
+  const body = details.locator(".node-card-body");
+  await expect(details).toBeVisible();
+  await expect(body).toBeVisible();
+
+  await body.evaluate((element) => {
+    element.scrollTop = element.scrollHeight;
+  });
+
+  const close = page.getByRole("button", { name: "Close info window" });
+  await expect(close).toBeVisible();
+  const closeOutsideBody = await close.evaluate((button) => {
+    const buttonRect = button.getBoundingClientRect();
+    const bodyRect = document.querySelector(".node-card-body").getBoundingClientRect();
+    return buttonRect.bottom <= bodyRect.top;
+  });
+  expect(closeOutsideBody).toBe(true);
+
+  await close.click();
+  await expect(details).not.toBeVisible();
+});
+
 test("baked reclass decisions are removed from browser review state", async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem("uap-relationship-graph-reclass", JSON.stringify({
