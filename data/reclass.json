@@ -345,7 +345,11 @@
     "new hampshire": "locations",
     "portsmouth": "locations",
     "hawley engineering building": "university_departments",
-    "philip j. corso": "people"
+    "philip j. corso": "people",
+    "when september": "dates_times",
+    "on december": "dates_times",
+    "in portsmouth": "locations",
+    "philip j corso": "people"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {

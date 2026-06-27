@@ -1379,6 +1379,49 @@
     ]
   },
   {
+    "id": "locations:new-mexico",
+    "name": "New Mexico",
+    "canonical_name": "New Mexico",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 48,
+    "confidence": 0.912,
+    "transcripts": [
+      "100 000 Ufos Are Surrounding Earth Ft To",
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Aliens Invented Religion To Control Huma",
+      "Army Captures Live Alien Hospital Report",
+      "Breaking Brazils Defense Minister Says",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Dmt Opens The Alien Realm Neuroscientist",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "I Operated A Ufo Its Not What You Think",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Meet The Scientist Who Studies Alien Imp",
+      "The Cia Scientist That Contacted An Alie",
+      "The Pentagons Ufo Program Is Real Here",
+      "Theres A Ufo On The Seafloor Treasure H",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "New Mexico appears as locations with 48 mention(s) across 17 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000093",
+      "m-0000464",
+      "m-0000465",
+      "m-0000470",
+      "m-0000776",
+      "m-0001225",
+      "m-0001342",
+      "m-0001344"
+    ]
+  },
+  {
     "id": "military_bases:vandenberg-air-force-base",
     "name": "Vandenberg Air Force Base",
     "canonical_name": "Vandenberg Air Force Base",
@@ -1451,48 +1494,6 @@
       "m-0000469",
       "m-0000478",
       "m-0000960"
-    ]
-  },
-  {
-    "id": "locations:new-mexico",
-    "name": "New Mexico",
-    "canonical_name": "New Mexico",
-    "category": "locations",
-    "category_label": "Locations",
-    "count": 47,
-    "confidence": 0.92,
-    "transcripts": [
-      "100 000 Ufos Are Surrounding Earth Ft To",
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Aliens Invented Religion To Control Huma",
-      "Army Captures Live Alien Hospital Report",
-      "Breaking Brazils Defense Minister Says",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Dmt Opens The Alien Realm Neuroscientist",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "I Found Hitlers Secret Ufo Program Jaso",
-      "I Operated A Ufo Its Not What You Think",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Meet The Scientist Who Studies Alien Imp",
-      "The Cia Scientist That Contacted An Alie",
-      "The Pentagons Ufo Program Is Real Here",
-      "Theres A Ufo On The Seafloor Treasure H",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "New Mexico appears as locations with 47 mention(s) across 17 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0000093",
-      "m-0000464",
-      "m-0000465",
-      "m-0000470",
-      "m-0000776",
-      "m-0001225",
-      "m-0001342",
-      "m-0001344"
     ]
   },
   {
@@ -2094,11 +2095,11 @@
     ]
   },
   {
-    "id": "people:eric-davis",
+    "id": "whistleblowers:eric-davis",
     "name": "Eric Davis",
     "canonical_name": "Eric Davis",
-    "category": "people",
-    "category_label": "People",
+    "category": "whistleblowers",
+    "category_label": "Whistleblowers",
     "count": 40,
     "confidence": 0.73,
     "transcripts": [
@@ -2109,7 +2110,7 @@
       "Nasa Chief We Just Built Antigravity Pro",
       "The Pentagons Ufo Program Is Real Here"
     ],
-    "significance": "Eric Davis appears as people with 40 mention(s) across 6 transcripts; detected by gazetteer, heuristic:person_name.",
+    "significance": "Eric Davis appears as whistleblowers with 40 mention(s) across 6 transcripts; detected by gazetteer, heuristic:person_name.",
     "detectors": [
       "gazetteer",
       "heuristic:person_name"
@@ -2788,6 +2789,36 @@
     ]
   },
   {
+    "id": "people:tim-taylor",
+    "name": "Tim Taylor",
+    "canonical_name": "Tim Taylor",
+    "category": "people",
+    "category_label": "People",
+    "count": 26,
+    "confidence": 0.54,
+    "transcripts": [
+      "Nasa Whistleblower We Systematically Sup",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Tim Taylor appears as people with 26 mention(s) across 5 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008552",
+      "m-0010318",
+      "m-0010415",
+      "m-0011140",
+      "m-0011152",
+      "m-0011154",
+      "m-0011155",
+      "m-0011752"
+    ]
+  },
+  {
     "id": "locations:florida",
     "name": "Florida",
     "canonical_name": "Florida",
@@ -2820,36 +2851,6 @@
       "m-0002866",
       "m-0003064",
       "m-0003065"
-    ]
-  },
-  {
-    "id": "people:tim-taylor",
-    "name": "Tim Taylor",
-    "canonical_name": "Tim Taylor",
-    "category": "people",
-    "category_label": "People",
-    "count": 25,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "The Pentagons Ufo Program Is Real Here",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Tim Taylor appears as people with 25 mention(s) across 5 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008552",
-      "m-0010318",
-      "m-0010415",
-      "m-0011140",
-      "m-0011152",
-      "m-0011154",
-      "m-0011155",
-      "m-0011752"
     ]
   },
   {
@@ -3076,6 +3077,36 @@
     ]
   },
   {
+    "id": "dangerous_people:lee-harvey-oswald",
+    "name": "Lee Harvey Oswald",
+    "canonical_name": "Lee Harvey Oswald",
+    "category": "dangerous_people",
+    "category_label": "Dangerous people",
+    "count": 21,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Cia Historian Aliens Are Controlling Hum",
+      "Exposing The Cias Darkest Mind Control",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Lee Harvey Oswald appears as dangerous people with 21 mention(s) across 5 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001089",
+      "m-0002415",
+      "m-0002440",
+      "m-0002478",
+      "m-0002522",
+      "m-0002646",
+      "m-0002647",
+      "m-0004036"
+    ]
+  },
+  {
     "id": "locations:mount-athos",
     "name": "Mount Athos",
     "canonical_name": "Mount Athos",
@@ -3130,36 +3161,6 @@
       "m-0000875",
       "m-0002799",
       "m-0002800"
-    ]
-  },
-  {
-    "id": "people:lee-harvey-oswald",
-    "name": "Lee Harvey Oswald",
-    "canonical_name": "Lee Harvey Oswald",
-    "category": "people",
-    "category_label": "People",
-    "count": 21,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Cia Historian Aliens Are Controlling Hum",
-      "Exposing The Cias Darkest Mind Control",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Lee Harvey Oswald appears as people with 21 mention(s) across 5 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001089",
-      "m-0002415",
-      "m-0002440",
-      "m-0002478",
-      "m-0002522",
-      "m-0002646",
-      "m-0002647",
-      "m-0004036"
     ]
   },
   {
@@ -4589,6 +4590,37 @@
     ]
   },
   {
+    "id": "locations:new-jersey",
+    "name": "New Jersey",
+    "canonical_name": "New Jersey",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 13,
+    "confidence": 0.551,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum",
+      "Hollywood The Cia And Ufos The History Bey",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Meet The Startup Summoning Ufos Skywatch",
+      "My Hospital Operated On An Alien Top Sur",
+      "The Defense Secretary Killed Over Ufos F"
+    ],
+    "significance": "New Jersey appears as locations with 13 mention(s) across 6 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002343",
+      "m-0002839",
+      "m-0002872",
+      "m-0004913",
+      "m-0004914",
+      "m-0004915",
+      "m-0004916",
+      "m-0004917"
+    ]
+  },
+  {
     "id": "people:barney-hill",
     "name": "Barney Hill",
     "canonical_name": "Barney Hill",
@@ -4649,6 +4681,40 @@
     ]
   },
   {
+    "id": "professors:diana-pasulka",
+    "name": "Diana Pasulka",
+    "canonical_name": "Diana Pasulka",
+    "category": "professors",
+    "category_label": "Professors",
+    "count": 13,
+    "confidence": 0.591,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Cia Chief Im A Time Traveler",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "Diana Pasulka appears as professors with 13 mention(s) across 8 transcripts; detected by gazetteer, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002123",
+      "m-0002124",
+      "m-0012459",
+      "m-0000713",
+      "m-0006802",
+      "m-0008549",
+      "m-0010219",
+      "m-0011751"
+    ]
+  },
+  {
     "id": "research_groups:mufon",
     "name": "MUFON",
     "canonical_name": "MUFON",
@@ -4705,6 +4771,36 @@
       "m-0002625",
       "m-0002841",
       "m-0004941"
+    ]
+  },
+  {
+    "id": "experiencers:john-mack",
+    "name": "John Mack",
+    "canonical_name": "John Mack",
+    "category": "experiencers",
+    "category_label": "Experiencers",
+    "count": 12,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Dmt Opens The Alien Realm Neuroscientist",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "John Mack appears as experiencers with 12 mention(s) across 5 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000758",
+      "m-0003146",
+      "m-0003156",
+      "m-0003161",
+      "m-0003164",
+      "m-0010303",
+      "m-0011698",
+      "m-0011701"
     ]
   },
   {
@@ -4921,67 +5017,6 @@
       "m-0003436",
       "m-0003439",
       "m-0006405"
-    ]
-  },
-  {
-    "id": "people:john-mack",
-    "name": "John Mack",
-    "canonical_name": "John Mack",
-    "category": "people",
-    "category_label": "People",
-    "count": 12,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Dmt Opens The Alien Realm Neuroscientist",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "John Mack appears as people with 12 mention(s) across 5 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000758",
-      "m-0003146",
-      "m-0003156",
-      "m-0003161",
-      "m-0003164",
-      "m-0010303",
-      "m-0011698",
-      "m-0011701"
-    ]
-  },
-  {
-    "id": "people:new-jersey",
-    "name": "New Jersey",
-    "canonical_name": "New Jersey",
-    "category": "people",
-    "category_label": "People",
-    "count": 12,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum",
-      "Hollywood The Cia And Ufos The History Bey",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Meet The Startup Summoning Ufos Skywatch",
-      "My Hospital Operated On An Alien Top Sur",
-      "The Defense Secretary Killed Over Ufos F"
-    ],
-    "significance": "New Jersey appears as people with 12 mention(s) across 6 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002839",
-      "m-0002872",
-      "m-0004913",
-      "m-0004914",
-      "m-0004915",
-      "m-0004916",
-      "m-0004917",
-      "m-0006756"
     ]
   },
   {
@@ -5568,6 +5603,35 @@
     ]
   },
   {
+    "id": "locations:long-island",
+    "name": "Long Island",
+    "canonical_name": "Long Island",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 10,
+    "confidence": 0.54,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "The Defense Secretary Killed Over Ufos F"
+    ],
+    "significance": "Long Island appears as locations with 10 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000188",
+      "m-0003734",
+      "m-0007020",
+      "m-0007021",
+      "m-0007037",
+      "m-0009847",
+      "m-0009851",
+      "m-0009852"
+    ]
+  },
+  {
     "id": "locations:new-orleans",
     "name": "New Orleans",
     "canonical_name": "New Orleans",
@@ -5650,6 +5714,40 @@
     ]
   },
   {
+    "id": "military_bases:wright-patterson-air-force-base",
+    "name": "Wright-Patterson Air Force base",
+    "canonical_name": "Wright-Patterson Air Force base",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 10,
+    "confidence": 0.704,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Ebe 3 John Lear Ebe 3 At 4 Min",
+      "If You Knew What I Knew Jeremy Corbell U",
+      "Nasa Chief We Just Built Antigravity Pro",
+      "The Defense Secretary Killed Over Ufos F",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Wright-Patterson Air Force base appears as military bases with 10 mention(s) across 7 transcripts; detected by gazetteer, heuristic:military_organization, heuristic:person_name.",
+    "detectors": [
+      "gazetteer",
+      "heuristic:military_organization",
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003427",
+      "m-0009689",
+      "m-0003428",
+      "m-0009690",
+      "m-0011962",
+      "m-0008244",
+      "m-0011748",
+      "m-0000502"
+    ]
+  },
+  {
     "id": "people:chris-ramsey",
     "name": "Chris Ramsey",
     "canonical_name": "Chris Ramsey",
@@ -5713,38 +5811,6 @@
     ]
   },
   {
-    "id": "people:diana-posolka",
-    "name": "Diana Posolka",
-    "canonical_name": "Diana Posolka",
-    "category": "people",
-    "category_label": "People",
-    "count": 10,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Nasa Studies This Man He Attracts Uf",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "Diana Posolka appears as people with 10 mention(s) across 7 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000713",
-      "m-0006802",
-      "m-0008549",
-      "m-0010219",
-      "m-0011751",
-      "m-0012408",
-      "m-0012411",
-      "m-0012562"
-    ]
-  },
-  {
     "id": "people:fred-crisman",
     "name": "Fred Crisman",
     "canonical_name": "Fred Crisman",
@@ -5768,35 +5834,6 @@
       "m-0002454",
       "m-0002469",
       "m-0002483"
-    ]
-  },
-  {
-    "id": "people:long-island",
-    "name": "Long Island",
-    "canonical_name": "Long Island",
-    "category": "people",
-    "category_label": "People",
-    "count": 10,
-    "confidence": 0.54,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "The Defense Secretary Killed Over Ufos F"
-    ],
-    "significance": "Long Island appears as people with 10 mention(s) across 4 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000188",
-      "m-0003734",
-      "m-0007020",
-      "m-0007021",
-      "m-0007037",
-      "m-0009847",
-      "m-0009851",
-      "m-0009852"
     ]
   },
   {
@@ -5917,6 +5954,34 @@
       "m-0011164",
       "m-0011331",
       "m-0011332"
+    ]
+  },
+  {
+    "id": "friendly_people:ruth-payne",
+    "name": "Ruth Payne",
+    "canonical_name": "Ruth Payne",
+    "category": "friendly_people",
+    "category_label": "Friendly people",
+    "count": 9,
+    "confidence": 0.54,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum",
+      "Exposing The Cias Darkest Mind Control",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Ruth Payne appears as friendly people with 9 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002413",
+      "m-0002416",
+      "m-0002421",
+      "m-0002429",
+      "m-0004146",
+      "m-0004151",
+      "m-0009012",
+      "m-0009016"
     ]
   },
   {
@@ -6091,40 +6156,6 @@
       "m-0002784",
       "m-0004255",
       "m-0007624"
-    ]
-  },
-  {
-    "id": "military_bases:wright-patterson-air-force-base",
-    "name": "Wright-Patterson Air Force base",
-    "canonical_name": "Wright-Patterson Air Force base",
-    "category": "military_bases",
-    "category_label": "Military bases",
-    "count": 9,
-    "confidence": 0.7,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Ebe 3 John Lear Ebe 3 At 4 Min",
-      "If You Knew What I Knew Jeremy Corbell U",
-      "Nasa Chief We Just Built Antigravity Pro",
-      "The Defense Secretary Killed Over Ufos F",
-      "We Captured A 12 Foot Giant In Afghanist",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Wright-Patterson Air Force base appears as military bases with 9 mention(s) across 7 transcripts; detected by gazetteer, heuristic:military_organization, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:military_organization",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003427",
-      "m-0009689",
-      "m-0003428",
-      "m-0011962",
-      "m-0008244",
-      "m-0011748",
-      "m-0000502",
-      "m-0000504"
     ]
   },
   {
@@ -6413,31 +6444,37 @@
     ]
   },
   {
-    "id": "people:ruth-payne",
-    "name": "Ruth Payne",
-    "canonical_name": "Ruth Payne",
+    "id": "people:philip-j-corso",
+    "name": "Philip J. Corso",
+    "canonical_name": "Philip J. Corso",
     "category": "people",
     "category_label": "People",
     "count": 9,
-    "confidence": 0.54,
+    "confidence": 0.767,
     "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Army Captures Live Alien Hospital Report",
       "Cia Historian Aliens Are Controlling Hum",
-      "Exposing The Cias Darkest Mind Control",
-      "The Cia Scientist That Contacted An Alie"
+      "I Found Hitlers Secret Ufo Program Jaso",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Joe Rogan The Truth About Aliens He Fina",
+      "Why Nasa Studies This Man He Attracts Uf",
+      "Why The Pentagon Tried To Censor This Uf"
     ],
-    "significance": "Ruth Payne appears as people with 9 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "significance": "Philip J. Corso appears as people with 9 mention(s) across 8 transcripts; detected by gazetteer, heuristic:person_name.",
     "detectors": [
+      "gazetteer",
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0002413",
-      "m-0002416",
-      "m-0002421",
-      "m-0002429",
-      "m-0004146",
-      "m-0004151",
-      "m-0009012",
-      "m-0009016"
+      "m-0000506",
+      "m-0001349",
+      "m-0001353",
+      "m-0007219",
+      "m-0007289",
+      "m-0002657",
+      "m-0005225",
+      "m-0012424"
     ]
   },
   {
@@ -7780,6 +7817,88 @@
     ]
   },
   {
+    "id": "locations:berkeley",
+    "name": "Berkeley",
+    "canonical_name": "Berkeley",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 7,
+    "confidence": 0.92,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey",
+      "The Cia Scientist That Contacted An Alie",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "Berkeley appears as locations with 7 mention(s) across 3 transcripts; detected by gazetteer.",
+    "detectors": [
+      "gazetteer"
+    ],
+    "evidence_ids": [
+      "m-0004978",
+      "m-0004979",
+      "m-0004983",
+      "m-0009273",
+      "m-0009527",
+      "m-0011026",
+      "m-0011031"
+    ]
+  },
+  {
+    "id": "locations:new-hampshire",
+    "name": "New Hampshire",
+    "canonical_name": "New Hampshire",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 7,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "The Man Sitting On More Ufo Evidence Tha",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "New Hampshire appears as locations with 7 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003693",
+      "m-0010147",
+      "m-0010205",
+      "m-0010207",
+      "m-0010215",
+      "m-0012177",
+      "m-0012195"
+    ]
+  },
+  {
+    "id": "military_bases:lawrence-livermore",
+    "name": "Lawrence Livermore",
+    "canonical_name": "Lawrence Livermore",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 7,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Former Nsa Director Breaks Silence On Uf",
+      "The Pentagons Ufo Program Is Real Here",
+      "We Captured A 12 Foot Giant In Afghanist"
+    ],
+    "significance": "Lawrence Livermore appears as military bases with 7 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000767",
+      "m-0004695",
+      "m-0010462",
+      "m-0010685",
+      "m-0010868",
+      "m-0010975",
+      "m-0011592"
+    ]
+  },
+  {
     "id": "people:alan-dulles",
     "name": "Alan Dulles",
     "canonical_name": "Alan Dulles",
@@ -8105,61 +8224,6 @@
     ]
   },
   {
-    "id": "people:lawrence-livermore",
-    "name": "Lawrence Livermore",
-    "canonical_name": "Lawrence Livermore",
-    "category": "people",
-    "category_label": "People",
-    "count": 7,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Former Nsa Director Breaks Silence On Uf",
-      "The Pentagons Ufo Program Is Real Here",
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "Lawrence Livermore appears as people with 7 mention(s) across 4 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000767",
-      "m-0004695",
-      "m-0010462",
-      "m-0010685",
-      "m-0010868",
-      "m-0010975",
-      "m-0011592"
-    ]
-  },
-  {
-    "id": "people:new-hampshire",
-    "name": "New Hampshire",
-    "canonical_name": "New Hampshire",
-    "category": "people",
-    "category_label": "People",
-    "count": 7,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "The Man Sitting On More Ufo Evidence Tha",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "New Hampshire appears as people with 7 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003693",
-      "m-0010147",
-      "m-0010205",
-      "m-0010207",
-      "m-0010215",
-      "m-0012177",
-      "m-0012195"
-    ]
-  },
-  {
     "id": "people:new-year",
     "name": "New Year",
     "canonical_name": "New Year",
@@ -8211,37 +8275,6 @@
       "m-0009168",
       "m-0012701",
       "m-0012746"
-    ]
-  },
-  {
-    "id": "people:philip-j-corso",
-    "name": "Philip J. Corso",
-    "canonical_name": "Philip J. Corso",
-    "category": "people",
-    "category_label": "People",
-    "count": 7,
-    "confidence": 0.811,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Army Captures Live Alien Hospital Report",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Joe Rogan The Truth About Aliens He Fina",
-      "Why Nasa Studies This Man He Attracts Uf",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "Philip J. Corso appears as people with 7 mention(s) across 6 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000506",
-      "m-0001349",
-      "m-0001353",
-      "m-0007219",
-      "m-0007289",
-      "m-0012424",
-      "m-0012949"
     ]
   },
   {
@@ -8377,33 +8410,6 @@
       "m-0005014",
       "m-0011689",
       "m-0012416"
-    ]
-  },
-  {
-    "id": "universities:berkeley",
-    "name": "Berkeley",
-    "canonical_name": "Berkeley",
-    "category": "universities",
-    "category_label": "Universities",
-    "count": 7,
-    "confidence": 0.92,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey",
-      "The Cia Scientist That Contacted An Alie",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Berkeley appears as universities with 7 mention(s) across 3 transcripts; detected by gazetteer.",
-    "detectors": [
-      "gazetteer"
-    ],
-    "evidence_ids": [
-      "m-0004978",
-      "m-0004979",
-      "m-0004983",
-      "m-0009273",
-      "m-0009527",
-      "m-0011026",
-      "m-0011031"
     ]
   },
   {
@@ -8643,6 +8649,56 @@
     ]
   },
   {
+    "id": "locations:rhode-island",
+    "name": "Rhode Island",
+    "canonical_name": "Rhode Island",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 6,
+    "confidence": 0.563,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum",
+      "Nasa Whistleblower We Systematically Sup"
+    ],
+    "significance": "Rhode Island appears as locations with 6 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008649",
+      "m-0002812",
+      "m-0002815",
+      "m-0002816",
+      "m-0002817",
+      "m-0002819"
+    ]
+  },
+  {
+    "id": "locations:stony-brook",
+    "name": "Stony Brook",
+    "canonical_name": "Stony Brook",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 6,
+    "confidence": 0.587,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Nasa Whistleblower We Systematically Sup"
+    ],
+    "significance": "Stony Brook appears as locations with 6 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003738",
+      "m-0003904",
+      "m-0003731",
+      "m-0003920",
+      "m-0008740",
+      "m-0008744"
+    ]
+  },
+  {
     "id": "locations:utah",
     "name": "utah",
     "canonical_name": "utah",
@@ -8667,6 +8723,33 @@
       "m-0011038",
       "m-0011043",
       "m-0013053"
+    ]
+  },
+  {
+    "id": "locations:zora-ranch",
+    "name": "Zora Ranch",
+    "canonical_name": "Zora Ranch",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 6,
+    "confidence": 0.587,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "We Captured A 12 Foot Giant In Afghanist"
+    ],
+    "significance": "Zora Ranch appears as locations with 6 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000974",
+      "m-0011812",
+      "m-0003962",
+      "m-0003965",
+      "m-0006654",
+      "m-0006845"
     ]
   },
   {
@@ -9338,6 +9421,31 @@
     ]
   },
   {
+    "id": "people:ruth-young",
+    "name": "Ruth Young",
+    "canonical_name": "Ruth Young",
+    "category": "people",
+    "category_label": "People",
+    "count": 6,
+    "confidence": 0.54,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Ruth Young appears as people with 6 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002401",
+      "m-0002402",
+      "m-0002409",
+      "m-0002426",
+      "m-0009000",
+      "m-0009002"
+    ]
+  },
+  {
     "id": "people:saudi-arabia",
     "name": "Saudi Arabia",
     "canonical_name": "Saudi Arabia",
@@ -9677,6 +9785,31 @@
     ]
   },
   {
+    "id": "friendly_people:john-mack",
+    "name": "John Mack",
+    "canonical_name": "John Mack",
+    "category": "friendly_people",
+    "category_label": "Friendly people",
+    "count": 5,
+    "confidence": 0.652,
+    "transcripts": [
+      "Dmt Opens The Alien Realm Neuroscientist",
+      "We Captured A 12 Foot Giant In Afghanist",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "John Mack appears as friendly people with 5 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003153",
+      "m-0003155",
+      "m-0011703",
+      "m-0011718",
+      "m-0012491"
+    ]
+  },
+  {
     "id": "government_agencies:united-states-space-force",
     "name": "United States Space Force",
     "canonical_name": "United States Space Force",
@@ -9725,6 +9858,32 @@
       "m-0009652",
       "m-0009666",
       "m-0009976"
+    ]
+  },
+  {
+    "id": "institutes:monroe-institute",
+    "name": "Monroe Institute",
+    "canonical_name": "Monroe Institute",
+    "category": "institutes",
+    "category_label": "Institutes",
+    "count": 5,
+    "confidence": 0.66,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "I Was Taken By The Ufo Program As A Kid",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Monroe Institute appears as institutes with 5 mention(s) across 4 transcripts; detected by heuristic:organization_name.",
+    "detectors": [
+      "heuristic:organization_name"
+    ],
+    "evidence_ids": [
+      "m-0000794",
+      "m-0006290",
+      "m-0007159",
+      "m-0012450",
+      "m-0012668"
     ]
   },
   {
@@ -9826,6 +9985,33 @@
     ]
   },
   {
+    "id": "locations:san-diego",
+    "name": "San Diego",
+    "canonical_name": "San Diego",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 5,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Former Nsa Director Breaks Silence On Uf",
+      "Nasa Whistleblower We Systematically Sup",
+      "The Lone Hacker That Found Nasas Secret",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "San Diego appears as locations with 5 mention(s) across 5 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000766",
+      "m-0004533",
+      "m-0008669",
+      "m-0009953",
+      "m-0012975"
+    ]
+  },
+  {
     "id": "locations:san-francisco",
     "name": "San Francisco",
     "canonical_name": "San Francisco",
@@ -9898,6 +10084,29 @@
     ]
   },
   {
+    "id": "military_bases:camp-david",
+    "name": "Camp David",
+    "canonical_name": "Camp David",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 5,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Camp David appears as military bases with 5 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012567",
+      "m-0012568",
+      "m-0012570",
+      "m-0012571",
+      "m-0012577"
+    ]
+  },
+  {
     "id": "nonprofits:scu",
     "name": "SCU",
     "canonical_name": "SCU",
@@ -9920,6 +10129,31 @@
       "m-0006337",
       "m-0008658",
       "m-0008659"
+    ]
+  },
+  {
+    "id": "people:admiral-thomas-wilson",
+    "name": "Admiral Thomas Wilson",
+    "canonical_name": "Admiral Thomas Wilson",
+    "category": "people",
+    "category_label": "People",
+    "count": 5,
+    "confidence": 0.54,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Army Captures Live Alien Hospital Report",
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "Admiral Thomas Wilson appears as people with 5 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000247",
+      "m-0001402",
+      "m-0003610",
+      "m-0003666",
+      "m-0003839"
     ]
   },
   {
@@ -10119,29 +10353,6 @@
       "m-0011707",
       "m-0011726",
       "m-0011727"
-    ]
-  },
-  {
-    "id": "people:camp-david",
-    "name": "Camp David",
-    "canonical_name": "Camp David",
-    "category": "people",
-    "category_label": "People",
-    "count": 5,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Camp David appears as people with 5 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012567",
-      "m-0012568",
-      "m-0012570",
-      "m-0012571",
-      "m-0012577"
     ]
   },
   {
@@ -10745,6 +10956,32 @@
     ]
   },
   {
+    "id": "people:nikola-tesla",
+    "name": "Nikola Tesla",
+    "canonical_name": "Nikola Tesla",
+    "category": "people",
+    "category_label": "People",
+    "count": 5,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Cia Chief Im A Time Traveler",
+      "Nasa Chief We Just Built Antigravity Pro",
+      "We Captured A 12 Foot Giant In Afghanist"
+    ],
+    "significance": "Nikola Tesla appears as people with 5 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000700",
+      "m-0001999",
+      "m-0008443",
+      "m-0011677",
+      "m-0011838"
+    ]
+  },
+  {
     "id": "people:nuno-lurero",
     "name": "Nuno Lurero",
     "canonical_name": "Nuno Lurero",
@@ -10765,6 +11002,29 @@
       "m-0012197",
       "m-0012199",
       "m-0012277"
+    ]
+  },
+  {
+    "id": "people:patty-hearst",
+    "name": "Patty Hearst",
+    "canonical_name": "Patty Hearst",
+    "category": "people",
+    "category_label": "People",
+    "count": 5,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control"
+    ],
+    "significance": "Patty Hearst appears as people with 5 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004244",
+      "m-0004254",
+      "m-0004259",
+      "m-0004261",
+      "m-0004263"
     ]
   },
   {
@@ -10814,29 +11074,6 @@
       "m-0011642",
       "m-0011978",
       "m-0011990"
-    ]
-  },
-  {
-    "id": "people:rhode-island",
-    "name": "Rhode Island",
-    "canonical_name": "Rhode Island",
-    "category": "people",
-    "category_label": "People",
-    "count": 5,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Rhode Island appears as people with 5 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002812",
-      "m-0002815",
-      "m-0002816",
-      "m-0002817",
-      "m-0002819"
     ]
   },
   {
@@ -10912,57 +11149,6 @@
       "m-0002910",
       "m-0002914",
       "m-0002915"
-    ]
-  },
-  {
-    "id": "people:ruth-forbes-payne-young",
-    "name": "Ruth Forbes Payne Young",
-    "canonical_name": "Ruth Forbes Payne Young",
-    "category": "people",
-    "category_label": "People",
-    "count": 5,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Ruth Forbes Payne Young appears as people with 5 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002401",
-      "m-0002402",
-      "m-0002426",
-      "m-0009000",
-      "m-0009002"
-    ]
-  },
-  {
-    "id": "people:san-diego",
-    "name": "San Diego",
-    "canonical_name": "San Diego",
-    "category": "people",
-    "category_label": "People",
-    "count": 5,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Former Nsa Director Breaks Silence On Uf",
-      "Nasa Whistleblower We Systematically Sup",
-      "The Lone Hacker That Found Nasas Secret",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "San Diego appears as people with 5 mention(s) across 5 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000766",
-      "m-0004533",
-      "m-0008669",
-      "m-0009953",
-      "m-0012975"
     ]
   },
   {
@@ -11305,6 +11491,30 @@
     ]
   },
   {
+    "id": "research_groups:vatican-observatory",
+    "name": "Vatican Observatory",
+    "canonical_name": "Vatican Observatory",
+    "category": "research_groups",
+    "category_label": "Active research groups",
+    "count": 4,
+    "confidence": 0.54,
+    "transcripts": [
+      "100 000 Ufos Are Surrounding Earth Ft To",
+      "Why Nasa Studies This Man He Attracts Uf",
+      "Why The Pentagon Tried To Censor This Uf"
+    ],
+    "significance": "Vatican Observatory appears as active research groups with 4 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000097",
+      "m-0012563",
+      "m-0012565",
+      "m-0012829"
+    ]
+  },
+  {
     "id": "alien_species:reptilian",
     "name": "reptilian",
     "canonical_name": "reptilian",
@@ -11420,6 +11630,29 @@
     ]
   },
   {
+    "id": "friendly_people:lee-harvey-oswald",
+    "name": "Lee Harvey Oswald",
+    "canonical_name": "Lee Harvey Oswald",
+    "category": "friendly_people",
+    "category_label": "Friendly people",
+    "count": 4,
+    "confidence": 0.68,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Lee Harvey Oswald appears as friendly people with 4 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004038",
+      "m-0004269",
+      "m-0004271",
+      "m-0009242"
+    ]
+  },
+  {
     "id": "friendly_people:virgin-mary",
     "name": "Virgin Mary",
     "canonical_name": "Virgin Mary",
@@ -11530,31 +11763,6 @@
       "m-0010658",
       "m-0010703",
       "m-0010718"
-    ]
-  },
-  {
-    "id": "institutes:monroe-institute",
-    "name": "Monroe Institute",
-    "canonical_name": "Monroe Institute",
-    "category": "institutes",
-    "category_label": "Institutes",
-    "count": 4,
-    "confidence": 0.66,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "I Was Taken By The Ufo Program As A Kid",
-      "Jeffrey Epstein Aliens The Global Sata",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Monroe Institute appears as institutes with 4 mention(s) across 4 transcripts; detected by heuristic:organization_name.",
-    "detectors": [
-      "heuristic:organization_name"
-    ],
-    "evidence_ids": [
-      "m-0000794",
-      "m-0006290",
-      "m-0007159",
-      "m-0012668"
     ]
   },
   {
@@ -12997,28 +13205,6 @@
     ]
   },
   {
-    "id": "people:patty-hearst",
-    "name": "Patty Hearst",
-    "canonical_name": "Patty Hearst",
-    "category": "people",
-    "category_label": "People",
-    "count": 4,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Patty Hearst appears as people with 4 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004244",
-      "m-0004259",
-      "m-0004261",
-      "m-0004263"
-    ]
-  },
-  {
     "id": "people:paul-benowitz",
     "name": "Paul Benowitz",
     "canonical_name": "Paul Benowitz",
@@ -13086,6 +13272,31 @@
       "m-0002027",
       "m-0002337",
       "m-0002344"
+    ]
+  },
+  {
+    "id": "people:president-george-w-bush",
+    "name": "President George W. Bush",
+    "canonical_name": "President George W. Bush",
+    "category": "people",
+    "category_label": "People",
+    "count": 4,
+    "confidence": 0.54,
+    "transcripts": [
+      "Cia Chief Im A Time Traveler",
+      "Jeffrey Epstein Aliens The Global Sata",
+      "The Pentagons Ufo Program Is Real Here",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "President George W. Bush appears as people with 4 mention(s) across 4 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001903",
+      "m-0006994",
+      "m-0010731",
+      "m-0012281"
     ]
   },
   {
@@ -13413,29 +13624,6 @@
     ]
   },
   {
-    "id": "people:stony-brook",
-    "name": "Stony Brook",
-    "canonical_name": "Stony Brook",
-    "category": "people",
-    "category_label": "People",
-    "count": 4,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Nasa Whistleblower We Systematically Sup"
-    ],
-    "significance": "Stony Brook appears as people with 4 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003731",
-      "m-0003920",
-      "m-0008740",
-      "m-0008744"
-    ]
-  },
-  {
     "id": "people:stranger-things",
     "name": "Stranger Things",
     "canonical_name": "Stranger Things",
@@ -13625,30 +13813,6 @@
     ]
   },
   {
-    "id": "people:vatican-observatory",
-    "name": "Vatican Observatory",
-    "canonical_name": "Vatican Observatory",
-    "category": "people",
-    "category_label": "People",
-    "count": 4,
-    "confidence": 0.54,
-    "transcripts": [
-      "100 000 Ufos Are Surrounding Earth Ft To",
-      "Why Nasa Studies This Man He Attracts Uf",
-      "Why The Pentagon Tried To Censor This Uf"
-    ],
-    "significance": "Vatican Observatory appears as people with 4 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000097",
-      "m-0012563",
-      "m-0012565",
-      "m-0012829"
-    ]
-  },
-  {
     "id": "people:william-stevenson",
     "name": "William Stevenson",
     "canonical_name": "William Stevenson",
@@ -13670,29 +13834,6 @@
       "m-0007127",
       "m-0007212",
       "m-0009465"
-    ]
-  },
-  {
-    "id": "people:zorro-ranch",
-    "name": "Zorro Ranch",
-    "canonical_name": "Zorro Ranch",
-    "category": "people",
-    "category_label": "People",
-    "count": 4,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Zorro Ranch appears as people with 4 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003962",
-      "m-0003965",
-      "m-0006654",
-      "m-0006845"
     ]
   },
   {
@@ -13787,6 +13928,29 @@
       "m-0004450",
       "m-0004451",
       "m-0004460"
+    ]
+  },
+  {
+    "id": "professors:david-spurgle",
+    "name": "David Spurgle",
+    "canonical_name": "David Spurgle",
+    "category": "professors",
+    "category_label": "Professors",
+    "count": 4,
+    "confidence": 0.575,
+    "transcripts": [
+      "Nasa Whistleblower We Systematically Sup",
+      "The Wall Street Journal Is Lying About U"
+    ],
+    "significance": "David Spurgle appears as professors with 4 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0011406",
+      "m-0008751",
+      "m-0011397",
+      "m-0011404"
     ]
   },
   {
@@ -14131,27 +14295,6 @@
     ]
   },
   {
-    "id": "dangerous_people:lee-harvey-oswald",
-    "name": "Lee Harvey Oswald",
-    "canonical_name": "Lee Harvey Oswald",
-    "category": "dangerous_people",
-    "category_label": "Dangerous people",
-    "count": 3,
-    "confidence": 0.68,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Lee Harvey Oswald appears as dangerous people with 3 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004038",
-      "m-0004269",
-      "m-0004271"
-    ]
-  },
-  {
     "id": "university_departments:harvard-observatory",
     "name": "Harvard Observatory",
     "canonical_name": "Harvard Observatory",
@@ -14280,6 +14423,29 @@
       "m-0004354",
       "m-0005020",
       "m-0010221"
+    ]
+  },
+  {
+    "id": "experiencers:eric-davis",
+    "name": "Eric Davis",
+    "canonical_name": "Eric Davis",
+    "category": "experiencers",
+    "category_label": "Experiencers",
+    "count": 3,
+    "confidence": 0.68,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Army Captures Live Alien Hospital Report",
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "Eric Davis appears as experiencers with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000286",
+      "m-0001458",
+      "m-0003471"
     ]
   },
   {
@@ -14638,6 +14804,29 @@
     ]
   },
   {
+    "id": "locations:bay-area",
+    "name": "Bay Area",
+    "canonical_name": "Bay Area",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 3,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma",
+      "Breaking Brazils Defense Minister Says",
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Bay Area appears as locations with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000716",
+      "m-0001705",
+      "m-0004758"
+    ]
+  },
+  {
     "id": "locations:fukushima-prefecture",
     "name": "Fukushima Prefecture",
     "canonical_name": "Fukushima Prefecture",
@@ -14699,6 +14888,27 @@
       "m-0010593",
       "m-0010595",
       "m-0010614"
+    ]
+  },
+  {
+    "id": "locations:space-kids-camp",
+    "name": "Space Kids Camp",
+    "canonical_name": "Space Kids Camp",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 3,
+    "confidence": 0.54,
+    "transcripts": [
+      "Jeffrey Epstein Aliens The Global Sata"
+    ],
+    "significance": "Space Kids Camp appears as locations with 3 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0007072",
+      "m-0007075",
+      "m-0007076"
     ]
   },
   {
@@ -14853,28 +15063,6 @@
       "m-0011782",
       "m-0011783",
       "m-0011784"
-    ]
-  },
-  {
-    "id": "people:admiral-thomas-wilson",
-    "name": "Admiral Thomas Wilson",
-    "canonical_name": "Admiral Thomas Wilson",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Admiral Thomas Wilson appears as people with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000247",
-      "m-0003610",
-      "m-0003666"
     ]
   },
   {
@@ -15051,29 +15239,6 @@
       "m-0006021",
       "m-0006024",
       "m-0007122"
-    ]
-  },
-  {
-    "id": "people:bay-area",
-    "name": "Bay Area",
-    "canonical_name": "Bay Area",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Breaking Brazils Defense Minister Says",
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Bay Area appears as people with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000716",
-      "m-0001705",
-      "m-0004758"
     ]
   },
   {
@@ -15463,28 +15628,6 @@
     ]
   },
   {
-    "id": "people:david-spurgle",
-    "name": "David Spurgle",
-    "canonical_name": "David Spurgle",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup",
-      "The Wall Street Journal Is Lying About U"
-    ],
-    "significance": "David Spurgle appears as people with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008751",
-      "m-0011397",
-      "m-0011404"
-    ]
-  },
-  {
     "id": "people:dean-johnson",
     "name": "Dean Johnson",
     "canonical_name": "Dean Johnson",
@@ -15788,6 +15931,28 @@
     ]
   },
   {
+    "id": "people:eric-davis",
+    "name": "Eric Davis",
+    "canonical_name": "Eric Davis",
+    "category": "people",
+    "category_label": "People",
+    "count": 3,
+    "confidence": 0.68,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "The Man Sitting On More Ufo Evidence Tha"
+    ],
+    "significance": "Eric Davis appears as people with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003460",
+      "m-0004024",
+      "m-0010322"
+    ]
+  },
+  {
     "id": "people:esther-brooks",
     "name": "Esther Brooks",
     "canonical_name": "Esther Brooks",
@@ -15998,29 +16163,6 @@
       "m-0001015",
       "m-0001044",
       "m-0001048"
-    ]
-  },
-  {
-    "id": "people:george-w-bush",
-    "name": "George W. Bush",
-    "canonical_name": "George W. Bush",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata",
-      "The Pentagons Ufo Program Is Real Here",
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "George W. Bush appears as people with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006994",
-      "m-0010731",
-      "m-0012281"
     ]
   },
   {
@@ -17220,29 +17362,6 @@
     ]
   },
   {
-    "id": "people:nikola-tesla",
-    "name": "Nikola Tesla",
-    "canonical_name": "Nikola Tesla",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma",
-      "Cia Chief Im A Time Traveler",
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "Nikola Tesla appears as people with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000700",
-      "m-0001999",
-      "m-0011677"
-    ]
-  },
-  {
     "id": "people:nima-arkani",
     "name": "Nima Arkani",
     "canonical_name": "Nima Arkani",
@@ -17700,6 +17819,29 @@
     ]
   },
   {
+    "id": "people:russell-targ",
+    "name": "Russell Targ",
+    "canonical_name": "Russell Targ",
+    "category": "people",
+    "category_label": "People",
+    "count": 3,
+    "confidence": 0.587,
+    "transcripts": [
+      "I Operated A Ufo Its Not What You Think",
+      "Meet The Startup Summoning Ufos Skywatch",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Russell Targ appears as people with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0005631",
+      "m-0007891",
+      "m-0008858"
+    ]
+  },
+  {
     "id": "people:russian-federation",
     "name": "Russian Federation",
     "canonical_name": "Russian Federation",
@@ -17890,27 +18032,6 @@
       "m-0002658",
       "m-0002659",
       "m-0009653"
-    ]
-  },
-  {
-    "id": "people:space-kids",
-    "name": "Space Kids",
-    "canonical_name": "Space Kids",
-    "category": "people",
-    "category_label": "People",
-    "count": 3,
-    "confidence": 0.54,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Space Kids appears as people with 3 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007072",
-      "m-0007075",
-      "m-0007076"
     ]
   },
   {
@@ -18563,51 +18684,6 @@
     ]
   },
   {
-    "id": "professors:diana-pasulka",
-    "name": "Diana Pasulka",
-    "canonical_name": "Diana Pasulka",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 3,
-    "confidence": 0.713,
-    "transcripts": [
-      "Cia Chief Im A Time Traveler",
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Diana Pasulka appears as professors with 3 mention(s) across 2 transcripts; detected by gazetteer, heuristic:person_name.",
-    "detectors": [
-      "gazetteer",
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002123",
-      "m-0002124",
-      "m-0012589"
-    ]
-  },
-  {
-    "id": "professors:eric-davis",
-    "name": "Eric Davis",
-    "canonical_name": "Eric Davis",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 3,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "The Man Sitting On More Ufo Evidence Tha"
-    ],
-    "significance": "Eric Davis appears as professors with 3 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003460",
-      "m-0004024",
-      "m-0010322"
-    ]
-  },
-  {
     "id": "professors:eric-hazeltine",
     "name": "Eric Hazeltine",
     "canonical_name": "Eric Hazeltine",
@@ -18912,29 +18988,6 @@
     ]
   },
   {
-    "id": "whistleblowers:eric-davis",
-    "name": "Eric Davis",
-    "canonical_name": "Eric Davis",
-    "category": "whistleblowers",
-    "category_label": "Whistleblowers",
-    "count": 3,
-    "confidence": 0.68,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Army Captures Live Alien Hospital Report",
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Eric Davis appears as whistleblowers with 3 mention(s) across 3 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000286",
-      "m-0001458",
-      "m-0003471"
-    ]
-  },
-  {
     "id": "whistleblowers:john-ramirez",
     "name": "John Ramirez",
     "canonical_name": "John Ramirez",
@@ -19058,6 +19111,26 @@
     ]
   },
   {
+    "id": "companies:earth-tech",
+    "name": "Earth Tech",
+    "canonical_name": "Earth Tech",
+    "category": "companies",
+    "category_label": "Companies",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "Earth Tech appears as companies with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003448",
+      "m-0003467"
+    ]
+  },
+  {
     "id": "companies:fusion-center",
     "name": "Fusion Center",
     "canonical_name": "Fusion Center",
@@ -19137,6 +19210,47 @@
     "evidence_ids": [
       "m-0005179",
       "m-0008356"
+    ]
+  },
+  {
+    "id": "companies:simons-foundation",
+    "name": "Simons Foundation",
+    "canonical_name": "Simons Foundation",
+    "category": "companies",
+    "category_label": "Companies",
+    "count": 2,
+    "confidence": 0.61,
+    "transcripts": [
+      "The Wall Street Journal Is Lying About U"
+    ],
+    "significance": "Simons Foundation appears as companies with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0011405",
+      "m-0011409"
+    ]
+  },
+  {
+    "id": "companies:texas-book-depository",
+    "name": "Texas Book Depository",
+    "canonical_name": "Texas Book Depository",
+    "category": "companies",
+    "category_label": "Companies",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Texas Book Depository appears as companies with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004145",
+      "m-0009017"
     ]
   },
   {
@@ -19221,6 +19335,26 @@
     ]
   },
   {
+    "id": "dates_times:december-20-2025",
+    "name": "December 20, 2025",
+    "canonical_name": "December 20, 2025",
+    "category": "dates_times",
+    "category_label": "Dates and times",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "December 20, 2025 appears as dates and times with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012118",
+      "m-0012180"
+    ]
+  },
+  {
     "id": "dates_times:march-24th-1967",
     "name": "March 24th, 1967",
     "canonical_name": "March 24th, 1967",
@@ -19239,6 +19373,26 @@
     "evidence_ids": [
       "m-0011316",
       "m-0012233"
+    ]
+  },
+  {
+    "id": "university_departments:hawley-engineering-building",
+    "name": "Hawley Engineering Building",
+    "canonical_name": "Hawley Engineering Building",
+    "category": "university_departments",
+    "category_label": "Departments at Universities",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Hawley Engineering Building appears as departments at universities with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012179",
+      "m-0012185"
     ]
   },
   {
@@ -19340,26 +19494,6 @@
     "evidence_ids": [
       "m-0005017",
       "m-0012336"
-    ]
-  },
-  {
-    "id": "experiencers:john-mack",
-    "name": "John Mack",
-    "canonical_name": "John Mack",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 2,
-    "confidence": 0.68,
-    "transcripts": [
-      "Dmt Opens The Alien Realm Neuroscientist"
-    ],
-    "significance": "John Mack appears as experiencers with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003153",
-      "m-0003155"
     ]
   },
   {
@@ -19790,26 +19924,6 @@
     ]
   },
   {
-    "id": "friendly_people:john-mack",
-    "name": "John Mack",
-    "canonical_name": "John Mack",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 2,
-    "confidence": 0.68,
-    "transcripts": [
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "John Mack appears as friendly people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011703",
-      "m-0011718"
-    ]
-  },
-  {
     "id": "friendly_people:ludwig-wittgenstein",
     "name": "Ludwig Wittgenstein",
     "canonical_name": "Ludwig Wittgenstein",
@@ -20180,6 +20294,27 @@
     ]
   },
   {
+    "id": "government_agencies:national-intelligence",
+    "name": "National Intelligence",
+    "canonical_name": "National Intelligence",
+    "category": "government_agencies",
+    "category_label": "Government agencies",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "If You Knew What I Knew Jeremy Corbell U",
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "National Intelligence appears as government agencies with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0006346",
+      "m-0010411"
+    ]
+  },
+  {
     "id": "government_agencies:national-nuclear",
     "name": "National Nuclear",
     "canonical_name": "National Nuclear",
@@ -20466,6 +20601,27 @@
     ]
   },
   {
+    "id": "hoaxers:bart-cybrell",
+    "name": "Bart Cybrell",
+    "canonical_name": "Bart Cybrell",
+    "category": "hoaxers",
+    "category_label": "Hoaxers",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report",
+      "The Cia Scientist That Contacted An Alie"
+    ],
+    "significance": "Bart Cybrell appears as hoaxers with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001429",
+      "m-0009360"
+    ]
+  },
+  {
     "id": "institutes:arlington-institute",
     "name": "Arlington Institute",
     "canonical_name": "Arlington Institute",
@@ -20611,6 +20767,26 @@
     ]
   },
   {
+    "id": "locations:berkeley-hills",
+    "name": "Berkeley Hills",
+    "canonical_name": "Berkeley Hills",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Berkeley Hills appears as locations with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004981",
+      "m-0004984"
+    ]
+  },
+  {
     "id": "locations:big-rock",
     "name": "Big Rock",
     "canonical_name": "Big Rock",
@@ -20732,6 +20908,27 @@
     ]
   },
   {
+    "id": "locations:east-coast",
+    "name": "East Coast",
+    "canonical_name": "East Coast",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "A Weekend With Bob Lazar Inside Area51s",
+      "Cia Historian Aliens Are Controlling Hum"
+    ],
+    "significance": "East Coast appears as locations with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000191",
+      "m-0002870"
+    ]
+  },
+  {
     "id": "locations:foster-ranch",
     "name": "Foster Ranch",
     "canonical_name": "Foster Ranch",
@@ -20793,6 +20990,47 @@
     ]
   },
   {
+    "id": "locations:south-haven",
+    "name": "South Haven",
+    "canonical_name": "South Haven",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Jeffrey Epstein Aliens The Global Sata",
+      "The Defense Secretary Killed Over Ufos F"
+    ],
+    "significance": "South Haven appears as locations with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0007018",
+      "m-0009846"
+    ]
+  },
+  {
+    "id": "locations:walnut-creek",
+    "name": "Walnut Creek",
+    "canonical_name": "Walnut Creek",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Walnut Creek appears as locations with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004759",
+      "m-0004980"
+    ]
+  },
+  {
     "id": "materials:metamaterial",
     "name": "metamaterial",
     "canonical_name": "metamaterial",
@@ -20851,6 +21089,26 @@
     "evidence_ids": [
       "m-0009634",
       "m-0009636"
+    ]
+  },
+  {
+    "id": "military_bases:fort-detrick",
+    "name": "Fort Detrick",
+    "canonical_name": "Fort Detrick",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control"
+    ],
+    "significance": "Fort Detrick appears as military bases with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004103",
+      "m-0004119"
     ]
   },
   {
@@ -21587,27 +21845,6 @@
     ]
   },
   {
-    "id": "people:bart-cybrell",
-    "name": "Bart Cybrell",
-    "canonical_name": "Bart Cybrell",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Bart Cybrell appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001429",
-      "m-0009360"
-    ]
-  },
-  {
     "id": "people:barter-space",
     "name": "Barter Space",
     "canonical_name": "Barter Space",
@@ -21726,26 +21963,6 @@
     "evidence_ids": [
       "m-0003035",
       "m-0003038"
-    ]
-  },
-  {
-    "id": "people:berkeley-hills",
-    "name": "Berkeley Hills",
-    "canonical_name": "Berkeley Hills",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Berkeley Hills appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004981",
-      "m-0004984"
     ]
   },
   {
@@ -22704,26 +22921,6 @@
     ]
   },
   {
-    "id": "people:diana-pasolka",
-    "name": "Diana Pasolka",
-    "canonical_name": "Diana Pasolka",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.61,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Diana Pasolka appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012459",
-      "m-0012402"
-    ]
-  },
-  {
     "id": "people:dick-russell",
     "name": "Dick Russell",
     "canonical_name": "Dick Russell",
@@ -22922,47 +23119,6 @@
     "evidence_ids": [
       "m-0012814",
       "m-0012839"
-    ]
-  },
-  {
-    "id": "people:earth-tech",
-    "name": "Earth Tech",
-    "canonical_name": "Earth Tech",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Earth Tech appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003448",
-      "m-0003467"
-    ]
-  },
-  {
-    "id": "people:east-coast",
-    "name": "East Coast",
-    "canonical_name": "East Coast",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "A Weekend With Bob Lazar Inside Area51s",
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "East Coast appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000191",
-      "m-0002870"
     ]
   },
   {
@@ -23394,26 +23550,6 @@
     ]
   },
   {
-    "id": "people:fort-detrick",
-    "name": "Fort Detrick",
-    "canonical_name": "Fort Detrick",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Fort Detrick appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004103",
-      "m-0004119"
-    ]
-  },
-  {
     "id": "people:freddy-snyder",
     "name": "Freddy Snyder",
     "canonical_name": "Freddy Snyder",
@@ -23635,6 +23771,26 @@
     "evidence_ids": [
       "m-0002403",
       "m-0009003"
+    ]
+  },
+  {
+    "id": "people:george-w-bush",
+    "name": "George W. Bush",
+    "canonical_name": "George W. Bush",
+    "category": "people",
+    "category_label": "People",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report"
+    ],
+    "significance": "George W. Bush appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001536",
+      "m-0001539"
     ]
   },
   {
@@ -24127,27 +24283,6 @@
     "evidence_ids": [
       "m-0002166",
       "m-0002167"
-    ]
-  },
-  {
-    "id": "people:illumina-face-mask",
-    "name": "Illumina Face Mask",
-    "canonical_name": "Illumina Face Mask",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From",
-      "If You Knew What I Knew Jeremy Corbell U"
-    ],
-    "significance": "Illumina Face Mask appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003455",
-      "m-0006392"
     ]
   },
   {
@@ -25894,27 +26029,6 @@
     ]
   },
   {
-    "id": "people:national-intelligence",
-    "name": "National Intelligence",
-    "canonical_name": "National Intelligence",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "If You Knew What I Knew Jeremy Corbell U",
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "National Intelligence appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006346",
-      "m-0010411"
-    ]
-  },
-  {
     "id": "people:new-england",
     "name": "New England",
     "canonical_name": "New England",
@@ -26076,26 +26190,6 @@
     "evidence_ids": [
       "m-0001177",
       "m-0001510"
-    ]
-  },
-  {
-    "id": "people:on-december",
-    "name": "On December",
-    "canonical_name": "On December",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "On December appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012118",
-      "m-0012180"
     ]
   },
   {
@@ -26422,26 +26516,6 @@
     "evidence_ids": [
       "m-0011873",
       "m-0011875"
-    ]
-  },
-  {
-    "id": "people:president-bush",
-    "name": "President Bush",
-    "canonical_name": "President Bush",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report"
-    ],
-    "significance": "President Bush appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001536",
-      "m-0001539"
     ]
   },
   {
@@ -27056,27 +27130,6 @@
     ]
   },
   {
-    "id": "people:russell-targ",
-    "name": "Russell Targ",
-    "canonical_name": "Russell Targ",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Meet The Startup Summoning Ufos Skywatch",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Russell Targ appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007891",
-      "m-0008858"
-    ]
-  },
-  {
     "id": "people:russian-chamber",
     "name": "Russian Chamber",
     "canonical_name": "Russian Chamber",
@@ -27137,9 +27190,9 @@
     ]
   },
   {
-    "id": "people:ruth-forbes-payne",
-    "name": "Ruth Forbes Payne",
-    "canonical_name": "Ruth Forbes Payne",
+    "id": "people:ruth-payne",
+    "name": "Ruth Payne",
+    "canonical_name": "Ruth Payne",
     "category": "people",
     "category_label": "People",
     "count": 2,
@@ -27147,7 +27200,7 @@
     "transcripts": [
       "The Cia Scientist That Contacted An Alie"
     ],
-    "significance": "Ruth Forbes Payne appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "significance": "Ruth Payne appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
     "detectors": [
       "heuristic:person_name"
     ],
@@ -27624,27 +27677,6 @@
     ]
   },
   {
-    "id": "people:south-haven",
-    "name": "South Haven",
-    "canonical_name": "South Haven",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata",
-      "The Defense Secretary Killed Over Ufos F"
-    ],
-    "significance": "South Haven appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007018",
-      "m-0009846"
-    ]
-  },
-  {
     "id": "people:southeast-asia",
     "name": "Southeast Asia",
     "canonical_name": "Southeast Asia",
@@ -27929,27 +27961,6 @@
     ]
   },
   {
-    "id": "people:texas-book-depository",
-    "name": "Texas Book Depository",
-    "canonical_name": "Texas Book Depository",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control",
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Texas Book Depository appears as people with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004145",
-      "m-0009017"
-    ]
-  },
-  {
     "id": "people:texas-germans",
     "name": "Texas Germans",
     "canonical_name": "Texas Germans",
@@ -28214,26 +28225,6 @@
     ]
   },
   {
-    "id": "people:walnut-creek",
-    "name": "Walnut Creek",
-    "canonical_name": "Walnut Creek",
-    "category": "people",
-    "category_label": "People",
-    "count": 2,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Walnut Creek appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004759",
-      "m-0004980"
-    ]
-  },
-  {
     "id": "people:walter-b-smith",
     "name": "Walter B. Smith",
     "canonical_name": "Walter B. Smith",
@@ -28333,6 +28324,26 @@
     "evidence_ids": [
       "m-0008062",
       "m-0012518"
+    ]
+  },
+  {
+    "id": "people:william-burns",
+    "name": "William Burns",
+    "canonical_name": "William Burns",
+    "category": "people",
+    "category_label": "People",
+    "count": 2,
+    "confidence": 0.54,
+    "transcripts": [
+      "Army Captures Live Alien Hospital Report"
+    ],
+    "significance": "William Burns appears as people with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0001338",
+      "m-0001350"
     ]
   },
   {
@@ -28497,6 +28508,27 @@
     "evidence_ids": [
       "m-0007824",
       "m-0007862"
+    ]
+  },
+  {
+    "id": "politicians:eric-davis",
+    "name": "Eric Davis",
+    "canonical_name": "Eric Davis",
+    "category": "politicians",
+    "category_label": "Politicians",
+    "count": 2,
+    "confidence": 0.68,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From",
+      "Jeffrey Epstein Aliens The Global Sata"
+    ],
+    "significance": "Eric Davis appears as politicians with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004028",
+      "m-0007222"
     ]
   },
   {
@@ -28829,6 +28861,27 @@
     ]
   },
   {
+    "id": "professors:robert-monroe",
+    "name": "Robert Monroe",
+    "canonical_name": "Robert Monroe",
+    "category": "professors",
+    "category_label": "Professors",
+    "count": 2,
+    "confidence": 0.61,
+    "transcripts": [
+      "I Was Taken By The Ufo Program As A Kid",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Robert Monroe appears as professors with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012250",
+      "m-0006289"
+    ]
+  },
+  {
     "id": "professors:sean-kirkpatrick",
     "name": "Sean Kirkpatrick",
     "canonical_name": "Sean Kirkpatrick",
@@ -28867,26 +28920,6 @@
     "evidence_ids": [
       "m-0008318",
       "m-0008319"
-    ]
-  },
-  {
-    "id": "professors:stony-brook",
-    "name": "Stony Brook",
-    "canonical_name": "Stony Brook",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 2,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Stony Brook appears as professors with 2 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003738",
-      "m-0003904"
     ]
   },
   {
@@ -29317,6 +29350,27 @@
     ]
   },
   {
+    "id": "websites:third-eye-drops",
+    "name": "Third Eye Drops",
+    "canonical_name": "third eye drops",
+    "category": "websites",
+    "category_label": "Websites",
+    "count": 2,
+    "confidence": 0.61,
+    "transcripts": [
+      "Dmt Opens The Alien Realm Neuroscientist",
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Third Eye Drops appears as websites with 2 mention(s) across 2 transcripts; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003145",
+      "m-0011995"
+    ]
+  },
+  {
     "id": "whistleblowers:commander-david-fravor",
     "name": "Commander David Fravor",
     "canonical_name": "Commander David Fravor",
@@ -29548,6 +29602,25 @@
     ]
   },
   {
+    "id": "research_groups:national-research-council",
+    "name": "National Research Council",
+    "canonical_name": "National Research Council",
+    "category": "research_groups",
+    "category_label": "Active research groups",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Meet The Scientist Who Scanned Beneath T"
+    ],
+    "significance": "National Research Council appears as active research groups with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0007575"
+    ]
+  },
+  {
     "id": "research_groups:naval-ordnance-laboratory",
     "name": "Naval Ordnance Laboratory",
     "canonical_name": "Naval Ordnance Laboratory",
@@ -29700,25 +29773,6 @@
     ]
   },
   {
-    "id": "books:book-of-enoch",
-    "name": "Book of Enoch",
-    "canonical_name": "Book of Enoch",
-    "category": "books",
-    "category_label": "Books",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma"
-    ],
-    "significance": "Book of Enoch appears as books with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000712"
-    ]
-  },
-  {
     "id": "books:clockwork-orange",
     "name": "Clockwork Orange",
     "canonical_name": "Clockwork Orange",
@@ -29833,6 +29887,25 @@
     ]
   },
   {
+    "id": "companies:american-airlines-flight",
+    "name": "American Airlines Flight",
+    "canonical_name": "American Airlines Flight",
+    "category": "companies",
+    "category_label": "Companies",
+    "count": 1,
+    "confidence": 0.68,
+    "transcripts": [
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "American Airlines Flight appears as companies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012255"
+    ]
+  },
+  {
     "id": "companies:bendix-corporation",
     "name": "Bendix Corporation",
     "canonical_name": "Bendix Corporation",
@@ -29906,6 +29979,25 @@
     ],
     "evidence_ids": [
       "m-0012803"
+    ]
+  },
+  {
+    "id": "companies:black-cultural-association",
+    "name": "Black Cultural Association",
+    "canonical_name": "Black Cultural Association",
+    "category": "companies",
+    "category_label": "Companies",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control"
+    ],
+    "significance": "Black Cultural Association appears as companies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004258"
     ]
   },
   {
@@ -30707,6 +30799,25 @@
     ]
   },
   {
+    "id": "contractors:independent-research-and-development",
+    "name": "Independent Research and Development",
+    "canonical_name": "Independent Research and Development",
+    "category": "contractors",
+    "category_label": "Contractors",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "The Pentagons Ufo Program Is Real Here"
+    ],
+    "significance": "Independent Research and Development appears as contractors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0010491"
+    ]
+  },
+  {
     "id": "dangerous_people:agatha-christie",
     "name": "Agatha Christie",
     "canonical_name": "Agatha Christie",
@@ -31448,6 +31559,25 @@
     ]
   },
   {
+    "id": "dates_times:september-11-2001",
+    "name": "September 11, 2001",
+    "canonical_name": "September 11, 2001",
+    "category": "dates_times",
+    "category_label": "Dates and times",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "I Was Taken By Aliens In 1997 President"
+    ],
+    "significance": "September 11, 2001 appears as dates and times with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0006004"
+    ]
+  },
+  {
     "id": "dates_times:september-17-1997",
     "name": "September 17, 1997",
     "canonical_name": "September 17, 1997",
@@ -31521,6 +31651,44 @@
     ],
     "evidence_ids": [
       "m-0008478"
+    ]
+  },
+  {
+    "id": "events:vietnam-war",
+    "name": "Vietnam War",
+    "canonical_name": "Vietnam War",
+    "category": "events",
+    "category_label": "Events",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control"
+    ],
+    "significance": "Vietnam War appears as events with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004257"
+    ]
+  },
+  {
+    "id": "events:warsaw-pact",
+    "name": "Warsaw Pact",
+    "canonical_name": "Warsaw Pact",
+    "category": "events",
+    "category_label": "Events",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "I Was Taken By Aliens In 1997 President"
+    ],
+    "significance": "Warsaw Pact appears as events with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0006003"
     ]
   },
   {
@@ -31920,25 +32088,6 @@
     ],
     "evidence_ids": [
       "m-0001163"
-    ]
-  },
-  {
-    "id": "experiencers:eric-davis",
-    "name": "Eric Davis",
-    "canonical_name": "Eric Davis",
-    "category": "experiencers",
-    "category_label": "Experiencers",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Eric Davis appears as experiencers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003675"
     ]
   },
   {
@@ -32797,25 +32946,6 @@
     ]
   },
   {
-    "id": "friendly_people:admiral-wilson",
-    "name": "Admiral Wilson",
-    "canonical_name": "Admiral Wilson",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "Admiral Wilson appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003509"
-    ]
-  },
-  {
     "id": "friendly_people:adolf-hitler",
     "name": "Adolf Hitler",
     "canonical_name": "Adolf Hitler",
@@ -32908,25 +33038,6 @@
     ],
     "evidence_ids": [
       "m-0011865"
-    ]
-  },
-  {
-    "id": "friendly_people:american-airlines-flight",
-    "name": "American Airlines Flight",
-    "canonical_name": "American Airlines Flight",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "American Airlines Flight appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012255"
     ]
   },
   {
@@ -33971,7 +34082,7 @@
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0004028"
+      "m-0003675"
     ]
   },
   {
@@ -34200,25 +34311,6 @@
     ],
     "evidence_ids": [
       "m-0012231"
-    ]
-  },
-  {
-    "id": "friendly_people:grill-flame",
-    "name": "Grill Flame",
-    "canonical_name": "Grill Flame",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma"
-    ],
-    "significance": "Grill Flame appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000750"
     ]
   },
   {
@@ -34906,25 +34998,6 @@
     ]
   },
   {
-    "id": "friendly_people:lee-harvey-oswald",
-    "name": "Lee Harvey Oswald",
-    "canonical_name": "Lee Harvey Oswald",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Lee Harvey Oswald appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0009242"
-    ]
-  },
-  {
     "id": "friendly_people:leslie-grove",
     "name": "Leslie Grove",
     "canonical_name": "Leslie Grove",
@@ -35362,25 +35435,6 @@
     ]
   },
   {
-    "id": "friendly_people:new-jersey",
-    "name": "New Jersey",
-    "canonical_name": "New Jersey",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "New Jersey appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002343"
-    ]
-  },
-  {
     "id": "friendly_people:new-year",
     "name": "New Year",
     "canonical_name": "New Year",
@@ -35609,25 +35663,6 @@
     ]
   },
   {
-    "id": "friendly_people:philip-j-corso",
-    "name": "Philip J. Corso",
-    "canonical_name": "Philip J. Corso",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Philip J. Corso appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002657"
-    ]
-  },
-  {
     "id": "friendly_people:phyllis-schlemmer",
     "name": "Phyllis Schlemmer",
     "canonical_name": "Phyllis Schlemmer",
@@ -35818,25 +35853,6 @@
     ]
   },
   {
-    "id": "friendly_people:rhode-island",
-    "name": "Rhode Island",
-    "canonical_name": "Rhode Island",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup"
-    ],
-    "significance": "Rhode Island appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008649"
-    ]
-  },
-  {
     "id": "friendly_people:richard-dolan",
     "name": "Richard Dolan",
     "canonical_name": "Richard Dolan",
@@ -35948,25 +35964,6 @@
     ],
     "evidence_ids": [
       "m-0000693"
-    ]
-  },
-  {
-    "id": "friendly_people:ruth-payne",
-    "name": "Ruth Payne",
-    "canonical_name": "Ruth Payne",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "The Cia Scientist That Contacted An Alie"
-    ],
-    "significance": "Ruth Payne appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0009219"
     ]
   },
   {
@@ -36426,25 +36423,6 @@
     ]
   },
   {
-    "id": "friendly_people:third-eye-drops",
-    "name": "Third Eye Drops",
-    "canonical_name": "Third Eye Drops",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Dmt Opens The Alien Realm Neuroscientist"
-    ],
-    "significance": "Third Eye Drops appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003145"
-    ]
-  },
-  {
     "id": "friendly_people:thomas-aquinas",
     "name": "Thomas Aquinas",
     "canonical_name": "Thomas Aquinas",
@@ -36841,25 +36819,6 @@
     ],
     "evidence_ids": [
       "m-0007634"
-    ]
-  },
-  {
-    "id": "friendly_people:zorro-ranch",
-    "name": "Zorro Ranch",
-    "canonical_name": "Zorro Ranch",
-    "category": "friendly_people",
-    "category_label": "Friendly people",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma"
-    ],
-    "significance": "Zorro Ranch appears as friendly people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000974"
     ]
   },
   {
@@ -37449,6 +37408,25 @@
     ],
     "evidence_ids": [
       "m-0012004"
+    ]
+  },
+  {
+    "id": "government_agencies:democratic-national-committee",
+    "name": "Democratic National Committee",
+    "canonical_name": "Democratic National Committee",
+    "category": "government_agencies",
+    "category_label": "Government agencies",
+    "count": 1,
+    "confidence": 0.68,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum"
+    ],
+    "significance": "Democratic National Committee appears as government agencies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002385"
     ]
   },
   {
@@ -38174,6 +38152,25 @@
     ]
   },
   {
+    "id": "government_project_codenames:grill-flame",
+    "name": "Grill Flame",
+    "canonical_name": "Grill Flame",
+    "category": "government_project_codenames",
+    "category_label": "Government project codenames",
+    "count": 1,
+    "confidence": 0.68,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma"
+    ],
+    "significance": "Grill Flame appears as government project codenames with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000750"
+    ]
+  },
+  {
     "id": "government_project_codenames:operation-paperclip",
     "name": "Operation Paperclip",
     "canonical_name": "Operation Paperclip",
@@ -38323,25 +38320,6 @@
     ],
     "evidence_ids": [
       "m-0006176"
-    ]
-  },
-  {
-    "id": "institutes:manuro-institute",
-    "name": "Manuro Institute",
-    "canonical_name": "Manuro Institute",
-    "category": "institutes",
-    "category_label": "Institutes",
-    "count": 1,
-    "confidence": 0.66,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "Manuro Institute appears as institutes with 1 mention(s) across 1 transcript; detected by heuristic:organization_name.",
-    "detectors": [
-      "heuristic:organization_name"
-    ],
-    "evidence_ids": [
-      "m-0012450"
     ]
   },
   {
@@ -39200,25 +39178,6 @@
     ]
   },
   {
-    "id": "likely_spies:lee-harvey-oswald",
-    "name": "Lee Harvey Oswald",
-    "canonical_name": "Lee Harvey Oswald",
-    "category": "likely_spies",
-    "category_label": "Likely spies",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Lee Harvey Oswald appears as likely spies with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002418"
-    ]
-  },
-  {
     "id": "likely_spies:marcel-jr",
     "name": "Marcel Jr",
     "canonical_name": "Marcel Jr",
@@ -39428,6 +39387,25 @@
     ]
   },
   {
+    "id": "locations:cambridge",
+    "name": "Cambridge",
+    "canonical_name": "Cambridge",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "Cambridge appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003959"
+    ]
+  },
+  {
     "id": "locations:city-hall",
     "name": "City Hall",
     "canonical_name": "City Hall",
@@ -39463,6 +39441,25 @@
     ],
     "evidence_ids": [
       "m-0005737"
+    ]
+  },
+  {
+    "id": "locations:east-bay",
+    "name": "East Bay",
+    "canonical_name": "East Bay",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "East Bay appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004760"
     ]
   },
   {
@@ -39504,6 +39501,63 @@
     ]
   },
   {
+    "id": "locations:laguna-beach",
+    "name": "Laguna Beach",
+    "canonical_name": "Laguna Beach",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Nasa Whistleblower We Systematically Sup"
+    ],
+    "significance": "Laguna Beach appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008620"
+    ]
+  },
+  {
+    "id": "locations:little-st-james",
+    "name": "Little St. James",
+    "canonical_name": "Little St. James",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma"
+    ],
+    "significance": "Little St. James appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000972"
+    ]
+  },
+  {
+    "id": "locations:marin-boulevard",
+    "name": "Marin Boulevard",
+    "canonical_name": "Marin Boulevard",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Hollywood The Cia And Ufos The History Bey"
+    ],
+    "significance": "Marin Boulevard appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004982"
+    ]
+  },
+  {
     "id": "locations:montauk-long-island",
     "name": "Montauk Long Island",
     "canonical_name": "Montauk Long Island",
@@ -39539,6 +39593,44 @@
     ],
     "evidence_ids": [
       "m-0009512"
+    ]
+  },
+  {
+    "id": "locations:one-brattle-square",
+    "name": "One Brattle Square",
+    "canonical_name": "One Brattle Square",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Eric Weinstein Demands Ufo Secrets From"
+    ],
+    "significance": "One Brattle Square appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0003963"
+    ]
+  },
+  {
+    "id": "locations:portsmouth",
+    "name": "Portsmouth",
+    "canonical_name": "Portsmouth",
+    "category": "locations",
+    "category_label": "Locations",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "The Man Sitting On More Ufo Evidence Tha"
+    ],
+    "significance": "Portsmouth appears as locations with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0010206"
     ]
   },
   {
@@ -39675,6 +39767,25 @@
     ]
   },
   {
+    "id": "military_bases:fort-lee",
+    "name": "Fort Lee",
+    "canonical_name": "Fort Lee",
+    "category": "military_bases",
+    "category_label": "Military bases",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum"
+    ],
+    "significance": "Fort Lee appears as military bases with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002871"
+    ]
+  },
+  {
     "id": "military_bases:holloman-air-force-base",
     "name": "Holloman Air Force Base",
     "canonical_name": "Holloman Air Force Base",
@@ -39710,25 +39821,6 @@
     ],
     "evidence_ids": [
       "m-0007447"
-    ]
-  },
-  {
-    "id": "military_bases:patterson-air-force-base",
-    "name": "Patterson Air Force Base",
-    "canonical_name": "Patterson Air Force Base",
-    "category": "military_bases",
-    "category_label": "Military bases",
-    "count": 1,
-    "confidence": 0.74,
-    "transcripts": [
-      "The Defense Secretary Killed Over Ufos F"
-    ],
-    "significance": "Patterson Air Force Base appears as military bases with 1 mention(s) across 1 transcript; detected by heuristic:military_organization.",
-    "detectors": [
-      "heuristic:military_organization"
-    ],
-    "evidence_ids": [
-      "m-0009690"
     ]
   },
   {
@@ -40207,32 +40299,13 @@
     ]
   },
   {
-    "id": "people:admiral-thomas-j-wilson",
-    "name": "Admiral Thomas J. Wilson",
-    "canonical_name": "Admiral Thomas J. Wilson",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report"
-    ],
-    "significance": "Admiral Thomas J. Wilson appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001402"
-    ]
-  },
-  {
     "id": "people:admiral-wilson",
     "name": "Admiral Wilson",
     "canonical_name": "Admiral Wilson",
     "category": "people",
     "category_label": "People",
     "count": 1,
-    "confidence": 0.54,
+    "confidence": 0.68,
     "transcripts": [
       "Eric Weinstein Demands Ufo Secrets From"
     ],
@@ -40241,7 +40314,7 @@
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0003839"
+      "m-0003509"
     ]
   },
   {
@@ -42848,25 +42921,6 @@
     ]
   },
   {
-    "id": "people:because-david-spurgle",
-    "name": "Because David Spurgle",
-    "canonical_name": "Because David Spurgle",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup"
-    ],
-    "significance": "Because David Spurgle appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008745"
-    ]
-  },
-  {
     "id": "people:because-ezekiel",
     "name": "Because Ezekiel",
     "canonical_name": "Because Ezekiel",
@@ -43589,25 +43643,6 @@
     ]
   },
   {
-    "id": "people:black-cultural-association",
-    "name": "Black Cultural Association",
-    "canonical_name": "Black Cultural Association",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Black Cultural Association appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004258"
-    ]
-  },
-  {
     "id": "people:black-forest",
     "name": "Black Forest",
     "canonical_name": "Black Forest",
@@ -44099,6 +44134,25 @@
     ],
     "evidence_ids": [
       "m-0012278"
+    ]
+  },
+  {
+    "id": "people:book-of-enoch",
+    "name": "Book of Enoch",
+    "canonical_name": "Book of Enoch",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma"
+    ],
+    "significance": "Book of Enoch appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000712"
     ]
   },
   {
@@ -44897,25 +44951,6 @@
     ],
     "evidence_ids": [
       "m-0006952"
-    ]
-  },
-  {
-    "id": "people:by-tim-taylor",
-    "name": "By Tim Taylor",
-    "canonical_name": "By Tim Taylor",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "By Tim Taylor appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012573"
     ]
   },
   {
@@ -45755,6 +45790,25 @@
     ]
   },
   {
+    "id": "people:chicago-o-hare-airport",
+    "name": "Chicago O'Hare Airport",
+    "canonical_name": "Chicago O'Hare Airport",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Americas Top Scientists Are Going M"
+    ],
+    "significance": "Chicago O'Hare Airport appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012256"
+    ]
+  },
+  {
     "id": "people:chichen-itza",
     "name": "Chichen Itza",
     "canonical_name": "Chichen Itza",
@@ -45828,6 +45882,25 @@
     ],
     "evidence_ids": [
       "m-0012560"
+    ]
+  },
+  {
+    "id": "people:chris-bledsoe-jr",
+    "name": "Chris Bledsoe Jr",
+    "canonical_name": "Chris Bledsoe Jr",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Chris Bledsoe Jr appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012528"
     ]
   },
   {
@@ -47256,6 +47329,25 @@
     ]
   },
   {
+    "id": "people:david-spurgle",
+    "name": "David Spurgle",
+    "canonical_name": "David Spurgle",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Nasa Whistleblower We Systematically Sup"
+    ],
+    "significance": "David Spurgle appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0008745"
+    ]
+  },
+  {
     "id": "people:dead-sea-scroll",
     "name": "Dead Sea Scroll",
     "canonical_name": "Dead Sea Scroll",
@@ -47541,6 +47633,44 @@
     ]
   },
   {
+    "id": "people:diana-pasolka",
+    "name": "Diana Pasolka",
+    "canonical_name": "Diana Pasolka",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Pasolka appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012402"
+    ]
+  },
+  {
+    "id": "people:diana-posolka",
+    "name": "Diana Posolka",
+    "canonical_name": "Diana Posolka",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Why Nasa Studies This Man He Attracts Uf"
+    ],
+    "significance": "Diana Posolka appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0012589"
+    ]
+  },
+  {
     "id": "people:dianne-pasolga",
     "name": "Dianne Pasolga",
     "canonical_name": "Dianne Pasolga",
@@ -47769,25 +47899,6 @@
     ]
   },
   {
-    "id": "people:does-corso",
-    "name": "Does Corso",
-    "canonical_name": "Does Corso",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Found Hitlers Secret Ufo Program Jaso"
-    ],
-    "significance": "Does Corso appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005225"
-    ]
-  },
-  {
     "id": "people:does-tim-taylor",
     "name": "Does Tim Taylor",
     "canonical_name": "Does Tim Taylor",
@@ -47956,6 +48067,25 @@
     ],
     "evidence_ids": [
       "m-0002066"
+    ]
+  },
+  {
+    "id": "people:donald-defreeze",
+    "name": "Donald DeFreeze",
+    "canonical_name": "Donald DeFreeze",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Exposing The Cias Darkest Mind Control"
+    ],
+    "significance": "Donald DeFreeze appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0004256"
     ]
   },
   {
@@ -48336,25 +48466,6 @@
     ],
     "evidence_ids": [
       "m-0000069"
-    ]
-  },
-  {
-    "id": "people:east-bay",
-    "name": "East Bay",
-    "canonical_name": "East Bay",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "East Bay appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004760"
     ]
   },
   {
@@ -50255,25 +50366,6 @@
     ],
     "evidence_ids": [
       "m-0008771"
-    ]
-  },
-  {
-    "id": "people:fort-lee",
-    "name": "Fort Lee",
-    "canonical_name": "Fort Lee",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Fort Lee appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002871"
     ]
   },
   {
@@ -52405,25 +52497,6 @@
     ]
   },
   {
-    "id": "people:hare-airport",
-    "name": "Hare Airport",
-    "canonical_name": "Hare Airport",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Hare Airport appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012256"
-    ]
-  },
-  {
     "id": "people:hare-krishna",
     "name": "Hare Krishna",
     "canonical_name": "Hare Krishna",
@@ -52554,44 +52627,6 @@
     ],
     "evidence_ids": [
       "m-0009398"
-    ]
-  },
-  {
-    "id": "people:hawley-building",
-    "name": "Hawley Building",
-    "canonical_name": "Hawley Building",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Hawley Building appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012185"
-    ]
-  },
-  {
-    "id": "people:hawley-engineering-building",
-    "name": "Hawley Engineering Building",
-    "canonical_name": "Hawley Engineering Building",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Hawley Engineering Building appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012179"
     ]
   },
   {
@@ -53355,25 +53390,6 @@
     ]
   },
   {
-    "id": "people:if-jesse",
-    "name": "If Jesse",
-    "canonical_name": "If Jesse",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "If Jesse appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012636"
-    ]
-  },
-  {
     "id": "people:if-lurero",
     "name": "If Lurero",
     "canonical_name": "If Lurero",
@@ -53640,25 +53656,6 @@
     ]
   },
   {
-    "id": "people:in-cambridge",
-    "name": "In Cambridge",
-    "canonical_name": "In Cambridge",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "In Cambridge appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003959"
-    ]
-  },
-  {
     "id": "people:in-canada",
     "name": "In Canada",
     "canonical_name": "In Canada",
@@ -53868,25 +53865,6 @@
     ]
   },
   {
-    "id": "people:in-new-mexico",
-    "name": "In New Mexico",
-    "canonical_name": "In New Mexico",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "In New Mexico appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003957"
-    ]
-  },
-  {
     "id": "people:in-ohio",
     "name": "In Ohio",
     "canonical_name": "In Ohio",
@@ -53922,44 +53900,6 @@
     ],
     "evidence_ids": [
       "m-0005966"
-    ]
-  },
-  {
-    "id": "people:in-plato",
-    "name": "In Plato",
-    "canonical_name": "In Plato",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma"
-    ],
-    "significance": "In Plato appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000973"
-    ]
-  },
-  {
-    "id": "people:in-portsmouth",
-    "name": "In Portsmouth",
-    "canonical_name": "In Portsmouth",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Man Sitting On More Ufo Evidence Tha"
-    ],
-    "significance": "In Portsmouth appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0010206"
     ]
   },
   {
@@ -54055,25 +53995,6 @@
     ],
     "evidence_ids": [
       "m-0000015"
-    ]
-  },
-  {
-    "id": "people:independent-research",
-    "name": "Independent Research",
-    "canonical_name": "Independent Research",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Pentagons Ufo Program Is Real Here"
-    ],
-    "significance": "Independent Research appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0010491"
     ]
   },
   {
@@ -54245,25 +54166,6 @@
     ],
     "evidence_ids": [
       "m-0004516"
-    ]
-  },
-  {
-    "id": "people:intelligence-communities",
-    "name": "Intelligence Communities",
-    "canonical_name": "Intelligence Communities",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "If You Knew What I Knew Jeremy Corbell U"
-    ],
-    "significance": "Intelligence Communities appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006344"
     ]
   },
   {
@@ -57212,25 +57114,6 @@
     ]
   },
   {
-    "id": "people:laguna-beach",
-    "name": "Laguna Beach",
-    "canonical_name": "Laguna Beach",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Whistleblower We Systematically Sup"
-    ],
-    "significance": "Laguna Beach appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008620"
-    ]
-  },
-  {
     "id": "people:lake-baikal",
     "name": "Lake Baikal",
     "canonical_name": "Lake Baikal",
@@ -57437,6 +57320,25 @@
     ],
     "evidence_ids": [
       "m-0000836"
+    ]
+  },
+  {
+    "id": "people:lee-harvey-oswald",
+    "name": "Lee Harvey Oswald",
+    "canonical_name": "Lee Harvey Oswald",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.68,
+    "transcripts": [
+      "Cia Historian Aliens Are Controlling Hum"
+    ],
+    "significance": "Lee Harvey Oswald appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0002418"
     ]
   },
   {
@@ -58140,25 +58042,6 @@
     ],
     "evidence_ids": [
       "m-0007243"
-    ]
-  },
-  {
-    "id": "people:little-st",
-    "name": "Little St",
-    "canonical_name": "Little St",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Aliens Invented Religion To Control Huma"
-    ],
-    "significance": "Little St appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0000972"
     ]
   },
   {
@@ -59131,25 +59014,6 @@
     ]
   },
   {
-    "id": "people:marin-boulevard",
-    "name": "Marin Boulevard",
-    "canonical_name": "Marin Boulevard",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Hollywood The Cia And Ufos The History Bey"
-    ],
-    "significance": "Marin Boulevard appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004982"
-    ]
-  },
-  {
     "id": "people:marine-guy",
     "name": "Marine Guy",
     "canonical_name": "Marine Guy",
@@ -59473,25 +59337,6 @@
     ]
   },
   {
-    "id": "people:materiel-wing-director",
-    "name": "Materiel Wing Director",
-    "canonical_name": "Materiel Wing Director",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Materiel Wing Director appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011935"
-    ]
-  },
-  {
     "id": "people:matt-damon",
     "name": "Matt Damon",
     "canonical_name": "Matt Damon",
@@ -59736,25 +59581,6 @@
     ],
     "evidence_ids": [
       "m-0004330"
-    ]
-  },
-  {
-    "id": "people:maybe-tesla",
-    "name": "Maybe Tesla",
-    "canonical_name": "Maybe Tesla",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Nasa Chief We Just Built Antigravity Pro"
-    ],
-    "significance": "Maybe Tesla appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0008443"
     ]
   },
   {
@@ -61354,25 +61180,6 @@
     ]
   },
   {
-    "id": "people:national-research-council",
-    "name": "National Research Council",
-    "canonical_name": "National Research Council",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Meet The Scientist Who Scanned Beneath T"
-    ],
-    "significance": "National Research Council appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007575"
-    ]
-  },
-  {
     "id": "people:national-security-state",
     "name": "National Security State",
     "canonical_name": "National Security State",
@@ -61845,25 +61652,6 @@
     ],
     "evidence_ids": [
       "m-0002868"
-    ]
-  },
-  {
-    "id": "people:nissan-sentra",
-    "name": "Nissan Sentra",
-    "canonical_name": "Nissan Sentra",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Nissan Sentra appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012182"
     ]
   },
   {
@@ -62909,25 +62697,6 @@
     ],
     "evidence_ids": [
       "m-0006305"
-    ]
-  },
-  {
-    "id": "people:one-brattle-square",
-    "name": "One Brattle Square",
-    "canonical_name": "One Brattle Square",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "One Brattle Square appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003963"
     ]
   },
   {
@@ -64375,6 +64144,25 @@
     ]
   },
   {
+    "id": "people:plato",
+    "name": "Plato",
+    "canonical_name": "Plato",
+    "category": "people",
+    "category_label": "People",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "Aliens Invented Religion To Control Huma"
+    ],
+    "significance": "Plato appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0000973"
+    ]
+  },
+  {
     "id": "people:plod-note-pro",
     "name": "Plod Note Pro",
     "canonical_name": "Plod Note Pro",
@@ -64562,25 +64350,6 @@
     ],
     "evidence_ids": [
       "m-0008643"
-    ]
-  },
-  {
-    "id": "people:president-george-w-bush",
-    "name": "President George W. Bush",
-    "canonical_name": "President George W. Bush",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Cia Chief Im A Time Traveler"
-    ],
-    "significance": "President George W. Bush appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001903"
     ]
   },
   {
@@ -65933,25 +65702,6 @@
     ]
   },
   {
-    "id": "people:robert-monroe",
-    "name": "Robert Monroe",
-    "canonical_name": "Robert Monroe",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Was Taken By The Ufo Program As A Kid"
-    ],
-    "significance": "Robert Monroe appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006289"
-    ]
-  },
-  {
     "id": "people:robert-mueller",
     "name": "Robert Mueller",
     "canonical_name": "Robert Mueller",
@@ -66750,22 +66500,22 @@
     ]
   },
   {
-    "id": "people:ruth-young",
-    "name": "Ruth Young",
-    "canonical_name": "Ruth Young",
+    "id": "people:ruth-forbes-payne-young",
+    "name": "Ruth Forbes Payne Young",
+    "canonical_name": "Ruth Forbes Payne Young",
     "category": "people",
     "category_label": "People",
     "count": 1,
-    "confidence": 0.54,
+    "confidence": 0.68,
     "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
+      "The Cia Scientist That Contacted An Alie"
     ],
-    "significance": "Ruth Young appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "significance": "Ruth Forbes Payne Young appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
     "detectors": [
       "heuristic:person_name"
     ],
     "evidence_ids": [
-      "m-0002409"
+      "m-0009219"
     ]
   },
   {
@@ -67852,25 +67602,6 @@
     ]
   },
   {
-    "id": "people:simons-foundation",
-    "name": "Simons Foundation",
-    "canonical_name": "Simons Foundation",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "The Wall Street Journal Is Lying About U"
-    ],
-    "significance": "Simons Foundation appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011409"
-    ]
-  },
-  {
     "id": "people:sir-edwin-abbott",
     "name": "Sir Edwin Abbott",
     "canonical_name": "Sir Edwin Abbott",
@@ -68802,25 +68533,6 @@
     ]
   },
   {
-    "id": "people:so-john-mack",
-    "name": "So John Mack",
-    "canonical_name": "So John Mack",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "So John Mack appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012491"
-    ]
-  },
-  {
     "id": "people:so-jolly-west",
     "name": "So Jolly West",
     "canonical_name": "So Jolly West",
@@ -69011,25 +68723,6 @@
     ]
   },
   {
-    "id": "people:so-patty-hearst",
-    "name": "So Patty Hearst",
-    "canonical_name": "So Patty Hearst",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "So Patty Hearst appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004254"
-    ]
-  },
-  {
     "id": "people:so-paul-mellon",
     "name": "So Paul Mellon",
     "canonical_name": "So Paul Mellon",
@@ -69198,25 +68891,6 @@
     ],
     "evidence_ids": [
       "m-0005617"
-    ]
-  },
-  {
-    "id": "people:so-tesla",
-    "name": "So Tesla",
-    "canonical_name": "So Tesla",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "So Tesla appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011838"
     ]
   },
   {
@@ -70588,25 +70262,6 @@
     ]
   },
   {
-    "id": "people:t-at",
-    "name": "T. At",
-    "canonical_name": "T. At",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Eric Weinstein Demands Ufo Secrets From"
-    ],
-    "significance": "T. At appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0003553"
-    ]
-  },
-  {
     "id": "people:takanao-jiao",
     "name": "Takanao Jiao",
     "canonical_name": "Takanao Jiao",
@@ -70949,25 +70604,6 @@
     ]
   },
   {
-    "id": "people:then-donald",
-    "name": "Then Donald",
-    "canonical_name": "Then Donald",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Then Donald appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004256"
-    ]
-  },
-  {
     "id": "people:then-louisa",
     "name": "Then Louisa",
     "canonical_name": "Then Louisa",
@@ -71022,25 +70658,6 @@
     ],
     "evidence_ids": [
       "m-0002120"
-    ]
-  },
-  {
-    "id": "people:third-eye-drops",
-    "name": "Third Eye Drops",
-    "canonical_name": "Third Eye Drops",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Third Eye Drops appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011995"
     ]
   },
   {
@@ -71421,25 +71038,6 @@
     ],
     "evidence_ids": [
       "m-0003376"
-    ]
-  },
-  {
-    "id": "people:to-chris-jr",
-    "name": "To Chris Jr",
-    "canonical_name": "To Chris Jr",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Why Nasa Studies This Man He Attracts Uf"
-    ],
-    "significance": "To Chris Jr appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012528"
     ]
   },
   {
@@ -72070,25 +71668,6 @@
     ]
   },
   {
-    "id": "people:united-states-president",
-    "name": "United States President",
-    "canonical_name": "United States President",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Was Taken By Aliens In 1997 President"
-    ],
-    "significance": "United States President appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005937"
-    ]
-  },
-  {
     "id": "people:unlimited-access-vantage",
     "name": "Unlimited Access Vantage",
     "canonical_name": "Unlimited Access Vantage",
@@ -72450,25 +72029,6 @@
     ]
   },
   {
-    "id": "people:vietnam-war",
-    "name": "Vietnam War",
-    "canonical_name": "Vietnam War",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Exposing The Cias Darkest Mind Control"
-    ],
-    "significance": "Vietnam War appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0004257"
-    ]
-  },
-  {
     "id": "people:vincent-bugliosi",
     "name": "Vincent Bugliosi",
     "canonical_name": "Vincent Bugliosi",
@@ -72808,25 +72368,6 @@
     ],
     "evidence_ids": [
       "m-0002420"
-    ]
-  },
-  {
-    "id": "people:warsaw-pact",
-    "name": "Warsaw Pact",
-    "canonical_name": "Warsaw Pact",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Was Taken By Aliens In 1997 President"
-    ],
-    "significance": "Warsaw Pact appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006003"
     ]
   },
   {
@@ -73400,25 +72941,6 @@
     ]
   },
   {
-    "id": "people:when-september",
-    "name": "When September",
-    "canonical_name": "When September",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "I Was Taken By Aliens In 1997 President"
-    ],
-    "significance": "When September appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0006004"
-    ]
-  },
-  {
     "id": "people:when-snyder",
     "name": "When Snyder",
     "canonical_name": "When Snyder",
@@ -73685,25 +73207,6 @@
     ]
   },
   {
-    "id": "people:william-burns",
-    "name": "William Burns",
-    "canonical_name": "William Burns",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report"
-    ],
-    "significance": "William Burns appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001350"
-    ]
-  },
-  {
     "id": "people:william-burroughs",
     "name": "William Burroughs",
     "canonical_name": "William Burroughs",
@@ -73777,25 +73280,6 @@
     ],
     "evidence_ids": [
       "m-0001007"
-    ]
-  },
-  {
-    "id": "people:william-j-burns",
-    "name": "William J. Burns",
-    "canonical_name": "William J. Burns",
-    "category": "people",
-    "category_label": "People",
-    "count": 1,
-    "confidence": 0.54,
-    "transcripts": [
-      "Army Captures Live Alien Hospital Report"
-    ],
-    "significance": "William J. Burns appears as people with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0001338"
     ]
   },
   {
@@ -74768,25 +74252,6 @@
     ]
   },
   {
-    "id": "politicians:democratic-national-committee",
-    "name": "Democratic National Committee",
-    "canonical_name": "Democratic National Committee",
-    "category": "politicians",
-    "category_label": "Politicians",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Cia Historian Aliens Are Controlling Hum"
-    ],
-    "significance": "Democratic National Committee appears as politicians with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0002385"
-    ]
-  },
-  {
     "id": "politicians:donald-rumsfeld",
     "name": "Donald Rumsfeld",
     "canonical_name": "Donald Rumsfeld",
@@ -74822,25 +74287,6 @@
     ],
     "evidence_ids": [
       "m-0006249"
-    ]
-  },
-  {
-    "id": "politicians:eric-davis",
-    "name": "Eric Davis",
-    "canonical_name": "Eric Davis",
-    "category": "politicians",
-    "category_label": "Politicians",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Jeffrey Epstein Aliens The Global Sata"
-    ],
-    "significance": "Eric Davis appears as politicians with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0007222"
     ]
   },
   {
@@ -75316,6 +74762,25 @@
     ],
     "evidence_ids": [
       "m-0003634"
+    ]
+  },
+  {
+    "id": "politicians:united-states-president",
+    "name": "United States President",
+    "canonical_name": "United States President",
+    "category": "politicians",
+    "category_label": "Politicians",
+    "count": 1,
+    "confidence": 0.54,
+    "transcripts": [
+      "I Was Taken By Aliens In 1997 President"
+    ],
+    "significance": "United States President appears as politicians with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "detectors": [
+      "heuristic:person_name"
+    ],
+    "evidence_ids": [
+      "m-0005937"
     ]
   },
   {
@@ -76114,25 +75579,6 @@
     ],
     "evidence_ids": [
       "m-0005420"
-    ]
-  },
-  {
-    "id": "professors:david-spurgle",
-    "name": "David Spurgle",
-    "canonical_name": "David Spurgle",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "The Wall Street Journal Is Lying About U"
-    ],
-    "significance": "David Spurgle appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011406"
     ]
   },
   {
@@ -77561,25 +77007,6 @@
     ]
   },
   {
-    "id": "professors:robert-monroe",
-    "name": "Robert Monroe",
-    "canonical_name": "Robert Monroe",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "Why Americas Top Scientists Are Going M"
-    ],
-    "significance": "Robert Monroe appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0012250"
-    ]
-  },
-  {
     "id": "professors:roger-penrose",
     "name": "Roger Penrose",
     "canonical_name": "Roger Penrose",
@@ -77634,25 +77061,6 @@
     ],
     "evidence_ids": [
       "m-0003740"
-    ]
-  },
-  {
-    "id": "professors:russell-tard",
-    "name": "Russell Tard",
-    "canonical_name": "Russell Tard",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "I Operated A Ufo Its Not What You Think"
-    ],
-    "significance": "Russell Tard appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0005631"
     ]
   },
   {
@@ -77729,25 +77137,6 @@
     ],
     "evidence_ids": [
       "m-0009766"
-    ]
-  },
-  {
-    "id": "professors:simons-foundation",
-    "name": "Simons Foundation",
-    "canonical_name": "Simons Foundation",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "The Wall Street Journal Is Lying About U"
-    ],
-    "significance": "Simons Foundation appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011405"
     ]
   },
   {
@@ -78109,25 +77498,6 @@
     ],
     "evidence_ids": [
       "m-0012747"
-    ]
-  },
-  {
-    "id": "professors:zora-ranch",
-    "name": "Zora Ranch",
-    "canonical_name": "Zora Ranch",
-    "category": "professors",
-    "category_label": "Professors",
-    "count": 1,
-    "confidence": 0.68,
-    "transcripts": [
-      "We Captured A 12 Foot Giant In Afghanist"
-    ],
-    "significance": "Zora Ranch appears as professors with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
-    "detectors": [
-      "heuristic:person_name"
-    ],
-    "evidence_ids": [
-      "m-0011812"
     ]
   },
   {
@@ -78872,9 +78242,9 @@
     ]
   },
   {
-    "id": "whistleblowers:ari-ben",
-    "name": "Ari Ben",
-    "canonical_name": "Ari Ben",
+    "id": "whistleblowers:ari-ben-minashe",
+    "name": "Ari Ben-Minashe",
+    "canonical_name": "Ari Ben-Minashe",
     "category": "whistleblowers",
     "category_label": "Whistleblowers",
     "count": 1,
@@ -78882,7 +78252,7 @@
     "transcripts": [
       "Aliens Invented Religion To Control Huma"
     ],
-    "significance": "Ari Ben appears as whistleblowers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
+    "significance": "Ari Ben-Minashe appears as whistleblowers with 1 mention(s) across 1 transcript; detected by heuristic:person_name.",
     "detectors": [
       "heuristic:person_name"
     ],
