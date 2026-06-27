@@ -753,14 +753,16 @@
       const categoryLayout = buildCategoryLayout();
       const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
       const allPrimary = DATA.entities.filter((entity) => entity.topCategory === categoryId).sort((a, b) => b.count - a.count);
-      const primary = allPrimary.slice(0, 42);
+      const primary = allPrimary;
       const primarySet = new Set(primary.map((entity) => entity.id));
       const relatedIds = [];
-      const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) || primarySet.has(relationship.target)).slice(0, 150);
+      const rels = DATA.relationships
+        .filter((relationship) => primarySet.has(relationship.source) || primarySet.has(relationship.target))
+        .sort((a, b) => b.weight - a.weight);
       for (const relationship of rels) {
         const otherId = primarySet.has(relationship.source) ? relationship.target : relationship.source;
         if (!primarySet.has(otherId) && !relatedIds.includes(otherId)) relatedIds.push(otherId);
-        if (relatedIds.length >= 12) break;
+        if (relatedIds.length >= 24) break;
       }
       const related = relatedIds.map((id) => entitiesById.get(id)).filter(Boolean);
       const nodes = radialNodes(primary.concat(related), activeCategoryNode.x, activeCategoryNode.y, 420, 860, (entity) => entity.count || 1);
@@ -803,13 +805,21 @@
         .filter((node) => node.contextWeight > 0)
         .sort((a, b) => b.contextWeight - a.contextWeight)
         .slice(0, 4);
+      const labeledEntityNodes = nodes
+        .filter((node) => node.raw && node.raw.topCategory === categoryId)
+        .slice()
+        .sort((a, b) => (b.raw.count || 0) - (a.raw.count || 0))
+        .slice(0, allPrimary.length > 120 ? 120 : allPrimary.length);
+      const labeledRelatedNodes = nodes
+        .filter((node) => node.raw && node.raw.topCategory !== categoryId)
+        .slice(0, 12);
       setGraphLabels([nodeLabel(
         categoryId,
         "category",
         activeCategoryNode,
         truncate(label, 24),
-        allPrimary.length + " entities"
-      )].concat(nodes.map((node) => nodeLabel(
+        allPrimary.length + " entities · " + labeledEntityNodes.length + " labels"
+      )].concat(labeledEntityNodes.concat(labeledRelatedNodes).map((node) => nodeLabel(
         node.raw.id,
         "entity",
         node,
@@ -822,11 +832,12 @@
         node.contextWeight ? node.contextWeight.toLocaleString() + " links" : "",
         Math.max(12, node.r * .68)
       ))));
-      statusEl.textContent = label + " · select an entity for its direct relationship graph";
+      statusEl.textContent = label + " · " + allPrimary.length.toLocaleString() + " entities shown · " + labeledEntityNodes.length.toLocaleString() + " labels · search to jump to any entity";
       setCornerLabel(null);
       wireEntityNodes();
       wireCategoryNodes();
-      setViewBox(activeCategoryNode.x - 1260, activeCategoryNode.y - 940, 2520, 1880);
+      const bounds = nodeBounds(nodes.concat([activeCategoryNode]), 280);
+      setViewBox(bounds.x, bounds.y, bounds.w, bounds.h);
     }
 
     function renderNeighborhood(entity) {
@@ -877,6 +888,36 @@
     function radialNodes(items, cx, cy, innerRadius, outerRadius, sizeValue) {
       const values = items.map(sizeValue);
       const maxValue = Math.max(1, ...values);
+      if (items.length > 80) {
+        const spacing = 78;
+        const rings = [];
+        let assigned = 0;
+        let radius = innerRadius;
+        while (assigned < items.length) {
+          const capacity = Math.max(10, Math.floor((Math.PI * 2 * radius) / spacing));
+          const count = Math.min(capacity, items.length - assigned);
+          rings.push({ radius, count, start: assigned });
+          assigned += count;
+          radius += spacing;
+        }
+        const maxNodeRadius = items.length > 450 ? 10 : 14;
+        return items.map((item, index) => {
+          const ring = rings.find((candidate) => index >= candidate.start && index < candidate.start + candidate.count) || rings[rings.length - 1];
+          const ringIndex = index - ring.start;
+          const angle = (Math.PI * 2 * ringIndex) / Math.max(1, ring.count) - Math.PI / 2 + (ring.start % 2 ? Math.PI / Math.max(1, ring.count) : 0);
+          const value = sizeValue(item);
+          return {
+            id: item.id,
+            label: item.label || item.name,
+            count: item.count || item.entities || 0,
+            mentions: item.mentions || value,
+            x: cx + Math.cos(angle) * ring.radius,
+            y: cy + Math.sin(angle) * ring.radius,
+            r: Math.max(5, Math.min(maxNodeRadius, 4 + Math.sqrt(value / maxValue) * maxNodeRadius)),
+            raw: item,
+          };
+        });
+      }
       return items.map((item, index) => {
         const angle = (Math.PI * 2 * index) / Math.max(1, items.length) - Math.PI / 2;
         const radius = index < 10 ? innerRadius : index < 24 ? (innerRadius + outerRadius) / 2 : outerRadius;
@@ -892,6 +933,23 @@
           raw: item,
         };
       });
+    }
+
+    function nodeBounds(nodes, padding = 180) {
+      const xs = [];
+      const ys = [];
+      for (const node of nodes) {
+        if (!node) continue;
+        const radius = node.r || 0;
+        xs.push(node.x - radius, node.x + radius);
+        ys.push(node.y - radius, node.y + radius);
+      }
+      if (!xs.length || !ys.length) return { x: 40, y: 0, w: 2120, h: 1500 };
+      const minX = Math.min(...xs) - padding;
+      const maxX = Math.max(...xs) + padding;
+      const minY = Math.min(...ys) - padding;
+      const maxY = Math.max(...ys) + padding;
+      return { x: minX, y: minY, w: maxX - minX, h: maxY - minY };
     }
 
     function drawEdges(edges, nodeById, maxEdge) {

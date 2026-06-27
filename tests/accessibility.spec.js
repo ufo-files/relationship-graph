@@ -17,7 +17,7 @@ test("graph is operable with keyboard and exposes accessible controls", async ({
   await expect(graphButtons.first()).toBeFocused();
 
   await page.keyboard.press("Enter");
-  await expect(page.locator("#status")).toContainText("select an entity");
+  await expect(page.locator("#status")).toContainText("entities shown");
 
   const entityButton = page.locator(".html-graph-label[data-label-entity]").first();
   await expect(entityButton).toBeVisible();
@@ -35,7 +35,7 @@ test("graph is operable with keyboard and exposes accessible controls", async ({
   await expect(page.locator(".html-graph-label[aria-current='true']").first()).toBeFocused();
 
   await page.keyboard.press("Escape");
-  await expect(page.locator("#status")).toContainText("select an entity");
+  await expect(page.locator("#status")).toContainText("entities shown");
 
   await page.keyboard.press("Escape");
   await expect(page.locator("#status")).toContainText("select a group");
@@ -72,6 +72,20 @@ test("direct relationship graph renders one label per entity", async ({ page }) 
     return Array.from(repeated);
   });
   expect(duplicates).toEqual([]);
+});
+
+test("category drill-in renders every entity in the category", async ({ page }) => {
+  await page.goto("/");
+
+  const expectedPeopleCount = await page.evaluate(() => {
+    const raw = window.TRANSCRIPT_INTELLIGENCE_DATA;
+    return raw.entities.filter((entity) => (raw.categoryToTop[entity.category] || "needs_review") === "people").length;
+  });
+  expect(expectedPeopleCount).toBeGreaterThan(42);
+
+  await page.getByRole("button", { name: /^Open category: People/ }).click();
+  await expect(page.locator("#status")).toContainText(`${expectedPeopleCount.toLocaleString()} entities shown`);
+  await expect.poll(async () => page.locator("g[data-entity]").count()).toBeGreaterThanOrEqual(expectedPeopleCount);
 });
 
 test("merge duplicate target is selected through search results", async ({ page }) => {
