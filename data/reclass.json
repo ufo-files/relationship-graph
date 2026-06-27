@@ -111,7 +111,8 @@
     "people:eagle-works": "government_agencies",
     "politicians:united-states-congress": "government_agencies",
     "people:colorado-springs": "locations",
-    "people:foster-ranch": "locations"
+    "people:foster-ranch": "locations",
+    "people:dave-grush": "whistleblowers"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -247,7 +248,8 @@
     "national reconnaissance": "government_agencies",
     "x it": "tv_shows",
     "weimar germany": "locations",
-    "eagle works": "government_agencies"
+    "eagle works": "government_agencies",
+    "dave grush": "whistleblowers"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -776,7 +778,9 @@
     "people:eagle-works": "NASA Eagle Works",
     "eagle works": "NASA Eagle Works",
     "experiencers:diana-pasolka": "Diana Pasulka",
-    "diana pasolka": "Diana Pasulka"
+    "diana pasolka": "Diana Pasulka",
+    "people:dave-grush": "Dave Grusch",
+    "dave grush": "Dave Grusch"
   },
   "merges": {
     "whistleblowers:robert-lazar": {
@@ -1610,6 +1614,14 @@
       "targetId": "people:diana-pasolka",
       "targetName": "Diana Pasolka",
       "targetCategory": "people"
+    },
+    "people:from-dave-grush": {
+      "sourceId": "people:from-dave-grush",
+      "sourceName": "From Dave Grush",
+      "sourceCategory": "people",
+      "targetId": "people:dave-grush",
+      "targetName": "Dave Grusch",
+      "targetCategory": "whistleblowers"
     }
   },
   "nameMerges": {
@@ -2348,9 +2360,17 @@
       "targetId": "professors:diana-pasulka",
       "targetName": "Diana Pasulka",
       "targetCategory": "professors"
+    },
+    "from dave grush": {
+      "sourceId": "people:from-dave-grush",
+      "sourceName": "From Dave Grush",
+      "sourceCategory": "people",
+      "targetId": "people:dave-grush",
+      "targetName": "Dave Grusch",
+      "targetCategory": "whistleblowers"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-27T07:21:30.044Z",
+  "generatedAt": "2026-06-27T07:46:41.572Z",
   "note": "Replace data/reclass.json with this file before rebuilding."
 }
