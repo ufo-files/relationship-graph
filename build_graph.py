@@ -112,7 +112,6 @@ CATEGORY_LABELS = {
     "religious_texts": "Religious texts",
     "emerging_terminology": "Emerging terminology",
     "taxonomies": "Taxonomies",
-    "quotes": "Powerful quotes",
     "secret_societies": "Secret societies",
     "leaks": "Leaks",
     "watchdog_groups": "Watchdog groups",
@@ -132,7 +131,8 @@ TOP_CATEGORY_LABELS = {
     "documents_media": "Documents & Media",
     "events_claims": "Events & Claims",
     "science_technology": "Science & Technology",
-    "signals_language": "Signals & Language",
+    "signals": "Signals",
+    "terms_references": "Terms & References",
     "needs_review": "Needs Review",
 }
 
@@ -191,14 +191,13 @@ CATEGORY_TO_TOP = {
     "star_systems": "science_technology",
     "galaxies": "science_technology",
     "alien_species": "science_technology",
-    "frequencies": "signals_language",
-    "radio_frequencies": "signals_language",
-    "gps_coordinates": "signals_language",
-    "ip_addresses": "signals_language",
-    "key_terms": "signals_language",
-    "quotes": "signals_language",
-    "symbols": "signals_language",
-    "websites": "signals_language",
+    "frequencies": "signals",
+    "radio_frequencies": "signals",
+    "gps_coordinates": "signals",
+    "ip_addresses": "signals",
+    "key_terms": "terms_references",
+    "symbols": "terms_references",
+    "websites": "terms_references",
 }
 
 DEFAULT_TERMS = {
@@ -492,7 +491,6 @@ PATTERN_CATEGORIES = {
     "dates_times",
     "blood_types",
     "patents",
-    "quotes",
 }
 
 URL_RE = re.compile(r"\b(?:https?://)?(?:[a-z0-9-]+\.)+[a-z]{2,}(?:/[^\s)]*)?", re.I)
@@ -524,7 +522,6 @@ DATE_RE = re.compile(
 BLOOD_RE = re.compile(r"\b(?:A|B|AB|O)[+-]\b")
 PATENT_RE = re.compile(r"\b(?:US\s*)?(?:Patent|patent)\s*(?:No\.?\s*)?(?:\d{4,}[A-Z0-9-]*)?\b", re.I)
 PERSON_RE = re.compile(r"\b(?:Dr\.|Mr\.|Ms\.|Sen\.|Rep\.)?\s*(?:[A-Z][a-z]+|[A-Z]\.)\s+(?:[A-Z][a-z]+|[A-Z]\.)(?:\s+(?:[A-Z][a-z]+|[A-Z]\.)){0,2}\b")
-SENTENCE_RE = re.compile(r"(?<=[.!?])\s+")
 
 PERSON_STOPWORDS = {
     "United States",
@@ -563,7 +560,6 @@ RELATION_RULES = [
     (("contractors", "government_agencies"), "contracts_with"),
     (("document_names", "people"), "mentions_or_authored_by"),
     (("military_bases", "locations"), "located_near"),
-    (("quotes", "people"), "attributed_near"),
 ]
 
 
@@ -982,19 +978,6 @@ def pattern_mentions(segment: Segment) -> list[dict[str, Any]]:
                 }
             )
 
-    for sentence in SENTENCE_RE.split(text):
-        trimmed = sentence.strip()
-        if 80 <= len(trimmed) <= 260 and re.search(r"\b(?:I know|we know|I believe|the truth|cannot explain|impossible|no idea|behind the curtain)\b", trimmed, re.I):
-            items.append(
-                {
-                    "name": trimmed,
-                    "category": "quotes",
-                    "detector": "heuristic:quote_sentence",
-                    "confidence": 0.62,
-                    "reason": "Sentence has quote-worthy assertion language",
-                    "excerpt": trimmed,
-                }
-            )
     return items
 
 

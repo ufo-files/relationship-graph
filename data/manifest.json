@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T03:17:24.689004+00:00",
+  "generated_at": "2026-06-27T03:25:04.475923+00:00",
   "pipeline": "uap-relationship-graph",
   "reproducibility": {
     "no_openai_api": true,
@@ -28,10 +28,10 @@
   "counts": {
     "transcripts": 36,
     "segments": 162082,
-    "mentions": 11290,
-    "entities": 3809,
+    "mentions": 10815,
+    "entities": 3338,
     "relationships": 8000,
-    "categories": 50
+    "categories": 49
   },
   "input_hashes": {
     "100-000-ufos-are-surrounding-earth-ft-to.tsv": "a26a242213c018b4103b6f29d03f4aab3c1ce7e47d2dc1e0f18c72e16724077a",
@@ -72,7 +72,7 @@
     "why-the-pentagon-tried-to-censor-this-uf.tsv": "e66f4d3cc4202e0fd4d4986c5a4dc2a618df86798adc396d5fc333b004509b23"
   },
   "registry_hash": "5a85b27d9d5da2b1e7b9477b0086794bffcadab4ca5b0ce3cc4b54577805fbd0",
-  "pipeline_hash": "da7eed2cbe92b278387fdffee9719359ebb089ec14aaf99536c445d7b8353952",
+  "pipeline_hash": "6310bc020002be2df94d435c034b5e3bac3fa2baf9ad31715a2630807cf8a3e2",
   "review_counts": {
     "reclassifications": 71,
     "name_reclassifications": 78,
