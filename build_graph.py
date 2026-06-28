@@ -1217,6 +1217,72 @@ def add_mention(
     )
 
 
+def review_alias_for(entity_id: str, name: str, aliases_by_id: dict[str, Any], aliases_by_name: dict[str, Any]) -> str | None:
+    alias = aliases_by_id.get(entity_id) or aliases_by_name.get(normalize_name(name))
+    if isinstance(alias, str) and alias.strip():
+        return alias.strip()
+    return None
+
+
+def review_merge_for(entity_id: str, name: str, merges: dict[str, Any], name_merges: dict[str, Any]) -> dict[str, Any] | None:
+    merge = name_merges.get(normalize_name(name)) or merges.get(entity_id)
+    if isinstance(merge, dict) and merge.get("targetName"):
+        return merge
+    return None
+
+
+def reviewed_category_for_name(name: str, category: str, name_reclassifications: dict[str, Any]) -> str:
+    target_category = name_reclassifications.get(normalize_name(name), category)
+    if target_category not in CATEGORY_LABELS:
+        target_category = category
+    if target_category in PERSON_LIKE_CATEGORIES:
+        target_category = classify_non_person_name(name) or target_category
+    return target_category
+
+
+def resolve_review_merge_chain(
+    entity_id: str,
+    name: str,
+    category: str,
+    merges: dict[str, Any],
+    name_merges: dict[str, Any],
+    aliases_by_id: dict[str, Any],
+    aliases_by_name: dict[str, Any],
+    name_reclassifications: dict[str, Any],
+) -> tuple[str, str, str]:
+    current_id = entity_id
+    current_name = name
+    current_category = category
+    seen: set[tuple[str, str, str]] = set()
+
+    for _ in range(24):
+        state = (current_id, normalize_name(current_name), current_category)
+        if state in seen:
+            break
+        seen.add(state)
+        merge = review_merge_for(current_id, current_name, merges, name_merges)
+        if not merge:
+            break
+
+        next_name = clean_text(str(merge["targetName"]))
+        next_category = merge.get("targetCategory") if merge.get("targetCategory") in CATEGORY_LABELS else current_category
+        target_id = str(merge.get("targetId") or "")
+        next_alias = review_alias_for(target_id, next_name, aliases_by_id, aliases_by_name)
+        if next_alias:
+            next_name = next_alias
+        next_category = reviewed_category_for_name(next_name, next_category, name_reclassifications)
+        next_id = entity_key(canonicalize(next_name, next_category), next_category)
+        next_state = (next_id, normalize_name(next_name), next_category)
+        if next_state == state:
+            break
+
+        current_id = next_id
+        current_name = next_name
+        current_category = next_category
+
+    return current_name, current_category, current_id
+
+
 def apply_review_to_mentions(mentions: list[Mention], review: dict[str, Any]) -> list[Mention]:
     false_positives = review.get("falsePositives", {})
     false_ids = set(false_positives.keys())
@@ -1230,7 +1296,7 @@ def apply_review_to_mentions(mentions: list[Mention], review: dict[str, Any]) ->
     name_reclassifications = review.get("nameReclassifications", {})
     raw_aliases = review.get("aliases", {})
     aliases_by_id = {key: value for key, value in raw_aliases.items() if ":" in key}
-    aliases_by_name = {normalize_name(key): value for key, value in raw_aliases.items()}
+    aliases_by_name = {normalize_name(key): value for key, value in raw_aliases.items() if ":" not in key}
     merges = review.get("merges", {})
     name_merges = {normalize_name(key): value for key, value in review.get("nameMerges", {}).items()}
 
@@ -1239,26 +1305,38 @@ def apply_review_to_mentions(mentions: list[Mention], review: dict[str, Any]) ->
         mention_name = normalize_name(mention.name)
         if mention.entity_id in false_ids or mention_name in false_names or mention_name in omission_names:
             continue
-        merge = merges.get(mention.entity_id) or name_merges.get(mention_name)
-        if isinstance(merge, dict) and merge.get("targetName"):
-            target_category = merge.get("targetCategory") if merge.get("targetCategory") in CATEGORY_LABELS else mention.category
-            mention.name = merge["targetName"]
-            target_category = name_reclassifications.get(normalize_name(mention.name), target_category)
-            if target_category in PERSON_LIKE_CATEGORIES:
-                target_category = classify_non_person_name(mention.name) or target_category
-            mention.category = target_category
-            mention.category_label = label(target_category)
-            mention.entity_id = entity_key(canonicalize(mention.name, target_category), target_category)
+
+        alias = review_alias_for(mention.entity_id, mention.name, aliases_by_id, aliases_by_name)
+        if alias:
+            mention.name = alias
+            mention.entity_id = entity_key(canonicalize(alias, mention.category), mention.category)
+            mention_name = normalize_name(mention.name)
+
+        merged_name, merged_category, merged_id = resolve_review_merge_chain(
+            mention.entity_id,
+            mention.name,
+            mention.category,
+            merges,
+            name_merges,
+            aliases_by_id,
+            aliases_by_name,
+            name_reclassifications,
+        )
+        if merged_id != mention.entity_id or merged_name != mention.name or merged_category != mention.category:
+            mention.name = merged_name
+            mention.category = merged_category
+            mention.category_label = label(merged_category)
+            mention.entity_id = merged_id
             reviewed.append(mention)
             continue
+
         target_category = reclassifications.get(mention.entity_id) or name_reclassifications.get(mention_name)
         if target_category:
-            if target_category in PERSON_LIKE_CATEGORIES:
-                target_category = classify_non_person_name(mention.name) or target_category
+            target_category = reviewed_category_for_name(mention.name, target_category, name_reclassifications)
             mention.category = target_category
             mention.category_label = label(mention.category)
             mention.entity_id = entity_key(canonicalize(mention.name, mention.category), mention.category)
-        alias = aliases_by_id.get(mention.entity_id) or aliases_by_name.get(mention_name)
+        alias = review_alias_for(mention.entity_id, mention.name, aliases_by_id, aliases_by_name)
         if alias:
             mention.name = alias
             mention.entity_id = entity_key(canonicalize(alias, mention.category), mention.category)
@@ -1601,14 +1679,17 @@ def write_report(
         "topCategoryLabels": TOP_CATEGORY_LABELS,
         "categoryToTop": CATEGORY_TO_TOP,
     }
+    app_payload_json = json.dumps(app_payload, ensure_ascii=False)
+    app_payload_version = hashlib.sha256(app_payload_json.encode("utf-8")).hexdigest()[:16]
     (ROOT / "app-data.js").write_text(
-        "window.TRANSCRIPT_INTELLIGENCE_DATA = " + json.dumps(app_payload, ensure_ascii=False) + ";\n",
+        "window.TRANSCRIPT_INTELLIGENCE_DATA = " + app_payload_json + ";\n",
         encoding="utf-8",
     )
-    (ROOT / "index.html").write_text(render_html(), encoding="utf-8")
+    (ROOT / "index.html").write_text(render_html(app_payload_version), encoding="utf-8")
 
 
-def render_html() -> str:
+def render_html(app_data_version: str = "") -> str:
+    app_data_src = "app-data.js" + (f"?v={app_data_version}" if app_data_version else "")
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -2524,7 +2605,8 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def render_html() -> str:
+def render_html(app_data_version: str = "") -> str:
+    app_data_src = "app-data.js" + (f"?v={app_data_version}" if app_data_version else "")
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -2983,7 +3065,7 @@ def render_html() -> str:
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="app-data.js"></script>
+    <script src="__APP_DATA_SRC__"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -4830,7 +4912,7 @@ def render_html() -> str:
   </script>
 </body>
 </html>
-"""
+""".replace("__APP_DATA_SRC__", app_data_src)
 
 
 if __name__ == "__main__":

@@ -275,7 +275,65 @@
     "people:project-aquarius": "government_project_codenames",
     "professors:bill-moore": "people",
     "people:for-skinwalker": "tv_shows",
-    "people:uinta-basin": "locations"
+    "people:uinta-basin": "locations",
+    "experiencers:steven-spielberg": "directors",
+    "people:after-disclosure": "books",
+    "people:harry-truman": "politicians",
+    "friendly_people:richard-doty": "hoaxers",
+    "people:security-and-intelligence-directorate": "government_agencies",
+    "people:mason-lodge": "secret_societies",
+    "people:black-mailbox": "locations",
+    "people:at-groom-lake": "locations",
+    "friendly_people:virgin-mary": "people",
+    "people:holy-mountain": "locations",
+    "friendly_people:jack-ruby": "people",
+    "people:civilized-society": "books",
+    "people:helter-skelter": "events",
+    "people:ashbury-free-medical-clinic": "locations",
+    "friendly_people:jim-garrison": "people",
+    "people:point-pleasant": "locations",
+    "people:history-channel": "tv_shows",
+    "friendly_people:korean-war": "events",
+    "people:manchurian-candidates": "emerging_terminology",
+    "people:photographic-union": "government_project_codenames",
+    "experiencers:ross-goldhart": "journalists",
+    "likely_spies:american-psychic-spy-program": "government_agencies",
+    "people:peru": "locations",
+    "people:in-september": "dates_times",
+    "people:annie-jacobson": "authors",
+    "people:false-memory-syndrome-foundation": "medical_conditions",
+    "people:persinger-god": "technology",
+    "people:american-world-power": "books",
+    "friendly_people:second-empire": "books",
+    "people:american-establishment": "books",
+    "people:explore-mars-foundation": "nonprofits",
+    "people:pentagon-papers": "leaks",
+    "people:special-programs": "government_agencies",
+    "people:from-june": "dates_times",
+    "people:time-loops": "books",
+    "universities:kennedy-school": "university_departments",
+    "people:space-kids-camp": "nonprofits",
+    "people:middle-ages": "dates_times",
+    "people:above-top-secret": "books",
+    "people:civil-war": "events",
+    "people:civil-air-corps": "government_agencies",
+    "people:operation-high-jump": "government_project_codenames",
+    "people:texas-bird-depository": "companies",
+    "people:operation-prado": "government_project_codenames",
+    "people:operation-snow-white": "government_project_codenames",
+    "whistleblowers:jeremy-corbell": "people",
+    "people:on-weaponized": "books",
+    "people:south-dakota": "locations",
+    "people:tel-aviv": "locations",
+    "people:byfield-brown": "theories",
+    "people:edwards-412th-test-wing": "military_bases",
+    "people:for-lockheed": "contractors",
+    "people:fort-irwin": "military_bases",
+    "people:raytheon-triangle": "technology",
+    "people:david-cameron": "directors",
+    "people:josephson-junctions": "contractors",
+    "companies:bigelow-advanced-aerospace-space": "contractors",
+    "people:aaro-historical-report": "document_names"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -612,7 +670,73 @@
     "guinness book": "books",
     "bulgarian academy": "government_agencies",
     "french academy": "government_agencies",
-    "george h": "politicians"
+    "george h": "politicians",
+    "steven spielberg": "directors",
+    "after disclosure": "books",
+    "star trek enterprise": "tv_shows",
+    "harry truman": "politicians",
+    "richard doty": "hoaxers",
+    "security and intelligence directorate": "government_agencies",
+    "mason lodge": "secret_societies",
+    "black mailbox": "locations",
+    "at groom lake": "locations",
+    "virgin mary": "people",
+    "holy mountain": "locations",
+    "jack ruby": "people",
+    "towards a psycho-civilized society": "books",
+    "helter skelter": "events",
+    "haight-ashbury free medical clinic": "locations",
+    "jim garrison": "people",
+    "point pleasant": "locations",
+    "manchurian candidates": "emerging_terminology",
+    "photographic union": "government_project_codenames",
+    "ross coulthart": "journalists",
+    "american psychic spy program": "government_agencies",
+    "civilized society": "books",
+    "ashbury free medical clinic": "locations",
+    "ross goldhart": "journalists",
+    "peru": "locations",
+    "in september": "dates_times",
+    "annie jacobson": "authors",
+    "false memory syndrome foundation": "medical_conditions",
+    "persinger god helmet": "technology",
+    "angle-american world power": "books",
+    "the spider's web, britain's second empire": "books",
+    "the anglo-american establishment": "books",
+    "explore mars foundation": "nonprofits",
+    "pentagon papers": "leaks",
+    "special programs": "government_agencies",
+    "from june": "dates_times",
+    "time loops": "books",
+    "kennedy school": "university_departments",
+    "space kids camp": "nonprofits",
+    "middle ages": "dates_times",
+    "above top secret": "books",
+    "civil war": "events",
+    "civil air corps": "government_agencies",
+    "operation high jump": "government_project_codenames",
+    "texas bird depository": "companies",
+    "operation prado": "government_project_codenames",
+    "operation snow white": "government_project_codenames",
+    "jeremy corbell": "people",
+    "weaponized": "books",
+    "south dakota": "locations",
+    "tel aviv": "locations",
+    "byfield brown effect": "theories",
+    "edwards 412th test wing": "military_bases",
+    "fort irwin": "military_bases",
+    "raytheon triangle": "technology",
+    "david cameron": "directors",
+    "josephson junctions": "contractors",
+    "bigelow advanced aerospace space": "contractors",
+    "aaro historical report": "document_names",
+    "persinger god": "technology",
+    "american world power": "books",
+    "second empire": "books",
+    "american establishment": "books",
+    "on weaponized": "books",
+    "byfield brown": "theories",
+    "for lockheed": "contractors"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -1194,6 +1318,31 @@
       "name": "Lady Dracula",
       "category": "people",
       "categoryLabel": "People"
+    },
+    "people:because-wednesday": {
+      "name": "Because Wednesday",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:fight-club": {
+      "name": "Fight Club",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:plasma-physics": {
+      "name": "Plasma Physics",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:try-quo": {
+      "name": "Try Quo",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:astronautical-engineering": {
+      "name": "Astronautical Engineering",
+      "category": "people",
+      "categoryLabel": "People"
     }
   },
   "omissions": {},
@@ -1359,7 +1508,73 @@
     "people:applied-sciences": "Monroe Institute of Applied Sciences",
     "applied sciences": "Monroe Institute of Applied Sciences",
     "people:for-skinwalker": "Skinwalker Ranch",
-    "for skinwalker": "Skinwalker Ranch"
+    "for skinwalker": "Skinwalker Ranch",
+    "people:after-disclosure": "A.D. After Disclosure",
+    "after disclosure": "A.D. After Disclosure",
+    "people:so-gordon-liddy": "G. Gordon Liddy",
+    "so gordon liddy": "G. Gordon Liddy",
+    "people:pope-pius": "Pope",
+    "pope pius": "Pope",
+    "people:special-projects": "EG&G Special Projects",
+    "special projects": "EG&G Special Projects",
+    "government_agencies:us-air-force": "United States Air Force",
+    "us air force": "United States Air Force",
+    "people:just-papoose-lake": "Papoose Lake",
+    "just papoose lake": "Papoose Lake",
+    "people:at-groom-lake": "Groom Lake",
+    "at groom lake": "Groom Lake",
+    "people:orthodox-church": "Orthodox Catholic Church",
+    "orthodox church": "Orthodox Catholic Church",
+    "people:civilized-society": "Towards a Psycho-Civilized Society",
+    "civilized society": "Towards a Psycho-Civilized Society",
+    "people:ashbury-free-medical-clinic": "Haight-Ashbury Free Medical Clinic",
+    "ashbury free medical clinic": "Haight-Ashbury Free Medical Clinic",
+    "friendly_people:actually-bob-jacobs": "Bob Jacobs",
+    "actually bob jacobs": "Bob Jacobs",
+    "experiencers:ross-goldhart": "Ross Coulthart",
+    "ross goldhart": "Ross Coulthart",
+    "people:american-joseph-mengele": "Joseph Mengele",
+    "american joseph mengele": "Joseph Mengele",
+    "people:in-september": "September 1964",
+    "in september": "September 1964",
+    "people:john-olson-lear": "John Lear",
+    "john olson lear": "John Lear",
+    "people:persinger-god": "Persinger God Helmet",
+    "persinger god": "Persinger God Helmet",
+    "politicians:bill-clinton": "President Bill Clinton",
+    "bill clinton": "President Bill Clinton",
+    "people:as-douglas-murray": "Douglas Murray",
+    "as douglas murray": "Douglas Murray",
+    "people:american-world-power": "Angle-American World Power",
+    "american world power": "Angle-American World Power",
+    "friendly_people:second-empire": "The Spider's Web, Britain's Second Empire",
+    "second empire": "The Spider's Web, Britain's Second Empire",
+    "people:american-establishment": "The Anglo-American Establishment",
+    "american establishment": "The Anglo-American Establishment",
+    "people:special-programs": "Pentagon Special Programs",
+    "special programs": "Pentagon Special Programs",
+    "people:from-june": "June 2009 - May 2011",
+    "from june": "June 2009 - May 2011",
+    "government_agencies:based-laser-project-office": "Space-Based Laser Project Office",
+    "based laser project office": "Space-Based Laser Project Office",
+    "people:or-oxler": "Bob Oxler",
+    "or oxler": "Bob Oxler",
+    "people:bob-exler": "Bob Oxler",
+    "bob exler": "Bob Oxler",
+    "people:so-paul-mellon": "Paul Mellon",
+    "so paul mellon": "Paul Mellon",
+    "people:on-weaponized": "Weaponized",
+    "on weaponized": "Weaponized",
+    "people:byfield-brown": "Byfield Brown Effect",
+    "byfield brown": "Byfield Brown Effect",
+    "people:larry-nolan": "Gary Nolan",
+    "larry nolan": "Gary Nolan",
+    "people:enter-lockheed-martin": "Lockheed Martin",
+    "enter lockheed martin": "Lockheed Martin",
+    "people:for-lockheed": "Lockheed Martin",
+    "for lockheed": "Lockheed Martin",
+    "people:anna-paulina": "Congresswoman Anna Paulina Luna",
+    "anna paulina": "Congresswoman Anna Paulina Luna"
   },
   "merges": {
     "whistleblowers:robert-lazar": {
@@ -1942,9 +2157,9 @@
       "sourceId": "government_agencies:national-reconnaissance-office",
       "sourceName": "National Reconnaissance Office",
       "sourceCategory": "government_agencies",
-      "targetId": "government_agencies:national-reconnaissance",
+      "targetId": "people:national-reconnaissance",
       "targetName": "National Reconnaissance",
-      "targetCategory": "government_agencies"
+      "targetCategory": "people"
     },
     "people:g-he": {
       "sourceId": "people:g-he",
@@ -2270,9 +2485,9 @@
       "sourceId": "people:eric-davis",
       "sourceName": "Eric Davis",
       "sourceCategory": "people",
-      "targetId": "politicians:eric-davis",
+      "targetId": "whistleblowers:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "politicians"
+      "targetCategory": "whistleblowers"
     },
     "whistleblowers:eric-davis": {
       "sourceId": "whistleblowers:eric-davis",
@@ -2286,9 +2501,9 @@
       "sourceId": "experiencers:eric-davis",
       "sourceName": "Eric Davis",
       "sourceCategory": "experiencers",
-      "targetId": "people:eric-davis",
+      "targetId": "friendly_people:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "people"
+      "targetCategory": "friendly_people"
     },
     "friendly_people:eric-davis": {
       "sourceId": "friendly_people:eric-davis",
@@ -2390,9 +2605,9 @@
       "sourceId": "dangerous_people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
       "sourceCategory": "dangerous_people",
-      "targetId": "people:lee-harvey-oswald",
+      "targetId": "friendly_people:lee-harvey-oswald",
       "targetName": "Lee Harvey Oswald",
-      "targetCategory": "people"
+      "targetCategory": "friendly_people"
     },
     "institutes:manuro-institute": {
       "sourceId": "institutes:manuro-institute",
@@ -3302,9 +3517,9 @@
       "sourceId": "friendly_people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
       "sourceCategory": "friendly_people",
-      "targetId": "dangerous_people:lee-harvey-oswald",
+      "targetId": "people:lee-harvey-oswald",
       "targetName": "Lee Harvey Oswald",
-      "targetCategory": "dangerous_people"
+      "targetCategory": "people"
     },
     "people:charles-manson": {
       "sourceId": "people:charles-manson",
@@ -3390,16 +3605,16 @@
       "sourceId": "movies:close-encounters",
       "sourceName": "Close Encounters",
       "sourceCategory": "movies",
-      "targetId": "experiencers:closer-encounter",
-      "targetName": "Closer Encounter",
-      "targetCategory": "experiencers"
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
     },
     "experiencers:closer-encounter": {
       "sourceId": "experiencers:closer-encounter",
       "sourceName": "Closer Encounter",
       "sourceCategory": "experiencers",
-      "targetId": "movies:closer-encounters",
-      "targetName": "Closer Encounters",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters",
       "targetCategory": "movies"
     },
     "people:nick-cook": {
@@ -3510,9 +3725,9 @@
       "sourceId": "contractors:lockheed-martin",
       "sourceName": "Lockheed Martin",
       "sourceCategory": "contractors",
-      "targetId": "experiencers:lockheed-martin",
-      "targetName": "Lockheed Martin",
-      "targetCategory": "experiencers"
+      "targetId": "people:enter-lockheed-martin",
+      "targetName": "Enter Lockheed Martin",
+      "targetCategory": "people"
     },
     "people:lawrence-preston-geis": {
       "sourceId": "people:lawrence-preston-geis",
@@ -3558,17 +3773,17 @@
       "sourceId": "dangerous_people:pat-price",
       "sourceName": "Pat Price",
       "sourceCategory": "dangerous_people",
-      "targetId": "likely_spies:pat-price",
+      "targetId": "friendly_people:pat-price",
       "targetName": "Pat Price",
-      "targetCategory": "likely_spies"
+      "targetCategory": "friendly_people"
     },
     "likely_spies:pat-price": {
       "sourceId": "likely_spies:pat-price",
       "sourceName": "Pat Price",
       "sourceCategory": "likely_spies",
-      "targetId": "friendly_people:pat-price",
+      "targetId": "people:pat-price",
       "targetName": "Pat Price",
-      "targetCategory": "friendly_people"
+      "targetCategory": "people"
     },
     "friendly_people:pat-price": {
       "sourceId": "friendly_people:pat-price",
@@ -3718,9 +3933,9 @@
       "sourceId": "people:barack-obama",
       "sourceName": "Barack Obama",
       "sourceCategory": "people",
-      "targetId": "people:president-barack-obama",
+      "targetId": "politicians:president-barack-obama",
       "targetName": "President Barack Obama",
-      "targetCategory": "people"
+      "targetCategory": "politicians"
     },
     "friendly_people:mikhail-dobrnovic": {
       "sourceId": "friendly_people:mikhail-dobrnovic",
@@ -3934,8 +4149,8 @@
       "sourceId": "people:when-bob-lazar",
       "sourceName": "When Bob Lazar",
       "sourceCategory": "people",
-      "targetId": "people:bob-lazar-muscovium",
-      "targetName": "Bob Lazar Muscovium",
+      "targetId": "people:bob-lazar",
+      "targetName": "Bob Lazar",
       "targetCategory": "people"
     },
     "friendly_people:howard-hunt": {
@@ -4126,8 +4341,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "sourceCategory": "people",
-      "targetId": "people:has-hal-puthoff",
-      "targetName": "Has Hal Puthoff",
+      "targetId": "people:hal-puthoff",
+      "targetName": "Hal Puthoff",
       "targetCategory": "people"
     },
     "people:rupert-sheldrick": {
@@ -4221,7 +4436,7 @@
     "people:manchurian-candidate": {
       "sourceId": "people:manchurian-candidate",
       "sourceName": "Manchurian Candidate",
-      "sourceCategory": "emerging_terminology",
+      "sourceCategory": "people",
       "targetId": "friendly_people:manchurian-candidate",
       "targetName": "Manchurian Candidate",
       "targetCategory": "friendly_people"
@@ -4358,9 +4573,9 @@
       "sourceId": "people:john-lear",
       "sourceName": "John Lear",
       "sourceCategory": "people",
-      "targetId": "friendly_people:john-lear",
-      "targetName": "John Lear",
-      "targetCategory": "friendly_people"
+      "targetId": "people:john-olson-lear",
+      "targetName": "John Olson Lear",
+      "targetCategory": "people"
     },
     "friendly_people:john-lear": {
       "sourceId": "friendly_people:john-lear",
@@ -4390,8 +4605,8 @@
       "sourceId": "professors:gary-nolan",
       "sourceName": "Gary Nolan",
       "sourceCategory": "professors",
-      "targetId": "people:by-gary-nolan",
-      "targetName": "By Gary Nolan",
+      "targetId": "people:larry-nolan",
+      "targetName": "Larry Nolan",
       "targetCategory": "people"
     },
     "friendly_people:harold-malmgren": {
@@ -4425,6 +4640,662 @@
       "targetId": "people:for-skinwalker",
       "targetName": "For Skinwalker",
       "targetCategory": "people"
+    },
+    "people:steven-spielberg": {
+      "sourceId": "people:steven-spielberg",
+      "sourceName": "Steven Spielberg",
+      "sourceCategory": "people",
+      "targetId": "experiencers:steven-spielberg",
+      "targetName": "Steven Spielberg",
+      "targetCategory": "experiencers"
+    },
+    "professors:d-after-disclosure": {
+      "sourceId": "professors:d-after-disclosure",
+      "sourceName": "D. After Disclosure",
+      "sourceCategory": "professors",
+      "targetId": "people:after-disclosure",
+      "targetName": "After Disclosure",
+      "targetCategory": "people"
+    },
+    "people:star-trek-enterprise": {
+      "sourceId": "people:star-trek-enterprise",
+      "sourceName": "Star Trek Enterprise",
+      "sourceCategory": "tv_shows",
+      "targetId": "tv_shows:star-trek",
+      "targetName": "Star Trek",
+      "targetCategory": "tv_shows"
+    },
+    "people:because-dark-skies": {
+      "sourceId": "people:because-dark-skies",
+      "sourceName": "Because Dark Skies",
+      "sourceCategory": "people",
+      "targetId": "people:dark-sky",
+      "targetName": "Dark Sky",
+      "targetCategory": "people"
+    },
+    "people:dark-sky": {
+      "sourceId": "people:dark-sky",
+      "sourceName": "Dark Sky",
+      "sourceCategory": "people",
+      "targetId": "tv_shows:dark-skies",
+      "targetName": "Dark Skies",
+      "targetCategory": "tv_shows"
+    },
+    "people:nathan-twinning": {
+      "sourceId": "people:nathan-twinning",
+      "sourceName": "Nathan Twinning",
+      "sourceCategory": "people",
+      "targetId": "likely_spies:nathan-twinning",
+      "targetName": "Nathan Twinning",
+      "targetCategory": "likely_spies"
+    },
+    "likely_spies:nathan-twinning": {
+      "sourceId": "likely_spies:nathan-twinning",
+      "sourceName": "Nathan Twinning",
+      "sourceCategory": "likely_spies",
+      "targetId": "friendly_people:nathan-twining",
+      "targetName": "Nathan Twining",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:nathan-twining": {
+      "sourceId": "friendly_people:nathan-twining",
+      "sourceName": "Nathan Twining",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:nathan-twining",
+      "targetName": "Nathan Twining",
+      "targetCategory": "people"
+    },
+    "people:nathan-twining": {
+      "sourceId": "people:nathan-twining",
+      "sourceName": "Nathan Twining",
+      "sourceCategory": "people",
+      "targetId": "people:general-nathan-twining",
+      "targetName": "General Nathan Twining",
+      "targetCategory": "people"
+    },
+    "people:leonard-stringfield": {
+      "sourceId": "people:leonard-stringfield",
+      "sourceName": "Leonard Stringfield",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:leonard-stringfield",
+      "targetName": "Leonard Stringfield",
+      "targetCategory": "whistleblowers"
+    },
+    "people:g-gordon-liddy": {
+      "sourceId": "people:g-gordon-liddy",
+      "sourceName": "G. Gordon Liddy",
+      "sourceCategory": "people",
+      "targetId": "people:gordon-liddy",
+      "targetName": "Gordon Liddy",
+      "targetCategory": "people"
+    },
+    "people:gordon-liddy": {
+      "sourceId": "people:gordon-liddy",
+      "sourceName": "Gordon Liddy",
+      "sourceCategory": "people",
+      "targetId": "people:so-gordon-liddy",
+      "targetName": "So Gordon Liddy",
+      "targetCategory": "people"
+    },
+    "hoaxers:richard-doti": {
+      "sourceId": "hoaxers:richard-doti",
+      "sourceName": "Richard Doti",
+      "sourceCategory": "hoaxers",
+      "targetId": "people:richard-doty",
+      "targetName": "Richard Doty",
+      "targetCategory": "people"
+    },
+    "people:richard-doty": {
+      "sourceId": "people:richard-doty",
+      "sourceName": "Richard Doty",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:richard-doty",
+      "targetName": "Richard Doty",
+      "targetCategory": "friendly_people"
+    },
+    "companies:staff-curtis": {
+      "sourceId": "companies:staff-curtis",
+      "sourceName": "Staff Curtis",
+      "sourceCategory": "companies",
+      "targetId": "people:curtis-lemay",
+      "targetName": "Curtis LeMay",
+      "targetCategory": "people"
+    },
+    "people:john-paul": {
+      "sourceId": "people:john-paul",
+      "sourceName": "John Paul",
+      "sourceCategory": "people",
+      "targetId": "people:pope-john-paul",
+      "targetName": "Pope John Paul",
+      "targetCategory": "people"
+    },
+    "people:pope-john-paul": {
+      "sourceId": "people:pope-john-paul",
+      "sourceName": "Pope John Paul",
+      "sourceCategory": "people",
+      "targetId": "people:pope-pius",
+      "targetName": "Pope Pius",
+      "targetCategory": "people"
+    },
+    "people:when-james-fox": {
+      "sourceId": "people:when-james-fox",
+      "sourceName": "When James Fox",
+      "sourceCategory": "people",
+      "targetId": "journalists:james-fox",
+      "targetName": "James Fox",
+      "targetCategory": "journalists"
+    },
+    "people:maybe-james": {
+      "sourceId": "people:maybe-james",
+      "sourceName": "Maybe James",
+      "sourceCategory": "people",
+      "targetId": "journalists:james-fox",
+      "targetName": "James Fox",
+      "targetCategory": "journalists"
+    },
+    "government_agencies:united-states-air-force": {
+      "sourceId": "government_agencies:united-states-air-force",
+      "sourceName": "United States Air Force",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:us-air-force",
+      "targetName": "US Air Force",
+      "targetCategory": "government_agencies"
+    },
+    "military_bases:papoose-lake": {
+      "sourceId": "military_bases:papoose-lake",
+      "sourceName": "Papoose Lake",
+      "sourceCategory": "military_bases",
+      "targetId": "people:just-papoose-lake",
+      "targetName": "Just Papoose Lake",
+      "targetCategory": "people"
+    },
+    "military_bases:groom-lake": {
+      "sourceId": "military_bases:groom-lake",
+      "sourceName": "Groom Lake",
+      "sourceCategory": "military_bases",
+      "targetId": "people:at-groom-lake",
+      "targetName": "At Groom Lake",
+      "targetCategory": "people"
+    },
+    "people:virgin-mary": {
+      "sourceId": "people:virgin-mary",
+      "sourceName": "Virgin Mary",
+      "sourceCategory": "people",
+      "targetId": "experiencers:virgin-mary",
+      "targetName": "Virgin Mary",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:virgin-mary": {
+      "sourceId": "experiencers:virgin-mary",
+      "sourceName": "Virgin Mary",
+      "sourceCategory": "experiencers",
+      "targetId": "friendly_people:virgin-mary",
+      "targetName": "Virgin Mary",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:herman-hesse": {
+      "sourceId": "friendly_people:herman-hesse",
+      "sourceName": "Herman Hesse",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:herman-hesse",
+      "targetName": "Herman Hesse",
+      "targetCategory": "people"
+    },
+    "friendly_people:harry-hiller": {
+      "sourceId": "friendly_people:harry-hiller",
+      "sourceName": "Harry Hiller",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:harry-hiller",
+      "targetName": "Harry Hiller",
+      "targetCategory": "people"
+    },
+    "people:catholic-church": {
+      "sourceId": "people:catholic-church",
+      "sourceName": "Catholic Church",
+      "sourceCategory": "people",
+      "targetId": "people:american-orthodox-catholic",
+      "targetName": "American Orthodox Catholic",
+      "targetCategory": "people"
+    },
+    "people:american-orthodox-catholic": {
+      "sourceId": "people:american-orthodox-catholic",
+      "sourceName": "American Orthodox Catholic",
+      "sourceCategory": "people",
+      "targetId": "people:american-orthodox-catholic-church",
+      "targetName": "American Orthodox Catholic Church",
+      "targetCategory": "people"
+    },
+    "people:american-orthodox-catholic-church": {
+      "sourceId": "people:american-orthodox-catholic-church",
+      "sourceName": "American Orthodox Catholic Church",
+      "sourceCategory": "people",
+      "targetId": "people:orthodox-church",
+      "targetName": "Orthodox Church",
+      "targetCategory": "people"
+    },
+    "professors:elon-musk": {
+      "sourceId": "professors:elon-musk",
+      "sourceName": "Elon Musk",
+      "sourceCategory": "professors",
+      "targetId": "people:elon-musk",
+      "targetName": "Elon Musk",
+      "targetCategory": "people"
+    },
+    "people:jim-garrison": {
+      "sourceId": "people:jim-garrison",
+      "sourceName": "Jim Garrison",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jim-garrison",
+      "targetName": "Jim Garrison",
+      "targetCategory": "friendly_people"
+    },
+    "people:for-skinwalker": {
+      "sourceId": "people:for-skinwalker",
+      "sourceName": "For Skinwalker",
+      "sourceCategory": "people",
+      "targetId": "locations:skinwalker-ranch",
+      "targetName": "Skinwalker Ranch",
+      "targetCategory": "locations"
+    },
+    "people:leslie-kane": {
+      "sourceId": "people:leslie-kane",
+      "sourceName": "Leslie Kane",
+      "sourceCategory": "people",
+      "targetId": "people:leslie-keane",
+      "targetName": "Leslie Keane",
+      "targetCategory": "people"
+    },
+    "people:korean-war": {
+      "sourceId": "people:korean-war",
+      "sourceName": "Korean War",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:korean-war",
+      "targetName": "Korean War",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:manchurian-candidate": {
+      "sourceId": "friendly_people:manchurian-candidate",
+      "sourceName": "Manchurian Candidate",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:manchurian-candidates",
+      "targetName": "Manchurian Candidates",
+      "targetCategory": "people"
+    },
+    "people:so-jacobs": {
+      "sourceId": "people:so-jacobs",
+      "sourceName": "So Jacobs",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bob-jacobs",
+      "targetName": "Bob Jacobs",
+      "targetCategory": "friendly_people"
+    },
+    "people:jake-barber": {
+      "sourceId": "people:jake-barber",
+      "sourceName": "Jake Barber",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jake-barber",
+      "targetName": "Jake Barber",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:jake-barber": {
+      "sourceId": "friendly_people:jake-barber",
+      "sourceName": "Jake Barber",
+      "sourceCategory": "friendly_people",
+      "targetId": "whistleblowers:jake-barber",
+      "targetName": "Jake Barber",
+      "targetCategory": "whistleblowers"
+    },
+    "journalists:ross-coulthart": {
+      "sourceId": "journalists:ross-coulthart",
+      "sourceName": "Ross Coulthart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:journalist-ross-colthart",
+      "targetName": "Journalist Ross Colthart",
+      "targetCategory": "journalists"
+    },
+    "journalists:journalist-ross-colthart": {
+      "sourceId": "journalists:journalist-ross-colthart",
+      "sourceName": "Journalist Ross Colthart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:ross-coulthard",
+      "targetName": "Ross Coulthard",
+      "targetCategory": "journalists"
+    },
+    "journalists:ross-coulthard": {
+      "sourceId": "journalists:ross-coulthard",
+      "sourceName": "Ross Coulthard",
+      "sourceCategory": "journalists",
+      "targetId": "people:ross-colthart",
+      "targetName": "Ross Colthart",
+      "targetCategory": "people"
+    },
+    "people:ross-colthart": {
+      "sourceId": "people:ross-colthart",
+      "sourceName": "Ross Colthart",
+      "sourceCategory": "people",
+      "targetId": "people:ross-colhart",
+      "targetName": "Ross Colhart",
+      "targetCategory": "people"
+    },
+    "people:ross-colhart": {
+      "sourceId": "people:ross-colhart",
+      "sourceName": "Ross Colhart",
+      "sourceCategory": "people",
+      "targetId": "experiencers:ross-goldhart",
+      "targetName": "Ross Goldhart",
+      "targetCategory": "experiencers"
+    },
+    "people:pat-price": {
+      "sourceId": "people:pat-price",
+      "sourceName": "Pat Price",
+      "sourceCategory": "people",
+      "targetId": "dangerous_people:pat-price",
+      "targetName": "Pat Price",
+      "targetCategory": "dangerous_people"
+    },
+    "experiencers:peruvian-amazon": {
+      "sourceId": "experiencers:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "experiencers",
+      "targetId": "friendly_people:peruvian-amazon",
+      "targetName": "Peruvian Amazon",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:peruvian-amazon": {
+      "sourceId": "friendly_people:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:peru",
+      "targetName": "Peru",
+      "targetCategory": "locations"
+    },
+    "people:chris-mellon": {
+      "sourceId": "people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:chris-mellon",
+      "targetName": "Chris Mellon",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:bob-jacobs": {
+      "sourceId": "friendly_people:bob-jacobs",
+      "sourceName": "Bob Jacobs",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:robert-jacobs",
+      "targetName": "Robert Jacobs",
+      "targetCategory": "people"
+    },
+    "institutes:massachusetts-institute": {
+      "sourceId": "institutes:massachusetts-institute",
+      "sourceName": "Massachusetts Institute",
+      "sourceCategory": "institutes",
+      "targetId": "universities:mit",
+      "targetName": "MIT",
+      "targetCategory": "universities"
+    },
+    "people:jolly-west": {
+      "sourceId": "people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:jolly-west": {
+      "sourceId": "friendly_people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "dangerous_people"
+    },
+    "people:bill-clinton": {
+      "sourceId": "people:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "people",
+      "targetId": "professors:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "professors"
+    },
+    "professors:bill-clinton": {
+      "sourceId": "professors:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "professors",
+      "targetId": "politicians:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "politicians"
+    },
+    "professors:carol-quigley": {
+      "sourceId": "professors:carol-quigley",
+      "sourceName": "Carol Quigley",
+      "sourceCategory": "professors",
+      "targetId": "people:carol-quigley",
+      "targetName": "Carol Quigley",
+      "targetCategory": "people"
+    },
+    "people:carl-wolf": {
+      "sourceId": "people:carl-wolf",
+      "sourceName": "Carl Wolf",
+      "sourceCategory": "people",
+      "targetId": "people:carl-wolff",
+      "targetName": "Carl Wolff",
+      "targetCategory": "people"
+    },
+    "friendly_people:bobby-ray-inman": {
+      "sourceId": "friendly_people:bobby-ray-inman",
+      "sourceName": "Bobby Ray Inman",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:admiral-inman",
+      "targetName": "Admiral Inman",
+      "targetCategory": "people"
+    },
+    "people:admiral-inman": {
+      "sourceId": "people:admiral-inman",
+      "sourceName": "Admiral Inman",
+      "sourceCategory": "people",
+      "targetId": "people:admiral-bobby-ray-inman",
+      "targetName": "Admiral Bobby Ray Inman",
+      "targetCategory": "people"
+    },
+    "professors:so-oxler": {
+      "sourceId": "professors:so-oxler",
+      "sourceName": "So Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "people"
+    },
+    "people:bob-oxler": {
+      "sourceId": "people:bob-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "professors:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "professors"
+    },
+    "professors:bob-oxler": {
+      "sourceId": "professors:bob-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:or-oxler",
+      "targetName": "Or Oxler",
+      "targetCategory": "people"
+    },
+    "people:or-oxler": {
+      "sourceId": "people:or-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "people:bob-exler",
+      "targetName": "Bob Exler",
+      "targetCategory": "people"
+    },
+    "whistleblowers:sonny-white": {
+      "sourceId": "whistleblowers:sonny-white",
+      "sourceName": "Sonny White",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:sonny-white",
+      "targetName": "Sonny White",
+      "targetCategory": "people"
+    },
+    "people:edward-meyer": {
+      "sourceId": "people:edward-meyer",
+      "sourceName": "Edward Meyer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:edward-meyer",
+      "targetName": "Edward Meyer",
+      "targetCategory": "friendly_people"
+    },
+    "likely_spies:billy-myers": {
+      "sourceId": "likely_spies:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:billy-myers",
+      "targetName": "Billy Myers",
+      "targetCategory": "people"
+    },
+    "people:billy-myers": {
+      "sourceId": "people:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "government_agencies:civil-air": {
+      "sourceId": "government_agencies:civil-air",
+      "sourceName": "Civil Air",
+      "sourceCategory": "government_agencies",
+      "targetId": "people:civil-air-corps",
+      "targetName": "Civil Air Corps",
+      "targetCategory": "people"
+    },
+    "friendly_people:chris-mellon": {
+      "sourceId": "friendly_people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:christopher-mellon",
+      "targetName": "Christopher Mellon",
+      "targetCategory": "people"
+    },
+    "people:paul-mellon": {
+      "sourceId": "people:paul-mellon",
+      "sourceName": "Paul Mellon",
+      "sourceCategory": "people",
+      "targetId": "people:so-paul-mellon",
+      "targetName": "So Paul Mellon",
+      "targetCategory": "people"
+    },
+    "journalists:jeremy-corbell": {
+      "sourceId": "journalists:jeremy-corbell",
+      "sourceName": "Jeremy Corbell",
+      "sourceCategory": "journalists",
+      "targetId": "whistleblowers:jeremy-corbell",
+      "targetName": "Jeremy Corbell",
+      "targetCategory": "whistleblowers"
+    },
+    "experiencers:air-force-sergeant-dan": {
+      "sourceId": "experiencers:air-force-sergeant-dan",
+      "sourceName": "Air Force Sergeant Dan",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:dan-sherman": {
+      "sourceId": "experiencers:dan-sherman",
+      "sourceName": "Dan Sherman",
+      "sourceCategory": "experiencers",
+      "targetId": "people:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "people"
+    },
+    "people:if-puharich": {
+      "sourceId": "people:if-puharich",
+      "sourceName": "If Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israel-puharich",
+      "targetName": "Israel Puharich",
+      "targetCategory": "people"
+    },
+    "people:israel-puharich": {
+      "sourceId": "people:israel-puharich",
+      "sourceName": "Israel Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israeli-puharich",
+      "targetName": "Israeli Puharich",
+      "targetCategory": "people"
+    },
+    "people:lockheed-martin-space": {
+      "sourceId": "people:lockheed-martin-space",
+      "sourceName": "Lockheed Martin Space",
+      "sourceCategory": "people",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "people:enter-lockheed-martin": {
+      "sourceId": "people:enter-lockheed-martin",
+      "sourceName": "Lockheed Martin",
+      "sourceCategory": "contractors",
+      "targetId": "people:for-lockheed",
+      "targetName": "For Lockheed",
+      "targetCategory": "people"
+    },
+    "people:anna-luna": {
+      "sourceId": "people:anna-luna",
+      "sourceName": "Anna Luna",
+      "sourceCategory": "people",
+      "targetId": "politicians:anna-paulina-luna",
+      "targetName": "Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "politicians:anna-paulina-luna": {
+      "sourceId": "politicians:anna-paulina-luna",
+      "sourceName": "Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "politicians:congresswoman-anna-paulina-luna",
+      "targetName": "Congresswoman Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "politicians:congresswoman-anna-paulina-luna": {
+      "sourceId": "politicians:congresswoman-anna-paulina-luna",
+      "sourceName": "Congresswoman Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "people:anna-paulina",
+      "targetName": "Anna Paulina",
+      "targetCategory": "people"
+    },
+    "people:eric-burleson": {
+      "sourceId": "people:eric-burleson",
+      "sourceName": "Eric Burleson",
+      "sourceCategory": "people",
+      "targetId": "politicians:eric-burleson",
+      "targetName": "Eric Burleson",
+      "targetCategory": "politicians"
+    },
+    "people:anna-brady": {
+      "sourceId": "people:anna-brady",
+      "sourceName": "Anna Brady",
+      "sourceCategory": "people",
+      "targetId": "people:anna-brady-estevez",
+      "targetName": "Anna Brady Estevez",
+      "targetCategory": "people"
+    },
+    "contractors:bigelow-aerospace": {
+      "sourceId": "contractors:bigelow-aerospace",
+      "sourceName": "bigelow aerospace",
+      "sourceCategory": "contractors",
+      "targetId": "companies:bigelow-advanced-aerospace-space",
+      "targetName": "Bigelow Advanced Aerospace Space",
+      "targetCategory": "companies"
+    },
+    "government_agencies:national-intelligence": {
+      "sourceId": "government_agencies:national-intelligence",
+      "sourceName": "National Intelligence",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:odni",
+      "targetName": "ODNI",
+      "targetCategory": "government_agencies"
     }
   },
   "nameMerges": {
@@ -4477,12 +5348,12 @@
       "targetCategory": "materials"
     },
     "harold malmgren": {
-      "sourceId": "friendly_people:harold-malmgren",
+      "sourceId": "people:harold-malmgren",
       "sourceName": "Harold Malmgren",
-      "sourceCategory": "friendly_people",
-      "targetId": "people:harold-malgrim",
-      "targetName": "Harold Malgrim",
-      "targetCategory": "people"
+      "sourceCategory": "people",
+      "targetId": "friendly_people:harold-malmgren",
+      "targetName": "Harold Malmgren",
+      "targetCategory": "friendly_people"
     },
     "david grush": {
       "sourceId": "whistleblowers:david-grush",
@@ -4757,12 +5628,12 @@
       "targetCategory": "people"
     },
     "washington post": {
-      "sourceId": "newsrooms:washington-post",
+      "sourceId": "politicians:washington-post",
       "sourceName": "Washington Post",
-      "sourceCategory": "newsrooms",
-      "targetId": "newsrooms:the-washington-post",
-      "targetName": "the Washington Post",
-      "targetCategory": "newsrooms"
+      "sourceCategory": "journalists",
+      "targetId": "people:washington-post",
+      "targetName": "Washington Post",
+      "targetCategory": "people"
     },
     "doe": {
       "sourceId": "government_agencies:doe",
@@ -4952,9 +5823,9 @@
       "sourceId": "government_agencies:national-reconnaissance-office",
       "sourceName": "National Reconnaissance Office",
       "sourceCategory": "government_agencies",
-      "targetId": "government_agencies:national-reconnaissance",
+      "targetId": "people:national-reconnaissance",
       "targetName": "National Reconnaissance",
-      "targetCategory": "government_agencies"
+      "targetCategory": "people"
     },
     "g he": {
       "sourceId": "people:g-he",
@@ -4989,20 +5860,20 @@
       "targetCategory": "locations"
     },
     "brook park strip mall": {
-      "sourceId": "locations:brook-park-strip-mall",
+      "sourceId": "people:brook-park-strip-mall",
       "sourceName": "Brook Park Strip Mall",
       "sourceCategory": "locations",
-      "targetId": "locations:brookgate-strip-mall",
+      "targetId": "people:brookgate-strip-mall",
       "targetName": "Brookgate Strip Mall",
-      "targetCategory": "locations"
+      "targetCategory": "people"
     },
     "baba vanga": {
-      "sourceId": "friendly_people:baba-vanga",
+      "sourceId": "people:baba-vanga",
       "sourceName": "Baba Vanga",
-      "sourceCategory": "friendly_people",
-      "targetId": "people:as-baba-vanga",
-      "targetName": "As Baba Vanga",
-      "targetCategory": "people"
+      "sourceCategory": "people",
+      "targetId": "friendly_people:baba-vanga",
+      "targetName": "Baba Vanga",
+      "targetCategory": "friendly_people"
     },
     "when john paul": {
       "sourceId": "people:when-john-paul",
@@ -5221,12 +6092,12 @@
       "targetCategory": "locations"
     },
     "eric davis": {
-      "sourceId": "politicians:eric-davis",
+      "sourceId": "friendly_people:eric-davis",
       "sourceName": "Eric Davis",
-      "sourceCategory": "politicians",
-      "targetId": "friendly_people:eric-davis",
+      "sourceCategory": "friendly_people",
+      "targetId": "politicians:eric-davis",
       "targetName": "Eric Davis",
-      "targetCategory": "friendly_people"
+      "targetCategory": "politicians"
     },
     "president bush": {
       "sourceId": "people:president-bush",
@@ -5245,12 +6116,12 @@
       "targetCategory": "people"
     },
     "john mack": {
-      "sourceId": "friendly_people:john-mack",
+      "sourceId": "experiencers:john-mack",
       "sourceName": "John Mack",
-      "sourceCategory": "friendly_people",
-      "targetId": "experiencers:john-mack",
+      "sourceCategory": "experiencers",
+      "targetId": "friendly_people:john-mack",
       "targetName": "John Mack",
-      "targetCategory": "experiencers"
+      "targetCategory": "friendly_people"
     },
     "so john mack": {
       "sourceId": "people:so-john-mack",
@@ -5285,9 +6156,9 @@
       "targetCategory": "people"
     },
     "lee harvey oswald": {
-      "sourceId": "dangerous_people:lee-harvey-oswald",
+      "sourceId": "friendly_people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
-      "sourceCategory": "dangerous_people",
+      "sourceCategory": "friendly_people",
       "targetId": "people:lee-harvey-oswald",
       "targetName": "Lee Harvey Oswald",
       "targetCategory": "people"
@@ -5341,12 +6212,12 @@
       "targetCategory": "people"
     },
     "david spurgle": {
-      "sourceId": "professors:david-spurgle",
+      "sourceId": "people:david-spurgle",
       "sourceName": "David Spurgle",
-      "sourceCategory": "professors",
-      "targetId": "people:david-spurgle",
+      "sourceCategory": "people",
+      "targetId": "professors:david-spurgle",
       "targetName": "David Spurgle",
-      "targetCategory": "people"
+      "targetCategory": "professors"
     },
     "hawley building": {
       "sourceId": "people:hawley-building",
@@ -5421,11 +6292,11 @@
       "targetCategory": "professors"
     },
     "bob jacobs": {
-      "sourceId": "people:bob-jacobs",
+      "sourceId": "friendly_people:bob-jacobs",
       "sourceName": "Bob Jacobs",
-      "sourceCategory": "people",
-      "targetId": "people:so-jacobs",
-      "targetName": "So Jacobs",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:robert-jacobs",
+      "targetName": "Robert Jacobs",
       "targetCategory": "people"
     },
     "jack ruby": {
@@ -5448,9 +6319,9 @@
       "sourceId": "people:barack-obama",
       "sourceName": "Barack Obama",
       "sourceCategory": "people",
-      "targetId": "people:president-barack-obama",
+      "targetId": "politicians:president-barack-obama",
       "targetName": "President Barack Obama",
-      "targetCategory": "people"
+      "targetCategory": "politicians"
     },
     "linda moulton": {
       "sourceId": "people:linda-moulton",
@@ -6104,24 +6975,24 @@
       "sourceId": "professors:gary-nolan",
       "sourceName": "Gary Nolan",
       "sourceCategory": "professors",
-      "targetId": "people:by-gary-nolan",
-      "targetName": "By Gary Nolan",
+      "targetId": "people:larry-nolan",
+      "targetName": "Larry Nolan",
       "targetCategory": "people"
     },
     "close encounters": {
       "sourceId": "movies:close-encounters",
       "sourceName": "Close Encounters",
       "sourceCategory": "movies",
-      "targetId": "experiencers:closer-encounter",
-      "targetName": "Closer Encounter",
-      "targetCategory": "experiencers"
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
     },
     "closer encounter": {
       "sourceId": "experiencers:closer-encounter",
       "sourceName": "Closer Encounter",
       "sourceCategory": "experiencers",
-      "targetId": "movies:closer-encounters",
-      "targetName": "Closer Encounters",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters",
       "targetCategory": "movies"
     },
     "nick cook": {
@@ -6205,12 +7076,12 @@
       "targetCategory": "politicians"
     },
     "lockheed martin": {
-      "sourceId": "contractors:lockheed-martin",
+      "sourceId": "people:enter-lockheed-martin",
       "sourceName": "Lockheed Martin",
       "sourceCategory": "contractors",
-      "targetId": "experiencers:lockheed-martin",
-      "targetName": "Lockheed Martin",
-      "targetCategory": "experiencers"
+      "targetId": "people:for-lockheed",
+      "targetName": "For Lockheed",
+      "targetCategory": "people"
     },
     "lawrence preston geis": {
       "sourceId": "people:lawrence-preston-geis",
@@ -6253,12 +7124,12 @@
       "targetCategory": "people"
     },
     "pat price": {
-      "sourceId": "friendly_people:pat-price",
+      "sourceId": "dangerous_people:pat-price",
       "sourceName": "Pat Price",
-      "sourceCategory": "friendly_people",
-      "targetId": "people:pat-price",
+      "sourceCategory": "dangerous_people",
+      "targetId": "friendly_people:pat-price",
       "targetName": "Pat Price",
-      "targetCategory": "people"
+      "targetCategory": "friendly_people"
     },
     "secret canyon": {
       "sourceId": "people:secret-canyon",
@@ -6485,12 +7356,12 @@
       "targetCategory": "people"
     },
     "bobby ray inman": {
-      "sourceId": "people:bobby-ray-inman",
+      "sourceId": "friendly_people:bobby-ray-inman",
       "sourceName": "Bobby Ray Inman",
-      "sourceCategory": "people",
-      "targetId": "friendly_people:bobby-ray-inman",
-      "targetName": "Bobby Ray Inman",
-      "targetCategory": "friendly_people"
+      "sourceCategory": "friendly_people",
+      "targetId": "people:admiral-inman",
+      "targetName": "Admiral Inman",
+      "targetCategory": "people"
     },
     "brandon fugel": {
       "sourceId": "people:brandon-fugel",
@@ -6576,8 +7447,8 @@
       "sourceId": "people:when-bob-lazar",
       "sourceName": "When Bob Lazar",
       "sourceCategory": "people",
-      "targetId": "people:bob-lazar-muscovium",
-      "targetName": "Bob Lazar Muscovium",
+      "targetId": "people:bob-lazar",
+      "targetName": "Bob Lazar",
       "targetCategory": "people"
     },
     "howard hunt": {
@@ -6653,12 +7524,12 @@
       "targetCategory": "people"
     },
     "elon musk": {
-      "sourceId": "people:elon-musk",
+      "sourceId": "professors:elon-musk",
       "sourceName": "Elon Musk",
-      "sourceCategory": "people",
-      "targetId": "professors:elon-musk",
+      "sourceCategory": "professors",
+      "targetId": "people:elon-musk",
       "targetName": "Elon Musk",
-      "targetCategory": "professors"
+      "targetCategory": "people"
     },
     "what eric hecker": {
       "sourceId": "people:what-eric-hecker",
@@ -6728,8 +7599,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "sourceCategory": "people",
-      "targetId": "people:has-hal-puthoff",
-      "targetName": "Has Hal Puthoff",
+      "targetId": "people:hal-puthoff",
+      "targetName": "Hal Puthoff",
       "targetCategory": "people"
     },
     "rupert sheldrick": {
@@ -6821,12 +7692,12 @@
       "targetCategory": "universities"
     },
     "manchurian candidate": {
-      "sourceId": "people:manchurian-candidate",
+      "sourceId": "friendly_people:manchurian-candidate",
       "sourceName": "Manchurian Candidate",
-      "sourceCategory": "emerging_terminology",
-      "targetId": "friendly_people:manchurian-candidate",
-      "targetName": "Manchurian Candidate",
-      "targetCategory": "friendly_people"
+      "sourceCategory": "friendly_people",
+      "targetId": "people:manchurian-candidates",
+      "targetName": "Manchurian Candidates",
+      "targetCategory": "people"
     },
     "manchurian candidates": {
       "sourceId": "people:manchurian-candidates",
@@ -6933,11 +7804,11 @@
       "targetCategory": "politicians"
     },
     "john lear": {
-      "sourceId": "professors:john-lear",
+      "sourceId": "people:john-lear",
       "sourceName": "John Lear",
       "sourceCategory": "people",
-      "targetId": "people:except-john-olson-lear",
-      "targetName": "Except John Olson Lear",
+      "targetId": "people:john-olson-lear",
+      "targetName": "John Olson Lear",
       "targetCategory": "people"
     },
     "bill moore": {
@@ -6971,9 +7842,529 @@
       "targetId": "people:for-skinwalker",
       "targetName": "For Skinwalker",
       "targetCategory": "people"
+    },
+    "steven spielberg": {
+      "sourceId": "people:steven-spielberg",
+      "sourceName": "Steven Spielberg",
+      "sourceCategory": "people",
+      "targetId": "experiencers:steven-spielberg",
+      "targetName": "Steven Spielberg",
+      "targetCategory": "experiencers"
+    },
+    "d after disclosure": {
+      "sourceId": "professors:d-after-disclosure",
+      "sourceName": "D. After Disclosure",
+      "sourceCategory": "professors",
+      "targetId": "people:after-disclosure",
+      "targetName": "After Disclosure",
+      "targetCategory": "people"
+    },
+    "star trek enterprise": {
+      "sourceId": "people:star-trek-enterprise",
+      "sourceName": "Star Trek Enterprise",
+      "sourceCategory": "tv_shows",
+      "targetId": "tv_shows:star-trek",
+      "targetName": "Star Trek",
+      "targetCategory": "tv_shows"
+    },
+    "because dark skies": {
+      "sourceId": "people:because-dark-skies",
+      "sourceName": "Because Dark Skies",
+      "sourceCategory": "people",
+      "targetId": "people:dark-sky",
+      "targetName": "Dark Sky",
+      "targetCategory": "people"
+    },
+    "dark sky": {
+      "sourceId": "people:dark-sky",
+      "sourceName": "Dark Sky",
+      "sourceCategory": "people",
+      "targetId": "tv_shows:dark-skies",
+      "targetName": "Dark Skies",
+      "targetCategory": "tv_shows"
+    },
+    "nathan twinning": {
+      "sourceId": "likely_spies:nathan-twinning",
+      "sourceName": "Nathan Twinning",
+      "sourceCategory": "likely_spies",
+      "targetId": "friendly_people:nathan-twining",
+      "targetName": "Nathan Twining",
+      "targetCategory": "friendly_people"
+    },
+    "nathan twining": {
+      "sourceId": "people:nathan-twining",
+      "sourceName": "Nathan Twining",
+      "sourceCategory": "people",
+      "targetId": "people:general-nathan-twining",
+      "targetName": "General Nathan Twining",
+      "targetCategory": "people"
+    },
+    "leonard stringfield": {
+      "sourceId": "people:leonard-stringfield",
+      "sourceName": "Leonard Stringfield",
+      "sourceCategory": "people",
+      "targetId": "whistleblowers:leonard-stringfield",
+      "targetName": "Leonard Stringfield",
+      "targetCategory": "whistleblowers"
+    },
+    "g gordon liddy": {
+      "sourceId": "people:g-gordon-liddy",
+      "sourceName": "G. Gordon Liddy",
+      "sourceCategory": "people",
+      "targetId": "people:gordon-liddy",
+      "targetName": "Gordon Liddy",
+      "targetCategory": "people"
+    },
+    "gordon liddy": {
+      "sourceId": "people:gordon-liddy",
+      "sourceName": "Gordon Liddy",
+      "sourceCategory": "people",
+      "targetId": "people:so-gordon-liddy",
+      "targetName": "So Gordon Liddy",
+      "targetCategory": "people"
+    },
+    "richard doti": {
+      "sourceId": "hoaxers:richard-doti",
+      "sourceName": "Richard Doti",
+      "sourceCategory": "hoaxers",
+      "targetId": "people:richard-doty",
+      "targetName": "Richard Doty",
+      "targetCategory": "people"
+    },
+    "richard doty": {
+      "sourceId": "people:richard-doty",
+      "sourceName": "Richard Doty",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:richard-doty",
+      "targetName": "Richard Doty",
+      "targetCategory": "friendly_people"
+    },
+    "staff curtis": {
+      "sourceId": "companies:staff-curtis",
+      "sourceName": "Staff Curtis",
+      "sourceCategory": "companies",
+      "targetId": "people:curtis-lemay",
+      "targetName": "Curtis LeMay",
+      "targetCategory": "people"
+    },
+    "john paul": {
+      "sourceId": "people:john-paul",
+      "sourceName": "John Paul",
+      "sourceCategory": "people",
+      "targetId": "people:pope-john-paul",
+      "targetName": "Pope John Paul",
+      "targetCategory": "people"
+    },
+    "pope john paul": {
+      "sourceId": "people:pope-john-paul",
+      "sourceName": "Pope John Paul",
+      "sourceCategory": "people",
+      "targetId": "people:pope-pius",
+      "targetName": "Pope Pius",
+      "targetCategory": "people"
+    },
+    "when james fox": {
+      "sourceId": "people:when-james-fox",
+      "sourceName": "When James Fox",
+      "sourceCategory": "people",
+      "targetId": "journalists:james-fox",
+      "targetName": "James Fox",
+      "targetCategory": "journalists"
+    },
+    "maybe james": {
+      "sourceId": "people:maybe-james",
+      "sourceName": "Maybe James",
+      "sourceCategory": "people",
+      "targetId": "journalists:james-fox",
+      "targetName": "James Fox",
+      "targetCategory": "journalists"
+    },
+    "united states air force": {
+      "sourceId": "government_agencies:united-states-air-force",
+      "sourceName": "United States Air Force",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:us-air-force",
+      "targetName": "US Air Force",
+      "targetCategory": "government_agencies"
+    },
+    "papoose lake": {
+      "sourceId": "military_bases:papoose-lake",
+      "sourceName": "Papoose Lake",
+      "sourceCategory": "military_bases",
+      "targetId": "people:just-papoose-lake",
+      "targetName": "Just Papoose Lake",
+      "targetCategory": "people"
+    },
+    "groom lake": {
+      "sourceId": "military_bases:groom-lake",
+      "sourceName": "Groom Lake",
+      "sourceCategory": "military_bases",
+      "targetId": "people:at-groom-lake",
+      "targetName": "At Groom Lake",
+      "targetCategory": "people"
+    },
+    "virgin mary": {
+      "sourceId": "experiencers:virgin-mary",
+      "sourceName": "Virgin Mary",
+      "sourceCategory": "experiencers",
+      "targetId": "friendly_people:virgin-mary",
+      "targetName": "Virgin Mary",
+      "targetCategory": "friendly_people"
+    },
+    "herman hesse": {
+      "sourceId": "friendly_people:herman-hesse",
+      "sourceName": "Herman Hesse",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:herman-hesse",
+      "targetName": "Herman Hesse",
+      "targetCategory": "people"
+    },
+    "harry hiller": {
+      "sourceId": "friendly_people:harry-hiller",
+      "sourceName": "Harry Hiller",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:harry-hiller",
+      "targetName": "Harry Hiller",
+      "targetCategory": "people"
+    },
+    "catholic church": {
+      "sourceId": "people:catholic-church",
+      "sourceName": "Catholic Church",
+      "sourceCategory": "people",
+      "targetId": "people:american-orthodox-catholic",
+      "targetName": "American Orthodox Catholic",
+      "targetCategory": "people"
+    },
+    "american orthodox catholic": {
+      "sourceId": "people:american-orthodox-catholic",
+      "sourceName": "American Orthodox Catholic",
+      "sourceCategory": "people",
+      "targetId": "people:american-orthodox-catholic-church",
+      "targetName": "American Orthodox Catholic Church",
+      "targetCategory": "people"
+    },
+    "american orthodox catholic church": {
+      "sourceId": "people:american-orthodox-catholic-church",
+      "sourceName": "American Orthodox Catholic Church",
+      "sourceCategory": "people",
+      "targetId": "people:orthodox-church",
+      "targetName": "Orthodox Church",
+      "targetCategory": "people"
+    },
+    "jim garrison": {
+      "sourceId": "people:jim-garrison",
+      "sourceName": "Jim Garrison",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jim-garrison",
+      "targetName": "Jim Garrison",
+      "targetCategory": "friendly_people"
+    },
+    "for skinwalker": {
+      "sourceId": "people:for-skinwalker",
+      "sourceName": "For Skinwalker",
+      "sourceCategory": "people",
+      "targetId": "locations:skinwalker-ranch",
+      "targetName": "Skinwalker Ranch",
+      "targetCategory": "locations"
+    },
+    "leslie kane": {
+      "sourceId": "people:leslie-kane",
+      "sourceName": "Leslie Kane",
+      "sourceCategory": "people",
+      "targetId": "people:leslie-keane",
+      "targetName": "Leslie Keane",
+      "targetCategory": "people"
+    },
+    "korean war": {
+      "sourceId": "people:korean-war",
+      "sourceName": "Korean War",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:korean-war",
+      "targetName": "Korean War",
+      "targetCategory": "friendly_people"
+    },
+    "so jacobs": {
+      "sourceId": "people:so-jacobs",
+      "sourceName": "So Jacobs",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bob-jacobs",
+      "targetName": "Bob Jacobs",
+      "targetCategory": "friendly_people"
+    },
+    "jake barber": {
+      "sourceId": "friendly_people:jake-barber",
+      "sourceName": "Jake Barber",
+      "sourceCategory": "friendly_people",
+      "targetId": "whistleblowers:jake-barber",
+      "targetName": "Jake Barber",
+      "targetCategory": "whistleblowers"
+    },
+    "ross coulthart": {
+      "sourceId": "journalists:ross-coulthart",
+      "sourceName": "Ross Coulthart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:journalist-ross-colthart",
+      "targetName": "Journalist Ross Colthart",
+      "targetCategory": "journalists"
+    },
+    "journalist ross colthart": {
+      "sourceId": "journalists:journalist-ross-colthart",
+      "sourceName": "Journalist Ross Colthart",
+      "sourceCategory": "journalists",
+      "targetId": "journalists:ross-coulthard",
+      "targetName": "Ross Coulthard",
+      "targetCategory": "journalists"
+    },
+    "ross coulthard": {
+      "sourceId": "journalists:ross-coulthard",
+      "sourceName": "Ross Coulthard",
+      "sourceCategory": "journalists",
+      "targetId": "people:ross-colthart",
+      "targetName": "Ross Colthart",
+      "targetCategory": "people"
+    },
+    "ross colthart": {
+      "sourceId": "people:ross-colthart",
+      "sourceName": "Ross Colthart",
+      "sourceCategory": "people",
+      "targetId": "people:ross-colhart",
+      "targetName": "Ross Colhart",
+      "targetCategory": "people"
+    },
+    "ross colhart": {
+      "sourceId": "people:ross-colhart",
+      "sourceName": "Ross Colhart",
+      "sourceCategory": "people",
+      "targetId": "experiencers:ross-goldhart",
+      "targetName": "Ross Goldhart",
+      "targetCategory": "experiencers"
+    },
+    "peruvian amazon": {
+      "sourceId": "friendly_people:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:peru",
+      "targetName": "Peru",
+      "targetCategory": "locations"
+    },
+    "chris mellon": {
+      "sourceId": "friendly_people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:christopher-mellon",
+      "targetName": "Christopher Mellon",
+      "targetCategory": "people"
+    },
+    "massachusetts institute": {
+      "sourceId": "institutes:massachusetts-institute",
+      "sourceName": "Massachusetts Institute",
+      "sourceCategory": "institutes",
+      "targetId": "universities:mit",
+      "targetName": "MIT",
+      "targetCategory": "universities"
+    },
+    "jolly west": {
+      "sourceId": "friendly_people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "dangerous_people"
+    },
+    "bill clinton": {
+      "sourceId": "professors:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "professors",
+      "targetId": "politicians:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "politicians"
+    },
+    "carol quigley": {
+      "sourceId": "professors:carol-quigley",
+      "sourceName": "Carol Quigley",
+      "sourceCategory": "professors",
+      "targetId": "people:carol-quigley",
+      "targetName": "Carol Quigley",
+      "targetCategory": "people"
+    },
+    "carl wolf": {
+      "sourceId": "people:carl-wolf",
+      "sourceName": "Carl Wolf",
+      "sourceCategory": "people",
+      "targetId": "people:carl-wolff",
+      "targetName": "Carl Wolff",
+      "targetCategory": "people"
+    },
+    "admiral inman": {
+      "sourceId": "people:admiral-inman",
+      "sourceName": "Admiral Inman",
+      "sourceCategory": "people",
+      "targetId": "people:admiral-bobby-ray-inman",
+      "targetName": "Admiral Bobby Ray Inman",
+      "targetCategory": "people"
+    },
+    "so oxler": {
+      "sourceId": "professors:so-oxler",
+      "sourceName": "So Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "people"
+    },
+    "bob oxler": {
+      "sourceId": "people:or-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "people:bob-exler",
+      "targetName": "Bob Exler",
+      "targetCategory": "people"
+    },
+    "sonny white": {
+      "sourceId": "whistleblowers:sonny-white",
+      "sourceName": "Sonny White",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:sonny-white",
+      "targetName": "Sonny White",
+      "targetCategory": "people"
+    },
+    "edward meyer": {
+      "sourceId": "people:edward-meyer",
+      "sourceName": "Edward Meyer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:edward-meyer",
+      "targetName": "Edward Meyer",
+      "targetCategory": "friendly_people"
+    },
+    "billy myers": {
+      "sourceId": "people:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "civil air": {
+      "sourceId": "government_agencies:civil-air",
+      "sourceName": "Civil Air",
+      "sourceCategory": "government_agencies",
+      "targetId": "people:civil-air-corps",
+      "targetName": "Civil Air Corps",
+      "targetCategory": "people"
+    },
+    "paul mellon": {
+      "sourceId": "people:paul-mellon",
+      "sourceName": "Paul Mellon",
+      "sourceCategory": "people",
+      "targetId": "people:so-paul-mellon",
+      "targetName": "So Paul Mellon",
+      "targetCategory": "people"
+    },
+    "jeremy corbell": {
+      "sourceId": "journalists:jeremy-corbell",
+      "sourceName": "Jeremy Corbell",
+      "sourceCategory": "journalists",
+      "targetId": "whistleblowers:jeremy-corbell",
+      "targetName": "Jeremy Corbell",
+      "targetCategory": "whistleblowers"
+    },
+    "air force sergeant dan": {
+      "sourceId": "experiencers:air-force-sergeant-dan",
+      "sourceName": "Air Force Sergeant Dan",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "experiencers"
+    },
+    "dan sherman": {
+      "sourceId": "experiencers:dan-sherman",
+      "sourceName": "Dan Sherman",
+      "sourceCategory": "experiencers",
+      "targetId": "people:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "people"
+    },
+    "if puharich": {
+      "sourceId": "people:if-puharich",
+      "sourceName": "If Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israel-puharich",
+      "targetName": "Israel Puharich",
+      "targetCategory": "people"
+    },
+    "israel puharich": {
+      "sourceId": "people:israel-puharich",
+      "sourceName": "Israel Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israeli-puharich",
+      "targetName": "Israeli Puharich",
+      "targetCategory": "people"
+    },
+    "lockheed martin space": {
+      "sourceId": "people:lockheed-martin-space",
+      "sourceName": "Lockheed Martin Space",
+      "sourceCategory": "people",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "anna luna": {
+      "sourceId": "people:anna-luna",
+      "sourceName": "Anna Luna",
+      "sourceCategory": "people",
+      "targetId": "politicians:anna-paulina-luna",
+      "targetName": "Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "anna paulina luna": {
+      "sourceId": "politicians:anna-paulina-luna",
+      "sourceName": "Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "politicians:congresswoman-anna-paulina-luna",
+      "targetName": "Congresswoman Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "congresswoman anna paulina luna": {
+      "sourceId": "politicians:congresswoman-anna-paulina-luna",
+      "sourceName": "Congresswoman Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "people:anna-paulina",
+      "targetName": "Anna Paulina",
+      "targetCategory": "people"
+    },
+    "eric burleson": {
+      "sourceId": "people:eric-burleson",
+      "sourceName": "Eric Burleson",
+      "sourceCategory": "people",
+      "targetId": "politicians:eric-burleson",
+      "targetName": "Eric Burleson",
+      "targetCategory": "politicians"
+    },
+    "anna brady": {
+      "sourceId": "people:anna-brady",
+      "sourceName": "Anna Brady",
+      "sourceCategory": "people",
+      "targetId": "people:anna-brady-estevez",
+      "targetName": "Anna Brady Estevez",
+      "targetCategory": "people"
+    },
+    "bigelow aerospace": {
+      "sourceId": "contractors:bigelow-aerospace",
+      "sourceName": "bigelow aerospace",
+      "sourceCategory": "contractors",
+      "targetId": "companies:bigelow-advanced-aerospace-space",
+      "targetName": "Bigelow Advanced Aerospace Space",
+      "targetCategory": "companies"
+    },
+    "national intelligence": {
+      "sourceId": "government_agencies:national-intelligence",
+      "sourceName": "National Intelligence",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:odni",
+      "targetName": "ODNI",
+      "targetCategory": "government_agencies"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-27T23:21:12.450Z",
+  "generatedAt": "2026-06-28T01:04:42.742Z",
   "note": "Replace data/reclass.json with this file before rebuilding."
 }
