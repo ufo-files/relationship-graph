@@ -297,7 +297,43 @@
     "people:manchurian-candidates": "emerging_terminology",
     "people:photographic-union": "government_project_codenames",
     "experiencers:ross-goldhart": "journalists",
-    "likely_spies:american-psychic-spy-program": "government_agencies"
+    "likely_spies:american-psychic-spy-program": "government_agencies",
+    "people:peru": "locations",
+    "people:in-september": "dates_times",
+    "people:annie-jacobson": "authors",
+    "people:false-memory-syndrome-foundation": "medical_conditions",
+    "people:persinger-god": "technology",
+    "people:american-world-power": "books",
+    "friendly_people:second-empire": "books",
+    "people:american-establishment": "books",
+    "people:explore-mars-foundation": "nonprofits",
+    "people:pentagon-papers": "leaks",
+    "people:special-programs": "government_agencies",
+    "people:from-june": "dates_times",
+    "people:time-loops": "books",
+    "universities:kennedy-school": "university_departments",
+    "people:space-kids-camp": "nonprofits",
+    "people:middle-ages": "dates_times",
+    "people:above-top-secret": "books",
+    "people:civil-war": "events",
+    "people:civil-air-corps": "government_agencies",
+    "people:operation-high-jump": "government_project_codenames",
+    "people:texas-bird-depository": "companies",
+    "people:operation-prado": "government_project_codenames",
+    "people:operation-snow-white": "government_project_codenames",
+    "whistleblowers:jeremy-corbell": "people",
+    "people:on-weaponized": "books",
+    "people:south-dakota": "locations",
+    "people:tel-aviv": "locations",
+    "people:byfield-brown": "theories",
+    "people:edwards-412th-test-wing": "military_bases",
+    "people:for-lockheed": "contractors",
+    "people:fort-irwin": "military_bases",
+    "people:raytheon-triangle": "technology",
+    "people:david-cameron": "directors",
+    "people:josephson-junctions": "contractors",
+    "companies:bigelow-advanced-aerospace-space": "contractors",
+    "people:aaro-historical-report": "document_names"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -658,7 +694,49 @@
     "american psychic spy program": "government_agencies",
     "civilized society": "books",
     "ashbury free medical clinic": "locations",
-    "ross goldhart": "journalists"
+    "ross goldhart": "journalists",
+    "peru": "locations",
+    "in september": "dates_times",
+    "annie jacobson": "authors",
+    "false memory syndrome foundation": "medical_conditions",
+    "persinger god helmet": "technology",
+    "angle-american world power": "books",
+    "the spider's web, britain's second empire": "books",
+    "the anglo-american establishment": "books",
+    "explore mars foundation": "nonprofits",
+    "pentagon papers": "leaks",
+    "special programs": "government_agencies",
+    "from june": "dates_times",
+    "time loops": "books",
+    "kennedy school": "university_departments",
+    "space kids camp": "nonprofits",
+    "middle ages": "dates_times",
+    "above top secret": "books",
+    "civil war": "events",
+    "civil air corps": "government_agencies",
+    "operation high jump": "government_project_codenames",
+    "texas bird depository": "companies",
+    "operation prado": "government_project_codenames",
+    "operation snow white": "government_project_codenames",
+    "jeremy corbell": "people",
+    "weaponized": "books",
+    "south dakota": "locations",
+    "tel aviv": "locations",
+    "byfield brown effect": "theories",
+    "edwards 412th test wing": "military_bases",
+    "fort irwin": "military_bases",
+    "raytheon triangle": "technology",
+    "david cameron": "directors",
+    "josephson junctions": "contractors",
+    "bigelow advanced aerospace space": "contractors",
+    "aaro historical report": "document_names",
+    "persinger god": "technology",
+    "american world power": "books",
+    "second empire": "books",
+    "american establishment": "books",
+    "on weaponized": "books",
+    "byfield brown": "theories",
+    "for lockheed": "contractors"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -1250,6 +1328,21 @@
       "name": "Fight Club",
       "category": "people",
       "categoryLabel": "People"
+    },
+    "people:plasma-physics": {
+      "name": "Plasma Physics",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:try-quo": {
+      "name": "Try Quo",
+      "category": "people",
+      "categoryLabel": "People"
+    },
+    "people:astronautical-engineering": {
+      "name": "Astronautical Engineering",
+      "category": "people",
+      "categoryLabel": "People"
     }
   },
   "omissions": {},
@@ -1441,7 +1534,47 @@
     "experiencers:ross-goldhart": "Ross Coulthart",
     "ross goldhart": "Ross Coulthart",
     "people:american-joseph-mengele": "Joseph Mengele",
-    "american joseph mengele": "Joseph Mengele"
+    "american joseph mengele": "Joseph Mengele",
+    "people:in-september": "September 1964",
+    "in september": "September 1964",
+    "people:john-olson-lear": "John Lear",
+    "john olson lear": "John Lear",
+    "people:persinger-god": "Persinger God Helmet",
+    "persinger god": "Persinger God Helmet",
+    "politicians:bill-clinton": "President Bill Clinton",
+    "bill clinton": "President Bill Clinton",
+    "people:as-douglas-murray": "Douglas Murray",
+    "as douglas murray": "Douglas Murray",
+    "people:american-world-power": "Angle-American World Power",
+    "american world power": "Angle-American World Power",
+    "friendly_people:second-empire": "The Spider's Web, Britain's Second Empire",
+    "second empire": "The Spider's Web, Britain's Second Empire",
+    "people:american-establishment": "The Anglo-American Establishment",
+    "american establishment": "The Anglo-American Establishment",
+    "people:special-programs": "Pentagon Special Programs",
+    "special programs": "Pentagon Special Programs",
+    "people:from-june": "June 2009 - May 2011",
+    "from june": "June 2009 - May 2011",
+    "government_agencies:based-laser-project-office": "Space-Based Laser Project Office",
+    "based laser project office": "Space-Based Laser Project Office",
+    "people:or-oxler": "Bob Oxler",
+    "or oxler": "Bob Oxler",
+    "people:bob-exler": "Bob Oxler",
+    "bob exler": "Bob Oxler",
+    "people:so-paul-mellon": "Paul Mellon",
+    "so paul mellon": "Paul Mellon",
+    "people:on-weaponized": "Weaponized",
+    "on weaponized": "Weaponized",
+    "people:byfield-brown": "Byfield Brown Effect",
+    "byfield brown": "Byfield Brown Effect",
+    "people:larry-nolan": "Gary Nolan",
+    "larry nolan": "Gary Nolan",
+    "people:enter-lockheed-martin": "Lockheed Martin",
+    "enter lockheed martin": "Lockheed Martin",
+    "people:for-lockheed": "Lockheed Martin",
+    "for lockheed": "Lockheed Martin",
+    "people:anna-paulina": "Congresswoman Anna Paulina Luna",
+    "anna paulina": "Congresswoman Anna Paulina Luna"
   },
   "merges": {
     "whistleblowers:robert-lazar": {
@@ -1752,9 +1885,9 @@
       "sourceId": "people:john-alexander",
       "sourceName": "John Alexander",
       "sourceCategory": "people",
-      "targetId": "friendly_people:john-alexander",
-      "targetName": "John Alexander",
-      "targetCategory": "friendly_people"
+      "targetId": "people:colonel-john-alexander",
+      "targetName": "Colonel John Alexander",
+      "targetCategory": "people"
     },
     "friendly_people:john-alexander": {
       "sourceId": "friendly_people:john-alexander",
@@ -3472,16 +3605,16 @@
       "sourceId": "movies:close-encounters",
       "sourceName": "Close Encounters",
       "sourceCategory": "movies",
-      "targetId": "experiencers:closer-encounter",
-      "targetName": "Closer Encounter",
-      "targetCategory": "experiencers"
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
     },
     "experiencers:closer-encounter": {
       "sourceId": "experiencers:closer-encounter",
       "sourceName": "Closer Encounter",
       "sourceCategory": "experiencers",
-      "targetId": "movies:closer-encounters",
-      "targetName": "Closer Encounters",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters",
       "targetCategory": "movies"
     },
     "people:nick-cook": {
@@ -3592,9 +3725,9 @@
       "sourceId": "contractors:lockheed-martin",
       "sourceName": "Lockheed Martin",
       "sourceCategory": "contractors",
-      "targetId": "experiencers:lockheed-martin",
-      "targetName": "Lockheed Martin",
-      "targetCategory": "experiencers"
+      "targetId": "people:enter-lockheed-martin",
+      "targetName": "Enter Lockheed Martin",
+      "targetCategory": "people"
     },
     "people:lawrence-preston-geis": {
       "sourceId": "people:lawrence-preston-geis",
@@ -3800,9 +3933,9 @@
       "sourceId": "people:barack-obama",
       "sourceName": "Barack Obama",
       "sourceCategory": "people",
-      "targetId": "people:president-barack-obama",
+      "targetId": "politicians:president-barack-obama",
       "targetName": "President Barack Obama",
-      "targetCategory": "people"
+      "targetCategory": "politicians"
     },
     "friendly_people:mikhail-dobrnovic": {
       "sourceId": "friendly_people:mikhail-dobrnovic",
@@ -4016,8 +4149,8 @@
       "sourceId": "people:when-bob-lazar",
       "sourceName": "When Bob Lazar",
       "sourceCategory": "people",
-      "targetId": "people:bob-lazar-muscovium",
-      "targetName": "Bob Lazar Muscovium",
+      "targetId": "people:bob-lazar",
+      "targetName": "Bob Lazar",
       "targetCategory": "people"
     },
     "friendly_people:howard-hunt": {
@@ -4208,8 +4341,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "sourceCategory": "people",
-      "targetId": "people:has-hal-puthoff",
-      "targetName": "Has Hal Puthoff",
+      "targetId": "people:hal-puthoff",
+      "targetName": "Hal Puthoff",
       "targetCategory": "people"
     },
     "people:rupert-sheldrick": {
@@ -4440,9 +4573,9 @@
       "sourceId": "people:john-lear",
       "sourceName": "John Lear",
       "sourceCategory": "people",
-      "targetId": "friendly_people:john-lear",
-      "targetName": "John Lear",
-      "targetCategory": "friendly_people"
+      "targetId": "people:john-olson-lear",
+      "targetName": "John Olson Lear",
+      "targetCategory": "people"
     },
     "friendly_people:john-lear": {
       "sourceId": "friendly_people:john-lear",
@@ -4472,8 +4605,8 @@
       "sourceId": "professors:gary-nolan",
       "sourceName": "Gary Nolan",
       "sourceCategory": "professors",
-      "targetId": "people:by-gary-nolan",
-      "targetName": "By Gary Nolan",
+      "targetId": "people:larry-nolan",
+      "targetName": "Larry Nolan",
       "targetCategory": "people"
     },
     "friendly_people:harold-malmgren": {
@@ -4792,8 +4925,8 @@
       "sourceId": "people:so-jacobs",
       "sourceName": "So Jacobs",
       "sourceCategory": "people",
-      "targetId": "friendly_people:actually-bob-jacobs",
-      "targetName": "Actually Bob Jacobs",
+      "targetId": "friendly_people:bob-jacobs",
+      "targetName": "Bob Jacobs",
       "targetCategory": "friendly_people"
     },
     "people:jake-barber": {
@@ -4859,6 +4992,310 @@
       "targetId": "dangerous_people:pat-price",
       "targetName": "Pat Price",
       "targetCategory": "dangerous_people"
+    },
+    "experiencers:peruvian-amazon": {
+      "sourceId": "experiencers:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "experiencers",
+      "targetId": "friendly_people:peruvian-amazon",
+      "targetName": "Peruvian Amazon",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:peruvian-amazon": {
+      "sourceId": "friendly_people:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:peru",
+      "targetName": "Peru",
+      "targetCategory": "locations"
+    },
+    "people:chris-mellon": {
+      "sourceId": "people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:chris-mellon",
+      "targetName": "Chris Mellon",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:bob-jacobs": {
+      "sourceId": "friendly_people:bob-jacobs",
+      "sourceName": "Bob Jacobs",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:robert-jacobs",
+      "targetName": "Robert Jacobs",
+      "targetCategory": "people"
+    },
+    "institutes:massachusetts-institute": {
+      "sourceId": "institutes:massachusetts-institute",
+      "sourceName": "Massachusetts Institute",
+      "sourceCategory": "institutes",
+      "targetId": "universities:mit",
+      "targetName": "MIT",
+      "targetCategory": "universities"
+    },
+    "people:jolly-west": {
+      "sourceId": "people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:jolly-west": {
+      "sourceId": "friendly_people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "dangerous_people"
+    },
+    "people:bill-clinton": {
+      "sourceId": "people:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "people",
+      "targetId": "professors:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "professors"
+    },
+    "professors:bill-clinton": {
+      "sourceId": "professors:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "professors",
+      "targetId": "politicians:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "politicians"
+    },
+    "professors:carol-quigley": {
+      "sourceId": "professors:carol-quigley",
+      "sourceName": "Carol Quigley",
+      "sourceCategory": "professors",
+      "targetId": "people:carol-quigley",
+      "targetName": "Carol Quigley",
+      "targetCategory": "people"
+    },
+    "people:carl-wolf": {
+      "sourceId": "people:carl-wolf",
+      "sourceName": "Carl Wolf",
+      "sourceCategory": "people",
+      "targetId": "people:carl-wolff",
+      "targetName": "Carl Wolff",
+      "targetCategory": "people"
+    },
+    "friendly_people:bobby-ray-inman": {
+      "sourceId": "friendly_people:bobby-ray-inman",
+      "sourceName": "Bobby Ray Inman",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:admiral-inman",
+      "targetName": "Admiral Inman",
+      "targetCategory": "people"
+    },
+    "people:admiral-inman": {
+      "sourceId": "people:admiral-inman",
+      "sourceName": "Admiral Inman",
+      "sourceCategory": "people",
+      "targetId": "people:admiral-bobby-ray-inman",
+      "targetName": "Admiral Bobby Ray Inman",
+      "targetCategory": "people"
+    },
+    "professors:so-oxler": {
+      "sourceId": "professors:so-oxler",
+      "sourceName": "So Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "people"
+    },
+    "people:bob-oxler": {
+      "sourceId": "people:bob-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "professors:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "professors"
+    },
+    "professors:bob-oxler": {
+      "sourceId": "professors:bob-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:or-oxler",
+      "targetName": "Or Oxler",
+      "targetCategory": "people"
+    },
+    "people:or-oxler": {
+      "sourceId": "people:or-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "people:bob-exler",
+      "targetName": "Bob Exler",
+      "targetCategory": "people"
+    },
+    "whistleblowers:sonny-white": {
+      "sourceId": "whistleblowers:sonny-white",
+      "sourceName": "Sonny White",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:sonny-white",
+      "targetName": "Sonny White",
+      "targetCategory": "people"
+    },
+    "people:edward-meyer": {
+      "sourceId": "people:edward-meyer",
+      "sourceName": "Edward Meyer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:edward-meyer",
+      "targetName": "Edward Meyer",
+      "targetCategory": "friendly_people"
+    },
+    "likely_spies:billy-myers": {
+      "sourceId": "likely_spies:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "likely_spies",
+      "targetId": "people:billy-myers",
+      "targetName": "Billy Myers",
+      "targetCategory": "people"
+    },
+    "people:billy-myers": {
+      "sourceId": "people:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "government_agencies:civil-air": {
+      "sourceId": "government_agencies:civil-air",
+      "sourceName": "Civil Air",
+      "sourceCategory": "government_agencies",
+      "targetId": "people:civil-air-corps",
+      "targetName": "Civil Air Corps",
+      "targetCategory": "people"
+    },
+    "friendly_people:chris-mellon": {
+      "sourceId": "friendly_people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:christopher-mellon",
+      "targetName": "Christopher Mellon",
+      "targetCategory": "people"
+    },
+    "people:paul-mellon": {
+      "sourceId": "people:paul-mellon",
+      "sourceName": "Paul Mellon",
+      "sourceCategory": "people",
+      "targetId": "people:so-paul-mellon",
+      "targetName": "So Paul Mellon",
+      "targetCategory": "people"
+    },
+    "journalists:jeremy-corbell": {
+      "sourceId": "journalists:jeremy-corbell",
+      "sourceName": "Jeremy Corbell",
+      "sourceCategory": "journalists",
+      "targetId": "whistleblowers:jeremy-corbell",
+      "targetName": "Jeremy Corbell",
+      "targetCategory": "whistleblowers"
+    },
+    "experiencers:air-force-sergeant-dan": {
+      "sourceId": "experiencers:air-force-sergeant-dan",
+      "sourceName": "Air Force Sergeant Dan",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "experiencers"
+    },
+    "experiencers:dan-sherman": {
+      "sourceId": "experiencers:dan-sherman",
+      "sourceName": "Dan Sherman",
+      "sourceCategory": "experiencers",
+      "targetId": "people:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "people"
+    },
+    "people:if-puharich": {
+      "sourceId": "people:if-puharich",
+      "sourceName": "If Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israel-puharich",
+      "targetName": "Israel Puharich",
+      "targetCategory": "people"
+    },
+    "people:israel-puharich": {
+      "sourceId": "people:israel-puharich",
+      "sourceName": "Israel Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israeli-puharich",
+      "targetName": "Israeli Puharich",
+      "targetCategory": "people"
+    },
+    "people:lockheed-martin-space": {
+      "sourceId": "people:lockheed-martin-space",
+      "sourceName": "Lockheed Martin Space",
+      "sourceCategory": "people",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "people:enter-lockheed-martin": {
+      "sourceId": "people:enter-lockheed-martin",
+      "sourceName": "Lockheed Martin",
+      "sourceCategory": "contractors",
+      "targetId": "people:for-lockheed",
+      "targetName": "For Lockheed",
+      "targetCategory": "people"
+    },
+    "people:anna-luna": {
+      "sourceId": "people:anna-luna",
+      "sourceName": "Anna Luna",
+      "sourceCategory": "people",
+      "targetId": "politicians:anna-paulina-luna",
+      "targetName": "Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "politicians:anna-paulina-luna": {
+      "sourceId": "politicians:anna-paulina-luna",
+      "sourceName": "Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "politicians:congresswoman-anna-paulina-luna",
+      "targetName": "Congresswoman Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "politicians:congresswoman-anna-paulina-luna": {
+      "sourceId": "politicians:congresswoman-anna-paulina-luna",
+      "sourceName": "Congresswoman Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "people:anna-paulina",
+      "targetName": "Anna Paulina",
+      "targetCategory": "people"
+    },
+    "people:eric-burleson": {
+      "sourceId": "people:eric-burleson",
+      "sourceName": "Eric Burleson",
+      "sourceCategory": "people",
+      "targetId": "politicians:eric-burleson",
+      "targetName": "Eric Burleson",
+      "targetCategory": "politicians"
+    },
+    "people:anna-brady": {
+      "sourceId": "people:anna-brady",
+      "sourceName": "Anna Brady",
+      "sourceCategory": "people",
+      "targetId": "people:anna-brady-estevez",
+      "targetName": "Anna Brady Estevez",
+      "targetCategory": "people"
+    },
+    "contractors:bigelow-aerospace": {
+      "sourceId": "contractors:bigelow-aerospace",
+      "sourceName": "bigelow aerospace",
+      "sourceCategory": "contractors",
+      "targetId": "companies:bigelow-advanced-aerospace-space",
+      "targetName": "Bigelow Advanced Aerospace Space",
+      "targetCategory": "companies"
+    },
+    "government_agencies:national-intelligence": {
+      "sourceId": "government_agencies:national-intelligence",
+      "sourceName": "National Intelligence",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:odni",
+      "targetName": "ODNI",
+      "targetCategory": "government_agencies"
     }
   },
   "nameMerges": {
@@ -5143,12 +5580,12 @@
       "targetCategory": "friendly_people"
     },
     "john alexander": {
-      "sourceId": "friendly_people:john-alexander",
+      "sourceId": "people:john-alexander",
       "sourceName": "John Alexander",
-      "sourceCategory": "friendly_people",
-      "targetId": "experiencers:john-alexander",
-      "targetName": "John Alexander",
-      "targetCategory": "experiencers"
+      "sourceCategory": "people",
+      "targetId": "people:colonel-john-alexander",
+      "targetName": "Colonel John Alexander",
+      "targetCategory": "people"
     },
     "national institute": {
       "sourceId": "people:national-institute",
@@ -5855,11 +6292,11 @@
       "targetCategory": "professors"
     },
     "bob jacobs": {
-      "sourceId": "people:bob-jacobs",
+      "sourceId": "friendly_people:bob-jacobs",
       "sourceName": "Bob Jacobs",
-      "sourceCategory": "people",
-      "targetId": "people:so-jacobs",
-      "targetName": "So Jacobs",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:robert-jacobs",
+      "targetName": "Robert Jacobs",
       "targetCategory": "people"
     },
     "jack ruby": {
@@ -5879,12 +6316,12 @@
       "targetCategory": "people"
     },
     "barack obama": {
-      "sourceId": "experiencers:barack-obama",
+      "sourceId": "people:barack-obama",
       "sourceName": "Barack Obama",
-      "sourceCategory": "experiencers",
-      "targetId": "people:barack-obama",
-      "targetName": "Barack Obama",
-      "targetCategory": "people"
+      "sourceCategory": "people",
+      "targetId": "politicians:president-barack-obama",
+      "targetName": "President Barack Obama",
+      "targetCategory": "politicians"
     },
     "linda moulton": {
       "sourceId": "people:linda-moulton",
@@ -6535,27 +6972,27 @@
       "targetCategory": "experiencers"
     },
     "gary nolan": {
-      "sourceId": "friendly_people:gary-nolan",
+      "sourceId": "professors:gary-nolan",
       "sourceName": "Gary Nolan",
-      "sourceCategory": "friendly_people",
-      "targetId": "professors:gary-nolan",
-      "targetName": "Gary Nolan",
-      "targetCategory": "professors"
+      "sourceCategory": "professors",
+      "targetId": "people:larry-nolan",
+      "targetName": "Larry Nolan",
+      "targetCategory": "people"
     },
     "close encounters": {
       "sourceId": "movies:close-encounters",
       "sourceName": "Close Encounters",
       "sourceCategory": "movies",
-      "targetId": "experiencers:closer-encounter",
-      "targetName": "Closer Encounter",
-      "targetCategory": "experiencers"
+      "targetId": "movies:closer-encounters",
+      "targetName": "Closer Encounters",
+      "targetCategory": "movies"
     },
     "closer encounter": {
       "sourceId": "experiencers:closer-encounter",
       "sourceName": "Closer Encounter",
       "sourceCategory": "experiencers",
-      "targetId": "movies:closer-encounters",
-      "targetName": "Closer Encounters",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters",
       "targetCategory": "movies"
     },
     "nick cook": {
@@ -6639,12 +7076,12 @@
       "targetCategory": "politicians"
     },
     "lockheed martin": {
-      "sourceId": "contractors:lockheed-martin",
+      "sourceId": "people:enter-lockheed-martin",
       "sourceName": "Lockheed Martin",
       "sourceCategory": "contractors",
-      "targetId": "experiencers:lockheed-martin",
-      "targetName": "Lockheed Martin",
-      "targetCategory": "experiencers"
+      "targetId": "people:for-lockheed",
+      "targetName": "For Lockheed",
+      "targetCategory": "people"
     },
     "lawrence preston geis": {
       "sourceId": "people:lawrence-preston-geis",
@@ -6919,12 +7356,12 @@
       "targetCategory": "people"
     },
     "bobby ray inman": {
-      "sourceId": "people:bobby-ray-inman",
+      "sourceId": "friendly_people:bobby-ray-inman",
       "sourceName": "Bobby Ray Inman",
-      "sourceCategory": "people",
-      "targetId": "friendly_people:bobby-ray-inman",
-      "targetName": "Bobby Ray Inman",
-      "targetCategory": "friendly_people"
+      "sourceCategory": "friendly_people",
+      "targetId": "people:admiral-inman",
+      "targetName": "Admiral Inman",
+      "targetCategory": "people"
     },
     "brandon fugel": {
       "sourceId": "people:brandon-fugel",
@@ -7010,8 +7447,8 @@
       "sourceId": "people:when-bob-lazar",
       "sourceName": "When Bob Lazar",
       "sourceCategory": "people",
-      "targetId": "people:bob-lazar-muscovium",
-      "targetName": "Bob Lazar Muscovium",
+      "targetId": "people:bob-lazar",
+      "targetName": "Bob Lazar",
       "targetCategory": "people"
     },
     "howard hunt": {
@@ -7162,8 +7599,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "sourceCategory": "people",
-      "targetId": "people:has-hal-puthoff",
-      "targetName": "Has Hal Puthoff",
+      "targetId": "people:hal-puthoff",
+      "targetName": "Hal Puthoff",
       "targetCategory": "people"
     },
     "rupert sheldrick": {
@@ -7367,12 +7804,12 @@
       "targetCategory": "politicians"
     },
     "john lear": {
-      "sourceId": "friendly_people:john-lear",
+      "sourceId": "people:john-lear",
       "sourceName": "John Lear",
-      "sourceCategory": "friendly_people",
-      "targetId": "professors:john-lear",
-      "targetName": "John Lear",
-      "targetCategory": "professors"
+      "sourceCategory": "people",
+      "targetId": "people:john-olson-lear",
+      "targetName": "John Olson Lear",
+      "targetCategory": "people"
     },
     "bill moore": {
       "sourceId": "people:bill-moore",
@@ -7650,8 +8087,8 @@
       "sourceId": "people:so-jacobs",
       "sourceName": "So Jacobs",
       "sourceCategory": "people",
-      "targetId": "friendly_people:actually-bob-jacobs",
-      "targetName": "Actually Bob Jacobs",
+      "targetId": "friendly_people:bob-jacobs",
+      "targetName": "Bob Jacobs",
       "targetCategory": "friendly_people"
     },
     "jake barber": {
@@ -7701,9 +8138,233 @@
       "targetId": "experiencers:ross-goldhart",
       "targetName": "Ross Goldhart",
       "targetCategory": "experiencers"
+    },
+    "peruvian amazon": {
+      "sourceId": "friendly_people:peruvian-amazon",
+      "sourceName": "Peruvian Amazon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:peru",
+      "targetName": "Peru",
+      "targetCategory": "locations"
+    },
+    "chris mellon": {
+      "sourceId": "friendly_people:chris-mellon",
+      "sourceName": "Chris Mellon",
+      "sourceCategory": "friendly_people",
+      "targetId": "people:christopher-mellon",
+      "targetName": "Christopher Mellon",
+      "targetCategory": "people"
+    },
+    "massachusetts institute": {
+      "sourceId": "institutes:massachusetts-institute",
+      "sourceName": "Massachusetts Institute",
+      "sourceCategory": "institutes",
+      "targetId": "universities:mit",
+      "targetName": "MIT",
+      "targetCategory": "universities"
+    },
+    "jolly west": {
+      "sourceId": "friendly_people:jolly-west",
+      "sourceName": "Jolly West",
+      "sourceCategory": "friendly_people",
+      "targetId": "dangerous_people:jolly-west",
+      "targetName": "Jolly West",
+      "targetCategory": "dangerous_people"
+    },
+    "bill clinton": {
+      "sourceId": "professors:bill-clinton",
+      "sourceName": "Bill Clinton",
+      "sourceCategory": "professors",
+      "targetId": "politicians:bill-clinton",
+      "targetName": "Bill Clinton",
+      "targetCategory": "politicians"
+    },
+    "carol quigley": {
+      "sourceId": "professors:carol-quigley",
+      "sourceName": "Carol Quigley",
+      "sourceCategory": "professors",
+      "targetId": "people:carol-quigley",
+      "targetName": "Carol Quigley",
+      "targetCategory": "people"
+    },
+    "carl wolf": {
+      "sourceId": "people:carl-wolf",
+      "sourceName": "Carl Wolf",
+      "sourceCategory": "people",
+      "targetId": "people:carl-wolff",
+      "targetName": "Carl Wolff",
+      "targetCategory": "people"
+    },
+    "admiral inman": {
+      "sourceId": "people:admiral-inman",
+      "sourceName": "Admiral Inman",
+      "sourceCategory": "people",
+      "targetId": "people:admiral-bobby-ray-inman",
+      "targetName": "Admiral Bobby Ray Inman",
+      "targetCategory": "people"
+    },
+    "so oxler": {
+      "sourceId": "professors:so-oxler",
+      "sourceName": "So Oxler",
+      "sourceCategory": "professors",
+      "targetId": "people:bob-oxler",
+      "targetName": "Bob Oxler",
+      "targetCategory": "people"
+    },
+    "bob oxler": {
+      "sourceId": "people:or-oxler",
+      "sourceName": "Bob Oxler",
+      "sourceCategory": "people",
+      "targetId": "people:bob-exler",
+      "targetName": "Bob Exler",
+      "targetCategory": "people"
+    },
+    "sonny white": {
+      "sourceId": "whistleblowers:sonny-white",
+      "sourceName": "Sonny White",
+      "sourceCategory": "whistleblowers",
+      "targetId": "people:sonny-white",
+      "targetName": "Sonny White",
+      "targetCategory": "people"
+    },
+    "edward meyer": {
+      "sourceId": "people:edward-meyer",
+      "sourceName": "Edward Meyer",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:edward-meyer",
+      "targetName": "Edward Meyer",
+      "targetCategory": "friendly_people"
+    },
+    "billy myers": {
+      "sourceId": "people:billy-myers",
+      "sourceName": "Billy Myers",
+      "sourceCategory": "people",
+      "targetId": "professors:billy-meyer",
+      "targetName": "Billy Meyer",
+      "targetCategory": "professors"
+    },
+    "civil air": {
+      "sourceId": "government_agencies:civil-air",
+      "sourceName": "Civil Air",
+      "sourceCategory": "government_agencies",
+      "targetId": "people:civil-air-corps",
+      "targetName": "Civil Air Corps",
+      "targetCategory": "people"
+    },
+    "paul mellon": {
+      "sourceId": "people:paul-mellon",
+      "sourceName": "Paul Mellon",
+      "sourceCategory": "people",
+      "targetId": "people:so-paul-mellon",
+      "targetName": "So Paul Mellon",
+      "targetCategory": "people"
+    },
+    "jeremy corbell": {
+      "sourceId": "journalists:jeremy-corbell",
+      "sourceName": "Jeremy Corbell",
+      "sourceCategory": "journalists",
+      "targetId": "whistleblowers:jeremy-corbell",
+      "targetName": "Jeremy Corbell",
+      "targetCategory": "whistleblowers"
+    },
+    "air force sergeant dan": {
+      "sourceId": "experiencers:air-force-sergeant-dan",
+      "sourceName": "Air Force Sergeant Dan",
+      "sourceCategory": "experiencers",
+      "targetId": "experiencers:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "experiencers"
+    },
+    "dan sherman": {
+      "sourceId": "experiencers:dan-sherman",
+      "sourceName": "Dan Sherman",
+      "sourceCategory": "experiencers",
+      "targetId": "people:dan-sherman",
+      "targetName": "Dan Sherman",
+      "targetCategory": "people"
+    },
+    "if puharich": {
+      "sourceId": "people:if-puharich",
+      "sourceName": "If Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israel-puharich",
+      "targetName": "Israel Puharich",
+      "targetCategory": "people"
+    },
+    "israel puharich": {
+      "sourceId": "people:israel-puharich",
+      "sourceName": "Israel Puharich",
+      "sourceCategory": "people",
+      "targetId": "people:israeli-puharich",
+      "targetName": "Israeli Puharich",
+      "targetCategory": "people"
+    },
+    "lockheed martin space": {
+      "sourceId": "people:lockheed-martin-space",
+      "sourceName": "Lockheed Martin Space",
+      "sourceCategory": "people",
+      "targetId": "contractors:lockheed-martin",
+      "targetName": "Lockheed Martin",
+      "targetCategory": "contractors"
+    },
+    "anna luna": {
+      "sourceId": "people:anna-luna",
+      "sourceName": "Anna Luna",
+      "sourceCategory": "people",
+      "targetId": "politicians:anna-paulina-luna",
+      "targetName": "Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "anna paulina luna": {
+      "sourceId": "politicians:anna-paulina-luna",
+      "sourceName": "Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "politicians:congresswoman-anna-paulina-luna",
+      "targetName": "Congresswoman Anna Paulina Luna",
+      "targetCategory": "politicians"
+    },
+    "congresswoman anna paulina luna": {
+      "sourceId": "politicians:congresswoman-anna-paulina-luna",
+      "sourceName": "Congresswoman Anna Paulina Luna",
+      "sourceCategory": "politicians",
+      "targetId": "people:anna-paulina",
+      "targetName": "Anna Paulina",
+      "targetCategory": "people"
+    },
+    "eric burleson": {
+      "sourceId": "people:eric-burleson",
+      "sourceName": "Eric Burleson",
+      "sourceCategory": "people",
+      "targetId": "politicians:eric-burleson",
+      "targetName": "Eric Burleson",
+      "targetCategory": "politicians"
+    },
+    "anna brady": {
+      "sourceId": "people:anna-brady",
+      "sourceName": "Anna Brady",
+      "sourceCategory": "people",
+      "targetId": "people:anna-brady-estevez",
+      "targetName": "Anna Brady Estevez",
+      "targetCategory": "people"
+    },
+    "bigelow aerospace": {
+      "sourceId": "contractors:bigelow-aerospace",
+      "sourceName": "bigelow aerospace",
+      "sourceCategory": "contractors",
+      "targetId": "companies:bigelow-advanced-aerospace-space",
+      "targetName": "Bigelow Advanced Aerospace Space",
+      "targetCategory": "companies"
+    },
+    "national intelligence": {
+      "sourceId": "government_agencies:national-intelligence",
+      "sourceName": "National Intelligence",
+      "sourceCategory": "government_agencies",
+      "targetId": "government_agencies:odni",
+      "targetName": "ODNI",
+      "targetCategory": "government_agencies"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-28T00:14:48.328Z",
+  "generatedAt": "2026-06-28T01:04:42.742Z",
   "note": "Replace data/reclass.json with this file before rebuilding."
 }
