@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 
 concurrency:
   group: rebuild-report-${{ github.ref }}
@@ -78,3 +79,4 @@ jobs:
             --head "$branch" \
             --title "Rebuild report from source data" \
             --body "Automated rebuild from current source data and reclassification rules."
+          gh workflow run validate.yml --ref "$branch"
