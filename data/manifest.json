@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T02:27:23.534813+00:00",
+  "generated_at": "2026-06-28T02:39:09.578085+00:00",
   "pipeline": "uap-relationship-graph",
   "reproducibility": {
     "no_openai_api": true,
@@ -28,8 +28,8 @@
   "counts": {
     "transcripts": 50,
     "segments": 180381,
-    "mentions": 12834,
-    "entities": 3474,
+    "mentions": 12833,
+    "entities": 3461,
     "relationships": 8000,
     "categories": 53
   },
@@ -88,12 +88,12 @@
   "registry_hash": "85f3c52f306d1891b4a44f68e6527ed66041b2f074dad487cf7915d3740276b3",
   "pipeline_hash": "ee7dba27d3277aa9c2b689b59058c79b8d92fec97fb57a8d031156d0fc3711d9",
   "review_counts": {
-    "reclassifications": 340,
-    "name_reclassifications": 410,
-    "false_positives": 121,
+    "reclassifications": 353,
+    "name_reclassifications": 426,
+    "false_positives": 122,
     "omissions": 0,
-    "aliases": 230,
-    "merges": 478,
-    "name_merges": 396
+    "aliases": 240,
+    "merges": 490,
+    "name_merges": 408
   }
 }
