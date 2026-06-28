@@ -333,7 +333,13 @@
     "people:david-cameron": "directors",
     "people:josephson-junctions": "contractors",
     "companies:bigelow-advanced-aerospace-space": "contractors",
-    "people:aaro-historical-report": "document_names"
+    "people:aaro-historical-report": "document_names",
+    "friendly_people:scientific-revolutions": "books",
+    "people:der-spiegel": "newsrooms",
+    "people:lockheed-skunkworks": "contractors",
+    "people:robert-f-kennedy": "politicians",
+    "people:statler-hotel": "locations",
+    "people:russian-orthodox-church": "companies"
   },
   "nameReclassifications": {
     "extra low frequency": "emerging_terminology",
@@ -736,7 +742,16 @@
     "american establishment": "books",
     "on weaponized": "books",
     "byfield brown": "theories",
-    "for lockheed": "contractors"
+    "for lockheed": "contractors",
+    "structure of scientific revolutions": "books",
+    "der spiegel": "newsrooms",
+    "lockheed skunkworks": "contractors",
+    "robert f. kennedy": "politicians",
+    "los angeles county": "locations",
+    "statler hotel": "locations",
+    "russian orthodox church": "companies",
+    "scientific revolutions": "books",
+    "robert f kennedy": "politicians"
   },
   "falsePositives": {
     "gps_coordinates:24-95": {
@@ -1574,7 +1589,9 @@
     "people:for-lockheed": "Lockheed Martin",
     "for lockheed": "Lockheed Martin",
     "people:anna-paulina": "Congresswoman Anna Paulina Luna",
-    "anna paulina": "Congresswoman Anna Paulina Luna"
+    "anna paulina": "Congresswoman Anna Paulina Luna",
+    "friendly_people:scientific-revolutions": "Structure of Scientific Revolutions",
+    "scientific revolutions": "Structure of Scientific Revolutions"
   },
   "merges": {
     "whistleblowers:robert-lazar": {
@@ -1600,22 +1617,6 @@
       "targetId": "military_bases:vandenberg-air-force-base",
       "targetName": "Vandenberg Air Force Base",
       "targetCategory": "military_bases"
-    },
-    "journalists:george-knapp": {
-      "sourceId": "journalists:george-knapp",
-      "sourceName": "George Knapp",
-      "sourceCategory": "journalists",
-      "targetId": "whistleblowers:george-knapp",
-      "targetName": "George Knapp",
-      "targetCategory": "whistleblowers"
-    },
-    "whistleblowers:george-knapp": {
-      "sourceId": "whistleblowers:george-knapp",
-      "sourceName": "George Knapp",
-      "sourceCategory": "whistleblowers",
-      "targetId": "whistleblowers:bob-lazar",
-      "targetName": "Bob Lazar",
-      "targetCategory": "whistleblowers"
     },
     "chemical_elements:bismuth": {
       "sourceId": "chemical_elements:bismuth",
@@ -5296,6 +5297,126 @@
       "targetId": "government_agencies:odni",
       "targetName": "ODNI",
       "targetCategory": "government_agencies"
+    },
+    "people:did-tim": {
+      "sourceId": "people:did-tim",
+      "sourceName": "Did Tim",
+      "sourceCategory": "people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "people:so-turner": {
+      "sourceId": "people:so-turner",
+      "sourceName": "So Turner",
+      "sourceCategory": "people",
+      "targetId": "people:carla-turner",
+      "targetName": "Carla Turner",
+      "targetCategory": "people"
+    },
+    "people:so-bud": {
+      "sourceId": "people:so-bud",
+      "sourceName": "So Bud",
+      "sourceCategory": "people",
+      "targetId": "people:bud-hopkins",
+      "targetName": "Bud Hopkins",
+      "targetCategory": "people"
+    },
+    "people:bud-hopkins": {
+      "sourceId": "people:bud-hopkins",
+      "sourceName": "Bud Hopkins",
+      "sourceCategory": "people",
+      "targetId": "friendly_people:bud-hopkins",
+      "targetName": "Bud Hopkins",
+      "targetCategory": "friendly_people"
+    },
+    "friendly_people:bud-hopkins": {
+      "sourceId": "friendly_people:bud-hopkins",
+      "sourceName": "Bud Hopkins",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:bud-hopkins",
+      "targetName": "Bud Hopkins",
+      "targetCategory": "experiencers"
+    },
+    "contractors:skunk-works": {
+      "sourceId": "contractors:skunk-works",
+      "sourceName": "Skunk Works",
+      "sourceCategory": "contractors",
+      "targetId": "people:lockheed-skunk-works",
+      "targetName": "Lockheed Skunk Works",
+      "targetCategory": "people"
+    },
+    "people:lockheed-skunk-works": {
+      "sourceId": "people:lockheed-skunk-works",
+      "sourceName": "Lockheed Skunk Works",
+      "sourceCategory": "people",
+      "targetId": "people:skunk-works-lockheed",
+      "targetName": "Skunk Works Lockheed",
+      "targetCategory": "people"
+    },
+    "people:skunk-works-lockheed": {
+      "sourceId": "people:skunk-works-lockheed",
+      "sourceName": "Skunk Works Lockheed",
+      "sourceCategory": "people",
+      "targetId": "people:lockheed-skunkworks",
+      "targetName": "Lockheed Skunkworks",
+      "targetCategory": "people"
+    },
+    "dangerous_people:eugene-thane-caesar": {
+      "sourceId": "dangerous_people:eugene-thane-caesar",
+      "sourceName": "Eugene Thane Caesar",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:eugene-thane-caesar",
+      "targetName": "Eugene Thane Caesar",
+      "targetCategory": "people"
+    },
+    "dangerous_people:robert-f-kennedy": {
+      "sourceId": "dangerous_people:robert-f-kennedy",
+      "sourceName": "Robert F. Kennedy",
+      "sourceCategory": "politicians",
+      "targetId": "people:robert-f-kennedy",
+      "targetName": "Robert F. Kennedy",
+      "targetCategory": "people"
+    },
+    "companies:russian-orthodox": {
+      "sourceId": "companies:russian-orthodox",
+      "sourceName": "Russian Orthodox",
+      "sourceCategory": "companies",
+      "targetId": "people:russian-orthodox-church",
+      "targetName": "Russian Orthodox Church",
+      "targetCategory": "people"
+    },
+    "people:bobby-kennedy": {
+      "sourceId": "people:bobby-kennedy",
+      "sourceName": "Bobby Kennedy",
+      "sourceCategory": "people",
+      "targetId": "people:robert-f-kennedy",
+      "targetName": "Robert F. Kennedy",
+      "targetCategory": "politicians"
+    },
+    "people:los-angeles-county": {
+      "sourceId": "people:los-angeles-county",
+      "sourceName": "Los Angeles County",
+      "sourceCategory": "locations",
+      "targetId": "locations:los-angeles",
+      "targetName": "Los Angeles",
+      "targetCategory": "locations"
+    },
+    "people:john-harrington": {
+      "sourceId": "people:john-harrington",
+      "sourceName": "John Harrington",
+      "sourceCategory": "people",
+      "targetId": "politicians:john-harrington",
+      "targetName": "John Harrington",
+      "targetCategory": "politicians"
+    },
+    "people:so-john": {
+      "sourceId": "people:so-john",
+      "sourceName": "So John",
+      "sourceCategory": "people",
+      "targetId": "people:john-lear",
+      "targetName": "John Lear",
+      "targetCategory": "people"
     }
   },
   "nameMerges": {
@@ -5322,14 +5443,6 @@
       "targetId": "military_bases:vandenberg-air-force-base",
       "targetName": "Vandenberg Air Force Base",
       "targetCategory": "military_bases"
-    },
-    "george knapp": {
-      "sourceId": "whistleblowers:george-knapp",
-      "sourceName": "George Knapp",
-      "sourceCategory": "whistleblowers",
-      "targetId": "whistleblowers:bob-lazar",
-      "targetName": "Bob Lazar",
-      "targetCategory": "whistleblowers"
     },
     "bismuth": {
       "sourceId": "chemical_elements:bismuth",
@@ -8362,9 +8475,121 @@
       "targetId": "government_agencies:odni",
       "targetName": "ODNI",
       "targetCategory": "government_agencies"
+    },
+    "did tim": {
+      "sourceId": "people:did-tim",
+      "sourceName": "Did Tim",
+      "sourceCategory": "people",
+      "targetId": "people:tim-taylor",
+      "targetName": "Tim Taylor",
+      "targetCategory": "people"
+    },
+    "so turner": {
+      "sourceId": "people:so-turner",
+      "sourceName": "So Turner",
+      "sourceCategory": "people",
+      "targetId": "people:carla-turner",
+      "targetName": "Carla Turner",
+      "targetCategory": "people"
+    },
+    "so bud": {
+      "sourceId": "people:so-bud",
+      "sourceName": "So Bud",
+      "sourceCategory": "people",
+      "targetId": "people:bud-hopkins",
+      "targetName": "Bud Hopkins",
+      "targetCategory": "people"
+    },
+    "bud hopkins": {
+      "sourceId": "friendly_people:bud-hopkins",
+      "sourceName": "Bud Hopkins",
+      "sourceCategory": "friendly_people",
+      "targetId": "experiencers:bud-hopkins",
+      "targetName": "Bud Hopkins",
+      "targetCategory": "experiencers"
+    },
+    "skunk works": {
+      "sourceId": "contractors:skunk-works",
+      "sourceName": "Skunk Works",
+      "sourceCategory": "contractors",
+      "targetId": "people:lockheed-skunk-works",
+      "targetName": "Lockheed Skunk Works",
+      "targetCategory": "people"
+    },
+    "lockheed skunk works": {
+      "sourceId": "people:lockheed-skunk-works",
+      "sourceName": "Lockheed Skunk Works",
+      "sourceCategory": "people",
+      "targetId": "people:skunk-works-lockheed",
+      "targetName": "Skunk Works Lockheed",
+      "targetCategory": "people"
+    },
+    "skunk works lockheed": {
+      "sourceId": "people:skunk-works-lockheed",
+      "sourceName": "Skunk Works Lockheed",
+      "sourceCategory": "people",
+      "targetId": "people:lockheed-skunkworks",
+      "targetName": "Lockheed Skunkworks",
+      "targetCategory": "people"
+    },
+    "eugene thane caesar": {
+      "sourceId": "dangerous_people:eugene-thane-caesar",
+      "sourceName": "Eugene Thane Caesar",
+      "sourceCategory": "dangerous_people",
+      "targetId": "people:eugene-thane-caesar",
+      "targetName": "Eugene Thane Caesar",
+      "targetCategory": "people"
+    },
+    "robert f kennedy": {
+      "sourceId": "dangerous_people:robert-f-kennedy",
+      "sourceName": "Robert F. Kennedy",
+      "sourceCategory": "politicians",
+      "targetId": "people:robert-f-kennedy",
+      "targetName": "Robert F. Kennedy",
+      "targetCategory": "people"
+    },
+    "russian orthodox": {
+      "sourceId": "companies:russian-orthodox",
+      "sourceName": "Russian Orthodox",
+      "sourceCategory": "companies",
+      "targetId": "people:russian-orthodox-church",
+      "targetName": "Russian Orthodox Church",
+      "targetCategory": "people"
+    },
+    "bobby kennedy": {
+      "sourceId": "people:bobby-kennedy",
+      "sourceName": "Bobby Kennedy",
+      "sourceCategory": "people",
+      "targetId": "people:robert-f-kennedy",
+      "targetName": "Robert F. Kennedy",
+      "targetCategory": "politicians"
+    },
+    "los angeles county": {
+      "sourceId": "people:los-angeles-county",
+      "sourceName": "Los Angeles County",
+      "sourceCategory": "locations",
+      "targetId": "locations:los-angeles",
+      "targetName": "Los Angeles",
+      "targetCategory": "locations"
+    },
+    "john harrington": {
+      "sourceId": "people:john-harrington",
+      "sourceName": "John Harrington",
+      "sourceCategory": "people",
+      "targetId": "politicians:john-harrington",
+      "targetName": "John Harrington",
+      "targetCategory": "politicians"
+    },
+    "so john": {
+      "sourceId": "people:so-john",
+      "sourceName": "So John",
+      "sourceCategory": "people",
+      "targetId": "people:john-lear",
+      "targetName": "John Lear",
+      "targetCategory": "people"
     }
   },
   "notes": {},
-  "generatedAt": "2026-06-28T01:04:42.742Z",
+  "generatedAt": "2026-06-28T01:37:09.803Z",
   "note": "Replace data/reclass.json with this file before rebuilding."
 }
