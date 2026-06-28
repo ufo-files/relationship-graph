@@ -61,6 +61,19 @@ To rebuild:
 python3 build_graph.py
 ```
 
+### Local Ebook Ingestion
+
+EPUB files can be converted into transcript-style TSV sources for graph analysis:
+
+```bash
+python3 scripts/convert_ebooks.py
+python3 build_graph.py
+```
+
+Place EPUB files in `data/documents/`. Source ebooks are ignored by git and should stay local. The converter writes deterministic `data/transcripts/ebook-*.tsv` files with `start`, `end`, and `text` columns. Those TSV files contain public evidence windows around extracted entities, not full ebook text, so the online graph can use the derived data and still show snippets.
+
+Scanned PDFs need OCR first and are intentionally skipped by this converter.
+
 The manifest records:
 
 - pipeline name
