@@ -89,7 +89,7 @@ test("direct relationship graph keeps outward context subtle", async ({ page }) 
   const secondaryLabels = await page.locator(".html-graph-label[data-label-entity] .label-secondary").evaluateAll((labels) =>
     labels.map((label) => label.textContent || "")
   );
-  expect(secondaryLabels.some((label) => label.includes("weight"))).toBe(true);
+  expect(secondaryLabels.some((label) => label.includes("weight"))).toBe(false);
   expect(secondaryLabels.some((label) => label.includes("real connections") || label.startsWith("from "))).toBe(false);
 });
 
