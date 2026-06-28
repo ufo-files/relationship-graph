@@ -4008,7 +4008,7 @@ def render_html(app_data_version: str = "") -> str:
         "entity",
         node,
         truncate(node.raw.name, 24),
-        truncate(formatRelationshipType(node.relationship.type) + " · weight " + (node.relationship.weight || 1).toLocaleString(), 30)
+        truncate(node.raw.topCategoryLabel || node.raw.categoryLabel, 28)
       ))).concat(secondDegreeLabelNodes.map((node) => nodeLabel(
         node.raw.id,
         "entity",

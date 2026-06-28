@@ -456,7 +456,7 @@
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="app-data.js?v=1fa4f44c79dab493"></script>
+    <script src="app-data.js?v=088303d4007a2424"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -1399,7 +1399,7 @@
         "entity",
         node,
         truncate(node.raw.name, 24),
-        truncate(formatRelationshipType(node.relationship.type) + " · weight " + (node.relationship.weight || 1).toLocaleString(), 30)
+        truncate(node.raw.topCategoryLabel || node.raw.categoryLabel, 28)
       ))).concat(secondDegreeLabelNodes.map((node) => nodeLabel(
         node.raw.id,
         "entity",
