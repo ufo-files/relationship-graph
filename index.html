@@ -183,7 +183,6 @@
     .node-card {
       position: fixed;
       left: 12px;
-      top: 12px;
       bottom: 12px;
       z-index: 6;
       width: min(440px, calc(100vw - 24px));
@@ -192,16 +191,15 @@
     }
     .node-card.open { display: block; }
     .node-card-body {
-      height: 100%;
-      max-height: none;
+      max-height: min(72vh, calc(100vh - 132px));
       overflow-y: auto;
       overflow-x: hidden;
       padding: 12px;
     }
     .card-close {
       position: absolute;
-      top: 8px;
-      right: -36px;
+      top: -36px;
+      right: -1px;
       width: 28px;
       height: 28px;
       padding: 0;
@@ -427,27 +425,6 @@
       transform-box: fill-box;
       transform-origin: center;
     }
-    .graph-node.connection-highlight circle {
-      stroke-width: 2.4;
-    }
-    .graph-node.connection-dim,
-    .html-graph-label.connection-dim {
-      opacity: .24;
-    }
-    .graph-edge {
-      transition: opacity .16s ease, stroke-width .16s ease;
-    }
-    .graph-edge.connection-highlight {
-      opacity: .82;
-      stroke-width: 2.4px;
-    }
-    .graph-edge.connection-dim {
-      opacity: .06;
-    }
-    .html-graph-label.connection-highlight {
-      color: var(--ink);
-      opacity: 1;
-    }
     .graph-label {
       paint-order: stroke;
       stroke: #fff;
@@ -467,26 +444,9 @@
       font-size: .875rem;
     }
     @media (max-width: 820px) {
-      .topbar {
-        top: 8px;
-        left: 8px;
-        right: 8px;
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-      .brand { padding: 8px 10px; }
-      h1 { font-size: 13px; }
-      .controls {
-        justify-content: start;
-        gap: 6px;
-        padding: 6px;
-      }
+      .topbar { grid-template-columns: 1fr; }
+      .controls { justify-content: start; }
       input { width: 100%; }
-      input, select, button {
-        height: 30px;
-        padding: 0 8px;
-        font-size: 12px;
-      }
       .legend { display: none; }
       .corner-label {
         top: auto;
@@ -495,17 +455,6 @@
         max-width: calc(100vw - 24px);
       }
       .corner-label strong { font-size: 22px; }
-      .node-card {
-        top: 8px;
-        left: 8px;
-        right: 8px;
-        bottom: 8px;
-        width: auto;
-      }
-      .card-close {
-        top: 8px;
-        right: 8px;
-      }
     }
   </style>
 </head>
@@ -532,9 +481,9 @@
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="app-data.js?v=e82f7771623d9d04"></script>
-    <script src="app-data-mentions.js?v=e82f7771623d9d04"></script>
-    <script src="app-data-relationships.js?v=e82f7771623d9d04"></script>
+    <script src="app-data.js?v=95584e8ba8017605"></script>
+    <script src="app-data-mentions.js?v=95584e8ba8017605"></script>
+    <script src="app-data-relationships.js?v=95584e8ba8017605"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -801,12 +750,6 @@
       return Math.max(0, Math.ceil(rect.bottom + 18));
     }
 
-    function graphSidebarInsetPx() {
-      if (!cardEl.classList.contains("open") || isCompactViewport()) return 0;
-      const rect = cardEl.getBoundingClientRect();
-      return Math.max(0, Math.ceil(rect.right + 24));
-    }
-
     function fitBoundsToViewport(minX, minY, maxX, maxY, options = {}) {
       const rect = svg.getBoundingClientRect();
       const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
@@ -862,11 +805,6 @@
       );
     }
 
-    function isCompactViewport() {
-      const rect = svg.getBoundingClientRect();
-      return Math.min(rect.width || window.innerWidth, window.innerWidth) <= 820;
-    }
-
     function fit() {
       setViewBox(0, -250, 2200, 2000);
     }
@@ -888,28 +826,7 @@
       const maxX = Math.max(...items.map((node) => node.x + node.r)) + xPad;
       const minY = Math.min(...items.map((node) => node.y - node.r)) - topPad;
       const maxY = Math.max(...items.map((node) => node.y + node.r)) + bottomPad;
-      fitBoundsToViewport(minX, minY, maxX, maxY, { reserveHeader: true, bottomInsetPx: 32, leftInsetPx: graphSidebarInsetPx() });
-    }
-
-    function fitCategoryDrillViewport(activeCategoryNode, nodes) {
-      if (!isCompactViewport()) {
-        fitNodesToViewport([activeCategoryNode].concat(nodes), { padding: 260, reserveHeader: true, bottomInsetPx: 32 });
-        return;
-      }
-      const focusRadius = 760;
-      fitBoundsToViewport(
-        activeCategoryNode.x - focusRadius,
-        activeCategoryNode.y - focusRadius,
-        activeCategoryNode.x + focusRadius,
-        activeCategoryNode.y + focusRadius,
-        {
-          padding: 80,
-          reserveHeader: true,
-          bottomInsetPx: 48,
-          leftInsetPx: 12,
-          rightInsetPx: 12,
-        }
-      );
+      fitBoundsToViewport(minX, minY, maxX, maxY, { reserveHeader: true, bottomInsetPx: 32 });
     }
 
     function setCornerLabel(title, detail) {
@@ -1116,7 +1033,7 @@
         const dy = avgY - activeCategoryNode.y;
         const length = Math.max(1, Math.hypot(dx, dy));
         const angle = Math.atan2(dy, dx) + ((index % 5) - 2) * .08;
-        const radius = 1260 + (index % 3) * 120;
+        const radius = 1010 + (index % 3) * 72;
         return {
           id: item.id,
           x: activeCategoryNode.x + Math.cos(angle) * radius,
@@ -1192,7 +1109,7 @@
       wireEntityNodes();
       wireCategoryNodes();
       wireCategoryListNodes();
-      fitCategoryDrillViewport(activeCategoryNode, nodes);
+      fitNodesToViewport([activeCategoryNode].concat(nodes), { padding: 260, reserveHeader: true, bottomInsetPx: 32 });
     }
 
     function renderCategoryGrid(categoryId) {
@@ -1605,7 +1522,6 @@
     }
 
     function relationshipGraphScore(relationship) {
-      if (relationship.type === "manual") return 1000000 + (relationship.weight || 1);
       const typeBoost = relationship.type === "co_mentioned" ? 0 : 18;
       const source = entitiesById.get(relationship.source);
       const target = entitiesById.get(relationship.target);
@@ -2217,45 +2133,7 @@
       }
     }
 
-    function clearConnectionHighlights() {
-      svg.querySelectorAll(".connection-highlight, .connection-dim").forEach((element) => {
-        element.classList.remove("connection-highlight", "connection-dim");
-      });
-      graphLabelsEl.querySelectorAll(".connection-highlight, .connection-dim").forEach((element) => {
-        element.classList.remove("connection-highlight", "connection-dim");
-      });
-    }
-
-    function highlightEntityConnections(entityId) {
-      clearConnectionHighlights();
-      const relationships = relationshipsByEntity.get(entityId) || [];
-      if (!entityId || !relationships.length) return;
-      const connectedIds = new Set([entityId]);
-      const connectedRelationshipIds = new Set();
-      relationships.forEach((relationship) => {
-        connectedRelationshipIds.add(relationship.id);
-        connectedIds.add(relationship.source === entityId ? relationship.target : relationship.source);
-      });
-
-      svg.querySelectorAll("[data-entity]").forEach((node) => {
-        const isConnected = connectedIds.has(node.dataset.entity);
-        node.classList.toggle("connection-highlight", isConnected);
-        node.classList.toggle("connection-dim", !isConnected);
-      });
-      graphLabelsEl.querySelectorAll("[data-label-entity]").forEach((label) => {
-        const isConnected = connectedIds.has(label.dataset.labelEntity);
-        label.classList.toggle("connection-highlight", isConnected);
-        label.classList.toggle("connection-dim", !isConnected);
-      });
-      svg.querySelectorAll("[data-edge]").forEach((edge) => {
-        const isConnected = connectedRelationshipIds.has(edge.dataset.edge);
-        edge.classList.toggle("connection-highlight", isConnected);
-        edge.classList.toggle("connection-dim", !isConnected);
-      });
-    }
-
     function setHoveredNode(node) {
-      clearConnectionHighlights();
       svg.querySelectorAll(".graph-node.hover").forEach((current) => {
         if (current !== node) current.classList.remove("hover");
       });
@@ -2265,7 +2143,6 @@
       if (!node) return;
       promoteNode(node);
       node.classList.add("hover");
-      if (node.dataset.entity) highlightEntityConnections(node.dataset.entity);
       const labelKind = node.dataset.entity ? "labelEntity" : node.dataset.categoryList ? "labelCategoryList" : "labelCategory";
       const id = node.dataset.entity || node.dataset.categoryList || node.dataset.category;
       Array.from(graphLabelsEl.querySelectorAll(".html-graph-label")).forEach((label) => {
