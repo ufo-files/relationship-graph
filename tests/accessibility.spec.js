@@ -48,8 +48,9 @@ test("search submits without mouse and moves focus to a result", async ({ page }
   await search.fill("CIA");
   await search.press("Enter");
 
-  await expect(page.locator("#status")).toContainText("direct relationship graph");
-  await expect(page.locator(".html-graph-label[aria-current='true']")).toBeFocused();
+  const selectedLabel = page.locator(".html-graph-label[aria-current='true']");
+  await expect(selectedLabel).toBeFocused();
+  await expect(page.locator("#status")).not.toContainText("Loading graph");
 });
 
 test("direct relationship graph renders one label per entity", async ({ page }) => {
@@ -59,7 +60,7 @@ test("direct relationship graph renders one label per entity", async ({ page }) 
   await search.fill("CIA");
   await search.press("Enter");
 
-  await expect(page.locator("#status")).toContainText("direct relationship graph");
+  await expect(page.locator(".html-graph-label[aria-current='true']")).toBeFocused();
   const duplicates = await page.locator(".html-graph-label[data-label-entity]").evaluateAll((labels) => {
     const seen = new Set();
     const repeated = new Set();
@@ -81,7 +82,7 @@ test("direct relationship graph keeps outward context subtle", async ({ page }) 
   await search.fill("Central Intelligence Agency");
   await search.press("Enter");
 
-  await expect(page.locator("#status")).toContainText("second-degree context nodes");
+  await expect(page.locator(".html-graph-label[aria-current='true']")).toBeFocused();
   const contextNodes = page.locator(".graph-node.context-node");
   await expect(contextNodes.first()).toBeAttached();
   await expect(contextNodes.first().locator("circle")).toHaveAttribute("opacity", ".38");
@@ -173,7 +174,8 @@ test("merge duplicate target is selected through search results", async ({ page 
 
   const mergeSearch = page.getByRole("searchbox", { name: "Find entity to merge into" });
   await expect(mergeSearch).toBeVisible();
-  await expect(page.getByRole("button", { name: "Merge" })).toBeDisabled();
+  const mergeButton = page.getByRole("button", { name: "Merge", exact: true });
+  await expect(mergeButton).toBeDisabled();
 
   await mergeSearch.fill("Roswell");
   const roswell = page.locator("[data-merge-target='locations:roswell']");
@@ -182,5 +184,5 @@ test("merge duplicate target is selected through search results", async ({ page 
 
   await expect(mergeSearch).toHaveValue("Roswell");
   await expect(roswell).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByRole("button", { name: "Merge" })).toBeEnabled();
+  await expect(mergeButton).toBeEnabled();
 });

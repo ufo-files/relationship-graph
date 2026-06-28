@@ -2,10 +2,12 @@
   "aliases": {
     "acquisition technology": "National Intelligence for Acquisition Technology and Facilities",
     "actually bob jacobs": "Bob Jacobs",
+    "advanced aerospace threat identification program": "AATIP",
     "aero medical": "Aero Medical Division",
     "aero medical center": "Army Air Forces Aero Medical Center",
     "after disclosure": "A.D. After Disclosure",
     "air force colonel roy": "Colonel Roy Jonkers",
+    "air force office": "Air Force Office of Special Investigations",
     "american establishment": "The Anglo-American Establishment",
     "american joseph mengele": "Joseph Mengele",
     "american world power": "Angle-American World Power",
@@ -34,9 +36,11 @@
     "civilized society": "Towards a Psycho-Civilized Society",
     "coast guard": "United States Coast Guard",
     "companies:aero-medical-center": "Army Air Forces Aero Medical Center",
+    "consciousness department": "Consciousness",
     "consciousness department it": "Consciousness",
     "dates_times:november-24-95": "April 1995",
     "dave grush": "Dave Grusch",
+    "defense intelligence agency": "U.S. Defense Intelligence Agency",
     "diana pasolka": "Diana Pasulka",
     "document_names:arrow-historical-report": "AARO Historical Report",
     "dragon dracs": "Draconians",
@@ -49,6 +53,7 @@
     "experiencers:diana-pasolka": "Diana Pasulka",
     "experiencers:had-lazar": "Bob Lazar",
     "experiencers:ross-goldhart": "Ross Coulthart",
+    "experiencers:s-house": "U.S. House of Representatives",
     "federal republic": "Federal Republic of Germany",
     "for lockheed": "Lockheed Martin",
     "for skinwalker": "Skinwalker Ranch",
@@ -63,12 +68,17 @@
     "george h": "George H.W. Bush",
     "george h w bush": "President George H.W. Bush",
     "german experimental station": "German Experimental Station for Aviation Medicine",
+    "government_agencies:air-force-office": "Air Force Office of Special Investigations",
     "government_agencies:army-test": "Army Test and Evaluation Command",
     "government_agencies:based-laser-project-office": "Space-Based Laser Project Office",
     "government_agencies:coast-guard": "United States Coast Guard",
+    "government_agencies:consciousness-department": "Consciousness",
     "government_agencies:consciousness-department-it": "Consciousness",
+    "government_agencies:defense-intelligence-agency": "U.S. Defense Intelligence Agency",
     "government_agencies:marine-corps": "United States Marine Corps",
     "government_agencies:national-reconnaissance": "National Reconnaissance Office",
+    "government_agencies:s-air-force-office": "U.S. Air Force Office of Intelligence",
+    "government_agencies:s-air-force-special": "U.S. Air Force Special Activities Squadron",
     "government_agencies:s-army-ordnance": "U.S. Army Ordnance",
     "government_agencies:u-s-army": "United States Army",
     "government_agencies:us-air-force": "United States Air Force",
@@ -89,10 +99,12 @@
     "in september": "September 1964",
     "in switzerland": "Switzerland",
     "independent research": "Independent Research and Development",
+    "information act": "Freedom of Information Act",
     "intelligence directorate": "Security and Intelligence Directorate",
     "january 2007": "January 2007",
     "jim sammy": "Jim Semivan",
     "john olson lear": "John Lear",
+    "journalists:special-investigations": "U.S. Air Force Office of Special Investigations",
     "just papoose lake": "Papoose Lake",
     "larry nolan": "Gary Nolan",
     "let espresso": "L'Espresso",
@@ -169,6 +181,7 @@
     "people:in-september": "September 1964",
     "people:in-switzerland": "Switzerland",
     "people:independent-research": "Independent Research and Development",
+    "people:information-act": "Freedom of Information Act",
     "people:intelligence-directorate": "Security and Intelligence Directorate",
     "people:january-2007": "January 2007",
     "people:jim-sammy": "Jim Semivan",
@@ -224,13 +237,18 @@
     "professors:aero-medical": "Aero Medical Division",
     "professors:german-experimental-station": "German Experimental Station for Aviation Medicine",
     "professors:medical-research": "Kaiser Wilhelm Institute for Medical Research",
+    "professors:space-science": "Stanford's Center for Space Science and Astrophysics",
     "public standards": "Bureau of Public Standards",
     "research center": "John Glenn NASA Research Center",
+    "research_groups:advanced-aerospace-threat-identification-program": "AATIP",
     "research_groups:research-center": "John Glenn NASA Research Center",
     "rick doty": "Richard Doti",
     "rockefeller commission": "Rockefeller Commission Report",
     "ross goldhart": "Ross Coulthart",
+    "s air force office": "U.S. Air Force Office of Intelligence",
+    "s air force special": "U.S. Air Force Special Activities Squadron",
     "s army ordnance": "U.S. Army Ordnance",
+    "s house": "U.S. House of Representatives",
     "scientific revolutions": "Structure of Scientific Revolutions",
     "second empire": "The Spider's Web, Britain's Second Empire",
     "secret machines": "Sekret Machines",
@@ -239,6 +257,8 @@
     "so paul mellon": "Paul Mellon",
     "space force": "United States Space Force",
     "space kids": "Space Kids Camp",
+    "space science": "Stanford's Center for Space Science and Astrophysics",
+    "special investigations": "U.S. Air Force Office of Special Investigations",
     "special programs": "Pentagon Special Programs",
     "special projects": "EG&G Special Projects",
     "technology group": "Trump Media and Technology Group",
@@ -284,6 +304,11 @@
       "category": "friendly_people",
       "categoryLabel": "Friendly people",
       "name": "Federally Funded Research"
+    },
+    "friendly_people:former-los-alamos": {
+      "category": "friendly_people",
+      "categoryLabel": "Friendly people",
+      "name": "Former Los Alamos"
     },
     "gps_coordinates:1-100": {
       "category": "gps_coordinates",
@@ -550,6 +575,11 @@
       "categoryLabel": "Likely spies",
       "name": "James Bond"
     },
+    "likely_spies:union-paci": {
+      "category": "likely_spies",
+      "categoryLabel": "Likely spies",
+      "name": "Union Paci"
+    },
     "people:aerospace-corporation": {
       "category": "people",
       "categoryLabel": "People",
@@ -589,6 +619,11 @@
       "category": "people",
       "categoryLabel": "People",
       "name": "Fight Club"
+    },
+    "people:former-los-alamos": {
+      "category": "people",
+      "categoryLabel": "People",
+      "name": "Former Los Alamos"
     },
     "people:forrest-gump": {
       "category": "people",
@@ -881,7 +916,17 @@
       "name": "zbiotics.com"
     }
   },
-  "generatedAt": "2026-06-28T04:44:44.199Z",
+  "generatedAt": "2026-06-28T05:58:09.962Z",
+  "manualRelationships": {
+    "experiencers:chris-bledsoe--people:chris-bledsoe-jr": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:chris-bledsoe",
+      "sourceName": "Chris Bledsoe",
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-jr",
+      "targetName": "Chris Bledsoe Jr"
+    }
+  },
   "merges": {
     "alien_species:grey": {
       "sourceCategory": "alien_species",
@@ -995,6 +1040,14 @@
       "targetId": "people:lockheed-skunk-works",
       "targetName": "Lockheed Skunk Works"
     },
+    "dangerous_people:activities-squadron": {
+      "sourceCategory": "dangerous_people",
+      "sourceId": "dangerous_people:activities-squadron",
+      "sourceName": "Activities Squadron",
+      "targetCategory": "people",
+      "targetId": "people:activities-squadron",
+      "targetName": "Activities Squadron"
+    },
     "dangerous_people:antelope-valley": {
       "sourceCategory": "dangerous_people",
       "sourceId": "dangerous_people:antelope-valley",
@@ -1083,6 +1136,22 @@
       "targetId": "dangerous_people:jack-ruby",
       "targetName": "Jack Ruby"
     },
+    "dangerous_people:special-investigations": {
+      "sourceCategory": "dangerous_people",
+      "sourceId": "dangerous_people:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "politicians",
+      "targetId": "politicians:special-investigations",
+      "targetName": "Special Investigations"
+    },
+    "document_names:condon-report": {
+      "sourceCategory": "document_names",
+      "sourceId": "document_names:condon-report",
+      "sourceName": "Condon report",
+      "targetCategory": "politicians",
+      "targetId": "politicians:condon-report",
+      "targetName": "Condon Report"
+    },
     "document_names:mj-12": {
       "sourceCategory": "document_names",
       "sourceId": "document_names:mj-12",
@@ -1090,6 +1159,14 @@
       "targetCategory": "document_names",
       "targetId": "document_names:majestic-12",
       "targetName": "majestic 12"
+    },
+    "experiencers:abductee-whitley-strieber": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:abductee-whitley-strieber",
+      "sourceName": "Abductee Whitley Strieber",
+      "targetCategory": "people",
+      "targetId": "people:whitley-strieber",
+      "targetName": "Whitley Strieber"
     },
     "experiencers:air-force-sergeant-dan": {
       "sourceCategory": "experiencers",
@@ -1235,6 +1312,14 @@
       "targetId": "people:gary-nolan",
       "targetName": "Gary Nolan"
     },
+    "experiencers:groom-lake-road": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:groom-lake-road",
+      "sourceName": "Groom Lake Road",
+      "targetCategory": "professors",
+      "targetId": "professors:groom-lake-road",
+      "targetName": "Groom Lake Road"
+    },
     "experiencers:how-does-consciousness-work": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:how-does-consciousness-work",
@@ -1283,6 +1368,14 @@
       "targetId": "people:robert-bigelow",
       "targetName": "Robert Bigelow"
     },
+    "experiencers:special-investigations": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "journalists",
+      "targetId": "journalists:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "experiencers:third-kind": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:third-kind",
@@ -1314,6 +1407,14 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:virgin-mary",
       "targetName": "Virgin Mary"
+    },
+    "experiencers:whitley-strieber": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:whitley-strieber",
+      "targetName": "Whitley Strieber"
     },
     "experiencers:wright-airfield": {
       "sourceCategory": "experiencers",
@@ -1803,6 +1904,14 @@
       "targetId": "people:charles-hall",
       "targetName": "Charles Hall"
     },
+    "friendly_people:special-investigations": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "professors",
+      "targetId": "professors:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "friendly_people:thomas-townsend-brown": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:thomas-townsend-brown",
@@ -1842,6 +1951,14 @@
       "targetCategory": "people",
       "targetId": "people:dick-cheney",
       "targetName": "Dick Cheney"
+    },
+    "friendly_people:whitley-strieber": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "politicians",
+      "targetId": "politicians:whitley-strieber",
+      "targetName": "Whitley Strieber"
     },
     "friendly_people:william-barr": {
       "sourceCategory": "friendly_people",
@@ -1883,6 +2000,22 @@
       "targetId": "government_agencies:united-states-air-force",
       "targetName": "United States Air Force"
     },
+    "government_agencies:air-force-intelligence": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:air-force-intelligence",
+      "sourceName": "Air Force Intelligence",
+      "targetCategory": "government_agencies",
+      "targetId": "journalists:special-investigations",
+      "targetName": "U.S. Air Force Office of Special Investigations"
+    },
+    "government_agencies:air-force-office": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:air-force-office",
+      "sourceName": "Air Force Office of Special Investigations",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "government_agencies:army-air-forces-aero": {
       "sourceCategory": "government_agencies",
       "sourceId": "government_agencies:army-air-forces-aero",
@@ -1908,12 +2041,28 @@
       "targetName": "Civil Air Corps"
     },
     "government_agencies:consciousness-department": {
-      "sourceCategory": "government_agencies",
+      "sourceCategory": "key_terms",
       "sourceId": "government_agencies:consciousness-department",
-      "sourceName": "Consciousness Department",
-      "targetCategory": "websites",
-      "targetId": "websites:5-consciousness",
-      "targetName": "5.Consciousness"
+      "sourceName": "Consciousness",
+      "targetCategory": "key_terms",
+      "targetId": "key_terms:consciousness",
+      "targetName": "Consciousness"
+    },
+    "government_agencies:defence-department": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:defence-department",
+      "sourceName": "Defence Department",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-defense",
+      "targetName": "Department of Defense"
+    },
+    "government_agencies:defense-department": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:defense-department",
+      "sourceName": "Defense Department",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:defence-department",
+      "targetName": "Defence Department"
     },
     "government_agencies:dia": {
       "sourceCategory": "government_agencies",
@@ -2275,6 +2424,14 @@
       "targetId": "whistleblowers:sergeant-sherman",
       "targetName": "Sergeant Sherman"
     },
+    "likely_spies:special-investigations": {
+      "sourceCategory": "likely_spies",
+      "sourceId": "likely_spies:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "people",
+      "targetId": "people:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "locations:brook-park-strip-mall": {
       "sourceCategory": "locations",
       "sourceId": "locations:brook-park-strip-mall",
@@ -2450,6 +2607,14 @@
       "targetCategory": "research_groups",
       "targetId": "research_groups:mufon",
       "targetName": "MUFON"
+    },
+    "people:activities-squadron": {
+      "sourceCategory": "people",
+      "sourceId": "people:activities-squadron",
+      "sourceName": "Activities Squadron",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:s-air-force-special",
+      "targetName": "U.S. Air Force Special Activities Squadron"
     },
     "people:admiral-inman": {
       "sourceCategory": "people",
@@ -3394,6 +3559,14 @@
       "targetCategory": "people",
       "targetId": "people:grand-central-terminal",
       "targetName": "Grand Central Terminal"
+    },
+    "people:groom-lake": {
+      "sourceCategory": "locations",
+      "sourceId": "people:groom-lake",
+      "sourceName": "Groom Lake",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:groom-lake-road",
+      "targetName": "Groom Lake Road"
     },
     "people:hal-palemeyer": {
       "sourceCategory": "people",
@@ -4515,6 +4688,14 @@
       "targetId": "people:second-world-war",
       "targetName": "Second World War"
     },
+    "people:special-investigations": {
+      "sourceCategory": "people",
+      "sourceId": "people:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "people:stanford-research-institute": {
       "sourceCategory": "people",
       "sourceId": "people:stanford-research-institute",
@@ -4787,6 +4968,14 @@
       "targetId": "people:boris-yeltsin",
       "targetName": "Boris Yeltsin"
     },
+    "people:whitley-strieber": {
+      "sourceCategory": "people",
+      "sourceId": "people:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:whitley-strieber",
+      "targetName": "Whitley Strieber"
+    },
     "people:william-barr": {
       "sourceCategory": "people",
       "sourceId": "people:william-barr",
@@ -4995,6 +5184,22 @@
       "targetId": "people:jimmy-carter",
       "targetName": "Jimmy Carter"
     },
+    "politicians:s-house": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:s-house",
+      "sourceName": "S. House",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:s-house",
+      "targetName": "S. House"
+    },
+    "politicians:special-investigations": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:special-investigations",
+      "targetName": "Special Investigations"
+    },
     "politicians:task-force": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:task-force",
@@ -5010,6 +5215,14 @@
       "targetCategory": "people",
       "targetId": "people:washington-post",
       "targetName": "Washington Post"
+    },
+    "politicians:whitley-strieber": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "professors",
+      "targetId": "professors:whitley-strieber",
+      "targetName": "Whitley Strieber"
     },
     "professors:aleister-crowley": {
       "sourceCategory": "professors",
@@ -5074,6 +5287,14 @@
       "targetCategory": "experiencers",
       "targetId": "experiencers:chris-bledsoe",
       "targetName": "Chris Bledsoe"
+    },
+    "professors:condon-report": {
+      "sourceCategory": "document_names",
+      "sourceId": "professors:condon-report",
+      "sourceName": "Condon Report",
+      "targetCategory": "document_names",
+      "targetId": "document_names:condon-report",
+      "targetName": "Condon report"
     },
     "professors:consciousness-true-intelligence": {
       "sourceCategory": "professors",
@@ -5251,6 +5472,14 @@
       "targetId": "dangerous_people:nuno-lurero",
       "targetName": "Nuno Lurero"
     },
+    "professors:roswell-incident": {
+      "sourceCategory": "events",
+      "sourceId": "professors:roswell-incident",
+      "sourceName": "Roswell Incident",
+      "targetCategory": "people",
+      "targetId": "people:roswell-incident",
+      "targetName": "Roswell Incident"
+    },
     "professors:russell-tard": {
       "sourceCategory": "professors",
       "sourceId": "professors:russell-tard",
@@ -5266,6 +5495,14 @@
       "targetCategory": "people",
       "targetId": "people:bob-oxler",
       "targetName": "Bob Oxler"
+    },
+    "professors:special-investigations": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "dangerous_people",
+      "targetId": "dangerous_people:special-investigations",
+      "targetName": "Special Investigations"
     },
     "professors:thomas-townsend-brown": {
       "sourceCategory": "professors",
@@ -5291,13 +5528,37 @@
       "targetId": "people:walter-schreiber",
       "targetName": "Walter Schreiber"
     },
+    "professors:whitley-strieber": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:whitley-strieber",
+      "targetName": "Whitley Strieber"
+    },
+    "research_groups:aatip": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:aatip",
+      "sourceName": "AATIP",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:advanced-aerospace-threat-identification-program",
+      "targetName": "Advanced Aerospace Threat Identification Program"
+    },
+    "research_groups:los-alamos-laboratory": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:los-alamos-laboratory",
+      "sourceName": "Los Alamos Laboratory",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:los-alamos-national-labs",
+      "targetName": "Los Alamos National Labs"
+    },
     "research_groups:los-alamos-national-lab": {
       "sourceCategory": "research_groups",
       "sourceId": "research_groups:los-alamos-national-lab",
       "sourceName": "Los Alamos National Lab",
       "targetCategory": "research_groups",
-      "targetId": "research_groups:los-alamos-national-labs",
-      "targetName": "Los Alamos National Labs"
+      "targetId": "research_groups:los-alamos-scientific-laboratory",
+      "targetName": "Los Alamos Scientific Laboratory"
     },
     "research_groups:los-alamos-national-laboratory": {
       "sourceCategory": "research_groups",
@@ -5312,8 +5573,16 @@
       "sourceId": "research_groups:los-alamos-national-labs",
       "sourceName": "Los Alamos National Labs",
       "targetCategory": "research_groups",
-      "targetId": "research_groups:los-alamos-national-lab",
-      "targetName": "Los Alamos National Lab"
+      "targetId": "research_groups:los-alamos-national-laboratories",
+      "targetName": "Los Alamos National Laboratories"
+    },
+    "research_groups:los-alamos-scientific-laboratory": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:los-alamos-scientific-laboratory",
+      "sourceName": "Los Alamos Scientific Laboratory",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:los-alamos-laboratory",
+      "targetName": "Los Alamos Laboratory"
     },
     "research_groups:national-institute-for-discovery-science": {
       "sourceCategory": "research_groups",
@@ -5493,6 +5762,30 @@
       "targetId": "government_agencies:consciousness-department-it",
       "targetName": "Consciousness Department It"
     },
+    "aatip": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:aatip",
+      "sourceName": "AATIP",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:advanced-aerospace-threat-identification-program",
+      "targetName": "Advanced Aerospace Threat Identification Program"
+    },
+    "abductee whitley strieber": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:abductee-whitley-strieber",
+      "sourceName": "Abductee Whitley Strieber",
+      "targetCategory": "people",
+      "targetId": "people:whitley-strieber",
+      "targetName": "Whitley Strieber"
+    },
+    "activities squadron": {
+      "sourceCategory": "people",
+      "sourceId": "people:activities-squadron",
+      "sourceName": "Activities Squadron",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:s-air-force-special",
+      "targetName": "U.S. Air Force Special Activities Squadron"
+    },
     "admiral inman": {
       "sourceCategory": "people",
       "sourceId": "people:admiral-inman",
@@ -5548,6 +5841,22 @@
       "targetCategory": "people",
       "targetId": "people:curtis-lemay",
       "targetName": "Curtis LeMay"
+    },
+    "air force intelligence": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:air-force-intelligence",
+      "sourceName": "Air Force Intelligence",
+      "targetCategory": "government_agencies",
+      "targetId": "journalists:special-investigations",
+      "targetName": "U.S. Air Force Office of Special Investigations"
+    },
+    "air force office of special investigations": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:air-force-office",
+      "sourceName": "Air Force Office of Special Investigations",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:special-investigations",
+      "targetName": "Special Investigations"
     },
     "air force sergeant dan": {
       "sourceCategory": "experiencers",
@@ -6149,6 +6458,14 @@
       "targetId": "whistleblowers:commander-david-fravor",
       "targetName": "Commander David Fravor"
     },
+    "condon report": {
+      "sourceCategory": "document_names",
+      "sourceId": "document_names:condon-report",
+      "sourceName": "Condon report",
+      "targetCategory": "politicians",
+      "targetId": "politicians:condon-report",
+      "targetName": "Condon Report"
+    },
     "congresswoman anna paulina luna": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:congresswoman-anna-paulina-luna",
@@ -6159,11 +6476,11 @@
     },
     "consciousness": {
       "sourceCategory": "key_terms",
-      "sourceId": "key_terms:consciousness",
-      "sourceName": "consciousness",
-      "targetCategory": "people",
-      "targetId": "people:consciousness-how-does-consciousness",
-      "targetName": "Consciousness How Does Consciousness"
+      "sourceId": "government_agencies:consciousness-department",
+      "sourceName": "Consciousness",
+      "targetCategory": "key_terms",
+      "targetId": "key_terms:consciousness",
+      "targetName": "Consciousness"
     },
     "consciousness abilities": {
       "sourceCategory": "likely_spies",
@@ -6389,6 +6706,14 @@
       "targetId": "professors:david-spurgle",
       "targetName": "David Spurgle"
     },
+    "defence department": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:defence-department",
+      "sourceName": "Defence Department",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:department-of-defense",
+      "targetName": "Department of Defense"
+    },
     "defense advanced research project": {
       "sourceCategory": "government_agencies",
       "sourceId": "people:defense-advanced-research-project",
@@ -6396,6 +6721,14 @@
       "targetCategory": "government_agencies",
       "targetId": "government_agencies:darpa",
       "targetName": "DARPA"
+    },
+    "defense department": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:defense-department",
+      "sourceName": "Defense Department",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:defence-department",
+      "targetName": "Defence Department"
     },
     "dia": {
       "sourceCategory": "government_agencies",
@@ -6878,12 +7211,20 @@
       "targetName": "greys"
     },
     "groom lake": {
-      "sourceCategory": "military_bases",
-      "sourceId": "military_bases:groom-lake",
+      "sourceCategory": "locations",
+      "sourceId": "people:groom-lake",
       "sourceName": "Groom Lake",
-      "targetCategory": "people",
-      "targetId": "people:at-groom-lake",
-      "targetName": "At Groom Lake"
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:groom-lake-road",
+      "targetName": "Groom Lake Road"
+    },
+    "groom lake road": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:groom-lake-road",
+      "sourceName": "Groom Lake Road",
+      "targetCategory": "professors",
+      "targetId": "professors:groom-lake-road",
+      "targetName": "Groom Lake Road"
     },
     "hal palemeyer": {
       "sourceCategory": "people",
@@ -7421,13 +7762,21 @@
       "targetId": "research_groups:los-alamos-national-laboratory",
       "targetName": "Los Alamos National Laboratory"
     },
+    "los alamos laboratory": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:los-alamos-laboratory",
+      "sourceName": "Los Alamos Laboratory",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:los-alamos-national-labs",
+      "targetName": "Los Alamos National Labs"
+    },
     "los alamos national lab": {
       "sourceCategory": "research_groups",
       "sourceId": "research_groups:los-alamos-national-lab",
       "sourceName": "Los Alamos National Lab",
       "targetCategory": "research_groups",
-      "targetId": "research_groups:los-alamos-national-labs",
-      "targetName": "Los Alamos National Labs"
+      "targetId": "research_groups:los-alamos-scientific-laboratory",
+      "targetName": "Los Alamos Scientific Laboratory"
     },
     "los alamos national laboratory": {
       "sourceCategory": "research_groups",
@@ -7442,8 +7791,16 @@
       "sourceId": "research_groups:los-alamos-national-labs",
       "sourceName": "Los Alamos National Labs",
       "targetCategory": "research_groups",
-      "targetId": "research_groups:los-alamos-national-lab",
-      "targetName": "Los Alamos National Lab"
+      "targetId": "research_groups:los-alamos-national-laboratories",
+      "targetName": "Los Alamos National Laboratories"
+    },
+    "los alamos scientific laboratory": {
+      "sourceCategory": "research_groups",
+      "sourceId": "research_groups:los-alamos-scientific-laboratory",
+      "sourceName": "Los Alamos Scientific Laboratory",
+      "targetCategory": "research_groups",
+      "targetId": "research_groups:los-alamos-laboratory",
+      "targetName": "Los Alamos Laboratory"
     },
     "los angeles county": {
       "sourceCategory": "locations",
@@ -8165,6 +8522,14 @@
       "targetId": "journalists:journalist-ross-colthart",
       "targetName": "Journalist Ross Colthart"
     },
+    "roswell incident": {
+      "sourceCategory": "events",
+      "sourceId": "professors:roswell-incident",
+      "sourceName": "Roswell Incident",
+      "targetCategory": "people",
+      "targetId": "people:roswell-incident",
+      "targetName": "Roswell Incident"
+    },
     "rupert sheldrick": {
       "sourceCategory": "people",
       "sourceId": "people:rupert-sheldrick",
@@ -8236,6 +8601,14 @@
       "targetCategory": "people",
       "targetId": "people:s-army",
       "targetName": "S. Army"
+    },
+    "s house": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:s-house",
+      "sourceName": "S. House",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:s-house",
+      "targetName": "S. House"
     },
     "s4": {
       "sourceCategory": "military_bases",
@@ -8588,6 +8961,14 @@
       "targetCategory": "people",
       "targetId": "people:sonny-white",
       "targetName": "Sonny White"
+    },
+    "special investigations": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:special-investigations",
+      "sourceName": "Special Investigations",
+      "targetCategory": "journalists",
+      "targetId": "journalists:special-investigations",
+      "targetName": "Special Investigations"
     },
     "staff curtis": {
       "sourceCategory": "companies",
@@ -8997,6 +9378,14 @@
       "targetId": "people:boris-yeltsin",
       "targetName": "Boris Yeltsin"
     },
+    "whitley strieber": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:whitley-strieber",
+      "sourceName": "Whitley Strieber",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:whitley-strieber",
+      "targetName": "Whitley Strieber"
+    },
     "william barr": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:william-barr",
@@ -9137,10 +9526,14 @@
   "nameReclassifications": {
     "544 camp street": "locations",
     "aaro historical report": "document_names",
+    "aatip": "government_agencies",
     "aawsap": "government_agencies",
     "above top secret": "books",
     "acquisition technology": "government_agencies",
+    "advanced aerospace threat identification program": "government_agencies",
     "advanced aerospace weapon system applications program": "government_agencies",
+    "aero medical": "government_agencies",
+    "aero medical center": "government_agencies",
     "aero medical division": "government_agencies",
     "after disclosure": "books",
     "air force base": "military_bases",
@@ -9156,6 +9549,7 @@
     "angeles national forest": "locations",
     "angle-american world power": "books",
     "annie jacobson": "authors",
+    "ant people": "religious_texts",
     "ant people of the hopi": "religious_texts",
     "antelope valley": "locations",
     "arab spring": "events",
@@ -9185,6 +9579,7 @@
     "big rock": "locations",
     "bigelow advanced aerospace space": "contractors",
     "bill moore": "people",
+    "black aces": "military_bases",
     "black cultural association": "companies",
     "black mailbox": "locations",
     "black world": "emerging_terminology",
@@ -9225,7 +9620,12 @@
     "commander fravor": "whistleblowers",
     "commonwealth avenue": "locations",
     "communist party": "government_agencies",
+    "complaint form": "document_names",
+    "condon committee": "government_agencies",
+    "condon report": "document_names",
     "consciousness": "key_terms",
+    "consciousness department": "key_terms",
+    "consciousness department it": "key_terms",
     "cosmic agenda": "emerging_terminology",
     "cosmic law": "emerging_terminology",
     "crescenta valley station": "locations",
@@ -9245,6 +9645,7 @@
     "donald j trump": "politicians",
     "donald j. trump": "politicians",
     "draconians": "alien_species",
+    "dragon dracs": "alien_species",
     "dugway proving ground": "military_bases",
     "eagle works": "government_agencies",
     "earth tech": "companies",
@@ -9272,6 +9673,7 @@
     "foster ranch": "locations",
     "franklin delano roosevelt": "politicians",
     "fred crisman": "people",
+    "freedom of information act": "document_names",
     "french academy": "government_agencies",
     "french academy of science": "government_agencies",
     "from june": "dates_times",
@@ -9290,6 +9692,8 @@
     "great pyramid": "locations",
     "greenbrier inn": "locations",
     "grill flame": "government_project_codenames",
+    "groom lake": "locations",
+    "groom lake road": "locations",
     "guinness book": "books",
     "guinness book of world records": "books",
     "had lazar": "whistleblowers",
@@ -9317,6 +9721,7 @@
     "indian ocean": "locations",
     "indian serpent mound": "locations",
     "indian springs valley": "locations",
+    "information act": "document_names",
     "instituto superior": "universities",
     "jack ruby": "people",
     "jackass flats": "locations",
@@ -9363,6 +9768,7 @@
     "mason lodge": "secret_societies",
     "maury island": "locations",
     "may 8, 2026": "dates_times",
+    "medical research": "research_groups",
     "melchizedek star seed program": "theories",
     "middle ages": "dates_times",
     "middle east": "locations",
@@ -9473,12 +9879,14 @@
     "ross coldhart": "journalists",
     "ross coulthart": "journalists",
     "ross goldhart": "journalists",
+    "roswell incident": "events",
     "roundtable foundation": "institutes",
     "russia today": "newsrooms",
     "russian federation": "locations",
     "russian orthodox": "companies",
     "russian orthodox church": "companies",
     "s army": "government_agencies",
+    "s house": "government_agencies",
     "s. army": "government_agencies",
     "saddam hussein": "dangerous_people",
     "saint petersburg": "locations",
@@ -9491,6 +9899,7 @@
     "scientific revolutions": "books",
     "second empire": "books",
     "second world war": "events",
+    "secret life": "books",
     "secret machines": "books",
     "secret mountain": "locations",
     "security administration": "government_agencies",
@@ -9515,6 +9924,8 @@
     "space kids": "locations",
     "space kids camp": "nonprofits",
     "space relations": "books",
+    "space science": "university_departments",
+    "special investigations": "government_agencies",
     "special programs": "government_agencies",
     "stalking the wild pendulum": "books",
     "stanford research institute": "research_groups",
@@ -9549,6 +9960,7 @@
     "true legends": "tv_shows",
     "trump media and technology group": "companies",
     "truth social": "companies",
+    "u.s. house of representatives": "government_agencies",
     "uinta basin": "locations",
     "unclassified logistic support facility": "locations",
     "united nations": "government_agencies",
@@ -9574,6 +9986,7 @@
     "when roswell": "locations",
     "when september": "dates_times",
     "white house": "government_agencies",
+    "whitley strieber": "experiencers",
     "wild pendulum": "books",
     "world bank": "companies",
     "world chess": "companies",
@@ -9584,13 +9997,7 @@
     "york city": "locations",
     "your game girl": "books",
     "zora ranch": "locations",
-    "zorro ranch": "locations",
-    "aero medical center": "government_agencies",
-    "ant people": "religious_texts",
-    "consciousness department it": "key_terms",
-    "dragon dracs": "alien_species",
-    "aero medical": "government_agencies",
-    "medical research": "research_groups"
+    "zorro ranch": "locations"
   },
   "note": "Replace data/reclass.json with this file before rebuilding.",
   "notes": {},
@@ -9602,6 +10009,7 @@
     "dangerous_people:nevada-test-site": "locations",
     "dangerous_people:nuno-lurero": "people",
     "experiencers:ant-people": "religious_texts",
+    "experiencers:black-aces": "military_bases",
     "experiencers:close-encounters": "movies",
     "experiencers:cosmic-law": "emerging_terminology",
     "experiencers:had-lazar": "whistleblowers",
@@ -9609,6 +10017,8 @@
     "experiencers:lockheed-martin": "contractors",
     "experiencers:phoenix-lights": "events",
     "experiencers:ross-goldhart": "journalists",
+    "experiencers:s-house": "government_agencies",
+    "experiencers:secret-life": "books",
     "experiencers:steven-spielberg": "directors",
     "experiencers:thomas-townsend-brown": "people",
     "frequencies:extra-low-frequency": "emerging_terminology",
@@ -9643,6 +10053,7 @@
     "friendly_people:weimar-germany": "locations",
     "government_agencies:consciousness-department-it": "key_terms",
     "government_project_codenames:sentient": "key_terms",
+    "journalists:special-investigations": "government_agencies",
     "likely_spies:american-psychic-spy-program": "government_agencies",
     "likely_spies:crescenta-valley-station": "locations",
     "likely_spies:melchizedek-star-seed-program": "theories",
@@ -9709,6 +10120,7 @@
     "people:commander-david-fravor": "whistleblowers",
     "people:commonwealth-avenue": "locations",
     "people:communist-party": "government_agencies",
+    "people:complaint-form": "document_names",
     "people:cosmic-agenda": "emerging_terminology",
     "people:darien-gap": "locations",
     "people:dark-skies": "tv_shows",
@@ -9773,6 +10185,7 @@
     "people:indian-ocean": "locations",
     "people:indian-serpent-mound": "locations",
     "people:indian-springs-valley": "locations",
+    "people:information-act": "document_names",
     "people:instituto-superior": "universities",
     "people:janet-airlines": "government_agencies",
     "people:josephson-junctions": "contractors",
@@ -9871,6 +10284,7 @@
     "people:rick-doty": "hoaxers",
     "people:robert-f-kennedy": "politicians",
     "people:rockefeller-commission": "document_names",
+    "people:roswell-incident": "events",
     "people:roundtable-foundation": "institutes",
     "people:russia-today": "newsrooms",
     "people:russian-federation": "locations",
@@ -9939,6 +10353,7 @@
     "people:world-war": "events",
     "people:x-it": "tv_shows",
     "people:your-game-girl": "books",
+    "politicians:condon-report": "document_names",
     "politicians:democratic-national-committee": "government_agencies",
     "politicians:galacterian-alignment": "theories",
     "politicians:house-oversight-committee": "government_agencies",
@@ -9951,8 +10366,10 @@
     "professors:aero-medical": "government_agencies",
     "professors:atomic-energy-authority": "government_agencies",
     "professors:bill-moore": "people",
+    "professors:condon-committee": "government_agencies",
     "professors:disney-imagineering": "companies",
     "professors:elon-musk": "people",
+    "professors:groom-lake-road": "locations",
     "professors:jackass-flats": "locations",
     "professors:jacques-vall-e": "authors",
     "professors:medical-research": "research_groups",
@@ -9960,16 +10377,21 @@
     "professors:north-carolina-chapel-hill": "universities",
     "professors:ross-coldhart": "journalists",
     "professors:simons-foundation": "companies",
+    "professors:space-science": "university_departments",
     "professors:stanford-research-institute": "research_groups",
     "professors:travis-walton": "experiencers",
     "professors:zora-ranch": "locations",
     "research_groups:aawsap": "government_agencies",
+    "research_groups:advanced-aerospace-threat-identification-program": "government_agencies",
     "research_groups:advanced-aerospace-weapon-system-applications-program": "government_agencies",
     "research_groups:naval-research-lab": "government_project_codenames",
     "universities:berkeley": "locations",
     "universities:kennedy-school": "university_departments",
     "whistleblowers:george-knapp": "journalists",
     "whistleblowers:jeremy-corbell": "people",
-    "whistleblowers:nicobar-islands": "locations"
-  }
+    "whistleblowers:nicobar-islands": "locations",
+    "whistleblowers:whitley-strieber": "experiencers"
+  },
+  "removedMerges": {},
+  "removedNameMerges": {}
 }

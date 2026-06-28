@@ -729,7 +729,7 @@ def main() -> None:
     mentions = resolve_competing_mentions(extract_mentions(segments, dictionaries, omit_terms))
     mentions = apply_review_to_mentions(mentions, review)
     entities = build_entities(mentions)
-    relationships = build_relationships(segments, mentions, entities)
+    relationships = build_relationships(segments, mentions, entities, review)
     graph = build_graph(entities, relationships)
     manifest = build_manifest(sources, segments, mentions, entities, relationships, review)
     write_report(segments, mentions, entities, relationships, graph, manifest, review)
@@ -775,10 +775,29 @@ def read_review_input() -> dict[str, Any]:
 
 
 def normalize_review(review: dict[str, Any]) -> dict[str, Any]:
-    for key in ("reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges"):
+    for key in (
+        "reclassifications",
+        "nameReclassifications",
+        "falsePositives",
+        "omissions",
+        "aliases",
+        "merges",
+        "nameMerges",
+        "removedMerges",
+        "removedNameMerges",
+        "manualRelationships",
+    ):
         if not isinstance(review.get(key), dict):
             review[key] = {}
+    apply_review_removals(review)
     return review
+
+
+def apply_review_removals(review: dict[str, Any]) -> None:
+    for source_id in review.get("removedMerges", {}):
+        review.get("merges", {}).pop(source_id, None)
+    for source_name in review.get("removedNameMerges", {}):
+        review.get("nameMerges", {}).pop(source_name, None)
 
 
 def export_review(review: dict[str, Any]) -> dict[str, Any]:
@@ -804,7 +823,18 @@ def add_name_reclassifications_from_ids(review: dict[str, Any]) -> None:
 
 
 def read_review_from_data_export() -> dict[str, Any]:
-    review = {"reclassifications": {}, "nameReclassifications": {}, "falsePositives": {}, "omissions": {}, "aliases": {}, "merges": {}, "nameMerges": {}}
+    review = {
+        "reclassifications": {},
+        "nameReclassifications": {},
+        "falsePositives": {},
+        "omissions": {},
+        "aliases": {},
+        "merges": {},
+        "nameMerges": {},
+        "removedMerges": {},
+        "removedNameMerges": {},
+        "manualRelationships": {},
+    }
     export_path = next((path for path in [DATA_EXPORT_INPUT, *LEGACY_DATA_EXPORT_INPUTS] if path.exists()), None)
     if not export_path:
         return review
@@ -1376,7 +1406,7 @@ def build_entities(mentions: list[Mention]) -> list[Entity]:
     return entities
 
 
-def build_relationships(segments: list[Segment], mentions: list[Mention], entities: list[Entity]) -> list[Relationship]:
+def build_relationships(segments: list[Segment], mentions: list[Mention], entities: list[Entity], review: dict[str, Any]) -> list[Relationship]:
     entity_by_id = {entity.id: entity for entity in entities}
     mentions_by_segment: dict[str, list[Mention]] = defaultdict(list)
     for mention in mentions:
@@ -1462,7 +1492,45 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
                 confidence=round(sum(pair_confidence[(source, target, rel_type)]) / max(1, len(pair_confidence[(source, target, rel_type)])), 3),
             )
         )
-    return relationships[:RELATIONSHIP_OUTPUT_LIMIT]
+    return apply_manual_relationships(relationships[:RELATIONSHIP_OUTPUT_LIMIT], entities, review)
+
+
+def apply_manual_relationships(relationships: list[Relationship], entities: list[Entity], review: dict[str, Any]) -> list[Relationship]:
+    entity_by_id = {entity.id: entity for entity in entities}
+    existing_ids = {relationship.id for relationship in relationships}
+    manual_relationships: list[Relationship] = []
+    next_index = len(relationships) + 1
+    for key, item in sorted((review.get("manualRelationships") or {}).items()):
+        if not isinstance(item, dict):
+            continue
+        source_id = item.get("sourceId")
+        target_id = item.get("targetId")
+        source = entity_by_id.get(source_id)
+        target = entity_by_id.get(target_id)
+        if not source or not target or source.id == target.id:
+            continue
+        rel_id = f"manual-{slugify(key)}"
+        if rel_id in existing_ids:
+            rel_id = f"manual-{next_index:06d}"
+        manual_relationships.append(
+            Relationship(
+                id=rel_id,
+                source=min(source.id, target.id),
+                target=max(source.id, target.id),
+                source_name=entity_by_id[min(source.id, target.id)].name,
+                target_name=entity_by_id[max(source.id, target.id)].name,
+                type="manual",
+                weight=max(50, int(item.get("weight") or 50)),
+                evidence_segment_ids=[],
+                evidence=[],
+                confidence=1.0,
+            )
+        )
+        existing_ids.add(rel_id)
+        next_index += 1
+    if not manual_relationships:
+        return relationships[:RELATIONSHIP_OUTPUT_LIMIT]
+    return manual_relationships[:RELATIONSHIP_OUTPUT_LIMIT] + relationships[: max(0, RELATIONSHIP_OUTPUT_LIMIT - len(manual_relationships))]
 
 
 def infer_relationship_from_context(source: Entity, target: Entity, text: str) -> tuple[str, float, str]:
@@ -1595,6 +1663,9 @@ def build_manifest(
                 or review.get("aliases")
                 or review.get("merges")
                 or review.get("nameMerges")
+                or review.get("removedMerges")
+                or review.get("removedNameMerges")
+                or review.get("manualRelationships")
             ),
             "transcript_source_dir": str(TRANSCRIPTS_DIR.relative_to(ROOT)),
             "relationship_window_radius": RELATIONSHIP_WINDOW_RADIUS,
@@ -1622,6 +1693,9 @@ def build_manifest(
             "aliases": len(review.get("aliases", {})),
             "merges": len(review.get("merges", {})),
             "name_merges": len(review.get("nameMerges", {})),
+            "removed_merges": len(review.get("removedMerges", {})),
+            "removed_name_merges": len(review.get("removedNameMerges", {})),
+            "manual_relationships": len(review.get("manualRelationships", {})),
         },
     }
 
@@ -1657,6 +1731,9 @@ def write_report(
             "aliases": {},
             "merges": {},
             "nameMerges": {},
+            "removedMerges": {},
+            "removedNameMerges": {},
+            "manualRelationships": {},
             "notes": "Download reclassified data from the app, replace data/reclass.json with it, then rerun python3 build_graph.py.",
         },
     )
@@ -3183,9 +3260,31 @@ __APP_DATA_SCRIPTS__
           data.entities.find((entity) => normalizeText(entity.name) === normalizeText(merge.targetName) && entity.category === merge.targetCategory);
         if (source && target && source.id !== target.id) mergeEntityInto(source, target, data);
       }
+      applyManualRelationships(data, review.manualRelationships || {});
       const visibleEntityIds = new Set(data.entities.map((entity) => entity.id));
       data.relationships = data.relationships.filter((relationship) => visibleEntityIds.has(relationship.source) && visibleEntityIds.has(relationship.target));
       return data;
+    }
+
+    function applyManualRelationships(data, manualRelationships) {
+      for (const [id, item] of Object.entries(manualRelationships || {})) {
+        if (!item || typeof item !== "object") continue;
+        const source = data.entities.find((entity) => entity.id === item.sourceId);
+        const target = data.entities.find((entity) => entity.id === item.targetId);
+        if (!source || !target || source.id === target.id) continue;
+        data.relationships.unshift({
+          id: id.startsWith("manual-") ? id : "manual-" + id,
+          source: source.id < target.id ? source.id : target.id,
+          target: source.id < target.id ? target.id : source.id,
+          sourceName: source.id < target.id ? source.name : target.name,
+          targetName: source.id < target.id ? target.name : source.name,
+          type: "manual",
+          weight: 50,
+          confidence: 1,
+          evidenceSegmentIds: [],
+          evidence: [],
+        });
+      }
     }
 
     function mergeEntityInto(source, target, data = DATA) {
@@ -4159,6 +4258,46 @@ __APP_DATA_SCRIPTS__
       }).join("");
     }
 
+    function mergeRemovalDecisions(entity) {
+      const review = readReview();
+      const removed = { ...(review.removedMerges || {}), ...(review.removedNameMerges || {}) };
+      const decisions = mergeReviews(BUILT_REVIEW, review);
+      const rows = [];
+      const seen = new Set();
+      for (const [key, merge] of Object.entries(decisions.merges || {})) {
+        if (!merge || typeof merge !== "object") continue;
+        if (removed[key]) continue;
+        const targetMatches = merge.targetId === entity.id || normalizeText(merge.targetName || "") === normalizeText(entity.name);
+        if (!targetMatches || seen.has(key)) continue;
+        rows.push({ key, nameKey: normalizeText(merge.sourceName || key), merge });
+        seen.add(key);
+      }
+      return rows.sort((a, b) => String(a.merge.sourceName || a.key).localeCompare(String(b.merge.sourceName || b.key)));
+    }
+
+    function mergeRemovalControls(entity) {
+      const rows = mergeRemovalDecisions(entity);
+      if (!rows.length) return "";
+      return '<h3 class="merge-heading">Merged into this node</h3>' +
+        '<div class="card-actions">' + rows.slice(0, 12).map((row) => {
+          return '<button type="button" data-remove-merge="' + esc(row.key) + '" data-remove-name-merge="' + esc(row.nameKey) + '">' +
+            'Remove merge: ' + esc(row.merge.sourceName || row.key) +
+            '<div class="meta">' + esc(row.merge.sourceCategory || "Entity") + '</div>' +
+          '</button>';
+        }).join("") + '</div>';
+    }
+
+    function manualConnectionResultButtons(entity, query = "") {
+      const candidates = mergeCandidates(entity, query);
+      if (!candidates.length) return '<div class="meta">No matches.</div>';
+      return candidates.slice(0, 8).map((candidate) => {
+        return '<button type="button" data-manual-target="' + esc(candidate.id) + '" aria-pressed="false">' +
+          esc(candidate.name) +
+          '<div class="meta">' + esc(candidate.topCategoryLabel || candidate.categoryLabel) + '</div>' +
+        '</button>';
+      }).join("");
+    }
+
     function renderCard(entity, relationships) {
       const evidence = (entity.evidenceIds || []).map((id) => mentionsById.get(id)).filter(Boolean).slice(0, 6);
       cardEl.classList.add("open");
@@ -4184,7 +4323,10 @@ __APP_DATA_SCRIPTS__
         '<h3 class="action-heading false-positive-heading">False positive</h3>' +
         '<div class="card-actions false-positive-actions"><button id="false-positive">Mark false positive</button></div>' +
         '<h3 class="merge-heading">Merge duplicate</h3>' +
-        '<div class="card-actions"><label class="card-field"><span>Find entity to merge into</span><input id="merge-target-search" type="search" autocomplete="off" aria-controls="merge-results" placeholder="Search by name or category"></label><div id="merge-results" class="merge-results" aria-label="Merge target results">' + mergeResultButtons(entity) + '</div><button id="merge-entity" disabled>Merge</button></div></div>';
+        '<div class="card-actions"><label class="card-field"><span>Find entity to merge into</span><input id="merge-target-search" type="search" autocomplete="off" aria-controls="merge-results" placeholder="Search by name or category"></label><div id="merge-results" class="merge-results" aria-label="Merge target results">' + mergeResultButtons(entity) + '</div><button id="merge-entity" disabled>Merge</button></div>' +
+        mergeRemovalControls(entity) +
+        '<h3 class="merge-heading">Add connection</h3>' +
+        '<div class="card-actions"><label class="card-field"><span>Find entity to connect</span><input id="manual-connection-search" type="search" autocomplete="off" aria-controls="manual-connection-results" placeholder="Search by name or category"></label><div id="manual-connection-results" class="merge-results" aria-label="Manual connection results">' + manualConnectionResultButtons(entity) + '</div><button id="add-manual-connection" disabled>Add connection</button></div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;
@@ -4296,6 +4438,83 @@ __APP_DATA_SCRIPTS__
         selectedEntityId = target.id;
         activeCategory = null;
         mode = "neighborhood";
+        rebuildIndexes();
+        render();
+        focusDetailsCard();
+      });
+
+      cardEl.querySelectorAll("[data-remove-merge]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const review = readReview();
+          review.removedMerges = review.removedMerges || {};
+          review.removedNameMerges = review.removedNameMerges || {};
+          const key = button.dataset.removeMerge;
+          const nameKey = button.dataset.removeNameMerge;
+          const decisions = mergeReviews(BUILT_REVIEW, review);
+          const merge = (decisions.merges || {})[key] || (decisions.nameMerges || {})[nameKey] || { sourceName: nameKey, targetName: entity.name };
+          review.removedMerges[key] = merge;
+          if (nameKey) review.removedNameMerges[nameKey] = merge;
+          if (review.merges) delete review.merges[key];
+          if (review.nameMerges && nameKey) delete review.nameMerges[nameKey];
+          saveReview(review);
+          render();
+          focusDetailsCard();
+        });
+      });
+
+      const manualSearch = document.getElementById("manual-connection-search");
+      const manualResults = document.getElementById("manual-connection-results");
+      const manualButton = document.getElementById("add-manual-connection");
+      let selectedManualTargetId = "";
+
+      function selectManualTarget(targetId) {
+        const target = entitiesById.get(targetId);
+        selectedManualTargetId = target ? target.id : "";
+        manualButton.disabled = !selectedManualTargetId;
+        manualResults.querySelectorAll("[data-manual-target]").forEach((button) => {
+          const selected = button.dataset.manualTarget === selectedManualTargetId;
+          button.setAttribute("aria-pressed", selected ? "true" : "false");
+        });
+        if (target) manualSearch.value = target.name;
+      }
+
+      function wireManualResults() {
+        manualResults.querySelectorAll("[data-manual-target]").forEach((button) => {
+          button.addEventListener("click", () => selectManualTarget(button.dataset.manualTarget));
+        });
+      }
+
+      manualSearch.addEventListener("input", () => {
+        selectedManualTargetId = "";
+        manualButton.disabled = true;
+        manualResults.innerHTML = manualConnectionResultButtons(entity, manualSearch.value);
+        wireManualResults();
+      });
+      manualSearch.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") return;
+        const first = manualResults.querySelector("[data-manual-target]");
+        if (!first) return;
+        event.preventDefault();
+        selectManualTarget(first.dataset.manualTarget);
+      });
+      wireManualResults();
+      manualButton.addEventListener("click", () => {
+        const target = entitiesById.get(selectedManualTargetId);
+        if (!target || target.id === entity.id) return;
+        const review = readReview();
+        review.manualRelationships = review.manualRelationships || {};
+        const ids = [entity.id, target.id].sort();
+        const key = ids.map((id) => id.replace(/[^a-z0-9:-]+/gi, "-")).join("--");
+        review.manualRelationships[key] = {
+          sourceId: ids[0],
+          sourceName: (entitiesById.get(ids[0]) || entity).name,
+          sourceCategory: (entitiesById.get(ids[0]) || entity).category,
+          targetId: ids[1],
+          targetName: (entitiesById.get(ids[1]) || target).name,
+          targetCategory: (entitiesById.get(ids[1]) || target).category,
+        };
+        saveReview(review);
+        applyManualRelationships(DATA, { [key]: review.manualRelationships[key] });
         rebuildIndexes();
         render();
         focusDetailsCard();
@@ -4631,13 +4850,25 @@ __APP_DATA_SCRIPTS__
     }
 
     function defaultReview() {
-      return { reclassifications: {}, nameReclassifications: {}, falsePositives: {}, omissions: {}, aliases: {}, merges: {}, nameMerges: {}, notes: {} };
+      return {
+        reclassifications: {},
+        nameReclassifications: {},
+        falsePositives: {},
+        omissions: {},
+        aliases: {},
+        merges: {},
+        nameMerges: {},
+        removedMerges: {},
+        removedNameMerges: {},
+        manualRelationships: {},
+        notes: {},
+      };
     }
 
     function normalizeReview(review) {
       const normalized = defaultReview();
       if (!review || typeof review !== "object") return normalized;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
         normalized[key] = review[key] && typeof review[key] === "object" && !Array.isArray(review[key]) ? review[key] : {};
       }
       if (review.generatedAt) normalized.generatedAt = review.generatedAt;
@@ -4648,9 +4879,11 @@ __APP_DATA_SCRIPTS__
     function mergeReviews(base, overlay) {
       const merged = normalizeReview(base);
       const next = normalizeReview(overlay);
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
         merged[key] = { ...(merged[key] || {}), ...(next[key] || {}) };
       }
+      for (const key of Object.keys(merged.removedMerges || {})) delete merged.merges[key];
+      for (const key of Object.keys(merged.removedNameMerges || {})) delete merged.nameMerges[key];
       if (next.generatedAt) merged.generatedAt = next.generatedAt;
       if (next.note) merged.note = next.note;
       return merged;
@@ -4722,7 +4955,7 @@ __APP_DATA_SCRIPTS__
     function removeBuiltReviewEntries(review) {
       const cleaned = normalizeReview(review);
       let changed = false;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "manualRelationships"]) {
         for (const [id, value] of Object.entries(cleaned[key] || {})) {
           const exactBuilt = Object.prototype.hasOwnProperty.call(BUILT_REVIEW[key] || {}, id) && sameReviewValue(value, BUILT_REVIEW[key][id]);
           const bakedCategory = key === "reclassifications" || key === "nameReclassifications" ? reviewCategoryIsBaked(id, value) : false;
@@ -4785,7 +5018,10 @@ __APP_DATA_SCRIPTS__
         Object.keys(review.omissions || {}).length +
         Object.keys(review.aliases || {}).length +
         Object.keys(review.merges || {}).length +
-        Object.keys(review.nameMerges || {}).length
+        Object.keys(review.nameMerges || {}).length +
+        Object.keys(review.removedMerges || {}).length +
+        Object.keys(review.removedNameMerges || {}).length +
+        Object.keys(review.manualRelationships || {}).length
       );
     }
 
