@@ -785,10 +785,12 @@ def normalize_review(review: dict[str, Any]) -> dict[str, Any]:
         "nameMerges",
         "removedMerges",
         "removedNameMerges",
+        "removedManualRelationships",
         "manualRelationships",
     ):
         if not isinstance(review.get(key), dict):
             review[key] = {}
+    normalize_manual_relationships(review)
     apply_review_removals(review)
     return review
 
@@ -798,6 +800,34 @@ def apply_review_removals(review: dict[str, Any]) -> None:
         review.get("merges", {}).pop(source_id, None)
     for source_name in review.get("removedNameMerges", {}):
         review.get("nameMerges", {}).pop(source_name, None)
+    for relationship_id in review.get("removedManualRelationships", {}):
+        review.get("manualRelationships", {}).pop(relationship_id, None)
+
+
+def canonical_manual_relationship_key(source_id: str, target_id: str) -> str:
+    return "--".join(sorted([source_id, target_id]))
+
+
+def normalize_manual_relationships(review: dict[str, Any]) -> None:
+    normalized: dict[str, Any] = {}
+    for key, item in sorted((review.get("manualRelationships") or {}).items()):
+        if not isinstance(item, dict):
+            continue
+        source_id = item.get("sourceId")
+        target_id = item.get("targetId")
+        if not source_id or not target_id or source_id == target_id:
+            continue
+        canonical_key = canonical_manual_relationship_key(str(source_id), str(target_id))
+        normalized[canonical_key] = item
+    review["manualRelationships"] = normalized
+
+    normalized_removed: dict[str, Any] = {}
+    for key, item in sorted((review.get("removedManualRelationships") or {}).items()):
+        if isinstance(item, dict) and item.get("sourceId") and item.get("targetId"):
+            normalized_removed[canonical_manual_relationship_key(str(item["sourceId"]), str(item["targetId"]))] = item
+        elif key:
+            normalized_removed[str(key)] = item
+    review["removedManualRelationships"] = normalized_removed
 
 
 def export_review(review: dict[str, Any]) -> dict[str, Any]:
@@ -833,6 +863,7 @@ def read_review_from_data_export() -> dict[str, Any]:
         "nameMerges": {},
         "removedMerges": {},
         "removedNameMerges": {},
+        "removedManualRelationships": {},
         "manualRelationships": {},
     }
     export_path = next((path for path in [DATA_EXPORT_INPUT, *LEGACY_DATA_EXPORT_INPUTS] if path.exists()), None)
@@ -1497,19 +1528,29 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
 
 def apply_manual_relationships(relationships: list[Relationship], entities: list[Entity], review: dict[str, Any]) -> list[Relationship]:
     entity_by_id = {entity.id: entity for entity in entities}
+    entities_by_name: dict[str, list[Entity]] = defaultdict(list)
+    for entity in entities:
+        entities_by_name[normalize_name(entity.name)].append(entity)
+    alias_targets = review.get("aliases") or {}
     existing_ids = {relationship.id for relationship in relationships}
+    existing_manual_pairs = {
+        canonical_manual_relationship_key(relationship.source, relationship.target)
+        for relationship in relationships
+        if relationship.type == "manual"
+    }
     manual_relationships: list[Relationship] = []
     next_index = len(relationships) + 1
     for key, item in sorted((review.get("manualRelationships") or {}).items()):
         if not isinstance(item, dict):
             continue
-        source_id = item.get("sourceId")
-        target_id = item.get("targetId")
-        source = entity_by_id.get(source_id)
-        target = entity_by_id.get(target_id)
+        source = resolve_manual_entity(item, "source", entity_by_id, entities_by_name, alias_targets)
+        target = resolve_manual_entity(item, "target", entity_by_id, entities_by_name, alias_targets)
         if not source or not target or source.id == target.id:
             continue
-        rel_id = f"manual-{slugify(key)}"
+        canonical_key = canonical_manual_relationship_key(source.id, target.id)
+        if canonical_key in existing_manual_pairs:
+            continue
+        rel_id = f"manual-{slugify(canonical_key)}"
         if rel_id in existing_ids:
             rel_id = f"manual-{next_index:06d}"
         manual_relationships.append(
@@ -1527,10 +1568,42 @@ def apply_manual_relationships(relationships: list[Relationship], entities: list
             )
         )
         existing_ids.add(rel_id)
+        existing_manual_pairs.add(canonical_key)
         next_index += 1
     if not manual_relationships:
         return relationships[:RELATIONSHIP_OUTPUT_LIMIT]
     return manual_relationships[:RELATIONSHIP_OUTPUT_LIMIT] + relationships[: max(0, RELATIONSHIP_OUTPUT_LIMIT - len(manual_relationships))]
+
+
+def resolve_manual_entity(
+    item: dict[str, Any],
+    side: str,
+    entity_by_id: dict[str, Entity],
+    entities_by_name: dict[str, list[Entity]],
+    alias_targets: dict[str, str],
+) -> Entity | None:
+    entity_id = item.get(f"{side}Id")
+    if entity_id and entity_id in entity_by_id:
+        return entity_by_id[entity_id]
+    names = [str(item.get(f"{side}Name") or "")]
+    if entity_id and alias_targets.get(entity_id):
+        names.append(str(alias_targets[entity_id]))
+    normalized_name = normalize_name(names[0])
+    if normalized_name and alias_targets.get(normalized_name):
+        names.append(str(alias_targets[normalized_name]))
+    category = item.get(f"{side}Category")
+    for name_value in names:
+        name = normalize_name(name_value)
+        if not name:
+            continue
+        matches = entities_by_name.get(name, [])
+        if category:
+            category_matches = [entity for entity in matches if entity.category == category]
+            if len(category_matches) == 1:
+                return category_matches[0]
+        if len(matches) == 1:
+            return matches[0]
+    return None
 
 
 def infer_relationship_from_context(source: Entity, target: Entity, text: str) -> tuple[str, float, str]:
@@ -1665,6 +1738,7 @@ def build_manifest(
                 or review.get("nameMerges")
                 or review.get("removedMerges")
                 or review.get("removedNameMerges")
+                or review.get("removedManualRelationships")
                 or review.get("manualRelationships")
             ),
             "transcript_source_dir": str(TRANSCRIPTS_DIR.relative_to(ROOT)),
@@ -1695,6 +1769,7 @@ def build_manifest(
             "name_merges": len(review.get("nameMerges", {})),
             "removed_merges": len(review.get("removedMerges", {})),
             "removed_name_merges": len(review.get("removedNameMerges", {})),
+            "removed_manual_relationships": len(review.get("removedManualRelationships", {})),
             "manual_relationships": len(review.get("manualRelationships", {})),
         },
     }
@@ -1733,6 +1808,7 @@ def write_report(
             "nameMerges": {},
             "removedMerges": {},
             "removedNameMerges": {},
+            "removedManualRelationships": {},
             "manualRelationships": {},
             "notes": "Download reclassified data from the app, replace data/reclass.json with it, then rerun python3 build_graph.py.",
         },
@@ -2145,7 +2221,7 @@ def render_html(app_data_version: str = "") -> str:
     }
 
     function saveReview(review) {
-      localStorage.setItem(REVIEW_KEY, JSON.stringify(review));
+      localStorage.setItem(REVIEW_KEY, JSON.stringify(normalizeReview(review)));
       updateReviewButton();
     }
 
@@ -2890,7 +2966,7 @@ def render_html(app_data_version: str = "") -> str:
     }
     .node-card.open { display: block; }
     .node-card-body {
-      max-height: 42vh;
+      max-height: min(72vh, calc(100vh - 132px));
       overflow-y: auto;
       overflow-x: hidden;
       padding: 12px;
@@ -3028,6 +3104,30 @@ def render_html(app_data_version: str = "") -> str:
       display: grid;
       gap: 6px;
       margin-top: 10px;
+    }
+    .relationship-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 30px;
+      gap: 6px;
+      align-items: stretch;
+      min-width: 0;
+    }
+    .relationship-row .relationship-target {
+      min-width: 0;
+    }
+    .relationship-row .remove-connection {
+      width: 30px;
+      min-width: 30px;
+      padding: 0;
+      color: var(--ink);
+      text-align: center;
+    }
+    .relationship-list button {
+      width: 100%;
+      height: auto;
+      min-height: 34px;
+      text-align: left;
+      white-space: normal;
     }
     .entity-directory {
       display: grid;
@@ -3260,20 +3360,73 @@ __APP_DATA_SCRIPTS__
           data.entities.find((entity) => normalizeText(entity.name) === normalizeText(merge.targetName) && entity.category === merge.targetCategory);
         if (source && target && source.id !== target.id) mergeEntityInto(source, target, data);
       }
+      removeManualRelationships(data, review.removedManualRelationships || {});
       applyManualRelationships(data, review.manualRelationships || {});
       const visibleEntityIds = new Set(data.entities.map((entity) => entity.id));
       data.relationships = data.relationships.filter((relationship) => visibleEntityIds.has(relationship.source) && visibleEntityIds.has(relationship.target));
       return data;
     }
 
+    function manualRelationshipKey(sourceId, targetId) {
+      return [sourceId, targetId].sort().join("--");
+    }
+
+    function manualRelationshipDomId(key) {
+      const slug = String(key || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      return "manual-" + (slug || "item");
+    }
+
+    function entityByManualReference(item, side, data = DATA) {
+      const id = item && item[side + "Id"];
+      const entityById = id ? data.entities.find((entity) => entity.id === id) : null;
+      if (entityById) return entityById;
+      const category = item && item[side + "Category"];
+      const review = readReview();
+      const aliases = { ...(BUILT_REVIEW.aliases || {}), ...(review.aliases || {}) };
+      const names = [item && item[side + "Name"]];
+      if (id && aliases[id]) names.push(aliases[id]);
+      const normalizedName = normalizeText(item && item[side + "Name"]);
+      if (normalizedName && aliases[normalizedName]) names.push(aliases[normalizedName]);
+      for (const nameValue of names) {
+        const name = normalizeText(nameValue);
+        if (!name) continue;
+        const matches = data.entities.filter((entity) => normalizeText(entity.name) === name);
+        if (category) {
+          const categoryMatches = matches.filter((entity) => entity.category === category);
+          if (categoryMatches.length === 1) return categoryMatches[0];
+        }
+        if (matches.length === 1) return matches[0];
+      }
+      return null;
+    }
+
+    function removeManualRelationships(data, removedManualRelationships) {
+      const removed = new Set(Object.entries(removedManualRelationships || {}).map(([key, item]) => {
+        if (item && typeof item === "object" && item.sourceId && item.targetId) {
+          return manualRelationshipKey(item.sourceId, item.targetId);
+        }
+        return key;
+      }));
+      if (!removed.size) return;
+      data.relationships = data.relationships.filter((relationship) => {
+        if (relationship.type !== "manual") return true;
+        return !removed.has(manualRelationshipKey(relationship.source, relationship.target)) && !removed.has(relationship.id.replace(/^manual-/, ""));
+      });
+    }
+
     function applyManualRelationships(data, manualRelationships) {
+      const existingManualPairs = new Set(data.relationships
+        .filter((relationship) => relationship.type === "manual")
+        .map((relationship) => manualRelationshipKey(relationship.source, relationship.target)));
       for (const [id, item] of Object.entries(manualRelationships || {})) {
         if (!item || typeof item !== "object") continue;
-        const source = data.entities.find((entity) => entity.id === item.sourceId);
-        const target = data.entities.find((entity) => entity.id === item.targetId);
+        const source = entityByManualReference(item, "source", data);
+        const target = entityByManualReference(item, "target", data);
         if (!source || !target || source.id === target.id) continue;
+        const key = manualRelationshipKey(source.id, target.id);
+        if (existingManualPairs.has(key)) continue;
         data.relationships.unshift({
-          id: id.startsWith("manual-") ? id : "manual-" + id,
+          id: manualRelationshipDomId(key),
           source: source.id < target.id ? source.id : target.id,
           target: source.id < target.id ? target.id : source.id,
           sourceName: source.id < target.id ? source.name : target.name,
@@ -3284,6 +3437,7 @@ __APP_DATA_SCRIPTS__
           evidenceSegmentIds: [],
           evidence: [],
         });
+        existingManualPairs.add(key);
       }
     }
 
@@ -4314,7 +4468,12 @@ __APP_DATA_SCRIPTS__
         '<div class="relationship-list">' + relationships.slice(0, CARD_RELATIONSHIP_LIMIT).map((relationship) => {
           const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
           const other = entitiesById.get(otherId);
-          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>';
+          const otherName = other ? other.name : otherId;
+          const manualKey = relationship.type === "manual" ? manualRelationshipKey(relationship.source, relationship.target) : "";
+          return '<div class="relationship-row">' +
+            '<button class="relationship-target" data-card-entity="' + esc(otherId) + '">' + esc(otherName) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>' +
+            (manualKey ? '<button class="remove-connection" type="button" data-remove-manual-connection="' + esc(manualKey) + '" aria-label="Remove manual connection to ' + esc(otherName) + '">x</button>' : '') +
+          '</div>';
         }).join("") + '</div>' +
         '<h3 class="action-heading">Reclassify</h3>' +
         '<div class="card-actions"><label class="card-field"><span>Category</span><select id="review-category">' + Object.entries(DATA.categoryLabels).map(([id, label]) => '<option value="' + esc(id) + '"' + (id === entity.category ? ' selected' : '') + '>' + esc(label) + '</option>').join("") + '</select></label></div>' +
@@ -4331,6 +4490,33 @@ __APP_DATA_SCRIPTS__
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;
           mode = "neighborhood";
+          render();
+          focusDetailsCard();
+        });
+      });
+      cardEl.querySelectorAll("[data-remove-manual-connection]").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const key = button.dataset.removeManualConnection;
+          const relationship = DATA.relationships.find((candidate) => candidate.type === "manual" && manualRelationshipKey(candidate.source, candidate.target) === key);
+          const source = relationship ? entitiesById.get(relationship.source) : null;
+          const target = relationship ? entitiesById.get(relationship.target) : null;
+          const review = readReview();
+          review.manualRelationships = review.manualRelationships || {};
+          review.removedManualRelationships = review.removedManualRelationships || {};
+          const manual = review.manualRelationships[key] || {
+            sourceId: relationship?.source || key.split("--")[0],
+            sourceName: source?.name || "",
+            sourceCategory: source?.category || "",
+            targetId: relationship?.target || key.split("--")[1],
+            targetName: target?.name || "",
+            targetCategory: target?.category || "",
+          };
+          review.removedManualRelationships[key] = manual;
+          delete review.manualRelationships[key];
+          saveReview(review);
+          DATA.relationships = DATA.relationships.filter((candidate) => candidate.type !== "manual" || manualRelationshipKey(candidate.source, candidate.target) !== key);
+          rebuildIndexes();
           render();
           focusDetailsCard();
         });
@@ -4366,6 +4552,8 @@ __APP_DATA_SCRIPTS__
         focusDetailsCard();
       });
       document.getElementById("false-positive").addEventListener("click", () => {
+        const confirmed = window.confirm('Mark "' + entity.name + '" as a false positive? This removes it from the graph and downloaded review data.');
+        if (!confirmed) return;
         const review = readReview();
         review.falsePositives[entity.id] = { name: entity.name, category: entity.category, categoryLabel: entity.categoryLabel };
         if (review.reclassifications) delete review.reclassifications[entity.id];
@@ -4504,7 +4692,8 @@ __APP_DATA_SCRIPTS__
         const review = readReview();
         review.manualRelationships = review.manualRelationships || {};
         const ids = [entity.id, target.id].sort();
-        const key = ids.map((id) => id.replace(/[^a-z0-9:-]+/gi, "-")).join("--");
+        const key = manualRelationshipKey(ids[0], ids[1]);
+        if (review.removedManualRelationships) delete review.removedManualRelationships[key];
         review.manualRelationships[key] = {
           sourceId: ids[0],
           sourceName: (entitiesById.get(ids[0]) || entity).name,
@@ -4860,6 +5049,7 @@ __APP_DATA_SCRIPTS__
         nameMerges: {},
         removedMerges: {},
         removedNameMerges: {},
+        removedManualRelationships: {},
         manualRelationships: {},
         notes: {},
       };
@@ -4868,22 +5058,37 @@ __APP_DATA_SCRIPTS__
     function normalizeReview(review) {
       const normalized = defaultReview();
       if (!review || typeof review !== "object") return normalized;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "removedManualRelationships", "manualRelationships", "notes"]) {
         normalized[key] = review[key] && typeof review[key] === "object" && !Array.isArray(review[key]) ? review[key] : {};
       }
+      normalized.manualRelationships = normalizeManualRelationshipDecisions(normalized.manualRelationships);
+      normalized.removedManualRelationships = normalizeManualRelationshipDecisions(normalized.removedManualRelationships, true);
       if (review.generatedAt) normalized.generatedAt = review.generatedAt;
       if (review.note) normalized.note = review.note;
+      return normalized;
+    }
+
+    function normalizeManualRelationshipDecisions(decisions, allowFallbackKey = false) {
+      const normalized = {};
+      for (const [key, item] of Object.entries(decisions || {})) {
+        if (item && typeof item === "object" && item.sourceId && item.targetId && item.sourceId !== item.targetId) {
+          normalized[manualRelationshipKey(item.sourceId, item.targetId)] = item;
+        } else if (allowFallbackKey && key) {
+          normalized[key] = item;
+        }
+      }
       return normalized;
     }
 
     function mergeReviews(base, overlay) {
       const merged = normalizeReview(base);
       const next = normalizeReview(overlay);
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "removedManualRelationships", "manualRelationships", "notes"]) {
         merged[key] = { ...(merged[key] || {}), ...(next[key] || {}) };
       }
       for (const key of Object.keys(merged.removedMerges || {})) delete merged.merges[key];
       for (const key of Object.keys(merged.removedNameMerges || {})) delete merged.nameMerges[key];
+      for (const key of Object.keys(merged.removedManualRelationships || {})) delete merged.manualRelationships[key];
       if (next.generatedAt) merged.generatedAt = next.generatedAt;
       if (next.note) merged.note = next.note;
       return merged;
@@ -4955,7 +5160,7 @@ __APP_DATA_SCRIPTS__
     function removeBuiltReviewEntries(review) {
       const cleaned = normalizeReview(review);
       let changed = false;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "manualRelationships"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedManualRelationships", "manualRelationships"]) {
         for (const [id, value] of Object.entries(cleaned[key] || {})) {
           const exactBuilt = Object.prototype.hasOwnProperty.call(BUILT_REVIEW[key] || {}, id) && sameReviewValue(value, BUILT_REVIEW[key][id]);
           const bakedCategory = key === "reclassifications" || key === "nameReclassifications" ? reviewCategoryIsBaked(id, value) : false;
@@ -5021,6 +5226,7 @@ __APP_DATA_SCRIPTS__
         Object.keys(review.nameMerges || {}).length +
         Object.keys(review.removedMerges || {}).length +
         Object.keys(review.removedNameMerges || {}).length +
+        Object.keys(review.removedManualRelationships || {}).length +
         Object.keys(review.manualRelationships || {}).length
       );
     }

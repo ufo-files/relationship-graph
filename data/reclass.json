@@ -21,6 +21,8 @@
     "as douglas murray": "Douglas Murray",
     "ashbury free medical clinic": "Haight-Ashbury Free Medical Clinic",
     "at groom lake": "Groom Lake",
+    "at harvard medical school": "Harvard Medical School",
+    "aviation medicine": "German Experimental Station for Aviation Medicin",
     "based laser project office": "Space-Based Laser Project Office",
     "between september": "Lost Missiles",
     "bill burr": "Bill Barr",
@@ -43,6 +45,7 @@
     "defense intelligence agency": "U.S. Defense Intelligence Agency",
     "diana pasolka": "Diana Pasulka",
     "document_names:arrow-historical-report": "AARO Historical Report",
+    "dr hal puthoff davis": "Harold Puthoff",
     "dragon dracs": "Draconians",
     "eagle works": "NASA Eagle Works",
     "energy intelligence": "Office of Intelligence and Counterintelligence",
@@ -52,6 +55,7 @@
     "experiencers:ant-people": "Ant People of the Hopi",
     "experiencers:diana-pasolka": "Diana Pasulka",
     "experiencers:had-lazar": "Bob Lazar",
+    "experiencers:natural-history": "American Museum of Natural History",
     "experiencers:ross-goldhart": "Ross Coulthart",
     "experiencers:s-house": "U.S. House of Representatives",
     "federal republic": "Federal Republic of Germany",
@@ -68,6 +72,7 @@
     "george h": "George H.W. Bush",
     "george h w bush": "President George H.W. Bush",
     "german experimental station": "German Experimental Station for Aviation Medicine",
+    "german experimental station for aviation medicin": "German Experimental Station for Aviation Medicine",
     "government_agencies:air-force-office": "Air Force Office of Special Investigations",
     "government_agencies:army-test": "Army Test and Evaluation Command",
     "government_agencies:based-laser-project-office": "Space-Based Laser Project Office",
@@ -78,7 +83,9 @@
     "government_agencies:marine-corps": "United States Marine Corps",
     "government_agencies:national-reconnaissance": "National Reconnaissance Office",
     "government_agencies:s-air-force-office": "U.S. Air Force Office of Intelligence",
+    "government_agencies:s-air-force-school": "U.S. Air Force School of Aviation Medicine",
     "government_agencies:s-air-force-special": "U.S. Air Force Special Activities Squadron",
+    "government_agencies:s-army-air-force": "U.S. Army Air Force",
     "government_agencies:s-army-ordnance": "U.S. Army Ordnance",
     "government_agencies:u-s-army": "United States Army",
     "government_agencies:us-air-force": "United States Air Force",
@@ -88,11 +95,15 @@
     "hare airport": "Chicago O'Hare Airport",
     "harold malgrim": "Harald Malmgren",
     "harvard": "Harvard University",
+    "harvard college": "Harvard University",
     "has hal puthoff": "Hal Puthoff",
     "if stephen hawking": "Stephen Hawking",
+    "in california": "California",
     "in cambridge": "Cambridge",
     "in enoch": "Book of Enoch",
     "in january": "January, 2007",
+    "in las vegas": "Las Vegas",
+    "in ohio": "Ohio",
     "in peru": "Peru",
     "in plato": "Plato",
     "in portsmouth": "Portsmouth",
@@ -107,11 +118,13 @@
     "journalists:special-investigations": "U.S. Air Force Office of Special Investigations",
     "just papoose lake": "Papoose Lake",
     "larry nolan": "Gary Nolan",
+    "lee harvey oz": "Lee Harvey Oswald",
     "let espresso": "L'Espresso",
     "like curtis": "Curtis LeMay",
     "like kash patel": "Kash Patel",
     "likely_spies:montrose-search": "Montrose Search and Rescue",
     "likely_spies:on-march": "March 24th, 1967",
+    "likely_spies:under-operation-paperclip": "Operation Paperclip",
     "little st": "Little St. James",
     "marine corps": "United States Marine Corps",
     "medical research": "Kaiser Wilhelm Institute for Medical Research",
@@ -119,6 +132,7 @@
     "montrose search": "Montrose Search and Rescue",
     "mount waterman": "Waterman Mountain",
     "national reconnaissance": "National Reconnaissance Office",
+    "natural history": "American Museum of Natural History",
     "november 24 95": "April 1995",
     "on december": "December 20, 2025",
     "on march": "March 24th, 1967",
@@ -141,6 +155,7 @@
     "people:as-douglas-murray": "Douglas Murray",
     "people:ashbury-free-medical-clinic": "Haight-Ashbury Free Medical Clinic",
     "people:at-groom-lake": "Groom Lake",
+    "people:aviation-medicine": "German Experimental Station for Aviation Medicine",
     "people:between-september": "Lost Missiles",
     "people:bill-burr": "Bill Barr",
     "people:bob-exler": "Bob Oxler",
@@ -153,6 +168,7 @@
     "people:charles-hall-tall-whites": "Charles Hall",
     "people:civilized-society": "Towards a Psycho-Civilized Society",
     "people:dave-grush": "Dave Grusch",
+    "people:dr-hal-puthoff-davis": "Harold Puthoff",
     "people:dragon-dracs": "Draconians",
     "people:eagle-works": "NASA Eagle Works",
     "people:energy-intelligence": "Office of Intelligence and Counterintelligence",
@@ -175,6 +191,8 @@
     "people:in-cambridge": "Cambridge",
     "people:in-enoch": "Book of Enoch",
     "people:in-january": "January, 2007",
+    "people:in-las-vegas": "Las Vegas",
+    "people:in-ohio": "Ohio",
     "people:in-peru": "Peru",
     "people:in-plato": "Plato",
     "people:in-portsmouth": "Portsmouth",
@@ -188,12 +206,14 @@
     "people:john-olson-lear": "John Lear",
     "people:just-papoose-lake": "Papoose Lake",
     "people:larry-nolan": "Gary Nolan",
+    "people:lee-harvey-oz": "Lee Harvey Oswald",
     "people:let-espresso": "L'Espresso",
     "people:like-curtis": "Curtis LeMay",
     "people:like-kash-patel": "Kash Patel",
     "people:little-st": "Little St. James",
     "people:mount-waterman": "Waterman Mountain",
     "people:national-reconnaissance": "National Reconnaissance Office",
+    "people:natural-history": "American Museum of Natural History",
     "people:on-december": "December 20, 2025",
     "people:on-may": "May 8, 2026",
     "people:on-monday": "December 15",
@@ -207,6 +227,7 @@
     "people:pope-pius": "Pope",
     "people:president-kirsan": "President Kirsan Ilyamzinov",
     "people:president-obama": "President Barack Obama",
+    "people:randolph-field": "Randolph Air Force Base",
     "people:rick-doty": "Richard Doti",
     "people:rockefeller-commission": "Rockefeller Commission Report",
     "people:secret-machines": "Sekret Machines",
@@ -236,9 +257,11 @@
     "president obama": "President Barack Obama",
     "professors:aero-medical": "Aero Medical Division",
     "professors:german-experimental-station": "German Experimental Station for Aviation Medicine",
+    "professors:in-california": "California",
     "professors:medical-research": "Kaiser Wilhelm Institute for Medical Research",
     "professors:space-science": "Stanford's Center for Space Science and Astrophysics",
     "public standards": "Bureau of Public Standards",
+    "randolph field": "Randolph Air Force Base",
     "research center": "John Glenn NASA Research Center",
     "research_groups:advanced-aerospace-threat-identification-program": "AATIP",
     "research_groups:research-center": "John Glenn NASA Research Center",
@@ -246,7 +269,9 @@
     "rockefeller commission": "Rockefeller Commission Report",
     "ross goldhart": "Ross Coulthart",
     "s air force office": "U.S. Air Force Office of Intelligence",
+    "s air force school": "U.S. Air Force School of Aviation Medicine",
     "s air force special": "U.S. Air Force Special Activities Squadron",
+    "s army air force": "U.S. Army Air Force",
     "s army ordnance": "U.S. Army Ordnance",
     "s house": "U.S. House of Representatives",
     "scientific revolutions": "Structure of Scientific Revolutions",
@@ -266,7 +291,10 @@
     "then donald": "Donald DeFreeze",
     "to chris jr": "Chris Bledsoe Jr",
     "u s army": "United States Army",
+    "under operation paperclip": "Operation Paperclip",
+    "universities:at-harvard-medical-school": "Harvard Medical School",
     "universities:harvard": "Harvard University",
+    "universities:harvard-college": "Harvard University",
     "us air force": "United States Air Force",
     "was snyder": "Freddy Snyder",
     "weimar germany": "Weimar, Germany",
@@ -584,6 +612,11 @@
       "category": "people",
       "categoryLabel": "People",
       "name": "Aerospace Corporation"
+    },
+    "people:aliens-among-us-mac": {
+      "category": "people",
+      "categoryLabel": "People",
+      "name": "Aliens Among Us Mac"
     },
     "people:as-barry": {
       "category": "people",
@@ -916,8 +949,16 @@
       "name": "zbiotics.com"
     }
   },
-  "generatedAt": "2026-06-28T05:58:09.962Z",
+  "generatedAt": "2026-06-28T07:38:50.428Z",
   "manualRelationships": {
+    "experiencers:bob-lazar--people:united-nuclear": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:bob-lazar",
+      "sourceName": "Bob Lazar",
+      "targetCategory": "people",
+      "targetId": "people:united-nuclear",
+      "targetName": "United Nuclear"
+    },
     "experiencers:chris-bledsoe--people:chris-bledsoe-jr": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:chris-bledsoe",
@@ -925,6 +966,134 @@
       "targetCategory": "people",
       "targetId": "people:chris-bledsoe-jr",
       "targetName": "Chris Bledsoe Jr"
+    },
+    "experiencers:chris-bledsoe--people:ryan-bledsoe": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:chris-bledsoe",
+      "sourceName": "Chris Bledsoe",
+      "targetCategory": "people",
+      "targetId": "people:ryan-bledsoe",
+      "targetName": "Ryan Bledsoe"
+    },
+    "experiencers:close-encounter--professors:close-encounter": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:close-encounter",
+      "sourceName": "Close Encounter",
+      "targetCategory": "professors",
+      "targetId": "professors:close-encounter",
+      "targetName": "Close Encounter"
+    },
+    "experiencers:natural-history--people:natural-history": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:natural-history",
+      "sourceName": "Natural History",
+      "targetCategory": "people",
+      "targetId": "people:natural-history",
+      "targetName": "Natural History"
+    },
+    "experiencers:project-blue-book--politicians:project-blue-book": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "politicians",
+      "targetId": "politicians:project-blue-book",
+      "targetName": "Project Blue Book"
+    },
+    "experiencers:southern-california--locations:california": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:southern-california",
+      "sourceName": "Southern California",
+      "targetCategory": "locations",
+      "targetId": "locations:california",
+      "targetName": "California"
+    },
+    "experiencers:southern-california--professors:in-california": {
+      "sourceCategory": "locations",
+      "sourceId": "experiencers:southern-california",
+      "sourceName": "Southern California",
+      "targetCategory": "locations",
+      "targetId": "professors:in-california",
+      "targetName": "In California"
+    },
+    "institutes:california-institute--locations:california": {
+      "sourceCategory": "institutes",
+      "sourceId": "institutes:california-institute",
+      "sourceName": "California Institute",
+      "targetCategory": "locations",
+      "targetId": "locations:california",
+      "targetName": "California"
+    },
+    "journalists:harry-reid--politicians:harry-reid": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:harry-reid",
+      "sourceName": "Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:harry-reid",
+      "targetName": "Harry Reid"
+    },
+    "journalists:operation-paperclip--politicians:operation-paperclip": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:operation-paperclip",
+      "sourceName": "Operation Paperclip",
+      "targetCategory": "politicians",
+      "targetId": "politicians:operation-paperclip",
+      "targetName": "Operation Paperclip"
+    },
+    "locations:california--people:northern-california": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:california",
+      "sourceName": "California",
+      "targetCategory": "people",
+      "targetId": "people:northern-california",
+      "targetName": "Northern California"
+    },
+    "locations:new-mexico--locations:roswell": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:new-mexico",
+      "sourceName": "New Mexico",
+      "targetCategory": "locations",
+      "targetId": "locations:roswell",
+      "targetName": "Roswell"
+    },
+    "locations:north-carolina--people:chris-bledsoe-copyright": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:north-carolina",
+      "sourceName": "North Carolina",
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-copyright",
+      "targetName": "Chris Bledsoe"
+    },
+    "military_bases:wright-patterson-air-force-base--people:in-ohio": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:wright-patterson-air-force-base",
+      "sourceName": "Wright-Patterson Air Force Base",
+      "targetCategory": "people",
+      "targetId": "people:in-ohio",
+      "targetName": "In Ohio"
+    },
+    "people:in-california--professors:in-california": {
+      "sourceCategory": "people",
+      "sourceId": "people:in-california",
+      "sourceName": "In California",
+      "targetCategory": "professors",
+      "targetId": "professors:in-california",
+      "targetName": "In California"
+    },
+    "professors:theodor-benzinger-paul--universities:duke-university": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:theodor-benzinger-paul",
+      "sourceName": "Theodor Benzinger",
+      "targetCategory": "universities",
+      "targetId": "universities:duke-university",
+      "targetName": "Duke University"
+    },
+    "universities:at-harvard-medical-school--universities:harvard-college": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:at-harvard-medical-school",
+      "sourceName": "Harvard Medical School",
+      "targetCategory": "universities",
+      "targetId": "universities:harvard-college",
+      "targetName": "Harvard College"
     }
   },
   "merges": {
@@ -1184,6 +1353,14 @@
       "targetId": "people:aleister-crowley",
       "targetName": "Aleister Crowley"
     },
+    "experiencers:american-museum": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:american-museum",
+      "sourceName": "American Museum",
+      "targetCategory": "institutes",
+      "targetId": "experiencers:natural-history",
+      "targetName": "American Museum of Natural History"
+    },
     "experiencers:barack-obama": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:barack-obama",
@@ -1191,6 +1368,14 @@
       "targetCategory": "people",
       "targetId": "people:barack-obama",
       "targetName": "Barack Obama"
+    },
+    "experiencers:because-close-encounters": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:because-close-encounters",
+      "sourceName": "Because Close Encounters",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:in-close-encounters",
+      "targetName": "In Close Encounters"
     },
     "experiencers:because-kirsan": {
       "sourceCategory": "experiencers",
@@ -1200,6 +1385,14 @@
       "targetId": "people:kirsan-ilyumzinov",
       "targetName": "Kirsan Ilyumzinov"
     },
+    "experiencers:chris-bledsoe": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:chris-bledsoe",
+      "sourceName": "Chris Bledsoe",
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-all",
+      "targetName": "Chris Bledsoe All"
+    },
     "experiencers:chris-bledsoe-chapter": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:chris-bledsoe-chapter",
@@ -1207,6 +1400,14 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:chris-bledsoe-chapter",
       "targetName": "Chris Bledsoe Chapter"
+    },
+    "experiencers:close-encounter": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:close-encounter",
+      "sourceName": "Close Encounter",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:because-close-encounters",
+      "targetName": "Because Close Encounters"
     },
     "experiencers:closer-encounter": {
       "sourceCategory": "experiencers",
@@ -1280,6 +1481,22 @@
       "targetId": "people:diana-pasolka",
       "targetName": "Diana Pasolka"
     },
+    "experiencers:doctors-theodor-benzinger": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:doctors-theodor-benzinger",
+      "sourceName": "Doctors Theodor Benzinger",
+      "targetCategory": "universities",
+      "targetId": "universities:theodor-benzinger-duke-university",
+      "targetName": "Theodor Benzinger Duke University"
+    },
+    "experiencers:dr-hal-puthoff": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:dr-hal-puthoff",
+      "sourceName": "Dr Hal Puthoff",
+      "targetCategory": "journalists",
+      "targetId": "journalists:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
+    },
     "experiencers:eric-davis": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:eric-davis",
@@ -1328,6 +1545,22 @@
       "targetId": "people:consciousness-if",
       "targetName": "Consciousness If"
     },
+    "experiencers:in-close-encounters": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:in-close-encounters",
+      "sourceName": "In Close Encounters",
+      "targetCategory": "movies",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters"
+    },
+    "experiencers:in-las-vegas": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:in-las-vegas",
+      "sourceName": "In Las Vegas",
+      "targetCategory": "professors",
+      "targetId": "professors:las-vegas-sun",
+      "targetName": "Las Vegas Sun"
+    },
     "experiencers:in-vallee": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:in-vallee",
@@ -1352,6 +1585,22 @@
       "targetId": "likely_spies:melchizedek-star-seed-program",
       "targetName": "Melchizedek Star Seed Program"
     },
+    "experiencers:nevada-proving-ground": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:nevada-proving-ground",
+      "sourceName": "Nevada Proving Ground",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:white-sands-proving-grounds",
+      "targetName": "White Sands Proving Grounds"
+    },
+    "experiencers:new-zealand": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:new-zealand",
+      "sourceName": "New Zealand",
+      "targetCategory": "people",
+      "targetId": "people:new-zealand",
+      "targetName": "New Zealand"
+    },
     "experiencers:peruvian-amazon": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:peruvian-amazon",
@@ -1359,6 +1608,22 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:peruvian-amazon",
       "targetName": "Peruvian Amazon"
+    },
+    "experiencers:project-blue-book": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "politicians",
+      "targetId": "politicians:project-blue-book",
+      "targetName": "Project Blue Book"
+    },
+    "experiencers:randolph-air": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:randolph-air",
+      "sourceName": "Randolph Air",
+      "targetCategory": "professors",
+      "targetId": "professors:randolph-field",
+      "targetName": "Randolph Field"
     },
     "experiencers:so-bigelow": {
       "sourceCategory": "experiencers",
@@ -1407,6 +1672,14 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:virgin-mary",
       "targetName": "Virgin Mary"
+    },
+    "experiencers:white-sands-proving-grounds": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:white-sands-proving-grounds",
+      "sourceName": "White Sands Proving Grounds",
+      "targetCategory": "professors",
+      "targetId": "professors:white-sands-proving-grounds",
+      "targetName": "White Sands Proving Grounds"
     },
     "experiencers:whitley-strieber": {
       "sourceCategory": "experiencers",
@@ -1592,6 +1865,22 @@
       "targetId": "people:donald-trump",
       "targetName": "Donald Trump"
     },
+    "friendly_people:dr-eric-davis": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "professors",
+      "targetId": "professors:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "friendly_people:dr-puthoff": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:dr-puthoff",
+      "sourceName": "Dr Puthoff",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:dr-puthoff",
+      "targetName": "Dr Puthoff"
+    },
     "friendly_people:e-howard-hunt": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:e-howard-hunt",
@@ -1663,6 +1952,14 @@
       "targetCategory": "people",
       "targetId": "people:howard-hunt",
       "targetName": "Howard Hunt"
+    },
+    "friendly_people:j-allen-hynek": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "politicians",
+      "targetId": "politicians:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
     },
     "friendly_people:jack-ruby": {
       "sourceCategory": "friendly_people",
@@ -1904,6 +2201,14 @@
       "targetId": "people:charles-hall",
       "targetName": "Charles Hall"
     },
+    "friendly_people:southern-california": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:southern-california",
+      "sourceName": "Southern California",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:southern-california",
+      "targetName": "Southern California"
+    },
     "friendly_people:special-investigations": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:special-investigations",
@@ -2015,6 +2320,22 @@
       "targetCategory": "likely_spies",
       "targetId": "likely_spies:special-investigations",
       "targetName": "Special Investigations"
+    },
+    "government_agencies:army-air-force": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:army-air-force",
+      "sourceName": "Army Air Force",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:s-army-air-force",
+      "targetName": "S. Army Air Force"
+    },
+    "government_agencies:army-air-forces": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:army-air-forces",
+      "sourceName": "Army Air Forces",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:army-air-force",
+      "targetName": "Army Air Force"
     },
     "government_agencies:army-air-forces-aero": {
       "sourceCategory": "government_agencies",
@@ -2144,6 +2465,14 @@
       "targetId": "military_bases:wright-patterson-air-force-base",
       "targetName": "Wright-Patterson Air Force base"
     },
+    "government_agencies:s-army-air-forces": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:s-army-air-forces",
+      "sourceName": "S. Army Air Forces",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:army-air-forces",
+      "targetName": "Army Air Forces"
+    },
     "government_agencies:secret-national-security-agency": {
       "sourceCategory": "government_agencies",
       "sourceId": "government_agencies:secret-national-security-agency",
@@ -2240,6 +2569,22 @@
       "targetId": "people:david-ferry",
       "targetName": "David Ferry"
     },
+    "journalists:dr-eric-davis": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "politicians",
+      "targetId": "politicians:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "journalists:harry-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "journalists:harry-reid",
+      "sourceName": "Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senator-reid",
+      "targetName": "Senator Reid"
+    },
     "journalists:jacques-vallee": {
       "sourceCategory": "journalists",
       "sourceId": "journalists:jacques-vallee",
@@ -2272,6 +2617,22 @@
       "targetId": "friendly_people:kenneth-arnold",
       "targetName": "Kenneth Arnold"
     },
+    "journalists:operation-paperclip": {
+      "sourceCategory": "government_project_codenames",
+      "sourceId": "journalists:operation-paperclip",
+      "sourceName": "Operation Paperclip",
+      "targetCategory": "people",
+      "targetId": "people:top-secret-operation-paperclip",
+      "targetName": "Top Secret Operation Paperclip"
+    },
+    "journalists:project-blue-book": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "government_project_codenames",
+      "targetId": "government_project_codenames:project-blue-book",
+      "targetName": "project blue book"
+    },
     "journalists:ross-coldhart": {
       "sourceCategory": "journalists",
       "sourceId": "journalists:ross-coldhart",
@@ -2295,6 +2656,14 @@
       "targetCategory": "journalists",
       "targetId": "journalists:journalist-ross-colthart",
       "targetName": "Journalist Ross Colthart"
+    },
+    "journalists:senator-reid": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:senator-reid",
+      "sourceName": "Senator Reid",
+      "targetCategory": "professors",
+      "targetId": "professors:democrat-senator-harry-reid",
+      "targetName": "Democrat Senator Harry Reid"
     },
     "journalists:steve-bannon": {
       "sourceCategory": "journalists",
@@ -2408,6 +2777,14 @@
       "targetId": "dangerous_people:nevada-test-site",
       "targetName": "Nevada Test Site"
     },
+    "likely_spies:new-zealand": {
+      "sourceCategory": "likely_spies",
+      "sourceId": "likely_spies:new-zealand",
+      "sourceName": "New Zealand",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:new-zealand",
+      "targetName": "New Zealand"
+    },
     "likely_spies:pat-price": {
       "sourceCategory": "likely_spies",
       "sourceId": "likely_spies:pat-price",
@@ -2432,6 +2809,14 @@
       "targetId": "people:special-investigations",
       "targetName": "Special Investigations"
     },
+    "likely_spies:white-sands-proving-grounds": {
+      "sourceCategory": "likely_spies",
+      "sourceId": "likely_spies:white-sands-proving-grounds",
+      "sourceName": "White Sands Proving Grounds",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:white-sands-proving-grounds",
+      "targetName": "White Sands Proving Grounds"
+    },
     "locations:brook-park-strip-mall": {
       "sourceCategory": "locations",
       "sourceId": "locations:brook-park-strip-mall",
@@ -2440,6 +2825,38 @@
       "targetId": "locations:brookgate-strip-mall",
       "targetName": "Brookgate Strip Mall"
     },
+    "locations:california": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:california",
+      "sourceName": "California",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:in-california",
+      "targetName": "In California"
+    },
+    "locations:experimental-station": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:experimental-station",
+      "sourceName": "Experimental Station",
+      "targetCategory": "locations",
+      "targetId": "locations:german-experimental-station-for-aviation-medicine",
+      "targetName": "German Experimental Station for Aviation Medicine"
+    },
+    "locations:german-experimental-station-for-aviation-medicine": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:german-experimental-station-for-aviation-medicine",
+      "sourceName": "German Experimental Station for Aviation Medicine",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:german-experimental-station-for-aviation-medicine",
+      "targetName": "German Experimental Station for Aviation Medicine"
+    },
+    "locations:las-vegas": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:las-vegas",
+      "sourceName": "Las Vegas",
+      "targetCategory": "people",
+      "targetId": "people:las-vegas-strip",
+      "targetName": "Las Vegas Strip"
+    },
     "locations:los-alamos": {
       "sourceCategory": "locations",
       "sourceId": "locations:los-alamos",
@@ -2447,6 +2864,14 @@
       "targetCategory": "research_groups",
       "targetId": "research_groups:los-alamos-national-laboratory",
       "targetName": "Los Alamos National Laboratory"
+    },
+    "locations:nevada-test-site": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:nevada-test-site",
+      "sourceName": "Nevada Test Site",
+      "targetCategory": "military_bases",
+      "targetId": "military_bases:dugway-proving-ground",
+      "targetName": "Dugway Proving Ground"
     },
     "locations:peru": {
       "sourceCategory": "locations",
@@ -2504,6 +2929,14 @@
       "targetId": "government_agencies:u-s-army",
       "targetName": "United States Army"
     },
+    "military_bases:dugway-proving-ground": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:dugway-proving-ground",
+      "sourceName": "Dugway Proving Ground",
+      "targetCategory": "people",
+      "targetId": "people:nevada-proving-ground",
+      "targetName": "Nevada Proving Ground"
+    },
     "military_bases:edwards-412th-test-wing": {
       "sourceCategory": "military_bases",
       "sourceId": "military_bases:edwards-412th-test-wing",
@@ -2544,6 +2977,22 @@
       "targetId": "military_bases:wright-patterson-air-force-base",
       "targetName": "Wright-Patterson Air Force base"
     },
+    "military_bases:randolph-air-force-base": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:randolph-air-force-base",
+      "sourceName": "Randolph Air Force Base",
+      "targetCategory": "military_bases",
+      "targetId": "military_bases:randolph-air-force-bases",
+      "targetName": "Randolph Air Force Bases"
+    },
+    "military_bases:randolph-air-force-bases": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:randolph-air-force-bases",
+      "sourceName": "Randolph Air Force Bases",
+      "targetCategory": "people",
+      "targetId": "people:at-randolph",
+      "targetName": "At Randolph"
+    },
     "military_bases:s4": {
       "sourceCategory": "military_bases",
       "sourceId": "military_bases:s4",
@@ -2572,9 +3021,9 @@
       "sourceCategory": "movies",
       "sourceId": "movies:closer-encounters",
       "sourceName": "Closer Encounters",
-      "targetCategory": "movies",
-      "targetId": "movies:close-encounters",
-      "targetName": "Close Encounters"
+      "targetCategory": "professors",
+      "targetId": "professors:close-encounter",
+      "targetName": "Close Encounter"
     },
     "newsrooms:new-york-times": {
       "sourceCategory": "newsrooms",
@@ -2680,6 +3129,14 @@
       "targetId": "journalists:aleister-crowley",
       "targetName": "Aleister Crowley"
     },
+    "people:american-museum": {
+      "sourceCategory": "people",
+      "sourceId": "people:american-museum",
+      "sourceName": "American Museum",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:american-museum",
+      "targetName": "American Museum"
+    },
     "people:american-orthodox-catholic": {
       "sourceCategory": "people",
       "sourceId": "people:american-orthodox-catholic",
@@ -2735,6 +3192,14 @@
       "targetCategory": "institutes",
       "targetId": "institutes:monroe-institute",
       "targetName": "Monroe Institute"
+    },
+    "people:at-randolph": {
+      "sourceCategory": "people",
+      "sourceId": "people:at-randolph",
+      "sourceName": "At Randolph",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:randolph-air",
+      "targetName": "Randolph Air"
     },
     "people:baba-vanga": {
       "sourceCategory": "people",
@@ -3032,6 +3497,14 @@
       "targetId": "experiencers:chris-bledsoe",
       "targetName": "Chris Bledsoe"
     },
+    "people:chris-bledsoe-all": {
+      "sourceCategory": "people",
+      "sourceId": "people:chris-bledsoe-all",
+      "sourceName": "Chris Bledsoe All",
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-copyright",
+      "targetName": "Chris Bledsoe Copyright"
+    },
     "people:chris-bledsoe-chapter": {
       "sourceCategory": "people",
       "sourceId": "people:chris-bledsoe-chapter",
@@ -3264,6 +3737,14 @@
       "targetId": "institutes:national-institute-for-discovery-science",
       "targetName": "National Institute for Discovery Science"
     },
+    "people:doctors-theodor-benzinger": {
+      "sourceCategory": "people",
+      "sourceId": "people:doctors-theodor-benzinger",
+      "sourceName": "Doctors Theodor Benzinger",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:doctors-theodor-benzinger",
+      "targetName": "Doctors Theodor Benzinger"
+    },
     "people:does-corso": {
       "sourceCategory": "people",
       "sourceId": "people:does-corso",
@@ -3327,6 +3808,38 @@
       "targetCategory": "people",
       "targetId": "people:dorit-hofflite",
       "targetName": "Dorit Hofflite"
+    },
+    "people:dr-eric-davis": {
+      "sourceCategory": "people",
+      "sourceId": "people:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "people:dr-hal-puthoff": {
+      "sourceCategory": "people",
+      "sourceId": "people:dr-hal-puthoff",
+      "sourceName": "Dr Hal Puthoff",
+      "targetCategory": "professors",
+      "targetId": "professors:harold-puthoff",
+      "targetName": "Harold Puthoff"
+    },
+    "people:dr-hal-puthoff-davis": {
+      "sourceCategory": "people",
+      "sourceId": "people:dr-hal-puthoff-davis",
+      "sourceName": "Harold Puthoff",
+      "targetCategory": "people",
+      "targetId": "people:dr-puthoff",
+      "targetName": "Dr Puthoff"
+    },
+    "people:dr-puthoff": {
+      "sourceCategory": "people",
+      "sourceId": "people:dr-puthoff",
+      "sourceName": "Dr Puthoff",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:dr-puthoff",
+      "targetName": "Dr Puthoff"
     },
     "people:e-howard-hunt": {
       "sourceCategory": "people",
@@ -3597,8 +4110,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "targetCategory": "people",
-      "targetId": "people:hal-puthoff",
-      "targetName": "Hal Puthoff"
+      "targetId": "people:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
     },
     "people:harold-malmgren": {
       "sourceCategory": "people",
@@ -3672,6 +4185,14 @@
       "targetId": "people:israel-puharich",
       "targetName": "Israel Puharich"
     },
+    "people:in-california": {
+      "sourceCategory": "locations",
+      "sourceId": "people:in-california",
+      "sourceName": "In California",
+      "targetCategory": "professors",
+      "targetId": "professors:in-california",
+      "targetName": "In California"
+    },
     "people:in-new-mexico": {
       "sourceCategory": "people",
       "sourceId": "people:in-new-mexico",
@@ -3703,6 +4224,14 @@
       "targetCategory": "people",
       "targetId": "people:israeli-puharich",
       "targetName": "Israeli Puharich"
+    },
+    "people:j-allen-hynek": {
+      "sourceCategory": "people",
+      "sourceId": "people:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
     },
     "people:jack-martin": {
       "sourceCategory": "people",
@@ -3912,6 +4441,14 @@
       "targetId": "friendly_people:korean-war",
       "targetName": "Korean War"
     },
+    "people:las-vegas-strip": {
+      "sourceCategory": "people",
+      "sourceId": "people:las-vegas-strip",
+      "sourceName": "Las Vegas Strip",
+      "targetCategory": "professors",
+      "targetId": "professors:c-in-las-vegas",
+      "targetName": "C. In Las Vegas"
+    },
     "people:lawrence-preston-geis": {
       "sourceCategory": "people",
       "sourceId": "people:lawrence-preston-geis",
@@ -3924,9 +4461,9 @@
       "sourceCategory": "people",
       "sourceId": "people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
-      "targetCategory": "dangerous_people",
-      "targetId": "dangerous_people:lee-harvey-oswald",
-      "targetName": "Lee Harvey Oswald"
+      "targetCategory": "people",
+      "targetId": "people:lee-harvey-oz",
+      "targetName": "Lee Harvey Oz"
     },
     "people:lee-oswald": {
       "sourceCategory": "people",
@@ -4120,6 +4657,14 @@
       "targetId": "research_groups:national-institute-for-discovery-science",
       "targetName": "National Institute for Discovery Science"
     },
+    "people:natural-history": {
+      "sourceCategory": "people",
+      "sourceId": "people:natural-history",
+      "sourceName": "American Museum of Natural History",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:natural-history",
+      "targetName": "Natural History"
+    },
     "people:naval-research": {
       "sourceCategory": "government_agencies",
       "sourceId": "people:naval-research",
@@ -4127,6 +4672,14 @@
       "targetCategory": "research_groups",
       "targetId": "research_groups:naval-research-lab",
       "targetName": "Naval Research Lab"
+    },
+    "people:nevada-proving-ground": {
+      "sourceCategory": "people",
+      "sourceId": "people:nevada-proving-ground",
+      "sourceName": "Nevada Proving Ground",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:nevada-proving-ground",
+      "targetName": "Nevada Proving Ground"
     },
     "people:nevada-test-site": {
       "sourceCategory": "people",
@@ -4359,6 +4912,14 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:richard-doty",
       "targetName": "Richard Doty"
+    },
+    "people:robert-hastings-book": {
+      "sourceCategory": "people",
+      "sourceId": "people:robert-hastings-book",
+      "sourceName": "Robert Hastings Book",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:robert-l-hastings",
+      "targetName": "Robert L. Hastings"
     },
     "people:robert-monroe": {
       "sourceCategory": "people",
@@ -4688,6 +5249,14 @@
       "targetId": "people:second-world-war",
       "targetName": "Second World War"
     },
+    "people:southern-california": {
+      "sourceCategory": "people",
+      "sourceId": "people:southern-california",
+      "sourceName": "Southern California",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:southern-california",
+      "targetName": "Southern California"
+    },
     "people:special-investigations": {
       "sourceCategory": "people",
       "sourceId": "people:special-investigations",
@@ -4760,6 +5329,14 @@
       "targetId": "people:sunset-drive",
       "targetName": "Sunset Drive"
     },
+    "people:theodor-benzinger": {
+      "sourceCategory": "people",
+      "sourceId": "people:theodor-benzinger",
+      "sourceName": "Theodor Benzinger",
+      "targetCategory": "professors",
+      "targetId": "professors:theodor-h-benzinger",
+      "targetName": "Theodor H. Benzinger"
+    },
     "people:there-is-consciousness-knowing": {
       "sourceCategory": "people",
       "sourceId": "people:there-is-consciousness-knowing",
@@ -4800,6 +5377,14 @@
       "targetId": "people:tim-taylor",
       "targetName": "Tim Taylor"
     },
+    "people:top-secret-operation-paperclip": {
+      "sourceCategory": "people",
+      "sourceId": "people:top-secret-operation-paperclip",
+      "sourceName": "Top Secret Operation Paperclip",
+      "targetCategory": "people",
+      "targetId": "people:under-operation-paperclip",
+      "targetName": "Under Operation Paperclip"
+    },
     "people:townsend-brown": {
       "sourceCategory": "people",
       "sourceId": "people:townsend-brown",
@@ -4823,6 +5408,14 @@
       "targetCategory": "companies",
       "targetId": "people:technology-group",
       "targetName": "Trump Media and Technology Group"
+    },
+    "people:under-operation-paperclip": {
+      "sourceCategory": "people",
+      "sourceId": "people:under-operation-paperclip",
+      "sourceName": "Under Operation Paperclip",
+      "targetCategory": "professors",
+      "targetId": "professors:under-operation-paperclip",
+      "targetName": "Under Operation Paperclip"
     },
     "people:under-trump": {
       "sourceCategory": "people",
@@ -5128,6 +5721,14 @@
       "targetId": "people:applications-program",
       "targetName": "Applications Program"
     },
+    "politicians:as-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:as-reid",
+      "sourceName": "As Reid",
+      "targetCategory": "professors",
+      "targetId": "professors:as-reid",
+      "targetName": "As Reid"
+    },
     "politicians:at-congress": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:at-congress",
@@ -5168,13 +5769,37 @@
       "targetId": "people:cosmic-agenda",
       "targetName": "Cosmic Agenda"
     },
+    "politicians:dr-eric-davis": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
     "politicians:eric-davis": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:eric-davis",
       "sourceName": "Eric Davis",
-      "targetCategory": "friendly_people",
-      "targetId": "friendly_people:eric-davis",
-      "targetName": "Eric Davis"
+      "targetCategory": "people",
+      "targetId": "people:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "politicians:harry-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:harry-reid",
+      "sourceName": "Harry Reid",
+      "targetCategory": "journalists",
+      "targetId": "journalists:harry-reid",
+      "targetName": "Harry Reid"
+    },
+    "politicians:j-allen-hynek": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "journalists",
+      "targetId": "journalists:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
     },
     "politicians:jimmy-carter": {
       "sourceCategory": "politicians",
@@ -5184,6 +5809,22 @@
       "targetId": "people:jimmy-carter",
       "targetName": "Jimmy Carter"
     },
+    "politicians:operation-paperclip": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:operation-paperclip",
+      "sourceName": "Operation Paperclip",
+      "targetCategory": "journalists",
+      "targetId": "journalists:operation-paperclip",
+      "targetName": "Operation Paperclip"
+    },
+    "politicians:project-blue-book": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:project-blue-book",
+      "targetName": "Project Blue Book"
+    },
     "politicians:s-house": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:s-house",
@@ -5191,6 +5832,30 @@
       "targetCategory": "experiencers",
       "targetId": "experiencers:s-house",
       "targetName": "S. House"
+    },
+    "politicians:senator-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:senator-reid",
+      "sourceName": "Senator Reid",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:senator-reid",
+      "targetName": "Senator Reid"
+    },
+    "politicians:senators-harry-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:senators-harry-reid",
+      "sourceName": "Senators Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senators-reid",
+      "targetName": "Senators Reid"
+    },
+    "politicians:senators-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:senators-reid",
+      "sourceName": "Senators Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:while-senator-harry-reid",
+      "targetName": "While Senator Harry Reid"
     },
     "politicians:special-investigations": {
       "sourceCategory": "politicians",
@@ -5216,6 +5881,14 @@
       "targetId": "people:washington-post",
       "targetName": "Washington Post"
     },
+    "politicians:while-senator-harry-reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:while-senator-harry-reid",
+      "sourceName": "While Senator Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:as-reid",
+      "targetName": "As Reid"
+    },
     "politicians:whitley-strieber": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:whitley-strieber",
@@ -5231,6 +5904,30 @@
       "targetCategory": "experiencers",
       "targetId": "experiencers:aleister-crowley",
       "targetName": "Aleister Crowley"
+    },
+    "professors:american-museum": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:american-museum",
+      "sourceName": "American Museum",
+      "targetCategory": "people",
+      "targetId": "people:american-museum",
+      "targetName": "American Museum"
+    },
+    "professors:as-reid": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:as-reid",
+      "sourceName": "As Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senator-harry-reid",
+      "targetName": "Senator Harry Reid"
+    },
+    "professors:aviation-medicine": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:aviation-medicine",
+      "sourceName": "Aviation Medicine",
+      "targetCategory": "people",
+      "targetId": "people:aviation-medicine",
+      "targetName": "Aviation Medicine"
     },
     "professors:because-kuhn": {
       "sourceCategory": "professors",
@@ -5255,6 +5952,14 @@
       "targetCategory": "people",
       "targetId": "people:or-oxler",
       "targetName": "Or Oxler"
+    },
+    "professors:c-in-las-vegas": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:c-in-las-vegas",
+      "sourceName": "C. In Las Vegas",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:in-las-vegas",
+      "targetName": "In Las Vegas"
     },
     "professors:carl-grillmayer": {
       "sourceCategory": "professors",
@@ -5287,6 +5992,14 @@
       "targetCategory": "experiencers",
       "targetId": "experiencers:chris-bledsoe",
       "targetName": "Chris Bledsoe"
+    },
+    "professors:close-encounter": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:close-encounter",
+      "sourceName": "Close Encounter",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:close-encounter",
+      "targetName": "Close Encounter"
     },
     "professors:condon-report": {
       "sourceCategory": "document_names",
@@ -5336,6 +6049,14 @@
       "targetId": "people:david-spurgle",
       "targetName": "David Spurgle"
     },
+    "professors:democrat-senator-harry-reid": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:democrat-senator-harry-reid",
+      "sourceName": "Democrat Senator Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senators-harry-reid",
+      "targetName": "Senators Harry Reid"
+    },
     "professors:diana-pasolka": {
       "sourceCategory": "professors",
       "sourceId": "professors:diana-pasolka",
@@ -5351,6 +6072,22 @@
       "targetCategory": "people",
       "targetId": "people:diana-pasolka",
       "targetName": "Diana Pasolka"
+    },
+    "professors:dr-eric-davis": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "journalists",
+      "targetId": "journalists:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "professors:dr-hal-puthoff": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:dr-hal-puthoff",
+      "sourceName": "Dr Hal Puthoff",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
     },
     "professors:edward-teller": {
       "sourceCategory": "professors",
@@ -5383,6 +6120,14 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:eric-hazeltine",
       "targetName": "Eric Hazeltine"
+    },
+    "professors:experimental-station": {
+      "sourceCategory": "locations",
+      "sourceId": "professors:experimental-station",
+      "sourceName": "Experimental Station",
+      "targetCategory": "government_agencies",
+      "targetId": "people:aviation-medicine",
+      "targetName": "German Experimental Station for Aviation Medicine"
     },
     "professors:filippo-biondi": {
       "sourceCategory": "professors",
@@ -5424,6 +6169,22 @@
       "targetId": "people:hal-putoff",
       "targetName": "Hal Putoff"
     },
+    "professors:harold-puthoff": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:harold-puthoff",
+      "sourceName": "Harold Puthoff",
+      "targetCategory": "people",
+      "targetId": "people:dr-hal-puthoff-davis",
+      "targetName": "Dr Hal Puthoff Davis"
+    },
+    "professors:j-allen-hynek": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "people",
+      "targetId": "people:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
+    },
     "professors:jacques-vallee": {
       "sourceCategory": "professors",
       "sourceId": "professors:jacques-vallee",
@@ -5440,6 +6201,14 @@
       "targetId": "people:except-john-olson-lear",
       "targetName": "Except John Olson Lear"
     },
+    "professors:las-vegas-sun": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:las-vegas-sun",
+      "sourceName": "Las Vegas Sun",
+      "targetCategory": "people",
+      "targetId": "people:in-las-vegas",
+      "targetName": "In Las Vegas"
+    },
     "professors:major-general-dr": {
       "sourceCategory": "professors",
       "sourceId": "professors:major-general-dr",
@@ -5448,6 +6217,14 @@
       "targetId": "professors:walter-schreiber",
       "targetName": "Walter Schreiber"
     },
+    "professors:natural-history": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:natural-history",
+      "sourceName": "Natural History",
+      "targetCategory": "people",
+      "targetId": "people:natural-history",
+      "targetName": "Natural History"
+    },
     "professors:nevada-test-site": {
       "sourceCategory": "professors",
       "sourceId": "professors:nevada-test-site",
@@ -5455,6 +6232,14 @@
       "targetCategory": "whistleblowers",
       "targetId": "whistleblowers:nevada-test-site",
       "targetName": "Nevada Test Site"
+    },
+    "professors:new-zealand": {
+      "sourceCategory": "locations",
+      "sourceId": "professors:new-zealand",
+      "sourceName": "New Zealand",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:new-zealand",
+      "targetName": "New Zealand"
     },
     "professors:nobel-prize": {
       "sourceCategory": "professors",
@@ -5471,6 +6256,30 @@
       "targetCategory": "dangerous_people",
       "targetId": "dangerous_people:nuno-lurero",
       "targetName": "Nuno Lurero"
+    },
+    "professors:operation-paperclip": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:operation-paperclip",
+      "sourceName": "Operation Paperclip",
+      "targetCategory": "politicians",
+      "targetId": "politicians:operation-paperclip",
+      "targetName": "Operation Paperclip"
+    },
+    "professors:project-blue-book": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:project-blue-book",
+      "targetName": "Project Blue Book"
+    },
+    "professors:randolph-field": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:randolph-field",
+      "sourceName": "Randolph Field",
+      "targetCategory": "people",
+      "targetId": "people:randolph-field",
+      "targetName": "Randolph Field"
     },
     "professors:roswell-incident": {
       "sourceCategory": "events",
@@ -5504,6 +6313,22 @@
       "targetId": "dangerous_people:special-investigations",
       "targetName": "Special Investigations"
     },
+    "professors:theodor-benzinger": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:theodor-benzinger",
+      "sourceName": "Theodor Benzinger",
+      "targetCategory": "people",
+      "targetId": "people:theodor-benzinger",
+      "targetName": "Theodor Benzinger"
+    },
+    "professors:theodor-h-benzinger": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:theodor-h-benzinger",
+      "sourceName": "Theodor H. Benzinger",
+      "targetCategory": "people",
+      "targetId": "people:doctors-theodor-benzinger",
+      "targetName": "Doctors Theodor Benzinger"
+    },
     "professors:thomas-townsend-brown": {
       "sourceCategory": "professors",
       "sourceId": "professors:thomas-townsend-brown",
@@ -5519,6 +6344,14 @@
       "targetCategory": "people",
       "targetId": "people:thomas-kuhn",
       "targetName": "Thomas Kuhn"
+    },
+    "professors:under-operation-paperclip": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:under-operation-paperclip",
+      "sourceName": "Under Operation Paperclip",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:under-operation-paperclip",
+      "targetName": "Under Operation Paperclip"
     },
     "professors:walter-schreiber": {
       "sourceCategory": "professors",
@@ -5616,6 +6449,14 @@
       "targetId": "universities:stanford-university",
       "targetName": "Stanford University"
     },
+    "universities:theodor-benzinger-duke-university": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:theodor-benzinger-duke-university",
+      "sourceName": "Theodor Benzinger Duke University",
+      "targetCategory": "professors",
+      "targetId": "professors:theodor-benzinger-paul",
+      "targetName": "Theodor Benzinger Paul"
+    },
     "websites:5-consciousness": {
       "sourceCategory": "websites",
       "sourceId": "websites:5-consciousness",
@@ -5656,6 +6497,14 @@
       "targetId": "people:dave-grush",
       "targetName": "Dave Grush"
     },
+    "whistleblowers:dr-puthoff": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:dr-puthoff",
+      "sourceName": "Dr Puthoff",
+      "targetCategory": "professors",
+      "targetId": "professors:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
+    },
     "whistleblowers:eagle-works": {
       "sourceCategory": "whistleblowers",
       "sourceId": "whistleblowers:eagle-works",
@@ -5679,6 +6528,22 @@
       "targetCategory": "people",
       "targetId": "people:george-adamski",
       "targetName": "George Adamski"
+    },
+    "whistleblowers:in-california": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:in-california",
+      "sourceName": "In California",
+      "targetCategory": "people",
+      "targetId": "people:in-california",
+      "targetName": "In California"
+    },
+    "whistleblowers:j-allen-hynek": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "friendly_people",
+      "targetId": "friendly_people:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
     },
     "whistleblowers:jacques-vallee": {
       "sourceCategory": "whistleblowers",
@@ -5712,6 +6577,14 @@
       "targetId": "people:philip-j-corso",
       "targetName": "Philip J. Corso"
     },
+    "whistleblowers:project-blue-book": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "journalists",
+      "targetId": "journalists:project-blue-book",
+      "targetName": "Project Blue Book"
+    },
     "whistleblowers:researcher-ashton-forbes": {
       "sourceCategory": "whistleblowers",
       "sourceId": "whistleblowers:researcher-ashton-forbes",
@@ -5720,6 +6593,14 @@
       "targetId": "people:ashton-forbes",
       "targetName": "Ashton Forbes"
     },
+    "whistleblowers:robert-hastings": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:robert-hastings",
+      "sourceName": "Robert Hastings",
+      "targetCategory": "people",
+      "targetId": "people:robert-hastings-book",
+      "targetName": "Robert Hastings Book"
+    },
     "whistleblowers:robert-lazar": {
       "sourceCategory": "whistleblowers",
       "sourceId": "whistleblowers:robert-lazar",
@@ -5727,6 +6608,14 @@
       "targetCategory": "whistleblowers",
       "targetId": "whistleblowers:bob-lazar",
       "targetName": "Bob Lazar"
+    },
+    "whistleblowers:senator-reid": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:senator-reid",
+      "sourceName": "Senator Reid",
+      "targetCategory": "journalists",
+      "targetId": "journalists:senator-reid",
+      "targetName": "Senator Reid"
     },
     "whistleblowers:sergeant-sherman": {
       "sourceCategory": "whistleblowers",
@@ -5914,6 +6803,22 @@
       "targetId": "chemical_elements:aluminum",
       "targetName": "aluminum"
     },
+    "american museum": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:american-museum",
+      "sourceName": "American Museum",
+      "targetCategory": "institutes",
+      "targetId": "experiencers:natural-history",
+      "targetName": "American Museum of Natural History"
+    },
+    "american museum of natural history": {
+      "sourceCategory": "people",
+      "sourceId": "people:natural-history",
+      "sourceName": "American Museum of Natural History",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:natural-history",
+      "targetName": "Natural History"
+    },
     "american orthodox catholic": {
       "sourceCategory": "people",
       "sourceId": "people:american-orthodox-catholic",
@@ -5986,6 +6891,22 @@
       "targetId": "research_groups:advanced-aerospace-weapon-system-applications-program",
       "targetName": "Advanced Aerospace Weapon System Applications Program"
     },
+    "army air force": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:army-air-force",
+      "sourceName": "Army Air Force",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:s-army-air-force",
+      "targetName": "S. Army Air Force"
+    },
+    "army air forces": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:army-air-forces",
+      "sourceName": "Army Air Forces",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:army-air-force",
+      "targetName": "Army Air Force"
+    },
     "army air forces aero": {
       "sourceCategory": "government_agencies",
       "sourceId": "government_agencies:army-air-forces-aero",
@@ -6002,6 +6923,14 @@
       "targetId": "government_agencies:u-s-army",
       "targetName": "United States Army"
     },
+    "as reid": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:as-reid",
+      "sourceName": "As Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senator-harry-reid",
+      "targetName": "Senator Harry Reid"
+    },
     "at congress": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:at-congress",
@@ -6010,6 +6939,14 @@
       "targetId": "government_agencies:united-states-congress",
       "targetName": "United States Congress"
     },
+    "at randolph": {
+      "sourceCategory": "people",
+      "sourceId": "people:at-randolph",
+      "sourceName": "At Randolph",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:randolph-air",
+      "targetName": "Randolph Air"
+    },
     "at wright": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:at-wright",
@@ -6017,6 +6954,14 @@
       "targetCategory": "military_bases",
       "targetId": "military_bases:wright-patterson-air-force-base",
       "targetName": "Wright-Patterson Air Force Base"
+    },
+    "aviation medicine": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:aviation-medicine",
+      "sourceName": "Aviation Medicine",
+      "targetCategory": "people",
+      "targetId": "people:aviation-medicine",
+      "targetName": "Aviation Medicine"
     },
     "baba vanga": {
       "sourceCategory": "people",
@@ -6057,6 +7002,14 @@
       "targetCategory": "people",
       "targetId": "people:battelle-memorial-institute",
       "targetName": "Battelle Memorial Institute"
+    },
+    "because close encounters": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:because-close-encounters",
+      "sourceName": "Because Close Encounters",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:in-close-encounters",
+      "targetName": "In Close Encounters"
     },
     "because dark skies": {
       "sourceCategory": "people",
@@ -6298,6 +7251,22 @@
       "targetId": "people:tim-taylor",
       "targetName": "Tim Taylor"
     },
+    "c in las vegas": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:c-in-las-vegas",
+      "sourceName": "C. In Las Vegas",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:in-las-vegas",
+      "targetName": "In Las Vegas"
+    },
+    "california": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:california",
+      "sourceName": "California",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:in-california",
+      "targetName": "In California"
+    },
     "carl grillmare": {
       "sourceCategory": "people",
       "sourceId": "people:carl-grillmare",
@@ -6379,12 +7348,20 @@
       "targetName": "Charles Manson"
     },
     "chris bledsoe": {
-      "sourceCategory": "people",
-      "sourceId": "people:chris-bledsoe",
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:chris-bledsoe",
       "sourceName": "Chris Bledsoe",
-      "targetCategory": "experiencers",
-      "targetId": "experiencers:chris-bledsoe",
-      "targetName": "Chris Bledsoe"
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-all",
+      "targetName": "Chris Bledsoe All"
+    },
+    "chris bledsoe all": {
+      "sourceCategory": "people",
+      "sourceId": "people:chris-bledsoe-all",
+      "sourceName": "Chris Bledsoe All",
+      "targetCategory": "people",
+      "targetId": "people:chris-bledsoe-copyright",
+      "targetName": "Chris Bledsoe Copyright"
     },
     "chris bledsoe chapter": {
       "sourceCategory": "professors",
@@ -6426,6 +7403,14 @@
       "targetId": "people:civil-air-corps",
       "targetName": "Civil Air Corps"
     },
+    "close encounter": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:close-encounter",
+      "sourceName": "Close Encounter",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:because-close-encounters",
+      "targetName": "Because Close Encounters"
+    },
     "close encounters": {
       "sourceCategory": "movies",
       "sourceId": "movies:close-encounters",
@@ -6446,9 +7431,9 @@
       "sourceCategory": "movies",
       "sourceId": "movies:closer-encounters",
       "sourceName": "Closer Encounters",
-      "targetCategory": "movies",
-      "targetId": "movies:close-encounters",
-      "targetName": "Close Encounters"
+      "targetCategory": "professors",
+      "targetId": "professors:close-encounter",
+      "targetName": "Close Encounter"
     },
     "commander fravor": {
       "sourceCategory": "whistleblowers",
@@ -6730,6 +7715,14 @@
       "targetId": "government_agencies:defence-department",
       "targetName": "Defence Department"
     },
+    "democrat senator harry reid": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:democrat-senator-harry-reid",
+      "sourceName": "Democrat Senator Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senators-harry-reid",
+      "targetName": "Senators Harry Reid"
+    },
     "dia": {
       "sourceCategory": "government_agencies",
       "sourceId": "government_agencies:dia",
@@ -6818,6 +7811,14 @@
       "targetId": "institutes:national-institute-for-discovery-science",
       "targetName": "National Institute for Discovery Science"
     },
+    "doctors theodor benzinger": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:doctors-theodor-benzinger",
+      "sourceName": "Doctors Theodor Benzinger",
+      "targetCategory": "universities",
+      "targetId": "universities:theodor-benzinger-duke-university",
+      "targetName": "Theodor Benzinger Duke University"
+    },
     "dod": {
       "sourceCategory": "government_agencies",
       "sourceId": "government_agencies:dod",
@@ -6898,6 +7899,38 @@
       "targetId": "people:dorit-hofflite",
       "targetName": "Dorit Hofflite"
     },
+    "dr eric davis": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:dr-eric-davis",
+      "sourceName": "Dr Eric Davis",
+      "targetCategory": "whistleblowers",
+      "targetId": "whistleblowers:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
+    },
+    "dr hal puthoff": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:dr-hal-puthoff",
+      "sourceName": "Dr Hal Puthoff",
+      "targetCategory": "journalists",
+      "targetId": "journalists:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
+    },
+    "dr puthoff": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:dr-puthoff",
+      "sourceName": "Dr Puthoff",
+      "targetCategory": "professors",
+      "targetId": "professors:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
+    },
+    "dugway proving ground": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:dugway-proving-ground",
+      "sourceName": "Dugway Proving Ground",
+      "targetCategory": "people",
+      "targetId": "people:nevada-proving-ground",
+      "targetName": "Nevada Proving Ground"
+    },
     "e howard hunt": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:e-howard-hunt",
@@ -6971,12 +8004,12 @@
       "targetName": "Eric Burleson"
     },
     "eric davis": {
-      "sourceCategory": "friendly_people",
-      "sourceId": "friendly_people:eric-davis",
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:eric-davis",
       "sourceName": "Eric Davis",
-      "targetCategory": "politicians",
-      "targetId": "politicians:eric-davis",
-      "targetName": "Eric Davis"
+      "targetCategory": "people",
+      "targetId": "people:dr-eric-davis",
+      "targetName": "Dr Eric Davis"
     },
     "eric hazeltine": {
       "sourceCategory": "professors",
@@ -7017,6 +8050,14 @@
       "targetCategory": "people",
       "targetId": "people:zahi-owas",
       "targetName": "Zahi Owas"
+    },
+    "experimental station": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:experimental-station",
+      "sourceName": "Experimental Station",
+      "targetCategory": "locations",
+      "targetId": "locations:german-experimental-station-for-aviation-medicine",
+      "targetName": "German Experimental Station for Aviation Medicine"
     },
     "filippo biondi": {
       "sourceCategory": "professors",
@@ -7148,11 +8189,11 @@
     },
     "german experimental station for aviation medicine": {
       "sourceCategory": "locations",
-      "sourceId": "professors:german-experimental-station",
+      "sourceId": "locations:german-experimental-station-for-aviation-medicine",
       "sourceName": "German Experimental Station for Aviation Medicine",
-      "targetCategory": "professors",
-      "targetId": "professors:experimental-station",
-      "targetName": "Experimental Station"
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:german-experimental-station-for-aviation-medicine",
+      "targetName": "German Experimental Station for Aviation Medicine"
     },
     "gisa plateau": {
       "sourceCategory": "people",
@@ -7263,8 +8304,8 @@
       "sourceId": "people:hal-putoff",
       "sourceName": "Hal Putoff",
       "targetCategory": "people",
-      "targetId": "people:hal-puthoff",
-      "targetName": "Hal Puthoff"
+      "targetId": "people:dr-hal-puthoff",
+      "targetName": "Dr Hal Puthoff"
     },
     "harold malmgren": {
       "sourceCategory": "people",
@@ -7274,6 +8315,14 @@
       "targetId": "friendly_people:harold-malmgren",
       "targetName": "Harold Malmgren"
     },
+    "harold puthoff": {
+      "sourceCategory": "people",
+      "sourceId": "people:dr-hal-puthoff-davis",
+      "sourceName": "Harold Puthoff",
+      "targetCategory": "people",
+      "targetId": "people:dr-puthoff",
+      "targetName": "Dr Puthoff"
+    },
     "harry hiller": {
       "sourceCategory": "friendly_people",
       "sourceId": "friendly_people:harry-hiller",
@@ -7281,6 +8330,14 @@
       "targetCategory": "people",
       "targetId": "people:harry-hiller",
       "targetName": "Harry Hiller"
+    },
+    "harry reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "journalists:harry-reid",
+      "sourceName": "Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senator-reid",
+      "targetName": "Senator Reid"
     },
     "harvard observatory": {
       "sourceCategory": "university_departments",
@@ -7362,6 +8419,30 @@
       "targetId": "people:israel-puharich",
       "targetName": "Israel Puharich"
     },
+    "in california": {
+      "sourceCategory": "locations",
+      "sourceId": "people:in-california",
+      "sourceName": "In California",
+      "targetCategory": "professors",
+      "targetId": "professors:in-california",
+      "targetName": "In California"
+    },
+    "in close encounters": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:in-close-encounters",
+      "sourceName": "In Close Encounters",
+      "targetCategory": "movies",
+      "targetId": "movies:close-encounters",
+      "targetName": "Close Encounters"
+    },
+    "in las vegas": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:in-las-vegas",
+      "sourceName": "In Las Vegas",
+      "targetCategory": "professors",
+      "targetId": "professors:las-vegas-sun",
+      "targetName": "Las Vegas Sun"
+    },
     "in new mexico": {
       "sourceCategory": "people",
       "sourceId": "people:in-new-mexico",
@@ -7401,6 +8482,14 @@
       "targetCategory": "people",
       "targetId": "people:israeli-puharich",
       "targetName": "Israeli Puharich"
+    },
+    "j allen hynek": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:j-allen-hynek",
+      "sourceName": "J. Allen Hynek",
+      "targetCategory": "journalists",
+      "targetId": "journalists:j-allen-hynek",
+      "targetName": "J. Allen Hynek"
     },
     "jack martin": {
       "sourceCategory": "people",
@@ -7658,6 +8747,30 @@
       "targetId": "friendly_people:korean-war",
       "targetName": "Korean War"
     },
+    "las vegas": {
+      "sourceCategory": "locations",
+      "sourceId": "locations:las-vegas",
+      "sourceName": "Las Vegas",
+      "targetCategory": "people",
+      "targetId": "people:las-vegas-strip",
+      "targetName": "Las Vegas Strip"
+    },
+    "las vegas strip": {
+      "sourceCategory": "people",
+      "sourceId": "people:las-vegas-strip",
+      "sourceName": "Las Vegas Strip",
+      "targetCategory": "professors",
+      "targetId": "professors:c-in-las-vegas",
+      "targetName": "C. In Las Vegas"
+    },
+    "las vegas sun": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:las-vegas-sun",
+      "sourceName": "Las Vegas Sun",
+      "targetCategory": "people",
+      "targetId": "people:in-las-vegas",
+      "targetName": "In Las Vegas"
+    },
     "lawrence preston geis": {
       "sourceCategory": "people",
       "sourceId": "people:lawrence-preston-geis",
@@ -7667,12 +8780,12 @@
       "targetName": "Lawrence Preston Geist"
     },
     "lee harvey oswald": {
-      "sourceCategory": "friendly_people",
-      "sourceId": "friendly_people:lee-harvey-oswald",
+      "sourceCategory": "people",
+      "sourceId": "people:lee-harvey-oswald",
       "sourceName": "Lee Harvey Oswald",
       "targetCategory": "people",
-      "targetId": "people:lee-harvey-oswald",
-      "targetName": "Lee Harvey Oswald"
+      "targetId": "people:lee-harvey-oz",
+      "targetName": "Lee Harvey Oz"
     },
     "lee oswald": {
       "sourceCategory": "people",
@@ -8058,6 +9171,14 @@
       "targetId": "people:national-reconnaissance",
       "targetName": "National Reconnaissance"
     },
+    "natural history": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:natural-history",
+      "sourceName": "Natural History",
+      "targetCategory": "people",
+      "targetId": "people:natural-history",
+      "targetName": "Natural History"
+    },
     "naval research": {
       "sourceCategory": "government_agencies",
       "sourceId": "people:naval-research",
@@ -8066,13 +9187,21 @@
       "targetId": "research_groups:naval-research-lab",
       "targetName": "Naval Research Lab"
     },
+    "nevada proving ground": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:nevada-proving-ground",
+      "sourceName": "Nevada Proving Ground",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:white-sands-proving-grounds",
+      "targetName": "White Sands Proving Grounds"
+    },
     "nevada test site": {
       "sourceCategory": "locations",
-      "sourceId": "whistleblowers:nevada-test-site",
+      "sourceId": "locations:nevada-test-site",
       "sourceName": "Nevada Test Site",
-      "targetCategory": "locations",
-      "targetId": "dangerous_people:nevada-test-site",
-      "targetName": "Nevada Test Site"
+      "targetCategory": "military_bases",
+      "targetId": "military_bases:dugway-proving-ground",
+      "targetName": "Dugway Proving Ground"
     },
     "new york city": {
       "sourceCategory": "people",
@@ -8089,6 +9218,14 @@
       "targetCategory": "newsrooms",
       "targetId": "newsrooms:the-new-york-times",
       "targetName": "the new york times"
+    },
+    "new zealand": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:new-zealand",
+      "sourceName": "New Zealand",
+      "targetCategory": "people",
+      "targetId": "people:new-zealand",
+      "targetName": "New Zealand"
     },
     "nick cook": {
       "sourceCategory": "people",
@@ -8209,6 +9346,14 @@
       "targetCategory": "people",
       "targetId": "people:bluebird-artichoke",
       "targetName": "Bluebird Artichoke"
+    },
+    "operation paperclip": {
+      "sourceCategory": "government_project_codenames",
+      "sourceId": "journalists:operation-paperclip",
+      "sourceName": "Operation Paperclip",
+      "targetCategory": "people",
+      "targetId": "people:top-secret-operation-paperclip",
+      "targetName": "Top Secret Operation Paperclip"
     },
     "orion": {
       "sourceCategory": "constellations",
@@ -8370,6 +9515,14 @@
       "targetId": "people:robert-bigelow",
       "targetName": "Robert Bigelow"
     },
+    "project blue book": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:project-blue-book",
+      "sourceName": "Project Blue Book",
+      "targetCategory": "government_project_codenames",
+      "targetId": "government_project_codenames:project-blue-book",
+      "targetName": "project blue book"
+    },
     "project preserve destiny": {
       "sourceCategory": "people",
       "sourceId": "people:project-preserve-destiny",
@@ -8393,6 +9546,38 @@
       "targetCategory": "friendly_people",
       "targetId": "friendly_people:queen-elizabeth",
       "targetName": "Queen Elizabeth"
+    },
+    "randolph air": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:randolph-air",
+      "sourceName": "Randolph Air",
+      "targetCategory": "professors",
+      "targetId": "professors:randolph-field",
+      "targetName": "Randolph Field"
+    },
+    "randolph air force base": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:randolph-air-force-base",
+      "sourceName": "Randolph Air Force Base",
+      "targetCategory": "military_bases",
+      "targetId": "military_bases:randolph-air-force-bases",
+      "targetName": "Randolph Air Force Bases"
+    },
+    "randolph air force bases": {
+      "sourceCategory": "military_bases",
+      "sourceId": "military_bases:randolph-air-force-bases",
+      "sourceName": "Randolph Air Force Bases",
+      "targetCategory": "people",
+      "targetId": "people:at-randolph",
+      "targetName": "At Randolph"
+    },
+    "randolph field": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:randolph-field",
+      "sourceName": "Randolph Field",
+      "targetCategory": "people",
+      "targetId": "people:randolph-field",
+      "targetName": "Randolph Field"
     },
     "remember eric weinstein": {
       "sourceCategory": "people",
@@ -8441,6 +9626,22 @@
       "targetCategory": "people",
       "targetId": "people:robert-f-kennedy",
       "targetName": "Robert F. Kennedy"
+    },
+    "robert hastings": {
+      "sourceCategory": "whistleblowers",
+      "sourceId": "whistleblowers:robert-hastings",
+      "sourceName": "Robert Hastings",
+      "targetCategory": "people",
+      "targetId": "people:robert-hastings-book",
+      "targetName": "Robert Hastings Book"
+    },
+    "robert hastings book": {
+      "sourceCategory": "people",
+      "sourceId": "people:robert-hastings-book",
+      "sourceName": "Robert Hastings Book",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:robert-l-hastings",
+      "targetName": "Robert L. Hastings"
     },
     "robert lazar": {
       "sourceCategory": "whistleblowers",
@@ -8602,6 +9803,14 @@
       "targetId": "people:s-army",
       "targetName": "S. Army"
     },
+    "s army air forces": {
+      "sourceCategory": "government_agencies",
+      "sourceId": "government_agencies:s-army-air-forces",
+      "sourceName": "S. Army Air Forces",
+      "targetCategory": "government_agencies",
+      "targetId": "government_agencies:army-air-forces",
+      "targetName": "Army Air Forces"
+    },
     "s house": {
       "sourceCategory": "politicians",
       "sourceId": "politicians:s-house",
@@ -8665,6 +9874,30 @@
       "targetCategory": "government_agencies",
       "targetId": "government_agencies:national-security-agency",
       "targetName": "National Security Agency"
+    },
+    "senator reid": {
+      "sourceCategory": "journalists",
+      "sourceId": "journalists:senator-reid",
+      "sourceName": "Senator Reid",
+      "targetCategory": "professors",
+      "targetId": "professors:democrat-senator-harry-reid",
+      "targetName": "Democrat Senator Harry Reid"
+    },
+    "senators harry reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:senators-harry-reid",
+      "sourceName": "Senators Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:senators-reid",
+      "targetName": "Senators Reid"
+    },
+    "senators reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:senators-reid",
+      "sourceName": "Senators Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:while-senator-harry-reid",
+      "targetName": "While Senator Harry Reid"
     },
     "sergeant sherman": {
       "sourceCategory": "whistleblowers",
@@ -8962,6 +10195,14 @@
       "targetId": "people:sonny-white",
       "targetName": "Sonny White"
     },
+    "southern california": {
+      "sourceCategory": "friendly_people",
+      "sourceId": "friendly_people:southern-california",
+      "sourceName": "Southern California",
+      "targetCategory": "experiencers",
+      "targetId": "experiencers:southern-california",
+      "targetName": "Southern California"
+    },
     "special investigations": {
       "sourceCategory": "experiencers",
       "sourceId": "experiencers:special-investigations",
@@ -9066,6 +10307,30 @@
       "targetId": "government_agencies:uap-task-force",
       "targetName": "UAP task force"
     },
+    "theodor benzinger": {
+      "sourceCategory": "people",
+      "sourceId": "people:theodor-benzinger",
+      "sourceName": "Theodor Benzinger",
+      "targetCategory": "professors",
+      "targetId": "professors:theodor-h-benzinger",
+      "targetName": "Theodor H. Benzinger"
+    },
+    "theodor benzinger duke university": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:theodor-benzinger-duke-university",
+      "sourceName": "Theodor Benzinger Duke University",
+      "targetCategory": "professors",
+      "targetId": "professors:theodor-benzinger-paul",
+      "targetName": "Theodor Benzinger Paul"
+    },
+    "theodor h benzinger": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:theodor-h-benzinger",
+      "sourceName": "Theodor H. Benzinger",
+      "targetCategory": "people",
+      "targetId": "people:doctors-theodor-benzinger",
+      "targetName": "Doctors Theodor Benzinger"
+    },
     "there is consciousness knowing": {
       "sourceCategory": "people",
       "sourceId": "people:there-is-consciousness-knowing",
@@ -9138,6 +10403,14 @@
       "targetId": "people:tim-taylor",
       "targetName": "Tim Taylor"
     },
+    "top secret operation paperclip": {
+      "sourceCategory": "people",
+      "sourceId": "people:top-secret-operation-paperclip",
+      "sourceName": "Top Secret Operation Paperclip",
+      "targetCategory": "people",
+      "targetId": "people:under-operation-paperclip",
+      "targetName": "Under Operation Paperclip"
+    },
     "townsend brown": {
       "sourceCategory": "people",
       "sourceId": "people:townsend-brown",
@@ -9177,6 +10450,14 @@
       "targetCategory": "government_agencies",
       "targetId": "government_agencies:united-states-navy",
       "targetName": "united states navy"
+    },
+    "under operation paperclip": {
+      "sourceCategory": "professors",
+      "sourceId": "professors:under-operation-paperclip",
+      "sourceName": "Under Operation Paperclip",
+      "targetCategory": "likely_spies",
+      "targetId": "likely_spies:under-operation-paperclip",
+      "targetName": "Under Operation Paperclip"
     },
     "under trump": {
       "sourceCategory": "people",
@@ -9378,6 +10659,22 @@
       "targetId": "people:boris-yeltsin",
       "targetName": "Boris Yeltsin"
     },
+    "while senator harry reid": {
+      "sourceCategory": "politicians",
+      "sourceId": "politicians:while-senator-harry-reid",
+      "sourceName": "While Senator Harry Reid",
+      "targetCategory": "politicians",
+      "targetId": "politicians:as-reid",
+      "targetName": "As Reid"
+    },
+    "white sands proving grounds": {
+      "sourceCategory": "experiencers",
+      "sourceId": "experiencers:white-sands-proving-grounds",
+      "sourceName": "White Sands Proving Grounds",
+      "targetCategory": "professors",
+      "targetId": "professors:white-sands-proving-grounds",
+      "targetName": "White Sands Proving Grounds"
+    },
     "whitley strieber": {
       "sourceCategory": "professors",
       "sourceId": "professors:whitley-strieber",
@@ -9543,6 +10840,7 @@
     "american airlines flight": "companies",
     "american cosmic": "books",
     "american establishment": "books",
+    "american museum of natural history": "institutes",
     "american psychic spy program": "government_agencies",
     "american silver shirts": "politicians",
     "american world power": "books",
@@ -9560,6 +10858,7 @@
     "atomic energy act": "document_names",
     "atomic energy authority": "government_agencies",
     "atomic energy commission": "government_agencies",
+    "aviation medicine": "government_agencies",
     "babcock street": "locations",
     "baghdad phantom": "events",
     "bahamas basin": "locations",
@@ -9597,8 +10896,10 @@
     "bureau of public standards": "government_agencies",
     "byfield brown": "theories",
     "byfield brown effect": "theories",
+    "california": "locations",
     "cambridge": "locations",
     "camp david": "military_bases",
+    "camp king": "military_bases",
     "camp street": "locations",
     "canis major": "star_systems",
     "cape canaveral": "locations",
@@ -9641,6 +10942,7 @@
     "development centers": "research_groups",
     "dimensional capacity": "emerging_terminology",
     "disclosure day": "movies",
+    "discovery channel": "tv_shows",
     "disney imagineering": "companies",
     "donald j trump": "politicians",
     "donald j. trump": "politicians",
@@ -9652,10 +10954,12 @@
     "east bay": "locations",
     "east coast": "locations",
     "edwards 412th test wing": "military_bases",
+    "el paso": "locations",
     "electrostatic society": "institutes",
     "elon musk": "people",
     "energy intelligence": "government_agencies",
     "exceptional scientific achievement medal": "document_names",
+    "experimental station": "locations",
     "explore mars foundation": "nonprofits",
     "extra low frequency": "emerging_terminology",
     "false memory syndrome foundation": "medical_conditions",
@@ -9684,6 +10988,7 @@
     "george h.w. bush": "politicians",
     "george knapp": "journalists",
     "german democratic republic": "locations",
+    "german experimental station for aviation medicin": "government_agencies",
     "german experimental station for aviation medicine": "locations",
     "gibb street": "locations",
     "giza plateau": "locations",
@@ -9710,9 +11015,12 @@
     "holy alliance": "books",
     "holy mountain": "locations",
     "house oversight committee": "government_agencies",
+    "in california": "locations",
     "in cambridge": "locations",
     "in enoch": "books",
     "in january": "dates_times",
+    "in las vegas": "locations",
+    "in ohio": "locations",
     "in portsmouth": "locations",
     "in september": "dates_times",
     "in switzerland": "locations",
@@ -9721,8 +11029,10 @@
     "indian ocean": "locations",
     "indian serpent mound": "locations",
     "indian springs valley": "locations",
+    "indigenous humanoids": "alien_species",
     "information act": "document_names",
     "instituto superior": "universities",
+    "j. allen hynek": "people",
     "jack ruby": "people",
     "jackass flats": "locations",
     "jacques vall e": "authors",
@@ -9804,6 +11114,7 @@
     "new year": "dates_times",
     "new york": "locations",
     "new york city": "locations",
+    "new zealand": "locations",
     "next generation non": "emerging_terminology",
     "nicobar islands": "locations",
     "ninth gate": "movies",
@@ -9815,6 +11126,7 @@
     "nuno lurero": "people",
     "oak ridge": "locations",
     "october 30, 1993": "dates_times",
+    "ohio": "locations",
     "old testament": "religious_texts",
     "on december": "dates_times",
     "on march": "dates_times",
@@ -9827,6 +11139,7 @@
     "operation high jump": "government_project_codenames",
     "operation midnight climax": "government_project_codenames",
     "operation often": "government_project_codenames",
+    "operation paperclip": "government_project_codenames",
     "operation prado": "government_project_codenames",
     "operation snow white": "government_project_codenames",
     "orion empire": "alien_species",
@@ -9836,6 +11149,7 @@
     "palmdale station jail": "locations",
     "palomar observatory": "institutes",
     "pam bondi": "politicians",
+    "papua new guinea": "locations",
     "patuxent river": "military_bases",
     "pentagon papers": "leaks",
     "persinger god": "technology",
@@ -9859,12 +11173,15 @@
     "president obama": "politicians",
     "presidential early career award": "document_names",
     "project aquarius": "government_project_codenames",
+    "project blue book": "government_project_codenames",
     "project dauphin": "government_project_codenames",
     "project orion": "government_project_codenames",
     "project preserve destiny": "government_project_codenames",
     "public standards": "government_agencies",
     "puget sound": "locations",
     "rand corporation": "companies",
+    "randolph air force base": "military_bases",
+    "randolph field": "military_bases",
     "raytheon triangle": "technology",
     "resolute sentinel": "government_project_codenames",
     "revolutionary fund": "companies",
@@ -9919,6 +11236,7 @@
     "south china sea": "locations",
     "south dakota": "locations",
     "south haven": "locations",
+    "southern california": "locations",
     "soviet union": "locations",
     "space force": "government_agencies",
     "space kids": "locations",
@@ -9963,7 +11281,9 @@
     "u.s. house of representatives": "government_agencies",
     "uinta basin": "locations",
     "unclassified logistic support facility": "locations",
+    "under operation paperclip": "government_project_codenames",
     "united nations": "government_agencies",
+    "united nuclear": "companies",
     "united states congress": "government_agencies",
     "united states president": "politicians",
     "united states space force": "government_agencies",
@@ -9986,6 +11306,7 @@
     "when roswell": "locations",
     "when september": "dates_times",
     "white house": "government_agencies",
+    "white sands proving grounds": "military_bases",
     "whitley strieber": "experiencers",
     "wild pendulum": "books",
     "world bank": "companies",
@@ -9997,7 +11318,9 @@
     "york city": "locations",
     "your game girl": "books",
     "zora ranch": "locations",
-    "zorro ranch": "locations"
+    "zorro ranch": "locations",
+    "natural history": "institutes",
+    "j allen hynek": "people"
   },
   "note": "Replace data/reclass.json with this file before rebuilding.",
   "notes": {},
@@ -10015,10 +11338,12 @@
     "experiencers:had-lazar": "whistleblowers",
     "experiencers:john-alexander": "people",
     "experiencers:lockheed-martin": "contractors",
+    "experiencers:natural-history": "institutes",
     "experiencers:phoenix-lights": "events",
     "experiencers:ross-goldhart": "journalists",
     "experiencers:s-house": "government_agencies",
     "experiencers:secret-life": "books",
+    "experiencers:southern-california": "locations",
     "experiencers:steven-spielberg": "directors",
     "experiencers:thomas-townsend-brown": "people",
     "frequencies:extra-low-frequency": "emerging_terminology",
@@ -10053,6 +11378,7 @@
     "friendly_people:weimar-germany": "locations",
     "government_agencies:consciousness-department-it": "key_terms",
     "government_project_codenames:sentient": "key_terms",
+    "journalists:j-allen-hynek": "people",
     "journalists:special-investigations": "government_agencies",
     "likely_spies:american-psychic-spy-program": "government_agencies",
     "likely_spies:crescenta-valley-station": "locations",
@@ -10062,6 +11388,7 @@
     "likely_spies:palmdale-station-jail": "locations",
     "likely_spies:richard-bissell": "people",
     "likely_spies:saddam-hussein": "dangerous_people",
+    "likely_spies:under-operation-paperclip": "government_project_codenames",
     "people:aaro-historical-report": "document_names",
     "people:above-top-secret": "books",
     "people:acquisition-technology": "government_agencies",
@@ -10081,6 +11408,7 @@
     "people:ashbury-free-medical-clinic": "locations",
     "people:at-groom-lake": "locations",
     "people:atomic-energy-act": "document_names",
+    "people:aviation-medicine": "government_agencies",
     "people:babcock-street": "locations",
     "people:baghdad-phantom": "events",
     "people:baltic-sea": "locations",
@@ -10130,6 +11458,7 @@
     "people:der-spiegel": "newsrooms",
     "people:dimensional-capacity": "emerging_terminology",
     "people:disclosure-day": "movies",
+    "people:discovery-channel": "tv_shows",
     "people:donald-j-trump": "politicians",
     "people:dragon-dracs": "alien_species",
     "people:dugway-proving-ground": "military_bases",
@@ -10178,6 +11507,8 @@
     "people:in-cambridge": "locations",
     "people:in-enoch": "books",
     "people:in-january": "dates_times",
+    "people:in-las-vegas": "locations",
+    "people:in-ohio": "locations",
     "people:in-portsmouth": "locations",
     "people:in-september": "dates_times",
     "people:in-switzerland": "locations",
@@ -10185,6 +11516,7 @@
     "people:indian-ocean": "locations",
     "people:indian-serpent-mound": "locations",
     "people:indian-springs-valley": "locations",
+    "people:indigenous-humanoids": "alien_species",
     "people:information-act": "document_names",
     "people:instituto-superior": "universities",
     "people:janet-airlines": "government_agencies",
@@ -10235,6 +11567,7 @@
     "people:new-testament": "religious_texts",
     "people:new-year": "dates_times",
     "people:new-york": "locations",
+    "people:new-zealand": "locations",
     "people:next-generation-non": "emerging_terminology",
     "people:ninth-gate": "movies",
     "people:nobel-prize": "institutes",
@@ -10277,6 +11610,7 @@
     "people:project-dauphin": "government_project_codenames",
     "people:puget-sound": "locations",
     "people:rand-corporation": "companies",
+    "people:randolph-field": "military_bases",
     "people:raytheon-triangle": "technology",
     "people:resolute-sentinel": "government_project_codenames",
     "people:revolutionary-fund": "companies",
@@ -10335,6 +11669,7 @@
     "people:truth-social": "companies",
     "people:uinta-basin": "locations",
     "people:unclassified-logistic-support-facility": "locations",
+    "people:united-nuclear": "companies",
     "people:united-states-president": "politicians",
     "people:vajrayana-buddhism": "religious_texts",
     "people:vandenberg-air-force-base": "military_bases",
@@ -10366,20 +11701,25 @@
     "professors:aero-medical": "government_agencies",
     "professors:atomic-energy-authority": "government_agencies",
     "professors:bill-moore": "people",
+    "professors:camp-king": "military_bases",
     "professors:condon-committee": "government_agencies",
     "professors:disney-imagineering": "companies",
+    "professors:el-paso": "locations",
     "professors:elon-musk": "people",
     "professors:groom-lake-road": "locations",
+    "professors:in-california": "locations",
     "professors:jackass-flats": "locations",
     "professors:jacques-vall-e": "authors",
     "professors:medical-research": "research_groups",
     "professors:nazi-germany": "locations",
     "professors:north-carolina-chapel-hill": "universities",
+    "professors:papua-new-guinea": "locations",
     "professors:ross-coldhart": "journalists",
     "professors:simons-foundation": "companies",
     "professors:space-science": "university_departments",
     "professors:stanford-research-institute": "research_groups",
     "professors:travis-walton": "experiencers",
+    "professors:white-sands-proving-grounds": "military_bases",
     "professors:zora-ranch": "locations",
     "research_groups:aawsap": "government_agencies",
     "research_groups:advanced-aerospace-threat-identification-program": "government_agencies",
@@ -10387,11 +11727,48 @@
     "research_groups:naval-research-lab": "government_project_codenames",
     "universities:berkeley": "locations",
     "universities:kennedy-school": "university_departments",
+    "whistleblowers:california": "locations",
     "whistleblowers:george-knapp": "journalists",
     "whistleblowers:jeremy-corbell": "people",
     "whistleblowers:nicobar-islands": "locations",
+    "whistleblowers:project-blue-book": "government_project_codenames",
     "whistleblowers:whitley-strieber": "experiencers"
   },
-  "removedMerges": {},
-  "removedNameMerges": {}
+  "removedManualRelationships": {},
+  "removedMerges": {
+    "universities:harvard-medical-school": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:harvard-medical-school",
+      "sourceName": "Harvard Medical School",
+      "targetCategory": "universities",
+      "targetId": "universities:at-harvard-medical-school",
+      "targetName": "At Harvard Medical School"
+    },
+    "universities:harvard-university": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:harvard-university",
+      "sourceName": "Harvard University",
+      "targetCategory": "universities",
+      "targetId": "universities:harvard-college",
+      "targetName": "Harvard College"
+    }
+  },
+  "removedNameMerges": {
+    "harvard medical school": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:harvard-medical-school",
+      "sourceName": "Harvard Medical School",
+      "targetCategory": "universities",
+      "targetId": "universities:at-harvard-medical-school",
+      "targetName": "At Harvard Medical School"
+    },
+    "harvard university": {
+      "sourceCategory": "universities",
+      "sourceId": "universities:harvard-university",
+      "sourceName": "Harvard University",
+      "targetCategory": "universities",
+      "targetId": "universities:harvard-college",
+      "targetName": "Harvard College"
+    }
+  }
 }

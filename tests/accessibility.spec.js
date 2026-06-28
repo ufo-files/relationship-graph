@@ -186,3 +186,38 @@ test("merge duplicate target is selected through search results", async ({ page 
   await expect(roswell).toHaveAttribute("aria-pressed", "true");
   await expect(mergeButton).toBeEnabled();
 });
+
+test("manual connections can be removed from connection rows", async ({ page }) => {
+  await page.goto("/");
+
+  const search = page.getByRole("searchbox", { name: "Search entity or category" });
+  await search.fill("Chris Bledsoe");
+  await search.press("Enter");
+
+  const remove = page.getByRole("button", { name: /Remove manual connection to North Carolina/i });
+  await expect(remove).toBeVisible();
+  await remove.click();
+
+  await expect(remove).not.toBeVisible();
+  const storedReview = await page.evaluate(() => JSON.parse(localStorage.getItem("uap-relationship-graph-reclass") || "{}"));
+  expect(Object.keys(storedReview.removedManualRelationships || {})).toContain("locations:north-carolina--people:chris-bledsoe-copyright");
+  expect(storedReview.manualRelationships || {}).not.toHaveProperty("locations:north-carolina--people:chris-bledsoe-copyright");
+});
+
+test("false positive action requires confirmation", async ({ page }) => {
+  await page.goto("/");
+
+  const search = page.getByRole("searchbox", { name: "Search entity or category" });
+  await search.fill("Hal Puthoff");
+  await search.press("Enter");
+
+  page.once("dialog", async (dialog) => {
+    expect(dialog.message()).toContain("false positive");
+    await dialog.dismiss();
+  });
+  await page.getByRole("button", { name: "Mark false positive" }).click();
+
+  await expect(page.locator("#node-card")).toBeVisible();
+  const storedReview = await page.evaluate(() => JSON.parse(localStorage.getItem("uap-relationship-graph-reclass") || "{}"));
+  expect(JSON.stringify(storedReview.falsePositives || {})).not.toMatch(/puthoff|putoff/i);
+});

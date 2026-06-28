@@ -191,7 +191,7 @@
     }
     .node-card.open { display: block; }
     .node-card-body {
-      max-height: 42vh;
+      max-height: min(72vh, calc(100vh - 132px));
       overflow-y: auto;
       overflow-x: hidden;
       padding: 12px;
@@ -330,6 +330,30 @@
       gap: 6px;
       margin-top: 10px;
     }
+    .relationship-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 30px;
+      gap: 6px;
+      align-items: stretch;
+      min-width: 0;
+    }
+    .relationship-row .relationship-target {
+      min-width: 0;
+    }
+    .relationship-row .remove-connection {
+      width: 30px;
+      min-width: 30px;
+      padding: 0;
+      color: var(--ink);
+      text-align: center;
+    }
+    .relationship-list button {
+      width: 100%;
+      height: auto;
+      min-height: 34px;
+      text-align: left;
+      white-space: normal;
+    }
     .entity-directory {
       display: grid;
       gap: 5px;
@@ -456,9 +480,9 @@
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="app-data.js?v=71a92484a365ca96"></script>
-    <script src="app-data-mentions.js?v=71a92484a365ca96"></script>
-    <script src="app-data-relationships.js?v=71a92484a365ca96"></script>
+    <script src="app-data.js?v=46abf0a7c6b620f5"></script>
+    <script src="app-data-mentions.js?v=46abf0a7c6b620f5"></script>
+    <script src="app-data-relationships.js?v=46abf0a7c6b620f5"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -563,20 +587,73 @@
           data.entities.find((entity) => normalizeText(entity.name) === normalizeText(merge.targetName) && entity.category === merge.targetCategory);
         if (source && target && source.id !== target.id) mergeEntityInto(source, target, data);
       }
+      removeManualRelationships(data, review.removedManualRelationships || {});
       applyManualRelationships(data, review.manualRelationships || {});
       const visibleEntityIds = new Set(data.entities.map((entity) => entity.id));
       data.relationships = data.relationships.filter((relationship) => visibleEntityIds.has(relationship.source) && visibleEntityIds.has(relationship.target));
       return data;
     }
 
+    function manualRelationshipKey(sourceId, targetId) {
+      return [sourceId, targetId].sort().join("--");
+    }
+
+    function manualRelationshipDomId(key) {
+      const slug = String(key || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      return "manual-" + (slug || "item");
+    }
+
+    function entityByManualReference(item, side, data = DATA) {
+      const id = item && item[side + "Id"];
+      const entityById = id ? data.entities.find((entity) => entity.id === id) : null;
+      if (entityById) return entityById;
+      const category = item && item[side + "Category"];
+      const review = readReview();
+      const aliases = { ...(BUILT_REVIEW.aliases || {}), ...(review.aliases || {}) };
+      const names = [item && item[side + "Name"]];
+      if (id && aliases[id]) names.push(aliases[id]);
+      const normalizedName = normalizeText(item && item[side + "Name"]);
+      if (normalizedName && aliases[normalizedName]) names.push(aliases[normalizedName]);
+      for (const nameValue of names) {
+        const name = normalizeText(nameValue);
+        if (!name) continue;
+        const matches = data.entities.filter((entity) => normalizeText(entity.name) === name);
+        if (category) {
+          const categoryMatches = matches.filter((entity) => entity.category === category);
+          if (categoryMatches.length === 1) return categoryMatches[0];
+        }
+        if (matches.length === 1) return matches[0];
+      }
+      return null;
+    }
+
+    function removeManualRelationships(data, removedManualRelationships) {
+      const removed = new Set(Object.entries(removedManualRelationships || {}).map(([key, item]) => {
+        if (item && typeof item === "object" && item.sourceId && item.targetId) {
+          return manualRelationshipKey(item.sourceId, item.targetId);
+        }
+        return key;
+      }));
+      if (!removed.size) return;
+      data.relationships = data.relationships.filter((relationship) => {
+        if (relationship.type !== "manual") return true;
+        return !removed.has(manualRelationshipKey(relationship.source, relationship.target)) && !removed.has(relationship.id.replace(/^manual-/, ""));
+      });
+    }
+
     function applyManualRelationships(data, manualRelationships) {
+      const existingManualPairs = new Set(data.relationships
+        .filter((relationship) => relationship.type === "manual")
+        .map((relationship) => manualRelationshipKey(relationship.source, relationship.target)));
       for (const [id, item] of Object.entries(manualRelationships || {})) {
         if (!item || typeof item !== "object") continue;
-        const source = data.entities.find((entity) => entity.id === item.sourceId);
-        const target = data.entities.find((entity) => entity.id === item.targetId);
+        const source = entityByManualReference(item, "source", data);
+        const target = entityByManualReference(item, "target", data);
         if (!source || !target || source.id === target.id) continue;
+        const key = manualRelationshipKey(source.id, target.id);
+        if (existingManualPairs.has(key)) continue;
         data.relationships.unshift({
-          id: id.startsWith("manual-") ? id : "manual-" + id,
+          id: manualRelationshipDomId(key),
           source: source.id < target.id ? source.id : target.id,
           target: source.id < target.id ? target.id : source.id,
           sourceName: source.id < target.id ? source.name : target.name,
@@ -587,6 +664,7 @@
           evidenceSegmentIds: [],
           evidence: [],
         });
+        existingManualPairs.add(key);
       }
     }
 
@@ -1617,7 +1695,12 @@
         '<div class="relationship-list">' + relationships.slice(0, CARD_RELATIONSHIP_LIMIT).map((relationship) => {
           const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
           const other = entitiesById.get(otherId);
-          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>';
+          const otherName = other ? other.name : otherId;
+          const manualKey = relationship.type === "manual" ? manualRelationshipKey(relationship.source, relationship.target) : "";
+          return '<div class="relationship-row">' +
+            '<button class="relationship-target" data-card-entity="' + esc(otherId) + '">' + esc(otherName) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>' +
+            (manualKey ? '<button class="remove-connection" type="button" data-remove-manual-connection="' + esc(manualKey) + '" aria-label="Remove manual connection to ' + esc(otherName) + '">x</button>' : '') +
+          '</div>';
         }).join("") + '</div>' +
         '<h3 class="action-heading">Reclassify</h3>' +
         '<div class="card-actions"><label class="card-field"><span>Category</span><select id="review-category">' + Object.entries(DATA.categoryLabels).map(([id, label]) => '<option value="' + esc(id) + '"' + (id === entity.category ? ' selected' : '') + '>' + esc(label) + '</option>').join("") + '</select></label></div>' +
@@ -1634,6 +1717,33 @@
         button.addEventListener("click", () => {
           selectedEntityId = button.dataset.cardEntity;
           mode = "neighborhood";
+          render();
+          focusDetailsCard();
+        });
+      });
+      cardEl.querySelectorAll("[data-remove-manual-connection]").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const key = button.dataset.removeManualConnection;
+          const relationship = DATA.relationships.find((candidate) => candidate.type === "manual" && manualRelationshipKey(candidate.source, candidate.target) === key);
+          const source = relationship ? entitiesById.get(relationship.source) : null;
+          const target = relationship ? entitiesById.get(relationship.target) : null;
+          const review = readReview();
+          review.manualRelationships = review.manualRelationships || {};
+          review.removedManualRelationships = review.removedManualRelationships || {};
+          const manual = review.manualRelationships[key] || {
+            sourceId: relationship?.source || key.split("--")[0],
+            sourceName: source?.name || "",
+            sourceCategory: source?.category || "",
+            targetId: relationship?.target || key.split("--")[1],
+            targetName: target?.name || "",
+            targetCategory: target?.category || "",
+          };
+          review.removedManualRelationships[key] = manual;
+          delete review.manualRelationships[key];
+          saveReview(review);
+          DATA.relationships = DATA.relationships.filter((candidate) => candidate.type !== "manual" || manualRelationshipKey(candidate.source, candidate.target) !== key);
+          rebuildIndexes();
           render();
           focusDetailsCard();
         });
@@ -1669,6 +1779,8 @@
         focusDetailsCard();
       });
       document.getElementById("false-positive").addEventListener("click", () => {
+        const confirmed = window.confirm('Mark "' + entity.name + '" as a false positive? This removes it from the graph and downloaded review data.');
+        if (!confirmed) return;
         const review = readReview();
         review.falsePositives[entity.id] = { name: entity.name, category: entity.category, categoryLabel: entity.categoryLabel };
         if (review.reclassifications) delete review.reclassifications[entity.id];
@@ -1807,7 +1919,8 @@
         const review = readReview();
         review.manualRelationships = review.manualRelationships || {};
         const ids = [entity.id, target.id].sort();
-        const key = ids.map((id) => id.replace(/[^a-z0-9:-]+/gi, "-")).join("--");
+        const key = manualRelationshipKey(ids[0], ids[1]);
+        if (review.removedManualRelationships) delete review.removedManualRelationships[key];
         review.manualRelationships[key] = {
           sourceId: ids[0],
           sourceName: (entitiesById.get(ids[0]) || entity).name,
@@ -2163,6 +2276,7 @@
         nameMerges: {},
         removedMerges: {},
         removedNameMerges: {},
+        removedManualRelationships: {},
         manualRelationships: {},
         notes: {},
       };
@@ -2171,22 +2285,37 @@
     function normalizeReview(review) {
       const normalized = defaultReview();
       if (!review || typeof review !== "object") return normalized;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "removedManualRelationships", "manualRelationships", "notes"]) {
         normalized[key] = review[key] && typeof review[key] === "object" && !Array.isArray(review[key]) ? review[key] : {};
       }
+      normalized.manualRelationships = normalizeManualRelationshipDecisions(normalized.manualRelationships);
+      normalized.removedManualRelationships = normalizeManualRelationshipDecisions(normalized.removedManualRelationships, true);
       if (review.generatedAt) normalized.generatedAt = review.generatedAt;
       if (review.note) normalized.note = review.note;
+      return normalized;
+    }
+
+    function normalizeManualRelationshipDecisions(decisions, allowFallbackKey = false) {
+      const normalized = {};
+      for (const [key, item] of Object.entries(decisions || {})) {
+        if (item && typeof item === "object" && item.sourceId && item.targetId && item.sourceId !== item.targetId) {
+          normalized[manualRelationshipKey(item.sourceId, item.targetId)] = item;
+        } else if (allowFallbackKey && key) {
+          normalized[key] = item;
+        }
+      }
       return normalized;
     }
 
     function mergeReviews(base, overlay) {
       const merged = normalizeReview(base);
       const next = normalizeReview(overlay);
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "manualRelationships", "notes"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedMerges", "removedNameMerges", "removedManualRelationships", "manualRelationships", "notes"]) {
         merged[key] = { ...(merged[key] || {}), ...(next[key] || {}) };
       }
       for (const key of Object.keys(merged.removedMerges || {})) delete merged.merges[key];
       for (const key of Object.keys(merged.removedNameMerges || {})) delete merged.nameMerges[key];
+      for (const key of Object.keys(merged.removedManualRelationships || {})) delete merged.manualRelationships[key];
       if (next.generatedAt) merged.generatedAt = next.generatedAt;
       if (next.note) merged.note = next.note;
       return merged;
@@ -2258,7 +2387,7 @@
     function removeBuiltReviewEntries(review) {
       const cleaned = normalizeReview(review);
       let changed = false;
-      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "manualRelationships"]) {
+      for (const key of ["reclassifications", "nameReclassifications", "falsePositives", "omissions", "aliases", "merges", "nameMerges", "removedManualRelationships", "manualRelationships"]) {
         for (const [id, value] of Object.entries(cleaned[key] || {})) {
           const exactBuilt = Object.prototype.hasOwnProperty.call(BUILT_REVIEW[key] || {}, id) && sameReviewValue(value, BUILT_REVIEW[key][id]);
           const bakedCategory = key === "reclassifications" || key === "nameReclassifications" ? reviewCategoryIsBaked(id, value) : false;
@@ -2324,6 +2453,7 @@
         Object.keys(review.nameMerges || {}).length +
         Object.keys(review.removedMerges || {}).length +
         Object.keys(review.removedNameMerges || {}).length +
+        Object.keys(review.removedManualRelationships || {}).length +
         Object.keys(review.manualRelationships || {}).length
       );
     }

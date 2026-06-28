@@ -7,6 +7,7 @@
   "nameMerges": {},
   "removedMerges": {},
   "removedNameMerges": {},
+  "removedManualRelationships": {},
   "manualRelationships": {},
   "notes": "Download reclassified data from the app, replace data/reclass.json with it, then rerun python3 build_graph.py."
 }
