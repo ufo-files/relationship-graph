@@ -3108,10 +3108,10 @@ def render_html(app_data_version: str = "") -> str:
     const MAX_ZOOM_HEIGHT = 10800;
     const NEIGHBORHOOD_RELATIONSHIP_LIMIT = 48;
     const CARD_RELATIONSHIP_LIMIT = 28;
-    const SECOND_DEGREE_CONTEXT_LIMIT = 30;
-    const SECOND_DEGREE_PER_NEIGHBOR_LIMIT = 4;
-    const SECOND_DEGREE_EDGE_LIMIT = 72;
-    const SECOND_DEGREE_LABEL_LIMIT = 14;
+    const SECOND_DEGREE_CONTEXT_LIMIT = 12;
+    const SECOND_DEGREE_PER_NEIGHBOR_LIMIT = 2;
+    const SECOND_DEGREE_EDGE_LIMIT = 24;
+    const SECOND_DEGREE_LABEL_LIMIT = 0;
 
     initializeReviewStorage();
     const DATA = applyReviewDecisions(normalizeData(RAW));
@@ -3937,14 +3937,14 @@ def render_html(app_data_version: str = "") -> str:
             ? Math.atan2(avgY - center.y, avgX - center.x)
             : (Math.PI * 2 * index) / Math.max(1, secondDegree.length) - Math.PI / 2;
         const angle = baseAngle + fanOffset;
-        const radius = 1110 + (groupIndex % 3) * 118 + Math.floor(groupIndex / 3) * 54 + Math.min(90, item.sourceCount * 16);
+        const radius = 1040 + (groupIndex % 3) * 82 + Math.floor(groupIndex / 3) * 40 + Math.min(56, item.sourceCount * 12);
         const scoreScale = Math.sqrt(Math.max(1, item.score || item.weight || 1) / maxSecondDegreeScore);
         return {
           id: item.id,
           label: item.entity.name,
           x: center.x + Math.cos(angle) * radius,
           y: center.y + Math.sin(angle) * radius,
-          r: 5.5 + scoreScale * 9 + Math.min(4, item.sourceCount),
+          r: 3.5 + scoreScale * 5 + Math.min(2, item.sourceCount),
           raw: item.entity,
           anchorId: item.anchorId,
           anchorName: anchorNode?.raw?.name || "",
@@ -3964,8 +3964,8 @@ def render_html(app_data_version: str = "") -> str:
         const source = nodeById.get(relationship.source);
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
-        const width = (0.35 + ((relationship.weight || 1) / maxSecondDegreeEdge) * 1.75).toFixed(1);
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".2"><title>' + esc(formatRelationshipType(relationship.type) + " · second-degree context · weight " + relationship.weight) + '</title></line>';
+        const width = (0.25 + ((relationship.weight || 1) / maxSecondDegreeEdge) * .9).toFixed(1);
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".12"><title>' + esc(formatRelationshipType(relationship.type) + " · second-degree context · weight " + relationship.weight) + '</title></line>';
       }).join("");
       const neighborEdgesSvg = neighborRels.map((relationship) => {
         const source = nodeById.get(relationship.source);
@@ -3976,7 +3976,7 @@ def render_html(app_data_version: str = "") -> str:
       }).join("");
       const secondDegreeNodesSvg = secondDegreeNodes.map((node) => {
         return '<g class="graph-node context-node" data-entity="' + esc(node.raw.id) + '">' +
-          '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityAlt + '" stroke="' + theme.context + '" stroke-width="1" opacity=".72"></circle>' +
+          '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityAlt + '" stroke="' + theme.context + '" stroke-width="1" opacity=".38"></circle>' +
           '<title>' + esc(node.raw.name + " · connected through " + node.sourceCount + " direct " + pluralize("neighbor", node.sourceCount)) + '</title>' +
         '</g>';
       }).join("");
@@ -4023,7 +4023,7 @@ def render_html(app_data_version: str = "") -> str:
       setCornerLabel(null);
       renderCard(entity, rels);
       wireEntityNodes();
-      fitEgoGraph(nodes.concat(secondDegreeNodes), center);
+      fitEgoGraph(nodes, center);
     }
 
     function relationshipGraphScore(relationship) {
