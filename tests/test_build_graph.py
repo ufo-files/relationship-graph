@@ -9,6 +9,25 @@ import build_graph
 
 
 class BuildGraphParsingTests(unittest.TestCase):
+    def make_mention(self, name: str, category: str = "people") -> build_graph.Mention:
+        return build_graph.Mention(
+            id="m-1",
+            entity_id=build_graph.entity_key(build_graph.canonicalize(name, category), category),
+            name=name,
+            category=category,
+            category_label=build_graph.label(category),
+            segment_id="s-1",
+            transcript_id="t-1",
+            transcript_title="Sample",
+            source_file="sample.txt",
+            start_ms=0,
+            timestamp="00:00:00",
+            excerpt=name,
+            detector="test",
+            confidence=1.0,
+            reason="test",
+        )
+
     def test_parse_timestamp_ms(self) -> None:
         self.assertEqual(build_graph.parse_timestamp_ms("00:01:02.500"), 62500)
         self.assertEqual(build_graph.parse_timestamp_ms("01:02,250"), 62250)
@@ -74,6 +93,73 @@ class BuildGraphParsingTests(unittest.TestCase):
         reviewed = build_graph.apply_review_to_mentions([mention], {"aliases": {"people:department-of-energy": "DOE"}})
         self.assertEqual(reviewed[0].name, "DOE")
         self.assertEqual(reviewed[0].entity_id, "people:doe")
+
+    def test_merge_chains_resolve_to_final_target(self) -> None:
+        mention = self.make_mention("James Clapper")
+        review = {
+            "merges": {
+                "people:james-clapper": {
+                    "sourceId": "people:james-clapper",
+                    "sourceName": "James Clapper",
+                    "sourceCategory": "people",
+                    "targetId": "people:general-clapper",
+                    "targetName": "General Clapper",
+                    "targetCategory": "people",
+                },
+                "people:general-clapper": {
+                    "sourceId": "people:general-clapper",
+                    "sourceName": "General Clapper",
+                    "sourceCategory": "people",
+                    "targetId": "people:jim-clapper",
+                    "targetName": "Jim Clapper",
+                    "targetCategory": "people",
+                },
+            },
+            "nameMerges": {
+                "james clapper": {
+                    "sourceId": "people:james-clapper",
+                    "sourceName": "James Clapper",
+                    "sourceCategory": "people",
+                    "targetId": "people:general-clapper",
+                    "targetName": "General Clapper",
+                    "targetCategory": "people",
+                },
+                "general clapper": {
+                    "sourceId": "people:general-clapper",
+                    "sourceName": "General Clapper",
+                    "sourceCategory": "people",
+                    "targetId": "people:jim-clapper",
+                    "targetName": "Jim Clapper",
+                    "targetCategory": "people",
+                },
+            },
+        }
+        reviewed = build_graph.apply_review_to_mentions([mention], review)
+        self.assertEqual(reviewed[0].name, "Jim Clapper")
+        self.assertEqual(reviewed[0].entity_id, "people:jim-clapper")
+
+    def test_name_merges_prefer_aliased_canonical_names(self) -> None:
+        mention = self.make_mention("Diana Pasolka", "experiencers")
+        review = {
+            "aliases": {
+                "experiencers:diana-pasolka": "Diana Pasulka",
+                "diana pasolka": "Diana Pasulka",
+            },
+            "nameMerges": {
+                "diana pasulka": {
+                    "sourceId": "professors:diana-pasulka",
+                    "sourceName": "Diana Pasulka",
+                    "sourceCategory": "professors",
+                    "targetId": "people:diana-pasolka",
+                    "targetName": "Diana Pasolka",
+                    "targetCategory": "people",
+                }
+            },
+        }
+        reviewed = build_graph.apply_review_to_mentions([mention], review)
+        self.assertEqual(reviewed[0].name, "Diana Pasulka")
+        self.assertEqual(reviewed[0].category, "people")
+        self.assertEqual(reviewed[0].entity_id, "people:diana-pasulka")
 
     def test_person_heuristic_skips_us_service_fragments(self) -> None:
         segment = build_graph.Segment(
