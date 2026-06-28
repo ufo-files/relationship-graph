@@ -1470,7 +1470,7 @@ def infer_relationship_from_context(source: Entity, target: Entity, text: str) -
     typed_patterns = [
         ("worked_for", 0.86, ["worked for", "works for", "director of", "chief of", "inside the", "from the agency", "former director"]),
         ("testified_about", 0.84, ["testified", "hearing", "congress", "committee", "under oath"]),
-        ("claimed", 0.78, ["claimed", "claims", "said", "says", "alleged", "revealed", "told"]),
+        ("reported_statement", 0.78, ["claimed", "claims", "said", "says", "alleged", "revealed", "told"]),
         ("authored_or_published", 0.82, ["wrote", "authored", "published", "book", "paper", "report", "memo"]),
         ("funded_or_contracts_with", 0.83, ["funded", "funding", "contract", "contractor", "paid by", "backed by"]),
         ("located_at", 0.8, ["located", "based at", "near", "site", "facility", "base", "location"]),
@@ -1480,7 +1480,7 @@ def infer_relationship_from_context(source: Entity, target: Entity, text: str) -
     ]
     for rel_type, confidence, patterns in typed_patterns:
         if any(pattern in lowered for pattern in patterns):
-            return rel_type, confidence, f"Context contains relationship language: {', '.join([p for p in patterns if p in lowered][:3])}"
+            return rel_type, confidence, "Relationship language found nearby"
 
     base_type = infer_relationship_type(source.category, target.category)
     if base_type != "co_mentioned":
@@ -1661,17 +1661,12 @@ def write_report(
         },
     )
 
-    app_segment_ids = {mention.segment_id for mention in mentions}
-    for relationship in relationships:
-        app_segment_ids.update(relationship.evidence_segment_ids)
-    app_segments = [asdict(segment) for segment in segments if segment.id in app_segment_ids]
-
-    app_payload = {
+    app_core_payload = {
         "manifest": manifest,
         "entities": [asdict(entity) for entity in entities],
-        "mentions": [asdict(mention) for mention in mentions],
-        "relationships": [asdict(relationship) for relationship in relationships],
-        "segments": app_segments,
+        "mentions": [],
+        "relationships": [],
+        "segments": [],
         "graph": graph,
         "reclassDecisions": export_review(review),
         "reviewDecisions": export_review(review),
@@ -1679,17 +1674,32 @@ def write_report(
         "topCategoryLabels": TOP_CATEGORY_LABELS,
         "categoryToTop": CATEGORY_TO_TOP,
     }
-    app_payload_json = json.dumps(app_payload, ensure_ascii=False)
-    app_payload_version = hashlib.sha256(app_payload_json.encode("utf-8")).hexdigest()[:16]
+    app_mentions_json = json.dumps([asdict(mention) for mention in mentions], ensure_ascii=False)
+    app_relationships_json = json.dumps([asdict(relationship) for relationship in relationships], ensure_ascii=False)
+    app_core_json = json.dumps(app_core_payload, ensure_ascii=False)
+    app_payload_version = hashlib.sha256(
+        (app_core_json + app_mentions_json + app_relationships_json).encode("utf-8")
+    ).hexdigest()[:16]
     (ROOT / "app-data.js").write_text(
-        "window.TRANSCRIPT_INTELLIGENCE_DATA = " + app_payload_json + ";\n",
+        "window.TRANSCRIPT_INTELLIGENCE_DATA = " + app_core_json + ";\n",
+        encoding="utf-8",
+    )
+    (ROOT / "app-data-mentions.js").write_text(
+        "window.TRANSCRIPT_INTELLIGENCE_DATA.mentions = " + app_mentions_json + ";\n",
+        encoding="utf-8",
+    )
+    (ROOT / "app-data-relationships.js").write_text(
+        "window.TRANSCRIPT_INTELLIGENCE_DATA.relationships = " + app_relationships_json + ";\n",
         encoding="utf-8",
     )
     (ROOT / "index.html").write_text(render_html(app_payload_version), encoding="utf-8")
 
 
 def render_html(app_data_version: str = "") -> str:
-    app_data_src = "app-data.js" + (f"?v={app_data_version}" if app_data_version else "")
+    app_data_scripts = "\n".join(
+        f'    <script src="{name}{f"?v={app_data_version}" if app_data_version else ""}"></script>'
+        for name in ("app-data.js", "app-data-mentions.js", "app-data-relationships.js")
+    )
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -2606,7 +2616,10 @@ def sha256(path: Path) -> str:
 
 
 def render_html(app_data_version: str = "") -> str:
-    app_data_src = "app-data.js" + (f"?v={app_data_version}" if app_data_version else "")
+    app_data_scripts = "\n".join(
+        f'    <script src="{name}{f"?v={app_data_version}" if app_data_version else ""}"></script>'
+        for name in ("app-data.js", "app-data-mentions.js", "app-data-relationships.js")
+    )
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -3065,7 +3078,7 @@ def render_html(app_data_version: str = "") -> str:
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="__APP_DATA_SRC__"></script>
+__APP_DATA_SCRIPTS__
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -3965,14 +3978,14 @@ def render_html(app_data_version: str = "") -> str:
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
         const width = (0.25 + ((relationship.weight || 1) / maxSecondDegreeEdge) * .9).toFixed(1);
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".12"><title>' + esc(formatRelationshipType(relationship.type) + " · second-degree context · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".12"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
       const neighborEdgesSvg = neighborRels.map((relationship) => {
         const source = nodeById.get(relationship.source);
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
         const width = (0.45 + ((relationship.weight || 1) / maxNeighborEdge) * 2.1).toFixed(1);
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".26"><title>' + esc(formatRelationshipType(relationship.type) + " · related neighbor · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".26"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
       const secondDegreeNodesSvg = secondDegreeNodes.map((node) => {
         return '<g class="graph-node context-node" data-entity="' + esc(node.raw.id) + '">' +
@@ -4002,7 +4015,7 @@ def render_html(app_data_version: str = "") -> str:
         "entity",
         center,
         truncate(entity.name, 34),
-        rels.length + " direct connections"
+        entity.topCategoryLabel
       )].concat(nodes.map((node) => nodeLabel(
         node.raw.id,
         "entity",
@@ -4019,7 +4032,7 @@ def render_html(app_data_version: str = "") -> str:
           : "from " + truncate(node.anchorName || "direct node", 18),
         node.r
       ))));
-      statusEl.textContent = entity.name + " · direct relationship graph · " + rels.length + " direct links · " + secondDegreeNodes.length + " second-degree context nodes";
+      statusEl.textContent = entity.name + " · " + entity.topCategoryLabel;
       setCornerLabel(null);
       renderCard(entity, rels);
       wireEntityNodes();
@@ -4038,8 +4051,12 @@ def render_html(app_data_version: str = "") -> str:
       return count === 1 ? word : word + "s";
     }
 
-    function formatRelationshipType(type) {
-      return String(type || "related").replaceAll("_", " ");
+    function connectionCategoryText(relationship) {
+      const source = entitiesById.get(relationship.source);
+      const target = entitiesById.get(relationship.target);
+      const sourceLabel = source?.topCategoryLabel || source?.categoryLabel || "Entity";
+      const targetLabel = target?.topCategoryLabel || target?.categoryLabel || "Entity";
+      return sourceLabel === targetLabel ? sourceLabel : sourceLabel + " ↔ " + targetLabel;
     }
 
     function radialNodes(items, cx, cy, innerRadius, outerRadius, sizeValue) {
@@ -4106,7 +4123,7 @@ def render_html(app_data_version: str = "") -> str:
         const source = nodeById.get(relationship.source);
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.edge + '" stroke-width="' + (baseWidth + (relationship.weight / maxEdge) * weightWidth).toFixed(1) + '" opacity="' + opacity + '"><title>' + esc(relationship.type + " · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.edge + '" stroke-width="' + (baseWidth + (relationship.weight / maxEdge) * weightWidth).toFixed(1) + '" opacity="' + opacity + '"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
     }
 
@@ -4154,11 +4171,11 @@ def render_html(app_data_version: str = "") -> str:
         (evidence.length ? evidence.map((mention) => {
           return '<div class="evidence"><div class="meta">' + esc(mention.transcript_title) + ' · ' + esc(mention.timestamp) + ' · ' + esc(mention.detector) + '</div><div>' + esc(mention.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No snippets available for this entity.</div>') +
-        '<h3>Direct relationships</h3>' +
+        '<h3>Connections</h3>' +
         '<div class="relationship-list">' + relationships.slice(0, CARD_RELATIONSHIP_LIMIT).map((relationship) => {
           const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
           const other = entitiesById.get(otherId);
-          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(relationship.type) + ' · weight ' + relationship.weight + '</div></button>';
+          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>';
         }).join("") + '</div>' +
         '<h3 class="action-heading">Reclassify</h3>' +
         '<div class="card-actions"><label class="card-field"><span>Category</span><select id="review-category">' + Object.entries(DATA.categoryLabels).map(([id, label]) => '<option value="' + esc(id) + '"' + (id === entity.category ? ' selected' : '') + '>' + esc(label) + '</option>').join("") + '</select></label></div>' +
@@ -4322,10 +4339,10 @@ def render_html(app_data_version: str = "") -> str:
       cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
         '<div class="node-card-body"><h2 id="card-title">' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
-        '<p><span class="tag">' + esc(relationship.type) + '</span> weight ' + relationship.weight.toLocaleString() + ' · ' + Math.round((relationship.confidence || 0) * 100) + '% confidence</p>' +
-        '<h3>Relationship evidence</h3>' +
+        '<p><span class="tag">' + esc(connectionCategoryText(relationship)) + '</span></p>' +
+        '<h3>Evidence</h3>' +
         (evidence.length ? evidence.map((item) => {
-          return '<div class="evidence"><div class="meta">' + esc(item.transcript) + ' · ' + esc(item.timestamp) + ' · ' + esc(item.reason) + '</div><div>' + esc(item.excerpt) + '</div></div>';
+          return '<div class="evidence"><div class="meta">' + esc(item.transcript) + ' · ' + esc(item.timestamp) + '</div><div>' + esc(item.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No relationship snippets available.</div>') +
         '<div class="card-actions"><button data-card-entity="' + esc(relationship.source) + '">' + esc(source ? source.name : "Source") + '</button><button data-card-entity="' + esc(relationship.target) + '">' + esc(target ? target.name : "Target") + '</button></div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
@@ -5052,7 +5069,7 @@ def render_html(app_data_version: str = "") -> str:
   </script>
 </body>
 </html>
-""".replace("__APP_DATA_SRC__", app_data_src)
+""".replace("__APP_DATA_SCRIPTS__", app_data_scripts)
 
 
 if __name__ == "__main__":

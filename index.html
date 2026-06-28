@@ -456,7 +456,9 @@
   <div id="hover-card" class="hover-card" aria-hidden="true"></div>
   <div id="corner-label" class="corner-label" role="status" aria-live="polite"></div>
   </main>
-    <script src="app-data.js?v=855ff1cac405e785"></script>
+    <script src="app-data.js?v=a4603c7e38553182"></script>
+    <script src="app-data-mentions.js?v=a4603c7e38553182"></script>
+    <script src="app-data-relationships.js?v=a4603c7e38553182"></script>
   <script>
     const RAW = window.TRANSCRIPT_INTELLIGENCE_DATA;
     const REVIEW_KEY = "uap-relationship-graph-reclass";
@@ -1356,14 +1358,14 @@
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
         const width = (0.25 + ((relationship.weight || 1) / maxSecondDegreeEdge) * .9).toFixed(1);
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".12"><title>' + esc(formatRelationshipType(relationship.type) + " · second-degree context · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".12"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
       const neighborEdgesSvg = neighborRels.map((relationship) => {
         const source = nodeById.get(relationship.source);
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
         const width = (0.45 + ((relationship.weight || 1) / maxNeighborEdge) * 2.1).toFixed(1);
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".26"><title>' + esc(formatRelationshipType(relationship.type) + " · related neighbor · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.context + '" stroke-width="' + width + '" opacity=".26"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
       const secondDegreeNodesSvg = secondDegreeNodes.map((node) => {
         return '<g class="graph-node context-node" data-entity="' + esc(node.raw.id) + '">' +
@@ -1393,7 +1395,7 @@
         "entity",
         center,
         truncate(entity.name, 34),
-        rels.length + " direct connections"
+        entity.topCategoryLabel
       )].concat(nodes.map((node) => nodeLabel(
         node.raw.id,
         "entity",
@@ -1410,7 +1412,7 @@
           : "from " + truncate(node.anchorName || "direct node", 18),
         node.r
       ))));
-      statusEl.textContent = entity.name + " · direct relationship graph · " + rels.length + " direct links · " + secondDegreeNodes.length + " second-degree context nodes";
+      statusEl.textContent = entity.name + " · " + entity.topCategoryLabel;
       setCornerLabel(null);
       renderCard(entity, rels);
       wireEntityNodes();
@@ -1429,8 +1431,12 @@
       return count === 1 ? word : word + "s";
     }
 
-    function formatRelationshipType(type) {
-      return String(type || "related").replaceAll("_", " ");
+    function connectionCategoryText(relationship) {
+      const source = entitiesById.get(relationship.source);
+      const target = entitiesById.get(relationship.target);
+      const sourceLabel = source?.topCategoryLabel || source?.categoryLabel || "Entity";
+      const targetLabel = target?.topCategoryLabel || target?.categoryLabel || "Entity";
+      return sourceLabel === targetLabel ? sourceLabel : sourceLabel + " ↔ " + targetLabel;
     }
 
     function radialNodes(items, cx, cy, innerRadius, outerRadius, sizeValue) {
@@ -1497,7 +1503,7 @@
         const source = nodeById.get(relationship.source);
         const target = nodeById.get(relationship.target);
         if (!source || !target) return "";
-        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.edge + '" stroke-width="' + (baseWidth + (relationship.weight / maxEdge) * weightWidth).toFixed(1) + '" opacity="' + opacity + '"><title>' + esc(relationship.type + " · weight " + relationship.weight) + '</title></line>';
+        return '<line class="graph-edge" data-edge="' + esc(relationship.id) + '" x1="' + source.x + '" y1="' + source.y + '" x2="' + target.x + '" y2="' + target.y + '" stroke="' + theme.edge + '" stroke-width="' + (baseWidth + (relationship.weight / maxEdge) * weightWidth).toFixed(1) + '" opacity="' + opacity + '"><title>' + esc(connectionCategoryText(relationship)) + '</title></line>';
       }).join("");
     }
 
@@ -1545,11 +1551,11 @@
         (evidence.length ? evidence.map((mention) => {
           return '<div class="evidence"><div class="meta">' + esc(mention.transcript_title) + ' · ' + esc(mention.timestamp) + ' · ' + esc(mention.detector) + '</div><div>' + esc(mention.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No snippets available for this entity.</div>') +
-        '<h3>Direct relationships</h3>' +
+        '<h3>Connections</h3>' +
         '<div class="relationship-list">' + relationships.slice(0, CARD_RELATIONSHIP_LIMIT).map((relationship) => {
           const otherId = relationship.source === entity.id ? relationship.target : relationship.source;
           const other = entitiesById.get(otherId);
-          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(relationship.type) + ' · weight ' + relationship.weight + '</div></button>';
+          return '<button data-card-entity="' + esc(otherId) + '">' + esc(other ? other.name : otherId) + '<div class="meta">' + esc(other ? other.topCategoryLabel : "Entity") + '</div></button>';
         }).join("") + '</div>' +
         '<h3 class="action-heading">Reclassify</h3>' +
         '<div class="card-actions"><label class="card-field"><span>Category</span><select id="review-category">' + Object.entries(DATA.categoryLabels).map(([id, label]) => '<option value="' + esc(id) + '"' + (id === entity.category ? ' selected' : '') + '>' + esc(label) + '</option>').join("") + '</select></label></div>' +
@@ -1713,10 +1719,10 @@
       cardEl.setAttribute("aria-labelledby", "card-title");
       cardEl.innerHTML = '<button class="card-close" id="close-card" aria-label="Close info window">x</button>' +
         '<div class="node-card-body"><h2 id="card-title">' + esc(source ? source.name : relationship.sourceName) + ' ↔ ' + esc(target ? target.name : relationship.targetName) + '</h2>' +
-        '<p><span class="tag">' + esc(relationship.type) + '</span> weight ' + relationship.weight.toLocaleString() + ' · ' + Math.round((relationship.confidence || 0) * 100) + '% confidence</p>' +
-        '<h3>Relationship evidence</h3>' +
+        '<p><span class="tag">' + esc(connectionCategoryText(relationship)) + '</span></p>' +
+        '<h3>Evidence</h3>' +
         (evidence.length ? evidence.map((item) => {
-          return '<div class="evidence"><div class="meta">' + esc(item.transcript) + ' · ' + esc(item.timestamp) + ' · ' + esc(item.reason) + '</div><div>' + esc(item.excerpt) + '</div></div>';
+          return '<div class="evidence"><div class="meta">' + esc(item.transcript) + ' · ' + esc(item.timestamp) + '</div><div>' + esc(item.excerpt) + '</div></div>';
         }).join("") : '<div class="meta">No relationship snippets available.</div>') +
         '<div class="card-actions"><button data-card-entity="' + esc(relationship.source) + '">' + esc(source ? source.name : "Source") + '</button><button data-card-entity="' + esc(relationship.target) + '">' + esc(target ? target.name : "Target") + '</button></div></div>';
       cardEl.querySelectorAll("[data-card-entity]").forEach((button) => {
