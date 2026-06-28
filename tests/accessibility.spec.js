@@ -191,17 +191,17 @@ test("manual connections can be removed from connection rows", async ({ page }) 
   await page.goto("/");
 
   const search = page.getByRole("searchbox", { name: "Search entity or category" });
-  await search.fill("Chris Bledsoe");
+  await search.fill("Harvard Medical School");
   await search.press("Enter");
 
-  const remove = page.getByRole("button", { name: /Remove manual connection to North Carolina/i });
+  const remove = page.getByRole("button", { name: /Remove manual connection to Harvard University/i });
   await expect(remove).toBeVisible();
   await remove.click();
 
   await expect(remove).not.toBeVisible();
   const storedReview = await page.evaluate(() => JSON.parse(localStorage.getItem("uap-relationship-graph-reclass") || "{}"));
-  expect(Object.keys(storedReview.removedManualRelationships || {})).toContain("locations:north-carolina--people:chris-bledsoe-copyright");
-  expect(storedReview.manualRelationships || {}).not.toHaveProperty("locations:north-carolina--people:chris-bledsoe-copyright");
+  expect(Object.keys(storedReview.removedManualRelationships || {})).toContain("universities:harvard-medical-school--universities:harvard-university");
+  expect(storedReview.manualRelationships || {}).not.toHaveProperty("universities:harvard-medical-school--universities:harvard-university");
 });
 
 test("false positive action requires confirmation", async ({ page }) => {
