@@ -138,6 +138,32 @@ class BuildGraphParsingTests(unittest.TestCase):
         self.assertEqual(reviewed[0].name, "Jim Clapper")
         self.assertEqual(reviewed[0].entity_id, "people:jim-clapper")
 
+    def test_merge_chains_do_not_prefer_shorter_intermediate_names(self) -> None:
+        mention = self.make_mention("Harry Reid", "politicians")
+        review = {
+            "nameMerges": {
+                "harry reid": {
+                    "sourceId": "politicians:harry-reid",
+                    "sourceName": "Harry Reid",
+                    "sourceCategory": "politicians",
+                    "targetId": "politicians:as-reid",
+                    "targetName": "As Reid",
+                    "targetCategory": "politicians",
+                },
+                "as reid": {
+                    "sourceId": "politicians:as-reid",
+                    "sourceName": "As Reid",
+                    "sourceCategory": "politicians",
+                    "targetId": "politicians:senator-harry-reid",
+                    "targetName": "Senator Harry Reid",
+                    "targetCategory": "politicians",
+                },
+            },
+        }
+        reviewed = build_graph.apply_review_to_mentions([mention], review)
+        self.assertEqual(reviewed[0].name, "Senator Harry Reid")
+        self.assertEqual(reviewed[0].entity_id, "politicians:senator-harry-reid")
+
     def test_merge_cycles_prefer_reviewed_non_person_target(self) -> None:
         mention = self.make_mention("Top Secret Operation Paperclip")
         review = {
