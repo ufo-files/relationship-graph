@@ -1322,6 +1322,7 @@ def resolve_review_merge_chain(
     current_category = category
     seen: set[tuple[str, str, str]] = set()
     candidates: list[tuple[str, str, str]] = [(current_name, current_category, current_id)]
+    cycle_detected = False
 
     def candidate_score(candidate: tuple[str, str, str]) -> tuple[int, int, int, str]:
         candidate_name, candidate_category, _ = candidate
@@ -1354,12 +1355,15 @@ def resolve_review_merge_chain(
         next_candidate = (next_name, next_category, next_id)
         candidates.append(next_candidate)
         if next_state in seen:
+            cycle_detected = True
             break
 
         current_id = next_id
         current_name = next_name
         current_category = next_category
 
+    if not cycle_detected:
+        return candidates[-1]
     return max(enumerate(candidates), key=lambda item: (*candidate_score(item[1]), item[0]))[1]
 
 
