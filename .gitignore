@@ -4,7 +4,5 @@ __pycache__/
 node_modules/
 test-results/
 playwright-report/
-data/documents/*
-!data/documents/.gitkeep
-!data/documents/*.pdf.txt
-!data/documents/*.PDF.txt
+data/documents/
+data/transcripts/

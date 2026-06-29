@@ -1,7 +1,7 @@
 ## What changed
 
 - [ ] Reclassification updates in `data/reclass.json`
-- [ ] Transcript source files in `data/transcripts/`
+- [ ] Source-data changes in `ufo-files/uap-data`
 - [ ] Extraction, graph, or UI code
 - [ ] Documentation or repository maintenance
 
@@ -9,7 +9,7 @@
 
 - [ ] I ran `python scripts/validate_repo.py`
 - [ ] I ran `python -m unittest discover -s tests -v`
-- [ ] I ran `python build_graph.py` when changing the builder or transcript data
+- [ ] I ran `python build_graph.py` when changing the builder or source data
 
 ## Notes
 

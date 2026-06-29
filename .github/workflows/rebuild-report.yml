@@ -7,8 +7,11 @@ on:
     paths:
       - build_graph.py
       - data/reclass.json
-      - data/transcripts/**
+      - scripts/**
       - .github/workflows/rebuild-report.yml
+  repository_dispatch:
+    types:
+      - uap-data-updated
   workflow_dispatch:
 
 permissions:
@@ -22,6 +25,8 @@ jobs:
   rebuild:
     name: Rebuild static graph
     runs-on: ubuntu-latest
+    env:
+      UAP_DATA_DIR: _uap-data/data
 
     steps:
       - name: Check out repository
@@ -29,6 +34,12 @@ jobs:
         with:
           persist-credentials: true
           ref: ${{ github.ref_name }}
+
+      - name: Check out source data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/uap-data
+          path: _uap-data
 
       - name: Set up Python
         uses: actions/setup-python@v6

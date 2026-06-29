@@ -22,12 +22,20 @@ jobs:
   validate:
     name: Validate data and build
     runs-on: ubuntu-latest
+    env:
+      UAP_DATA_DIR: _uap-data/data
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+
+      - name: Check out source data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/uap-data
+          path: _uap-data
 
       - name: Set up Python
         uses: actions/setup-python@v6

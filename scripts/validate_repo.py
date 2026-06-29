@@ -76,9 +76,11 @@ def validate_required_files() -> list[str]:
         "index.html",
         "app-data.js",
         "data/reclass.json",
-        "data/transcripts/entity-registry.json",
     ]
-    return [f"Missing required file: {path}" for path in required if not (ROOT / path).exists()]
+    errors = [f"Missing required file: {path}" for path in required if not (ROOT / path).exists()]
+    if not build_graph.REGISTRY_PATH.exists():
+        errors.append(f"Missing required source data file: {build_graph.display_path(build_graph.REGISTRY_PATH)}")
+    return errors
 
 
 def validate_reclass() -> list[str]:
@@ -135,9 +137,9 @@ def validate_reclass() -> list[str]:
 
 
 def validate_transcript_directory() -> list[str]:
-    transcripts = ROOT / "data/transcripts"
+    transcripts = build_graph.TRANSCRIPTS_DIR
     if not transcripts.exists():
-        return ["Missing data/transcripts directory."]
+        return [f"Missing transcript source directory: {build_graph.display_path(transcripts)}"]
 
     errors: list[str] = []
     allowed = set(build_graph.SOURCE_EXTENSIONS)
@@ -146,26 +148,26 @@ def validate_transcript_directory() -> list[str]:
         if path.name.startswith(".") or path.name in ignored:
             continue
         if path.is_dir():
-            errors.append(f"Transcript directory contains nested directory: {path.relative_to(ROOT)}")
+            errors.append(f"Transcript directory contains nested directory: {build_graph.display_path(path)}")
             continue
         if path.suffix.lower() not in allowed:
             errors.append(
-                f"Unsupported transcript file: {path.relative_to(ROOT)}. "
+                f"Unsupported transcript file: {build_graph.display_path(path)}. "
                 f"Use one of: {', '.join(build_graph.SOURCE_EXTENSIONS)}"
             )
 
     sources = build_graph.select_transcript_sources()
     if not sources:
-        errors.append("No transcript sources were selected from data/transcripts.")
+        errors.append(f"No transcript sources were selected from {build_graph.display_path(transcripts)}.")
 
     for source in sources:
         try:
             rows = build_graph.parse_source(source)
         except Exception as exc:  # noqa: BLE001 - validator should report file context.
-            errors.append(f"Could not parse transcript source {source.relative_to(ROOT)}: {exc}")
+            errors.append(f"Could not parse transcript source {build_graph.display_path(source)}: {exc}")
             continue
         if not any(build_graph.clean_text(row.get("text", "")) for row in rows):
-            errors.append(f"Transcript source has no text rows: {source.relative_to(ROOT)}")
+            errors.append(f"Transcript source has no text rows: {build_graph.display_path(source)}")
     return errors
 
 
@@ -209,7 +211,7 @@ def validate_changed_files(path: Path) -> list[str]:
     if generated_changes and not source_changes_allow_generated and not generated_rebuild_pr:
         errors.append(
             "Generated app files should not be edited in contributor PRs. "
-            "Change data/reclass.json, data/transcripts/**, or build_graph.py; "
+            "Change data/reclass.json, source data in ufo-files/uap-data, or build_graph.py; "
             f"the rebuild workflow will regenerate these files after merge: {', '.join(generated_changes)}"
         )
     return errors

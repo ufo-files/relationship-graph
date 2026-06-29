@@ -4,4 +4,3 @@
 /build_graph.py @ufo-files
 /scripts/ @ufo-files
 /tests/ @ufo-files
-/data/transcripts/entity-registry.json @ufo-files

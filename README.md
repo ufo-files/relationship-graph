@@ -9,17 +9,19 @@ Live site: https://ufo-files.github.io/relationship-graph/
 
 Repository: https://github.com/ufo-files/relationship-graph
 
+Source data repository: https://github.com/ufo-files/uap-data
+
 ## What It Does
 
 The app turns transcript-derived entities into an interactive graph. Categories form the outer structure, entities live inside those categories, and relationships are drawn from co-occurrence and corpus evidence.
 
 The current export includes:
 
-- 36 transcripts
-- 162,082 transcript segments
-- 10,667 entity mentions
-- 3,858 entities
-- 3,500 relationships
+- 302 transcript sources
+- 217,017 transcript segments
+- 110,276 entity mentions
+- 55,656 entities
+- 8,000 relationships
 - 46 categories
 
 ## Interface
@@ -41,8 +43,8 @@ The app is fully static. All data needed by the browser is committed in this rep
 | --- | --- |
 | `index.html` | Graph interface and application shell |
 | `app-data.js` | Loader for the exported JSON data |
-| `build_graph.py` | Rebuilds the graph from transcripts and reclassification data |
-| `data/transcripts/` | Source transcript files and `entity-registry.json` |
+| `build_graph.py` | Rebuilds the graph from source transcripts and reclassification data |
+| `ufo-files/uap-data` | Public source transcripts, OCR text, and `entity-registry.json` |
 | `data/entities.json` | Extracted entities, categories, confidence, counts, and evidence references |
 | `data/relationships.json` | Entity-to-entity relationship records |
 | `data/mentions.json` | Mention-level extraction records |
@@ -54,11 +56,14 @@ The app is fully static. All data needed by the browser is committed in this rep
 
 ## Reproducibility
 
-This repository contains both the source transcript files and the generated static graph. Rebuilds overwrite the generated app files in place while preserving `data/transcripts/` and `data/reclass.json`.
+This repository contains the generated static graph and the durable review rules in `data/reclass.json`. Source documents and transcript files live in [`ufo-files/uap-data`](https://github.com/ufo-files/uap-data).
+
+By default, local rebuilds read source data from a sibling checkout at `../uap-data/data` when it exists. You can point to any source-data checkout with `UAP_DATA_DIR`.
 
 To rebuild:
 
 ```bash
+git clone https://github.com/ufo-files/uap-data.git ../uap-data
 python3 build_graph.py
 ```
 
@@ -71,7 +76,7 @@ python3 scripts/convert_ocr_pdfs.py --normalize-source-names
 python3 build_graph.py
 ```
 
-Place OCR files in `data/documents/` with the `.pdf.txt` suffix. These public OCR sources are committed to the repository. The converter reads the source path embedded in each OCR metadata header, normalizes source filenames with collection prefixes such as `dow-release-3`, `gov-docs`, `patents`, `project-blue-book`, `tridactyl`, and `whitepapers`, then writes deterministic `data/transcripts/document-*.tsv` files with `start`, `end`, and `text` columns.
+Place OCR files in `../uap-data/data/documents/` with the `.pdf.txt` suffix, or set `UAP_DATA_DIR` to another source-data root. These public OCR sources are committed to `ufo-files/uap-data`. The converter reads the source path embedded in each OCR metadata header, normalizes source filenames with collection prefixes such as `dow-release-3`, `gov-docs`, `patents`, `project-blue-book`, `tridactyl`, and `whitepapers`, then writes deterministic `data/transcripts/document-*.tsv` files with `start`, `end`, and `text` columns in the source-data repo.
 
 The cleanup removes OCR metadata, page markers, repeated headers and footers, page numbers, classification boilerplate, table-of-contents debris, archive cover-sheet residue, and low-signal OCR fragments. The committed OCR files remain the full public source text; generated TSV files are larger graph evidence windows so relationship extraction stays tractable. OCR sources that are image-only or too sparse after cleanup remain in `data/documents/` but do not produce graph segments.
 
@@ -84,7 +89,7 @@ python3 scripts/convert_ebooks.py
 python3 build_graph.py
 ```
 
-Place EPUB files in `data/documents/`. Source ebooks are ignored by git and should stay local. The converter writes deterministic `data/transcripts/ebook-*.tsv` files with `start`, `end`, and `text` columns. Those TSV files contain public evidence windows around extracted entities, not full ebook text, so the online graph can use the derived data and still show snippets.
+Place EPUB files in `../uap-data/data/documents/` or the configured `UAP_DATA_DIR` documents directory. Source ebooks are ignored by git and should stay local. The converter writes deterministic `data/transcripts/ebook-*.tsv` files with `start`, `end`, and `text` columns in the source-data repo. Those TSV files contain public evidence windows around extracted entities, not full ebook text, so the online graph can use the derived data and still show snippets.
 
 The manifest records:
 
@@ -116,13 +121,13 @@ Contributors can submit reclassification updates without rebuilding the app loca
 
 1. Edit `data/reclass.json`.
 2. Open a pull request with that data-only change.
-3. After the pull request is merged into `main`, GitHub Actions validates `data/reclass.json`, runs `python build_graph.py`, and commits the regenerated static graph files back to `main`.
+3. After the pull request is merged into `main`, GitHub Actions checks out `ufo-files/uap-data`, validates `data/reclass.json`, runs `python build_graph.py`, and commits the regenerated static graph files back to `main`.
 
-The same rebuild workflow also runs when transcript source files in `data/transcripts/` or `build_graph.py` change. It can be started manually from the **Actions** tab with the **Rebuild Report** workflow.
+The same rebuild workflow also runs when `build_graph.py`, scripts, or `data/reclass.json` change. It can be started manually from the **Actions** tab with the **Rebuild Report** workflow, and it accepts a `repository_dispatch` event from `ufo-files/uap-data`.
 
 ## Contribution Guardrails
 
-Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks transcript files, audits accessibility basics, blocks hand edits to generated app files, and performs a smoke rebuild.
+Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks the external source transcript files, audits accessibility basics, blocks hand edits to generated app files, and performs a smoke rebuild.
 
 Repository ownership rules are declared in `.github/CODEOWNERS`. For stronger protection, enable branch protection or a repository ruleset on `main` that requires pull requests, code owner review, and passing **Validate** before merge.
 
@@ -139,3 +144,5 @@ The site is hosted with GitHub Pages from the `main` branch root.
 Live site: https://ufo-files.github.io/relationship-graph/
 
 Repository: https://github.com/ufo-files/relationship-graph
+
+Source data repository: https://github.com/ufo-files/uap-data

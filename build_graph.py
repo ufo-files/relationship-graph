@@ -14,6 +14,7 @@ import hashlib
 import html
 import json
 import math
+import os
 import re
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass, field
@@ -28,7 +29,12 @@ RELATIONSHIP_WINDOW_RADIUS = 4
 RELATIONSHIP_WINDOW_MENTION_LIMIT = 30
 RELATIONSHIP_OUTPUT_LIMIT = 8000
 DATA_DIR = ROOT / "data"
-TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
+DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
+SOURCE_DATA_DIR = Path(os.environ.get("UAP_DATA_DIR") or (DEFAULT_SOURCE_DATA_DIR if DEFAULT_SOURCE_DATA_DIR.exists() else DATA_DIR))
+if not SOURCE_DATA_DIR.is_absolute():
+    SOURCE_DATA_DIR = ROOT / SOURCE_DATA_DIR
+SOURCE_DATA_DIR = SOURCE_DATA_DIR.resolve()
+TRANSCRIPTS_DIR = SOURCE_DATA_DIR / "transcripts"
 REGISTRY_PATH = TRANSCRIPTS_DIR / "entity-registry.json"
 RECLASS_INPUT = DATA_DIR / "reclass.json"
 LEGACY_ROOT_RECLASS_INPUT = ROOT / "reclass.json"
@@ -46,6 +52,13 @@ LEGACY_DATA_EXPORT_INPUTS = [
     DATA_DIR / "transcript-intelligence-v2.json",
     ROOT / "transcript-intelligence-v2.json",
 ]
+
+
+def display_path(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return os.path.relpath(path.resolve(), ROOT)
 
 SOURCE_EXTENSIONS = [".tsv", ".srt", ".vtt", ".json", ".txt"]
 PREFERRED_EXTENSIONS = [".tsv", ".srt", ".vtt", ".json", ".txt"]
@@ -1004,7 +1017,7 @@ def read_review_input() -> dict[str, Any]:
         normalize_review(review)
         add_name_reclassifications_from_ids(review)
         persist_generated_review(path, review)
-        review["source_path"] = str(path.relative_to(ROOT))
+        review["source_path"] = display_path(path)
         return review
     review = read_review_from_data_export()
     persist_generated_review(Path(), review)
@@ -1124,7 +1137,7 @@ def read_review_from_data_export() -> dict[str, Any]:
             review["reclassifications"][entity_id] = category
             review["nameReclassifications"][normalize_name(entity.get("name", ""))] = category
     if review["reclassifications"]:
-        review["note"] = f"Derived from {export_path.relative_to(ROOT)} because no reclass.json was present."
+        review["note"] = f"Derived from {display_path(export_path)} because no reclass.json was present."
     return normalize_review(review)
 
 
@@ -2156,7 +2169,8 @@ def build_manifest(
                 or review.get("removedManualRelationships")
                 or review.get("manualRelationships")
             ),
-            "transcript_source_dir": str(TRANSCRIPTS_DIR.relative_to(ROOT)),
+            "source_data_dir": display_path(SOURCE_DATA_DIR),
+            "transcript_source_dir": display_path(TRANSCRIPTS_DIR),
             "relationship_window_radius": RELATIONSHIP_WINDOW_RADIUS,
             "relationship_window_mentions": RELATIONSHIP_WINDOW_MENTION_LIMIT,
             "relationship_output_limit": RELATIONSHIP_OUTPUT_LIMIT,

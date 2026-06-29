@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import re
 import unicodedata
 from collections import Counter
@@ -13,7 +14,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
+DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
+DATA_DIR = Path(os.environ.get("UAP_DATA_DIR") or (DEFAULT_SOURCE_DATA_DIR if DEFAULT_SOURCE_DATA_DIR.exists() else ROOT / "data"))
+if not DATA_DIR.is_absolute():
+    DATA_DIR = ROOT / DATA_DIR
+DATA_DIR = DATA_DIR.resolve()
 DOCUMENTS_DIR = DATA_DIR / "documents"
 TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
 OUTPUT_PREFIX = "document-"
@@ -418,7 +423,7 @@ def relative(path: Path) -> str:
     try:
         return str(path.resolve().relative_to(ROOT))
     except ValueError:
-        return str(path)
+        return os.path.relpath(path.resolve(), ROOT)
 
 
 if __name__ == "__main__":

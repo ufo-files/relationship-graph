@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import os
 import posixpath
 import re
 import sys
@@ -22,7 +23,11 @@ from pathlib import Path
 from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
+DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
+DATA_DIR = Path(os.environ.get("UAP_DATA_DIR") or (DEFAULT_SOURCE_DATA_DIR if DEFAULT_SOURCE_DATA_DIR.exists() else ROOT / "data"))
+if not DATA_DIR.is_absolute():
+    DATA_DIR = ROOT / DATA_DIR
+DATA_DIR = DATA_DIR.resolve()
 DOCUMENTS_DIR = DATA_DIR / "documents"
 TRANSCRIPTS_DIR = DATA_DIR / "transcripts"
 OUTPUT_PREFIX = "ebook-"
@@ -159,14 +164,14 @@ def main() -> int:
         keep_existing=args.keep_existing,
     )
     if not converted:
-        print(f"No EPUB files converted from {args.source_dir.relative_to(ROOT)}.")
+        print(f"No EPUB files converted from {relative(args.source_dir)}.")
         return 0
 
     total_segments = sum(item.segments for item in converted)
     total_words = sum(item.words for item in converted)
     print(f"Converted {len(converted)} EPUB files into {total_segments} public snippet segments ({total_words} words).")
     for item in converted:
-        print(f"- {item.source.name} -> {item.output.relative_to(ROOT)} ({item.segments} segments)")
+        print(f"- {item.source.name} -> {relative(item.output)} ({item.segments} segments)")
     return 0
 
 
@@ -506,6 +511,13 @@ def keep_paragraph(text: str) -> bool:
     if not re.search(r"[A-Za-z]", text):
         return False
     return True
+
+
+def relative(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return os.path.relpath(path.resolve(), ROOT)
 
 
 if __name__ == "__main__":
