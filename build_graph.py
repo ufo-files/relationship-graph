@@ -1302,8 +1302,6 @@ def reviewed_category_for_name(name: str, category: str, name_reclassifications:
     target_category = name_reclassifications.get(normalize_name(name), category)
     if target_category not in CATEGORY_LABELS:
         target_category = category
-    if target_category in PERSON_LIKE_CATEGORIES:
-        target_category = classify_non_person_name(name) or target_category
     return target_category
 
 
@@ -1321,16 +1319,8 @@ def resolve_review_merge_chain(
     current_name = name
     current_category = category
     seen: set[tuple[str, str, str]] = set()
-    candidates: list[tuple[str, str, str]] = [(current_name, current_category, current_id)]
-    cycle_detected = False
-
-    def candidate_score(candidate: tuple[str, str, str]) -> tuple[int, int, int, str]:
-        candidate_name, candidate_category, _ = candidate
-        normalized_candidate = normalize_name(candidate_name)
-        reviewed = name_reclassifications.get(normalized_candidate) == candidate_category
-        non_person = candidate_category not in PERSON_LIKE_CATEGORIES
-        shorter_name = -len(normalized_candidate)
-        return (4 if reviewed else 0, 2 if non_person else 0, shorter_name, normalized_candidate)
+    last_reviewed_target = (current_name, current_category, current_id)
+    candidates: list[tuple[str, str, str]] = [last_reviewed_target]
 
     for _ in range(24):
         state = (current_id, normalize_name(current_name), current_category)
@@ -1354,18 +1344,25 @@ def resolve_review_merge_chain(
         if next_state == state:
             break
         next_candidate = (next_name, next_category, next_id)
+        last_reviewed_target = next_candidate
         candidates.append(next_candidate)
         if next_state in seen:
-            cycle_detected = True
+            reviewed_candidates = [
+                candidate
+                for candidate in candidates
+                if name_reclassifications.get(normalize_name(candidate[0])) == candidate[1]
+            ]
+            if reviewed_candidates:
+                return reviewed_candidates[-1]
+            if len(candidates) > 1:
+                return candidates[1]
             break
 
         current_id = next_id
         current_name = next_name
         current_category = next_category
 
-    if not cycle_detected:
-        return candidates[-1]
-    return max(enumerate(candidates), key=lambda item: (*candidate_score(item[1]), item[0]))[1]
+    return last_reviewed_target
 
 
 def apply_review_identity(

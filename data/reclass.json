@@ -1098,6 +1098,7 @@
     "aliens among us mac": "books",
     "zeta reticuli": "star_systems",
     "france": "locations",
+    "hermetic philosophy": "religious_texts",
     "hermetic teachings": "religious_texts",
     "mental gender": "emerging_terminology",
     "masculine principle": "emerging_terminology",
@@ -4244,14 +4245,6 @@
       "targetCategory": "government_agencies",
       "targetId": "government_agencies:united-states-navy",
       "targetName": "united states navy"
-    },
-    "government_agencies:u-s-air-force": {
-      "sourceCategory": "government_agencies",
-      "sourceId": "government_agencies:u-s-air-force",
-      "sourceName": "U.S. Air Force",
-      "targetCategory": "government_agencies",
-      "targetId": "government_agencies:united-states-air-force",
-      "targetName": "United States Air Force"
     },
     "government_agencies:u-s-navy": {
       "sourceCategory": "government_agencies",
@@ -14558,14 +14551,6 @@
       "targetCategory": "companies",
       "targetId": "people:technology-group",
       "targetName": "Trump Media and Technology Group"
-    },
-    "u s air force": {
-      "sourceCategory": "government_agencies",
-      "sourceId": "government_agencies:u-s-air-force",
-      "sourceName": "U.S. Air Force",
-      "targetCategory": "government_agencies",
-      "targetId": "government_agencies:united-states-air-force",
-      "targetName": "United States Air Force"
     },
     "u s navy": {
       "sourceCategory": "government_agencies",

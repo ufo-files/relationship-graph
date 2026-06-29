@@ -278,6 +278,45 @@ class BuildGraphParsingTests(unittest.TestCase):
         self.assertEqual(reviewed[0].category, "government_project_codenames")
         self.assertEqual(reviewed[0].entity_id, "government_project_codenames:operation-paperclip")
 
+    def test_merge_cycles_do_not_fall_back_to_shortest_source_name(self) -> None:
+        mention = self.make_mention("Air Force", "government_agencies")
+        review = {
+            "nameMerges": {
+                "air force": {
+                    "sourceId": "government_agencies:air-force",
+                    "sourceName": "Air Force",
+                    "sourceCategory": "government_agencies",
+                    "targetId": "government_agencies:u-s-air-force",
+                    "targetName": "U.S. Air Force",
+                    "targetCategory": "government_agencies",
+                },
+                "u s air force": {
+                    "sourceId": "government_agencies:u-s-air-force",
+                    "sourceName": "U.S. Air Force",
+                    "sourceCategory": "government_agencies",
+                    "targetId": "government_agencies:united-states-air-force",
+                    "targetName": "United States Air Force",
+                    "targetCategory": "government_agencies",
+                },
+                "united states air force": {
+                    "sourceId": "government_agencies:united-states-air-force",
+                    "sourceName": "United States Air Force",
+                    "sourceCategory": "government_agencies",
+                    "targetId": "government_agencies:u-s-air-force",
+                    "targetName": "U.S. Air Force",
+                    "targetCategory": "government_agencies",
+                },
+            },
+        }
+        reviewed = build_graph.apply_review_to_mentions([mention], review)
+        self.assertEqual(reviewed[0].name, "U.S. Air Force")
+        self.assertEqual(reviewed[0].entity_id, "government_agencies:u-s-air-force")
+
+        reverse = self.make_mention("United States Air Force", "government_agencies")
+        reviewed_reverse = build_graph.apply_review_to_mentions([reverse], review)
+        self.assertEqual(reviewed_reverse[0].name, "U.S. Air Force")
+        self.assertEqual(reviewed_reverse[0].entity_id, "government_agencies:u-s-air-force")
+
     def test_name_merges_prefer_aliased_canonical_names(self) -> None:
         mention = self.make_mention("Diana Pasolka", "experiencers")
         review = {
