@@ -18609,6 +18609,7 @@
     "aircraft callsignl": "key_terms",
     "aircratt callsign": "key_terms",
     "al jazeera": "newsrooms",
+    "allen dulles": "people",
     "alien files reopened": "tv_shows",
     "aliens among us mac": "books",
     "alpha albino royal dracs": "alien_species",
@@ -18747,6 +18748,7 @@
     "consciousness": "key_terms",
     "consciousness department": "key_terms",
     "consciousness department it": "key_terms",
+    "conrad quimby": "people",
     "coordination headquarters": "government_agencies",
     "cosmic agenda": "emerging_terminology",
     "cosmic law": "emerging_terminology",
@@ -19380,7 +19382,14 @@
   },
   "note": "Replace data/reclass.json with this file before rebuilding.",
   "notes": {},
-  "omissions": {},
+  "omissions": {
+    "air conrad now": "Speaker-label OCR fragment from NASA transcript text.",
+    "conrad no": "Speaker-label OCR fragment from NASA transcript text.",
+    "conrad not": "Speaker-label OCR fragment from NASA transcript text.",
+    "conrad okay": "Speaker-label OCR fragment from NASA transcript text.",
+    "conrad right": "Speaker-label OCR fragment from NASA transcript text.",
+    "cooper no": "Speaker-label OCR fragment from NASA transcript text."
+  },
   "reclassifications": {
     "companies:aero-medical-center": "government_agencies",
     "companies:bigelow-advanced-aerospace-space": "contractors",

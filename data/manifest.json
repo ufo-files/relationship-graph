@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T21:59:06.793492+00:00",
+  "generated_at": "2026-06-29T22:21:52.881207+00:00",
   "pipeline": "relationship-graph",
   "reproducibility": {
     "no_openai_api": true,
@@ -18,8 +18,8 @@
       ".txt"
     ],
     "review_input_applied": true,
-    "source_data_dir": "_uap-data/data",
-    "transcript_source_dir": "_uap-data/data/transcripts",
+    "source_data_dir": "../uap-data/data",
+    "transcript_source_dir": "../uap-data/data/transcripts",
     "relationship_window_radius": 4,
     "relationship_window_mentions": 30,
     "relationship_output_limit": 8000,
@@ -29,8 +29,8 @@
   "counts": {
     "transcripts": 302,
     "segments": 217017,
-    "mentions": 110276,
-    "entities": 55656,
+    "mentions": 109741,
+    "entities": 55340,
     "relationships": 8000,
     "categories": 55
   },
@@ -339,13 +339,13 @@
     "why-the-pentagon-tried-to-censor-this-uf.tsv": "e66f4d3cc4202e0fd4d4986c5a4dc2a618df86798adc396d5fc333b004509b23"
   },
   "registry_hash": "85f3c52f306d1891b4a44f68e6527ed66041b2f074dad487cf7915d3740276b3",
-  "pipeline_hash": "78a572d4377bec54df2621fc4795a56842841607677bc092255e3ead9f849e55",
+  "pipeline_hash": "072646600de96c952721a40c556ec110f85c8d9658fae41e57e8c3a3bea22ff2",
   "review_counts": {
     "reclassifications": 510,
-    "name_reclassifications": 844,
+    "name_reclassifications": 846,
     "false_positives": 713,
     "removed_false_positives": 14,
-    "omissions": 0,
+    "omissions": 6,
     "aliases": 429,
     "merges": 949,
     "name_merges": 786,

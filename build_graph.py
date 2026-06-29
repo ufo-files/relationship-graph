@@ -881,6 +881,11 @@ NON_ENTITY_LABEL_PREFIXES = {
     "total",
 }
 
+SPEAKER_LABEL_FRAGMENT_PREFIXES = {"conrad", "cooper"}
+SPEAKER_LABEL_FRAGMENT_ALLOWED_NAMES = {
+    "conrad quimby",
+}
+
 TABLE_OR_REPORT_LABEL_RE = re.compile(
     r"\b(?:appendix|classification|declassification|doubtful|doubtfull|doubttull|evaluation|figure|"
     r"per\s+cent|reprogrammings|serial|table|total\s+(?:adjustments|certain|congressional|reprogrammings))\b",
@@ -1495,6 +1500,8 @@ def is_non_entity_label(name: str) -> bool:
     words = normalized.split()
     if normalized in NON_ENTITY_LABEL_NAMES:
         return True
+    if is_speaker_label_fragment(words):
+        return True
     if TABLE_OR_REPORT_LABEL_RE.search(name):
         return True
     if len(words) < 2 or len(words) > 4:
@@ -1504,6 +1511,17 @@ def is_non_entity_label(name: str) -> bool:
     if words[0] == "num":
         return True
     return False
+
+
+def is_speaker_label_fragment(words: list[str]) -> bool:
+    if len(words) < 2:
+        return False
+    normalized = " ".join(words)
+    if normalized in SPEAKER_LABEL_FRAGMENT_ALLOWED_NAMES:
+        return False
+    if words[0] not in SPEAKER_LABEL_FRAGMENT_PREFIXES:
+        return False
+    return True
 
 
 def classify_structured_label_name(name: str) -> str | None:
@@ -3359,6 +3377,48 @@ def render_html(app_data_version: str = "") -> str:
       text-transform: uppercase;
       letter-spacing: 0;
     }
+    .owner-label {
+      display: inline-block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    .owner-label:hover,
+    .owner-label:focus-visible {
+      color: var(--muted);
+      text-decoration: underline;
+    }
+    .app-switcher {
+      position: relative;
+      display: inline-block;
+      padding-right: 18px;
+      cursor: pointer;
+    }
+    .app-switcher select {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .app-switcher::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid var(--ink);
+      transform: translateY(-35%);
+      pointer-events: none;
+    }
     .meta {
       color: var(--muted);
       font-size: 12px;
@@ -3744,7 +3804,16 @@ def render_html(app_data_version: str = "") -> str:
   <div id="graph-labels" class="graph-label-layer" aria-label="Keyboard accessible graph labels"></div>
   <div class="topbar">
     <div class="brand">
-      <h1 id="app-title">UFO Files Relationship Graph</h1>
+      <a class="owner-label" href="https://github.com/ufo-files">UFO Files</a>
+      <h1 id="app-title" aria-label="UFO Files Relationship Graph">
+        <span class="app-switcher">
+          <span class="app-switcher-text">Relationship Graph</span>
+          <select id="app-switcher" aria-label="Application">
+            <option value="https://ufo-files.github.io/relationship-graph/" selected>Relationship Graph</option>
+            <option value="https://ufo-files.github.io/dog-whistle/">Dog Whistle</option>
+          </select>
+        </span>
+      </h1>
       <div class="meta" id="status" role="status" aria-live="polite">Loading graph...</div>
     </div>
     <form class="controls" id="search-form" role="search" aria-label="Graph search and downloads">
@@ -3788,6 +3857,7 @@ __APP_DATA_SCRIPTS__
     const searchEl = document.getElementById("search");
     const reviewStatusEl = document.getElementById("review-status");
     const reviewFalsePositivesButton = document.getElementById("review-false-positives");
+    const appSwitcher = document.getElementById("app-switcher");
     let mode = "categories";
     let activeCategory = null;
     let selectedEntityId = null;
@@ -4026,7 +4096,7 @@ __APP_DATA_SCRIPTS__
       const topbar = document.querySelector(".topbar");
       if (!topbar) return 0;
       const rect = topbar.getBoundingClientRect();
-      return Math.max(0, Math.ceil(rect.bottom + 18));
+      return Math.max(0, Math.ceil(rect.bottom + 52));
     }
 
     function graphSidebarInsetPx() {
@@ -6169,6 +6239,11 @@ __APP_DATA_SCRIPTS__
     });
     reviewFalsePositivesButton.addEventListener("click", () => renderFalsePositiveReviewCard());
     document.getElementById("download-data").addEventListener("click", () => download("relationship-graph-data.json", DATA));
+    appSwitcher.addEventListener("change", () => {
+      if (appSwitcher.value && appSwitcher.value !== window.location.href) {
+        window.location.href = appSwitcher.value;
+      }
+    });
     updateReviewButton();
     render();
   </script>
