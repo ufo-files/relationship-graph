@@ -21,6 +21,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parent
@@ -43,6 +44,7 @@ if not SOURCE_DATA_DIR.is_absolute():
 SOURCE_DATA_DIR = SOURCE_DATA_DIR.resolve()
 TRANSCRIPTS_DIR = SOURCE_DATA_DIR / "transcripts"
 REGISTRY_PATH = TRANSCRIPTS_DIR / "entity-registry.json"
+README_PATH = ROOT / "README.md"
 RECLASS_INPUT = DATA_DIR / "reclass.json"
 LEGACY_ROOT_RECLASS_INPUT = ROOT / "reclass.json"
 LEGACY_REVIEW_INPUT = DATA_DIR / "review-decisions.json"
@@ -3117,6 +3119,70 @@ def build_manifest(
     }
 
 
+def update_readme_counts(manifest: dict[str, Any]) -> None:
+    if not README_PATH.exists():
+        return
+    counts = manifest.get("counts", {})
+
+    def count_value(key: str) -> int:
+        value = counts.get(key, 0)
+        return int(value) if isinstance(value, (int, float)) else 0
+
+    def badge(label: str, key: str) -> str:
+        return (
+            f"![{label}]"
+            f"(https://img.shields.io/badge/{quote(label.lower(), safe='')}-"
+            f"{quote(f'{count_value(key):,}', safe='')}-2b2b2b)"
+        )
+
+    badge_block = "\n".join(
+        [
+            "<!-- dataset-badges:start -->",
+            badge("Transcript Sources", "transcripts"),
+            badge("Segments", "segments"),
+            badge("Entities", "entities"),
+            badge("Mentions", "mentions"),
+            badge("Relationships", "relationships"),
+            "<!-- dataset-badges:end -->",
+        ]
+    )
+    export_block = "\n".join(
+        [
+            f"- {count_value('transcripts'):,} transcript sources",
+            f"- {count_value('segments'):,} transcript segments",
+            f"- {count_value('mentions'):,} entity mentions",
+            f"- {count_value('entities'):,} entities",
+            f"- {count_value('relationships'):,} relationships",
+            f"- {count_value('categories'):,} categories",
+        ]
+    )
+
+    readme = README_PATH.read_text(encoding="utf-8")
+    if "<!-- dataset-badges:start -->" in readme and "<!-- dataset-badges:end -->" in readme:
+        readme = re.sub(
+            r"<!-- dataset-badges:start -->.*?<!-- dataset-badges:end -->",
+            badge_block,
+            readme,
+            count=1,
+            flags=re.S,
+        )
+    else:
+        readme = re.sub(
+            r"(\[!\[Rebuild Report\]\([^\n]+\)\n)(?:!\[[^\n]+\]\(https://img\.shields\.io/badge/[^\n]+\)\n)*",
+            r"\1" + badge_block + "\n",
+            readme,
+            count=1,
+        )
+    readme = re.sub(
+        r"(The current export includes:\n\n).*?(\n\n## Interface)",
+        r"\1" + export_block + r"\2",
+        readme,
+        count=1,
+        flags=re.S,
+    )
+    README_PATH.write_text(readme, encoding="utf-8")
+
+
 def write_report(
     segments: list[Segment],
     mentions: list[Mention],
@@ -3190,6 +3256,7 @@ def write_report(
         encoding="utf-8",
     )
     (ROOT / "index.html").write_text(render_html(app_payload_version), encoding="utf-8")
+    update_readme_counts(manifest)
 
 
 def asdict_slim_mention(mention: Mention) -> dict[str, Any]:
@@ -5146,6 +5213,25 @@ __APP_DATA_SCRIPTS__
       });
     }
 
+    function fitHomeCategoryGraph(nodes, center) {
+      const items = [center].concat(nodes);
+      const maxRadius = Math.max(...items.map((node) => node.r));
+      const longestLabel = Math.max(...nodes.map((node) => (node.raw?.name || node.label || "").length));
+      const labelWidthPad = longestLabel * maxRadius * .34;
+      const xPad = Math.max(maxRadius * 4.2, labelWidthPad);
+      const topPad = maxRadius * 2.2;
+      const bottomPad = maxRadius * 3.2;
+      const minX = Math.min(...items.map((node) => node.x - node.r)) - xPad;
+      const maxX = Math.max(...items.map((node) => node.x + node.r)) + xPad;
+      const minY = Math.min(...items.map((node) => node.y - node.r)) - topPad;
+      const maxY = Math.max(...items.map((node) => node.y + node.r)) + bottomPad;
+      fitBoundsToViewport(minX, minY, maxX, maxY, {
+        reserveHeader: true,
+        bottomInsetPx: 88,
+        zoomFactor: isCompactViewport() ? 1.1 : 1.25,
+      });
+    }
+
     function fitSelectedEgoGraph(nodes, center) {
       const items = [center].concat(nodes).filter(Boolean);
       if (!items.length) return;
@@ -5194,7 +5280,43 @@ __APP_DATA_SCRIPTS__
 
     function fitCategoryDrillViewport(activeCategoryNode, nodes) {
       if (!isCompactViewport()) {
-        fitNodesToViewport([activeCategoryNode].concat(nodes), { padding: 260, reserveHeader: true, bottomInsetPx: 32 });
+        const items = [activeCategoryNode].concat(nodes).filter(Boolean);
+        const rect = svg.getBoundingClientRect();
+        const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
+        const rectHeight = Math.max(1, rect.height || svg.clientHeight || 1);
+        const topInset = Math.max(24, graphHeaderInsetPx() - 36);
+        const bottomInset = 64;
+        const availableH = Math.max(180, rectHeight - topInset - bottomInset);
+        const minX = Math.min(...items.map((node) => node.x - (node.r || 0)));
+        const maxX = Math.max(...items.map((node) => node.x + (node.r || 0)));
+        const minY = Math.min(...items.map((node) => node.y - (node.r || 0)));
+        const maxY = Math.max(...items.map((node) => node.y + (node.r || 0)));
+        const contentW = Math.max(1, maxX - minX);
+        const contentH = Math.max(1, maxY - minY);
+        const heightScale = (availableH * .87) / contentH;
+        const widthScale = (rectWidth * .84) / contentW;
+        let scale = Math.min(heightScale, widthScale);
+        if (!Number.isFinite(scale) || scale <= 0) scale = 1;
+        let width = clamp(rectWidth / scale, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
+        let height = width / (rectWidth / rectHeight);
+        if (height < MIN_ZOOM_HEIGHT) {
+          height = MIN_ZOOM_HEIGHT;
+          width = height * (rectWidth / rectHeight);
+        }
+        if (height > MAX_ZOOM_HEIGHT) {
+          height = MAX_ZOOM_HEIGHT;
+          width = height * (rectWidth / rectHeight);
+        }
+        const actualScale = rectWidth / width;
+        const contentCx = (minX + maxX) / 2;
+        const contentCy = (minY + maxY) / 2;
+        const availableCenterY = topInset + availableH / 2;
+        setViewBox(
+          contentCx - rectWidth / actualScale / 2,
+          contentCy - availableCenterY / actualScale,
+          width,
+          height
+        );
         return;
       }
       const focusRadius = 760;
@@ -5211,6 +5333,32 @@ __APP_DATA_SCRIPTS__
           rightInsetPx: 12,
         }
       );
+    }
+
+    function spreadContextNodes(nodes, center) {
+      if (nodes.length < 2) return nodes;
+      const sorted = nodes.slice().sort((a, b) => a.angle - b.angle);
+      for (let pass = 0; pass < 5; pass++) {
+        for (let index = 1; index < sorted.length; index++) {
+          const previous = sorted[index - 1];
+          const current = sorted[index];
+          const radius = Math.max(1, (previous.contextRadius + current.contextRadius) / 2);
+          const previousName = previous.raw?.name || previous.label || "";
+          const currentName = current.raw?.name || current.label || "";
+          const labelSpan = Math.max(previousName.length, currentName.length) * 18;
+          const minGap = Math.max(.18, Math.min(.42, labelSpan / radius));
+          const gap = current.angle - previous.angle;
+          if (gap >= minGap) continue;
+          const shift = (minGap - gap) / 2;
+          previous.angle -= shift;
+          current.angle += shift;
+        }
+      }
+      for (const node of nodes) {
+        node.x = center.x + Math.cos(node.angle) * node.contextRadius;
+        node.y = center.y + Math.sin(node.angle) * node.contextRadius;
+      }
+      return nodes;
     }
 
     function setCornerLabel(title, detail) {
@@ -5281,9 +5429,27 @@ __APP_DATA_SCRIPTS__
         if (graphLabelsEl) graphLabelsEl.innerHTML = "";
         return;
       }
-      graphLabelsEl.innerHTML = labelItems.map((item) => {
+      const positioned = labelItems.map((item) => {
         const point = graphToScreen(item.x, item.y);
-        const top = graphLabelTop(point.y);
+        return { item, point, top: graphLabelTop(point.y) };
+      });
+      const connectedLabels = positioned
+        .filter((entry) => entry.item.secondary && /connected nodes/i.test(entry.item.secondary))
+        .sort((a, b) => a.top - b.top || a.point.x - b.point.x);
+      for (let index = 0; index < connectedLabels.length; index++) {
+        const current = connectedLabels[index];
+        const currentWidth = Math.min(190, Math.max(current.item.primary.length * 9.5, current.item.secondary.length * 7.4));
+        for (let previousIndex = 0; previousIndex < index; previousIndex++) {
+          const previous = connectedLabels[previousIndex];
+          const previousWidth = Math.min(190, Math.max(previous.item.primary.length * 9.5, previous.item.secondary.length * 7.4));
+          const horizontalOverlap = Math.min(current.point.x + currentWidth / 2, previous.point.x + previousWidth / 2) - Math.max(current.point.x - currentWidth / 2, previous.point.x - previousWidth / 2);
+          const verticalGap = current.top - previous.top;
+          if (horizontalOverlap > 0 && verticalGap < 58) {
+            current.top = previous.top + 58;
+          }
+        }
+      }
+      graphLabelsEl.innerHTML = positioned.map(({ item, point, top }) => {
         if (item.kind === "annotation") {
           return '<div class="html-graph-label" aria-hidden="true" style="left:' + point.x.toFixed(1) + 'px;top:' + top.toFixed(1) + 'px">' +
             '<span class="label-primary">' + esc(item.primary) + '</span>' +
@@ -5364,7 +5530,7 @@ __APP_DATA_SCRIPTS__
       cardEl.classList.remove("open");
       setCornerLabel(null);
       wireCategoryNodes();
-      fitEgoGraph(nodes, center);
+      fitHomeCategoryGraph(nodes, center);
     }
 
     function buildCategoryLayout() {
@@ -5458,11 +5624,14 @@ __APP_DATA_SCRIPTS__
           x: activeCategoryNode.x + Math.cos(angle) * radius,
           y: activeCategoryNode.y + Math.sin(angle) * radius,
           r: 9 + Math.sqrt(item.weight / maxSharedWeight) * 13,
+          angle,
+          contextRadius: radius,
           weight: item.weight,
           sourceCount: item.sourceCount,
           raw: item.entity,
         };
       });
+      spreadContextNodes(sharedNodes, activeCategoryNode);
       const sharedNodeById = new Map(sharedNodes.map((node) => [node.id, node]));
       const sharedNodesSvg = sharedNodes.map((node) => {
         return '<g class="graph-node" data-entity="' + esc(node.id) + '">' +

@@ -54,6 +54,34 @@ test("home root hover shows dataset counts", async ({ page }) => {
   await expect(hoverCard).not.toContainText("0 entities");
 });
 
+test("home category graph fills the available height", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(page.locator(".graph-node.home-root")).toBeVisible({ timeout: 15000 });
+  const metrics = await page.evaluate(() => {
+    const topbar = document.querySelector(".topbar");
+    const categoryNodes = Array.from(document.querySelectorAll("#graph .graph-node:not(.home-root) circle"));
+    const labels = Array.from(document.querySelectorAll(".html-graph-label"));
+    const rects = categoryNodes
+      .map((node) => node.getBoundingClientRect())
+      .filter((rect) => rect.width > 0 && rect.height > 0);
+    const labelRects = labels
+      .map((label) => label.getBoundingClientRect())
+      .filter((rect) => rect.width > 0 && rect.height > 0);
+    const minY = Math.min(...rects.map((rect) => rect.top));
+    const maxY = Math.max(...rects.map((rect) => rect.bottom));
+    const maxLabelBottom = Math.max(...labelRects.map((rect) => rect.bottom));
+    const topbarBottom = topbar ? topbar.getBoundingClientRect().bottom : 0;
+    return {
+      selectedHeight: maxY - minY,
+      availableHeight: window.innerHeight - topbarBottom - 32,
+      bottomClearance: window.innerHeight - maxLabelBottom,
+    };
+  });
+  expect(metrics.selectedHeight).toBeGreaterThan(metrics.availableHeight * 0.72);
+  expect(metrics.bottomClearance).toBeGreaterThan(32);
+});
+
 test("search submits without mouse and moves focus to a result", async ({ page }) => {
   await page.goto("/");
 

@@ -2,6 +2,13 @@
 
 [![Validate](https://github.com/ufo-files/relationship-graph/actions/workflows/validate.yml/badge.svg)](https://github.com/ufo-files/relationship-graph/actions/workflows/validate.yml)
 [![Rebuild Report](https://github.com/ufo-files/relationship-graph/actions/workflows/rebuild-report.yml/badge.svg)](https://github.com/ufo-files/relationship-graph/actions/workflows/rebuild-report.yml)
+<!-- dataset-badges:start -->
+![Transcript Sources](https://img.shields.io/badge/transcript%20sources-302-2b2b2b)
+![Segments](https://img.shields.io/badge/segments-217%2C017-2b2b2b)
+![Entities](https://img.shields.io/badge/entities-54%2C019-2b2b2b)
+![Mentions](https://img.shields.io/badge/mentions-108%2C377-2b2b2b)
+![Relationships](https://img.shields.io/badge/relationships-8%2C000-2b2b2b)
+<!-- dataset-badges:end -->
 
 A static, browser-based relationship graph for exploring entities and connections extracted from a corpus of UAP-related transcripts.
 
@@ -19,10 +26,10 @@ The current export includes:
 
 - 302 transcript sources
 - 217,017 transcript segments
-- 110,276 entity mentions
-- 55,656 entities
+- 108,377 entity mentions
+- 54,019 entities
 - 8,000 relationships
-- 46 categories
+- 52 categories
 
 ## Interface
 
