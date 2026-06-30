@@ -33,6 +33,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
         with:
+          token: ${{ secrets.UFO_FILES_WORKFLOW_TOKEN }}
           persist-credentials: true
           ref: ${{ github.ref_name }}
 

@@ -27,10 +27,10 @@ class ElementCollector(HTMLParser):
 def main() -> int:
     errors: list[str] = []
     index = (ROOT / "index.html").read_text(encoding="utf-8", errors="replace")
-    source = (ROOT / "build_graph.py").read_text(encoding="utf-8", errors="replace")
     parser = ElementCollector()
     parser.feed(index)
     styles = collect_document_styles(index, parser)
+    source = collect_template_sources(index, parser)
 
     errors.extend(check_document(index, styles, parser))
     errors.extend(check_template_source(source))
@@ -59,6 +59,24 @@ def collect_document_styles(index: str, parser: ElementCollector) -> str:
         if stylesheet.exists():
             styles.append(stylesheet.read_text(encoding="utf-8", errors="replace"))
     return "\n".join(styles)
+
+
+def collect_template_sources(index: str, parser: ElementCollector) -> str:
+    sources = [(ROOT / "build_graph.py").read_text(encoding="utf-8", errors="replace")]
+    for tag, attrs in parser.elements:
+        if tag != "script" or not attrs.get("src"):
+            continue
+        src = attrs.get("src", "").split("?", 1)[0]
+        if not src or re.match(r"^[a-z]+:", src, flags=re.IGNORECASE):
+            continue
+        script = (ROOT / src.lstrip("./")).resolve()
+        try:
+            script.relative_to(ROOT)
+        except ValueError:
+            continue
+        if script.exists():
+            sources.append(script.read_text(encoding="utf-8", errors="replace"))
+    return "\n".join(sources)
 
 
 def check_document(index: str, styles: str, parser: ElementCollector) -> list[str]:
