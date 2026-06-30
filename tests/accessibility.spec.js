@@ -41,6 +41,19 @@ test("graph is operable with keyboard and exposes accessible controls", async ({
   await expect(page.locator("#status")).toContainText("select a group");
 });
 
+test("home root hover shows dataset counts", async ({ page }) => {
+  await page.goto("/");
+
+  const root = page.locator(".graph-node.home-root");
+  await expect(root).toBeVisible({ timeout: 15000 });
+  await root.hover();
+
+  const hoverCard = page.locator("#hover-card");
+  await expect(hoverCard).toContainText("UFO Files");
+  await expect(hoverCard).toContainText(/entities/);
+  await expect(hoverCard).not.toContainText("0 entities");
+});
+
 test("search submits without mouse and moves focus to a result", async ({ page }) => {
   await page.goto("/");
 
@@ -227,6 +240,37 @@ test("entity graph fit reserves the open sidebar", async ({ page }) => {
   });
   expect(spacing.labelLeft).toBeGreaterThan(spacing.sidebarRight + 16);
   expect(spacing.viewBoxWidth).toBeLessThan(5200);
+});
+
+test("selected entity graph frames primary nodes tall", async ({ page }) => {
+  await page.goto("/");
+
+  const search = page.getByRole("searchbox", { name: "Search entity or category" });
+  await search.fill("CIA");
+  await search.press("Enter");
+
+  await expect(page.locator(".html-graph-label[aria-current='true']")).toBeFocused();
+  const metrics = await page.evaluate(() => {
+    const topbar = document.querySelector(".topbar");
+    const card = document.querySelector("#node-card");
+    const primaryNodes = Array.from(document.querySelectorAll("#graph .graph-node:not(.context-node) circle"));
+    const rects = primaryNodes
+      .map((node) => node.getBoundingClientRect())
+      .filter((rect) => rect.width > 0 && rect.height > 0);
+    const minY = Math.min(...rects.map((rect) => rect.top));
+    const maxY = Math.max(...rects.map((rect) => rect.bottom));
+    const minX = Math.min(...rects.map((rect) => rect.left));
+    const cardRight = card ? card.getBoundingClientRect().right : 0;
+    const topbarBottom = topbar ? topbar.getBoundingClientRect().bottom : 0;
+    return {
+      primaryHeight: maxY - minY,
+      availableHeight: window.innerHeight - topbarBottom - 32,
+      primaryLeft: minX,
+      cardRight,
+    };
+  });
+  expect(metrics.primaryHeight).toBeGreaterThan(metrics.availableHeight * 0.76);
+  expect(metrics.primaryLeft).toBeGreaterThan(metrics.cardRight - 8);
 });
 
 test("manual relationships are visible in direct entity views", async ({ page }) => {

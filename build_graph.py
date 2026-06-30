@@ -28,6 +28,13 @@ PROJECT_ID = "relationship-graph"
 RELATIONSHIP_WINDOW_RADIUS = 4
 RELATIONSHIP_WINDOW_MENTION_LIMIT = 30
 RELATIONSHIP_OUTPUT_LIMIT = 8000
+SOURCE_DOCUMENT_DETECTOR = "source_document"
+SOURCE_OUTLET_DETECTOR = "source_outlet"
+SOURCE_PROVENANCE_DETECTORS = {SOURCE_DOCUMENT_DETECTOR, SOURCE_OUTLET_DETECTOR}
+SOURCE_DOCUMENT_RELATIONSHIP_CATEGORIES = {"frequencies"}
+SOURCE_OUTLET_RULES = [
+    ("American Alchemy", "newsrooms", re.compile(r"\bAmerican\s+Alchemy\b|AmericanAlchemy", re.I)),
+]
 DATA_DIR = ROOT / "data"
 DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
 SOURCE_DATA_DIR = Path(os.environ.get("UAP_DATA_DIR") or (DEFAULT_SOURCE_DATA_DIR if DEFAULT_SOURCE_DATA_DIR.exists() else DATA_DIR))
@@ -589,11 +596,11 @@ COMMON_DOMAIN_SUFFIXES = {
 IP_RE = re.compile(r"\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b")
 GPS_RE = re.compile(r"\b[-+]?(?:[1-8]?\d(?:\.\d+)?|90(?:\.0+)?),\s*[-+]?(?:(?:1[0-7]\d|\d?\d)(?:\.\d+)?|180(?:\.0+)?)\b")
 FREQ_RE = re.compile(
-    r"\b\d{1,5}(?:\.\d{1,4})?\s?(?:Hz|kHz|MHz|GHz|THz|hertz|kilohertz|megahertz|gigahertz|terahertz)\b",
+    r"\b\d{1,9}(?:\.\d{1,4})?\s?(?:Hz|kHz|MHz|GHz|THz|hertz|kilohertz|megahertz|gigahertz|terahertz)\b",
     re.I,
 )
 FREQ_RANGE_RE = re.compile(
-    r"\b\d{1,5}(?:\.\d{1,4})?\s*(?:to|-|–)\s*\d{1,5}(?:\.\d{1,4})?\s*"
+    r"\b\d{1,9}(?:\.\d{1,4})?\s*(?:to|-|–)\s*\d{1,9}(?:\.\d{1,4})?\s*"
     r"(?:Hz|kHz|MHz|GHz|THz|hertz|kilohertz|megahertz|gigahertz|terahertz)\b",
     re.I,
 )
@@ -609,6 +616,14 @@ FREQUENCY_UNIT_ALIASES = {
     "thz": "THz",
     "terahertz": "THz",
 }
+FREQUENCY_UNIT_MULTIPLIERS = {
+    "Hz": 1.0,
+    "kHz": 1_000.0,
+    "MHz": 1_000_000.0,
+    "GHz": 1_000_000_000.0,
+    "THz": 1_000_000_000_000.0,
+}
+FREQUENCY_UNIT_ORDER = ("THz", "GHz", "MHz", "kHz", "Hz")
 FREQUENCY_BAND_ALIASES = {
     "extra low frequency": "extremely low frequency",
 }
@@ -833,7 +848,7 @@ INSTITUTE_NAME_RE = re.compile(r"\b(?:Institute|Institutes)\b", re.I)
 UNIVERSITY_NAME_RE = re.compile(r"\b(?:University|College|School)\b", re.I)
 RESEARCH_ORG_NAME_RE = re.compile(r"\b(?:Laboratory|Laboratories|Labs?|Research\s+Center|Research\s+Institute)\b", re.I)
 GOVERNMENT_ORG_NAME_RE = re.compile(
-    r"\b(?:Department|Agency|Administration|Bureau|Office|Ministry|Command|Committee|Commission|Council|Board|Secretary|"
+    r"\b(?:Department|Agency|Administration|Bureau|Office|Ministry|Command|Committee|Commission|Council|Board|Panel|Secretary|"
     r"Forest\s+Service|Geological\s+Service|Health\s+Service|Selective\s+Service|Strategic\s+Services|Technical\s+Services)\b",
     re.I,
 )
@@ -1307,6 +1322,7 @@ def main() -> None:
     dictionaries, omit_terms = build_dictionaries(registry)
     mentions = resolve_competing_mentions(extract_mentions(segments, dictionaries, omit_terms))
     mentions = apply_review_to_mentions(mentions, review)
+    mentions = add_source_provenance_mentions(segments, mentions)
     entities = build_entities(mentions)
     relationships = build_relationships(segments, mentions, entities, review)
     graph = build_graph(entities, relationships)
@@ -2350,6 +2366,86 @@ def add_mention(
     )
 
 
+def append_provenance_mention(
+    mentions: list[Mention],
+    segment: Segment,
+    name: str,
+    category: str,
+    detector: str,
+    reason: str,
+    excerpt: str,
+) -> None:
+    canonical = canonicalize(name, category)
+    mention_id = f"m-{len(mentions) + 1:07d}"
+    mentions.append(
+        Mention(
+            id=mention_id,
+            entity_id=entity_key(canonical, category),
+            name=name.strip(),
+            category=category,
+            category_label=label(category),
+            segment_id=segment.id,
+            transcript_id=segment.transcript_id,
+            transcript_title=segment.transcript_title,
+            source_file=segment.source_file,
+            start_ms=segment.start_ms,
+            timestamp=format_timestamp(segment.start_ms),
+            excerpt=excerpt,
+            detector=detector,
+            confidence=1.0,
+            reason=reason,
+        )
+    )
+
+
+def add_source_provenance_mentions(segments: list[Segment], mentions: list[Mention]) -> list[Mention]:
+    first_segment_by_transcript: dict[str, Segment] = {}
+    outlet_matches_by_transcript: dict[str, dict[tuple[str, str], Segment]] = defaultdict(dict)
+
+    for segment in segments:
+        first_segment_by_transcript.setdefault(segment.transcript_id, segment)
+        for outlet_name, category, pattern in SOURCE_OUTLET_RULES:
+            key = (outlet_name, category)
+            if key not in outlet_matches_by_transcript[segment.transcript_id] and pattern.search(segment.text):
+                outlet_matches_by_transcript[segment.transcript_id][key] = segment
+
+    existing = {(mention.transcript_id, mention.entity_id, mention.detector) for mention in mentions}
+    for transcript_id, first_segment in sorted(first_segment_by_transcript.items(), key=lambda item: item[1].transcript_title.lower()):
+        document_name = first_segment.transcript_title
+        document_category = "document_names"
+        document_entity_id = entity_key(canonicalize(document_name, document_category), document_category)
+        document_key = (transcript_id, document_entity_id, SOURCE_DOCUMENT_DETECTOR)
+        if document_key not in existing:
+            append_provenance_mention(
+                mentions,
+                first_segment,
+                document_name,
+                document_category,
+                SOURCE_DOCUMENT_DETECTOR,
+                "Source document entity for provenance",
+                f"Source document: {document_name}",
+            )
+            existing.add(document_key)
+
+        for (outlet_name, outlet_category), evidence_segment in sorted(outlet_matches_by_transcript.get(transcript_id, {}).items()):
+            outlet_entity_id = entity_key(canonicalize(outlet_name, outlet_category), outlet_category)
+            outlet_key = (transcript_id, outlet_entity_id, SOURCE_OUTLET_DETECTOR)
+            if outlet_key in existing:
+                continue
+            append_provenance_mention(
+                mentions,
+                evidence_segment,
+                outlet_name,
+                outlet_category,
+                SOURCE_OUTLET_DETECTOR,
+                "Source outlet identified from transcript text",
+                clean_text(evidence_segment.text[:500]) or f"Source outlet: {outlet_name}",
+            )
+            existing.add(outlet_key)
+
+    return mentions
+
+
 def review_alias_for(entity_id: str, name: str, aliases_by_id: dict[str, Any], aliases_by_name: dict[str, Any]) -> str | None:
     alias = aliases_by_id.get(entity_id) or aliases_by_name.get(normalize_name(name))
     if isinstance(alias, str) and alias.strip():
@@ -2555,10 +2651,76 @@ def build_entities(mentions: list[Mention]) -> list[Entity]:
     return entities
 
 
+def build_source_document_relationships(mentions: list[Mention], entities: list[Entity]) -> list[Relationship]:
+    entity_by_id = {entity.id: entity for entity in entities}
+    document_by_transcript: dict[str, Mention] = {}
+    for mention in mentions:
+        if mention.detector == SOURCE_DOCUMENT_DETECTOR and mention.entity_id in entity_by_id:
+            document_by_transcript[mention.transcript_id] = mention
+
+    target_mentions_by_pair: dict[tuple[str, str, str], list[Mention]] = defaultdict(list)
+    for mention in mentions:
+        document = document_by_transcript.get(mention.transcript_id)
+        if not document or mention.entity_id == document.entity_id:
+            continue
+        if mention.detector == SOURCE_OUTLET_DETECTOR:
+            target_mentions_by_pair[(document.entity_id, mention.entity_id, "source_outlet")].append(mention)
+            continue
+        if mention.detector in SOURCE_PROVENANCE_DETECTORS:
+            continue
+        if mention.category in SOURCE_DOCUMENT_RELATIONSHIP_CATEGORIES:
+            target_mentions_by_pair[(document.entity_id, mention.entity_id, "source_mentions")].append(mention)
+
+    relationships: list[Relationship] = []
+    for index, ((source_id, target_id, rel_type), evidence_mentions) in enumerate(
+        sorted(
+            target_mentions_by_pair.items(),
+            key=lambda item: (
+                item[0][2],
+                entity_by_id.get(item[0][0]).name.lower() if entity_by_id.get(item[0][0]) else "",
+                entity_by_id.get(item[0][1]).name.lower() if entity_by_id.get(item[0][1]) else "",
+            ),
+        )
+    ):
+        source_entity = entity_by_id.get(source_id)
+        target_entity = entity_by_id.get(target_id)
+        if not source_entity or not target_entity:
+            continue
+        evidence_mentions = sorted(evidence_mentions, key=lambda mention: (-mention.confidence, mention.start_ms, mention.id))
+        evidence = [
+            {
+                "segment_id": mention.segment_id,
+                "transcript": mention.transcript_title,
+                "timestamp": mention.timestamp,
+                "excerpt": mention.excerpt,
+                "reason": "Source document mentions this entity" if rel_type == "source_mentions" else mention.reason,
+                "relationship_type": rel_type,
+            }
+            for mention in evidence_mentions[:6]
+        ]
+        relationships.append(
+            Relationship(
+                id=f"rel-source-{index + 1:06d}",
+                source=source_entity.id,
+                target=target_entity.id,
+                source_name=source_entity.name,
+                target_name=target_entity.name,
+                type=rel_type,
+                weight=len(evidence_mentions),
+                evidence_segment_ids=[item["segment_id"] for item in evidence],
+                evidence=evidence,
+                confidence=round(sum(mention.confidence for mention in evidence_mentions) / max(1, len(evidence_mentions)), 3),
+            )
+        )
+    return relationships
+
+
 def build_relationships(segments: list[Segment], mentions: list[Mention], entities: list[Entity], review: dict[str, Any]) -> list[Relationship]:
     entity_by_id = {entity.id: entity for entity in entities}
     mentions_by_segment: dict[str, list[Mention]] = defaultdict(list)
     for mention in mentions:
+        if mention.detector in SOURCE_PROVENANCE_DETECTORS:
+            continue
         mentions_by_segment[mention.segment_id].append(mention)
 
     segments_by_transcript: dict[str, list[Segment]] = defaultdict(list)
@@ -2642,7 +2804,9 @@ def build_relationships(segments: list[Segment], mentions: list[Mention], entiti
                 confidence=round(sum(pair_confidence[(source, target, rel_type)]) / max(1, len(pair_confidence[(source, target, rel_type)])), 3),
             )
         )
-    return apply_manual_relationships(relationships[:RELATIONSHIP_OUTPUT_LIMIT], entities, review)
+    source_relationships = build_source_document_relationships(mentions, entities)[:RELATIONSHIP_OUTPUT_LIMIT]
+    remaining = max(0, RELATIONSHIP_OUTPUT_LIMIT - len(source_relationships))
+    return apply_manual_relationships(source_relationships + relationships[:remaining], entities, review)
 
 
 def apply_manual_relationships(relationships: list[Relationship], entities: list[Entity], review: dict[str, Any]) -> list[Relationship]:
@@ -3924,7 +4088,7 @@ def normalize_name(value: str) -> str:
 def normalize_frequency_name(value: str) -> str:
     cleaned = clean_text(value).replace("–", "-")
     match = re.match(
-        r"^\s*(\d{1,5}(?:\.\d{1,4})?)\s*(?:(?:to|-)\s*(\d{1,5}(?:\.\d{1,4})?)\s*)?([a-z]+)\s*$",
+        r"^\s*(\d{1,9}(?:\.\d{1,4})?)\s*(?:(?:to|-)\s*(\d{1,9}(?:\.\d{1,4})?)\s*)?([a-z]+)\s*$",
         cleaned,
         re.I,
     )
@@ -3934,9 +4098,25 @@ def normalize_frequency_name(value: str) -> str:
     canonical_unit = FREQUENCY_UNIT_ALIASES.get(unit.lower())
     if not canonical_unit:
         return cleaned
+    start_hz = float(start) * FREQUENCY_UNIT_MULTIPLIERS[canonical_unit]
+    end_hz = float(end) * FREQUENCY_UNIT_MULTIPLIERS[canonical_unit] if end else None
+    target_unit = choose_frequency_unit(max(start_hz, end_hz or start_hz))
     if end:
-        return f"{start}-{end} {canonical_unit}"
-    return f"{start} {canonical_unit}"
+        return f"{format_frequency_value(start_hz, target_unit)}-{format_frequency_value(end_hz or start_hz, target_unit)} {target_unit}"
+    return f"{format_frequency_value(start_hz, target_unit)} {target_unit}"
+
+
+def choose_frequency_unit(max_hz: float) -> str:
+    for unit in FREQUENCY_UNIT_ORDER:
+        if max_hz >= FREQUENCY_UNIT_MULTIPLIERS[unit]:
+            return unit
+    return "Hz"
+
+
+def format_frequency_value(value_hz: float, unit: str) -> str:
+    value = value_hz / FREQUENCY_UNIT_MULTIPLIERS[unit]
+    formatted = f"{value:.6f}".rstrip("0").rstrip(".")
+    return formatted or "0"
 
 
 def normalize_frequency_band_name(value: str) -> str:

@@ -86,23 +86,59 @@ class BuildGraphParsingTests(unittest.TestCase):
             source_file="sample.txt",
             start_ms=0,
             end_ms=1000,
-            text="Signals included 300 megahertz, 300MHz, 16-190kHz, 0.1 to 20 Gigahertz, and 4.76–5.66 terahertz.",
+            text=(
+                "Signals included 300 megahertz, 300MHz, 1600MHz, 1.6 GHz, "
+                "5000 Hz, 16-190kHz, 1215-1240 MHz, 0.1 to 20 Gigahertz, and 4.76–5.66 terahertz."
+            ),
         )
         mentions = build_graph.pattern_mentions(segment)
         names = {item["name"] for item in mentions if item["category"] == "frequencies"}
         self.assertIn("300 MHz", names)
+        self.assertIn("1.6 GHz", names)
+        self.assertIn("5 kHz", names)
         self.assertIn("16-190 kHz", names)
+        self.assertIn("1.215-1.24 GHz", names)
         self.assertIn("0.1-20 GHz", names)
         self.assertIn("4.76-5.66 THz", names)
         self.assertNotIn("300 megahertz", names)
         self.assertNotIn("300MHz", names)
+        self.assertNotIn("1600 MHz", names)
+        self.assertNotIn("5000 Hz", names)
         self.assertNotIn("190 kHz", names)
 
     def test_frequency_category_is_reserved_for_actual_values(self) -> None:
         entities = json.loads(Path("data/entities.json").read_text(encoding="utf-8"))
-        value_re = re.compile(r"^\d{1,5}(?:\.\d{1,4})?(?:-\d{1,5}(?:\.\d{1,4})?)?\s(?:Hz|kHz|MHz|GHz|THz)$")
+        value_re = re.compile(r"^\d{1,9}(?:\.\d{1,6})?(?:-\d{1,9}(?:\.\d{1,6})?)?\s(?:Hz|kHz|MHz|GHz|THz)$")
         invalid_names = [entity["name"] for entity in entities if entity["category"] == "frequencies" and not value_re.match(entity["name"])]
         self.assertEqual(invalid_names, [])
+
+    def test_source_documents_become_entities_with_provenance_relationships(self) -> None:
+        segment = build_graph.Segment(
+            id="s-1",
+            transcript_id="transcript-one",
+            transcript_title="Transcript One",
+            source_file="transcript-one.tsv",
+            start_ms=0,
+            end_ms=1000,
+            text="This American Alchemy transcript calls out a 1600MHz signal.",
+        )
+        mentions: list[build_graph.Mention] = []
+        seen: set[tuple[str, str, str]] = set()
+        for item in build_graph.pattern_mentions(segment):
+            build_graph.add_mention(mentions, seen, segment, **item)
+
+        mentions = build_graph.add_source_provenance_mentions([segment], mentions)
+        entities = build_graph.build_entities(mentions)
+        relationships = build_graph.build_relationships([segment], mentions, entities, {})
+
+        entity_keys = {(entity.category, entity.name) for entity in entities}
+        self.assertIn(("document_names", "Transcript One"), entity_keys)
+        self.assertIn(("frequencies", "1.6 GHz"), entity_keys)
+        self.assertIn(("newsrooms", "American Alchemy"), entity_keys)
+
+        relationship_keys = {(relationship.source_name, relationship.target_name, relationship.type) for relationship in relationships}
+        self.assertIn(("Transcript One", "1.6 GHz", "source_mentions"), relationship_keys)
+        self.assertIn(("Transcript One", "American Alchemy", "source_outlet"), relationship_keys)
 
     def test_generated_people_like_categories_do_not_contain_pentagon_or_universal_origin_leaks(self) -> None:
         entities = json.loads(Path("data/entities.json").read_text(encoding="utf-8"))
@@ -815,10 +851,11 @@ class BuildGraphParsingTests(unittest.TestCase):
             source_file="sample.txt",
             start_ms=0,
             end_ms=1000,
-            text="The National Advisory Committee reviewed the records.",
+        text="The National Advisory Committee and Robertson Panel reviewed the records.",
         )
         committee_categories = {item["name"]: item["category"] for item in build_graph.person_mentions(committee_segment, set())}
         self.assertEqual(committee_categories["National Advisory Committee"], "government_agencies")
+        self.assertEqual(committee_categories["Robertson Panel"], "government_agencies")
 
 
 if __name__ == "__main__":
