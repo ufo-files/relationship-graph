@@ -55,6 +55,24 @@ async function openApp(page, baseUrl) {
 }
 
 async function capture(page, name) {
+  await page.evaluate(() => {
+    if (!document.getElementById("screenshot-outline-style")) {
+      const style = document.createElement("style");
+      style.id = "screenshot-outline-style";
+      style.textContent = `
+        html.screenshot-outline::after {
+          content: "";
+          position: fixed;
+          inset: 0;
+          border: 1px solid #111;
+          pointer-events: none;
+          z-index: 2147483647;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    document.documentElement.classList.add("screenshot-outline");
+  });
   await page.screenshot({
     path: path.join(OUTPUT_DIR, `${name}.png`),
     fullPage: false,
@@ -82,7 +100,8 @@ async function main() {
 
     await openApp(page, baseUrl);
     await page.getByText("Events & Claims", { exact: true }).click();
-    await page.waitForFunction(() => document.querySelector("#status")?.textContent?.includes("Events timeline"));
+    await page.locator(".timeline-axis").waitFor({ state: "attached", timeout: 30000 });
+    await page.waitForFunction(() => document.querySelectorAll(".timeline-date").length > 0, { timeout: 30000 });
     await page.waitForTimeout(700);
     await capture(page, "relationship-graph-events-timeline");
 
