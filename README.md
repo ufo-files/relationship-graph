@@ -154,7 +154,7 @@ The same rebuild workflow also runs when `build_graph.py`, scripts, or `data/rec
 
 Pull requests run the **Validate** workflow before merge. It compiles the builder, runs unit tests, validates `data/reclass.json`, checks the external source transcript files, audits accessibility basics, blocks hand edits to generated app files, and performs a smoke rebuild.
 
-Repository ownership rules are declared in `.github/CODEOWNERS`. For stronger protection, enable branch protection or a repository ruleset on `main` that requires pull requests, code owner review, and passing **Validate** before merge.
+Anyone can fork the repository and open a pull request. Merging to `main` requires review from the repository owner declared in `.github/CODEOWNERS`; branch protection enforces that review before changes can land.
 
 ## Extraction Limits
 
