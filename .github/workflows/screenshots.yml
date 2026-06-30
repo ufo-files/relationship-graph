@@ -12,8 +12,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: screenshots-${{ github.ref }}
-  cancel-in-progress: true
+  group: publish-main-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   capture:
@@ -24,6 +24,7 @@ jobs:
         with:
           token: ${{ secrets.UFO_FILES_WORKFLOW_TOKEN }}
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -50,4 +51,6 @@ jobs:
           git config user.email "297273897+ufo-files@users.noreply.github.com"
           git add screenshots
           git commit -m "Update relationship graph screenshots"
+          git fetch origin "${{ github.ref_name }}"
+          git rebase "origin/${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
