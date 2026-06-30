@@ -11,6 +11,7 @@ on:
       - .github/workflows/rebuild-report.yml
   repository_dispatch:
     types:
+      - data-updated
       - uap-data-updated
   workflow_dispatch:
 
@@ -26,7 +27,7 @@ jobs:
     name: Rebuild static graph
     runs-on: ubuntu-latest
     env:
-      UAP_DATA_DIR: _uap-data/data
+      UFO_FILES_DATA_DIR: _data/data
 
     steps:
       - name: Check out repository
@@ -38,8 +39,8 @@ jobs:
       - name: Check out source data
         uses: actions/checkout@v7
         with:
-          repository: ufo-files/uap-data
-          path: _uap-data
+          repository: ufo-files/data
+          path: _data
 
       - name: Set up Python
         uses: actions/setup-python@v6

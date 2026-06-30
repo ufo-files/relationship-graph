@@ -211,7 +211,7 @@ def validate_changed_files(path: Path) -> list[str]:
     if generated_changes and not source_changes_allow_generated and not generated_rebuild_pr:
         errors.append(
             "Generated app files should not be edited in contributor PRs. "
-            "Change data/reclass.json, source data in ufo-files/uap-data, or build_graph.py; "
+            "Change data/reclass.json, source data in ufo-files/data, or build_graph.py; "
             f"the rebuild workflow will regenerate these files after merge: {', '.join(generated_changes)}"
         )
     return errors

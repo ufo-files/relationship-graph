@@ -1,7 +1,7 @@
 ## What changed
 
 - [ ] Reclassification updates in `data/reclass.json`
-- [ ] Source-data changes in `ufo-files/uap-data`
+- [ ] Source-data changes in `ufo-files/data`
 - [ ] Extraction, graph, or UI code
 - [ ] Documentation or repository maintenance
 

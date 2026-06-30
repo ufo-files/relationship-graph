@@ -23,8 +23,19 @@ from pathlib import Path
 from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
-DATA_DIR = Path(os.environ.get("UAP_DATA_DIR") or (DEFAULT_SOURCE_DATA_DIR if DEFAULT_SOURCE_DATA_DIR.exists() else ROOT / "data"))
+DEFAULT_SOURCE_DATA_DIR = ROOT.parent / "data" / "data"
+LEGACY_SOURCE_DATA_DIR = ROOT.parent / "uap-data" / "data"
+CONFIGURED_SOURCE_DATA_DIR = os.environ.get("UFO_FILES_DATA_DIR") or os.environ.get("UAP_DATA_DIR")
+DATA_DIR = Path(
+    CONFIGURED_SOURCE_DATA_DIR
+    or (
+        DEFAULT_SOURCE_DATA_DIR
+        if DEFAULT_SOURCE_DATA_DIR.exists()
+        else LEGACY_SOURCE_DATA_DIR
+        if LEGACY_SOURCE_DATA_DIR.exists()
+        else ROOT / "data"
+    )
+)
 if not DATA_DIR.is_absolute():
     DATA_DIR = ROOT / DATA_DIR
 DATA_DIR = DATA_DIR.resolve()
