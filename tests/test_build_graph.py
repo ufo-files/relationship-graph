@@ -299,6 +299,92 @@ class BuildGraphParsingTests(unittest.TestCase):
         self.assertEqual(by_name.get("Aircraft Tail Number"), "key_terms")
         self.assertEqual(by_name.get("Unidentified Aircraft"), "key_terms")
 
+    def test_person_mentions_route_domain_nouns_out_of_people(self) -> None:
+        segment = build_graph.Segment(
+            id="s-1",
+            transcript_id="t-1",
+            transcript_title="Sample",
+            source_file="sample.txt",
+            start_ms=0,
+            end_ms=1000,
+            text=(
+                "Unidentified Flying Objects, Unidienified Aerial Objects, Flying Objects, "
+                "Aerial Phenomena Research Organization, Project Blue Book, National Security, "
+                "Western Range, and Wide Area Video Surveillance appeared in the source material."
+            ),
+        )
+        mentions = build_graph.person_mentions(segment, set())
+        by_name = {item["name"]: item["category"] for item in mentions}
+        people_like = {
+            item["name"]
+            for item in mentions
+            if item["category"] in build_graph.PERSON_LIKE_CATEGORIES
+        }
+        self.assertFalse(
+            people_like.intersection(
+                {
+                    "Unidentified Flying Objects",
+                    "Unidienified Aerial Objects",
+                    "Flying Objects",
+                    "Aerial Phenomena Research Organization",
+                    "Project Blue Book",
+                    "National Security",
+                    "Western Range",
+                    "Wide Area Video Surveillance",
+                }
+            )
+        )
+        self.assertEqual(by_name.get("Unidentified Flying Objects"), "key_terms")
+        self.assertEqual(by_name.get("Unidentified Aerial Objects"), "key_terms")
+        self.assertEqual(by_name.get("Flying Objects"), "key_terms")
+        self.assertEqual(by_name.get("Aerial Phenomena Research Organization"), "research_groups")
+        self.assertEqual(by_name.get("Project Blue Book"), "government_project_codenames")
+        self.assertEqual(by_name.get("National Security"), "key_terms")
+        self.assertEqual(by_name.get("Western Range"), "locations")
+        self.assertEqual(by_name.get("Wide Area Video Surveillance"), "key_terms")
+
+    def test_person_mentions_route_force_western_and_group_phrases_out_of_people(self) -> None:
+        segment = build_graph.Segment(
+            id="s-1",
+            transcript_id="t-1",
+            transcript_title="Sample",
+            source_file="sample.txt",
+            start_ms=0,
+            end_ms=1000,
+            text=(
+                "Atr Force, Air Force Lieutenant, Western Europe, Western Union, "
+                "Carrier Strike Group Twelve, Sol Foundation Volume, and Organization Communications "
+                "were not person names."
+            ),
+        )
+        mentions = build_graph.person_mentions(segment, set())
+        by_name = {item["name"]: item["category"] for item in mentions}
+        people_like = {
+            item["name"]
+            for item in mentions
+            if item["category"] in build_graph.PERSON_LIKE_CATEGORIES
+        }
+        self.assertFalse(
+            people_like.intersection(
+                {
+                    "Atr Force",
+                    "Air Force Lieutenant",
+                    "Western Europe",
+                    "Western Union",
+                    "Carrier Strike Group Twelve",
+                    "Sol Foundation Volume",
+                    "Organization Communications",
+                }
+            )
+        )
+        self.assertEqual(by_name.get("Atr Force"), "government_agencies")
+        self.assertEqual(by_name.get("Air Force Lieutenant"), "government_agencies")
+        self.assertEqual(by_name.get("Western Europe"), "locations")
+        self.assertEqual(by_name.get("Western Union"), "companies")
+        self.assertEqual(by_name.get("Carrier Strike Group Twelve"), "government_agencies")
+        self.assertEqual(by_name.get("Sol Foundation Volume"), "nonprofits")
+        self.assertEqual(by_name.get("Organization Communications"), "nonprofits")
+
     def test_person_mentions_omit_hard_ocr_non_entities(self) -> None:
         segment = build_graph.Segment(
             id="s-1",

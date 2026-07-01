@@ -7341,9 +7341,9 @@
       "sourceCategory": "military_bases",
       "sourceId": "military_bases:papoose-lake",
       "sourceName": "Papoose Lake",
-      "targetCategory": "people",
-      "targetId": "people:just-papoose-lake",
-      "targetName": "Just Papoose Lake"
+      "targetCategory": "locations",
+      "targetId": "locations:papoose-lake",
+      "targetName": "Papoose Lake"
     },
     "military_bases:patterson-air-force-base": {
       "sourceCategory": "military_bases",
@@ -15887,33 +15887,33 @@
       "sourceCategory": "people",
       "sourceId": "people:marshall-island-trust-territory",
       "sourceName": "Marshall Island Trust Territory",
-      "targetCategory": "people",
-      "targetId": "people:marshall-island",
+      "targetCategory": "locations",
+      "targetId": "locations:marshall-island",
       "targetName": "Marshall Island"
     },
     "marshall islanders": {
       "sourceCategory": "people",
       "sourceId": "people:marshall-islanders",
       "sourceName": "Marshall Islanders",
-      "targetCategory": "people",
-      "targetId": "people:marshall-island-trust-territory",
-      "targetName": "Marshall Island Trust Territory"
+      "targetCategory": "locations",
+      "targetId": "locations:marshall-islands",
+      "targetName": "Marshall Islands"
     },
     "marshall islanders are perfectly": {
       "sourceCategory": "professors",
       "sourceId": "professors:marshall-islanders-are-perfectly",
       "sourceName": "Marshall Islanders Are Perfectly",
-      "targetCategory": "people",
-      "targetId": "people:marshall-islanders",
-      "targetName": "Marshall Islanders"
+      "targetCategory": "locations",
+      "targetId": "locations:marshall-islands",
+      "targetName": "Marshall Islands"
     },
     "marshall islands": {
       "sourceCategory": "locations",
       "sourceId": "journalists:marshall-islands",
       "sourceName": "Marshall Islands",
-      "targetCategory": "professors",
-      "targetId": "professors:marshall-islanders-are-perfectly",
-      "targetName": "Marshall Islanders Are Perfectly"
+      "targetCategory": "locations",
+      "targetId": "locations:marshall-islands",
+      "targetName": "Marshall Islands"
     },
     "massachusetts institute": {
       "sourceCategory": "institutes",
@@ -16423,9 +16423,9 @@
       "sourceCategory": "military_bases",
       "sourceId": "military_bases:papoose-lake",
       "sourceName": "Papoose Lake",
-      "targetCategory": "people",
-      "targetId": "people:just-papoose-lake",
-      "targetName": "Just Papoose Lake"
+      "targetCategory": "locations",
+      "targetId": "locations:papoose-lake",
+      "targetName": "Papoose Lake"
     },
     "pat price": {
       "sourceCategory": "dangerous_people",
@@ -19109,6 +19109,7 @@
     "palomar observatory": "institutes",
     "pam bondi": "politicians",
     "papua new guinea": "locations",
+    "papoose lake": "locations",
     "patterson air": "government_agencies",
     "patterson air force bases": "government_agencies",
     "patterson air fores pase": "government_agencies",

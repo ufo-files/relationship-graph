@@ -1181,6 +1181,263 @@ STRUCTURED_KEY_TERM_PREFIXES = {
     "white",
 }
 
+UAP_OBJECT_WORDS = {
+    "aerial",
+    "aertal",
+    "alien",
+    "aliens",
+    "anomalous",
+    "contactee",
+    "contactees",
+    "disc",
+    "discs",
+    "dise",
+    "dises",
+    "encounter",
+    "encounters",
+    "extraterrestrial",
+    "extraterrestrials",
+    "flying",
+    "mothership",
+    "mummies",
+    "object",
+    "objects",
+    "phenom",
+    "phenomena",
+    "phenomenon",
+    "saucer",
+    "saucers",
+    "spacecraft",
+    "submerged",
+    "uap",
+    "uaps",
+    "ufo",
+    "ufos",
+    "unidentified",
+    "unidienified",
+    "unimown",
+    "unknown",
+    "unlmown",
+    "unmanned",
+    "unusual",
+    "vehicle",
+    "vehicles",
+}
+
+NON_PERSON_CONCEPT_WORDS = {
+    "analysis",
+    "analyses",
+    "approach",
+    "budget",
+    "capability",
+    "characteristics",
+    "conference",
+    "conspiracy",
+    "development",
+    "doctrine",
+    "experiment",
+    "experiments",
+    "flight",
+    "flights",
+    "history",
+    "information",
+    "initiative",
+    "method",
+    "methods",
+    "phase",
+    "phases",
+    "plan",
+    "publication",
+    "perspective",
+    "property",
+    "registration",
+    "regulation",
+    "requirement",
+    "requirements",
+    "review",
+    "science",
+    "scriptures",
+    "secret",
+    "societies",
+    "strategy",
+    "support",
+    "surveillance",
+    "symbol",
+    "symbols",
+    "system",
+    "systems",
+    "technology",
+    "teachings",
+    "theory",
+    "truth",
+    "unit",
+    "verification",
+    "video",
+    "videos",
+    "weapon",
+    "weapons",
+}
+
+PROJECT_OR_PROGRAM_WORDS = {
+    "operation",
+    "operations",
+    "program",
+    "programs",
+    "project",
+    "projects",
+    "task",
+}
+
+SECURITY_OR_INTEL_WORDS = {
+    "defence",
+    "defense",
+    "homeland",
+    "intelligence",
+    "military",
+    "national",
+    "security",
+}
+
+RESEARCH_OR_GROUP_WORDS = {
+    "association",
+    "club",
+    "clubs",
+    "coalition",
+    "conference",
+    "foundation",
+    "group",
+    "investigation",
+    "investigations",
+    "investigator",
+    "investigators",
+    "organization",
+    "organizations",
+    "research",
+    "society",
+    "study",
+}
+
+PLACE_SUFFIX_WORDS = {
+    "airport",
+    "avenue",
+    "base",
+    "city",
+    "county",
+    "facility",
+    "facilities",
+    "field",
+    "forest",
+    "hemisphere",
+    "island",
+    "lake",
+    "mount",
+    "mountain",
+    "mountains",
+    "range",
+    "ranges",
+    "river",
+    "site",
+    "springs",
+    "station",
+    "street",
+    "valley",
+}
+
+MILITARY_PLACE_WORDS = {
+    "arsenal",
+    "base",
+    "facility",
+    "facilities",
+    "field",
+    "range",
+    "station",
+}
+
+GOVERNMENT_UNIT_WORDS = {
+    "branch",
+    "commander",
+    "corps",
+    "guard",
+    "headquarters",
+    "officer",
+    "officers",
+    "personnel",
+    "squadron",
+    "squadrons",
+}
+
+AIR_FORCE_OCR_WORDS = {
+    "aap",
+    "afr",
+    "aiir",
+    "ais",
+    "ait",
+    "aix",
+    "aiy",
+    "ale",
+    "arm",
+    "atr",
+    "aur",
+    "air",
+    "airk",
+    "airy",
+    "kir",
+}
+
+MILITARY_FORCE_WORDS = {
+    "air",
+    "army",
+    "belgian",
+    "brazilian",
+    "carrier",
+    "delta",
+    "expeditionary",
+    "fighter",
+    "israeli",
+    "joint",
+    "marine",
+    "military",
+    "naval",
+    "portuguese",
+    "rapid",
+    "recovery",
+    "red",
+    "reserve",
+    "russian",
+    "space",
+    "strategic",
+    "strike",
+    "tactical",
+}
+
+WESTERN_LOCATION_WORDS = {
+    "africa",
+    "australia",
+    "caribbean",
+    "desert",
+    "europe",
+    "front",
+    "germany",
+    "hemisphere",
+    "maryland",
+    "mediterranean",
+    "ontario",
+    "pacific",
+    "range",
+    "ranges",
+    "states",
+    "world",
+    "york",
+}
+
+WESTERN_COMPANY_WORDS = {
+    "airlines",
+    "electric",
+    "inn",
+    "skyways",
+    "union",
+}
+
 NON_ENTITY_LABEL_SUFFIXES = {
     "actions",
     "airspeed",
@@ -2095,6 +2352,20 @@ def person_mentions(segment: Segment, omit_terms: set[str]) -> list[dict[str, An
                 }
             )
             continue
+        domain_non_person = classify_domain_non_person_name(name)
+        if domain_non_person:
+            domain_name, domain_category, domain_reason = domain_non_person
+            items.append(
+                {
+                    "name": domain_name,
+                    "category": domain_category,
+                    "detector": "heuristic:domain_non_person",
+                    "confidence": 0.76,
+                    "reason": domain_reason,
+                    "excerpt": context,
+                }
+            )
+            continue
         if name in PERSON_STOPWORDS:
             continue
         category, reason, confidence = classify_person(context)
@@ -2191,6 +2462,125 @@ def is_generic_aircraft_or_tech_phrase(name: str) -> bool:
     if any(word in FIELD_LABEL_WORDS for word in words):
         return True
     return False
+
+
+def classify_domain_non_person_name(name: str) -> tuple[str, str, str] | None:
+    normalized = normalize_name(name)
+    words = normalized.split()
+    if len(words) < 2:
+        return None
+    word_set = set(words)
+
+    if word_set.intersection(UAP_OBJECT_WORDS) and word_set.intersection(RESEARCH_OR_GROUP_WORDS):
+        return (titleize_words(normalized), "research_groups", "UAP research/group phrase matched organization vocabulary")
+
+    uap_name = canonical_uap_object_name(words)
+    if uap_name:
+        return (uap_name, "key_terms", "UAP/object phrase matched key-term vocabulary")
+
+    if word_set.intersection(UAP_OBJECT_WORDS):
+        return (titleize_words(normalized), "key_terms", "UAP/object phrase matched key-term vocabulary")
+
+    western_category = classify_western_phrase(words)
+    if western_category:
+        return (titleize_words(normalized), western_category, f"Western phrase matched {label(western_category)} vocabulary")
+
+    force_category = classify_force_phrase(words)
+    if force_category:
+        return (titleize_words(normalized), force_category, f"Force phrase matched {label(force_category)} vocabulary")
+
+    if word_set.intersection(PLACE_SUFFIX_WORDS):
+        category = "military_bases" if "base" in word_set or is_military_place_phrase(word_set) else "locations"
+        return (titleize_words(normalized), category, f"Place-name vocabulary matched {label(category)}")
+
+    if word_set.intersection(PROJECT_OR_PROGRAM_WORDS):
+        category = "government_project_codenames" if is_project_codename_phrase(words) else "key_terms"
+        return (titleize_words(normalized), category, f"Project/program vocabulary matched {label(category)}")
+
+    if word_set.intersection(GOVERNMENT_UNIT_WORDS):
+        return (titleize_words(normalized), "government_agencies", "Government or military unit vocabulary matched agency naming")
+
+    if word_set.intersection({"club", "clubs", "foundation", "organization"}):
+        return (titleize_words(normalized), "nonprofits", "Foundation/organization vocabulary matched nonprofit naming")
+
+    if "group" in word_set:
+        category = "government_agencies" if word_set.intersection(MILITARY_FORCE_WORDS | GOVERNMENT_UNIT_WORDS) else "research_groups"
+        return (titleize_words(normalized), category, f"Group vocabulary matched {label(category)} naming")
+
+    if word_set.intersection(RESEARCH_OR_GROUP_WORDS):
+        if word_set.intersection({"research", "study", "investigation", "investigations", "investigator", "investigators"}):
+            return (titleize_words(normalized), "research_groups", "Research/group vocabulary matched institutional naming")
+        if words[-1] in RESEARCH_OR_GROUP_WORDS:
+            return (titleize_words(normalized), "research_groups", "Group/organization suffix matched institutional naming")
+
+    if word_set.intersection(SECURITY_OR_INTEL_WORDS):
+        if word_set.intersection({"agency", "branch", "command", "committee", "corps", "council", "department", "guard", "office", "squadron"}):
+            return (titleize_words(normalized), "government_agencies", "Security/intelligence phrase matched government naming")
+        return (titleize_words(normalized), "key_terms", "Security/intelligence concept matched key-term vocabulary")
+
+    if word_set.intersection(NON_PERSON_CONCEPT_WORDS):
+        return (titleize_words(normalized), "key_terms", "Conceptual noun phrase matched key-term vocabulary")
+
+    return None
+
+
+def classify_western_phrase(words: list[str]) -> str | None:
+    word_set = set(words)
+    if "western" not in word_set:
+        return None
+    if word_set.intersection(WESTERN_COMPANY_WORDS):
+        return "companies"
+    if word_set.intersection(WESTERN_LOCATION_WORDS):
+        return "locations"
+    return "key_terms"
+
+
+def classify_force_phrase(words: list[str]) -> str | None:
+    word_set = set(words)
+    if "force" not in word_set:
+        return None
+    if word_set.intersection(AIR_FORCE_OCR_WORDS | MILITARY_FORCE_WORDS | GOVERNMENT_UNIT_WORDS):
+        return "government_agencies"
+    if word_set.intersection({"microscope", "vacuum"}):
+        return "technology"
+    return "key_terms"
+
+
+def canonical_uap_object_name(words: list[str]) -> str | None:
+    word_set = set(words)
+    unidentified_words = {"unidentified", "unidienified", "unimown", "unknown", "unlmown"}
+    object_words = {"ob", "obj", "object", "objects"}
+    if word_set.intersection(unidentified_words) and "flying" in word_set:
+        return "Unidentified Flying Objects" if "objects" in word_set else "Unidentified Flying Object"
+    if word_set.intersection(unidentified_words) and "aerial" in word_set:
+        if word_set.intersection({"phenom", "phenomena", "phenomenon"}):
+            return "Unidentified Aerial Phenomena"
+        if word_set.intersection(object_words):
+            return "Unidentified Aerial Objects" if "objects" in word_set else "Unidentified Aerial Object"
+    if "flying" in word_set and "saucer" in word_set:
+        return "Flying Saucer"
+    if "flying" in word_set and "saucers" in word_set:
+        return "Flying Saucers"
+    if "flying" in word_set and word_set.intersection(object_words):
+        return "Flying Objects" if "objects" in word_set else "Flying Object"
+    if "aerial" in word_set and word_set.intersection({"phenom", "phenomena", "phenomenon"}):
+        return "Aerial Phenomena"
+    return None
+
+
+def is_military_place_phrase(word_set: set[str]) -> bool:
+    return bool(
+        word_set.intersection(MILITARY_PLACE_WORDS)
+        and word_set.intersection({"air", "army", "force", "military", "missile", "naval", "navy", "test"})
+    )
+
+
+def is_project_codename_phrase(words: list[str]) -> bool:
+    if not words:
+        return False
+    if words[0] in {"operation", "project"}:
+        return True
+    return any(word in {"access", "black", "defense", "government", "intelligence", "military", "special"} for word in words)
 
 
 def is_date_like_name(name: str) -> bool:
