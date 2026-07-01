@@ -52,7 +52,7 @@ html, body {
 }
 .html-graph-label {
   position: absolute;
-  max-width: 190px;
+  max-width: 260px;
   text-align: center;
   transform: translate(-50%, 0);
   pointer-events: auto;
@@ -126,6 +126,9 @@ html, body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .label-secondary {
   display: block;
@@ -133,6 +136,9 @@ html, body {
   color: var(--muted);
   font-size: .875rem;
   line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .topbar {
   position: fixed;

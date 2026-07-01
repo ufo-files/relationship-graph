@@ -30,6 +30,7 @@ let activeCategory = null;
 let selectedEntityId = null;
 let eventsClaimsView = "timeline";
 let activeTimelineDecade = null;
+let activeSignalRange = null;
 let viewBox = { x: 120, y: 80, w: 1960, h: 1340 };
 let dragStart = null;
 let labelItems = [];
@@ -50,6 +51,16 @@ const SECOND_DEGREE_PER_NEIGHBOR_LIMIT = 2;
 const SECOND_DEGREE_EDGE_LIMIT = 24;
 const SECOND_DEGREE_LABEL_LIMIT = 0;
 const TIMELINE_VERTICAL_SCALE = 0.84;
+const SIGNAL_RANGE_BUCKETS = [
+  { id: "sub-1hz", label: "0-1 Hz", minHz: 0, maxHz: 1 },
+  { id: "hz-1-100", label: "1-100 Hz", minHz: 1, maxHz: 100 },
+  { id: "hz-100-10khz", label: "100 Hz-10 kHz", minHz: 100, maxHz: 10000 },
+  { id: "khz-10-1mhz", label: "10 kHz-1 MHz", minHz: 10000, maxHz: 1000000 },
+  { id: "mhz-1-100", label: "1-100 MHz", minHz: 1000000, maxHz: 100000000 },
+  { id: "mhz-100-10ghz", label: "100 MHz-10 GHz", minHz: 100000000, maxHz: 10000000000 },
+  { id: "ghz-10-300", label: "10-300 GHz", minHz: 10000000000, maxHz: 300000000000 },
+  { id: "ghz-300-plus", label: "300 GHz+", minHz: 300000000000, maxHz: Infinity },
+];
 
 initializeReviewStorage();
 let DATA = applyReviewDecisions(normalizeData(RAW));
@@ -365,7 +376,7 @@ function fitEgoGraph(nodes, center) {
   });
 }
 
-function fitHomeCategoryGraph(nodes, center) {
+function homeCategoryBounds(nodes, center) {
   const items = [center].concat(nodes);
   const maxRadius = Math.max(...items.map((node) => node.r));
   const longestLabel = Math.max(...nodes.map((node) => (node.raw?.name || node.label || "").length));
@@ -377,7 +388,12 @@ function fitHomeCategoryGraph(nodes, center) {
   const maxX = Math.max(...items.map((node) => node.x + node.r)) + xPad;
   const minY = Math.min(...items.map((node) => node.y - node.r)) - topPad;
   const maxY = Math.max(...items.map((node) => node.y + node.r)) + bottomPad;
-  fitBoundsToViewport(minX, minY, maxX, maxY, {
+  return { minX, maxX, minY, maxY };
+}
+
+function fitHomeCategoryGraph(nodes, center) {
+  const bounds = homeCategoryBounds(nodes, center);
+  fitBoundsToViewport(bounds.minX, bounds.minY, bounds.maxX, bounds.maxY, {
     reserveHeader: true,
     bottomInsetPx: 88,
     zoomFactor: isCompactViewport() ? 1.1 : 1.25,
@@ -430,45 +446,53 @@ function fitSelectedEgoGraph(nodes, center) {
   );
 }
 
-function fitCategoryDrillViewport(activeCategoryNode, nodes) {
+function categoryDrillViewportBox(activeCategoryNode, nodes, options = {}) {
+  if (isCompactViewport()) return null;
+  const widthFill = options.widthFill || .84;
+  const heightFill = options.heightFill || .87;
+  const items = [activeCategoryNode].concat(nodes).filter(Boolean);
+  const rect = svg.getBoundingClientRect();
+  const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
+  const rectHeight = Math.max(1, rect.height || svg.clientHeight || 1);
+  const topInset = Math.max(24, graphHeaderInsetPx() - 36);
+  const bottomInset = 64;
+  const availableH = Math.max(180, rectHeight - topInset - bottomInset);
+  const minX = Math.min(...items.map((node) => node.x - (node.r || 0)));
+  const maxX = Math.max(...items.map((node) => node.x + (node.r || 0)));
+  const minY = Math.min(...items.map((node) => node.y - (node.r || 0)));
+  const maxY = Math.max(...items.map((node) => node.y + (node.r || 0)));
+  const contentW = Math.max(1, maxX - minX);
+  const contentH = Math.max(1, maxY - minY);
+  const heightScale = (availableH * heightFill) / contentH;
+  const widthScale = (rectWidth * widthFill) / contentW;
+  let scale = Math.min(heightScale, widthScale);
+  if (!Number.isFinite(scale) || scale <= 0) scale = 1;
+  let width = clamp(rectWidth / scale, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
+  let height = width / (rectWidth / rectHeight);
+  if (height < MIN_ZOOM_HEIGHT) {
+    height = MIN_ZOOM_HEIGHT;
+    width = height * (rectWidth / rectHeight);
+  }
+  if (height > MAX_ZOOM_HEIGHT) {
+    height = MAX_ZOOM_HEIGHT;
+    width = height * (rectWidth / rectHeight);
+  }
+  const actualScale = rectWidth / width;
+  const contentCx = (minX + maxX) / 2;
+  const contentCy = (minY + maxY) / 2;
+  const availableCenterY = topInset + availableH / 2;
+  return {
+    x: contentCx - rectWidth / actualScale / 2,
+    y: contentCy - availableCenterY / actualScale,
+    w: width,
+    h: height,
+  };
+}
+
+function fitCategoryDrillViewport(activeCategoryNode, nodes, options = {}) {
   if (!isCompactViewport()) {
-    const items = [activeCategoryNode].concat(nodes).filter(Boolean);
-    const rect = svg.getBoundingClientRect();
-    const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
-    const rectHeight = Math.max(1, rect.height || svg.clientHeight || 1);
-    const topInset = Math.max(24, graphHeaderInsetPx() - 36);
-    const bottomInset = 64;
-    const availableH = Math.max(180, rectHeight - topInset - bottomInset);
-    const minX = Math.min(...items.map((node) => node.x - (node.r || 0)));
-    const maxX = Math.max(...items.map((node) => node.x + (node.r || 0)));
-    const minY = Math.min(...items.map((node) => node.y - (node.r || 0)));
-    const maxY = Math.max(...items.map((node) => node.y + (node.r || 0)));
-    const contentW = Math.max(1, maxX - minX);
-    const contentH = Math.max(1, maxY - minY);
-    const heightScale = (availableH * .87) / contentH;
-    const widthScale = (rectWidth * .84) / contentW;
-    let scale = Math.min(heightScale, widthScale);
-    if (!Number.isFinite(scale) || scale <= 0) scale = 1;
-    let width = clamp(rectWidth / scale, MIN_ZOOM_WIDTH, MAX_ZOOM_WIDTH);
-    let height = width / (rectWidth / rectHeight);
-    if (height < MIN_ZOOM_HEIGHT) {
-      height = MIN_ZOOM_HEIGHT;
-      width = height * (rectWidth / rectHeight);
-    }
-    if (height > MAX_ZOOM_HEIGHT) {
-      height = MAX_ZOOM_HEIGHT;
-      width = height * (rectWidth / rectHeight);
-    }
-    const actualScale = rectWidth / width;
-    const contentCx = (minX + maxX) / 2;
-    const contentCy = (minY + maxY) / 2;
-    const availableCenterY = topInset + availableH / 2;
-    setViewBox(
-      contentCx - rectWidth / actualScale / 2,
-      contentCy - availableCenterY / actualScale,
-      width,
-      height
-    );
+    const box = categoryDrillViewportBox(activeCategoryNode, nodes, options);
+    setViewBox(box.x, box.y, box.w, box.h);
     return;
   }
   const focusRadius = 760;
@@ -565,6 +589,196 @@ function nodeLabel(id, kind, node, primary, secondary = "", radius = node.r) {
   };
 }
 
+function signalContextLabel(node, center, primary, secondary = "") {
+  const anchorAbove = node.y < center.y;
+  return {
+    id: node.id,
+    kind: "entity",
+    x: node.x,
+    y: anchorAbove ? node.y - node.r : node.y + node.r,
+    labelAnchor: anchorAbove ? "above" : "below",
+    primary,
+    secondary,
+  };
+}
+
+function homeBridgeSecondaryLabel(node) {
+  const linkWeight = Math.round(node.weight || 0);
+  return linkWeight.toLocaleString() + " " + pluralize("link", linkWeight);
+}
+
+function placeHomeContextNodesInAvailableSpace(nodes, center, categoryNodes) {
+  const bounds = homeCategoryBounds(categoryNodes, center);
+  placeNodesAroundPerimeter(nodes, center, {
+    x: bounds.minX,
+    y: bounds.minY,
+    w: bounds.maxX - bounds.minX,
+    h: bounds.maxY - bounds.minY,
+  }, categoryNodes);
+  return nodes;
+}
+
+function placeNodesAroundPerimeter(nodes, center, box, primaryNodes) {
+  if (!nodes.length) return nodes;
+  const rect = svg.getBoundingClientRect();
+  const rectWidth = Math.max(1, rect.width || svg.clientWidth || 1);
+  const rectHeight = Math.max(1, rect.height || svg.clientHeight || 1);
+  const graphUnitsPerPixelX = box.w / rectWidth;
+  const graphUnitsPerPixelY = box.h / rectHeight;
+  const xMin = box.x + Math.max(170, 112 * graphUnitsPerPixelX);
+  const xMax = box.x + box.w - Math.max(170, 112 * graphUnitsPerPixelX);
+  const yMin = box.y + Math.max(190, 138 * graphUnitsPerPixelY);
+  const yMax = box.y + box.h - Math.max(170, 122 * graphUnitsPerPixelY);
+  const primaryRadius = Math.max(
+    1,
+    ...primaryNodes.map((node) => Math.hypot(node.x - center.x, node.y - center.y) + (node.r || 0))
+  );
+  const preferred = nodes.map((node) => {
+    const sourceX = node.sourceX || node.x;
+    const sourceY = node.sourceY || node.y;
+    return { node, angle: normalizeAngle(Math.atan2(sourceY - center.y, sourceX - center.x)) };
+  }).sort((a, b) => a.angle - b.angle || b.node.weight - a.node.weight);
+  const blockPad = 54 * Math.max(graphUnitsPerPixelX, graphUnitsPerPixelY);
+  const reservedRects = primaryNodes.flatMap((node) => {
+    const r = (node.r || 0) + blockPad;
+    return [
+      {
+        left: node.x - r,
+        right: node.x + r,
+        top: node.y - r,
+        bottom: node.y + r,
+      },
+      labelRectInGraph(primarySignalLabelItem(node), graphUnitsPerPixelX, graphUnitsPerPixelY),
+    ];
+  });
+  const labelRectForNodeAt = (node, x, y) => {
+    const placed = { ...node, x, y };
+    const label = signalContextLabel(
+      placed,
+      center,
+      truncate(entityDisplayName(node.raw), 22),
+      (node.categoryCount ? homeBridgeSecondaryLabel(node) : node.sourceCount + " connected " + (node.sourceCount === 1 ? "node" : "nodes"))
+    );
+    return labelRectInGraph(label, graphUnitsPerPixelX, graphUnitsPerPixelY);
+  };
+  const nodeRectForSlot = (node, slot) => {
+    const r = (node.r || 0) + 20 * Math.max(graphUnitsPerPixelX, graphUnitsPerPixelY);
+    return {
+      left: slot.x - r,
+      right: slot.x + r,
+      top: slot.y - r,
+      bottom: slot.y + r,
+    };
+  };
+  const slotCount = Math.max(nodes.length * 4, nodes.length + 18);
+  const perimeterPoint = (progress) => {
+    const width = xMax - xMin;
+    const height = yMax - yMin;
+    const perimeter = Math.max(1, 2 * (width + height));
+    let distance = progress * perimeter;
+    if (distance <= width) return { x: xMin + distance, y: yMin };
+    distance -= width;
+    if (distance <= height) return { x: xMax, y: yMin + distance };
+    distance -= height;
+    if (distance <= width) return { x: xMax - distance, y: yMax };
+    distance -= width;
+    return { x: xMin, y: yMax - distance };
+  };
+  const allSlots = Array.from({ length: slotCount }, (_, index) => {
+    const point = perimeterPoint(index / slotCount);
+    const angle = normalizeAngle(Math.atan2(point.y - center.y, point.x - center.x));
+    return {
+      angle,
+      x: point.x,
+      y: point.y,
+    };
+  });
+  const usedSlots = new Set();
+  const usedRects = reservedRects.slice();
+  let bestShift = 0;
+  let bestScore = Infinity;
+  const slots = preferred.map((_, index) => allSlots[Math.floor(index * slotCount / preferred.length)]);
+  for (let shift = 0; shift < slots.length; shift++) {
+    let score = 0;
+    for (let index = 0; index < preferred.length; index++) {
+      score += angularDistance(preferred[index].angle, slots[(index + shift) % slots.length].angle);
+    }
+    if (score < bestScore) {
+      bestScore = score;
+      bestShift = shift;
+    }
+  }
+  for (let index = 0; index < preferred.length; index++) {
+    const node = preferred[index].node;
+    const preferredSlot = slots[(index + bestShift) % slots.length];
+    const candidates = allSlots
+      .map((slot, slotIndex) => ({ slot, slotIndex, score: angularDistance(preferredSlot.angle, slot.angle) + angularDistance(preferred[index].angle, slot.angle) * .25 }))
+      .sort((a, b) => a.score - b.score);
+    let selected = candidates.find((candidate) => {
+      if (usedSlots.has(candidate.slotIndex)) return false;
+      const rectForLabel = labelRectForNodeAt(node, candidate.slot.x, candidate.slot.y);
+      const rectForNode = nodeRectForSlot(node, candidate.slot);
+      return !usedRects.some((rect) =>
+        rectsOverlap(rectForLabel, rect, 18 * Math.max(graphUnitsPerPixelX, graphUnitsPerPixelY)) ||
+        rectsOverlap(rectForNode, rect, 4 * Math.max(graphUnitsPerPixelX, graphUnitsPerPixelY))
+      );
+    }) || candidates.find((candidate) => !usedSlots.has(candidate.slotIndex)) || candidates[0];
+    usedSlots.add(selected.slotIndex);
+    const slot = selected.slot;
+    node.x = slot.x;
+    node.y = slot.y;
+    node.angle = Math.atan2(node.y - center.y, node.x - center.x);
+    node.contextRadius = Math.hypot(node.x - center.x, node.y - center.y);
+    usedRects.push(labelRectForNodeAt(node, node.x, node.y));
+    usedRects.push(nodeRectForSlot(node, slot));
+  }
+}
+
+function labelRectInGraph(item, graphUnitsPerPixelX, graphUnitsPerPixelY) {
+  const widthPx = estimateLabelWidth(item);
+  const heightPx = estimateLabelHeight(item, widthPx);
+  const width = widthPx * graphUnitsPerPixelX;
+  const height = heightPx * graphUnitsPerPixelY;
+  const verticalGap = 10 * graphUnitsPerPixelY;
+  const top = item.labelAnchor === "above"
+    ? item.y - height - verticalGap
+    : item.y + verticalGap;
+  return {
+    left: item.x - width / 2,
+    right: item.x + width / 2,
+    top,
+    bottom: top + height,
+  };
+}
+
+function normalizeAngle(angle) {
+  const full = Math.PI * 2;
+  return ((angle % full) + full) % full;
+}
+
+function angularDistance(a, b) {
+  const difference = Math.abs(normalizeAngle(a) - normalizeAngle(b));
+  return Math.min(difference, Math.PI * 2 - difference);
+}
+
+function primarySignalLabelItem(node) {
+  if (node.raw?.entities) {
+    return {
+      x: node.x,
+      y: node.y + node.r,
+      labelAnchor: "below",
+      primary: node.raw.label || node.label || "",
+      secondary: frequencyCountLabel(node.raw.entities.length),
+    };
+  }
+  return nodeLabel(
+    node.raw?.id || node.id,
+    "entity",
+    node,
+    truncate(entityDisplayName(node.raw), 24)
+  );
+}
+
 function graphViewportTransform() {
   const rect = svg.getBoundingClientRect();
   const svgRatio = rect.width / rect.height;
@@ -600,7 +814,8 @@ function graphLabelTop(pointY, item = null, pointX = null) {
       safeTop = Math.max(safeTop, cornerRect.bottom + 8);
     }
   }
-  if (item && item.labelAnchor === "above") {
+  const canAnchorAbove = item && item.labelAnchor === "above" && /\btimeline-/.test(item.className || "");
+  if (canAnchorAbove) {
     const height = estimateLabelHeight(item, width);
     return Math.max(pointY - height - 6, safeTop);
   }
@@ -612,10 +827,11 @@ function estimateLabelWidth(item) {
   if (/\btimeline-connected-label\b/.test(item.className || "")) {
     return Math.min(160, Math.max(78, Math.max(item.primary.length * 7.4, (item.secondary || "").length * 6.5)));
   }
-  return Math.min(190, Math.max(84, Math.max(item.primary.length * 8, (item.secondary || "").length * 6.8)));
+  return Math.min(260, Math.max(84, Math.max(item.primary.length * 8, (item.secondary || "").length * 6.8)));
 }
 
 function estimateLabelHeight(item, width) {
+  if (!/\btimeline-/.test(item.className || "")) return 13 + (item.secondary ? 16 : 0);
   const primaryChars = Math.max(8, Math.floor(width / 7.4));
   const secondaryChars = Math.max(8, Math.floor(width / 6.5));
   const primaryLines = Math.max(1, Math.ceil(item.primary.length / primaryChars));
@@ -645,7 +861,15 @@ function renderLabelLayer() {
   }
   const positioned = labelItems.map((item) => {
     const point = graphToScreen(item.x, item.y);
-    return { item, point, top: graphLabelTop(point.y, item, point.x) };
+    const width = estimateLabelWidth(item) + 18;
+    const height = estimateLabelHeight(item, width) + 10;
+    return {
+      item,
+      point,
+      top: graphLabelTop(point.y, item, point.x),
+      width,
+      height,
+    };
   });
   graphLabelsEl.innerHTML = positioned.map(({ item, point, top }) => {
     if (item.kind === "annotation") {
@@ -660,10 +884,13 @@ function renderLabelLayer() {
         ? ' data-label-category-list="' + esc(item.id) + '"'
         : item.kind === "timeline-decade"
           ? ' data-label-timeline-decade="' + esc(item.id) + '"'
-          : ' data-label-entity="' + esc(item.id) + '"';
+          : item.kind === "signal-range"
+            ? ' data-label-signal-range="' + esc(item.id) + '"'
+            : ' data-label-entity="' + esc(item.id) + '"';
     const state = ((item.kind === "category" || item.kind === "category-list") && activeCategory === item.id) ||
       (item.kind === "entity" && selectedEntityId === item.id) ||
-      (item.kind === "timeline-decade" && activeTimelineDecade === item.decade)
+      (item.kind === "timeline-decade" && activeTimelineDecade === item.decade) ||
+      (item.kind === "signal-range" && activeSignalRange === item.rangeId)
       ? ' aria-current="true"'
       : "";
     const secondary = item.secondary ? ". " + item.secondary : "";
@@ -673,7 +900,9 @@ function renderLabelLayer() {
         ? "Open full entity list"
         : item.kind === "timeline-decade"
           ? "Open decade"
-          : "Open entity";
+          : item.kind === "signal-range"
+            ? "Open signal range"
+            : "Open entity";
     return '<div class="html-graph-label' + (item.className ? ' ' + esc(item.className) : '') + '" role="button" tabindex="0" aria-label="' + esc(action + ": " + item.primary + secondary) + '"' + state + ' style="left:' + point.x.toFixed(1) + 'px;top:' + top.toFixed(1) + 'px"' + attr + '>' +
       '<span class="label-primary">' + esc(item.primary) + '</span>' +
       (item.secondary ? '<span class="label-secondary">' + esc(item.secondary) + '</span>' : '') +
@@ -704,10 +933,15 @@ function renderCategories() {
   const spokes = nodes.map((node) => ({ source: center.id, target: node.id, weight: node.count || 1 }));
   const spokeNodeById = new Map(nodeById);
   spokeNodeById.set(center.id, center);
+  const homeContext = buildHomeSecondaryContext(nodes, center);
+  for (const node of homeContext.nodes) {
+    spokeNodeById.set(node.id, node);
+  }
   const maxSpoke = Math.max(1, ...spokes.map((edge) => edge.weight));
   svg.innerHTML =
     drawEdges(spokes, spokeNodeById, maxSpoke, "ego-spoke") +
     drawEdges(edges, nodeById, maxEdge, "ego-context") +
+    drawEdges(homeContext.edges, spokeNodeById, homeContext.maxEdge, "ego-context") +
     '<g class="graph-node home-root" data-home-root="true" aria-hidden="true">' +
       '<circle cx="' + center.x + '" cy="' + center.y + '" r="' + center.r + '" fill="' + theme.activeHalo + '" stroke="' + theme.primary + '" stroke-width="1" opacity=".92"></circle>' +
     '</g>' +
@@ -715,7 +949,13 @@ function renderCategories() {
     return '<g class="graph-node" data-category="' + esc(node.id) + '">' +
       '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.primary + '" opacity=".9"></circle>' +
     '</g>';
-  }).join("");
+  }).join("") +
+    homeContext.nodes.map((node) => {
+      return '<g class="graph-node" data-entity="' + esc(node.raw.id) + '">' +
+        '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r.toFixed(1) + '" fill="' + theme.entityAlt + '" stroke="' + theme.primary + '" stroke-width="1" opacity=".72"></circle>' +
+        '<title>' + esc(entityDisplayName(node.raw) + " · " + homeBridgeSecondaryLabel(node)) + '</title>' +
+      '</g>';
+    }).join("");
   setGraphLabels([nodeLabel(
     center.id,
     "annotation",
@@ -730,11 +970,80 @@ function renderCategories() {
     truncate(node.label, 24),
     node.count + " entities · " + node.mentions + " mentions"
   ))));
-  statusEl.textContent = nodes.length + " groups · " + DATA.manifest.counts.entities.toLocaleString() + " entities · select a group";
+  statusEl.textContent = nodes.length + " groups · " + DATA.manifest.counts.entities.toLocaleString() + " entities · strong secondary bridges shown";
   cardEl.classList.remove("open");
   setCornerLabel(null);
+  wireEntityNodes();
   wireCategoryNodes();
   fitHomeCategoryGraph(nodes, center);
+}
+
+function buildHomeSecondaryContext(categoryNodes, center) {
+  const categoryNodeById = new Map(categoryNodes.map((node) => [node.id, node]));
+  const candidates = new Map();
+  function addCandidate(entity, categoryId, weight) {
+    if (!entity || !categoryNodeById.has(entity.topCategory) || !categoryNodeById.has(categoryId)) return;
+    const item = candidates.get(entity.id) || {
+      id: entity.id,
+      entity,
+      weight: 0,
+      categories: new Set([entity.topCategory]),
+      links: new Map(),
+    };
+    item.weight += weight;
+    item.categories.add(entity.topCategory);
+    item.categories.add(categoryId);
+    item.links.set(entity.topCategory, (item.links.get(entity.topCategory) || 0) + weight * .55);
+    item.links.set(categoryId, (item.links.get(categoryId) || 0) + weight);
+    candidates.set(entity.id, item);
+  }
+  for (const relationship of DATA.relationships) {
+    const source = entitiesById.get(relationship.source);
+    const target = entitiesById.get(relationship.target);
+    if (!source || !target || source.topCategory === target.topCategory) continue;
+    addCandidate(source, target.topCategory, relationship.weight || 1);
+    addCandidate(target, source.topCategory, relationship.weight || 1);
+  }
+  const selected = Array.from(candidates.values())
+    .map((item) => ({ ...item, categoryCount: item.categories.size }))
+    .filter((item) => item.categoryCount >= 2)
+    .sort((a, b) => b.categoryCount - a.categoryCount || b.weight - a.weight || entityGraphScore(b.entity) - entityGraphScore(a.entity))
+    .slice(0, 16);
+  const maxWeight = Math.max(1, ...selected.map((item) => item.weight));
+  const nodes = selected.map((item, index) => {
+    const linkedCategoryNodes = Array.from(item.categories).map((categoryId) => categoryNodeById.get(categoryId)).filter(Boolean);
+    const avgX = linkedCategoryNodes.reduce((total, node) => total + node.x, 0) / Math.max(1, linkedCategoryNodes.length);
+    const avgY = linkedCategoryNodes.reduce((total, node) => total + node.y, 0) / Math.max(1, linkedCategoryNodes.length);
+    const angle = Math.atan2(avgY - center.y, avgX - center.x) + ((index % 5) - 2) * .07;
+    const radius = 1430 + (index % 3) * 85;
+    return {
+      id: item.id,
+      x: center.x + Math.cos(angle) * radius,
+      y: center.y + Math.sin(angle) * radius,
+      r: 6 + Math.sqrt(item.weight / maxWeight) * 12,
+      angle,
+      contextRadius: radius,
+      weight: item.weight,
+      categoryCount: item.categoryCount,
+      raw: item.entity,
+      links: item.links,
+    };
+  });
+  placeHomeContextNodesInAvailableSpace(nodes, center, categoryNodes);
+  const edges = [];
+  for (const node of nodes) {
+    Array.from(node.links.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 4)
+      .forEach(([categoryId, weight]) => {
+        if (categoryNodeById.has(categoryId)) edges.push({ source: node.id, target: categoryId, weight });
+      });
+  }
+  return {
+    nodes,
+    edges,
+    maxEdge: Math.max(1, ...edges.map((edge) => edge.weight)),
+  };
 }
 
 function buildCategoryLayout() {
@@ -781,6 +1090,10 @@ function buildCategoryLayout() {
 function renderCategory(categoryId) {
   if (categoryId === "events_claims" && eventsClaimsView === "timeline") {
     renderEventsTimeline(categoryId);
+    return;
+  }
+  if (categoryId === "signals") {
+    renderSignalsCategory(categoryId);
     return;
   }
   const theme = currentTheme();
@@ -1115,6 +1428,273 @@ function renderEventsTimeline(categoryId) {
 		    ...timelineLabelBottomBounds(labeledTimelineNodes, width)
 		  );
   fitTimelineAxisToViewport(startX, endX, timelineMinY, timelineMaxY, baseY);
+}
+
+function renderSignalsCategory(categoryId) {
+  const theme = currentTheme();
+  const label = DATA.topCategoryLabels[categoryId] || categoryId;
+  const categoryLayout = buildCategoryLayout();
+  const activeCategoryNode = categoryLayout.nodeById.get(categoryId) || { x: 1100, y: 750, r: 24 };
+  const groups = buildSignalRangeGroups();
+  if (!groups.length) {
+    activeSignalRange = null;
+    renderCategoryGrid(categoryId);
+    return;
+  }
+  const selectedGroup = activeSignalRange ? groups.find((group) => group.id === activeSignalRange) : null;
+  if (activeSignalRange && !selectedGroup) {
+    activeSignalRange = null;
+    renderSignalsCategory(categoryId);
+    return;
+  }
+  if (selectedGroup) {
+    renderSignalRangeDrill(categoryId, selectedGroup, activeCategoryNode);
+    return;
+  }
+  const nodes = radialNodes(groups, activeCategoryNode.x, activeCategoryNode.y, 460, 900, (group) => group.score || group.entities.length);
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
+  const sharedNeighborById = new Map();
+  const sharedEdgeWeights = new Map();
+  for (const node of nodes) {
+    for (const frequency of node.raw.entities) {
+      for (const relationship of relationshipsByEntity.get(frequency.id) || []) {
+        const outsideId = relationship.source === frequency.id ? relationship.target : relationship.source;
+        const outside = entitiesById.get(outsideId);
+        if (!outside || outside.topCategory === categoryId) continue;
+        if (!sharedNeighborById.has(outsideId)) {
+          sharedNeighborById.set(outsideId, { entity: outside, sources: new Set(), weight: 0 });
+        }
+        const shared = sharedNeighborById.get(outsideId);
+        shared.sources.add(node.id);
+        shared.weight += relationship.weight;
+        const edgeKey = node.id + "::" + outsideId;
+        sharedEdgeWeights.set(edgeKey, (sharedEdgeWeights.get(edgeKey) || 0) + relationship.weight);
+      }
+    }
+  }
+  const sharedNeighbors = Array.from(sharedNeighborById.entries())
+    .map(([id, item]) => ({ id, ...item, sourceCount: item.sources.size }))
+    .sort((a, b) => b.sourceCount - a.sourceCount || b.weight - a.weight || entityGraphScore(b.entity) - entityGraphScore(a.entity))
+    .slice(0, 22);
+  const sharedNeighborIds = new Set(sharedNeighbors.map((item) => item.id));
+  const maxSharedWeight = Math.max(1, ...sharedNeighbors.map((item) => item.weight));
+  const sharedNodes = sharedNeighbors.map((item, index) => {
+    const sourceNodes = Array.from(item.sources).map((id) => nodeById.get(id)).filter(Boolean);
+    const avgX = sourceNodes.reduce((total, node) => total + node.x, 0) / Math.max(1, sourceNodes.length);
+    const avgY = sourceNodes.reduce((total, node) => total + node.y, 0) / Math.max(1, sourceNodes.length);
+    const dx = avgX - activeCategoryNode.x;
+    const dy = avgY - activeCategoryNode.y;
+    const angle = Math.atan2(dy, dx) + ((index % 5) - 2) * .08;
+    const radius = 1260 + (index % 3) * 120;
+    return {
+      id: item.id,
+      x: activeCategoryNode.x + Math.cos(angle) * radius,
+      y: activeCategoryNode.y + Math.sin(angle) * radius,
+      r: 9 + Math.sqrt(item.weight / maxSharedWeight) * 13,
+      angle,
+      contextRadius: radius,
+      sourceX: avgX,
+      sourceY: avgY,
+      weight: item.weight,
+      sourceCount: item.sourceCount,
+      raw: item.entity,
+    };
+  });
+  spreadContextNodes(sharedNodes, activeCategoryNode);
+  const sharedNodeById = new Map(sharedNodes.map((node) => [node.id, node]));
+  const contextEdges = Array.from(sharedEdgeWeights.entries())
+    .map(([key, weight]) => {
+      const [rangeId, outsideId] = key.split("::");
+      return { rangeId, outsideId, weight };
+    })
+    .filter((edge) => nodeById.has(edge.rangeId) && sharedNeighborIds.has(edge.outsideId) && sharedNodeById.has(edge.outsideId))
+    .sort((a, b) => b.weight - a.weight)
+    .slice(0, 80);
+  const maxContextEdge = Math.max(1, ...contextEdges.map((edge) => edge.weight));
+  const contextEdgesSvg = contextEdges.map((edge) => {
+    const rangeNode = nodeById.get(edge.rangeId);
+    const outside = sharedNodeById.get(edge.outsideId);
+    if (!rangeNode || !outside) return "";
+    const width = (0.7 + (edge.weight / maxContextEdge) * 3.4).toFixed(1);
+    return '<line x1="' + rangeNode.x + '" y1="' + rangeNode.y + '" x2="' + outside.x + '" y2="' + outside.y + '" stroke="' + theme.primary + '" stroke-width="' + width + '" opacity=".34"></line>';
+  }).join("");
+  const sharedNodesSvg = sharedNodes.map((node) => {
+    return '<g class="graph-node" data-entity="' + esc(node.id) + '">' +
+      '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityAlt + '" stroke="' + theme.primary + '" stroke-width="1" opacity=".76"></circle>' +
+    '</g>';
+  }).join("");
+  const maxSpoke = Math.max(1, ...groups.map((group) => group.score || group.entities.length));
+  svg.innerHTML =
+    contextEdgesSvg +
+    nodes.map((node) => '<line class="graph-edge" x1="' + activeCategoryNode.x + '" y1="' + activeCategoryNode.y + '" x2="' + node.x + '" y2="' + node.y + '" stroke="' + theme.edge + '" stroke-width="' + (0.8 + Math.sqrt((node.raw.score || node.raw.entities.length) / maxSpoke) * 2.4).toFixed(1) + '" opacity=".18"></line>').join("") +
+    '<g class="graph-node" data-category-list="' + esc(categoryId) + '">' +
+      '<circle cx="' + activeCategoryNode.x + '" cy="' + activeCategoryNode.y + '" r="' + activeCategoryNode.r + '" fill="' + theme.activeHalo + '" stroke="' + theme.primary + '" stroke-width="1"></circle>' +
+    '</g>' +
+    nodes.map((node) => '<g class="graph-node" data-signal-range="' + esc(node.id) + '">' +
+      '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityFill + '" stroke="' + theme.bgStroke + '" stroke-width="1"></circle>' +
+      '<title>' + esc(node.raw.label + " · " + frequencyCountLabel(node.raw.entities.length) + " · click to drill in") + '</title>' +
+    '</g>').join("") +
+    sharedNodesSvg;
+  const sharedLabelNodes = sharedNodes
+    .slice()
+    .sort((a, b) => b.sourceCount - a.sourceCount || b.weight - a.weight)
+    .slice(0, 8);
+  setGraphLabels([nodeLabel(
+    categoryId,
+    "category-list",
+    activeCategoryNode,
+    "View all " + truncate(label, 18),
+    groups.reduce((total, group) => total + group.entities.length, 0).toLocaleString() + " frequencies",
+    activeCategoryNode.r
+  )].concat(nodes.map((node) => ({
+    id: node.id,
+    kind: "signal-range",
+    x: node.x,
+    y: node.y + node.r,
+    labelAnchor: "below",
+    rangeId: node.id,
+    primary: node.raw.label,
+    secondary: frequencyCountLabel(node.raw.entities.length),
+  }))).concat(sharedLabelNodes.map((node) => nodeLabel(
+    node.id,
+    "entity",
+    node,
+    truncate(entityDisplayName(node.raw), 22),
+    node.sourceCount + " connected " + (node.sourceCount === 1 ? "range" : "ranges"),
+    node.r
+  ))));
+  statusEl.textContent = label + " · frequencies grouped by range";
+  setCornerLabel(label, groups.length + " frequency ranges · select a range for exact signals");
+  cardEl.classList.remove("open");
+  wireEntityNodes();
+  wireCategoryListNodes();
+  wireSignalRangeNodes();
+  fitCategoryDrillViewport(activeCategoryNode, nodes);
+}
+
+function renderSignalRangeDrill(categoryId, group, activeCategoryNode) {
+  const theme = currentTheme();
+  const primary = group.entities.slice(0, 50).sort((a, b) => entityGraphScore(b) - entityGraphScore(a) || a.name.localeCompare(b.name));
+  const primarySet = new Set(primary.map((entity) => entity.id));
+  const rels = DATA.relationships.filter((relationship) => primarySet.has(relationship.source) && primarySet.has(relationship.target)).slice(0, 150);
+  const centerNode = {
+    ...activeCategoryNode,
+    r: Math.max(18, Math.min(26, activeCategoryNode.r)),
+    raw: { name: group.label },
+  };
+  const nodes = radialNodes(primary, centerNode.x, centerNode.y, 460, 900, (entity) => entity.count || 1);
+  const nodeById = new Map(nodes.map((node) => [node.id, node]));
+  const maxEdge = Math.max(1, ...rels.map((relationship) => relationship.weight));
+  const sharedNeighborById = new Map();
+  const sharedEdgeWeights = new Map();
+  for (const node of nodes) {
+    for (const relationship of relationshipsByEntity.get(node.id) || []) {
+      const outsideId = relationship.source === node.id ? relationship.target : relationship.source;
+      const outside = entitiesById.get(outsideId);
+      if (!outside || outside.topCategory === categoryId || primarySet.has(outsideId)) continue;
+      if (!sharedNeighborById.has(outsideId)) {
+        sharedNeighborById.set(outsideId, { entity: outside, sources: new Set(), weight: 0 });
+      }
+      const shared = sharedNeighborById.get(outsideId);
+      shared.sources.add(node.id);
+      shared.weight += relationship.weight;
+      const edgeKey = node.id + "::" + outsideId;
+      sharedEdgeWeights.set(edgeKey, (sharedEdgeWeights.get(edgeKey) || 0) + relationship.weight);
+    }
+  }
+  const sharedNeighbors = Array.from(sharedNeighborById.entries())
+    .map(([id, item]) => ({ id, ...item, sourceCount: item.sources.size }))
+    .sort((a, b) => b.sourceCount - a.sourceCount || b.weight - a.weight || entityGraphScore(b.entity) - entityGraphScore(a.entity))
+    .slice(0, 24);
+  const sharedNeighborIds = new Set(sharedNeighbors.map((item) => item.id));
+  const maxSharedWeight = Math.max(1, ...sharedNeighbors.map((item) => item.weight));
+  const sharedNodes = sharedNeighbors.map((item, index) => {
+    const sourceNodes = Array.from(item.sources).map((id) => nodeById.get(id)).filter(Boolean);
+    const avgX = sourceNodes.reduce((total, node) => total + node.x, 0) / Math.max(1, sourceNodes.length);
+    const avgY = sourceNodes.reduce((total, node) => total + node.y, 0) / Math.max(1, sourceNodes.length);
+    const dx = avgX - centerNode.x;
+    const dy = avgY - centerNode.y;
+    const angle = Math.atan2(dy, dx) + ((index % 5) - 2) * .08;
+    const radius = 1260 + (index % 3) * 120;
+    return {
+      id: item.id,
+      x: centerNode.x + Math.cos(angle) * radius,
+      y: centerNode.y + Math.sin(angle) * radius,
+      r: 9 + Math.sqrt(item.weight / maxSharedWeight) * 13,
+      angle,
+      contextRadius: radius,
+      sourceX: avgX,
+      sourceY: avgY,
+      weight: item.weight,
+      sourceCount: item.sourceCount,
+      raw: item.entity,
+    };
+  });
+  spreadContextNodes(sharedNodes, centerNode);
+  const sharedNodeById = new Map(sharedNodes.map((node) => [node.id, node]));
+  const contextEdges = Array.from(sharedEdgeWeights.entries())
+    .map(([key, weight]) => {
+      const [childId, outsideId] = key.split("::");
+      return { childId, outsideId, weight };
+    })
+    .filter((edge) => nodeById.has(edge.childId) && sharedNeighborIds.has(edge.outsideId) && sharedNodeById.has(edge.outsideId))
+    .sort((a, b) => b.weight - a.weight)
+    .slice(0, 80);
+  const maxContextEdge = Math.max(1, ...contextEdges.map((edge) => edge.weight));
+  const contextEdgesSvg = contextEdges.map((edge) => {
+    const child = nodeById.get(edge.childId);
+    const outside = sharedNodeById.get(edge.outsideId);
+    if (!child || !outside) return "";
+    const width = (0.7 + (edge.weight / maxContextEdge) * 3.4).toFixed(1);
+    return '<line x1="' + child.x + '" y1="' + child.y + '" x2="' + outside.x + '" y2="' + outside.y + '" stroke="' + theme.primary + '" stroke-width="' + width + '" opacity=".34"></line>';
+  }).join("");
+  const sharedNodesSvg = sharedNodes.map((node) => {
+    return '<g class="graph-node" data-entity="' + esc(node.id) + '">' +
+      '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityAlt + '" stroke="' + theme.primary + '" stroke-width="1" opacity=".76"></circle>' +
+    '</g>';
+  }).join("");
+  svg.innerHTML =
+    contextEdgesSvg +
+    '<g class="graph-node" data-category="' + esc(categoryId) + '">' +
+      '<circle cx="' + centerNode.x + '" cy="' + centerNode.y + '" r="' + centerNode.r + '" fill="' + theme.activeHalo + '" stroke="' + theme.primary + '" stroke-width="1"></circle>' +
+      '<title>All signal ranges</title>' +
+    '</g>' +
+    drawRelationshipEdges(rels, nodeById, maxEdge, "drill") +
+    nodes.map((node) => '<g class="graph-node" data-entity="' + esc(node.raw.id) + '">' +
+      '<circle cx="' + node.x + '" cy="' + node.y + '" r="' + node.r + '" fill="' + theme.entityFill + '" stroke="' + theme.bgStroke + '" stroke-width="1"></circle>' +
+      '<title>' + esc(entityDisplayName(node.raw) + " · " + (node.raw.count || 0).toLocaleString() + " mentions") + '</title>' +
+    '</g>').join("") +
+    sharedNodesSvg;
+  const sharedLabelNodes = sharedNodes
+    .slice()
+    .sort((a, b) => b.sourceCount - a.sourceCount || b.weight - a.weight)
+    .slice(0, 8);
+  setGraphLabels([nodeLabel(
+    categoryId,
+    "category",
+    centerNode,
+    "All ranges",
+    group.label,
+    centerNode.r
+  )].concat(nodes.map((node) => nodeLabel(
+    node.raw.id,
+    "entity",
+    node,
+    truncate(entityDisplayName(node.raw), 24)
+  ))).concat(sharedLabelNodes.map((node) => nodeLabel(
+    node.id,
+    "entity",
+    node,
+    truncate(entityDisplayName(node.raw), 22),
+    node.sourceCount + " connected " + (node.sourceCount === 1 ? "frequency" : "frequencies"),
+    node.r
+  ))));
+  statusEl.textContent = "Signals · " + group.label + " · select a frequency for its direct relationship graph";
+  setCornerLabel(group.label, group.entities.length.toLocaleString() + " exact " + (group.entities.length === 1 ? "frequency" : "frequencies"));
+  cardEl.classList.remove("open");
+  wireCategoryNodes();
+  wireEntityNodes();
+  fitCategoryDrillViewport(centerNode, nodes);
 }
 
 function fitTimelineAxisToViewport(startX, endX, minY, maxY, axisY) {
@@ -1854,6 +2434,75 @@ function normalizedUtcDate(year, month, day) {
   const date = new Date(Date.UTC(year, month, day));
   if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month || date.getUTCDate() !== day) return null;
   return { date, iso: date.toISOString().slice(0, 10) };
+}
+
+function signalRangeGroupForEntity(entity) {
+  const parsed = parseSignalFrequencyRange(entity.name);
+  if (!parsed) return { id: "signal-other", label: "Other signals", order: SIGNAL_RANGE_BUCKETS.length };
+  const bucketIndex = SIGNAL_RANGE_BUCKETS.findIndex((bucket) => parsed.centerHz >= bucket.minHz && parsed.centerHz < bucket.maxHz);
+  const bucket = SIGNAL_RANGE_BUCKETS[bucketIndex >= 0 ? bucketIndex : SIGNAL_RANGE_BUCKETS.length - 1];
+  return { id: "signal-range-" + bucket.id, label: bucket.label, order: bucketIndex >= 0 ? bucketIndex : SIGNAL_RANGE_BUCKETS.length - 1 };
+}
+
+function parseSignalFrequencyRange(value) {
+  const text = String(value || "").trim().replace(/,/g, "").replace(/[–—−]/g, "-");
+  const match = text.match(/\b(\d+(?:\.\d+)?)\s*(?:-\s*(\d+(?:\.\d+)?))?\s*(hz|khz|mhz|ghz|thz)\b/i);
+  if (!match) return null;
+  const multiplier = signalUnitMultiplier(match[3]);
+  let lowHz = Number(match[1]) * multiplier;
+  let highHz = Number(match[2] || match[1]) * multiplier;
+  if (!Number.isFinite(lowHz) || !Number.isFinite(highHz) || lowHz <= 0 || highHz <= 0) return null;
+  if (lowHz > highHz) [lowHz, highHz] = [highHz, lowHz];
+  return { lowHz, highHz, centerHz: Math.sqrt(lowHz * highHz) };
+}
+
+function signalUnitMultiplier(unit) {
+  const normalized = String(unit || "").toLowerCase();
+  if (normalized === "thz") return 1e12;
+  if (normalized === "ghz") return 1e9;
+  if (normalized === "mhz") return 1e6;
+  if (normalized === "khz") return 1e3;
+  return 1;
+}
+
+function frequencyCountLabel(count) {
+  return count.toLocaleString() + " " + (count === 1 ? "frequency" : "frequencies");
+}
+
+function buildSignalRangeGroups() {
+  const groupsById = new Map(SIGNAL_RANGE_BUCKETS.map((bucket, index) => ["signal-range-" + bucket.id, {
+    id: "signal-range-" + bucket.id,
+    label: bucket.label,
+    order: index,
+    entities: [],
+    count: 0,
+    mentions: 0,
+    score: 0,
+  }]));
+  const other = {
+    id: "signal-range-other",
+    label: "Other signals",
+    order: SIGNAL_RANGE_BUCKETS.length,
+    entities: [],
+    count: 0,
+    mentions: 0,
+    score: 0,
+  };
+  for (const entity of DATA.entities.filter((item) => item.topCategory === "signals")) {
+    const descriptor = signalRangeGroupForEntity(entity);
+    const group = groupsById.get(descriptor.id) || other;
+    group.entities.push(entity);
+    group.count += 1;
+    group.mentions += entity.count || 0;
+    group.score += entityGraphScore(entity);
+  }
+  return Array.from(groupsById.values()).concat(other)
+    .filter((group) => group.entities.length)
+    .map((group) => ({
+      ...group,
+      entities: group.entities.sort((a, b) => entityGraphScore(b) - entityGraphScore(a) || a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => a.order - b.order);
 }
 
 function renderCategoryGrid(categoryId) {
@@ -2855,17 +3504,25 @@ function wireTimelineNodes() {
   });
 }
 
+function wireSignalRangeNodes() {
+  svg.querySelectorAll("[data-signal-range]").forEach((node) => {
+    node.addEventListener("click", () => activateGraphNode(node, { focusGraph: true }));
+  });
+}
+
 function activateGraphNode(node, options = {}) {
   if (!node) return false;
   if (node.dataset.category) {
     activeCategory = node.dataset.category;
     selectedEntityId = null;
     activeTimelineDecade = null;
+    activeSignalRange = null;
     mode = "categories";
   } else if (node.dataset.categoryList) {
     activeCategory = node.dataset.categoryList;
     selectedEntityId = null;
     activeTimelineDecade = null;
+    activeSignalRange = null;
     mode = "category-list";
     hideHoverPreview();
     render();
@@ -2874,11 +3531,19 @@ function activateGraphNode(node, options = {}) {
   } else if (node.dataset.timelineDecade) {
     activeCategory = "events_claims";
     activeTimelineDecade = Number(node.dataset.timelineDecade);
+    activeSignalRange = null;
+    selectedEntityId = null;
+    mode = "categories";
+  } else if (node.dataset.signalRange) {
+    activeCategory = "signals";
+    activeSignalRange = node.dataset.signalRange;
+    activeTimelineDecade = null;
     selectedEntityId = null;
     mode = "categories";
   } else if (node.dataset.entity) {
     selectedEntityId = node.dataset.entity;
     activeTimelineDecade = null;
+    activeSignalRange = null;
     mode = "neighborhood";
   } else {
     return false;
@@ -2954,8 +3619,14 @@ function setHoveredNode(node) {
       ? "labelCategoryList"
       : node.dataset.timelineDecade
         ? "labelTimelineDecade"
-        : "labelCategory";
-  const id = node.dataset.entity || node.dataset.categoryList || (node.dataset.timelineDecade ? "decade-" + node.dataset.timelineDecade : node.dataset.category);
+        : node.dataset.signalRange
+          ? "labelSignalRange"
+          : "labelCategory";
+  const id = node.dataset.entity ||
+    node.dataset.categoryList ||
+    (node.dataset.timelineDecade ? "decade-" + node.dataset.timelineDecade : "") ||
+    node.dataset.signalRange ||
+    node.dataset.category;
   Array.from(graphLabelsEl.querySelectorAll(".html-graph-label")).forEach((label) => {
     if (label.dataset[labelKind] === id) label.classList.add("hover");
   });
@@ -2984,12 +3655,14 @@ function svgNodeFromLabel(label) {
   const isEntity = Boolean(label.dataset.labelEntity);
   const isCategoryList = Boolean(label.dataset.labelCategoryList);
   const isTimelineDecade = Boolean(label.dataset.labelTimelineDecade);
-  const id = label.dataset.labelEntity || label.dataset.labelCategoryList || label.dataset.labelTimelineDecade || label.dataset.labelCategory;
-  const nodes = svg.querySelectorAll(isEntity ? "[data-entity]" : isCategoryList ? "[data-category-list]" : isTimelineDecade ? "[data-timeline-decade]" : "[data-category]");
+  const isSignalRange = Boolean(label.dataset.labelSignalRange);
+  const id = label.dataset.labelEntity || label.dataset.labelCategoryList || label.dataset.labelTimelineDecade || label.dataset.labelSignalRange || label.dataset.labelCategory;
+  const nodes = svg.querySelectorAll(isEntity ? "[data-entity]" : isCategoryList ? "[data-category-list]" : isTimelineDecade ? "[data-timeline-decade]" : isSignalRange ? "[data-signal-range]" : "[data-category]");
   return Array.from(nodes).find((node) => {
     if (isEntity) return node.dataset.entity === id;
     if (isCategoryList) return node.dataset.categoryList === id;
     if (isTimelineDecade) return "decade-" + node.dataset.timelineDecade === id;
+    if (isSignalRange) return node.dataset.signalRange === id;
     return node.dataset.category === id;
   }) || null;
 }
@@ -3010,9 +3683,11 @@ function graphNodeKey(node) {
         ? "category:" + node.dataset.category
         : node.dataset.timelineDecade
           ? "timeline-decade:" + node.dataset.timelineDecade
-          : node.dataset.homeRoot
-            ? "home-root"
-            : "";
+          : node.dataset.signalRange
+            ? "signal-range:" + node.dataset.signalRange
+            : node.dataset.homeRoot
+              ? "home-root"
+              : "";
 }
 
 function resetHoverZoomActivation() {
