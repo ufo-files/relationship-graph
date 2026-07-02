@@ -4210,12 +4210,12 @@ def write_report(
 
     mention_payload = [asdict_slim_mention(mention) for mention in mentions]
     entity_payload = [asdict_entity(entity) for entity in entities]
-    write_json(DATA_DIR / "segments.json", [asdict(segment) for segment in segments])
-    write_json(DATA_DIR / "mentions.json", mention_payload)
-    write_json(DATA_DIR / "entities.json", entity_payload)
-    write_json(DATA_DIR / "relationships.json", [asdict(relationship) for relationship in relationships])
-    write_json(DATA_DIR / "graph.json", graph)
-    write_json(DATA_DIR / "manifest.json", manifest)
+    write_json(DATA_DIR / "segments.json", [asdict(segment) for segment in segments], compact=True)
+    write_json(DATA_DIR / "mentions.json", mention_payload, compact=True)
+    write_json(DATA_DIR / "entities.json", entity_payload, compact=True)
+    write_json(DATA_DIR / "relationships.json", [asdict(relationship) for relationship in relationships], compact=True)
+    write_json(DATA_DIR / "graph.json", graph, compact=True)
+    write_json(DATA_DIR / "manifest.json", manifest, compact=True)
     write_json(DATA_DIR / "reclass.json", export_review(review))
     write_json(
         DATA_DIR / "reclass-template.json",
@@ -4288,7 +4288,10 @@ def asdict_entity(entity: Entity) -> dict[str, Any]:
     return {key: value for key, value in payload.items() if value is not None}
 
 
-def write_json(path: Path, payload: Any) -> None:
+def write_json(path: Path, payload: Any, *, compact: bool = False) -> None:
+    if compact:
+        path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        return
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
